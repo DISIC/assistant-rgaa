@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	"name": "RGAA toolbar",
+	"description": "RGAA toolbar",
+	"version": "0.1.0",
+	"icons": {
+		"48": "img/icon-48.png",
+		"96": "img/icon-96.png"
+	},
+	"applications": {
+		"gecko": {
+			"id": "rgaa-toolbar@vtech.fr",
+			"strict_min_version": "45"
+		}
+	},
+	"browser_action": {
+		"default_icon": "img/icon-96.png",
+		"default_title": "RGAA Toolbar"
+	},
+	"background": {
+		"scripts": ["extension/background.js"]
+	},
+	"content_scripts": [
+		{
+			"js": ["extension/content.js"],
+			"matches": ["<all_urls>"],
+			"run_at": "document_idle"
+		}
+	],
+	"web_accessible_resources": [
+		"extension/index.html"
+	]
+}
