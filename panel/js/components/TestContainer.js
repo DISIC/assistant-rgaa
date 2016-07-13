@@ -1,4 +1,5 @@
 import {connect} from 'react-redux';
+import {getHelpersByTest} from '../selectors/helpers';
 import {applyHelpers, revertHelpers} from '../actions/tests';
 import Test from './Test';
 
@@ -7,17 +8,19 @@ import Test from './Test';
 /**
  *
  */
-const mapStateToProps = () => ({});
+const mapStateToProps = (state, {id}) => ({
+	helpers: getHelpersByTest(state, id)
+});
 
 /**
  *
  */
 const mapDispatchToProps = (dispatch) => ({
-	onApply(applied) {
+	onApply(applied, helpers) {
 		dispatch(
 			applied
-				? applyHelpers()
-				: revertHelpers()
+				? applyHelpers(helpers)
+				: revertHelpers(helpers)
 		);
 	}
 });

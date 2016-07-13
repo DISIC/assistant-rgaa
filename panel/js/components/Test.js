@@ -8,9 +8,9 @@ import {noop} from 'lodash';
 /**
  *
  */
-function Test({title, instructions, applied, done, onApply, onDone, intl}) {
+function Test({title, instructions, helpers, applied, done, onApply, onDone, intl}) {
 	const handleApplyChange = (event) =>
-		onApply(event.target.checked);
+		onApply(event.target.checked, helpers);
 
 	const handleDoneChange = (event) =>
 		onDone(event.target.checked);
@@ -61,6 +61,7 @@ function Test({title, instructions, applied, done, onApply, onDone, intl}) {
 Test.propTypes = {
 	title: PropTypes.string.isRequired,
 	instructions: PropTypes.string,
+	helpers: PropTypes.array,
 	applied: PropTypes.bool,
 	done: PropTypes.bool,
 	onApply: PropTypes.func,
@@ -69,6 +70,7 @@ Test.propTypes = {
 };
 
 Test.defaultProps = {
+	helpers: [],
 	applied: false,
 	done: false,
 	onApply: noop,
