@@ -28,4 +28,4 @@ const app = (
 /**
  *	Renders the application on #app.
  */
-render(app, document.getElementById('app'));
+render(app, document.getElementById('panel'));

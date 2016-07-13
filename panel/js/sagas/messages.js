@@ -4,11 +4,11 @@ import {SEND} from '../actions/messages';
 
 
 /**
- *
+ *	Sends a payload through the extension's runtime.
  */
 function* sendSaga({payload}) {
-	console.log(payload);
-	chrome.runtime.sendMessage(payload); // eslint-disable-line no-undef
+	console.log(payload, chrome.runtime);
+	chrome.runtime.sendMessage(null, payload); // eslint-disable-line no-undef
 }
 
 

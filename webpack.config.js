@@ -12,16 +12,22 @@ const fullPath = path.resolve.bind(null, __dirname);
  *
  */
 module.exports = {
-	entry: [
-		'babel-polyfill',
-		'whatwg-fetch',
-		'./js/index',
-		'./css/index.scss'
-	],
+	entry: {
+		panel: [
+			'babel-polyfill',
+			'./panel/js/index',
+			'./panel/css/index.scss'
+		],
+		content: [
+			'babel-polyfill',
+			'./content/js/index',
+			'./content/css/index.scss'
+		]
+	},
 	output: {
 		path: fullPath('dist'),
 		publicPath: 'dist',
-		filename: 'app.js',
+		filename: '[name].js',
 	},
 	devtool: 'source-map',
 	devServer: {
@@ -31,17 +37,31 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				include: fullPath('js'),
-				loader: 'babel'
+				loader: 'babel',
+				include: [
+					fullPath('panel/js'),
+					fullPath('content/js')
+				]
 			},
 			{
 				test: /\.scss$/,
-				include: fullPath('css'),
 				loader: ExtractTextPlugin.extract('style', [
 					'css?-url&sourceMap',
 					'postcss',
 					'sass?sourceMap'
-				])
+				]),
+				include: [
+					fullPath('panel/css'),
+					fullPath('content/css')
+				]
+			},
+			{
+				test: /\.json$/,
+				loader: 'json',
+				include: [
+					fullPath('helpers'),
+					fullPath('references')
+				]
 			}
 		]
 	},
@@ -63,7 +83,7 @@ module.exports = {
 		];
 	},
 	plugins: [
-		new ExtractTextPlugin('app.css', {
+		new ExtractTextPlugin('[name].css', {
 			allChunks: true
 		})
 	]

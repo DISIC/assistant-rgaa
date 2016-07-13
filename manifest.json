@@ -25,6 +25,11 @@
 			"js": ["extension/content.js"],
 			"matches": ["<all_urls>"],
 			"run_at": "document_idle"
+		},
+		{
+			"js": ["dist/content.js"],
+			"matches": ["<all_urls>"],
+			"run_at": "document_idle"
 		}
 	],
 	"web_accessible_resources": [

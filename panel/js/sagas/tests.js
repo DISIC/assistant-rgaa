@@ -6,7 +6,7 @@ import {APPLY_HELPERS, REVERT_HELPERS} from '../actions/tests';
 
 
 /**
- *
+ *	Sends the given action to the extension's listeners.
  */
 function* sendActionSaga({type, payload}) {
 	yield put(send(type, payload));
