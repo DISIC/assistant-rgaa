@@ -3,6 +3,7 @@
 /**
  * 	the background script is tasked with:
  * 		- sending the "toggle panel" request on the extension icon click
+ * 		- dispatching messages across the whole extension
  */
 
 
@@ -16,6 +17,14 @@ chrome.browserAction.onClicked.addListener(function() {
 		type: 'browser/TOGGLE_CONTAINER',
 		payload: {}
 	});
+});
+
+/**
+ *	every message received by the background-script
+ *	is dispatched to content-scripts
+ */
+chrome.runtime.onMessage.addListener(function(message) {
+	sendMessageToTab(message);
 });
 
 
