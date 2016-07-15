@@ -3,6 +3,7 @@
 /**
  *	handles all iframe-specific code:
  *		- show/hide the extension container (create it on the fly if necessary)
+ *		- move around the container on the page
  */
 
 
@@ -19,6 +20,10 @@ if (window.parent == window) {
 				} else {
 					createContainer();
 				}
+				break;
+
+			case 'dock/SET_POSITION':
+				setPositionClass(containerElement(), message.payload.position);
 				break;
 
 			default:
@@ -64,4 +69,11 @@ function createContainer() {
 	container.style.display = 'block';
 
 	document.body.appendChild(container);
+}
+
+function setPositionClass(container, position) {
+	container.classList.remove(
+		'rgaat-Frame--left', 'rgaat-Frame--right', 'rgaat-Frame--bottom', 'rgaat-Frame--external'
+	);
+	container.classList.add('rgaat-Frame--' + position);
 }

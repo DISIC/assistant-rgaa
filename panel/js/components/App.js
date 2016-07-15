@@ -1,4 +1,5 @@
 import React from 'react';
+import DockMenuContainer from './DockMenuContainer';
 import MenuContainer from './MenuContainer';
 import TestContainer from './TestContainer';
 
@@ -10,6 +11,8 @@ import TestContainer from './TestContainer';
 export default function App() {
 	return (
 		<div className="App">
+			<DockMenuContainer />
+
 			<MenuContainer />
 
 			<TestContainer

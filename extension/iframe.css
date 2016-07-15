@@ -13,3 +13,20 @@ sure page styles won't affect ours */
 	background: #fff !important;
 	z-index: 999999 !important;
 }
+
+#rgaat-Frame.rgaat-Frame--left {
+	left: 0 !important;
+	right: auto !important;
+}
+
+#rgaat-Frame.rgaat-Frame--right {
+	left: auto !important;
+	right: 0 !important;
+}
+
+#rgaat-Frame.rgaat-Frame--bottom {
+	bottom: 0 !important;
+	top: auto !important;
+	width: 100% !important;
+	height: 300px !important;
+}
