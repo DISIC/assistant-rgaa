@@ -22,18 +22,16 @@
 	},
 	"content_scripts": [
 		{
-			"js": ["extension/content.js"],
-			"css": ["extension/content.css"],
-			"matches": ["<all_urls>"],
-			"run_at": "document_idle"
-		},
-		{
-			"js": ["dist/content.js"],
+			"js": [
+				"extension/iframe.js",
+				"dist/content.js"
+			],
+			"css": ["extension/iframe.css"],
 			"matches": ["<all_urls>"],
 			"run_at": "document_idle"
 		}
 	],
 	"web_accessible_resources": [
-		"extension/index.html"
+		"extension/panel.html"
 	]
 }

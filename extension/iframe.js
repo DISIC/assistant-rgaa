@@ -1,8 +1,35 @@
 'use strict';
 
+/**
+ *	handles all iframe-specific code:
+ *		- show/hide the extension container (create it on the fly if necessary)
+ */
+
+
+
+if (window.parent == window) {
+	chrome.runtime.onMessage.addListener(function(message) {
+		if (!message.type) {
+			return false;
+		}
+		switch (message.type) {
+			case 'browser/TOGGLE_CONTAINER':
+				if (isContainerCreated()) {
+					toggleContainerVisibility();
+				} else {
+					createContainer();
+				}
+				break;
+
+			default:
+				break;
+		}
+	});
+}
 
 
 var CONTAINER_ID = 'rgaat-Frame';
+var IFRAME_FILE = 'extension/panel.html';
 
 function containerElement() {
 	return document.getElementById(CONTAINER_ID);
@@ -29,28 +56,12 @@ function toggleContainerVisibility() {
  *	Creates an iframe to run the app in.
  */
 function createContainer() {
-	var src = chrome.runtime.getURL('extension/index.html');
+	var src = chrome.runtime.getURL(IFRAME_FILE);
 	var container = document.createElement('iframe');
 
 	container.setAttribute('src', src);
 	container.id = CONTAINER_ID;
+	container.style.display = 'block';
 
 	document.body.appendChild(container);
-}
-
-/**
- *	Listens to events from the background script.
- */
-if (window.parent == window) {
-	chrome.runtime.onMessage.addListener(function(message) {
-		switch (message) {
-			case 'SETUP_CONTAINER':
-				if (isContainerCreated()) {
-					toggleContainerVisibility();
-				} else {
-					createContainer();
-				}
-				break;
-		}
-	});
 }

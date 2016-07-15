@@ -1,0 +1,15 @@
+/* all css here is !important because it is injected
+in the page directly, not in an iframe. We want to be
+sure page styles won't affect ours */
+
+#rgaat-Frame {
+	position: fixed !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	border: 0 !important;
+	width: 350px !important;
+	height: 100% !important;
+	background: #fff !important;
+	z-index: 999999 !important;
+}
