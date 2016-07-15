@@ -2,24 +2,38 @@
 
 
 
+var CONTAINER_ID = 'rgaat-Frame';
+
+function containerElement() {
+	return document.getElementById(CONTAINER_ID);
+}
+
+function isContainerCreated() {
+	return containerElement() !== null;
+}
+
+function toggleContainerVisibility() {
+	var container = containerElement();
+	if (!container) {
+		return false;
+	}
+	if (container.style.display && container.style.display !== 'none') {
+		container.style.display = 'none';
+		return true;
+	}
+	container.style.display = 'block';
+	return true;
+}
+
 /**
  *	Creates an iframe to run the app in.
  */
-function startContainer() {
+function createContainer() {
 	var src = chrome.runtime.getURL('extension/index.html');
 	var container = document.createElement('iframe');
 
 	container.setAttribute('src', src);
-	container.id = 'rgaat-Frame';
-	container.style.position = 'fixed';
-	container.style.top = '0';
-	container.style.right = '0';
-	container.style.bottom = '0';
-	container.style.border = '0';
-	container.style.width = '33%';
-	container.style.height = '100%';
-	container.style.background = '#fff';
-	container.style['z-index'] = '999999';
+	container.id = CONTAINER_ID;
 
 	document.body.appendChild(container);
 }
@@ -31,7 +45,11 @@ if (window.parent == window) {
 	chrome.runtime.onMessage.addListener(function(message) {
 		switch (message) {
 			case 'SETUP_CONTAINER':
-				startContainer();
+				if (isContainerCreated()) {
+					toggleContainerVisibility();
+				} else {
+					createContainer();
+				}
 				break;
 		}
 	});

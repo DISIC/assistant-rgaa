@@ -23,6 +23,7 @@
 	"content_scripts": [
 		{
 			"js": ["extension/content.js"],
+			"css": ["extension/content.css"],
 			"matches": ["<all_urls>"],
 			"run_at": "document_idle"
 		},
