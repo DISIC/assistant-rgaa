@@ -1,29 +1,37 @@
 # RGAA Toolbar
 
-## Development
+# RGAA Toolbar
 
-After cloning the repo, run:
+:warning: projet en construction
+
+Ce projet est une extension de navigateur (Firefox uniquement pour l'instant) destinée à aider à auditer des sites en suivant les règles d'accessibilité RGAA. Elle permet, pour chaque critère défini dans le référentiel RGAA, d'automatiser le plus possible les tests à effectuer pour valider le critère.
+
+## Installation & Usage
+
+Clonez le repo, puis :
 
 ```
 npm install
 npm start
 ```
 
-Then load the extension in [Firefox](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) or [Chrome](https://developer.chrome.com/extensions/getstarted#unpacked).
+Chargez ensuite l'extensions dans [Firefox](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ou [Chrome](https://developer.chrome.com/extensions/getstarted#unpacked).
 
 ## Architecture
 
-The extension is based on [WebExtensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions).
+L'extension se base sur le projet [WebExtensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions).
 
-A `manifest.json` exposes the app configuration.
+Le `manifest.json` décrit la configuration de l'appli.
 
-The code is splitted into 3 parts:
+Le code est découpé en 3 parties :
 
-* `/extension/background.js`: background script that listens to events from the toolbar and launches the panel.
-* `/panel/*`: in-page panel containing the interface.
-* `/content/*`: in-page scripts that applies or reverts helpers.
+* `/extension/background.js`: script en tâche de fond qui écoute les évènements de la barre d'outils (sur Chrome, c'est la où il y a l'icone de l'extension en haut à droite du navigateur). C'est lui qui lance le "panel".
+* `/panel/*`: le panel, inclus dans la page courante, contient l'interface.
+* `/content/*`: les scripts, inclus dans la page, qui activent/désactivent les "helpers".
 
-The content is based on two kinds of mappings:
+Les helpers sont des scripts permettant de modifier le CSS de la page courante pour aider l'auditeur. Exemple : encadrer en rouge les img sans alt, désactiver les styles.
 
-* `references/*.json`: versions of the RGAA spec.
-* `helpers/*.json`: mappings from tests to helpers.
+Il y a deux sortes de mapping importants :
+
+* `references/*.json`: les versions de la spec RGAA.
+* `helpers/*.json`: lien entre les tests RGAA et les "helpers" à utiliser.
