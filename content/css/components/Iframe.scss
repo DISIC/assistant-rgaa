@@ -2,6 +2,9 @@
 in the page directly, not in an iframe. We want to be
 sure page styles won't affect ours */
 
+/* stylelint-disable
+declaration-no-important, selector-no-id, selector-id-pattern */
+
 #rgaat-Frame {
 	position: fixed !important;
 	top: 0 !important;
@@ -30,3 +33,5 @@ sure page styles won't affect ours */
 	width: 100% !important;
 	height: 300px !important;
 }
+
+/* stylelint-enable */

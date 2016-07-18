@@ -22,12 +22,16 @@ module.exports = {
 			'babel-polyfill',
 			'./content/js/index',
 			'./content/css/index.scss'
+		],
+		background: [
+			'babel-polyfill',
+			'./background/index'
 		]
 	},
 	output: {
 		path: fullPath('dist'),
 		publicPath: 'dist',
-		filename: '[name].js',
+		filename: '[name].js'
 	},
 	devtool: 'source-map',
 	devServer: {
@@ -40,7 +44,9 @@ module.exports = {
 				loader: 'babel',
 				include: [
 					fullPath('panel/js'),
-					fullPath('content/js')
+					fullPath('content/js'),
+					fullPath('common'),
+					fullPath('background')
 				]
 			},
 			{
@@ -59,8 +65,8 @@ module.exports = {
 				test: /\.json$/,
 				loader: 'json',
 				include: [
-					fullPath('helpers'),
-					fullPath('references')
+					fullPath('data/helpers'),
+					fullPath('data/references')
 				]
 			}
 		]

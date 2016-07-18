@@ -1,31 +1,33 @@
 import {connect} from 'react-redux';
-import * as actions from '../actions/dock';
+import * as actions from '../../../common/actions/container';
 import DockMenu from './DockMenu';
 
 
 /**
  *
  */
-const mapStateToProps = () => ({});
+const mapStateToProps = ({container}) => ({
+	popup: !!container.popupId
+});
 
 /**
  *
  */
 const mapDispatchToProps = (dispatch) => ({
-	onBottomClick() {
+	requestDockToBottom() {
 		dispatch(actions.dockToBottom());
 	},
 
-	onLeftClick() {
+	requestDockToLeft() {
 		dispatch(actions.dockToLeft());
 	},
 
-	onRightClick() {
+	requestDockToRight() {
 		dispatch(actions.dockToRight());
 	},
 
-	onPopupClick() {
-		dispatch(actions.togglePopup());
+	requestPopupToggle(showOrHide) {
+		dispatch(actions.requestPopup(showOrHide));
 	}
 });
 

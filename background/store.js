@@ -1,8 +1,8 @@
 import {createStore, compose, applyMiddleware} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import {identity} from 'lodash';
-import reducer from './reducers/index';
 import sagas from './sagas';
+import reducer from './reducers';
 
 
 
