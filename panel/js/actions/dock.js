@@ -1,8 +1,7 @@
 import {
 	POSITION_LEFT,
 	POSITION_RIGHT,
-	POSITION_BOTTOM,
-	POSITION_EXTERNAL
+	POSITION_BOTTOM
 } from '../reducers/dock';
 
 
@@ -11,6 +10,7 @@ import {
  *
  */
 export const SET_POSITION = 'dock/SET_POSITION';
+export const TOGGLE_POPUP = 'dock/TOGGLE_POPUP';
 
 
 
@@ -35,9 +35,7 @@ export const dockToBottom = () => ({
 	}
 });
 
-export const undock = () => ({
-	type: SET_POSITION,
-	payload: {
-		position: POSITION_EXTERNAL
-	}
+export const togglePopup = () => ({
+	type: TOGGLE_POPUP,
+	payload: {}
 });

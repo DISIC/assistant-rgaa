@@ -6,9 +6,7 @@ import DockMenu from './DockMenu';
 /**
  *
  */
-const mapStateToProps = ({dock}) => ({
-	position: dock.position
-});
+const mapStateToProps = () => ({});
 
 /**
  *
@@ -26,8 +24,8 @@ const mapDispatchToProps = (dispatch) => ({
 		dispatch(actions.dockToRight());
 	},
 
-	onExternalClick() {
-		dispatch(actions.undock());
+	onPopupClick() {
+		dispatch(actions.togglePopup());
 	}
 });
 

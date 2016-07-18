@@ -23,7 +23,17 @@ if (window.parent == window) {
 				break;
 
 			case 'dock/SET_POSITION':
+				show(containerElement());
 				setPositionClass(containerElement(), message.payload.position);
+				break;
+
+			case 'dock/SET_POPUP':
+				if (message.payload.popup === true) {
+					hide(containerElement());
+				}
+				if (message.payload.popup === false) {
+					show(containerElement());
+				}
 				break;
 
 			default:
@@ -44,17 +54,21 @@ function isContainerCreated() {
 	return containerElement() !== null;
 }
 
+function isContainerVisible() {
+	var container = containerElement();
+	if (!container) {
+		return false;
+	}
+	return (container.style.display && container.style.display !== 'none')
+		|| !container.style.display;
+}
+
 function toggleContainerVisibility() {
 	var container = containerElement();
 	if (!container) {
 		return false;
 	}
-	if (container.style.display && container.style.display !== 'none') {
-		container.style.display = 'none';
-		return true;
-	}
-	container.style.display = 'block';
-	return true;
+	return isContainerVisible() ? hide(container) : show(container);
 }
 
 /**
@@ -72,8 +86,25 @@ function createContainer() {
 }
 
 function setPositionClass(container, position) {
+	if (!container) {
+		return false;
+	}
 	container.classList.remove(
 		'rgaat-Frame--left', 'rgaat-Frame--right', 'rgaat-Frame--bottom', 'rgaat-Frame--external'
 	);
 	container.classList.add('rgaat-Frame--' + position);
+}
+
+function hide(container) {
+	if (!container) {
+		return false;
+	}
+	container.style.display = 'none';
+}
+
+function show(container) {
+	if (!container) {
+		return false;
+	}
+	container.style.display = 'block';
 }

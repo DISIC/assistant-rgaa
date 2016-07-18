@@ -5,7 +5,7 @@ import React, {PropTypes} from 'react';
 /**
  *
  */
-export default function DockMenu({onBottomClick, onLeftClick, onRightClick, onExternalClick}) {
+export default function DockMenu({onBottomClick, onLeftClick, onRightClick, onPopupClick}) {
 	return (
 		<ul className="DockMenu-buttonsList">
 			<button
@@ -26,7 +26,7 @@ export default function DockMenu({onBottomClick, onLeftClick, onRightClick, onEx
 			<button
 				className="DockMenu-button"
 				type="button"
-				onClick={onExternalClick}
+				onClick={onPopupClick}
 			>Pop-up</button>
 		</ul>
 	);

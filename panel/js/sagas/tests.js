@@ -18,12 +18,12 @@ function* sendActionSaga({type, payload}) {
  *
  */
 export function* watchApplyHelpers() {
-	yield takeEvery(APPLY_HELPERS, sendActionSaga);
+	yield* takeEvery(APPLY_HELPERS, sendActionSaga);
 }
 
 /**
  *
  */
 export function* watchRevertHelpers() {
-	yield takeEvery(REVERT_HELPERS, sendActionSaga);
+	yield* takeEvery(REVERT_HELPERS, sendActionSaga);
 }

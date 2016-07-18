@@ -1,7 +1,7 @@
 import {takeEvery} from 'redux-saga';
 import {put} from 'redux-saga/effects';
 import {send} from '../actions/messages';
-import {SET_POSITION} from '../actions/dock';
+import {SET_POSITION, TOGGLE_POPUP} from '../actions/dock';
 
 
 
@@ -18,5 +18,12 @@ function* sendDockSaga({type, payload}) {
  *
  */
 export function* watchSetPosition() {
-	yield takeEvery(SET_POSITION, sendDockSaga);
+	yield* takeEvery(SET_POSITION, sendDockSaga);
+}
+
+/**
+ *
+ */
+export function* watchSetPopupMode() {
+	yield* takeEvery(TOGGLE_POPUP, sendDockSaga);
 }

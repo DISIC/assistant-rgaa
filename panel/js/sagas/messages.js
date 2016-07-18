@@ -16,5 +16,5 @@ function* sendSaga({payload}) {
  *
  */
 export function* watchSend() {
-	yield takeEvery(SEND, sendSaga);
+	yield* takeEvery(SEND, sendSaga);
 }

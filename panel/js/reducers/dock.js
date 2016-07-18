@@ -1,17 +1,17 @@
-import {SET_POSITION} from '../actions/dock';
+import {SET_POSITION, SET_POPUP_MODE} from '../actions/dock';
 
 
 
 export const POSITION_RIGHT = 'right';
 export const POSITION_LEFT = 'left';
 export const POSITION_BOTTOM = 'bottom';
-export const POSITION_EXTERNAL = 'external';
 
 /**
  *
  */
 const initialState = {
-	position: POSITION_RIGHT
+	position: POSITION_RIGHT,
+	popup: false
 };
 
 /**
@@ -23,6 +23,12 @@ export function dock(state = initialState, {type, payload}) {
 			return {
 				...state,
 				position: payload.position
+			};
+
+		case SET_POPUP_MODE:
+			return {
+				...state,
+				popup: payload.popup
 			};
 
 		default:
