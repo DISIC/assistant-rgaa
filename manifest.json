@@ -18,19 +18,26 @@
 		"default_title": "RGAA Toolbar"
 	},
 	"background": {
-		"scripts": ["dist/background.js"]
+		"scripts": [
+			"dist/common.js",
+			"dist/background.js"
+		]
 	},
 	"content_scripts": [
 		{
 			"js": [
-				"dist/content.js"
+				"dist/common.js",
+				"dist/iframe.js",
+				"dist/helpers.js"
 			],
-			"css": ["dist/content.css"],
+			"css": [
+				"dist/iframe.css"
+			],
 			"matches": ["<all_urls>"],
 			"run_at": "document_idle"
 		}
 	],
 	"web_accessible_resources": [
-		"content/panel.html"
+		"src/iframe/content.html"
 	]
 }

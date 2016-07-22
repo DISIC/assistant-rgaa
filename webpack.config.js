@@ -15,17 +15,22 @@ module.exports = {
 	entry: {
 		panel: [
 			'babel-polyfill',
-			'./panel/js/index',
-			'./panel/css/index.scss'
+			'./src/panel/js/index',
+			'./src/panel/css/index.scss'
 		],
-		content: [
+		iframe: [
 			'babel-polyfill',
-			'./content/js/index',
-			'./content/css/index.scss'
+			'./src/iframe/js/index',
+			'./src/iframe/css/index.scss'
+		],
+		helpers: [
+			'babel-polyfill',
+			'./src/helpers/js/index',
+			'./src/helpers/css/index.scss'
 		],
 		background: [
 			'babel-polyfill',
-			'./background/index'
+			'./src/background/index'
 		]
 	},
 	output: {
@@ -43,10 +48,7 @@ module.exports = {
 				test: /\.js$/,
 				loader: 'babel',
 				include: [
-					fullPath('panel/js'),
-					fullPath('content/js'),
-					fullPath('common'),
-					fullPath('background')
+					fullPath('src')
 				]
 			},
 			{
@@ -57,16 +59,14 @@ module.exports = {
 					'sass?sourceMap'
 				]),
 				include: [
-					fullPath('panel/css'),
-					fullPath('content/css')
+					fullPath('src')
 				]
 			},
 			{
 				test: /\.json$/,
 				loader: 'json',
 				include: [
-					fullPath('data/helpers'),
-					fullPath('data/references')
+					fullPath('data')
 				]
 			}
 		]
@@ -91,6 +91,7 @@ module.exports = {
 	plugins: [
 		new ExtractTextPlugin('[name].css', {
 			allChunks: true
-		})
+		}),
+		new webpack.optimize.CommonsChunkPlugin('common.js')
 	]
 };

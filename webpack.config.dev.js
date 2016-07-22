@@ -13,10 +13,7 @@ const fullPath = path.resolve.bind(null, __dirname);
 config.module.preLoaders = [{
 	test: /\.js$/,
 	include: [
-		fullPath('panel/js'),
-		fullPath('content/js'),
-		fullPath('common'),
-		fullPath('background')
+		fullPath('src')
 	],
 	loader: 'eslint'
 }];
