@@ -1,5 +1,6 @@
 import React from 'react';
 import DockMenuContainer from './DockMenuContainer';
+import Header from './Header';
 import MenuContainer from './MenuContainer';
 import TestContainer from './TestContainer';
 
@@ -11,7 +12,9 @@ import TestContainer from './TestContainer';
 export default function App() {
 	return (
 		<div className="App">
-			<DockMenuContainer />
+			<Header>
+				<DockMenuContainer />
+			</Header>
 
 			<MenuContainer />
 

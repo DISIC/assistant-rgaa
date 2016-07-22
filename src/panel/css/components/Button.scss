@@ -1,0 +1,24 @@
+.Button {
+	display: inline-block;
+	padding: vr(0.125) vr(0.5);
+	background: $color-mariner;
+	color: $color-white;
+	border-radius: 3px;
+	border: 1px solid transparent;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background: darken($color-mariner, 10%);
+		border-color: darken($color-mariner, 20%);
+	}
+
+	&:active {
+		background: darken($color-mariner, 20%);
+	}
+}
+
+.Button[disabled] {
+	opacity: 0.5;
+	cursor: default;
+}

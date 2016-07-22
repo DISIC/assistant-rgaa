@@ -1,0 +1,22 @@
+.Dropdown-container {
+	position: relative;
+	z-index: 500;
+}
+
+.Dropdown-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: $color-white;
+	border: 1px solid darken($color-white, 20%);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.Dropdown-list--right {
+	left: auto;
+	right: 0;
+}
+
+.Dropdown-list > li {
+	white-space: nowrap;
+}
