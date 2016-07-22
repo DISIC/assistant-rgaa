@@ -1,0 +1,7 @@
+$Panel-background: $color-wild-sand;
+
+.Panel {
+	height: 100%;
+	background: $Panel-background;
+	border: 1px solid darken($Panel-background, 30%);
+}
