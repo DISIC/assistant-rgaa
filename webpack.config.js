@@ -45,6 +45,10 @@ module.exports = {
 	module: {
 		loaders: [
 			{
+				test: require.resolve('sly/dist/sly'),
+				loader: 'imports?jQuery=jquery,$=jquery,this=>window'
+			},
+			{
 				test: /\.js$/,
 				loader: 'babel',
 				include: [

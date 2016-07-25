@@ -23,7 +23,8 @@ config.module.preLoaders = [{
  */
 config.plugins.push(
 	new StyleLintPlugin({
-		failOnError: false
+		failOnError: false,
+		syntax: 'scss'
 	})
 );
 

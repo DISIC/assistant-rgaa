@@ -8,6 +8,16 @@ body {
 	padding: 0;
 }
 
+/* stylelint-disable selector-no-universal */
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+/* stylelint-enable */
+
 body {
 	@include typi-base();
 	font-family: $font-sans-serif;

@@ -16,6 +16,38 @@
 					]
 				}
 			]
+		},
+		{
+			"id": "2",
+			"title": "2. Formulaires"
+		},
+		{
+			"id": "3",
+			"title": "3. Titres"
+		},
+		{
+			"id": "4",
+			"title": "4. Clavier"
+		},
+		{
+			"id": "5",
+			"title": "5. Listes"
+		},
+		{
+			"id": "6",
+			"title": "6. Liens"
+		},
+		{
+			"id": "7",
+			"title": "7. Scripts"
+		},
+		{
+			"id": "8",
+			"title": "8. Navigation"
+		},
+		{
+			"id": "9",
+			"title": "9. Consultation"
 		}
 	]
 }
