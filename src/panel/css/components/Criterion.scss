@@ -12,3 +12,17 @@
 .Criterion-test:hover {
 	background: rgba(yellow, 0.1);
 }
+
+.Criterion:target .Criterion-title {
+	animation: highlight 0.5s ease-in;
+}
+
+@keyframes highlight {
+	0% {
+		background-color: lighten($color-mariner, 40%);
+	}
+
+	100% {
+		background-color: $color-mariner;
+	}
+}

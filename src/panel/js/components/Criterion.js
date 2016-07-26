@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import classNames from 'classnames';
 import TestContainer from './TestContainer';
 
 
@@ -7,12 +6,9 @@ import TestContainer from './TestContainer';
 /**
  *
  */
-export default function Criterion({id, title, tests, currentCriterion}) {
-	const containerClass = classNames('Criterion', {
-	});
-
+export default function Criterion({id, title, tests}) {
 	return (
-		<div className={containerClass}>
+		<div id={`criterion-${id}`} className="Criterion">
 			<h1 className="Criterion-title">{title}</h1>
 
 			<ul className="Criterion-tests">
@@ -33,8 +29,7 @@ export default function Criterion({id, title, tests, currentCriterion}) {
 Criterion.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
-	tests: PropTypes.array.isRequired,
-	currentCriterion: PropTypes.object.isRequired
+	tests: PropTypes.array.isRequired
 };
 
 Criterion.defaultProps = {

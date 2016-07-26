@@ -6,8 +6,7 @@ import Criterion from './Criterion';
 /**
  *
  */
-const mapStateToProps = ({reference}) => ({
-	currentCriterion: reference.criterion
+const mapStateToProps = () => ({
 });
 
 /**
