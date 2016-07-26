@@ -6,6 +6,7 @@
 
 @import './variables';
 @import './base';
+@import './utils';
 @import './components/InvisibleLink';
 @import './components/Link';
 @import './components/Button';
@@ -15,4 +16,5 @@
 @import './components/Header';
 @import './components/DockMenu';
 @import './components/ThemesList';
+@import './components/Theme';
 @import './components/Test';

@@ -1,0 +1,70 @@
+.Theme {
+	flex: 1;
+	background: $color-white;
+	display: flex;
+	flex-direction: column;
+}
+
+.Theme-header {
+	flex-shrink: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: $app-gutter;
+	border-bottom: 1px dashed darken($color-wild-sand, 20%);
+}
+
+.Theme-title {
+	font-weight: bold;
+}
+
+.Theme-criterionSelect {
+	max-width: 100%;
+}
+
+.Theme-criterionSelect select {
+	max-width: 300px;
+}
+
+.Theme-criteria {
+	overflow: auto;
+}
+
+// .Theme-criterion:nth-child(even) {
+// 	background: $color-wild-sand;
+// 	border: 1px solid darken($color-wild-sand, 5%);
+// 	border-left: none;
+// 	border-right: none;
+// }
+
+// .Theme-criterion:nth-child(even):target {
+// 	animation: highlight-even 1.5s ease-out;
+// }
+
+// .Theme-criterion:nth-child(odd):target {
+// 	animation: highlight-odd 1.5s ease-out;
+// }
+
+.Theme-criterion:target {
+	animation: highlight-odd 1.5s ease-out;
+}
+
+@keyframes highlight-even {
+	0% {
+		background-color: yellow;
+	}
+
+	100% {
+		background-color: $color-wild-sand;
+	}
+}
+
+@keyframes highlight-odd {
+	0% {
+		background-color: yellow;
+	}
+
+	100% {
+		background-color: transparent;
+	}
+}

@@ -3,7 +3,9 @@
  */
 const messages = {
 	'Header.title': 'Panel d\'outils RGAA',
-	'Test.apply': 'Aide au test',
+	'Theme.criterion.select.label': 'Aller au critère : ',
+	'Theme.criterion.select.emptyOption': 'Choisissez un critère',
+	'Test.apply': 'Appliquer / enlever les CSS et JS liés au test',
 	'Test.done': 'Test effectué',
 	'Test.instructions': 'Instructions'
 };

@@ -3,8 +3,14 @@
  */
 
 $typi: (
-	null: (16px, 1.5)
+	null: (13px, 1.5)
 );
+
+/**
+ *
+ */
+
+$app-gutter: vr(0.5);
 
 /**
  *
@@ -27,10 +33,11 @@ $font-sans-serif:
  *
  */
 
-$color-black: #333;
+$color-black: #111;
 $color-white: #fff;
 
 // colors used on
 // http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html
 $color-wild-sand: #f5f5f5;
 $color-mariner: #2868c9;
+$color-orange: orange;
