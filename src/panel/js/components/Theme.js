@@ -46,7 +46,17 @@ function Theme({currentReference, currentTheme, currentCriterion, onCriterionSel
 				/>
 			</header>
 
-			
+			<ul className="Theme-criteria">
+				{map(currentTheme.criteria, criterion =>
+					<li
+						key={`criterion-${criterion.id}`}
+						className="Theme-criterion"
+						id={`criterion-${criterion.id}`}
+					>
+						<CriterionContainer {...criterion} />
+					</li>
+				)}
+			</ul>
 		</div>
 	);
 }

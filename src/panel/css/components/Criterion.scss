@@ -1,0 +1,14 @@
+.Criterion-title {
+	background-color: $color-mariner;
+	color: $color-white;
+	padding: $app-gutter;
+	font-weight: bold;
+}
+
+.Criterion-test:nth-child(even) {
+	background: rgba($color-mariner, 0.05);
+}
+
+.Criterion-test:hover {
+	background: rgba(yellow, 0.1);
+}
