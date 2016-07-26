@@ -1,4 +1,43 @@
 .Test {
-	flex: 1;
-	background: $color-white;
+	border: 1px solid lighten($color-black, 30%);
+	border-bottom: none;
+}
+
+.Test-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.Test-title {
+	padding: vr(0.25);
+	padding-left: $app-gutter;
+}
+
+.Test-actions {
+	flex-shrink: 0;
+}
+
+.Test-action {
+	display: inline-block;
+	vertical-align: middle;
+	padding: vr(0.125);
+	border-left: 1px solid lighten($color-black, 80%);
+	height: 100%;
+}
+
+.Test-actionLabel img {
+	height: $base-line-height;
+}
+
+.Test-instructions {
+	padding: vr(0.25) vr(0.5);
+}
+
+.Test-header + .Test-instructions {
+	border-top: 1px solid lighten($color-black, 80%);
+}
+
+.Test-instructionsTitle {
+	display: inline-block;
+	padding-right: vr(1);
 }
