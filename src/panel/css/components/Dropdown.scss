@@ -7,9 +7,9 @@
 	position: absolute;
 	top: 100%;
 	left: 0;
-	background: $color-white;
-	border: 1px solid darken($color-white, 20%);
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background: $color-wild-sand;
+	border: 1px solid darken($color-wild-sand, 20%);
+	padding: vr(0.125);
 }
 
 .Dropdown-list--right {

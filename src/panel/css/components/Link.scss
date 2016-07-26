@@ -1,0 +1,17 @@
+.Link {
+	border: none;
+	background: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:active {
+		text-decoration: underline;
+	}
+}

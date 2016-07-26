@@ -1,0 +1,9 @@
+.DockMenu-button {
+	width: 100%;
+}
+
+.DockMenu .Dropdown-list > li:not(:last-child) {
+	padding-bottom: vr(0.125);
+	margin-bottom: vr(0.125);
+	border-bottom: 1px solid $color-mariner;
+}

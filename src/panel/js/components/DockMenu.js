@@ -18,13 +18,13 @@ export default function DockMenu({
 
 	return (
 		<Wrapper onSelection={onDropdownSelection} className="DockMenu Dropdown-container">
-			<Button className="Button Dropdown-toggle">Dock</Button>
+			<Button className="Link Dropdown-toggle">Dock</Button>
 			<Menu>
 				<ul className="Dropdown-list Dropdown-list--right">
 					<li>
 						<MenuItem value={requestDockToBottom}>
 							<button
-								className="DockMenu-button"
+								className="DockMenu-button Button"
 								type="button"
 							>
 								En bas
@@ -34,7 +34,7 @@ export default function DockMenu({
 					<li>
 						<MenuItem value={requestDockToLeft}>
 							<button
-								className="DockMenu-button"
+								className="DockMenu-button Button"
 								type="button"
 							>
 								A gauche
@@ -44,7 +44,7 @@ export default function DockMenu({
 					<li>
 						<MenuItem value={requestDockToRight}>
 							<button
-								className="DockMenu-button"
+								className="DockMenu-button Button"
 								type="button"
 							>
 								A droite
@@ -54,7 +54,7 @@ export default function DockMenu({
 					<li>
 						<MenuItem value={popupToggle}>
 							<button
-								className="DockMenu-button"
+								className="DockMenu-button Button"
 								type="button"
 							>
 								Pop-up

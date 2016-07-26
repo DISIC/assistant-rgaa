@@ -15,6 +15,10 @@ function Header({children}) {
 
 			<div className="Header-actions">
 				{children}
+
+				<button type="button" className="Link">Import</button>
+
+				<button type="button" className="Link">Options</button>
 			</div>
 		</header>
 	);
