@@ -1,8 +1,8 @@
 import React from 'react';
 import DockMenuContainer from './DockMenuContainer';
 import Header from './Header';
-import MenuContainer from './MenuContainer';
 import TestContainer from './TestContainer';
+import ThemesListContainer from './ThemesListContainer';
 
 
 
@@ -16,7 +16,7 @@ export default function App() {
 				<DockMenuContainer />
 			</Header>
 
-			<MenuContainer />
+			<ThemesListContainer />
 
 			<TestContainer
 				id="1.1.1"
