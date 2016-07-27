@@ -4,7 +4,7 @@ import App from '../components/App';
 
 
 
-export const CONTAINER_ID = 'rgaatExtension';
+export const CONTAINER_ID = 'vt-RGAAToolbar';
 export const IFRAME_FILE = 'src/iframe/content.html';
 
 export const element = () =>
