@@ -28,16 +28,3 @@
 .Test-actionLabel img {
 	height: $base-line-height;
 }
-
-.Test-instructions {
-	padding: vr(0.25) vr(0.5);
-}
-
-.Test-header + .Test-instructions {
-	border-top: 1px solid lighten($color-black, 80%);
-}
-
-.Test-instructionsTitle {
-	display: inline-block;
-	padding-right: vr(1);
-}

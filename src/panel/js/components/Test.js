@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
-import {FormattedMessage, injectIntl, intlShape} from 'react-intl';
+import {injectIntl, intlShape} from 'react-intl';
 import renderIf from 'render-if';
 import {noop, random} from 'lodash';
+import TestInstructions from './TestInstructions';
 
 
 
@@ -9,7 +10,6 @@ import {noop, random} from 'lodash';
  *
  */
 function Test({id, title, instructions, helpers, applied, done, onApply, onDone, intl}) {
-
 	const handleApplyChange = (event) =>
 		onApply(event.target.checked, helpers);
 
@@ -66,18 +66,7 @@ function Test({id, title, instructions, helpers, applied, done, onApply, onDone,
 			</header>
 
 			{renderIf(instructions)(() => (
-				<details className="Test-instructions">
-					<summary className="Test-instructionsTitle">
-						<FormattedMessage id="Test.instructions" />
-					</summary>
-
-					<div
-						className="Test-instructionsText"
-						dangerouslySetInnerHTML={{
-							__html: instructions
-						}}
-					/>
-				</details>
+				<TestInstructions instructions={instructions} />
 			))}
 		</article>
 	);

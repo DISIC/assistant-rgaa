@@ -1,0 +1,20 @@
+.TestInstructions {
+	padding: vr(0.25) vr(0.5);
+	border-top: 1px solid lighten($color-black, 80%);
+}
+
+.TestInstructions-title {
+	display: inline-block;
+	padding-right: vr(1);
+	position: relative;
+}
+
+.TestInstructions-toggle:before {
+	display: inline;
+	margin-right: 3px;
+	content: '►';
+
+	.TestInstructions.is-open & {
+		content: '▼';
+	}
+}
