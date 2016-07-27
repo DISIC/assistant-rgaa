@@ -1,14 +1,11 @@
-import {show as showDOMElelement, hide as hideDOMElement} from './dom';
+import React from 'react';
+import {render} from 'react-dom';
+import App from '../components/App';
 
 
 
-/**
- *
- */
-const CONTAINER_ID = 'rgaat-Frame';
+export const CONTAINER_ID = 'rgaatExtension';
 export const IFRAME_FILE = 'src/iframe/content.html';
-
-
 
 export const element = () =>
 	document.getElementById(CONTAINER_ID);
@@ -16,21 +13,13 @@ export const element = () =>
 export const isCreated = () =>
 	element() !== null;
 
-export const isVisible = () => {
-	const container = element();
-	if (!container) {
-		return false;
-	}
-	return (container.style.display && container.style.display !== 'none')
-		|| !container.style.display;
-};
-
-export const toggleVisibility = () => {
-	const container = element();
-	if (!container) {
-		return false;
-	}
-	return isVisible() ? hideDOMElement(container) : showDOMElelement(container);
+/**
+ *	Creates a container so that the app can run on it when it wants.
+ */
+export const create = () => {
+	const container = document.createElement('div');
+	container.id = CONTAINER_ID;
+	document.body.appendChild(container);
 };
 
 export const show = () => {
@@ -38,7 +27,7 @@ export const show = () => {
 	if (!container) {
 		return false;
 	}
-	return showDOMElelement(container);
+	return render(<App />, container);
 };
 
 export const hide = () => {
@@ -46,21 +35,7 @@ export const hide = () => {
 	if (!container) {
 		return false;
 	}
-	return hideDOMElement(container);
-};
-
-/**
- *	Creates an iframe to run the app in.
- */
-export const create = () => {
-	const src = chrome.runtime.getURL(IFRAME_FILE); // eslint-disable-line no-undef
-	const container = document.createElement('iframe');
-
-	container.setAttribute('src', src);
-	container.id = CONTAINER_ID;
-	container.style.display = 'block';
-
-	document.body.appendChild(container);
+	return render(<App hidden />, container);
 };
 
 export const setPosition = (position) => {
@@ -68,9 +43,5 @@ export const setPosition = (position) => {
 	if (!container) {
 		return false;
 	}
-	container.classList.remove(
-		'rgaat-Frame--left', 'rgaat-Frame--right', 'rgaat-Frame--bottom'
-	);
-	return container.classList.add(`rgaat-Frame--${position}`);
+	return render(<App position={position} />, container);
 };
-

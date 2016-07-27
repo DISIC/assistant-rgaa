@@ -5,7 +5,7 @@ sure page styles won't affect ours */
 /* stylelint-disable
 declaration-no-important, selector-no-id, selector-id-pattern */
 
-#rgaat-Frame {
+#rgaatExtension-container {
 	position: fixed !important;
 	top: 0 !important;
 	right: 0 !important;
@@ -19,26 +19,32 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	border-left: 3px solid orange !important;
 }
 
-#rgaat-Frame.rgaat-Frame--left {
+#rgaatExtension-container.rgaatExtension-container--left {
 	left: 0 !important;
 	right: auto !important;
 	border: 0 !important;
 	border-right: 3px solid orange !important;
 }
 
-#rgaat-Frame.rgaat-Frame--right {
+#rgaatExtension-container.rgaatExtension-container--right {
 	left: auto !important;
 	right: 0 !important;
 	border-left: 3px solid orange !important;
 }
 
-#rgaat-Frame.rgaat-Frame--bottom {
+#rgaatExtension-container.rgaatExtension-container--bottom {
 	bottom: 0 !important;
 	top: auto !important;
 	width: 100% !important;
 	height: 400px !important;
 	border: 0 !important;
 	border-top: 3px solid orange !important;
+}
+
+#rgaatExtension-panel {
+	width: 100% !important;
+	height: 100% !important;
+	border: none !important;
 }
 
 /* stylelint-enable */

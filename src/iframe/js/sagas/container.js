@@ -11,7 +11,6 @@ import {show, setPosition, isCreated, create, hide} from '../api/iframe';
  */
 export function* setPositionWorker() {
 	const position = yield select(getPosition);
-	yield call(show);
 	yield call(setPosition, position);
 }
 
@@ -20,8 +19,10 @@ export function* setPositionWorker() {
  */
 export function* requestToggleWorker() {
 	const openIntent = yield select(getOpenIntent);
-	const showOrCreate = isCreated() ? show : create;
-	yield call(openIntent ? showOrCreate : hide);
+	if (!isCreated()) {
+		yield call(create);
+	}
+	yield call(openIntent ? show : hide);
 	yield put(toggle());
 }
 
