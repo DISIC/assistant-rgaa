@@ -21,10 +21,21 @@ function Test({id, title, instructions, helpers, applied, done, onApply, onDone,
 	const applyImage = randomApplied ? 'prohibition.png' : 'magnifier-zoom.png';
 	const applyTranslateKey = randomApplied ? 'uncheck' : 'check';
 
+	const titlePattern = /^(Test \d+\.\d+\.\d+)\s?:\s?(.*)$/;
+	const matchPattern = title.match(titlePattern);
+
+	const titleEl = matchPattern
+		? (<h2 className="Test-title">
+			<span className="Test-id">{matchPattern[1]}</span>
+			<span className="Test-description">{matchPattern[2]}</span>
+		</h2>)
+		: <h2 className="Test-title">{title}</h2>;
+
+
 	return (
 		<article className="Test">
 			<header className="Test-header">
-				<h2 className="Test-title">{title}</h2>
+				{titleEl}
 
 				<div className="Test-actions">
 					<div className="Test-action Test-action---apply">
