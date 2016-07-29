@@ -4,22 +4,32 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 // ResizeHandle width/height are not !important to
 // allow resizing via JS
 
-#vt-RGAAToolbar-container .vt-ResizeHandle {
+#vt-RGAAToolbar .vt-ResizeHandle--left,
+#vt-RGAAToolbar .vt-ResizeHandle--right {
 	width: 400px;
-	height: 100%;
-	border: none !important;
 }
 
-#vt-RGAAToolbar-container.vt-RGAAToolbar-container--bottom .vt-ResizeHandle {
-	width: 100%;
+#vt-RGAAToolbar .vt-ResizeHandle--left,
+#vt-RGAAToolbar .vt-ResizeHandle--right,
+#vt-RGAAToolbar .vt-ResizeHandle--left .vt-ResizeHandle-handle,
+#vt-RGAAToolbar .vt-ResizeHandle--right .vt-ResizeHandle-handle {
+	height: 100% !important;
+}
+
+#vt-RGAAToolbar .vt-ResizeHandle--top {
 	height: 400px;
 }
 
-#vt-RGAAToolbar-container .vt-ResizeHandle-handle {
+#vt-RGAAToolbar .vt-ResizeHandle--top,
+#vt-RGAAToolbar .vt-ResizeHandle--top .vt-ResizeHandle-handle {
+	width: 100% !important;
+}
+
+#vt-RGAAToolbar .vt-ResizeHandle-handle {
 	background-color: orange !important;
 }
 
-#vt-RGAAToolbar-container .vt-ResizeHandle-handle:before {
+#vt-RGAAToolbar .vt-ResizeHandle-handle:before {
 	content: '\02016'; // ‖
 	color: #222;
 	display: block;
@@ -35,7 +45,7 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	font-size: 16px;
 }
 
-#vt-RGAAToolbar-container .vt-ResizeHandle--top .vt-ResizeHandle-handle:before {
+#vt-RGAAToolbar .vt-ResizeHandle--top .vt-ResizeHandle-handle:before {
 	transform: rotate(90deg); // for the handle "‖" to be horizontal
 }
 
