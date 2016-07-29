@@ -17,7 +17,7 @@ const defaultStyles = {
 		padding: 0,
 		border: 0,
 		background: '#ccc',
-		cursor: 'ew-resize',
+		cursor: 'col-resize',
 		zIndex: 50
 	},
 	overlay: {
@@ -53,7 +53,7 @@ const defaultStyles = {
 		top: '-8px',
 		bottom: 'auto',
 		height: '8px',
-		cursor: 'ns-resize'
+		cursor: 'row-resize'
 	},
 	handleBottom: {
 		left: 0,
@@ -61,7 +61,7 @@ const defaultStyles = {
 		top: '-auto',
 		bottom: '8px',
 		height: '8px',
-		cursor: 'ns-resize'
+		cursor: 'row-resize'
 	}
 };
 
