@@ -1,6 +1,7 @@
 import React, {PropTypes, Component} from 'react';
 import {DraggableCore} from 'react-draggable';
-import {includes, assign, upperFirst, isEqual} from 'lodash';
+import {includes, assign, upperFirst, isEqual, omit, bindAll} from 'lodash';
+import classNames from 'classnames';
 import renderIf from 'render-if';
 
 
@@ -33,33 +34,33 @@ const defaultStyles = {
 	},
 	// all "handle<Position>" styles are merged with "handle" styles for the given position
 	handleLeft: {
-		left: '-6px',
+		left: '-8px',
 		right: 'auto',
 		top: 0,
 		bottom: 0,
-		width: '6px'
+		width: '8px'
 	},
 	handleRight: {
 		left: 'auto',
-		right: '-6px',
+		right: '-8px',
 		top: 0,
 		bottom: 0,
-		width: '6px'
+		width: '8px'
 	},
 	handleTop: {
 		left: 0,
 		right: 0,
-		top: '-6px',
+		top: '-8px',
 		bottom: 'auto',
-		height: '6px',
+		height: '8px',
 		cursor: 'ns-resize'
 	},
 	handleBottom: {
 		left: 0,
 		right: 0,
 		top: '-auto',
-		bottom: '6px',
-		height: '6px',
+		bottom: '8px',
+		height: '8px',
 		cursor: 'ns-resize'
 	}
 };
@@ -75,34 +76,41 @@ class ResizeHandle extends Component {
 		this.state = {
 			length: null,
 			lengthProperty: this.lengthProperty(props.position),
-			dragging: false
+			dragging: false,
+			folded: false
 		};
 
-		this.onDrag = this.onDrag.bind(this);
-		this.onDragStart = this.onDragStart.bind(this);
-		this.onDragStop = this.onDragStop.bind(this);
+		bindAll(this, 'onDrag', 'onDragStop');
 	}
 
 	componentDidMount() {
-		const rect = this.refs.container.getBoundingClientRect();
 		this.setState({ // eslint-disable-line react/no-did-mount-set-state
-			length: rect[this.state.lengthProperty]
+			length: this.getContainerLength()
 		});
 	}
 
 	componentWillReceiveProps({position: newPosition}) {
-		this.setState({
-			lengthProperty: this.lengthProperty(newPosition)
-		});
-	}
+		const newLengthProperty = this.lengthProperty(newPosition);
+		if (newLengthProperty === this.state.lengthProperty) {
+			return;
+		}
 
-	onDragStart() {
 		this.setState({
-			dragging: true
+			lengthProperty: newLengthProperty
 		});
 	}
 
 	onDrag(event, {deltaX, deltaY}) {
+		// set dragging state onDrag and not onDragStart because when only clicking
+		// then handle, we pass in onDragStart but not on onDrag.
+		// So, we think we start dragging when doing a normal click because
+		// we pass in onDragStart, but we're actually not dragging until a onDrag event is sent
+		if (!this.state.dragging) {
+			this.setState({
+				dragging: true
+			});
+		}
+
 		let value = this.state.lengthProperty === 'width' ? deltaX : deltaY;
 		if (value === 0) {
 			return;
@@ -115,16 +123,48 @@ class ResizeHandle extends Component {
 		});
 	}
 
-	onDragStop() {
-		this.setState({
+	onDragStop(event, ui) {
+		const justAClick = !this.state.dragging;
+
+		if (justAClick && this.props.foldOnClick) {
+			return this.toggleFolding(event, ui);
+		}
+
+		return this.setState({
 			dragging: false
 		});
+	}
+
+	getContainerLength() {
+		const rect = this.refs.container.getBoundingClientRect();
+		return rect[this.state.lengthProperty];
 	}
 
 	lengthProperty(position) {
 		return includes(['left', 'right'], position)
 			? 'width'
 			: 'height';
+	}
+
+	toggleFolding() {
+		if (!this.props.foldOnClick) {
+			return false;
+		}
+
+		const wantToFold = !this.state.folded;
+		if (wantToFold) {
+			return this.setState({
+				beforeFold: omit(this.state, 'beforeFold', 'folded'),
+				length: 0,
+				folded: true
+			});
+		}
+
+		return this.setState({
+			...this.state.beforeFold,
+			beforeFold: {},
+			folded: false
+		});
 	}
 
 	render() {
@@ -134,6 +174,10 @@ class ResizeHandle extends Component {
 		const containerStyles = isEqual(classes.container, defaultClasses.container)
 			? assign({}, defaultStyles.container, styles.container)
 			: {};
+		const containerClasses = classNames(classes.container, {
+			[`${classes.container}--${position}`]: true,
+			[`${classes.container}--dragging`]: this.state.dragging
+		});
 		const handleStyles = isEqual(classes.handle, defaultClasses.handle)
 			? assign(
 				{},
@@ -149,21 +193,21 @@ class ResizeHandle extends Component {
 		containerStyles[this.state.lengthProperty] = `${this.state.length}px`;
 
 		return (
-			<div ref="container" style={containerStyles} className={classes.container}>
+			<div ref="container" style={containerStyles} className={containerClasses}>
 				{children}
 				<DraggableCore
-					onDrag={this.onDrag}
 					offsetParent={document.body}
-					onStart={this.onDragStart}
+					onDrag={this.onDrag}
 					onStop={this.onDragStop}
 					{...this.props.draggableProps}
 				>
 					<div
 						className={classes.handle}
 						style={handleStyles}
+						{...this.props.handleProps}
 					></div>
 				</DraggableCore>
-				{renderIf(this.state.dragging)(
+				{renderIf(useOverlay && this.state.dragging)(
 					<div
 						className={classes.overlay}
 						style={overlayStyles}
@@ -179,20 +223,22 @@ export default ResizeHandle;
 ResizeHandle.propTypes = {
 	position: PropTypes.oneOf(['left', 'right', 'top', 'bottom']).isRequired,
 	useOverlay: PropTypes.bool,
+	foldOnClick: PropTypes.bool,
 	styles: PropTypes.object.isRequired,
 	classes: PropTypes.object.isRequired,
 	children: PropTypes.element.isRequired,
-	draggableProps: PropTypes.object
+	draggableProps: PropTypes.object,
+	handleProps: PropTypes.object
 };
 
 ResizeHandle.defaultProps = {
 	position: 'right',
 	useOverlay: false,
+	foldOnClick: false,
 	classes: {
 		container: 'vt-ResizeHandle',
 		handle: 'vt-ResizeHandle-handle',
-		overlay: 'vt-ResizeHandle-overlay',
-		child: 'vt-ResizeHandle-element'
+		overlay: 'vt-ResizeHandle-overlay'
 	},
 	styles: {
 		container: {},
