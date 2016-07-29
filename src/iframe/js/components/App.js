@@ -27,6 +27,10 @@ export default function App({position, hidden}) {
 			<ResizeHandle
 				position={handlePosMap[position]}
 				useOverlay
+				foldOnClick
+				handleProps={{
+					title: 'Redimensionnez, ou cliquez pour afficher ou cacher l\'extension'
+				}}
 				styles={{
 					handle: {
 						zIndex: 100005

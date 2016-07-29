@@ -1,0 +1,42 @@
+/* stylelint-disable
+declaration-no-important, selector-no-id, selector-id-pattern */
+
+// ResizeHandle width/height are not !important to
+// allow resizing via JS
+
+#vt-RGAAToolbar-container .vt-ResizeHandle {
+	width: 400px;
+	height: 100%;
+	border: none !important;
+}
+
+#vt-RGAAToolbar-container.vt-RGAAToolbar-container--bottom .vt-ResizeHandle {
+	width: 100%;
+	height: 400px;
+}
+
+#vt-RGAAToolbar-container .vt-ResizeHandle-handle {
+	background-color: orange !important;
+}
+
+#vt-RGAAToolbar-container .vt-ResizeHandle-handle:before {
+	content: '\02016'; // ‖
+	color: #222;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
+}
+
+#vt-RGAAToolbar-container .vt-ResizeHandle--top .vt-ResizeHandle-handle:before {
+	transform: rotate(90deg); // for the handle "‖" to be horizontal
+}
+
+/* stylelint-enable */
