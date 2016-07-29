@@ -1,6 +1,5 @@
 import React from 'react';
-import DockMenuContainer from './DockMenuContainer';
-import Header from './Header';
+import HeaderContainer from './HeaderContainer';
 import ThemesListContainer from './ThemesListContainer';
 import ThemeContainer from './ThemeContainer';
 
@@ -12,9 +11,7 @@ import ThemeContainer from './ThemeContainer';
 export default function App() {
 	return (
 		<div className="App">
-			<Header>
-				<DockMenuContainer />
-			</Header>
+			<HeaderContainer />
 
 			<ThemesListContainer />
 

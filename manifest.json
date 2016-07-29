@@ -37,6 +37,9 @@
 			"run_at": "document_idle"
 		}
 	],
+	"options_ui": {
+		"page": "src/options/content.html"
+	},
 	"web_accessible_resources": [
 		"src/iframe/content.html"
 	]
