@@ -11,4 +11,5 @@ import {receive} from './actions';
  * 	the "send" part is made through the sagas:
  * 	see sagas/messages and sagas/synced-actions
  */
-export const handleBackgroundMessages = dispatchOnMessage(store, receive);
+export const handleBackgroundMessages = () =>
+	dispatchOnMessage(store, receive);

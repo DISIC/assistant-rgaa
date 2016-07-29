@@ -1,7 +1,7 @@
 import {takeEvery} from 'redux-saga';
 import {put} from 'redux-saga/effects';
 import {send} from '../../../common/actions/messages';
-import {send as syncedActions} from '../synced-actions';
+import {send as syncedActions} from '../sync/actions';
 
 
 
