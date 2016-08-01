@@ -17,6 +17,9 @@
 		"default_icon": "img/icon-96.png",
 		"default_title": "RGAA Toolbar"
 	},
+	"permissions": [
+		"storage"
+	],
 	"background": {
 		"scripts": [
 			"dist/common.js",
