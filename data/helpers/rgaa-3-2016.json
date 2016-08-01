@@ -1,5 +1,18 @@
 {
 	"1.1.1": [
-		"disableAllStyles"
+		"disableAllStyles",
+		{
+			"name": "highlight",
+			"options": {
+				"selector": "img"
+			}
+		},
+		{
+			"name": "showAttribute",
+			"options": {
+				"selector": "img",
+				"attribute": "alt"
+			}
+		}
 	]
 }

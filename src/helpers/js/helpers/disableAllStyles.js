@@ -1,20 +1,13 @@
 import {toArray} from 'lodash';
+import toggleStyleSheets from './effects/toggleStyleSheets';
 
 
-
-/**
- *
- */
-const toggleStylesheets = (styleSheets, toggled) =>
-	styleSheets.forEach((stylesheet) =>
-		stylesheet.disabled = !toggled
-	);
 
 /**
  *
  */
 export const apply = ({document}) =>
-	toggleStylesheets(
+	toggleStyleSheets(
 		toArray(document.styleSheets),
 		false
 	);
@@ -23,7 +16,7 @@ export const apply = ({document}) =>
  *
  */
 export const revert = ({document}) =>
-	toggleStylesheets(
+	toggleStyleSheets(
 		toArray(document.styleSheets),
 		true
 	);

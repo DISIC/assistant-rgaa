@@ -1,21 +1,21 @@
-import {toArray} from 'lodash';
+import {inject, remove} from './effects/style';
 
 
 
 /**
  *
  */
-export const apply = (context) =>
-	toggleStylesheets(
-		toArray(context.document.styleSheets),
-		false
-	);
+export const apply = ({document}, {id, selector, attribute, color = 'red'}) =>
+	inject(document, id, `
+		${selector}:after {
+			content: "${attribute}="attr(${attribute})"";
+			color: ${color};
+			font-weight: bold;
+		}
+	`);
 
 /**
  *
  */
-export const revert = (context) =>
-	toggleStylesheets(
-		toArray(context.document.styleSheets),
-		true
-	);
+export const revert = ({document}, {id}) =>
+	remove(document, id);

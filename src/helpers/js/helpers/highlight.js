@@ -1,30 +1,19 @@
-import {toArray} from 'lodash';
+import {inject, remove} from './effects/style';
 
 
 
 /**
  *
  */
-const highlight = (selector) =>
-	toArray(document.querySelectorAll(selector))
-		.forEach((element) =>
-			element.classList.add()
-		);
+export const apply = ({document}, {id, selector, width = '5px', color = 'red'}) =>
+	inject(document, id, `
+		${selector} {
+			border: ${width} solid ${color};
+		}
+	`);
 
 /**
  *
  */
-export const apply = ({document}, selector) =>
-	toArray(document.querySelectorAll(selector))
-		.forEach((element) =>
-			element.classList.add()
-		);
-
-/**
- *
- */
-export const revert = ({document}) =>
-	toggleStylesheets(
-		toArray(context.document.styleSheets),
-		true
-	);
+export const revert = ({document}, {id}) =>
+	remove(document, id);

@@ -15,12 +15,12 @@ const mapStateToProps = (state, {id}) => ({
 /**
  *
  */
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch, {id}) => ({
 	onApply(applied, helpers) {
 		dispatch(
 			applied
-				? requestApplyHelpers(helpers)
-				: requestRevertHelpers(helpers)
+				? requestApplyHelpers(id, helpers)
+				: requestRevertHelpers(id, helpers)
 		);
 	}
 });

@@ -11,9 +11,10 @@ export const REQUEST_REVERT = 'helpers/REQUEST_REVERT';
 /**
  *
  */
-export const applyHelpers = (helpers) => ({
+export const applyHelpers = (id, helpers) => ({
 	type: APPLY,
 	payload: {
+		id,
 		helpers
 	}
 });
@@ -21,9 +22,10 @@ export const applyHelpers = (helpers) => ({
 /**
  *
  */
-export const revertHelpers = (helpers) => ({
+export const revertHelpers = (id, helpers) => ({
 	type: REVERT,
 	payload: {
+		id,
 		helpers
 	}
 });
@@ -31,9 +33,10 @@ export const revertHelpers = (helpers) => ({
 /**
  *
  */
-export const requestApplyHelpers = (helpers) => ({
+export const requestApplyHelpers = (id, helpers) => ({
 	type: REQUEST_APPLY,
 	payload: {
+		id,
 		helpers
 	}
 });
@@ -41,9 +44,10 @@ export const requestApplyHelpers = (helpers) => ({
 /**
  *
  */
-export const requestRevertHelpers = (helpers) => ({
+export const requestRevertHelpers = (id, helpers) => ({
 	type: REQUEST_REVERT,
 	payload: {
+		id,
 		helpers
 	}
 });
