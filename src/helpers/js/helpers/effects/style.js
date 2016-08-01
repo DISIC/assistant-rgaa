@@ -15,5 +15,8 @@ export const inject = (document, id, style) => {
  */
 export const remove = (document, id) => {
 	const element = document.getElementById(id);
-	element.parentNode.removeChild(element);
+
+	if (element) {
+		element.parentNode.removeChild(element);
+	}
 };
