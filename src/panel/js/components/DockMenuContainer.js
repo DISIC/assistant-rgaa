@@ -15,16 +15,25 @@ const mapStateToProps = ({container}) => ({
  *
  */
 const mapDispatchToProps = (dispatch) => ({
-	requestDockToBottom() {
+	requestDockToBottom(popup) {
 		dispatch(actions.dockToBottom());
+		if (popup) {
+			dispatch(actions.requestPopup(false));
+		}
 	},
 
-	requestDockToLeft() {
+	requestDockToLeft(popup) {
 		dispatch(actions.dockToLeft());
+		if (popup) {
+			dispatch(actions.requestPopup(false));
+		}
 	},
 
-	requestDockToRight() {
+	requestDockToRight(popup) {
 		dispatch(actions.dockToRight());
+		if (popup) {
+			dispatch(actions.requestPopup(false));
+		}
 	},
 
 	requestPopupToggle(showOrHide) {

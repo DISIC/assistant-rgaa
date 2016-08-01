@@ -11,7 +11,12 @@ const messages = {
 	'Test.apply.check.alt': 'Loupe',
 	'Test.apply.uncheck.alt': 'Interdit',
 	'Test.done': 'Test effectué',
-	'Test.instructions': 'Instructions'
+	'Test.instructions': 'Instructions',
+	'DockMenu.bottom': 'En bas',
+	'DockMenu.left': 'À gauche',
+	'DockMenu.right': 'À droite',
+	'DockMenu.popup.open': 'Popup',
+	'DockMenu.popup.close': 'Fermer'
 };
 
 

@@ -1,4 +1,6 @@
 import React, {PropTypes} from 'react';
+import {FormattedMessage, injectIntl} from 'react-intl';
+import {partial} from 'lodash';
 import {Wrapper, Button, Menu, MenuItem} from 'react-aria-menubutton';
 
 
@@ -6,7 +8,7 @@ import {Wrapper, Button, Menu, MenuItem} from 'react-aria-menubutton';
 /**
  *
  */
-export default function DockMenu({
+function DockMenu({
 	popup,
 	requestDockToBottom, requestDockToLeft, requestDockToRight, requestPopupToggle
 }) {
@@ -22,32 +24,32 @@ export default function DockMenu({
 			<Menu>
 				<ul className="Dropdown-list Dropdown-list--right">
 					<li>
-						<MenuItem value={requestDockToBottom}>
+						<MenuItem value={partial(requestDockToBottom, popup)}>
 							<button
 								className="DockMenu-button Button"
 								type="button"
 							>
-								En bas
+								<FormattedMessage id="DockMenu.bottom" />
 							</button>
 						</MenuItem>
 					</li>
 					<li>
-						<MenuItem value={requestDockToLeft}>
+						<MenuItem value={partial(requestDockToLeft, popup)}>
 							<button
 								className="DockMenu-button Button"
 								type="button"
 							>
-								A gauche
+								<FormattedMessage id="DockMenu.left" />
 							</button>
 						</MenuItem>
 					</li>
 					<li>
-						<MenuItem value={requestDockToRight}>
+						<MenuItem value={partial(requestDockToRight, popup)}>
 							<button
 								className="DockMenu-button Button"
 								type="button"
 							>
-								A droite
+								<FormattedMessage id="DockMenu.right" />
 							</button>
 						</MenuItem>
 					</li>
@@ -57,7 +59,12 @@ export default function DockMenu({
 								className="DockMenu-button Button"
 								type="button"
 							>
-								Pop-up
+								<FormattedMessage
+									id={`DockMenu.popup.${popup
+										? 'close'
+										: 'open'}`
+									}
+								/>
 							</button>
 						</MenuItem>
 					</li>
@@ -74,3 +81,5 @@ DockMenu.propTypes = {
 	requestDockToRight: PropTypes.func.isRequired,
 	requestPopupToggle: PropTypes.func.isRequired
 };
+
+export default injectIntl(DockMenu);
