@@ -1,4 +1,4 @@
-import toArray from './toArray';
+import {toArray} from 'lodash';
 
 
 
@@ -7,7 +7,7 @@ import toArray from './toArray';
  */
 const toggleStylesheets = (styleSheets, toggled) =>
 	styleSheets.forEach((stylesheet) =>
-		stylesheet.disabled = !toggled;
+		stylesheet.disabled = !toggled
 	);
 
 /**
