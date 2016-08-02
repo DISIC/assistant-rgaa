@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {getHelpersByTest} from '../../../common/selectors/helpers';
-import {requestApplyHelpers, requestRevertHelpers} from '../../../common/actions/helpers';
+import {applyHelpers, revertHelpers} from '../../../common/actions/helpers';
 import Test from './Test';
 
 
@@ -19,8 +19,8 @@ const mapDispatchToProps = (dispatch, {id}) => ({
 	onApply(applied, helpers) {
 		dispatch(
 			applied
-				? requestApplyHelpers(id, helpers)
-				: requestRevertHelpers(id, helpers)
+				? applyHelpers(id, helpers)
+				: revertHelpers(id, helpers)
 		);
 	}
 });

@@ -9,21 +9,15 @@ import {
 /**
  *
  */
-export const TOGGLE = 'container/TOGGLE';
-export const REQUEST_TOGGLE = 'container/REQUEST_TOGGLE';
-export const SET_POSITION = 'container/SET_POSITION';
-export const SET_POPUP = 'container/SET_POPUP';
+export const TOGGLE = 'common/container/TOGGLE';
+export const SET_POSITION = 'common/container/SET_POSITION';
 export const TOGGLE_POPUP = 'common/container/TOGGLE_POPUP';
+export const SET_POPUP = 'common/container/SET_POPUP';
 
 
 
 export const toggle = () => ({
 	type: TOGGLE,
-	payload: {}
-});
-
-export const requestToggle = () => ({
-	type: REQUEST_TOGGLE,
 	payload: {}
 });
 

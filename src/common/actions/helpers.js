@@ -1,8 +1,8 @@
 /**
  *
  */
-export const APPLY = 'helpers/APPLY';
-export const REVERT = 'helpers/REVERT';
+export const APPLY = 'common/helpers/APPLY';
+export const REVERT = 'common/helpers/REVERT';
 
 
 

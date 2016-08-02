@@ -1,8 +1,8 @@
 /**
  *
  */
-export const SET_CURRENT = 'tabs/SET_CURRENT';
-export const GET_CURRENT = 'tabs/GET_CURRENT';
+export const SET_CURRENT = 'background/tabs/SET_CURRENT';
+export const GET_CURRENT = 'background/tabs/GET_CURRENT';
 
 
 
