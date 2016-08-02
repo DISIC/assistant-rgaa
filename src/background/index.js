@@ -1,4 +1,4 @@
-import store from './store';
+import store, {persistor} from './store';
 import {fetchCurrentTab, sendToContent} from './api/tabs';
 import {setCurrent as setCurrentTab} from './actions/tabs';
 import {toggle} from '../common/actions/container';
@@ -27,6 +27,9 @@ chrome.runtime.onMessage.addListener((message) =>
  */
 chrome.browserAction.onClicked.addListener(() => {
 	fetchCurrentTab().then((tabId) => {
+		// empty cached store from chrome storage to have some sort of "session storage"
+		persistor.purgeAll();
+
 		store.dispatch(setCurrentTab(tabId));
 		store.dispatch(toggle());
 	});
