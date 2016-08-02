@@ -1,4 +1,5 @@
 import {connect} from 'react-redux';
+import {getPopupWindowId} from '../../../common/selectors/container';
 import * as actions from '../../../common/actions/container';
 import DockMenu from './DockMenu';
 
@@ -7,37 +8,28 @@ import DockMenu from './DockMenu';
 /**
  *
  */
-const mapStateToProps = ({container}) => ({
-	popup: !!container.popupId
+const mapStateToProps = (state) => ({
+	popup: !!getPopupWindowId(state)
 });
 
 /**
  *
  */
 const mapDispatchToProps = (dispatch) => ({
-	requestDockToBottom(popup) {
+	onDockToBottom() {
 		dispatch(actions.dockToBottom());
-		if (popup) {
-			dispatch(actions.requestPopup(false));
-		}
 	},
 
-	requestDockToLeft(popup) {
+	onDockToLeft() {
 		dispatch(actions.dockToLeft());
-		if (popup) {
-			dispatch(actions.requestPopup(false));
-		}
 	},
 
-	requestDockToRight(popup) {
+	onDockToRight() {
 		dispatch(actions.dockToRight());
-		if (popup) {
-			dispatch(actions.requestPopup(false));
-		}
 	},
 
-	requestPopupToggle(showOrHide) {
-		dispatch(actions.requestPopup(showOrHide));
+	onTogglePopup() {
+		dispatch(actions.togglePopup());
 	}
 });
 

@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import classNames from 'classnames';
+import renderIf from 'render-if';
 import {CONTAINER_ID} from '../api/iframe';
 import ResizeHandle from './ResizeHandle';
 import Iframe from './Iframe';
@@ -9,21 +9,18 @@ import Iframe from './Iframe';
 /**
  *
  */
-export default function App({position, hidden}) {
-	const containerClass = classNames({
-		[`${CONTAINER_ID}-container--${position}`]: true
-	});
-	const styles = hidden
-		? {display: 'none'}
-		: {display: 'block'};
-
+export default function App({open, position}) {
 	const handlePosMap = {
 		right: 'left',
 		left: 'right',
 		bottom: 'top'
 	};
-	return (
-		<div className={containerClass} id={`${CONTAINER_ID}-container`} style={styles}>
+
+	return renderIf(open)(() => (
+		<div
+			id={`${CONTAINER_ID}-container`}
+			className={`${CONTAINER_ID}-container--${position}`}
+		>
 			<ResizeHandle
 				position={handlePosMap[position]}
 				useOverlay
@@ -43,15 +40,15 @@ export default function App({position, hidden}) {
 				<Iframe />
 			</ResizeHandle>
 		</div>
-	);
+	));
 }
 
 App.propTypes = {
-	position: PropTypes.oneOf(['left', 'right', 'bottom']).isRequired,
-	hidden: PropTypes.bool.isRequired
+	open: PropTypes.bool.isRequired,
+	position: PropTypes.oneOf(['left', 'right', 'bottom']).isRequired
 };
 
 App.defaultProps = {
-	position: 'right',
-	hidden: false
+	open: false,
+	position: 'right'
 };

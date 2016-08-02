@@ -1,7 +1,7 @@
 import {takeEvery} from 'redux-saga';
 import {call} from 'redux-saga/effects';
 import {partial} from 'lodash';
-import {REQUEST_APPLY, REQUEST_REVERT} from '../../../common/actions/helpers';
+import {APPLY, REVERT} from '../../../common/actions/helpers';
 import {getInfo, getModule} from '../api/helpers';
 
 
@@ -49,12 +49,12 @@ function* revertSaga({payload}) {
  *
  */
 export function* watchApply() {
-	yield* takeEvery(REQUEST_APPLY, applySaga);
+	yield* takeEvery(APPLY, applySaga);
 }
 
 /**
  *
  */
 export function* watchRevert() {
-	yield* takeEvery(REQUEST_REVERT, revertSaga);
+	yield* takeEvery(REVERT, revertSaga);
 }

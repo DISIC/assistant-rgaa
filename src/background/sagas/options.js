@@ -9,7 +9,6 @@ import {OPEN} from '../../common/actions/options';
  *
  */
 function* openWorker() {
-	console.log('oazpdazd');
 	yield call(open);
 }
 

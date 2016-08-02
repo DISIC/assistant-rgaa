@@ -1,9 +1,9 @@
 /**
  *
  */
-export const FETCH_THEME = 'theme/FETCH';
-export const SET_CURRENT_THEME = 'theme/SET_CURRENT_THEME';
-export const SET_CURRENT_CRITERION = 'theme/SET_CURRENT_CRITERION';
+export const FETCH_THEME = 'panel/reference/FETCH';
+export const SET_CURRENT_THEME = 'panel/reference/SET_CURRENT_THEME';
+export const SET_CURRENT_CRITERION = 'panel/reference/SET_CURRENT_CRITERION';
 
 
 
