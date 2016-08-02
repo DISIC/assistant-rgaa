@@ -6,14 +6,8 @@ import fr from 'react-intl/locale-data/fr';
 import routes from './routes';
 import store from './store';
 import messages from './messages/fr';
-import {handleBackgroundMessages} from './sync';
 
 
-
-/**
- *
- */
-handleBackgroundMessages();
 
 /**
  *	Registers the default locale for react-intl.

@@ -1,6 +1,4 @@
 import * as container from './container';
-import * as messages from './messages';
-import * as syncedActions from './synced-actions';
 
 
 
@@ -11,8 +9,6 @@ export default function* sagas() {
 	yield [
 		container.watchSetPosition(),
 		container.watchRequestToggle(),
-		container.watchSetPopup(),
-		messages.watchSend(),
-		syncedActions.watchSyncedActions()
+		container.watchSetPopup()
 	];
 }

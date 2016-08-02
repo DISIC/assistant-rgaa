@@ -1,5 +1,3 @@
-import * as messages from './messages';
-import * as syncedActions from './synced-actions';
 import * as helpers from './helpers';
 
 
@@ -9,8 +7,6 @@ import * as helpers from './helpers';
  */
 export default function* sagas() {
 	yield [
-		messages.watchSend(),
-		syncedActions.watchSyncedActions(),
 		helpers.watchApply(),
 		helpers.watchRevert()
 	];

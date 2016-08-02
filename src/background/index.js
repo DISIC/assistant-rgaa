@@ -1,8 +1,7 @@
 import store from './store';
-import {fetchCurrentTab} from './api/tabs';
+import {fetchCurrentTab, sendToContent} from './api/tabs';
 import {setCurrent as setCurrentTab} from './actions/tabs';
 import {requestToggle} from '../common/actions/container';
-import {handleContentMessages} from './sync';
 
 
 
@@ -12,15 +11,26 @@ import {handleContentMessages} from './sync';
  * 		- dispatching messages across the whole extension
  */
 
+
+
+/**
+ *	Dispatches every message to the content scripts, allowing
+ *	content scripts to talk to each other.
+ */
+// eslint-disable-next-line no-undef
+chrome.runtime.onMessage.addListener((message) =>
+	sendToContent(message)
+);
+
 /**
  *	Asks the content script to toggle the extension's container
- *	when we click the extension icon in browser UI
+ *	when one clicks the extension icon in the browser UI.
  */
-chrome.browserAction.onClicked.addListener(() => { // eslint-disable-line no-undef
+// eslint-disable-next-line no-undef
+chrome.browserAction.onClicked.addListener(() => {
 	fetchCurrentTab().then((tabId) => {
 		store.dispatch(setCurrentTab(tabId));
 		store.dispatch(requestToggle());
 	});
 });
 
-handleContentMessages();
