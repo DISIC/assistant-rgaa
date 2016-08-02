@@ -1,7 +1,7 @@
 import store from './store';
 import {fetchCurrentTab, sendToContent} from './api/tabs';
 import {setCurrent as setCurrentTab} from './actions/tabs';
-import {requestToggle} from '../common/actions/container';
+import {toggle} from '../common/actions/container';
 
 
 
@@ -30,7 +30,7 @@ chrome.runtime.onMessage.addListener((message) =>
 chrome.browserAction.onClicked.addListener(() => {
 	fetchCurrentTab().then((tabId) => {
 		store.dispatch(setCurrentTab(tabId));
-		store.dispatch(requestToggle());
+		store.dispatch(toggle());
 	});
 });
 

@@ -8,6 +8,7 @@ import * as optionsActions from './options';
  */
 export default function* sagas() {
 	yield [
+		container.watchSetPosition(),
 		container.watchRequestPopup(),
 		optionsActions.watchOpen()
 	];

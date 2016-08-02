@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
-import {partial} from 'lodash';
 import {Wrapper, Button, Menu, MenuItem} from 'react-aria-menubutton';
 
 
@@ -8,13 +7,7 @@ import {Wrapper, Button, Menu, MenuItem} from 'react-aria-menubutton';
 /**
  *
  */
-function DockMenu({
-	popup,
-	requestDockToBottom, requestDockToLeft, requestDockToRight, requestPopupToggle
-}) {
-	const popupToggle = () =>
-		requestPopupToggle(!popup);
-
+function DockMenu({popup, onDockToBottom, onDockToLeft, onDockToRight, onTogglePopup}) {
 	const onDropdownSelection = (callback) =>
 		callback();
 
@@ -24,7 +17,7 @@ function DockMenu({
 			<Menu>
 				<ul className="Dropdown-list Dropdown-list--right">
 					<li>
-						<MenuItem value={partial(requestDockToBottom, popup)}>
+						<MenuItem value={onDockToBottom}>
 							<button
 								className="DockMenu-button Button"
 								type="button"
@@ -34,7 +27,7 @@ function DockMenu({
 						</MenuItem>
 					</li>
 					<li>
-						<MenuItem value={partial(requestDockToLeft, popup)}>
+						<MenuItem value={onDockToLeft}>
 							<button
 								className="DockMenu-button Button"
 								type="button"
@@ -44,7 +37,7 @@ function DockMenu({
 						</MenuItem>
 					</li>
 					<li>
-						<MenuItem value={partial(requestDockToRight, popup)}>
+						<MenuItem value={onDockToRight}>
 							<button
 								className="DockMenu-button Button"
 								type="button"
@@ -54,7 +47,7 @@ function DockMenu({
 						</MenuItem>
 					</li>
 					<li>
-						<MenuItem value={popupToggle}>
+						<MenuItem value={onTogglePopup}>
 							<button
 								className="DockMenu-button Button"
 								type="button"
@@ -76,10 +69,10 @@ function DockMenu({
 
 DockMenu.propTypes = {
 	popup: PropTypes.bool.isRequired,
-	requestDockToBottom: PropTypes.func.isRequired,
-	requestDockToLeft: PropTypes.func.isRequired,
-	requestDockToRight: PropTypes.func.isRequired,
-	requestPopupToggle: PropTypes.func.isRequired
+	onDockToBottom: PropTypes.func.isRequired,
+	onDockToLeft: PropTypes.func.isRequired,
+	onDockToRight: PropTypes.func.isRequired,
+	onTogglePopup: PropTypes.func.isRequired
 };
 
 export default injectIntl(DockMenu);

@@ -12,8 +12,8 @@ import {
 export const TOGGLE = 'container/TOGGLE';
 export const REQUEST_TOGGLE = 'container/REQUEST_TOGGLE';
 export const SET_POSITION = 'container/SET_POSITION';
-export const REQUEST_POPUP = 'container/REQUEST_POPUP';
 export const SET_POPUP = 'container/SET_POPUP';
+export const TOGGLE_POPUP = 'common/container/TOGGLE_POPUP';
 
 
 
@@ -51,11 +51,9 @@ export const dockToBottom = () => ({
 /**
  * content scripts will say they want the popup to show or hide
  */
-export const requestPopup = (showOrHide) => ({
-	type: REQUEST_POPUP,
-	payload: {
-		toggle: showOrHide
-	}
+export const togglePopup = () => ({
+	type: TOGGLE_POPUP,
+	payload: {}
 });
 
 /**
