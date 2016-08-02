@@ -14,7 +14,6 @@ export const fetchCurrentTab = () => {
 
 	// eslint-disable-next-line no-new
 	return new Promise((resolve, reject) =>
-		// eslint-disable-next-line no-undef
 		chrome.tabs.query(query, (tabs) =>
 			tabs.length
 				? resolve(tabs[0].id)
@@ -28,7 +27,6 @@ export const fetchCurrentTab = () => {
  */
 export const sendMessageToTab = (tab, message) => {
 	if (tab) {
-		// eslint-disable-next-line no-undef
 		chrome.tabs.sendMessage(tab, message);
 	}
 };

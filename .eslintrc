@@ -1,3 +1,7 @@
 {
-	"extends": "vtech"
+	"extends": "vtech",
+	"env": {
+        "browser": true,
+        "webextensions": true
+    }
 }

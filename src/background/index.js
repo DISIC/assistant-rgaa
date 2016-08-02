@@ -17,7 +17,6 @@ import {toggle} from '../common/actions/container';
  *	Dispatches every message to the content scripts, allowing
  *	content scripts to talk to each other.
  */
-// eslint-disable-next-line no-undef
 chrome.runtime.onMessage.addListener((message) =>
 	sendToContent(message)
 );
@@ -26,7 +25,6 @@ chrome.runtime.onMessage.addListener((message) =>
  *	Asks the content script to toggle the extension's container
  *	when one clicks the extension icon in the browser UI.
  */
-// eslint-disable-next-line no-undef
 chrome.browserAction.onClicked.addListener(() => {
 	fetchCurrentTab().then((tabId) => {
 		store.dispatch(setCurrentTab(tabId));

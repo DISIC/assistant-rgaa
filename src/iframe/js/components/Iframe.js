@@ -7,7 +7,7 @@ import {IFRAME_FILE, CONTAINER_ID} from '../api/iframe';
  *
  */
 export default function Iframe() {
-	const IFRAME_SRC = chrome.runtime.getURL(IFRAME_FILE); // eslint-disable-line no-undef
+	const IFRAME_SRC = chrome.runtime.getURL(IFRAME_FILE);
 
 	return (
 		<iframe
