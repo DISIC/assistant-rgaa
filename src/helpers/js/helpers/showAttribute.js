@@ -1,21 +1,35 @@
-import {inject, remove} from './effects/style';
+import $ from 'jquery';
+
+
+
+/**
+ *	This helper could have been implemented using a combination
+ *	of :after, content, and attr() in CSS, but browsers don't
+ *	support pseudo-elements on <img /> tags.
+ */
 
 
 
 /**
  *
  */
-export const apply = ({document}, {id, selector, attribute, color = 'red'}) =>
-	inject(document, id, `
-		${selector}:after {
-			content: "${attribute}="attr(${attribute})"";
-			color: ${color};
-			font-weight: bold;
-		}
-	`);
+export const apply = (id, selector, attribute) =>
+	$(selector).each((i, el) => {
+		const element = $(el);
+		const value = element.attr(attribute);
+
+		$(element).after(
+			$('<p />', {
+				class: `${id} rgaa-Helper rgaa-ShowAttributeHelper`,
+				text: value
+					? `${attribute}="${value}"`
+					: `Pas d'attribut ${attribute}`
+			})
+		);
+	});
 
 /**
  *
  */
-export const revert = ({document}, {id}) =>
-	remove(document, id);
+export const revert = (id) =>
+	$(`.${id}`).remove();

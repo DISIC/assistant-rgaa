@@ -34,7 +34,8 @@
 				"dist/helpers.js"
 			],
 			"css": [
-				"dist/iframe.css"
+				"dist/iframe.css",
+				"dist/helpers.css"
 			],
 			"matches": ["<all_urls>"],
 			"run_at": "document_idle"
