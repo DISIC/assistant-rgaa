@@ -2,7 +2,7 @@ import {createStore, applyMiddleware} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import sagas from './sagas';
 import reducer from './reducers';
-import {gatherMiddleware, createBroadcastMiddleware} from '../../common/middlewares/sync';
+import {createGatherMiddleware, createBroadcastMiddleware} from '../../common/middlewares/sync';
 
 
 
@@ -17,9 +17,9 @@ const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
 	reducer,
 	applyMiddleware(
-		gatherMiddleware,
+		createGatherMiddleware('helpers'),
 		sagaMiddleware,
-		createBroadcastMiddleware()
+		createBroadcastMiddleware('helpers')
 	)
 );
 
