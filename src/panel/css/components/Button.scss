@@ -7,18 +7,18 @@
 	border: 1px solid transparent;
 	cursor: pointer;
 
-	&:hover,
-	&:focus {
+	&:not([disabled]):hover,
+	&:not([disabled]):focus {
 		background: darken($color-mariner, 10%);
 		border-color: darken($color-mariner, 20%);
 	}
 
-	&:active {
+	&:not([disabled]):active {
 		background: darken($color-mariner, 20%);
 	}
 }
 
 .Button[disabled] {
 	opacity: 0.5;
-	cursor: not-allowed;
+	cursor: default;
 }

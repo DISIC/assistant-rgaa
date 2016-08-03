@@ -1,65 +1,55 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
 import {Wrapper, Button, Menu, MenuItem} from 'react-aria-menubutton';
+import {POSITION_RIGHT, POSITION_LEFT, POSITION_BOTTOM} from '../../../common/reducers/container';
 
 
 
 /**
  *
  */
-function DockMenu({popup, onDockToBottom, onDockToLeft, onDockToRight, onTogglePopup}) {
+function DockMenu({popup, position, onDockToBottom, onDockToLeft, onDockToRight, onTogglePopup}) {
 	const onDropdownSelection = (callback) =>
 		callback();
 
+	const renderItem = (name, onClick, disable) => {
+		const button = (
+			<button
+				className="DockMenu-button Button"
+				type="button"
+				disabled={disable}
+			>
+				<FormattedMessage id={`DockMenu.${name}`} />
+			</button>
+		);
+		if (disable) {
+			return button;
+		}
+		return (
+			<MenuItem value={onClick}>
+				{button}
+			</MenuItem>
+		);
+	};
+
 	return (
 		<Wrapper onSelection={onDropdownSelection} className="DockMenu Dropdown-container">
-			<Button className="Link Dropdown-toggle">Dock</Button>
+			<Button className="Link Dropdown-toggle">
+				<FormattedMessage id="DockMenu.button" />
+			</Button>
 			<Menu>
 				<ul className="Dropdown-list Dropdown-list--right">
 					<li>
-						<MenuItem value={onDockToBottom}>
-							<button
-								className="DockMenu-button Button"
-								type="button"
-							>
-								<FormattedMessage id="DockMenu.bottom" />
-							</button>
-						</MenuItem>
+						{renderItem('bottom', onDockToBottom, POSITION_BOTTOM === position)}
 					</li>
 					<li>
-						<MenuItem value={onDockToLeft}>
-							<button
-								className="DockMenu-button Button"
-								type="button"
-							>
-								<FormattedMessage id="DockMenu.left" />
-							</button>
-						</MenuItem>
+						{renderItem('left', onDockToLeft, POSITION_LEFT === position)}
 					</li>
 					<li>
-						<MenuItem value={onDockToRight}>
-							<button
-								className="DockMenu-button Button"
-								type="button"
-							>
-								<FormattedMessage id="DockMenu.right" />
-							</button>
-						</MenuItem>
+						{renderItem('right', onDockToRight, POSITION_RIGHT === position)}
 					</li>
 					<li>
-						<MenuItem value={onTogglePopup}>
-							<button
-								className="DockMenu-button Button"
-								type="button"
-							>
-								<FormattedMessage
-									id={`DockMenu.popup.${popup
-										? 'close'
-										: 'open'}`
-									}
-								/>
-							</button>
-						</MenuItem>
+						{renderItem('popup', onTogglePopup, popup)}
 					</li>
 				</ul>
 			</Menu>
@@ -69,6 +59,7 @@ function DockMenu({popup, onDockToBottom, onDockToLeft, onDockToRight, onToggleP
 
 DockMenu.propTypes = {
 	popup: PropTypes.bool.isRequired,
+	position: PropTypes.string.isRequired,
 	onDockToBottom: PropTypes.func.isRequired,
 	onDockToLeft: PropTypes.func.isRequired,
 	onDockToRight: PropTypes.func.isRequired,

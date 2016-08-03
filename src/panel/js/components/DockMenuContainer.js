@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {getPopupWindowId} from '../../../common/selectors/container';
+import {getPopupWindowId, getPosition} from '../../../common/selectors/container';
 import * as actions from '../../../common/actions/container';
 import DockMenu from './DockMenu';
 
@@ -9,7 +9,8 @@ import DockMenu from './DockMenu';
  *
  */
 const mapStateToProps = (state) => ({
-	popup: !!getPopupWindowId(state)
+	popup: !!getPopupWindowId(state),
+	position: getPosition(state)
 });
 
 /**
