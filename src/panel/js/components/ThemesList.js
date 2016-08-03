@@ -64,7 +64,8 @@ export default function ThemesList({themes, activeTheme}) {
 						nextPage: '.ThemesList-navButton--next',
 						prevPage: '.ThemesList-navButton--prev',
 						speed: 250,
-						activeClass: 'is-active'
+						activeClass: 'is-active',
+						keyboardNavBy: 'items'
 					}}
 				>
 					{renderItems(themes)}
