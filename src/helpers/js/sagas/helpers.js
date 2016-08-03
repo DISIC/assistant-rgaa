@@ -18,13 +18,13 @@ const createId = (id, index) =>
  *	Returns a call effect that will call a function of the
  *	given helper, passing it context variables and options.
  *
- *	@param func {string} - The module's function to call, either
- *		'apply' or 'revert'.
- *	@param helper {string|array} - Helper descriptor. This can
+ *	@param {string} func - Name of the module's function to call,
+ *		either 'apply' or 'revert'.
+ *	@param {string|array} helper - Helper descriptor. This can
  *		be either a string containing the helper's name, or an
  *		array containing the helper's name, followed by its
  *		arguments, for example : ["helperName", "arg1", "arg2"].
- *	@param id {string} - Id.
+ *	@param {string} id - Id.
  *	@return {function} - Call effect.
  */
 const createCall = (func, helper, id) => {

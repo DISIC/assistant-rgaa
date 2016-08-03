@@ -7,9 +7,10 @@ import {toArray} from 'lodash';
  */
 const toggleStyleSheets = (toggled) =>
 	toArray(document.styleSheets)
-		.forEach((stylesheet) =>
+		.forEach((stylesheet) => (
+			// eslint-disable-next-line no-param-reassign
 			stylesheet.disabled = !toggled
-		);
+		));
 
 
 
