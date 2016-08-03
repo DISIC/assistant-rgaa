@@ -1,8 +1,10 @@
 import {createStore, applyMiddleware} from 'redux';
+import {persistStore} from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
 import sagas from './sagas';
 import reducer from './reducers';
 import {gatherMiddleware, createBroadcastMiddleware} from '../common/middlewares/sync';
+import chromeStorage from '../common/api/storage';
 import {sendToContent} from './api/tabs';
 
 
@@ -28,6 +30,15 @@ const store = createStore(
  *	Runs all sagas of the application.
  */
 sagaMiddleware.run(sagas);
+
+
+
+/**
+ * persist store in chrome storage
+ */
+export const persistor = persistStore(store, {
+	storage: chromeStorage
+});
 
 
 
