@@ -15,7 +15,7 @@ import messages from './messages/fr';
 addLocaleData(fr);
 
 
-getStore.then((store) => {
+getStore().then((store) => {
 	const appRoutes = routes(store);
 
 	/**

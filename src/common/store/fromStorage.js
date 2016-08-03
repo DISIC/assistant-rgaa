@@ -3,23 +3,25 @@ import {combineReducers, createStore, applyMiddleware} from 'redux';
 import {getStoredState} from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
 import chromeStorage from '../api/storage';
-import {gatherMiddleware, createBroadcastMiddleware} from '../middlewares/sync';
+import {createGatherMiddleware, createBroadcastMiddleware} from '../middlewares/sync';
 
 
 
 /**
  * create a store with initialState fetched from redux-persist given storage
  *
+ * @param {string} name - Store name.
  * @param  {Object} reducers reducers to give to combineReducers
  * @param  {array} sagas sagas
  * @param  {Object} persistConfig (optional) redux-persist persistor config
  * @return {Promise} promise resolved with created store
  *					or rejected with stored state retrieval error
  */
-export default function (reducers, sagas, persistConfig) {
-	const config = persistConfig || {
+export default function (name, reducers, sagas, persistConfig) {
+	const config = {
 		storage: chromeStorage,
-		whitelist: keys(reducers)
+		whitelist: keys(reducers),
+		...persistConfig
 	};
 
 	return getStoredState(config).then(restoredState => {
@@ -28,13 +30,13 @@ export default function (reducers, sagas, persistConfig) {
 			combineReducers(reducers),
 			restoredState,
 			applyMiddleware(
-				gatherMiddleware,
+				createGatherMiddleware(name),
 				sagaMiddleware,
-				createBroadcastMiddleware()
+				createBroadcastMiddleware(name)
 			)
 		);
-		sagaMiddleware.run(sagas);
 
+		sagaMiddleware.run(sagas);
 		return store;
 	});
 }

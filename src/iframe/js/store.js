@@ -1,6 +1,6 @@
 import {createStore, applyMiddleware} from 'redux';
 import reducer from './reducers';
-import {gatherMiddleware, createBroadcastMiddleware} from '../../common/middlewares/sync';
+import {createGatherMiddleware, createBroadcastMiddleware} from '../../common/middlewares/sync';
 
 
 
@@ -10,8 +10,8 @@ import {gatherMiddleware, createBroadcastMiddleware} from '../../common/middlewa
 const store = createStore(
 	reducer,
 	applyMiddleware(
-		gatherMiddleware,
-		createBroadcastMiddleware()
+		createGatherMiddleware('iframe'),
+		createBroadcastMiddleware('iframe')
 	)
 );
 

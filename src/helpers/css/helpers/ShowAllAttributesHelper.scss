@@ -1,0 +1,18 @@
+/**
+ *
+ */
+
+.rgaa-ShowAllAttributesHelper {
+	display: block !important;
+	margin-bottom: $base-line-height;
+
+	th,
+	td {
+		padding-right: $base-line-height !important;
+		text-align: left !important;
+
+		&:last-child {
+			padding-right: 0 !important;
+		}
+	}
+}

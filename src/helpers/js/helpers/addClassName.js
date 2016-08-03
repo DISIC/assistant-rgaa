@@ -1,24 +1,15 @@
-import {toArray} from 'lodash';
-import toggleClassName from './effects/toggleClassName';
+import $ from 'jquery';
 
 
 
 /**
  *
  */
-export const apply = ({document}, {selector, className}) =>
-	toggleClassName(
-		toArray(document.querySelectorAll(selector)),
-		className,
-		true
-	);
+export const apply = (id, selector, className) =>
+	$(selector).addClass(className);
 
 /**
  *
  */
-export const revert = ({document}, {selector, className}) =>
-	toggleClassName(
-		toArray(document.querySelectorAll(selector)),
-		className,
-		false
-	);
+export const revert = (id, selector, className) =>
+	$(selector).removeClass(className);
