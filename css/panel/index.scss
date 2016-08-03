@@ -1,0 +1,23 @@
+/**
+ *
+ */
+
+@import '~typi';
+
+@import '../common/variables.scss';
+@import './base';
+@import './utils';
+@import './components/InvisibleLink';
+@import './components/InvisibleButton';
+@import './components/Link';
+@import './components/Button';
+@import './components/Dropdown';
+@import './components/App';
+@import './components/Panel';
+@import './components/Header';
+@import './components/DockMenu';
+@import './components/ThemesList';
+@import './components/Theme';
+@import './components/Criterion';
+@import './components/Test';
+@import './components/TestInstructions';

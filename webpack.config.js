@@ -15,18 +15,18 @@ module.exports = {
 	entry: {
 		panel: [
 			'babel-polyfill',
-			'./src/panel/js/index',
-			'./src/panel/css/index.scss'
+			'./src/panel/index',
+			'./css/panel/index.scss'
 		],
 		iframe: [
 			'babel-polyfill',
-			'./src/iframe/js/index',
-			'./src/iframe/css/index.scss'
+			'./src/iframe/index',
+			'./css/iframe/index.scss'
 		],
 		helpers: [
 			'babel-polyfill',
-			'./src/helpers/js/index',
-			'./src/helpers/css/index.scss'
+			'./src/helpers/index',
+			'./css/helpers/index.scss'
 		],
 		background: [
 			'babel-polyfill',
@@ -63,7 +63,7 @@ module.exports = {
 					'sass?sourceMap'
 				]),
 				include: [
-					fullPath('src')
+					fullPath('css')
 				]
 			},
 			{

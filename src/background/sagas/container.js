@@ -1,7 +1,7 @@
 import {takeEvery} from 'redux-saga';
 import {call, put, select} from 'redux-saga/effects';
 import {create as createWindow, remove as removeWindow} from '../api/windows';
-import {IFRAME_FILE} from '../../iframe/js/api/iframe';
+import {IFRAME_FILE} from '../../iframe/api/iframe';
 import {SET_POSITION, TOGGLE_POPUP, setPopup} from '../../common/actions/container';
 import {getPopupWindowId} from '../../common/selectors/container';
 
