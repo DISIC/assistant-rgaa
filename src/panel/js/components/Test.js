@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {injectIntl, intlShape} from 'react-intl';
 import renderIf from 'render-if';
-import {noop, random} from 'lodash';
+import {noop} from 'lodash';
 import TestInstructions from './TestInstructions';
 
 
@@ -9,17 +9,16 @@ import TestInstructions from './TestInstructions';
 /**
  *
  */
-function Test({id, title, instructions, helpers, applied, done, onApply, onDone, intl}) {
+function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
 	const handleApplyChange = (event) =>
-		onApply(event.target.checked, helpers);
+		onApply(event.target.checked);
 
 	const handleDoneChange = (event) =>
 		onDone(event.target.checked);
 
-	const randomApplied = random(0, 1, false); // for testing while applied is not implemented
 
-	const applyImage = randomApplied ? 'prohibition.png' : 'magnifier-zoom.png';
-	const applyTranslateKey = randomApplied ? 'uncheck' : 'check';
+	const applyImage = applied ? 'prohibition.png' : 'magnifier-zoom.png';
+	const applyTranslateKey = applied ? 'uncheck' : 'check';
 
 	const titlePattern = /^(Test \d+\.\d+\.\d+)\s?:\s?(.*)$/;
 	const matchPattern = title.match(titlePattern);
@@ -57,7 +56,7 @@ function Test({id, title, instructions, helpers, applied, done, onApply, onDone,
 							className="Test-actionInput u-hidden"
 							type="checkbox"
 							id={`test-${id}-apply-input`}
-							checked={randomApplied}
+							checked={applied}
 							onChange={handleApplyChange}
 						/>
 					</div>
@@ -87,7 +86,6 @@ Test.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	instructions: PropTypes.string,
-	helpers: PropTypes.array,
 	applied: PropTypes.bool,
 	done: PropTypes.bool,
 	onApply: PropTypes.func,
@@ -96,7 +94,6 @@ Test.propTypes = {
 };
 
 Test.defaultProps = {
-	helpers: [],
 	applied: false,
 	done: false,
 	onApply: noop,

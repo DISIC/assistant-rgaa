@@ -1,4 +1,4 @@
-import {keys, isFunction, isPlainObject} from 'lodash';
+import {keys} from 'lodash';
 import {combineReducers, createStore, applyMiddleware} from 'redux';
 import {getStoredState} from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';

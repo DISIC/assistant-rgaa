@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
-import {getHelpersByTest} from '../../../common/selectors/helpers';
-import {applyHelpers, revertHelpers} from '../../../common/actions/helpers';
+import {isTestApplied} from '../selectors/reference';
+import {enableTest, disableTest} from '../actions/reference';
 import Test from './Test';
 
 
@@ -9,19 +9,15 @@ import Test from './Test';
  *
  */
 const mapStateToProps = (state, {id}) => ({
-	helpers: getHelpersByTest(state, id)
+	applied: isTestApplied(state, id)
 });
 
 /**
  *
  */
 const mapDispatchToProps = (dispatch, {id}) => ({
-	onApply(applied, helpers) {
-		dispatch(
-			applied
-				? applyHelpers(id, helpers)
-				: revertHelpers(id, helpers)
-		);
+	onApply(applied) {
+		dispatch(applied ? enableTest(id) : disableTest(id));
 	}
 });
 
