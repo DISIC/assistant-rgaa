@@ -17,7 +17,7 @@ function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
 		onDone(event.target.checked);
 
 
-	const applyImage = applied ? 'prohibition.png' : 'magnifier-zoom.png';
+	const applyImage = applied ? 'cross.png' : 'magnifier-zoom.png';
 	const applyTranslateKey = applied ? 'uncheck' : 'check';
 
 	const titlePattern = /^(Test \d+\.\d+\.\d+)\s?:\s?(.*)$/;

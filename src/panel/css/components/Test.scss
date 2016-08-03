@@ -25,8 +25,13 @@
 	height: 100%;
 }
 
+.Test-actionLabel {
+	display: block;
+}
+
 .Test-actionLabel img {
 	height: $base-line-height;
+	cursor: pointer;
 }
 
 .Test-id {
