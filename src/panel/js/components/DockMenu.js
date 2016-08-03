@@ -12,17 +12,17 @@ function DockMenu({popup, position, onDockToBottom, onDockToLeft, onDockToRight,
 	const onDropdownSelection = (callback) =>
 		callback();
 
-	const renderItem = (name, onClick, disable) => {
+	const renderItem = (name, onClick, isEnabled) => {
 		const button = (
 			<button
 				className="DockMenu-button Button"
 				type="button"
-				disabled={disable}
+				disabled={!isEnabled}
 			>
 				<FormattedMessage id={`DockMenu.${name}`} />
 			</button>
 		);
-		if (disable) {
+		if (!isEnabled) {
 			return button;
 		}
 		return (
@@ -40,16 +40,16 @@ function DockMenu({popup, position, onDockToBottom, onDockToLeft, onDockToRight,
 			<Menu>
 				<ul className="Dropdown-list Dropdown-list--right">
 					<li>
-						{renderItem('bottom', onDockToBottom, POSITION_BOTTOM === position)}
+						{renderItem('bottom', onDockToBottom, popup || POSITION_BOTTOM !== position)}
 					</li>
 					<li>
-						{renderItem('left', onDockToLeft, POSITION_LEFT === position)}
+						{renderItem('left', onDockToLeft, popup || POSITION_LEFT !== position)}
 					</li>
 					<li>
-						{renderItem('right', onDockToRight, POSITION_RIGHT === position)}
+						{renderItem('right', onDockToRight, popup || POSITION_RIGHT !== position)}
 					</li>
 					<li>
-						{renderItem('popup', onTogglePopup, popup)}
+						{renderItem('popup', onTogglePopup, !popup)}
 					</li>
 				</ul>
 			</Menu>
