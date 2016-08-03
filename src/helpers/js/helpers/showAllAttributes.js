@@ -55,5 +55,5 @@ export const apply = (id, selector) => {
 /**
  *
  */
-export const revert = (context, id) =>
+export const revert = (id) =>
 	$(`.${id}`).remove();

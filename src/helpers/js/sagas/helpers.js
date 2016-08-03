@@ -7,10 +7,12 @@ import {getModule} from '../api/helpers';
 
 
 /**
- *
+ *	Creates an uuid from a test id and a helper index.
+ *	Also ensures that there is no dot in the name, so it can
+ *	be queried if used as an id or class name in the DOM.
  */
 const createId = (id, index) =>
-	`rgaa-Helper--${id}-${index}`;
+	`rgaa-Helper--${id}-${index}`.replace(/\./g, '-');
 
 /**
  *	Returns a call effect that will call a function of the
