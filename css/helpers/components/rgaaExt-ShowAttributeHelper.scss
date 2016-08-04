@@ -4,5 +4,9 @@
 
 .rgaaExt-ShowAttributeHelper {
 	display: inline-block !important;
-	margin-left: $base-line-height;
+	margin-left: $base-line-height / 4 !important;
+}
+
+.rgaaExt-ShowAttributeHelper-missing {
+	text-decoration: line-through;
 }

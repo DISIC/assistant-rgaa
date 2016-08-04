@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<style>
+			html {
+				background: #fff;
+			}
+
+			body {
+				margin: 0 auto;
+				max-width: 50em;
+				padding: 1.5em;
+				line-height: 1.5;
+				font-size: 93.75%;
+				font-family: sans-serif;
+				background: #f5f5f5;
+			}
+
+			h1 {
+				text-transform: uppercase;
+				font-size: 1.3em;
+			}
+
+			h2 {
+				color: #723F65;
+				font-size: 1.2em;
+			}
+
+			h3 {
+				font-size: 1em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>1. Images</h1>
+
+			<h2>Critère 1.1 [A] Chaque image a-t-elle une alternative textuelle ?</h2>
+
+				<h3>Test 1.1.1 : Chaque image (balise img) a-t-elle un attribut alt ?</h3>
+
+				<img src="http://www.un.org/webaccessibility/assets/img/un-accessibility-logo.png" />
+				<img src="http://www.un.org/webaccessibility/assets/img/un-accessibility-logo.png" alt="Accessibility Logo" />
+
+				<h3>Test 1.1.2 : Chaque zone (balise area) d’une image réactive a-t-elle un attribut alt ?</h3>
+
+				<!-- -->
+
+				<h3>Test 1.1.3 : Chaque bouton de formulaire (balise input avec l’attribut type="image") a-t-il un attribut alt ?</h3>
+
+				<input type="image" src="http://www.un.org/webaccessibility/assets/img/un-accessibility-logo.png" />
+				<input type="image" src="http://www.un.org/webaccessibility/assets/img/un-accessibility-logo.png" alt="Accessibility Logo" />
+
+				<h3>Test 1.1.4 : Chaque zone cliquable d’une image réactive coté serveur est-t-elle doublée d’un lien dans la page ?</h3>
+
+				<!-- -->
+
+			<h2>Critère 1.2 [A] Pour chaque image de décoration ayant une alternative textuelle, cette alternative est-elle vide ?</h2>
+			<h2>Critère 1.3 [A] Pour chaque image porteuse d’information ayant une alternative textuelle, cette alternative est-elle pertinente (hors cas particuliers) ?</h2>
+
+			<h2>Critère 1.4 [A] Pour chaque image utilisée comme CAPTCHA ou comme image-test, ayant une alternative textuelle, cette alternative permet-elle d’identifier la nature et la fonction de l’image ?</h2>
+
+				<h3>Test 1.4.1 : Chaque image (balise img) utilisée comme CAPTCHA ou comme image-test, ayant un attribut alt, vérifie-t-elle ces conditions ?</h3>
+
+				<img src="http://www.un.org/webaccessibility/assets/img/un-accessibility-logo.png" alt="Accessibility Logo" aria-labelledby="1-4-1" />
+				<p id="1-4-1">Libellé de l'image.</p>
+
+				<h3>Test 1.4.2 : Chaque zone (balise area) d’une image réactive utilisée comme CAPTCHA ou comme image-test, ayant un attribut alt, vérifie-t-elle ces conditions ?</h3>
+				<h3>Test 1.4.3 : Chaque bouton associé à une image (balise input avec l’attribut type="image") utilisée comme CAPTCHA ou comme image-test, ayant un attribut alt, vérifie-t-il ces conditions ?</h3>
+				<h3>Test 1.4.4 : Chaque image objet (balise object avec l’attribut type="image/…") utilisée comme CAPTCHA ou comme image-test vérifie-t-elle une de ces conditions ?</h3>
+				<h3>Test 1.4.5 : Chaque image objet (balise object avec l’attribut type="image/…") utilisée comme CAPTCHA ou comme image-test, qui utilise une propriété aria-label, aria-labelledby ou un attribut title, vérifie-t-elle ces conditions ?</h3>
+				<h3>Test 1.4.6 : Chaque image embarquée (balise embed avec l’attribut type="image/…") utilisée comme CAPTCHA ou comme image-test vérifie-t-elle une de ces conditions ?</h3>
+				<h3>Test 1.4.7 : Chaque image embarquée (balise embed avec l’attribut type="image/…") utilisée comme CAPTCHA ou comme image-test, qui utilise une propriété aria-label, aria-labelledby ou un attribut title, vérifie-t-elle ces conditions ?</h3>
+				<h3>Test 1.4.8 : Chaque image vectorielle (balise svg) utilisée comme CAPTCHA ou comme image-test, en l’absence d’alternative, vérifie-t-elle ces conditions ?</h3>
+				<h3>Test 1.4.9 : Pour chaque image vectorielle (balise svg) utilisée comme CAPTCHA ou comme image-test, possédant une alternative, cette alternative est-elle correctement restituée par les technologies d’assistance ?</h3>
+				<h3>Test 1.4.10 Chaque image bitmap (balise canvas) utilisée comme CAPTCHA ou comme image-test vérifie-t-elle une de ces conditions ?</h3>
+				<h3>Test 1.4.11 : Chaque image bitmap (balise canvas) utilisée comme CAPTCHA ou comme image-test, qui utilise une propriété aria-label, aria-labelledby ou un attribut title, vérifie-t-elle ces conditions ?</h3>
+				<h3>Test 1.4.12 : Pour chaque image bitmap (balise canvas) utilisée comme CAPTCHA ou comme image-test, ayant une alternative textuelle, l’alternative textuelle est-elle correctement restituée par les technologies d’assistance ?</h3>
+
+			<h2>Critère 1.5 [A] Pour chaque image utilisée comme CAPTCHA, une solution d’accès alternatif au contenu ou à la fonction du CAPTCHA est-elle présente ?</h2>
+			<h2>Critère 1.6 [A] Chaque image porteuse d’information a-t-elle, si nécessaire, une description détaillée ?</h2>
+			<h2>Critère 1.7 [A] Pour chaque image porteuse d’information ayant une description détaillée, cette description est-elle pertinente ?</h2>
+			<h2>Critère 1.8 [AA] Chaque image texte porteuse d’information, en l’absence d’un mécanisme de remplacement, doit si possible être remplacée par du texte stylé. Cette règle est-elle respectée (hors cas particuliers) ?</h2>
+			<h2>Critère 1.9 [AAA] Chaque image texte porteuse d’information, doit si possible être remplacée par du texte stylé. Cette règle est-elle respectée (hors cas particuliers) ?</h2>
+			<h2>Critère 1.10 [A] Chaque légende d’image est-elle, si nécessaire, correctement reliée à l’image correspondante ?</h2>
+	</body>
+</html>

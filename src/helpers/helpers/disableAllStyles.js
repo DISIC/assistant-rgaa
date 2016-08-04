@@ -3,7 +3,9 @@ import {toArray} from 'lodash';
 
 
 /**
+ *	Toggles all style sheets in the page.
  *
+ *	@param {boolean} toggled - Whether or not to enable styles.
  */
 const toggleStyleSheets = (toggled) =>
 	toArray(document.styleSheets)
@@ -15,13 +17,14 @@ const toggleStyleSheets = (toggled) =>
 
 
 /**
- *
+ *	Disable all style sheets in the page.
  */
 export const apply = () =>
 	toggleStyleSheets(false);
 
 /**
- *
+ *	Enable all style sheets that were previously disabled using
+ *	apply().
  */
 export const revert = () =>
 	toggleStyleSheets(true);
