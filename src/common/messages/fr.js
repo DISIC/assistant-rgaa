@@ -16,7 +16,8 @@ const messages = {
 	'DockMenu.bottom': 'En bas',
 	'DockMenu.left': 'À gauche',
 	'DockMenu.right': 'À droite',
-	'DockMenu.popup': 'Popup'
+	'DockMenu.popup': 'Popup',
+	'Options.references.label': 'Version du référentiel RGAA à utiliser :'
 };
 
 

@@ -1,4 +1,5 @@
 import {find, get, flatten, map, sortBy} from 'lodash';
+import path from 'path';
 
 
 
@@ -37,12 +38,31 @@ export const getFirstCriterion = (theme) => {
 };
 
 /*
- *
+ * get an array of {name, filename, version}
  */
-export const getAllReferences = () =>
-	// lis le contenu de data/references et retourne un tableau
-	// [{ file: ..., name: ... }, {file,name}]
-	sortBy([
-		{file: 'rgaa-3-2016.json', name: 'version 3-2016', version: '3-2016'},
-		{file: 'rgaa-3.json', name: 'version 3', version: '3'}
-	], 'name');
+export const getReferencesList = () => {
+	const req = require.context('../../../data/references', true, /\.json$/);
+	const references = req.keys().map(key => {
+		const {name, version} = req(key);
+		return {
+			version,
+			name
+		};
+	});
+	return sortBy(references, 'name');
+};
+
+/*
+ * retrieve the reference full json object from a given reference name property
+ */
+export const getReference = (version) => {
+	const req = require.context('../../../data/references', true, /\.json$/);
+	const files = req.keys();
+	for (const file of files) {
+		const reference = req(file);
+		if (reference.version === version) {
+			return reference;
+		}
+	}
+	return null;
+};

@@ -1,10 +1,15 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
+import {IntlProvider, addLocaleData} from 'react-intl';
+import fr from 'react-intl/locale-data/fr';
+import messages from '../common/messages/fr';
 import getStore from './getStore';
-import AppContainer from './components/AppContainer';
+import App from './components/App';
 
 
+
+addLocaleData(fr);
 
 getStore().then((store) => {
 	/**
@@ -12,7 +17,9 @@ getStore().then((store) => {
 	 */
 	render((
 		<Provider store={store}>
-			<AppContainer />
+			<IntlProvider locale="fr" messages={messages}>
+				<App />
+			</IntlProvider>
 		</Provider>
 	), document.getElementById('options'));
 });

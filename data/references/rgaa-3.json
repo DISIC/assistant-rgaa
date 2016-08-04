@@ -1,18 +1,18 @@
 {
-	"name": "RGAA 3 2016",
-	"version": "3-2016",
+	"name": "RGAA 3",
+	"version": "3",
 	"themes": [
 		{
 			"id": "1",
-			"title": "1. Images",
+			"title": "1. Images de la version 3",
 			"criteria": [
 				{
 					"id": "1.1",
-					"title": "Critère 1.1 [A] Chaque image a-t-elle une alternative textuelle ?",
+					"title": "Critère 1.1 . 3 [A] Chaque image a-t-elle une alternative textuelle ?",
 					"tests": [
 						{
 							"id": "1.1.1",
-							"title": "Test 1.1.1 : Chaque image (balise img) a-t-elle un attribut alt ?",
+							"title": "Test 1.1.1 . 3: Chaque image (balise img) a-t-elle un attribut alt ?",
 							"instructions": "<p>Chercher dans la page les images et les boutons images dépourvus d'alternative.</p><p>Si aucun résultat n'est trouvé, le test est validé.</p>"
 						},
 						{
