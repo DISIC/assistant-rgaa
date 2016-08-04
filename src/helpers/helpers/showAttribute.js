@@ -1,13 +1,5 @@
 import $ from 'jquery';
-import {chain} from 'lodash';
-
-
-
-/**
- *	The basic functionality helper could have been implemented
- *	using a combination of :after, content, and attr() in CSS,
- *	but browsers don't support pseudo-elements on <img /> tags.
- */
+import {isString, chain} from 'lodash';
 
 
 
@@ -48,16 +40,39 @@ const linkIds = (name, value) => {
  *	@param {string} value - Attribute value.
  *	@return {string} - HTML.
  */
-const attributeBox = (name, value) => {
-	if (value === undefined) {
-		return `<span class="rgaaExt-ShowAttributeHelper-missing">${name}</span>`;
+const serialize = (name, value) => {
+	if (isString(value)) {
+		return `<span class="rgaaExt-ShowAttributeHelper-name">${name}</span>`
+			+ `="<span class="rgaaExt-ShowAttributeHelper-value">${linkIds(name, value)}</span>"`;
 	}
 
-	return `<span class="rgaaExt-ShowAttributeHelper-name">${name}</span>`
-		+ `="<span class="rgaaExt-ShowAttributeHelper-value">${linkIds(name, value)}</span>"`;
+	return `<span class="rgaaExt-ShowAttributeHelper-missing">${name}</span>`;
 };
 
+/**
+ *	Shows a box containing an attribute's name and value on
+ *	the given element.
+ *
+ *	@param {string} id - UUID.
+ *	@param {$} element - Element.
+ *	@param {string} name - Attribute name.
+ *	@param {boolean} showMissing - Whether or not to show
+ *		the attribute if it is not set.
+ */
+export const showAttribute = (id, element, name, showMissing) => {
+	const value = element.attr(name);
 
+	if (!showMissing && !isString(value)) {
+		return;
+	}
+
+	$(element).after(
+		$('<span />', {
+			class: `${id} rgaaExt-Helper rgaaExt-ShowAttributeHelper`,
+			html: serialize(name, value)
+		})
+	);
+};
 
 /**
  *	Shows a box containing an attribute's name and value on
@@ -66,19 +81,14 @@ const attributeBox = (name, value) => {
  *	@param {string} id - UUID.
  *	@param {string} selector - Selector.
  *	@param {string} attribute - Attribute name.
+ *	@param {object} options - Options:
+ *		- {boolean} showMissing - Whether or not to show attributes
+ *			that aren't set.
  */
-export const apply = (id, selector, attribute) =>
-	$(selector).each((i, el) => {
-		const element = $(el);
-		const value = element.attr(attribute);
-
-		$(element).after(
-			$('<p />', {
-				class: `${id} rgaaExt-Helper rgaaExt-ShowAttributeHelper`,
-				html: attributeBox(attribute, value)
-			})
-		);
-	});
+export const apply = (id, selector, attribute, {showMissing = false} = {}) =>
+	$(selector).each((i, element) =>
+		showAttribute(id, $(element), attribute, showMissing)
+	);
 
 /**
  *	Removes all boxes previously added using apply().
