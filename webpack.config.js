@@ -18,10 +18,10 @@ module.exports = {
 			'./src/panel/index',
 			'./css/panel/index.scss'
 		],
-		iframe: [
+		container: [
 			'babel-polyfill',
-			'./src/iframe/index',
-			'./css/iframe/index.scss'
+			'./src/container/index',
+			'./css/container/index.scss'
 		],
 		helpers: [
 			'babel-polyfill',

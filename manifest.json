@@ -30,11 +30,11 @@
 		{
 			"js": [
 				"dist/common.js",
-				"dist/iframe.js",
+				"dist/container.js",
 				"dist/helpers.js"
 			],
 			"css": [
-				"dist/iframe.css",
+				"dist/container.css",
 				"dist/helpers.css"
 			],
 			"matches": ["<all_urls>"],
@@ -45,6 +45,6 @@
 		"page": "src/options/content.html"
 	},
 	"web_accessible_resources": [
-		"src/iframe/content.html"
+		"src/container/content.html"
 	]
 }
