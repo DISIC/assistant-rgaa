@@ -1,10 +1,15 @@
 import {property} from 'lodash';
 import {takeEvery} from 'redux-saga';
 import {call, put, select} from 'redux-saga/effects';
-import {getTheme} from '../api/reference';
-import {FETCH_THEME, ENABLE_TEST, DISABLE_TEST, setCurrentTheme} from '../actions/reference';
-import {applyHelpers, revertHelpers} from '../../common/actions/helpers';
-import {getHelpersByTest} from '../../common/selectors/helpers';
+import {save} from '../api/options';
+import {getTheme, getReference} from '../api/reference';
+import {getHelpers} from '../api/helpers';
+import {
+	SET_REFERENCE_VERSION, FETCH_THEME, ENABLE_TEST, DISABLE_TEST,
+	setReference, setCurrentTheme
+} from '../actions/reference';
+import {setHelpers, applyHelpers, revertHelpers} from '../actions/helpers';
+import {getHelpersByTest} from '../selectors/helpers';
 
 
 
@@ -28,6 +33,18 @@ function* toggleTestWorker(enable, {payload: {id}}) {
 	);
 }
 
+/*
+ *
+ */
+function* setReferenceVersionWorker({payload: {version}}) {
+	const data = yield call(getReference, version);
+	yield put(setReference(data));
+	yield put(setHelpers(getHelpers(version)));
+	yield call(save, 'reference', version);
+}
+
+
+
 /**
  *
  */
@@ -48,3 +65,11 @@ export function* watchEnableTest() {
 export function* watchDisableTest() {
 	yield* takeEvery(DISABLE_TEST, toggleTestWorker, false);
 }
+
+/**
+ *
+ */
+export function* watchSetReferenceVersion() {
+	yield* takeEvery(SET_REFERENCE_VERSION, setReferenceVersionWorker);
+}
+

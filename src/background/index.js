@@ -1,15 +1,29 @@
 import store, {persistor} from './store';
 import {fetchCurrentTab, sendToContent} from './api/tabs';
-import {setCurrent as setCurrentTab} from './actions/tabs';
+import {get as getOption} from '../common/api/options';
+import {setReferenceVersion} from '../common/actions/reference';
+import {setCurrent as setCurrentTab} from '../common/actions/tabs';
 import {toggle} from '../common/actions/container';
-
+import {isOpen} from '../common/selectors/container';
 
 
 /**
- * 	the background script is tasked with:
- * 		- sending the "toggle panel" request on the extension icon click
- * 		- dispatching messages across the whole extension
+ *
  */
+window.rgaaExt = {
+	store
+};
+
+
+
+const restoreReference = () =>
+	getOption('reference').then(version => {
+		if (version) {
+			store.dispatch(setReferenceVersion(version));
+		}
+	});
+
+restoreReference();
 
 
 
@@ -29,6 +43,11 @@ chrome.browserAction.onClicked.addListener(() => {
 	fetchCurrentTab().then((tabId) => {
 		// empty cached store from chrome storage to have some sort of "session storage"
 		persistor.purgeAll();
+
+		// restore reference from options if we want to open the panel
+		if (!isOpen(store.getState())) {
+			restoreReference();
+		}
 
 		store.dispatch(setCurrentTab(tabId));
 		store.dispatch(toggle());

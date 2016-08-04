@@ -3,34 +3,23 @@ import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {IntlProvider, addLocaleData} from 'react-intl';
 import fr from 'react-intl/locale-data/fr';
-import routes from './routes';
-import getStore from './getStore';
 import messages from '../common/messages/fr';
+import getStore from './getStore';
+import App from './components/App';
 
 
 
-/**
- *	Registers the default locale for react-intl.
- */
 addLocaleData(fr);
 
-
 getStore().then((store) => {
-	const appRoutes = routes(store);
-
 	/**
-	 *	Wraps the application with data and intl providers.
+	 *	Renders the application.
 	 */
-	const app = (
+	render((
 		<Provider store={store}>
 			<IntlProvider locale="fr" messages={messages}>
-				{appRoutes}
+				<App />
 			</IntlProvider>
 		</Provider>
-	);
-
-	/**
-	 *	Renders the application on #app.
-	 */
-	render(app, document.getElementById('panel'));
+	), document.getElementById('options'));
 });

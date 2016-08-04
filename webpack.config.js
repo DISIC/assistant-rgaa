@@ -28,6 +28,11 @@ module.exports = {
 			'./src/helpers/index',
 			'./css/helpers/index.scss'
 		],
+		options: [
+			'babel-polyfill',
+			'./src/options/index',
+			'./css/options/index.scss'
+		],
 		background: [
 			'babel-polyfill',
 			'./src/background/index'

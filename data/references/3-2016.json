@@ -1,0 +1,142 @@
+{
+	"name": "RGAA 3 2016",
+	"version": "3-2016",
+	"themes": [
+		{
+			"id": "1",
+			"title": "1. Images",
+			"criteria": [
+				{
+					"id": "1.1",
+					"title": "Critère 1.1 [A] Chaque image a-t-elle une alternative textuelle ?",
+					"tests": [
+						{
+							"id": "1.1.1",
+							"title": "Test 1.1.1 : Chaque image (balise img) a-t-elle un attribut alt ?",
+							"instructions": "<p>Chercher dans la page les images et les boutons images dépourvus d'alternative.</p><p>Si aucun résultat n'est trouvé, le test est validé.</p>"
+						},
+						{
+							"id": "1.1.2",
+							"title": "Test 1.1.2 : Chaque zone (balise area) d’une image réactive a-t-elle un attribut alt ?",
+							"instructions": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolores cupiditate quam, aperiam magnam facere doloremque minima. Soluta exercitationem voluptatibus ea, pariatur in nostrum, modi eveniet officiis velit deserunt, fugit!</p>"
+						},
+						{
+							"id": "1.1.3",
+							"title": "Test 1.1.3 : Chaque bouton de formulaire (balise input avec l’attribut type=image) a-t-il un attribut alt ?",
+							"instructions": ""
+						},
+						{
+							"id": "1.1.4",
+							"title": "Test 1.1.4 : Chaque zone cliquable d’une image réactive coté serveur est-t-elle doublée d’un lien dans la page ?",
+							"instructions": ""
+						}
+					]
+				},
+				{
+					"id": "1.2",
+					"title": "Critère 1.2 [A] Pour chaque image de décoration ayant une alternative textuelle, cette alternative est-elle vide ?",
+					"tests": [
+						{
+							"id": "1.2.1",
+							"title": "Test 1.2.1 : Chaque image (balise img) de décoration, sans légende, et ayant un attribut alt, vérifie-t-elle ces conditions ?"
+						},
+						{
+							"id": "1.2.2",
+							"title": "Test 1.2.2 : Chaque zone non cliquable (balise area sans attribut href) de décoration, et ayant un attribut alt, vérifie-t-elle ces conditions ?"
+						},
+						{
+							"id": "1.2.3",
+							"title": "Test 1.2.3 : Chaque image objet (balise object avec l’attribut type=image/…) de décoration, sans légende, vérifie-t-elle ces conditions ?"
+						},
+						{
+							"id": "1.2.4",
+							"title": "Test 1.2.4 : Chaque image vectorielle (balise svg) de décoration, sans légende, vérifie-t-elle ces conditions ?"
+						},
+						{
+							"id": "1.2.5",
+							"title": "Test 1.2.5 : Chaque image bitmap (balise canvas) de décoration, sans légende, vérifie-t-elle ces conditions ?"
+						},
+						{
+							"id": "1.2.6",
+							"title": "Test 1.2.6 : Chaque image embarquée (balise embed avec l’attribut type=image/…) de décoration, sans légende, vérifie-t-elle ces conditions ?"
+						}
+					]
+				},
+				{
+					"id": "1.3",
+					"title": "Critère 1.3 [A] Pour chaque image porteuse d’information ayant une alternative textuelle, cette alternative est-elle pertinente (hors cas particuliers) ?",
+					"tests": [
+						{
+							"id": "1.3.1",
+							"title": "Test 1.3.1 : Chaque image (balise img) porteuse d’information, ayant un attribut alt, vérifie-t-elle ces conditions (hors cas particuliers) ?"
+						},
+						{
+							"id": "1.3.2",
+							"title": "Test 1.3.2 : Chaque zone (balise area) d’une image réactive porteuse d’information, ayant un attribut alt, vérifie-t-elle ces conditions (hors cas particuliers) ?"
+						}
+					]
+				},
+				{
+					"id": "1.4",
+					"title": "Critère 1.4 [A] Pour chaque image utilisée comme CAPTCHA ou comme image-test, ayant une alternative textuelle, cette alternative permet-elle d’identifier la nature et la fonction de l’image ?",
+					"tests": [
+						{
+							"id": "1.4.1",
+							"title": "Test 1.4.1 : Chaque image (balise img) utilisée comme CAPTCHA ou comme image-test, ayant un attribut alt, vérifie-t-elle ces conditions ?"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "2",
+			"title": "2. Cadres",
+			"criteria": []
+		},
+		{
+			"id": "3",
+			"title": "3. Couleurs",
+			"criteria": []
+		},
+		{
+			"id": "4",
+			"title": "4. Multimédia",
+			"criteria": []
+		},
+		{
+			"id": "5",
+			"title": "5. Tableaux",
+			"criteria": []
+		},
+		{
+			"id": "6",
+			"title": "6. Liens",
+			"criteria": []
+		},
+		{
+			"id": "7",
+			"title": "7. Scripts",
+			"criteria": []
+		},
+		{
+			"id": "9",
+			"title": "9. Structuration",
+			"criteria": []
+		},
+		{
+			"id": "10",
+			"title": "10. Présentation",
+			"criteria": []
+		},
+		{
+			"id": "11",
+			"title": "11. Formulaires",
+			"criteria": []
+		},
+		{
+			"id": "12",
+			"title": "12. Navigation",
+			"criteria": []
+		}
+	]
+}

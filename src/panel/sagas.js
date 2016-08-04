@@ -1,18 +1,11 @@
-import {flatMap, values} from 'lodash';
-
-
-
-/**
- *	Loads all sagas from the 'sagas' folder and merges them
- *	into a single generator function.
- */
-const req = require.context('./sagas', true, /\.js$/);
-const generators = flatMap(req.keys(), (key) =>
-	values(req(key))
-);
+import * as reference from '../common/sagas/reference';
 
 
 
 export default function* sagas() {
-	yield generators.map((saga) => saga());
+	yield [
+		reference.watchFetch(),
+		reference.watchEnableTest(),
+		reference.watchDisableTest()
+	];
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Router, Route, createMemoryHistory} from 'react-router';
 import App from './components/App';
-import {fetchTheme} from './actions/reference';
+import {fetchTheme} from '../common/actions/reference';
 
 
 export default function (store) {

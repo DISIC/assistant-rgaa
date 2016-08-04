@@ -3,6 +3,7 @@
  */
 export const APPLY = 'common/helpers/APPLY';
 export const REVERT = 'common/helpers/REVERT';
+export const SET_HELPERS = 'common/helpers/SET_HELPERS';
 
 
 
@@ -25,5 +26,15 @@ export const revertHelpers = (id, helpers) => ({
 	payload: {
 		id,
 		helpers
+	}
+});
+
+/**
+ *
+ */
+export const setHelpers = (data) => ({
+	type: SET_HELPERS,
+	payload: {
+		data
 	}
 });

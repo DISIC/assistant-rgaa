@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
-import {isTestApplied} from '../selectors/reference';
-import {enableTest, disableTest} from '../actions/reference';
+import {isTestApplied} from '../../common/selectors/reference';
+import {enableTest, disableTest} from '../../common/actions/reference';
 import Test from './Test';
 
 

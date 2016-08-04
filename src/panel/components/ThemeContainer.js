@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import Theme from './Theme';
-import {setCurrentCriterion} from '../actions/reference';
-import {getCriterion} from '../api/reference';
+import {setCurrentCriterion} from '../../common/actions/reference';
+import {getCriterion} from '../../common/api/reference';
 
 
 

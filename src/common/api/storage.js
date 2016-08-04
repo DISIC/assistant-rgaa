@@ -1,4 +1,4 @@
-import {keys} from 'lodash';
+import {keys, noop} from 'lodash';
 
 
 
@@ -7,42 +7,55 @@ const Runtime = chrome.runtime;
 
 
 
-const setItem = (key, data, callback) => {
-	Storage.set({[key]: data}, () => {
-		if (Runtime.lastError) {
-			return callback(Runtime.lastError);
-		}
-		return callback(null);
+const setItem = (key, data, callback = noop) =>
+	new Promise((resolve, reject) => {
+		Storage.set({[key]: data}, () => {
+			if (Runtime.lastError) {
+				callback(Runtime.lastError);
+				reject(Runtime.lastError);
+			}
+			callback(null);
+			resolve();
+		});
 	});
-};
 
-const getItem = (key, callback) => {
-	Storage.get(key, (item) => {
-		if (Runtime.lastError) {
-			return callback(Runtime.lastError);
-		}
-		const data = item[key] || item;
-		return callback(null, data);
+const getItem = (key, callback = noop) =>
+	new Promise((resolve, reject) => {
+		Storage.get(key, (item) => {
+			if (Runtime.lastError) {
+				callback(Runtime.lastError);
+				reject(Runtime.lastError);
+			}
+			const data = item[key] || item;
+			callback(null, data);
+			resolve(data);
+		});
 	});
-};
 
-const removeItem = (key, callback) => {
-	Storage.remove(key, () => {
-		if (Runtime.lastError) {
-			return callback(Runtime.lastError);
-		}
-		return callback(null);
+const removeItem = (key, callback = noop) =>
+	new Promise((resolve, reject) => {
+		Storage.remove(key, () => {
+			if (Runtime.lastError) {
+				callback(Runtime.lastError);
+				reject(Runtime.lastError);
+			}
+			resolve();
+		});
 	});
-};
 
-const getAllKeys = (callback) => {
-	Storage.get(null, (items) => {
-		if (Runtime.lastError) {
-			return callback(Runtime.lastError);
-		}
-		return callback(null, keys(items));
+const getAllKeys = (callback = noop) =>
+	new Promise((resolve, reject) => {
+		Storage.get(null, (items) => {
+			if (Runtime.lastError) {
+				callback(Runtime.lastError);
+				reject(Runtime.lastError);
+			}
+			const allKeys = keys(items);
+			callback(null, allKeys);
+			resolve(allKeys);
+		});
 	});
-};
+
 
 export default {
 	getItem,

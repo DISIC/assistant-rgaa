@@ -1,0 +1,57 @@
+/**
+ *
+ */
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* stylelint-disable selector-no-universal */
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+/* stylelint-enable */
+
+body {
+	@include typi-base();
+	font-family: $font-sans-serif;
+	background: $color-white;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+button {
+	font: inherit;
+	font-weight: normal;
+}
