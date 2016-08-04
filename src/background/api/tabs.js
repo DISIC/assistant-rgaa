@@ -14,11 +14,11 @@ export const fetchCurrentTab = () => {
 
 	// eslint-disable-next-line no-new
 	return new Promise((resolve, reject) =>
-		chrome.tabs.query(query, (tabs) =>
+		chrome.tabs.query(query, (tabs) => (
 			tabs.length
 				? resolve(tabs[0].id)
 				: reject('No tab found')
-		)
+		))
 	);
 };
 
