@@ -1,4 +1,4 @@
-import {keys, noop, filter, startsWith} from 'lodash';
+import {keys, noop} from 'lodash';
 
 
 
@@ -14,7 +14,6 @@ const setItem = (key, data, callback = noop) =>
 				callback(Runtime.lastError);
 				reject(Runtime.lastError);
 			}
-			console.log('setItem succes', key, data);
 			callback(null);
 			resolve();
 		});
@@ -29,7 +28,6 @@ const getItem = (key, callback = noop) =>
 			}
 			const data = item[key] || item;
 			callback(null, data);
-			console.log('getItem succes', key, data);
 			resolve(data);
 		});
 	});

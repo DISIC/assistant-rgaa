@@ -1,6 +1,5 @@
 import {takeEvery} from 'redux-saga';
-import {call, put} from 'redux-saga/effects';
-import chromeStorage from '../api/storage';
+import {call} from 'redux-saga/effects';
 import {open} from '../../background/api/options';
 import {OPEN} from '../actions/options';
 
