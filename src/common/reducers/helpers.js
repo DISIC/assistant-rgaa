@@ -1,4 +1,4 @@
-import data from '../../../data/helpers/rgaa-3-2016';
+import data from '../../../data/helpers/3-2016';
 
 
 

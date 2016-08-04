@@ -43,7 +43,8 @@ export const getFirstCriterion = (theme) => {
 export const getReferencesList = () => {
 	const req = require.context('../../../data/references', true, /\.json$/);
 	const references = req.keys().map(key => {
-		const {name, version} = req(key);
+		const {name} = req(key);
+		const version = path.basename(key, '.json');
 		return {
 			version,
 			name
@@ -56,13 +57,9 @@ export const getReferencesList = () => {
  * retrieve the reference full json object from a given reference version property
  */
 export const getReference = (version) => {
-	const req = require.context('../../../data/references', true, /\.json$/);
-	const files = req.keys();
-	for (const file of files) {
-		const reference = req(file);
-		if (reference.version === version) {
-			return reference;
-		}
+	try {
+		return require(`../../../data/references/${version}`);
+	} catch (e) {
+		return null;
 	}
-	return null;
 };
