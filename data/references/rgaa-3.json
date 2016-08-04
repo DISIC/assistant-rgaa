@@ -91,7 +91,18 @@
 		{
 			"id": "2",
 			"title": "2. Cadres",
-			"criteria": []
+			"criteria": [
+				{
+					"id": "2.1",
+					"title": "Critère 2.1 [A] Pour chaque image utilisée comme CAPTCHA ou comme image-test, ayant une alternative textuelle, cette alternative permet-elle d’identifier la nature et la fonction de l’image ?",
+					"tests": [
+						{
+							"id": "1.4.1",
+							"title": "Test 2.1.1 : Chaque image (balise img) utilisée comme CAPTCHA ou comme image-test, ayant un attribut alt, vérifie-t-elle ces conditions ?"
+						}
+					]
+				}
+		]
 		},
 		{
 			"id": "3",

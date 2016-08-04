@@ -28,11 +28,16 @@ export default function reference(state = initialState, {type, payload}) {
 				criterion: getFirstCriterion(payload.theme)
 			};
 
-		case SET_REFERENCE:
+		case SET_REFERENCE: {
+			const theme = getFirstTheme(payload.data);
 			return {
 				...state,
-				data: payload.data
+				data: payload.data,
+				theme,
+				criterion: getFirstCriterion(theme),
+				tests: {}
 			};
+		}
 
 		case SET_CURRENT_CRITERION:
 			return {

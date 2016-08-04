@@ -8,7 +8,7 @@ import chromeStorage from './storage';
  */
 export const get = (key) =>
 	chromeStorage.getItem('options').then(options =>
-		options[key]
+		key ? options[key] : options
 	);
 
 /**

@@ -53,7 +53,7 @@ export const getReferencesList = () => {
 };
 
 /*
- * retrieve the reference full json object from a given reference name property
+ * retrieve the reference full json object from a given reference version property
  */
 export const getReference = (version) => {
 	const req = require.context('../../../data/references', true, /\.json$/);
