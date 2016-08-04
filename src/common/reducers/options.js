@@ -1,4 +1,5 @@
-import {SET_REFERENCE} from '../actions/options';
+import {SET_REFERENCE_VERSION} from '../actions/options';
+import {initialState as initialReferenceState} from './reference';
 
 
 
@@ -6,7 +7,7 @@ import {SET_REFERENCE} from '../actions/options';
  *
  */
 const initialState = {
-	referenceFile: null
+	referenceVersion: initialReferenceState.data.version
 };
 
 /**
@@ -14,10 +15,10 @@ const initialState = {
  */
 export default function options(state = initialState, {type, payload}) {
 	switch (type) {
-		case SET_REFERENCE:
+		case SET_REFERENCE_VERSION:
 			return {
 				...state,
-				referenceFile: payload.file
+				referenceVersion: payload.version
 			};
 
 		default:

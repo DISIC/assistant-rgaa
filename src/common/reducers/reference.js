@@ -1,6 +1,6 @@
 import data from '../../../data/references/rgaa-3-2016';
 import {
-	ENABLE_TEST, DISABLE_TEST, SET_CURRENT_THEME, SET_CURRENT_CRITERION
+	SET_REFERENCE, ENABLE_TEST, DISABLE_TEST, SET_CURRENT_THEME, SET_CURRENT_CRITERION
 } from '../actions/reference';
 import {getFirstTheme, getFirstCriterion} from '../api/reference';
 
@@ -9,7 +9,7 @@ import {getFirstTheme, getFirstCriterion} from '../api/reference';
 /**
  *
  */
-const initialState = {
+export const initialState = {
 	data,
 	theme: getFirstTheme(data),
 	criterion: getFirstCriterion(getFirstTheme(data)),
@@ -26,6 +26,12 @@ export default function reference(state = initialState, {type, payload}) {
 				...state,
 				theme: payload.theme,
 				criterion: getFirstCriterion(payload.theme)
+			};
+
+		case SET_REFERENCE:
+			return {
+				...state,
+				data: payload.data
 			};
 
 		case SET_CURRENT_CRITERION:

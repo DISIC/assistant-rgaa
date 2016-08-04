@@ -2,6 +2,7 @@
  *
  */
 export const FETCH_THEME = 'common/reference/FETCH';
+export const SET_REFERENCE = 'common/reference/SET_REFERENCE';
 export const SET_CURRENT_THEME = 'common/reference/SET_CURRENT_THEME';
 export const SET_CURRENT_CRITERION = 'common/reference/SET_CURRENT_CRITERION';
 export const ENABLE_TEST = 'common/reference/ENABLE_TEST';
@@ -16,6 +17,16 @@ export const fetchTheme = (id) => ({
 	type: FETCH_THEME,
 	payload: {
 		id
+	}
+});
+
+/**
+ *
+ */
+export const setReference = (data) => ({
+	type: SET_REFERENCE,
+	payload: {
+		data
 	}
 });
 

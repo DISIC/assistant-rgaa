@@ -1,5 +1,5 @@
 import * as container from '../common/sagas/container';
-import * as optionsActions from '../common/sagas/options';
+import * as options from '../common/sagas/options';
 
 
 
@@ -10,6 +10,7 @@ export default function* sagas() {
 	yield [
 		container.watchSetPosition(),
 		container.watchRequestPopup(),
-		optionsActions.watchOpen()
+		options.watchOpen(),
+		options.watchSetReference()
 	];
 }

@@ -12,7 +12,7 @@ const setItem = (key, data, callback) => {
 		if (Runtime.lastError) {
 			return callback(Runtime.lastError);
 		}
-		return callback(null);
+		return callback && callback(null);
 	});
 };
 
@@ -22,7 +22,7 @@ const getItem = (key, callback) => {
 			return callback(Runtime.lastError);
 		}
 		const data = item[key] || item;
-		return callback(null, data);
+		return callback && callback(null, data);
 	});
 };
 
@@ -31,7 +31,7 @@ const removeItem = (key, callback) => {
 		if (Runtime.lastError) {
 			return callback(Runtime.lastError);
 		}
-		return callback(null);
+		return callback && callback(null);
 	});
 };
 
@@ -40,7 +40,7 @@ const getAllKeys = (callback) => {
 		if (Runtime.lastError) {
 			return callback(Runtime.lastError);
 		}
-		return callback(null, keys(items));
+		return callback && callback(null, keys(items));
 	});
 };
 
