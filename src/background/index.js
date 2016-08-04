@@ -6,12 +6,11 @@ import {toggle} from '../common/actions/container';
 
 
 /**
- * 	the background script is tasked with:
- * 		- sending the "toggle panel" request on the extension icon click
- * 		- dispatching messages across the whole extension
+ *
  */
-
-
+window.rgaaExt = {
+	store
+};
 
 /**
  *	Dispatches every message to the content scripts, allowing
