@@ -1,12 +1,12 @@
 /* stylelint-disable
 declaration-no-important, selector-no-id, selector-id-pattern */
 
-#vt-RGAAToolbar,
-#vt-RGAAToolbar-container,
-#vt-RGAAToolbar-panel,
-#vt-RGAAToolbar .vt-ResizeHandle,
-#vt-RGAAToolbar .vt-ResizeHandle-handle,
-#vt-RGAAToolbar .vt-ResizeHandle-overlay {
+#rgaaExt-Container,
+#rgaaExt-Container-wrapper,
+#rgaaExt-Container-panel,
+#rgaaExt-Container .vt-ResizeHandle,
+#rgaaExt-Container .vt-ResizeHandle-handle,
+#rgaaExt-Container .vt-ResizeHandle-overlay {
 	all: initial;
 	display: block;
 	padding: 0 !important;
@@ -17,8 +17,8 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	box-shadow: none !important;
 }
 
-#vt-RGAAToolbar,
-#vt-RGAAToolbar-container {
+#rgaaExt-Container,
+#rgaaExt-Container-wrapper {
 	width: auto !important;
 	height: auto !important;
 }

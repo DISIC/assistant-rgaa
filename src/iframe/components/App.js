@@ -18,8 +18,8 @@ export default function App({open, position}) {
 
 	return renderIf(open)(() => (
 		<div
-			id={`${CONTAINER_ID}-container`}
-			className={`${CONTAINER_ID}-container--${position}`}
+			id={`${CONTAINER_ID}-wrapper`}
+			className={`${CONTAINER_ID}-wrapper--${position}`}
 		>
 			<ResizeHandle
 				position={handlePosMap[position]}

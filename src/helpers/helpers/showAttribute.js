@@ -20,7 +20,7 @@ export const apply = (id, selector, attribute) =>
 
 		$(element).after(
 			$('<p />', {
-				class: `${id} rgaa-Helper rgaa-ShowAttributeHelper`,
+				class: `${id} rgaaExt-Helper rgaaExt-ShowAttributeHelper`,
 				text: value
 					? `${attribute}="${value}"`
 					: `Pas d'attribut ${attribute}`

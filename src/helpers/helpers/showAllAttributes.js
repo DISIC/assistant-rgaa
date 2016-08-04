@@ -8,7 +8,7 @@ import {toArray} from 'lodash';
  */
 const createTable = (id) =>
 	$(`
-		<table class="${id} rgaa-Helper rgaa-ShowAllAttributesHelper">
+		<table class="${id} rgaaExt-Helper rgaaExt-ShowAllAttributesHelper">
 			<thead>
 				<tr>
 					<th>Attribut</th>

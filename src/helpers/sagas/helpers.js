@@ -12,7 +12,7 @@ import {getModule} from '../api/helpers';
  *	be queried if used as an id or class name in the DOM.
  */
 const createId = (id, index) =>
-	`rgaa-Helper--${id}-${index}`.replace(/\./g, '-');
+	`rgaaExt-Helper--${id}-${index}`.replace(/\./g, '-');
 
 /**
  *	Returns a call effect that will call a function of the
