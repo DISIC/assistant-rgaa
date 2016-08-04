@@ -1,4 +1,5 @@
 import * as container from '../common/sagas/container';
+import * as reference from '../common/sagas/reference';
 import * as options from '../common/sagas/options';
 
 
@@ -11,6 +12,6 @@ export default function* sagas() {
 		container.watchSetPosition(),
 		container.watchRequestPopup(),
 		options.watchOpen(),
-		options.watchSetReference()
+		reference.watchSetReference()
 	];
 }
