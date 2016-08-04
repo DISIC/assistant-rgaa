@@ -10,8 +10,8 @@ import {createGatherMiddleware, createBroadcastMiddleware} from '../common/middl
 const store = createStore(
 	reducer,
 	applyMiddleware(
-		createGatherMiddleware('iframe'),
-		createBroadcastMiddleware('iframe')
+		createGatherMiddleware('container'),
+		createBroadcastMiddleware('container')
 	)
 );
 
