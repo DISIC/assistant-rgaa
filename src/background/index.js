@@ -1,8 +1,7 @@
 import store, {persistor} from './store';
 import {fetchCurrentTab, sendToContent} from './api/tabs';
 import {get as getOption} from '../common/api/options';
-import {getReference} from '../common/api/reference';
-import {setReference} from '../common/actions/reference';
+import {setReferenceVersion} from '../common/actions/reference';
 import {setCurrent as setCurrentTab} from '../common/actions/tabs';
 import {toggle} from '../common/actions/container';
 import {isOpen} from '../common/selectors/container';
@@ -20,7 +19,7 @@ window.rgaaExt = {
 const restoreReference = () =>
 	getOption('reference').then(version => {
 		if (version) {
-			store.dispatch(setReference(getReference(version)));
+			store.dispatch(setReferenceVersion(version));
 		}
 	});
 

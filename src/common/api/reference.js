@@ -60,6 +60,6 @@ export const getReference = (version) => {
 	try {
 		return require(`../../../data/references/${version}`);
 	} catch (e) {
-		return null;
+		return {};
 	}
 };

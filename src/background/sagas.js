@@ -12,6 +12,6 @@ export default function* sagas() {
 		container.watchSetPosition(),
 		container.watchRequestPopup(),
 		options.watchOpen(),
-		reference.watchSetReference()
+		reference.watchSetReferenceVersion()
 	];
 }

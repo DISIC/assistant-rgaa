@@ -1,8 +1,8 @@
 import {compose, withProps} from 'recompose';
 import {connect} from 'react-redux';
 import ReferenceSelect from './ReferenceSelect';
-import {setReference} from '../../common/actions/reference';
-import {getReferencesList, getReference} from '../../common/api/reference';
+import {setReferenceVersion} from '../../common/actions/reference';
+import {getReferencesList} from '../../common/api/reference';
 import {getCurrent} from '../../common/selectors/reference';
 
 
@@ -29,7 +29,7 @@ const props = {
  */
 const mapDispatchToProps = (dispatch) => ({
 	onChange(version) {
-		dispatch(setReference(getReference(version)));
+		dispatch(setReferenceVersion(version));
 	}
 });
 
