@@ -1,4 +1,4 @@
-import {find, get, flatten, map} from 'lodash';
+import {find, get, flatten, map, sortBy} from 'lodash';
 
 
 
@@ -35,3 +35,14 @@ export const getFirstCriterion = (theme) => {
 	}
 	return get(theme, 'criteria[0]', null);
 };
+
+/*
+ *
+ */
+export const getAllReferences = () =>
+	// lis le contenu de data/references et retourne un tableau
+	// [{ file: ..., name: ... }, {file,name}]
+	sortBy([
+		{file: 'rgaa-3-2016.json', name: 'version 3-2016', version: '3-2016'},
+		{file: 'rgaa-3.json', name: 'version 3', version: '3'}
+	], 'name');

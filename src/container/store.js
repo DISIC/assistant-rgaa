@@ -1,5 +1,5 @@
 import {createStore, applyMiddleware} from 'redux';
-import reducer from './reducers';
+import reducer from '../common/reducers';
 import {createGatherMiddleware, createBroadcastMiddleware} from '../common/middlewares/sync';
 
 

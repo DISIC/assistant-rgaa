@@ -1,5 +1,5 @@
-import * as container from './container';
-import * as optionsActions from './options';
+import * as container from '../common/sagas/container';
+import * as optionsActions from '../common/sagas/options';
 
 
 

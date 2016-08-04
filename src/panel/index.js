@@ -5,7 +5,7 @@ import {IntlProvider, addLocaleData} from 'react-intl';
 import fr from 'react-intl/locale-data/fr';
 import routes from './routes';
 import getStore from './getStore';
-import messages from './messages/fr';
+import messages from '../common/messages/fr';
 
 
 

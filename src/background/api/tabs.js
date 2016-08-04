@@ -1,4 +1,4 @@
-import {getCurrent} from '../selectors/tabs';
+import {getCurrent} from '../../common/selectors/tabs';
 import store from '../store';
 
 

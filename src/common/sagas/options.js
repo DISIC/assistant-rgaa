@@ -1,7 +1,7 @@
 import {takeEvery} from 'redux-saga';
 import {call} from 'redux-saga/effects';
-import {open} from '../api/options';
-import {OPEN} from '../../common/actions/options';
+import {open} from '../../background/api/options';
+import {OPEN} from '../actions/options';
 
 
 

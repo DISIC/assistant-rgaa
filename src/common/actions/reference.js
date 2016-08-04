@@ -1,11 +1,11 @@
 /**
  *
  */
-export const FETCH_THEME = 'panel/reference/FETCH';
-export const SET_CURRENT_THEME = 'panel/reference/SET_CURRENT_THEME';
-export const SET_CURRENT_CRITERION = 'panel/reference/SET_CURRENT_CRITERION';
-export const ENABLE_TEST = 'panel/reference/ENABLE_TEST';
-export const DISABLE_TEST = 'panel/reference/DISABLE_TEST';
+export const FETCH_THEME = 'common/reference/FETCH';
+export const SET_CURRENT_THEME = 'common/reference/SET_CURRENT_THEME';
+export const SET_CURRENT_CRITERION = 'common/reference/SET_CURRENT_CRITERION';
+export const ENABLE_TEST = 'common/reference/ENABLE_TEST';
+export const DISABLE_TEST = 'common/reference/DISABLE_TEST';
 
 
 

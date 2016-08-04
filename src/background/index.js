@@ -1,6 +1,6 @@
 import store, {persistor} from './store';
 import {fetchCurrentTab, sendToContent} from './api/tabs';
-import {setCurrent as setCurrentTab} from './actions/tabs';
+import {setCurrent as setCurrentTab} from '../common/actions/tabs';
 import {toggle} from '../common/actions/container';
 
 
