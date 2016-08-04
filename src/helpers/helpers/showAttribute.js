@@ -1,11 +1,12 @@
 import $ from 'jquery';
+import {chain} from 'lodash';
 
 
 
 /**
- *	This helper could have been implemented using a combination
- *	of :after, content, and attr() in CSS, but browsers don't
- *	support pseudo-elements on <img /> tags.
+ *	The basic functionality helper could have been implemented
+ *	using a combination of :after, content, and attr() in CSS,
+ *	but browsers don't support pseudo-elements on <img /> tags.
  */
 
 
@@ -80,7 +81,9 @@ export const apply = (id, selector, attribute) =>
 	});
 
 /**
+ *	Removes all boxes previously added using apply().
  *
+ *	@param {string} id - UUID.
  */
 export const revert = (id) =>
 	$(`.${id}`).remove();
