@@ -1,7 +1,7 @@
 import {property} from 'lodash';
 import {takeEvery} from 'redux-saga';
 import {call, put, select} from 'redux-saga/effects';
-import chromeStorage from '../api/storage';
+import {save} from '../api/options';
 import {getTheme} from '../api/reference';
 import {
 	SET_REFERENCE, FETCH_THEME, ENABLE_TEST, DISABLE_TEST, setCurrentTheme
@@ -35,7 +35,7 @@ function* toggleTestWorker(enable, {payload: {id}}) {
  *
  */
 function* setReferenceWorker({payload: {data}}) {
-	yield call(chromeStorage.setItem, 'options.reference', data.version);
+	yield call(save, 'reference', data.version);
 }
 
 
