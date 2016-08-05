@@ -67,6 +67,7 @@ export default function ThemesList({themes, activeTheme}) {
 						activeClass: 'is-active',
 						keyboardNavBy: 'items'
 					}}
+					rawData={themes}
 				>
 					{renderItems(themes)}
 				</Sly>

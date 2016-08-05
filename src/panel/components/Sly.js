@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {debounce, omit, get, toInteger} from 'lodash';
+import {debounce, omit, get, toInteger, isEqual} from 'lodash';
 require('sly/dist/sly');
 
 
@@ -21,16 +21,26 @@ export default class ReactSly extends Component {
 		this.sly.init();
 	}
 
+	componentDidUpdate(prevProps) {
+		if (this.props.rawData === undefined) {
+			return;
+		}
+
+		if (!isEqual(this.props.rawData, prevProps.rawData)) {
+			this.sly.reload();
+		}
+	}
+
 	componentWillUnmount() {
 		this.sly.destroy();
 		window.removeEventListener('resize', this.debouncedReload);
 	}
 
 	getContainerProps() {
-		return omit(this.props, 'children', 'config');
+		return omit(this.props, 'children', 'rawData', 'config');
 	}
 
-	getSlyElement() {
+	getSlyInstance() {
 		return this.sly;
 	}
 
@@ -63,6 +73,20 @@ export default class ReactSly extends Component {
 }
 
 ReactSly.propTypes = {
-	children: PropTypes.node,
+	/**
+	 * react or dom elements to show in the sly frame
+	 */
+	children: PropTypes.arrayOf(PropTypes.element).isRequired,
+	/**
+	 * Optionally pass a rawData array,
+	 * representing the … data tied to the children.
+	 * This is usefull to check if data actually changed from
+	 * one render to another
+	 */
+	rawData: PropTypes.array,
 	config: PropTypes.object
+};
+
+ReactSly.defaultProps = {
+	config: {}
 };
