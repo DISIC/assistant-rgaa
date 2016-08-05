@@ -28,14 +28,6 @@ export default function App({open, position}) {
 				handleProps={{
 					title: 'Redimensionnez, ou cliquez pour afficher ou cacher l\'extension'
 				}}
-				styles={{
-					handle: {
-						zIndex: 100005
-					},
-					overlay: {
-						zIndex: 100000
-					}
-				}}
 			>
 				<Iframe />
 			</ResizeHandle>
