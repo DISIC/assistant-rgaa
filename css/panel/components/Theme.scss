@@ -26,6 +26,9 @@
 	max-width: 300px;
 }
 
-.Theme-criteria {
-	overflow: auto;
+.Theme-content {
+	overflow-x: hidden;
+	overflow-y: auto;
+	flex: 1 1 1px; //set a minimum height so that content grows to fit
+	// if we put auto it wouldn't work correctly in firefox
 }
