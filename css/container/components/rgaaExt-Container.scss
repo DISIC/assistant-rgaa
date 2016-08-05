@@ -13,7 +13,7 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	border: 0 !important;
 	height: 100% !important;
 	background: #f5f5f5 !important;
-	z-index: 99999 !important;
+	z-index: $max-z-index !important;
 	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
