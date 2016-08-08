@@ -21,17 +21,14 @@ const LINK_ATTRIBUTES = [
  *	@param {string} value - Attribute value.
  *	@return {string} - Attribute value containing anchors if needed.
  */
-const linkIds = (name, value) => {
-	if (LINK_ATTRIBUTES.includes(name)) {
-		return chain(value)
+const linkIds = (name, value) =>
+	LINK_ATTRIBUTES.includes(name)
+		? chain(value)
 			.split(/\s+/)
 			.map((id) => `<a href="#${id}">#${id}</a>`)
 			.join(' ')
-			.value();
-	}
-
-	return value;
-};
+			.value()
+		: value;
 
 /**
  *
