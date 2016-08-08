@@ -4,11 +4,11 @@
 	"themes": [
 		{
 			"id": "1",
-			"title": "1. Images de la version 3",
+			"title": "1. Images",
 			"criteria": [
 				{
 					"id": "1.1",
-					"title": "Critère 1.1 . 3 [A] Chaque image a-t-elle une alternative textuelle ?",
+					"title": "Critère 1.1 [A] Chaque image a-t-elle une alternative textuelle ?",
 					"tests": [
 						{
 							"id": "1.1.1",
