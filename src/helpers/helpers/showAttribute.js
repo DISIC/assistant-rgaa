@@ -34,19 +34,19 @@ const linkIds = (name, value) => {
 };
 
 /**
- *	Builds HTML code to render an attribute's name and value.
  *
- *	@param {string} name - Attribute name.
- *	@param {string} value - Attribute value.
- *	@return {string} - HTML.
  */
-const serialize = (name, value) => {
+export const serializeAttribute = (element, name, showMissing) => {
+	const value = element.attr(name);
+
 	if (isString(value)) {
-		return `<span class="rgaaExt-ShowAttributeHelper-name">${name}</span>`
-			+ `="<span class="rgaaExt-ShowAttributeHelper-value">${linkIds(name, value)}</span>"`;
+		return `<span class="rgaaExt-Attribute-name">${name}</span>`
+			+ `="<span class="rgaaExt-Attribute-value">${linkIds(name, value)}</span>"`;
 	}
 
-	return `<span class="rgaaExt-ShowAttributeHelper-missing">${name}</span>`;
+	return showMissing
+		? `<span class="rgaaExt-Attribute-missing">${name}</span>`
+		: '';
 };
 
 /**
@@ -55,23 +55,21 @@ const serialize = (name, value) => {
  *
  *	@param {string} id - UUID.
  *	@param {$} element - Element.
- *	@param {string} name - Attribute name.
+ *	@param {string} attribute - Attribute name.
  *	@param {boolean} showMissing - Whether or not to show
  *		the attribute if it is not set.
  */
-export const showAttribute = (id, element, name, showMissing) => {
-	const value = element.attr(name);
+export const showAttribute = (id, element, attribute, showMissing) => {
+	const serialized = serializeAttribute(element, attribute, showMissing);
 
-	if (!showMissing && !isString(value)) {
-		return;
+	if (serialized) {
+		$(element).after(
+			$('<code />', {
+				class: `${id} rgaaExt-Helper rgaaExt-ShowAttributeHelper`,
+				html: serialized
+			})
+		);
 	}
-
-	$(element).after(
-		$('<span />', {
-			class: `${id} rgaaExt-Helper rgaaExt-ShowAttributeHelper`,
-			html: serialize(name, value)
-		})
-	);
 };
 
 /**

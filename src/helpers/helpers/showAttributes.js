@@ -7,11 +7,9 @@ import {showAttribute} from './showAttribute';
  *
  */
 export const apply = (id, selector, attributes, {showMissing = false} = {}) =>
-	$(selector).each((i, el) => {
-		const element = $(el);
-
+	$(selector).each((i, element) => {
 		attributes.forEach((attribute) =>
-			showAttribute(id, element, attribute, showMissing)
+			showAttribute(id, $(element), attribute, showMissing)
 		);
 	});
 
