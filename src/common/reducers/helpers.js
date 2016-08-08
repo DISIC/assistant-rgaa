@@ -1,4 +1,4 @@
-import data from '../../../data/helpers/3-2016';
+import data from '../../../data/helpers/3';
 import {SET_HELPERS} from '../actions/helpers';
 
 

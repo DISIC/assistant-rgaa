@@ -1,4 +1,4 @@
-import data from '../../../data/references/3-2016';
+import data from '../../../data/references/3';
 import {
 	SET_REFERENCE, ENABLE_TEST, DISABLE_TEST, SET_CURRENT_THEME, SET_CURRENT_CRITERION
 } from '../actions/reference';

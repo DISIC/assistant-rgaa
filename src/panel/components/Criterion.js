@@ -12,13 +12,9 @@ export default function Criterion({id, title, tests}) {
 			<h1 className="Criterion-title">{title}</h1>
 
 			<ul className="Criterion-tests">
-				{tests.map(({id: testId, title: testTitle, instructions}) =>
+				{tests.map(({id: testId, title: testTitle}) =>
 					<li className="Criterion-test" key={`criterion-${id}-test-${testId}`}>
-						<TestContainer
-							id={testId}
-							title={testTitle}
-							instructions={instructions}
-						/>
+						<TestContainer id={testId} title={testTitle} />
 					</li>
 				)}
 			</ul>

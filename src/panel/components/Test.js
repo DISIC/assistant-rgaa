@@ -30,7 +30,6 @@ function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
 		</h2>)
 		: <h2 className="Test-title">{title}</h2>;
 
-
 	return (
 		<article className="Test">
 			<header className="Test-header">

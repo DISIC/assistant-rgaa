@@ -37,9 +37,12 @@ h6 {
 	padding: 0;
 }
 
-ul,
-ol {
+ul {
 	list-style: none;
+}
+
+ol {
+	padding-left: vr(1);
 }
 
 h1,
