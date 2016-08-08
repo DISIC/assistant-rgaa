@@ -12,23 +12,19 @@
 					"tests": [
 						{
 							"id": "1.1.1",
-							"title": "Test 1.1.1 . 3: Chaque image (balise img) a-t-elle un attribut alt ?",
-							"instructions": "<p>Chercher dans la page les images et les boutons images dépourvus d'alternative.</p><p>Si aucun résultat n'est trouvé, le test est validé.</p>"
+							"title": "Test 1.1.1 . 3: Chaque image (balise img) a-t-elle un attribut alt ?"
 						},
 						{
 							"id": "1.1.2",
-							"title": "Test 1.1.2 : Chaque zone (balise area) d’une image réactive a-t-elle un attribut alt ?",
-							"instructions": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dolores cupiditate quam, aperiam magnam facere doloremque minima. Soluta exercitationem voluptatibus ea, pariatur in nostrum, modi eveniet officiis velit deserunt, fugit!</p>"
+							"title": "Test 1.1.2 : Chaque zone (balise area) d’une image réactive a-t-elle un attribut alt ?"
 						},
 						{
 							"id": "1.1.3",
-							"title": "Test 1.1.3 : Chaque bouton de formulaire (balise input avec l’attribut type=image) a-t-il un attribut alt ?",
-							"instructions": ""
+							"title": "Test 1.1.3 : Chaque bouton de formulaire (balise input avec l’attribut type=image) a-t-il un attribut alt ?"
 						},
 						{
 							"id": "1.1.4",
-							"title": "Test 1.1.4 : Chaque zone cliquable d’une image réactive coté serveur est-t-elle doublée d’un lien dans la page ?",
-							"instructions": ""
+							"title": "Test 1.1.4 : Chaque zone cliquable d’une image réactive coté serveur est-t-elle doublée d’un lien dans la page ?"
 						}
 					]
 				},
