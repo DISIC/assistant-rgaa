@@ -1,4 +1,5 @@
 import store, {persistor} from './store';
+import {create} from './api/windows';
 import {fetchCurrentTab, sendToContent} from './api/tabs';
 import {get as getOption} from '../common/api/options';
 import {setReferenceVersion} from '../common/actions/reference';
@@ -24,6 +25,18 @@ const restoreReference = () =>
 	});
 
 restoreReference();
+
+
+
+/**
+ *	Opens a devtools popup in development mode.
+ */
+if (process.env.NODE_ENV !== 'production') {
+	create({
+		url: chrome.runtime.getURL('src/devtools/content.html'),
+		type: 'popup'
+	});
+}
 
 
 

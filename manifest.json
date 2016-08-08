@@ -45,6 +45,7 @@
 		"page": "src/options/content.html"
 	},
 	"web_accessible_resources": [
-		"src/container/content.html"
+		"src/container/content.html",
+		"src/devtools/content.html"
 	]
 }

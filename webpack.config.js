@@ -36,6 +36,10 @@ module.exports = {
 		background: [
 			'babel-polyfill',
 			'./src/background/index'
+		],
+		devtools: [
+			'babel-polyfill',
+			'./src/devtools/index'
 		]
 	},
 	output: {
