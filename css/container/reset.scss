@@ -6,7 +6,12 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 #rgaaExt-Container-panel,
 #rgaaExt-Container .vt-ResizeHandle,
 #rgaaExt-Container .vt-ResizeHandle-handle,
-#rgaaExt-Container .vt-ResizeHandle-overlay {
+#rgaaExt-Container .vt-ResizeHandle-overlay,
+.rgaaExt-ImportModal,
+.rgaaExt-ImportModal [data-reactroot]:not([class]),
+.rgaaExt-ImportModal-container,
+.rgaaExt-ImportModal-content,
+.rgaaExt-ImportModal-overlay {
 	all: initial;
 	display: block;
 	padding: 0 !important;

@@ -3,6 +3,7 @@ import renderIf from 'render-if';
 import {CONTAINER_ID} from '../api/iframe';
 import ResizeHandle from './ResizeHandle';
 import Iframe from './Iframe';
+import ImportModalContainer from './ImportModalContainer';
 
 
 
@@ -31,6 +32,8 @@ export default function App({open, position}) {
 			>
 				<Iframe />
 			</ResizeHandle>
+
+			<ImportModalContainer />
 		</div>
 	));
 }

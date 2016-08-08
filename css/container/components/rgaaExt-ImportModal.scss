@@ -1,0 +1,43 @@
+/* stylelint-disable declaration-no-important */
+
+.rgaaExt-ImportModal-overlay {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	background: rgba(0, 0, 0, 0.3) !important;
+	z-index: ($max-z-index - 4) !important;
+}
+
+.rgaaExt-ImportModal-container {
+	position: absolute !important;
+	top: 40px !important;
+	left: 40px !important;
+	right: 40px !important;
+	bottom: 40px !important;
+	margin: auto !important;
+	max-width: 600px !important;
+	border: 1px solid #ccc !important;
+	background: $color-wild-sand !important;
+	overflow: auto !important;
+	outline: none !important;
+	z-index: ($max-z-index - 3) !important;
+}
+
+.rgaaExt-ImportModal-container * {
+	font-family: $font-sans-serif !important;
+	font-size: 1rem !important;
+}
+
+.rgaaExt-ImportModal-title {
+	background: $color-mariner !important;
+	color: $color-white !important;
+	padding: $base-line-height !important;
+	margin: 0 !important;
+	font-size: 1rem !important;
+}
+
+.rgaaExt-ImportModal-content {
+	padding: $base-line-height !important;
+}

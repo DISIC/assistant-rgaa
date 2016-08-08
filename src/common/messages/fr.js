@@ -4,6 +4,7 @@
 const messages = {
 	'Header.title': 'Panel d\'outils RGAA',
 	'Header.options': 'Options',
+	'Header.import': 'Import',
 	'Theme.criterion.select.label': 'Aller au critère : ',
 	'Theme.criterion.select.emptyOption': 'Choisissez un critère',
 	'Test.apply.check.title': 'Appliquer les CSS et JS liés au test',
@@ -18,6 +19,9 @@ const messages = {
 	'DockMenu.left': 'À gauche',
 	'DockMenu.right': 'À droite',
 	'DockMenu.popup': 'Popup',
+	'Import.title': 'Import d\'un fichier d\'audit',
+	'Import.file.label': 'Sélectionnez un fichier d\'import : ',
+	'Import.submit': 'Valider',
 	'Options.references.label': 'Version du référentiel RGAA à utiliser :'
 };
 

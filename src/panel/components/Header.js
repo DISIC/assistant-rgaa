@@ -7,7 +7,7 @@ import DockMenuContainer from './DockMenuContainer';
 /**
  *
  */
-function Header({onOptionsClick}) {
+function Header({onOptionsClick, onImportClick}) {
 	return (
 		<header className="Header">
 			<h1 className="Header-title">
@@ -17,7 +17,13 @@ function Header({onOptionsClick}) {
 			<div className="Header-actions">
 				<DockMenuContainer />
 
-				<button type="button" className="Link">Import</button>
+				<button
+					type="button"
+					onClick={onImportClick}
+					className="Link"
+				>
+					<FormattedMessage id="Header.import" />
+				</button>
 
 				<button
 					type="button"
@@ -32,7 +38,8 @@ function Header({onOptionsClick}) {
 }
 
 Header.propTypes = {
-	onOptionsClick: PropTypes.func.isRequired
+	onOptionsClick: PropTypes.func.isRequired,
+	onImportClick: PropTypes.func.isRequired
 };
 
 export default injectIntl(Header);
