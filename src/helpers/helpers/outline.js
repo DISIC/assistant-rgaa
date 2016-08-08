@@ -3,6 +3,14 @@ import {apply as addClassName, revert as removeClassName} from './addClassName';
 
 
 /**
+ *	Describes the helper.
+ *
+ *	@param {string} selector - Selector.
+ */
+export const describe = (selector) =>
+	`Entoure les éléments <code>${selector}</code>.`;
+
+/**
  *	Adds an outline to each element matched by the given selector.
  *
  *	@param {string} id - UUID.

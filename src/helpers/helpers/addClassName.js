@@ -3,6 +3,17 @@ import $ from 'jquery';
 
 
 /**
+ *	Describes the helper.
+ *
+ *	@param {string} selector - Selector.
+ *	@param {string} className - Class name.
+ */
+export const describe = (selector, className) => `
+	Ajoute une classe <code>${className}</code>
+	sur les éléments <code>${selector}</code>.
+`;
+
+/**
  *	Adds a custom class name to each element matched by the
  *	given selector.
  *
