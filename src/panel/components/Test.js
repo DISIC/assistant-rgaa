@@ -16,7 +16,6 @@ function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
 	const handleDoneChange = (event) =>
 		onDone(event.target.checked);
 
-
 	const applyImage = applied ? 'cross.png' : 'magnifier-zoom.png';
 	const applyTranslateKey = applied ? 'uncheck' : 'check';
 
