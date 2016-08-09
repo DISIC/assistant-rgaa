@@ -31,6 +31,17 @@ const showChildren = (id, element, childrenSelector, attributes, showMissing) =>
 			)
 		);
 
+
+
+/**
+ *	Describes the helper.
+ */
+export const describe = (selector, childrenSelector, attributes) => `
+	Pour chaque élément <code>${selector}</code>,
+	affiche les éléments enfants <code>${childrenSelector}</code>
+	et leurs attributs <code>${attributes.join(', ')}</code>.
+`;
+
 /**
  *	Shows children of particular elements.
  *

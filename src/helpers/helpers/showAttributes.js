@@ -4,6 +4,14 @@ import {showAttribute} from './showAttribute';
 
 
 /**
+ *	Describes the helper.
+ */
+export const describe = (selector, attributes) => `
+	Affiche les attributs <code>${attributes.join(', ')}</code>
+	des éléments <code>${selector}</code>.
+`;
+
+/**
  *
  */
 export const apply = (id, selector, attributes, {showMissing = false} = {}) =>

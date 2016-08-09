@@ -70,6 +70,19 @@ export const showAttribute = (id, element, attribute, showMissing) => {
 	}
 };
 
+
+
+/**
+ *	Describes the helper.
+ *
+ *	@param {string} selector - Selector.
+ *	@param {string} attribute - Attribute name.
+ */
+export const describe = (selector, attribute) => `
+	Affiche l'attribut <code>${attribute}</code>
+	des éléments <code>${selector}</code>.
+`;
+
 /**
  *	Shows a box containing an attribute's name and value on
  *	each element matched by the given selector.

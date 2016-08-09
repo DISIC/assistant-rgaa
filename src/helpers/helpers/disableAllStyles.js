@@ -17,6 +17,12 @@ const toggleStyleSheets = (toggled) =>
 
 
 /**
+ *	Describes the helper.
+ */
+export const describe = () =>
+	'Désactive tous les styles de la page.';
+
+/**
  *	Disable all style sheets in the page.
  */
 export const apply = () =>
