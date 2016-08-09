@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {isModalOpen, getErrors, isValid} from '../../common/selectors/imports';
 import {closeModal, setErrors, setContent, reset, apply} from '../../common/actions/imports';
 import ImportModal from './ImportModal';
-import {validateJson} from '../../common/api/imports';
+import {validateImportContent} from '../../common/api/imports';
 
 
 
@@ -27,7 +27,7 @@ const mapDispatchToProps = (dispatch) => ({
 	onFileSelection(content) {
 		try {
 			const data = JSON.parse(content);
-			if (validateJson(data)) {
+			if (validateImportContent(data)) {
 				dispatch(setContent(data));
 			}
 		} catch (e) {
