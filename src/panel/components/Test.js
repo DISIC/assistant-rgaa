@@ -3,6 +3,7 @@ import {injectIntl, intlShape} from 'react-intl';
 import renderIf from 'render-if';
 import {noop} from 'lodash';
 import TestInstructions from './TestInstructions';
+import TestHelpersContainer from './TestHelpersContainer';
 
 
 
@@ -72,6 +73,10 @@ function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
 					</div>
 				</div>
 			</header>
+
+			{renderIf(applied)(() => (
+				<TestHelpersContainer id={id} />
+			))}
 
 			{renderIf(instructions)(() => (
 				<TestInstructions instructions={instructions} />

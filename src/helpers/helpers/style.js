@@ -6,7 +6,7 @@ import $ from 'jquery';
  *	Describes the helper.
  */
 export const describe = () =>
-	`Ajoute des styles dans la page.`;
+	'Ajoute des styles dans la page.';
 
 /**
  *	Injects a custom style block in the <head />.

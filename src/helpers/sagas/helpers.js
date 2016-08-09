@@ -1,8 +1,7 @@
 import {takeEvery} from 'redux-saga';
 import {call} from 'redux-saga/effects';
-import {isArray, first, tail} from 'lodash';
 import {APPLY, REVERT} from '../../common/actions/helpers';
-import {getModule} from '../api/helpers';
+import {info} from '../api/helpers';
 
 
 
@@ -20,18 +19,12 @@ const createId = (id, index) =>
  *
  *	@param {string} func - Name of the module's function to call,
  *		either 'apply' or 'revert'.
- *	@param {string|array} helper - Helper descriptor. This can
- *		be either a string containing the helper's name, or an
- *		array containing the helper's name, followed by its
- *		arguments, for example : ["helperName", "arg1", "arg2"].
+ *	@param {string|array} helper - Helper descriptor.
  *	@param {string} id - Id.
  *	@return {function} - Call effect.
  */
 const createCall = (func, helper, id) => {
-	const info = isArray(helper) ? helper : [helper];
-	const name = first(info);
-	const args = tail(info);
-	const module = getModule(name);
+	const {module, args} = info(helper);
 
 	// creates a call effect that will call a function of the
 	// module, with id as a first argument, and args as the rest.
