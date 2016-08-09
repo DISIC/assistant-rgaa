@@ -3,15 +3,33 @@
 		"wat": "<ol><li>Dans le menu <i lang=\"en\">Images</i>, activer l'option <i lang=\"en\">List images</i>.</li><li>Tous les éléments graphiques de la page s'affichent avec, en dessous, l'extrait de code source correspondant.</li><li>Vérifier que chaque image possède un attribut <code>alt</code>.</li><li>Si c'est le cas, le test est validé.</li></ol>",
 		"webdev": "<ol><li>Dans le menu CSS, activer l'option « Désactiver les styles CSS » puis « Tous les styles ».</li><li>Dans le menu « Images », activer l'option « Afficher les attributs <code>alt</code> ».</li><li>Dans le menu « Entourer », activer l'option « Éléments personnalisés », saisir&nbsp;: <ul><li>« img » pour afficher les balises <code>img</code>.</li><li>« input » pour afficher les balises <code>input</code>.</li></ul></li><li>Chercher dans la page les images et les boutons images dépourvus d'alternative.</li><li>Si aucun résultat n'est trouvé, le test est validé.</li></ol>",
 		"validator": "<ol><li>Valider le code.</li><li>Vérifier que le validateur ne remonte aucune erreur due à l'absence d'un attribut <code>alt</code>. <span class=\"note\">(Exemple&nbsp;: <q lang=\"en\">An img element must have an alt attribute, except under certain conditions.</q>)</span></li><li>Si c'est le cas, le test est validé.</li></ol>",
-		"rgaa": "<ol><li>Activer le test 1.1.1., qui entoure les balises <code>img</code>, et affiche les attributs <code>alt</code>.</li><li>Chercher dans la page les images dépourvues d'alternative.</li><li>Si aucun résultat n'est trouvé, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Chercher dans la page les images dépourvues d'alternative.</li><li>Si aucun résultat n'est trouvé, le test est validé.</li></ol>"
 	},
 	"1.1.2": {
-		"rgaa": "<ol><li>Activer le test 1.1.2., qui entoure les balises <code>map</code>, et affiche les attributs <code>alt</code> des balises <code>area[href]</code>.</li><li>Vérifier que les balises area possèdent un attribut alt.</li><li>Si c'est le cas, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Vérifier que les balises area possèdent un attribut alt.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"1.1.3": {
-		"rgaa": "<ol><li>Activer le test 1.1.3., qui entoure les balises <code>input[type=\"image\"]</code>, et affiche les attributs <code>alt</code>.</li><li>Chercher dans la page les images dépourvues d'alternative.</li><li>Si aucun résultat n'est trouvé, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Chercher dans la page les images dépourvues d'alternative.</li><li>Si aucun résultat n'est trouvé, le test est validé.</li></ol>"
 	},
 	"1.1.4": {
-		"rgaa": "<ol><li>Activer le test 1.1.3., qui entoure les balises <code>input[type=\"image\"]</code>, et affiche les attributs <code>alt</code>.</li><li>Chercher dans la page les images dépourvues d'alternative.</li><li>Si aucun résultat n'est trouvé, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Vérifier la présence de liens permettant d'accéder aux mêmes ressources que les zones cliquables de l'image.</li><li>Si c'est le cas, le test est validé.</li></ol>"
+	},
+
+
+
+	"1.2.1": {
+		"rgaa": "<ol><li>Pour chaque image dépourvue de <a href=\"http://references.modernisation.gouv.fr/referentiel-technique-0#title-lgende-dimage\">légende</a>, possédant un attribut <code>alt</code>, vérifier&nbsp;: <ol><li>que les images de décoration ont une alternative vide (<code>alt=\"\"</code>)&nbsp;;</li><li>que les images sont dépourvues de <code>title</code>.</li></ol></li><li>Si c'est le cas, le test est validé.</li></ol>"
+	},
+	"1.2.2": {
+		"rgaa": "<ol><li>Vérifier que chaque zone cliquable de décoration (balise <code>area</code> sans attribut <code>href</code>), possède un attribut <code>alt</code> vide (<code>alt=\"\"</code>).</li><li>Si c'est le cas, le test est validé.</li></ol>"
+	},
+	"1.2.3": {
+		"rgaa": "<ol><li>Vérifier l'absence d'alternative textuelle dans les balises <code>object</code>.</li><li>Si c'est le cas, le test est validé.</li></ol>"
+	},
+	"1.2.4": {
+		"rgaa": "<ol><li>Repérer les balises <code>svg</code> servant à insérer une image de décoration.</li><li>Faire un clic droit sur l'élément et choisir « Inspecter l'élément ».</li><li>Vérifier&nbsp;: <ol><li>la présence de la propriété ARIA <code>role="img"</code> sur la balise <code>svg</code>&nbsp;;</li><li>l'absence de propriété ARIA (<code>aria-label</code>, <code>aria-describedby</code>, <code>aria-labelledby</code>…) servant à labelliser l'image sur la balise <code>svg</code> ou l'un de ses enfants&nbsp;;</li><li>l'absence de balises <code>title</code> ou <code>desc</code> dans le corps de la balise <code>svg</code>&nbsp;;</li><li>l'absence d'attribut <code>title</code> sur la balise <code>svg</code> ou l'un de ses enfants.</li></ol></li><li>Si c'est le cas, le test est validé.</li></ol>"
+	},
+	"1.2.5": {
+		"rgaa": "<ol><li>Repérer les balises <code>canvas</code> dépourvues de <a href=\"http://references.modernisation.gouv.fr/referentiel-technique-0#title-lgende-dimage\">légende</a>, servant à insérer une image de décoration.</li><li>Faire un clic droit sur l'élément et choisir « Inspecter l'élément ».</li><li>Vérifier l'absence d'alternative textuelle dans la balise <code>canvas</code>.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	}
 }
