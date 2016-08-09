@@ -1,5 +1,8 @@
 import {connect} from 'react-redux';
-import {isModalOpen, getErrors, isValid} from '../../common/selectors/imports';
+import {
+	isModalOpen, getErrors, isValid, getVersion as getImportVersion
+} from '../../common/selectors/imports';
+import {getVersion as getReferenceVersion} from '../../common/selectors/reference';
 import {closeModal, setErrors, setContent, reset, apply} from '../../common/actions/imports';
 import ImportModal from './ImportModal';
 import {validateImportContent} from '../../common/api/imports';
@@ -12,7 +15,9 @@ import {validateImportContent} from '../../common/api/imports';
 const mapStateToProps = (state) => ({
 	open: isModalOpen(state),
 	valid: isValid(state),
-	errors: getErrors(state)
+	errors: getErrors(state),
+	importVersion: getImportVersion(state),
+	globalVersion: getReferenceVersion(state)
 });
 
 /**

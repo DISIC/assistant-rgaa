@@ -1,4 +1,4 @@
-import {property} from 'lodash';
+import {property, get} from 'lodash';
 
 
 
@@ -16,6 +16,12 @@ export const getErrors = property('imports.errors');
  *
  */
 export const getContent = property('imports.content');
+
+/**
+ *
+ */
+export const getVersion = (state) =>
+	get(state.imports, 'content.version-referentiel', null);
 
 /**
  * check if the current import is valid

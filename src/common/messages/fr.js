@@ -25,6 +25,9 @@ const messages = {
 	'Import.failure': 'Votre fichier ne suit pas le format attendu. Veuillez corriger les erreurs :',
 	'Import.submit': 'Lancer l\'import',
 	'Import.close': 'Fermer la fenêtre',
+	'Import.versionDifference': `&#9888; La version du référentiel RGAA utilisée par
+		l\'extension (configurable dans les options) va être définie à la version {version}
+		pour faire fonctionner l\'import.`,
 	'Options.references.label': 'Version du référentiel RGAA à utiliser :'
 };
 

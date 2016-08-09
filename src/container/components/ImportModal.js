@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {FormattedMessage, injectIntl} from 'react-intl';
+import {FormattedMessage, FormattedHTMLMessage, injectIntl} from 'react-intl';
 import Modal from 'react-modal';
 import renderIf from 'render-if';
 
@@ -8,7 +8,9 @@ import renderIf from 'render-if';
 /**
  *
  */
-function ImportModal({valid, errors, open, onClose, onFileSelection, onSubmit}) {
+function ImportModal({
+	valid, errors, open, importVersion, globalVersion, onClose, onFileSelection, onSubmit
+}) {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
 		onSubmit(valid);
@@ -58,6 +60,16 @@ function ImportModal({valid, errors, open, onClose, onFileSelection, onSubmit}) 
 					{renderIf(valid === true)(
 						<p className="rgaaExt-ImportModal-success">
 							<FormattedMessage id="Import.success" />
+						</p>
+					)}
+					{renderIf(valid === true && importVersion !== globalVersion)(
+						<p className="rgaaExt-ImportModal-warning">
+							<FormattedHTMLMessage
+								id="Import.versionDifference"
+								values={{
+									version: importVersion
+								}}
+							/>
 						</p>
 					)}
 					{renderIf(valid === false)([
