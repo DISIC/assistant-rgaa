@@ -1,8 +1,8 @@
 import {connect} from 'react-redux';
-import {isModalOpen} from '../../common/selectors/imports';
-import {closeModal} from '../../common/actions/imports';
+import {isModalOpen, getErrors, isValid} from '../../common/selectors/imports';
+import {closeModal, setErrors, setContent, reset, apply} from '../../common/actions/imports';
 import ImportModal from './ImportModal';
-import {parseXml} from '../../common/api/imports';
+import {validateJson} from '../../common/api/imports';
 
 
 
@@ -10,7 +10,9 @@ import {parseXml} from '../../common/api/imports';
  *
  */
 const mapStateToProps = (state) => ({
-	open: isModalOpen(state)
+	open: isModalOpen(state),
+	valid: isValid(state),
+	errors: getErrors(state)
 });
 
 /**
@@ -18,11 +20,26 @@ const mapStateToProps = (state) => ({
  */
 const mapDispatchToProps = (dispatch) => ({
 	onClose() {
+		dispatch(reset());
 		dispatch(closeModal());
 	},
 
 	onFileSelection(content) {
-		parseXml(content);
+		try {
+			const data = JSON.parse(content);
+			if (validateJson(data)) {
+				dispatch(setContent(data));
+			}
+		} catch (e) {
+			dispatch(setErrors(e.message));
+		}
+	},
+
+	onSubmit(valid) {
+		if (valid) {
+			dispatch(apply());
+			dispatch(closeModal());
+		}
 	}
 });
 

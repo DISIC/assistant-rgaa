@@ -63,6 +63,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "ajv": "^4.4.0",
     "babel-polyfill": "^6.8.0",
     "classnames": "^2.2.5",
     "history": "^2.1.1",

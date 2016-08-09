@@ -1,15 +1,18 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
 import Modal from 'react-modal';
+import renderIf from 'render-if';
 
 
 
 /**
  *
  */
-function ImportModal({open, onClose, onFileSelection}) {
-	const preventDefault = (event) =>
+function ImportModal({valid, errors, open, onClose, onFileSelection, onSubmit}) {
+	const onFormSubmit = (event) => {
 		event.preventDefault();
+		onSubmit(valid);
+	};
 
 	const onFileChange = (event) => {
 		if (!event.target.files || !event.target.files.length) {
@@ -35,22 +38,48 @@ function ImportModal({open, onClose, onFileSelection}) {
 			</h1>
 
 			<div className="rgaaExt-ImportModal-content">
-				<form onSubmit={preventDefault}>
+				<form onSubmit={onFormSubmit}>
 					<label htmlFor="rgaaExt-ImportModal-fileInput">
 						<FormattedMessage id="Import.file.label" />
 					</label>
+					{/* `value=""` is a dirty trick to allow selection of same file
+					multiples times in a row... but this messes up the UI,
+					not that great */}
 					<input
 						id="rgaaExt-ImportModal-fileInput"
 						className="rgaaExt-ImportModal-fileInput"
 						name="file"
 						type="file"
-						accept="text/xml"
+						accept="application/json"
 						onChange={onFileChange}
+						value=""
 					/>
 
-					<button className="rgaaExt-ImportModal-button">
-						<FormattedMessage id="Import.submit" />
-					</button>
+					{renderIf(valid === true)(
+						<p className="rgaaExt-ImportModal-success">
+							<FormattedMessage id="Import.success" />
+						</p>
+					)}
+					{renderIf(valid === false)([
+						(<p key="failure" className="rgaaExt-ImportModal-failure">
+							<FormattedMessage id="Import.failure" />
+						</p>),
+						(<ul key="errors" className="rgaaExt-ImportModal-errors">
+							{errors.split('\n').map((error, i) =>
+								<li key={`error-${i}`}>{error}</li>
+							)}
+						</ul>)
+					])}
+
+					<div className="rgaaExt-ImportModal-buttons">
+						<button disabled={!valid} className="rgaaExt-ImportModal-button">
+							<FormattedMessage id="Import.submit" />
+						</button>
+
+						<button type="button" onClick={onClose} className="rgaaExt-ImportModal-button">
+							<FormattedMessage id="Import.close" />
+						</button>
+					</div>
 				</form>
 			</div>
 		</Modal>
@@ -60,7 +89,15 @@ function ImportModal({open, onClose, onFileSelection}) {
 ImportModal.propTypes = {
 	open: PropTypes.bool.isRequired,
 	onClose: PropTypes.func.isRequired,
-	onFileSelection: PropTypes.func.isRequired
+	onFileSelection: PropTypes.func.isRequired,
+	onSubmit: PropTypes.func.isRequired,
+	errors: PropTypes.string,
+	valid: PropTypes.bool
+};
+
+ImportModal.defaultProps = {
+	errors: '',
+	valid: null
 };
 
 export default injectIntl(ImportModal);

@@ -21,7 +21,10 @@ const messages = {
 	'DockMenu.popup': 'Popup',
 	'Import.title': 'Import d\'un fichier d\'audit',
 	'Import.file.label': 'Sélectionnez un fichier d\'import : ',
-	'Import.submit': 'Valider',
+	'Import.success': 'Vérification du fichier… OK. Vous pouvez lancer l\'import.',
+	'Import.failure': 'Votre fichier ne suit pas le format attendu. Veuillez corriger les erreurs :',
+	'Import.submit': 'Lancer l\'import',
+	'Import.close': 'Fermer la fenêtre',
 	'Options.references.label': 'Version du référentiel RGAA à utiliser :'
 };
 

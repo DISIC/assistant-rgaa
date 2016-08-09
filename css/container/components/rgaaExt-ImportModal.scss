@@ -41,3 +41,26 @@
 .rgaaExt-ImportModal-content {
 	padding: $base-line-height !important;
 }
+
+.rgaaExt-ImportModal-success {
+	color: green !important;
+	margin-top: $base-line-height !important;
+}
+
+.rgaaExt-ImportModal-failure,
+.rgaaExt-ImportModal-errors {
+	color: red !important;
+}
+
+.rgaaExt-ImportantModal-failure {
+	margin-top: $base-line-height !important;
+}
+
+.rgaaExt-ImportModal-buttons {
+	text-align: center !important;
+	margin-top: $base-line-height !important;
+}
+
+.rgaaExt-ImportModal-button + .rgaaExt-ImportModal-button {
+	margin-left: $base-line-height / 2 !important;
+}

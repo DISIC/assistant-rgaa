@@ -1,0 +1,18 @@
+{
+	"version-referentiel": "3-2016",
+	"criteres": [
+		{
+			"id": "1.1",
+			"priorite": "A",
+			"recommandation": "Titre du critère",
+			"resultat": "c",
+			"testss": [
+				{
+					"id": "1.1.1",
+					"titre": "Titre du test",
+					"resultat": "c"
+				}
+			]
+		}
+	]
+}

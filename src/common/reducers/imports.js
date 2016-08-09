@@ -1,4 +1,4 @@
-import {OPEN_MODAL, CLOSE_MODAL} from '../actions/imports';
+import {OPEN_MODAL, CLOSE_MODAL, RESET, SET_ERRORS, SET_CONTENT} from '../actions/imports';
 
 
 
@@ -8,13 +8,15 @@ import {OPEN_MODAL, CLOSE_MODAL} from '../actions/imports';
 const initialState = {
 	modal: {
 		open: false
-	}
+	},
+	errors: '',
+	content: null
 };
 
 /**
  *
  */
-export default function imports(state = initialState, {type}) {
+export default function imports(state = initialState, {type, payload}) {
 	switch (type) {
 		case OPEN_MODAL:
 			return {
@@ -32,6 +34,27 @@ export default function imports(state = initialState, {type}) {
 					...state.modal,
 					open: false
 				}
+			};
+
+		case RESET:
+			return {
+				...state,
+				errors: '',
+				content: null
+			};
+
+		case SET_ERRORS:
+			return {
+				...state,
+				errors: payload.errors,
+				content: null
+			};
+
+		case SET_CONTENT:
+			return {
+				...state,
+				content: payload.content,
+				errors: ''
 			};
 
 		default:

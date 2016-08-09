@@ -1,5 +1,15 @@
 /* stylelint-disable
 declaration-no-important, selector-no-id, selector-id-pattern */
+@mixin reset() {
+	all: initial;
+	display: block;
+	padding: 0 !important;
+	margin: 0 !important;
+	border: 0 !important;
+	background: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
 
 #rgaaExt-Container,
 #rgaaExt-Container-wrapper,
@@ -11,15 +21,9 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 .rgaaExt-ImportModal [data-reactroot]:not([class]),
 .rgaaExt-ImportModal-container,
 .rgaaExt-ImportModal-content,
+.rgaaExt-ImportModal-buttons,
 .rgaaExt-ImportModal-overlay {
-	all: initial;
-	display: block;
-	padding: 0 !important;
-	margin: 0 !important;
-	border: 0 !important;
-	background: none !important;
-	border-radius: 0 !important;
-	box-shadow: none !important;
+	@include reset();
 }
 
 #rgaaExt-Container,
