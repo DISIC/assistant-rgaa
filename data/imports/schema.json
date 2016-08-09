@@ -15,6 +15,7 @@
 				"type": "object",
 				"properties": {
 					"id": {"type": "string"},
+					"thematiqueId": {"type": "string"},
 					"priorite": {"type": "string"},
 					"recommandation": {"type": "string"},
 					"derogation": {"type": "string"},
@@ -36,7 +37,7 @@
 						}
 					}
 				},
-				"required": ["id", "resultat"]
+				"required": ["id", "thematiqueId", "resultat", "tests"]
 			}
 		}
 	},
