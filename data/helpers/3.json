@@ -30,7 +30,9 @@
 	"1.2.2": [
 		"disableAllStyles",
 		["outline", "map"],
-		["showAttribute", "area:not([href])", "alt"]
+		["showChildren", "map", "area:not([href])", ["alt"], {
+			"showMissing": true
+		}]
 	],
 	"1.2.3": [
 		["outline", "object[type=\"image\"]"]
