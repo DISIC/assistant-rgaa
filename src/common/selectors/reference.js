@@ -15,6 +15,11 @@ export const getThemes = property('reference.data.themes');
 /**
  *
  */
+export const getInactiveThemes = property('reference.inactiveThemeIds');
+
+/**
+ *
+ */
 export const getCriterionIdsByTheme = (state) => {
 	const data = {};
 	state.reference.data.themes.forEach(({id, criteria}) => {

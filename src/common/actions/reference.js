@@ -8,6 +8,7 @@ export const SET_CURRENT_THEME = 'common/reference/SET_CURRENT_THEME';
 export const SET_CURRENT_CRITERION = 'common/reference/SET_CURRENT_CRITERION';
 export const ENABLE_TEST = 'common/reference/ENABLE_TEST';
 export const DISABLE_TEST = 'common/reference/DISABLE_TEST';
+export const SET_NON_APPLICABLE_THEMES = 'common/reference/SET_NON_APPLICABLE_THEMES';
 
 
 
@@ -81,3 +82,14 @@ export const disableTest = (id) => ({
 		id
 	}
 });
+
+/**
+ *
+ */
+export const setNonApplicableThemes = (themeIds) => ({
+	type: SET_NON_APPLICABLE_THEMES,
+	payload: {
+		ids: themeIds
+	}
+});
+

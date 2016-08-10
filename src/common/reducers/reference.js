@@ -1,6 +1,9 @@
 import data from '../../../data/references/3';
 import {
-	SET_REFERENCE, ENABLE_TEST, DISABLE_TEST, SET_CURRENT_THEME, SET_CURRENT_CRITERION
+	SET_REFERENCE,
+	SET_CURRENT_THEME, SET_CURRENT_CRITERION,
+	SET_NON_APPLICABLE_THEMES
+	ENABLE_TEST, DISABLE_TEST
 } from '../actions/reference';
 import {getFirstTheme, getFirstCriterion} from '../api/reference';
 
@@ -13,7 +16,8 @@ export const initialState = {
 	data,
 	theme: getFirstTheme(data),
 	criterion: getFirstCriterion(getFirstTheme(data)),
-	tests: {}
+	tests: {},
+	inactiveThemeIds: []
 };
 
 /**
@@ -21,13 +25,6 @@ export const initialState = {
  */
 export default function reference(state = initialState, {type, payload}) {
 	switch (type) {
-		case SET_CURRENT_THEME:
-			return {
-				...state,
-				theme: payload.theme,
-				criterion: getFirstCriterion(payload.theme)
-			};
-
 		case SET_REFERENCE: {
 			const theme = getFirstTheme(payload.data);
 			return {
@@ -39,12 +36,24 @@ export default function reference(state = initialState, {type, payload}) {
 			};
 		}
 
+		case SET_CURRENT_THEME:
+			return {
+				...state,
+				theme: payload.theme,
+				criterion: getFirstCriterion(payload.theme)
+			};
+
 		case SET_CURRENT_CRITERION:
 			return {
 				...state,
 				criterion: payload.criterion
 			};
 
+		case SET_NON_APPLICABLE_THEMES:
+			return {
+				...state,
+				inactiveThemeIds: payload.ids
+			};
 		case ENABLE_TEST:
 			return {
 				...state,

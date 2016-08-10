@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {getThemes, getCurrentTheme} from '../../common/selectors/reference';
+import {getThemes, getInactiveThemes, getCurrentTheme} from '../../common/selectors/reference';
 import ThemesList from './ThemesList';
 
 
@@ -9,7 +9,8 @@ import ThemesList from './ThemesList';
  */
 const mapStateToProps = (state) => ({
 	themes: getThemes(state),
-	activeTheme: getCurrentTheme(state)
+	activeTheme: getCurrentTheme(state),
+	inactiveThemes: getInactiveThemes(state)
 });
 
 

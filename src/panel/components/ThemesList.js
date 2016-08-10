@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react';
+import {injectIntl, intlShape} from 'react-intl';
 import {Link} from 'react-router';
+import {includes} from 'lodash';
 import classNames from 'classnames';
 import Slyct from './Slyct';
 
@@ -22,26 +24,45 @@ const icons = {
 /**
  *
  */
-export default function ThemesList({themes, activeTheme}) {
-	const renderItems = (items) =>
-		items.map(({id, title}) => {
-			const className = classNames('ThemesList-item', {
-				'is-active': activeTheme.id === id
-			});
-			return (
-				<li className={className} key={id}>
-					<Link
-						className="InvisibleLink ThemesList-link"
-						to={`/themes/${id}`}
-						style={{
-							backgroundImage: `url('/img/${icons[id]}')`
-						}}
-					>
-						{title}
-					</Link>
-				</li>
+function ThemesList({themes, activeTheme, inactiveThemes, intl}) {
+	const renderTab = ({id, title}) => {
+		const isActive = activeTheme.id === id;
+		const isDisabled = includes(inactiveThemes, id);
+		const tabStyles = {backgroundImage: `url('/img/${icons[id]}')`};
+		const props = {};
+		if (isActive) {
+			// this lets Slyct to be a "controlled" component
+			props['data-slyct-active-item'] = '';
+		}
+		const listItem = (tab) => (
+			<li className="ThemesList-item" key={id} {...props}>
+				{tab}
+			</li>
+		);
+		// do not allow to click on item if it is disabled
+		if (isDisabled) {
+			return listItem(
+				<span
+					className="ThemesList-link is-disabled"
+					style={tabStyles}
+					title={intl.formatMessage({
+						id: 'ThemesList.item.disabled'
+					})}
+				>
+					{title}
+				</span>
 			);
-		});
+		}
+		return listItem(
+			<Link
+				className="InvisibleLink ThemesList-link"
+				to={`/themes/${id}`}
+				style={tabStyles}
+			>
+				{title}
+			</Link>
+		);
+	};
 
 	return (
 		<nav className="ThemesList">
@@ -57,7 +78,7 @@ export default function ThemesList({themes, activeTheme}) {
 						horizontal: true,
 						itemNav: 'basic',
 						smart: true,
-						activateOn: 'click',
+						activateOn: null,
 						mouseDragging: true,
 						touchDragging: true,
 						releaseSwing: 1,
@@ -69,7 +90,7 @@ export default function ThemesList({themes, activeTheme}) {
 					}}
 					rawData={themes}
 				>
-					{renderItems(themes)}
+					{themes.map(renderTab)}
 				</Slyct>
 			</div>
 			<button
@@ -84,5 +105,14 @@ export default function ThemesList({themes, activeTheme}) {
 
 ThemesList.propTypes = {
 	themes: PropTypes.array.isRequired,
-	activeTheme: PropTypes.object
+	activeTheme: PropTypes.object,
+	inactiveThemes: PropTypes.array,
+	intl: intlShape.isRequired
 };
+
+ThemesList.defaultProps = {
+	activeTheme: {},
+	inactiveThemes: []
+};
+
+export default injectIntl(ThemesList);
