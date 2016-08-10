@@ -11,82 +11,76 @@ const scrape = require('./scrape');
  *	to be generated.
  *
  *	Use it like that from the application root diretcory:
- *		bin/scrape-reference data/references/3-2016.json
+ *		bin/scrape-reference-3-2016 data/references/3-2016.json
  */
+const SOURCE = 'http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html';
+const DESTINATION = process.argv[2];
 
 
-
-/**
- *
- */
-const scrapeTest = ($) => (i, el) => {
-	const element = $(el);
-	const title = _.trim(element.html());
-	const idMatches = /^Test (\d+\.\d+\.\d+)/i.exec(title);
-
-	if (idMatches === null) {
-		return null;
-	}
-
-	const id = idMatches[1];
-
-	return {id, title};
-};
-
-/**
- *
- */
-const scrapeCriterion = ($) => (i, el) => {
-	const element = $(el);
-	const title = _.trim(element.find('h3').html());
-	const idMatches = /^Critère (\d+\.\d+)/i.exec(title);
-
-	if (idMatches === null) {
-		return null;
-	}
-
-	const id = idMatches[1];
-	const testElements = element.find('li[id^="test"]');
-	const tests = testElements.map(scrapeTest($)).get();
-
-	return {id, title, tests};
-};
-
-/**
- *
- */
-const scrapeTheme = ($) => (i, el) => {
-	const element = $(el);
-	const title = _.trim(element.find('h2').html());
-	const idMatches = /^(\d+)/i.exec(title);
-
-	if (idMatches === null) {
-		return null;
-	}
-
-	const id = idMatches[1];
-	const criterionElements = element.children('article');
-	const criteria = criterionElements.map(scrapeCriterion($)).get();
-
-	return {id, title, criteria};
-};
 
 /**
  *
  */
 const scrapeReference = (html) => {
+	const linkAnchors = scrape.linkAnchorsTo(SOURCE);
 	const $ = cheerio.load(html, {
 		normalizeWhitespace: true,
 		decodeEntities: false
 	});
 
-	const themeElements = $('main > section');
-	const themes = themeElements.map(scrapeTheme($)).get();
+	const scrapeTest = (i, el) => {
+		const element = $(el);
+		const title = linkAnchors(element.html().trim());
+		const idMatches = /^Test (\d+\.\d+\.\d+)/i.exec(title);
+
+		if (idMatches === null) {
+			return null;
+		}
+
+		const id = idMatches[1];
+
+		return {id, title};
+	};
+
+	const scrapeCriterion = (i, el) => {
+		const element = $(el);
+		const title = linkAnchors(element.find('h3').html().trim());
+		const idMatches = /^Critère (\d+\.\d+)/i.exec(title);
+
+		if (idMatches === null) {
+			return null;
+		}
+
+		const id = idMatches[1];
+		const testElements = element.find('li[id^="test"]');
+		const tests = testElements.map(scrapeTest).get();
+
+		return {id, title, tests};
+	};
+
+	const scrapeTheme = (i, el) => {
+		const element = $(el);
+		const title = linkAnchors(element.find('h2').html().trim());
+		const idMatches = /^(\d+)/i.exec(title);
+
+		if (idMatches === null) {
+			return null;
+		}
+
+		const id = idMatches[1];
+		const criterionElements = element.children('article');
+		const criteria = criterionElements.map(scrapeCriterion).get();
+
+		return {id, title, criteria};
+	};
+
+	const scrapeThemes = () =>
+		$('main > section').map(scrapeTheme).get();
 
 	return {
 		name: 'RGAA 3-2016',
 		version: '3-2016',
-		themes
+		themes: scrapeThemes()
 	};
 };
 
@@ -95,10 +89,7 @@ const scrapeReference = (html) => {
 /**
  *
  */
-const source = 'http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html';
-const destination = process.argv[2];
-
-scrape.fetchPage(source)
+scrape.fetchFrom(SOURCE)
 	.then(scrapeReference)
-	.then(scrape.writeJson(destination))
+	.then(scrape.writeJsonTo(DESTINATION))
 	.catch(scrape.logError);

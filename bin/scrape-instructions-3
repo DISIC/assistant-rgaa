@@ -13,73 +13,67 @@ const scrape = require('./scrape');
  *	Use it like that from the application root diretcory:
  *		bin/scrape-instructions-3 data/instructions/3.json
  */
+const SOURCE = 'http://disic.github.io/rgaa_methodologie';
+const DESTINATION = process.argv[2];
 
 
-
-/**
- *
- */
-const extractIds = (title) => {
-	const idsRx = /(\d+\.\d+\.\d+)/gi;
-	const ids = [];
-
-	while ((matches = idsRx.exec(title)) !== null) {
-		ids.push(matches[1]);
-	}
-
-	return ids;
-};
-
-/**
- *
- */
-const findInstructions = (element, className) => {
-	const ol = element
-		.filter(`.${className}`)
-		.children('ol');
-
-	return ol.length
-		? `<ol>${ol.html()}</ol>`
-		: null;
-}
-
-/**
- *
- */
-const scrapeTests = ($, el) => {
-	const element = $(el);
-	const text = _.trim(element.text());
-	const ids = extractIds(text);
-	const instructionElements = element.nextUntil('h4');
-	const instructions = {
-		wat: findInstructions(instructionElements, 'wat'),
-		webdev: findInstructions(instructionElements, 'webdev'),
-		validator: findInstructions(instructionElements, 'validate'),
-		all: findInstructions(instructionElements, 'all')
-	};
-
-	const filledInstructions = _.omitBy(instructions, _.isNull);
-
-	return _(ids)
-		.keyBy(_.identity)
-		.mapValues(_.constant(filledInstructions))
-		.value();
-};
 
 /**
  *
  */
 const scrapeInstructions = (html) => {
+	const linkAnchors = scrape.linkAnchorsTo(SOURCE);
 	const $ = cheerio.load(html, {
 		normalizeWhitespace: true,
 		decodeEntities: false
 	});
 
+	const extractIds = (title) => {
+		const idsRx = /(\d+\.\d+\.\d+)/gi;
+		const ids = [];
+
+		while ((matches = idsRx.exec(title)) !== null) {
+			ids.push(matches[1]);
+		}
+
+		return ids;
+	};
+
+	const findInstructions = (element, className) => {
+		const ol = element
+			.filter(`.${className}`)
+			.children('ol');
+
+		return ol.length
+			? `<ol>${linkAnchors(ol.html().trim())}</ol>`
+			: null;
+	};
+
+	const scrapeTests = (el) => {
+		const element = $(el);
+		const text = _.trim(element.text());
+		const ids = extractIds(text);
+		const instructionElements = element.nextUntil('h4');
+		const instructions = {
+			wat: findInstructions(instructionElements, 'wat'),
+			webdev: findInstructions(instructionElements, 'webdev'),
+			validator: findInstructions(instructionElements, 'validate'),
+			all: findInstructions(instructionElements, 'all')
+		};
+
+		const filledInstructions = _.omitBy(instructions, _.isNull);
+
+		return _(ids)
+			.keyBy(_.identity)
+			.mapValues(_.constant(filledInstructions))
+			.value();
+	};
+
 	const titles = $('main h4');
 	const tests = _.transform(
 		titles,
 		(tests, title) =>
-			_.merge(tests, scrapeTests($, title)),
+			_.merge(tests, scrapeTests(title)),
 		{}
 	);
 
@@ -91,10 +85,7 @@ const scrapeInstructions = (html) => {
 /**
  *
  */
-const source = 'http://disic.github.io/rgaa_methodologie';
-const destination = process.argv[2];
-
-scrape.fetchPage(source)
+scrape.fetchFrom(SOURCE)
 	.then(scrapeInstructions)
-	.then(scrape.writeJson(destination))
+	.then(scrape.writeJsonTo(DESTINATION))
 	.catch(scrape.logError);
