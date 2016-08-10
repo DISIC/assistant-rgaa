@@ -6,9 +6,9 @@ const _ = require('lodash');
 
 
 /**
- *	Scrapes a reference's HTML source into JSON.
  *	This scripts takes two arguments: the path to the HTML
  *	source, and the path to the JSON to be generated.
+ *	Scrapes the version 3 of the RGAA reference into JSON.
  *
  *	Use it like that from the application root diretcory:
  *		bin/scrape-reference data/references/3.html data/references/3.json
