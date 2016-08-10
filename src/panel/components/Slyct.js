@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {debounce, omit, get, toInteger, isEqual} from 'lodash';
+import {debounce, omit, get, toInteger, isEqual, find} from 'lodash';
 require('sly/dist/sly');
 
 
@@ -7,9 +7,11 @@ require('sly/dist/sly');
 /**
  *
  */
-export default class ReactSly extends Component {
+export default class Slyct extends Component {
 	componentDidMount() {
 		this.sly = new Sly(this.refs.sly, this.props.config); // eslint-disable-line no-undef
+
+		this.isControlled = this.sly.options.activateOn === null;
 
 		this.sly.on('load', this.recalculateWidth.bind(this));
 
@@ -19,6 +21,10 @@ export default class ReactSly extends Component {
 		window.addEventListener('resize', this.debouncedReload, true);
 
 		this.sly.init();
+
+		if (this.isControlled) {
+			this.activateControlledItem();
+		}
 	}
 
 	componentDidUpdate(prevProps) {
@@ -28,6 +34,10 @@ export default class ReactSly extends Component {
 
 		if (!isEqual(this.props.rawData, prevProps.rawData)) {
 			this.sly.reload();
+		}
+
+		if (this.isControlled) {
+			this.activateControlledItem();
 		}
 	}
 
@@ -42,6 +52,18 @@ export default class ReactSly extends Component {
 
 	getSlyInstance() {
 		return this.sly;
+	}
+
+	findControlledItem() {
+		const domNodes = this.sly.items.map(({el}) => el);
+		return find(domNodes, (node) => node.dataset.slyctActiveItem === '');
+	}
+
+	activateControlledItem() {
+		const activeItem = this.findControlledItem();
+		if (activeItem) {
+			this.sly.activate(activeItem);
+		}
 	}
 
 	/*
@@ -72,7 +94,7 @@ export default class ReactSly extends Component {
 	}
 }
 
-ReactSly.propTypes = {
+Slyct.propTypes = {
 	/**
 	 * react or dom elements to show in the sly frame
 	 */
@@ -87,6 +109,6 @@ ReactSly.propTypes = {
 	config: PropTypes.object
 };
 
-ReactSly.defaultProps = {
+Slyct.defaultProps = {
 	config: {}
 };

@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import classNames from 'classnames';
-import Sly from './Sly';
+import Slyct from './Slyct';
 
 
 
@@ -52,7 +52,7 @@ export default function ThemesList({themes, activeTheme}) {
 				&larr;
 			</button>
 			<div className="ThemesList-tabs">
-				<Sly
+				<Slyct
 					config={{
 						horizontal: true,
 						itemNav: 'basic',
@@ -70,7 +70,7 @@ export default function ThemesList({themes, activeTheme}) {
 					rawData={themes}
 				>
 					{renderItems(themes)}
-				</Sly>
+				</Slyct>
 			</div>
 			<button
 				type="button"
