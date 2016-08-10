@@ -1,0 +1,103 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const cheerio = require('cheerio');
+const _ = require('lodash');
+
+
+
+/**
+ *	Scrapes instructions' HTML source into JSON.
+ *	This scripts takes two arguments: the path to the HTML
+ *	source, and the path to the JSON to be generated.
+ *
+ *	Use it like that from the application root diretcory:
+ *		bin/scrape-instructions data/instructions/3.html data/instructions/3.json
+ */
+
+
+
+/**
+ *
+ */
+const extractIds = (title) => {
+	const idsRx = /(\d+\.\d+\.\d+)/gi;
+	const ids = [];
+
+	while ((matches = idsRx.exec(title)) !== null) {
+		ids.push(matches[1]);
+	}
+
+	return ids;
+};
+
+/**
+ *
+ */
+const findInstructions = (element, className) => {
+	const ol = element
+		.filter(`.${className}`)
+		.children('ol');
+
+	return ol.length
+		? `<ol>${ol.html()}</ol>`
+		: null;
+}
+
+/**
+ *
+ */
+const scrapeTests = ($, el) => {
+	const element = $(el);
+	const text = _.trim(element.text());
+	const ids = extractIds(text);
+	const instructionElements = element.nextUntil('h4');
+	const instructions = {
+		wat: findInstructions(instructionElements, 'wat'),
+		webdev: findInstructions(instructionElements, 'webdev'),
+		validator: findInstructions(instructionElements, 'validate'),
+		all: findInstructions(instructionElements, 'all')
+	};
+
+	const filledInstructions = _.omitBy(instructions, _.isNull);
+
+	return _(ids)
+		.keyBy(_.identity)
+		.mapValues(_.constant(filledInstructions))
+		.value();
+};
+
+/**
+ *
+ */
+const scrapeInstructions = (source, destination) => {
+	const html = fs.readFileSync(source, {
+		encoding: 'utf-8'
+	});
+
+	const $ = cheerio.load(html, {
+		normalizeWhitespace: true,
+		decodeEntities: false
+	});
+
+	const titles = $('main h4');
+	const tests = _.transform(
+		titles,
+		(tests, title) =>
+			_.merge(tests, scrapeTests($, title)),
+		{}
+	);
+
+	const json = JSON.stringify(tests, null, '\t');
+
+	fs.writeFileSync(destination, json);
+};
+
+
+
+/**
+ *
+ */
+scrapeInstructions(
+	process.argv[2],
+	process.argv[3]
+);
