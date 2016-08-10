@@ -1,0 +1,136 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const request = require('request');
+const cheerio = require('cheerio');
+const _ = require('lodash');
+
+
+
+/**
+ *	Scrapes the version 3-2016 of the RGAA reference into JSON.
+ *	This scripts takes one argument: the path to the JSON file
+ *	to be generated.
+ *
+ *	Use it like that from the application root diretcory:
+ *		bin/scrape-reference data/references/3-2016.json
+ */
+
+
+
+/**
+ *
+ */
+const scrapeTest = ($) => (i, el) => {
+	const element = $(el);
+	const title = _.trim(element.html());
+	const idMatches = /^Test (\d+\.\d+\.\d+)/i.exec(title);
+
+	if (idMatches === null) {
+		return null;
+	}
+
+	const id = idMatches[1];
+
+	return {id, title};
+};
+
+/**
+ *
+ */
+const scrapeCriterion = ($) => (i, el) => {
+	const element = $(el);
+	const title = _.trim(element.find('h3').html());
+	const idMatches = /^Critère (\d+\.\d+)/i.exec(title);
+
+	if (idMatches === null) {
+		return null;
+	}
+
+	const id = idMatches[1];
+	const testElements = element.find('li[id^="test"]');
+	const tests = testElements.map(scrapeTest($)).get();
+
+	return {id, title, tests};
+};
+
+/**
+ *
+ */
+const scrapeTheme = ($) => (i, el) => {
+	const element = $(el);
+	const title = _.trim(element.find('h2').html());
+	const idMatches = /^(\d+)/i.exec(title);
+
+	if (idMatches === null) {
+		return null;
+	}
+
+	const id = idMatches[1];
+	const criterionElements = element.children('article');
+	const criteria = criterionElements.map(scrapeCriterion($)).get();
+
+	return {id, title, criteria};
+};
+
+/**
+ *
+ */
+const scrapeReference = (html) => {
+	const $ = cheerio.load(html, {
+		normalizeWhitespace: true,
+		decodeEntities: false
+	});
+
+	const themeElements = $('main > section');
+	const themes = themeElements.map(scrapeTheme($)).get();
+
+	return {
+		name: 'RGAA 3-2016',
+		version: '3-2016',
+		themes
+	};
+};
+
+/**
+ *
+ */
+const fetchReference = (url) =>
+	new Promise((resolve, reject) =>
+		request(url, (error, response, body) => {
+			if (error) {
+				resolve(body);
+			}
+
+			if (response.statusCode !== 200) {
+				reject(`Error ${response.statusCode}`);
+			}
+
+			resolve(body);
+		})
+	);
+
+/**
+ *
+ */
+const writeReference = (destination) => (reference) =>
+	fs.writeFileSync(
+		destination,
+		JSON.stringify(
+			reference,
+			null,
+			'\t'
+		)
+	);
+
+
+
+/**
+ *
+ */
+const source = 'http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html';
+const destination = process.argv[2];
+
+fetchReference(source)
+	.then(scrapeReference)
+	.then(writeReference(destination))
+	.catch(console.log.bind(console));
