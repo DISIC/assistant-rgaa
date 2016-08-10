@@ -6,12 +6,12 @@ const scrape = require('./scrape');
 
 
 /**
- *	Scrapes instructions' HTML source into JSON.
- *	This scripts takes two arguments: the path to the HTML
- *	source, and the path to the JSON to be generated.
+ *	Scrapes version 3 of the RGAA instructions into JSON.
+ *	This scripts takes one arguments: the path to the JSON file
+ *	to be generated.
  *
  *	Use it like that from the application root diretcory:
- *		bin/scrape-instructions data/instructions/3.html data/instructions/3.json
+ *		bin/scrape-instructions-3 data/instructions/3.json
  */
 
 
