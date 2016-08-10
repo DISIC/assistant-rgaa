@@ -9,7 +9,12 @@ import TestContainer from './TestContainer';
 export default function Criterion({id, title, tests}) {
 	return (
 		<div id={`criterion-${id}`} className="Criterion">
-			<h1 className="Criterion-title">{title}</h1>
+			<h1
+				className="Criterion-title"
+				dangerouslySetInnerHTML={{
+					__html: title
+				}}
+			/>
 
 			<ul className="Criterion-tests">
 				{tests.map(({id: testId, title: testTitle}) =>
