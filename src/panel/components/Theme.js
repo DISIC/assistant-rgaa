@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {injectIntl, intlShape} from 'react-intl';
 import {map, get} from 'lodash';
+import classNames from 'classnames';
 import CriterionContainer from './CriterionContainer';
 import SelectField from './SelectField';
 
@@ -9,10 +10,12 @@ import SelectField from './SelectField';
 /**
  *
  */
-function Theme({currentReference, currentTheme, currentCriterion, onCriterionSelect, intl}) {
-	const criteriaOptions = map(currentTheme.criteria, ({id: cId = '', title: cTitle = ''}) => ({
-		value: cId,
-		text: cTitle
+function Theme({
+	currentReference, currentTheme, currentCriterion, isInactive, onCriterionSelect, intl
+}) {
+	const criteriaOptions = map(currentTheme.criteria, ({id = '', title = ''}) => ({
+		value: id,
+		text: title
 	}));
 
 	const focusCriterion = (criterionId) => {
@@ -24,9 +27,15 @@ function Theme({currentReference, currentTheme, currentCriterion, onCriterionSel
 		onCriterionSelect(criterionId, currentReference);
 	};
 
-	return (
-		<div className="Theme">
+	const className = classNames('Theme', {
+		'is-disabled': isInactive
+	});
+	const title = isInactive
+		? intl.formatMessage({id: 'Theme.disabled'})
+		: '';
 
+	return (
+		<div className={className} title={title}>
 			<header className="Theme-header">
 				<h1 className="Theme-title">{currentTheme.title}</h1>
 
@@ -66,11 +75,13 @@ Theme.propTypes = {
 	currentReference: PropTypes.object.isRequired,
 	currentTheme: PropTypes.object,
 	currentCriterion: PropTypes.object,
+	isInactive: PropTypes.bool,
 	onCriterionSelect: PropTypes.func.isRequired,
 	intl: intlShape.isRequired
 };
 
 Theme.defaultProps = {
+	isInactive: false
 };
 
 export default injectIntl(Theme);

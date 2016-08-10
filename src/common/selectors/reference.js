@@ -1,4 +1,6 @@
-import {chain, property, map, flatten, difference, values, intersection} from 'lodash';
+import {
+	chain, property, map, flatten, difference, values, intersection, includes, get}
+from 'lodash';
 import {
 	getInactiveCriterionIdsByTheme,
 	getInactiveCriterionIds as getImportInactiveCriterionIds,
@@ -65,6 +67,12 @@ export const getCurrentTheme = property('reference.theme');
 /**
  *
  */
+/*
+ *
+ */
+export const isCurrentThemeInactive = (state) =>
+	includes(getInactiveThemes(state), get(getCurrentTheme(state), 'id', null));
+
 export const getCurrent = property('reference.data');
 
 /**

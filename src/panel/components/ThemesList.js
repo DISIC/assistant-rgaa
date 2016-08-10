@@ -46,7 +46,7 @@ function ThemesList({themes, activeTheme, inactiveThemes, intl}) {
 					className="ThemesList-link is-disabled"
 					style={tabStyles}
 					title={intl.formatMessage({
-						id: 'ThemesList.item.disabled'
+						id: 'Theme.disabled'
 					})}
 				>
 					{title}

@@ -2,16 +2,20 @@ import {connect} from 'react-redux';
 import Theme from './Theme';
 import {setCurrentCriterion} from '../../common/actions/reference';
 import {getCriterion} from '../../common/api/reference';
+import {
+	getCurrent, getCurrentTheme, getCurrentCriterion, isCurrentThemeInactive
+} from '../../common/selectors/reference';
 
 
 
 /**
  *
  */
-const mapStateToProps = ({reference}) => ({
-	currentReference: reference.data,
-	currentTheme: reference.theme,
-	currentCriterion: reference.criterion
+const mapStateToProps = (state) => ({
+	currentReference: getCurrent(state),
+	currentTheme: getCurrentTheme(state),
+	currentCriterion: getCurrentCriterion(state),
+	isInactive: isCurrentThemeInactive(state)
 });
 
 /**

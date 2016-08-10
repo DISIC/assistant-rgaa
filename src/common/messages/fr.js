@@ -5,6 +5,8 @@ const messages = {
 	'Header.title': 'Panel d\'outils RGAA',
 	'Header.options': 'Options',
 	'Header.import': 'Import',
+	'Theme.disabled': `Cette thématique a été désactivée lors de l\'import
+		car tous ses critères sont notés "non applicable".`,
 	'Theme.criterion.select.label': 'Aller au critère : ',
 	'Theme.criterion.select.emptyOption': 'Choisissez un critère',
 	'Test.apply.check.title': 'Appliquer les CSS et JS liés au test',
