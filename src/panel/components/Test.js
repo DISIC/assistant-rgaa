@@ -20,20 +20,21 @@ function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
 	const applyImage = applied ? 'cross.png' : 'magnifier-zoom.png';
 	const applyTranslateKey = applied ? 'uncheck' : 'check';
 
-	const titlePattern = /^(Test \d+\.\d+\.\d+)\s?:\s?(.*)$/;
-	const matchPattern = title.match(titlePattern);
-
-	const titleEl = matchPattern
-		? (<h2 className="Test-title">
-			<span className="Test-id">{matchPattern[1]}</span>
-			<span className="Test-description">{matchPattern[2]}</span>
-		</h2>)
-		: <h2 className="Test-title">{title}</h2>;
+	const htmlTitle = title.replace(
+		/^(Test \d+\.\d+\.\d+)(\s?:\s?)(.*)$/i,
+		'<span class="Test-id">$1</span>$2<span class="Test-description">$3</span>'
+	);
 
 	return (
 		<article className="Test">
 			<header className="Test-header">
-				{titleEl}
+				<h2 className="Test-title">
+					<div
+						dangerouslySetInnerHTML={{
+							__html: htmlTitle
+						}}
+					/>
+				</h2>
 
 				<div className="Test-actions">
 					<div className="Test-action Test-action---apply">
