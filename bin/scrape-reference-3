@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 const fs = require('fs');
+const request = require('request');
 const cheerio = require('cheerio');
 const _ = require('lodash');
 
 
 
 /**
- *	This scripts takes two arguments: the path to the HTML
- *	source, and the path to the JSON to be generated.
  *	Scrapes the version 3 of the RGAA reference into JSON.
+ *	This scripts takes one argument: the path to the JSON file
+ *	to be generated.
  *
  *	Use it like that from the application root diretcory:
- *		bin/scrape-reference data/references/3.html data/references/3.json
+ *		bin/scrape-reference data/references/3.json
  */
 
 
@@ -76,11 +77,7 @@ const scrapeTheme = ($) => (i, el) => {
 /**
  *
  */
-const scrapeReference = (source, destination) => {
-	const html = fs.readFileSync(source, {
-		encoding: 'utf-8'
-	});
-
+const scrapeReference = (html) => {
 	const $ = cheerio.load(html, {
 		normalizeWhitespace: true,
 		decodeEntities: false
@@ -93,23 +90,53 @@ const scrapeReference = (source, destination) => {
 
 	const themes = themeElements.map(scrapeTheme($)).get();
 
-	const reference = {
+	return {
 		name: 'RGAA 3',
 		version: '3',
 		themes
 	};
-
-	const json = JSON.stringify(reference, null, '\t');
-
-	fs.writeFileSync(destination, json);
 };
+
+/**
+ *
+ */
+const fetchReference = (url) =>
+	new Promise((resolve, reject) =>
+		request(url, (error, response, body) => {
+			if (error) {
+				resolve(body);
+			}
+
+			if (response.statusCode !== 200) {
+				reject(`Error ${response.statusCode}`);
+			}
+
+			resolve(body);
+		})
+	);
+
+/**
+ *
+ */
+const writeReference = (destination) => (reference) =>
+	fs.writeFileSync(
+		destination,
+		JSON.stringify(
+			reference,
+			null,
+			'\t'
+		)
+	);
 
 
 
 /**
  *
  */
-scrapeReference(
-	process.argv[2],
-	process.argv[3]
-);
+const source = 'http://references.modernisation.gouv.fr/rgaa-accessibilite/3.0';
+const destination = process.argv[2];
+
+fetchReference(source)
+	.then(scrapeReference)
+	.then(writeReference(destination))
+	.catch(console.log.bind(console));
