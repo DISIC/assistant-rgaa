@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const request = require('request');
-const cheerio = require('cheerio');
 const _ = require('lodash');
+const cheerio = require('cheerio');
+const scrape = require('./scrape');
 
 
 
@@ -91,37 +90,6 @@ const scrapeReference = (html) => {
 	};
 };
 
-/**
- *
- */
-const fetchReference = (url) =>
-	new Promise((resolve, reject) =>
-		request(url, (error, response, body) => {
-			if (error) {
-				resolve(body);
-			}
-
-			if (response.statusCode !== 200) {
-				reject(`Error ${response.statusCode}`);
-			}
-
-			resolve(body);
-		})
-	);
-
-/**
- *
- */
-const writeReference = (destination) => (reference) =>
-	fs.writeFileSync(
-		destination,
-		JSON.stringify(
-			reference,
-			null,
-			'\t'
-		)
-	);
-
 
 
 /**
@@ -130,7 +98,7 @@ const writeReference = (destination) => (reference) =>
 const source = 'http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html';
 const destination = process.argv[2];
 
-fetchReference(source)
+scrape.fetchPage(source)
 	.then(scrapeReference)
-	.then(writeReference(destination))
-	.catch(console.log.bind(console));
+	.then(scrape.writeJson(destination))
+	.catch(scrape.logError);

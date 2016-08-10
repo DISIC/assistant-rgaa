@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const cheerio = require('cheerio');
 const _ = require('lodash');
+const cheerio = require('cheerio');
+const scrape = require('./scrape');
 
 
 
@@ -69,11 +69,7 @@ const scrapeTests = ($, el) => {
 /**
  *
  */
-const scrapeInstructions = (source, destination) => {
-	const html = fs.readFileSync(source, {
-		encoding: 'utf-8'
-	});
-
+const scrapeInstructions = (html) => {
 	const $ = cheerio.load(html, {
 		normalizeWhitespace: true,
 		decodeEntities: false
@@ -87,9 +83,7 @@ const scrapeInstructions = (source, destination) => {
 		{}
 	);
 
-	const json = JSON.stringify(tests, null, '\t');
-
-	fs.writeFileSync(destination, json);
+	return tests;
 };
 
 
@@ -97,7 +91,10 @@ const scrapeInstructions = (source, destination) => {
 /**
  *
  */
-scrapeInstructions(
-	process.argv[2],
-	process.argv[3]
-);
+const source = 'http://disic.github.io/rgaa_methodologie';
+const destination = process.argv[2];
+
+scrape.fetchPage(source)
+	.then(scrapeInstructions)
+	.then(scrape.writeJson(destination))
+	.catch(scrape.logError);
