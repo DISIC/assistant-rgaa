@@ -4,6 +4,17 @@ import {getReference} from '../../common/api/reference';
 
 
 
+/*
+ *
+ */
+export const VALID = 'c';
+export const INVALID = 'nc';
+export const NON_APPLICABLE = 'na';
+export const NON_TESTABLE = 'nt';
+
+/*
+ *
+ */
 export const validateImportContent = (content) => {
 	const reference = getReference(getReferenceVersion(content));
 	if (!reference) {
@@ -26,5 +37,8 @@ export const validateJson = (jsonObject) => {
 	return true;
 };
 
+/*
+ *
+ */
 export const getReferenceVersion = (importContent) =>
 	importContent['version-referentiel'] || null;
