@@ -22,6 +22,11 @@ export const getInactiveThemes = property('reference.inactiveThemeIds');
 /**
  *
  */
+export const getInactiveCriterion = property('reference.inactiveCriterionIds');
+
+/**
+ *
+ */
 export const getCriterionIdsByTheme = (state) => {
 	const data = {};
 	state.reference.data.themes.forEach(({id, criteria}) => {
@@ -67,12 +72,23 @@ export const getCurrentTheme = property('reference.theme');
 /**
  *
  */
+export const getCurrentCriterion = property('reference.criterion');
+
 /*
  *
  */
 export const isCurrentThemeInactive = (state) =>
 	includes(getInactiveThemes(state), get(getCurrentTheme(state), 'id', null));
 
+/*
+ *
+ */
+export const isCriterionInactive = (state, id) =>
+	includes(getInactiveCriterion(state), id);
+
+/**
+ *
+ */
 export const getCurrent = property('reference.data');
 
 /**

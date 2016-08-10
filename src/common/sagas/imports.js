@@ -6,7 +6,7 @@ import {
 	getInactiveThemeIds, getInactiveCriterionIds, getTestResults
 } from '../selectors/reference';
 import {
-	setReferenceVersion, setNonApplicableThemes
+	setReferenceVersion, setNonApplicableThemes, setNonApplicableCriteria, setTestsResults
 } from '../actions/reference';
 
 
@@ -24,6 +24,8 @@ function* applyWorker() {
 		const testResults = yield select(getTestResults);
 
 		yield put(setNonApplicableThemes(inactiveThemes));
+		yield put(setNonApplicableCriteria(inactiveCriteria));
+		yield put(setTestsResults(testResults));
 	}
 }
 

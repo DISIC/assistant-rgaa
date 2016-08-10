@@ -9,6 +9,8 @@ export const SET_CURRENT_CRITERION = 'common/reference/SET_CURRENT_CRITERION';
 export const ENABLE_TEST = 'common/reference/ENABLE_TEST';
 export const DISABLE_TEST = 'common/reference/DISABLE_TEST';
 export const SET_NON_APPLICABLE_THEMES = 'common/reference/SET_NON_APPLICABLE_THEMES';
+export const SET_NON_APPLICABLE_CRITERIA = 'common/reference/SET_NON_APPLICABLE_CRITERIA';
+export const SET_TESTS_RESULTS = 'common/reference/SET_TESTS_RESULTS';
 
 
 
@@ -93,3 +95,22 @@ export const setNonApplicableThemes = (themeIds) => ({
 	}
 });
 
+/**
+ *
+ */
+export const setNonApplicableCriteria = (criterionIds) => ({
+	type: SET_NON_APPLICABLE_CRITERIA,
+	payload: {
+		ids: criterionIds
+	}
+});
+
+/**
+ *
+ */
+export const setTestsResults = (testResults) => ({
+	type: SET_TESTS_RESULTS,
+	payload: {
+		data: testResults
+	}
+});

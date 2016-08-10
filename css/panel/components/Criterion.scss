@@ -9,6 +9,18 @@
 	}
 }
 
+.Criterion.is-disabled {
+	opacity: 0.4;
+	cursor: help;
+}
+
+.Criterion.is-disabled a,
+.Criterion.is-disabled button,
+.Criterion.is-disabled input,
+.Criterion.is-disabled label {
+	pointer-events: none;
+}
+
 .Criterion-test:nth-child(even) {
 	background: rgba($color-mariner, 0.05);
 }
