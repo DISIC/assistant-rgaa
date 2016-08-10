@@ -1,0 +1,115 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const cheerio = require('cheerio');
+const _ = require('lodash');
+
+
+
+/**
+ *	Scrapes a reference's HTML source into JSON.
+ *	This scripts takes two arguments: the path to the HTML
+ *	source, and the path to the JSON to be generated.
+ *
+ *	Use it like that from the application root diretcory:
+ *		bin/scrape-reference data/references/3.html data/references/3.json
+ */
+
+
+
+/**
+ *
+ */
+const scrapeTest = ($) => (i, el) => {
+	const element = $(el);
+	const title = _.trim(element.html());
+	const idMatches = /^Test (\d+\.\d+\.\d+)/i.exec(title);
+
+	if (idMatches === null) {
+		return null;
+	}
+
+	const id = idMatches[1];
+
+	return {id, title};
+};
+
+/**
+ *
+ */
+const scrapeCriterion = ($) => (i, el) => {
+	const element = $(el);
+	const title = _.trim(element.find('h5').html());
+	const idMatches = /^Critère (\d+\.\d+)/i.exec(title);
+
+	if (idMatches === null) {
+		return null;
+	}
+
+	const id = idMatches[1];
+	const testElements = element.find('.rte > ul > li');
+	const tests = testElements.map(scrapeTest($)).get();
+
+	return {id, title, tests};
+};
+
+/**
+ *
+ */
+const scrapeTheme = ($) => (i, el) => {
+	const element = $(el);
+	const fullTitle = _.trim(element.find('h4').html());
+	const title = fullTitle.replace(/^(\d+\.\d+\.)/i, '');
+	const idMatches = /^(\d+)/i.exec(title);
+
+	if (idMatches === null) {
+		return null;
+	}
+
+	const id = idMatches[1];
+	const criterionStopSelector = 'article:not([id^="critre-' + id + '"])';
+	const criterionElements = element.nextUntil(criterionStopSelector);
+	const criteria = criterionElements.map(scrapeCriterion($)).get();
+
+	return {id, title, criteria};
+};
+
+/**
+ *
+ */
+const scrapeReference = (source, destination) => {
+	const html = fs.readFileSync(source, {
+		encoding: 'utf-8'
+	});
+
+	const $ = cheerio.load(html, {
+		normalizeWhitespace: true,
+		decodeEntities: false
+	});
+
+	const themeRx = /^12\d+-[a-z]+/i;
+	const themeElements = $('article').filter((i, el) =>
+		themeRx.test($(el).attr('id'))
+	);
+
+	const themes = themeElements.map(scrapeTheme($)).get();
+
+	const reference = {
+		name: 'RGAA 3',
+		version: '3',
+		themes
+	};
+
+	const json = JSON.stringify(reference, null, '\t');
+
+	fs.writeFileSync(destination, json);
+};
+
+
+
+/**
+ *
+ */
+scrapeReference(
+	process.argv[2],
+	process.argv[3]
+);
