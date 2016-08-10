@@ -28,13 +28,12 @@ function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
 	return (
 		<article className="Test">
 			<header className="Test-header">
-				<h2 className="Test-title">
-					<div
-						dangerouslySetInnerHTML={{
-							__html: htmlTitle
-						}}
-					/>
-				</h2>
+				<h2
+					className="Test-title"
+					dangerouslySetInnerHTML={{
+						__html: htmlTitle
+					}}
+				/>
 
 				<div className="Test-actions">
 					<div className="Test-action Test-action---apply">
