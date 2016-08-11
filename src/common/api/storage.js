@@ -1,9 +1,11 @@
-import {keys, noop} from 'lodash';
+import {keys, noop, filter, startsWith} from 'lodash';
+import {keyPrefix} from 'redux-persist/constants';
 
 
 
 const Storage = chrome.storage.local;
 const Runtime = chrome.runtime;
+const persistPrefix = keyPrefix;
 
 
 
@@ -56,10 +58,24 @@ const getAllKeys = (callback = noop) =>
 		});
 	});
 
+/*
+ * this is made to get around the fact that redux-persist `purgeAll`
+ * doesn't tell us when it is finished. So we'll want to `purgeAll`
+ * "by hand"
+ */
+const removeAllWithPrefix = (prefix) =>
+	getAllKeys().then(allKeys =>
+		filter(allKeys, (key) => startsWith(key, prefix))
+	).then(filteredKeys => {
+		const promises = filteredKeys.map((key) => removeItem(key));
+		return Promise.all(promises);
+	});
 
 export default {
 	getItem,
 	setItem,
 	removeItem,
-	getAllKeys
+	getAllKeys,
+	removeAllWithPrefix,
+	persistPrefix
 };

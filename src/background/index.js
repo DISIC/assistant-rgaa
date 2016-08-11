@@ -1,6 +1,7 @@
 import store, {persistor} from './store';
 import {create} from './api/windows';
 import {fetchCurrentTab, sendToContent} from './api/tabs';
+import storage from '../common/api/storage';
 import {get as getOption} from '../common/api/options';
 import {setReferenceVersion} from '../common/actions/reference';
 import {setCurrent as setCurrentTab} from '../common/actions/tabs';
@@ -53,16 +54,18 @@ chrome.runtime.onMessage.addListener((message) =>
  *	when one clicks the extension icon in the browser UI.
  */
 chrome.browserAction.onClicked.addListener(() => {
+	let tab;
 	fetchCurrentTab().then((tabId) => {
+		tab = tabId;
 		// empty cached store from chrome storage to have some sort of "session storage"
-		persistor.purgeAll();
-
+		return storage.removeAllWithPrefix(storage.persistPrefix);
+	}).then(() => {
 		// restore reference from options if we want to open the panel
 		if (!isOpen(store.getState())) {
 			restoreReference();
 		}
 
-		store.dispatch(setCurrentTab(tabId));
+		store.dispatch(setCurrentTab(tab));
 		store.dispatch(toggle());
 	});
 });
