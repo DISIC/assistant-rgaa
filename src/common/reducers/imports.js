@@ -1,7 +1,7 @@
 import {
 	OPEN_MODAL, CLOSE_MODAL,
 	RESET,
-	SET_ERRORS, SET_CONTENT,
+	SET_ERRORS, SET_CONTENT, SET_PENDING,
 	SET_NON_APPLICABLE_THEMES, SET_NON_APPLICABLE_CRITERIA, SET_TESTS_RESULTS
 } from '../actions/imports';
 
@@ -16,6 +16,7 @@ const initialState = {
 	},
 	errors: '',
 	content: null,
+	pending: false,
 	inactiveThemeIds: [],
 	inactiveCriterionIds: [],
 	testResults: {}
@@ -48,7 +49,8 @@ export default function imports(state = initialState, {type, payload}) {
 			return {
 				...state,
 				errors: '',
-				content: null
+				content: null,
+				pending: false
 			};
 
 		case SET_ERRORS:
@@ -62,7 +64,14 @@ export default function imports(state = initialState, {type, payload}) {
 			return {
 				...state,
 				content: payload.content,
+				pending: false,
 				errors: ''
+			};
+
+		case SET_PENDING:
+			return {
+				...state,
+				pending: payload.pending
 			};
 
 		case SET_NON_APPLICABLE_THEMES:

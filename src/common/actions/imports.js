@@ -4,6 +4,7 @@
 export const OPEN_MODAL = 'common/imports/OPEN_MODAL';
 export const CLOSE_MODAL = 'common/imports/CLOSE_MODAL';
 export const RESET = 'common/imports/RESET';
+export const SET_PENDING = 'common/imports/SET_PENDING';
 export const SET_CONTENT = 'common/imports/SET_CONTENT';
 export const SET_ERRORS = 'common/imports/SET_ERRORS';
 export const APPLY = 'common/imports/APPLY';
@@ -43,6 +44,16 @@ export const setContent = (content) => ({
 	type: SET_CONTENT,
 	payload: {
 		content
+	}
+});
+
+/**
+ *
+ */
+export const setPending = (pending) => ({
+	type: SET_PENDING,
+	payload: {
+		pending
 	}
 });
 

@@ -9,7 +9,7 @@ import renderIf from 'render-if';
  *
  */
 function ImportModal({
-	valid, errors, open, importVersion, globalVersion, onClose, onFileSelection, onSubmit
+	pending, valid, errors, open, importVersion, globalVersion, onClose, onFileSelection, onSubmit
 }) {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -57,12 +57,12 @@ function ImportModal({
 						value=""
 					/>
 
-					{renderIf(valid === true)(
+					{renderIf(valid)(
 						<p className="rgaaExt-ImportModal-success">
 							<FormattedMessage id="Import.success" />
 						</p>
 					)}
-					{renderIf(valid === true && importVersion !== globalVersion)(
+					{renderIf(valid && importVersion !== globalVersion)(
 						<p className="rgaaExt-ImportModal-warning">
 							<FormattedHTMLMessage
 								id="Import.versionDifference"
@@ -72,7 +72,7 @@ function ImportModal({
 							/>
 						</p>
 					)}
-					{renderIf(valid === false)([
+					{renderIf(pending && !valid)([
 						(<p key="failure" className="rgaaExt-ImportModal-failure">
 							<FormattedMessage id="Import.failure" />
 						</p>),
@@ -100,16 +100,18 @@ function ImportModal({
 
 ImportModal.propTypes = {
 	open: PropTypes.bool.isRequired,
+	importVersion: PropTypes.string,
+	globalVersion: PropTypes.string.isRequired,
 	onClose: PropTypes.func.isRequired,
 	onFileSelection: PropTypes.func.isRequired,
 	onSubmit: PropTypes.func.isRequired,
-	errors: PropTypes.string,
-	valid: PropTypes.bool
+	errors: PropTypes.string.isRequired,
+	valid: PropTypes.bool.isRequired,
+	pending: PropTypes.bool.isRequired
 };
 
 ImportModal.defaultProps = {
-	errors: '',
-	valid: null
+	importVersion: ''
 };
 
 export default injectIntl(ImportModal);

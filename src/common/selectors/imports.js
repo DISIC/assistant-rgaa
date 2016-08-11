@@ -10,16 +10,6 @@ import {findCriterionIdsByTheme, findCriterionIds, findTestIds} from './referenc
 /**
  *
  */
-export const isModalOpen = property('imports.modal.open');
-
-/**
- *
- */
-export const getErrors = property('imports.errors');
-
-/**
- *
- */
 export const getContent = property('imports.content');
 
 /**
@@ -27,6 +17,11 @@ export const getContent = property('imports.content');
  */
 export const getVersion = (state) =>
 	get(state.imports, 'content.version-referentiel', null);
+
+/**
+ *
+ */
+export const getErrors = property('imports.errors');
 
 /**
  *
@@ -43,6 +38,11 @@ export const getInactiveCriterionIds = property('imports.inactiveCriterionIds');
  */
 export const getTestResults = property('imports.testResults');
 
+/**
+ *
+ */
+export const isPending = property('imports.pending');
+
 /*
  *
  */
@@ -57,13 +57,14 @@ export const isCriterionInactive = (state, id) =>
 
 /**
  * check if the current import is valid
- *
- * returns null is there is no current import / bool otherwise
  */
 export const isValid = (state) =>
-	state.imports.content === null && state.imports.errors === ''
-		? null
-		: state.imports.content !== null && state.imports.errors === '';
+	state.imports.content !== null && state.imports.errors === '';
+
+/**
+ *
+ */
+export const isModalOpen = property('imports.modal.open');
 
 /**
  *
