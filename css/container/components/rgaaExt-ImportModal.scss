@@ -27,7 +27,7 @@
 
 .rgaaExt-ImportModal-container * {
 	font-family: $font-sans-serif !important;
-	font-size: 1rem !important;
+	font-size: $base-font-size !important;
 }
 
 .rgaaExt-ImportModal-title {
@@ -35,7 +35,7 @@
 	color: $color-white !important;
 	padding: $base-line-height !important;
 	margin: 0 !important;
-	font-size: 1rem !important;
+	font-size: $base-font-size !important;
 }
 
 .rgaaExt-ImportModal-content {
