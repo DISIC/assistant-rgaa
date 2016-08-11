@@ -7,7 +7,14 @@ import DockMenuContainer from './DockMenuContainer';
 /**
  *
  */
-function Header({onOptionsClick, onImportClick}) {
+function Header({isImportActive, onOptionsClick, onStartImportClick, onResetImportClick}) {
+	const onImportButtonClick = isImportActive
+		? onResetImportClick
+		: onStartImportClick;
+	const importButtonText = isImportActive
+		? 'Header.import.reset'
+		: 'Header.import.start';
+
 	return (
 		<header className="Header">
 			<h1 className="Header-title">
@@ -19,10 +26,10 @@ function Header({onOptionsClick, onImportClick}) {
 
 				<button
 					type="button"
-					onClick={onImportClick}
+					onClick={onImportButtonClick}
 					className="Link"
 				>
-					<FormattedMessage id="Header.import" />
+					<FormattedMessage id={importButtonText} />
 				</button>
 
 				<button
@@ -38,8 +45,10 @@ function Header({onOptionsClick, onImportClick}) {
 }
 
 Header.propTypes = {
+	isImportActive: PropTypes.bool.isRequired,
 	onOptionsClick: PropTypes.func.isRequired,
-	onImportClick: PropTypes.func.isRequired
+	onStartImportClick: PropTypes.func.isRequired,
+	onResetImportClick: PropTypes.func.isRequired
 };
 
 export default injectIntl(Header);

@@ -47,6 +47,11 @@ export const getOneTestResult = (state, id) =>
 /**
  *
  */
+export const isImportActive = (state) => !!state.imports.content;
+
+/**
+ *
+ */
 export const isPending = property('imports.pending');
 
 /*

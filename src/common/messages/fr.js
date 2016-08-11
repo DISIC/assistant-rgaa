@@ -4,7 +4,8 @@
 const messages = {
 	'Header.title': 'Panel d\'outils RGAA',
 	'Header.options': 'Options',
-	'Header.import': 'Import',
+	'Header.import.start': 'Import',
+	'Header.import.reset': 'Réinitialiser l\'import',
 	'Theme.disabled': `Cette thématique a été désactivée lors de l\'import
 		car tous ses critères sont notés "non applicable".`,
 	'Theme.criterion.disabled': `Ce critère et ses tests ont été désactivés lors de l\'import

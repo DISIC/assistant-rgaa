@@ -3,7 +3,8 @@
  */
 export const OPEN_MODAL = 'common/imports/OPEN_MODAL';
 export const CLOSE_MODAL = 'common/imports/CLOSE_MODAL';
-export const RESET = 'common/imports/RESET';
+export const RESET_RESULTS = 'common/imports/RESET_RESULTS';
+export const RESET_MODAL_CONTENT = 'common/imports/RESET_MODAL_CONTENT';
 export const SET_PENDING = 'common/imports/SET_PENDING';
 export const SET_CONTENT = 'common/imports/SET_CONTENT';
 export const SET_ERRORS = 'common/imports/SET_ERRORS';
@@ -32,8 +33,16 @@ export const closeModal = () => ({
 /**
  *
  */
-export const reset = () => ({
-	type: RESET,
+export const resetResults = () => ({
+	type: RESET_RESULTS,
+	payload: {}
+});
+
+/**
+ *
+ */
+export const resetModalContent = () => ({
+	type: RESET_MODAL_CONTENT,
 	payload: {}
 });
 

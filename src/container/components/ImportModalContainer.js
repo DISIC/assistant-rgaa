@@ -4,7 +4,7 @@ import {
 } from '../../common/selectors/imports';
 import {getVersion as getReferenceVersion} from '../../common/selectors/reference';
 import {
-	closeModal, setErrors, setContent, setPending, reset, apply
+	closeModal, setErrors, setContent, setPending, resetModalContent, apply
 } from '../../common/actions/imports';
 import ImportModal from './ImportModal';
 import {validateImportContent} from '../../common/api/imports';
@@ -28,7 +28,7 @@ const mapStateToProps = (state) => ({
  */
 const mapDispatchToProps = (dispatch) => ({
 	onClose() {
-		dispatch(reset());
+		dispatch(resetModalContent());
 		dispatch(closeModal());
 	},
 

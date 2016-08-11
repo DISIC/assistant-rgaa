@@ -1,6 +1,6 @@
 import {
 	OPEN_MODAL, CLOSE_MODAL,
-	RESET,
+	RESET_MODAL_CONTENT, RESET_RESULTS,
 	SET_ERRORS, SET_CONTENT, SET_PENDING,
 	SET_NON_APPLICABLE_THEMES, SET_NON_APPLICABLE_CRITERIA, SET_TESTS_RESULTS
 } from '../actions/imports';
@@ -45,7 +45,7 @@ export default function imports(state = initialState, {type, payload}) {
 				}
 			};
 
-		case RESET:
+		case RESET_MODAL_CONTENT:
 			return {
 				...state,
 				errors: '',
@@ -90,6 +90,17 @@ export default function imports(state = initialState, {type, payload}) {
 			return {
 				...state,
 				testResults: payload.data
+			};
+
+		case RESET_RESULTS:
+			return {
+				...state,
+				errors: '',
+				content: null,
+				pending: false,
+				inactiveThemeIds: [],
+				inactiveCriterionIds: [],
+				testResults: {}
 			};
 
 		default:
