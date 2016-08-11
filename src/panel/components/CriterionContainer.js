@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import Criterion from './Criterion';
-import {isCriterionInactive} from '../../common/selectors/reference';
+import {isCriterionInactive} from '../../common/selectors/imports';
 
 
 /**

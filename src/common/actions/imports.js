@@ -7,7 +7,9 @@ export const RESET = 'common/imports/RESET';
 export const SET_CONTENT = 'common/imports/SET_CONTENT';
 export const SET_ERRORS = 'common/imports/SET_ERRORS';
 export const APPLY = 'common/imports/APPLY';
-
+export const SET_NON_APPLICABLE_THEMES = 'common/imports/SET_NON_APPLICABLE_THEMES';
+export const SET_NON_APPLICABLE_CRITERIA = 'common/imports/SET_NON_APPLICABLE_CRITERIA';
+export const SET_TESTS_RESULTS = 'common/imports/SET_TESTS_RESULTS';
 
 
 /**
@@ -60,4 +62,34 @@ export const setErrors = (errors) => ({
 export const apply = () => ({
 	type: APPLY,
 	payload: {}
+});
+
+/**
+ *
+ */
+export const setNonApplicableThemes = (themeIds) => ({
+	type: SET_NON_APPLICABLE_THEMES,
+	payload: {
+		ids: themeIds
+	}
+});
+
+/**
+ *
+ */
+export const setNonApplicableCriteria = (criterionIds) => ({
+	type: SET_NON_APPLICABLE_CRITERIA,
+	payload: {
+		ids: criterionIds
+	}
+});
+
+/**
+ *
+ */
+export const setTestsResults = (testResults) => ({
+	type: SET_TESTS_RESULTS,
+	payload: {
+		data: testResults
+	}
 });

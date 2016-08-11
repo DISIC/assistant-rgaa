@@ -1,4 +1,9 @@
-import {OPEN_MODAL, CLOSE_MODAL, RESET, SET_ERRORS, SET_CONTENT} from '../actions/imports';
+import {
+	OPEN_MODAL, CLOSE_MODAL,
+	RESET,
+	SET_ERRORS, SET_CONTENT,
+	SET_NON_APPLICABLE_THEMES, SET_NON_APPLICABLE_CRITERIA, SET_TESTS_RESULTS
+} from '../actions/imports';
 
 
 
@@ -10,7 +15,10 @@ const initialState = {
 		open: false
 	},
 	errors: '',
-	content: null
+	content: null,
+	inactiveThemeIds: [],
+	inactiveCriterionIds: [],
+	testResults: {}
 };
 
 /**
@@ -55,6 +63,24 @@ export default function imports(state = initialState, {type, payload}) {
 				...state,
 				content: payload.content,
 				errors: ''
+			};
+
+		case SET_NON_APPLICABLE_THEMES:
+			return {
+				...state,
+				inactiveThemeIds: payload.ids
+			};
+
+		case SET_NON_APPLICABLE_CRITERIA:
+			return {
+				...state,
+				inactiveCriterionIds: payload.ids
+			};
+
+		case SET_TESTS_RESULTS:
+			return {
+				...state,
+				testResults: payload.data
 			};
 
 		default:

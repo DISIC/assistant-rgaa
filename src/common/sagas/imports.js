@@ -1,13 +1,12 @@
 import {takeEvery} from 'redux-saga';
-import {call, put, select} from 'redux-saga/effects';
-import {APPLY} from '../actions/imports';
-import {getVersion} from '../selectors/imports';
+import {put, select} from 'redux-saga/effects';
 import {
-	getInactiveThemeIds, getInactiveCriterionIds, getTestResults
-} from '../selectors/reference';
+	getVersion, findInactiveThemeIds, findInactiveCriterionIds, findTestResults
+} from '../selectors/imports';
+import {setReferenceVersion} from '../actions/reference';
 import {
-	setReferenceVersion, setNonApplicableThemes, setNonApplicableCriteria, setTestsResults
-} from '../actions/reference';
+	APPLY, setNonApplicableThemes, setNonApplicableCriteria, setTestsResults
+} from '../actions/imports';
 
 
 
@@ -19,9 +18,9 @@ function* applyWorker() {
 	if (importVersion) {
 		yield put(setReferenceVersion(importVersion));
 
-		const inactiveThemes = yield select(getInactiveThemeIds);
-		const inactiveCriteria = yield select(getInactiveCriterionIds);
-		const testResults = yield select(getTestResults);
+		const inactiveThemes = yield select(findInactiveThemeIds);
+		const inactiveCriteria = yield select(findInactiveCriterionIds);
+		const testResults = yield select(findTestResults);
 
 		yield put(setNonApplicableThemes(inactiveThemes));
 		yield put(setNonApplicableCriteria(inactiveCriteria));

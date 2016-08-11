@@ -1,5 +1,9 @@
-import {property, get, groupBy, filter, map, each, flatten, fromPairs} from 'lodash';
+import {
+	chain, property, map, flatten, difference, intersection,
+	includes, get, groupBy, filter, each, fromPairs
+} from 'lodash';
 import {NON_APPLICABLE} from '../api/imports';
+import {findCriterionIdsByTheme, findCriterionIds, findTestIds} from './reference';
 
 
 
@@ -27,38 +31,29 @@ export const getVersion = (state) =>
 /**
  *
  */
-const rawInactiveCriteria = (state) =>
-	filter(get(state.imports, 'content.criteres', []), ['resultat', NON_APPLICABLE]);
+export const getInactiveThemeIds = property('imports.inactiveThemeIds');
 
 /**
  *
  */
-export const getInactiveCriterionIdsByTheme = (state) => {
-	const fullCriteria = groupBy(rawInactiveCriteria(state), 'thematiqueId');
-	return each(fullCriteria, (criteria, themeId) => {
-		fullCriteria[themeId] = map(criteria, 'id');
-	});
-};
+export const getInactiveCriterionIds = property('imports.inactiveCriterionIds');
 
 /**
  *
  */
-export const getInactiveCriterionIds = (state) =>
-	map(rawInactiveCriteria(state), 'id');
-
-/**
- *
- */
-const rawTests = (state) =>
-	flatten(map(get(state.imports, 'content.criteres', []), 'tests'));
+export const getTestResults = property('imports.testResults');
 
 /*
  *
  */
-export const getTestResults = (state) => {
-	const allTests = rawTests(state);
-	return fromPairs(allTests.map(({id, resultat}) => [id, resultat]));
-};
+export const isThemeInactive = (state, id) =>
+	includes(getInactiveThemeIds(state), id);
+
+/*
+ *
+ */
+export const isCriterionInactive = (state, id) =>
+	includes(getInactiveCriterionIds(state), id);
 
 /**
  * check if the current import is valid
@@ -69,3 +64,71 @@ export const isValid = (state) =>
 	state.imports.content === null && state.imports.errors === ''
 		? null
 		: state.imports.content !== null && state.imports.errors === '';
+
+/**
+ *
+ */
+const rawInactiveCriteria = (state) =>
+	filter(get(state.imports, 'content.criteres', []), ['resultat', NON_APPLICABLE]);
+
+/**
+ *
+ */
+const rawTests = (state) =>
+	flatten(map(get(state.imports, 'content.criteres', []), 'tests'));
+
+/*
+ *
+ */
+export const findInactiveCriterionIds = (state) => {
+	const importIds = map(rawInactiveCriteria(state), 'id');
+	const refIds = findCriterionIds(state);
+	return intersection(importIds, refIds);
+};
+
+/*
+ *
+ */
+export const findTestResults = (state) => {
+	const allTests = rawTests(state);
+	const importResults = fromPairs(allTests.map(({id, resultat}) => [id, resultat]));
+	const testIds = findTestIds(state);
+	const referenceTestResults = {};
+	testIds.forEach(id => {
+		if (importResults[id]) {
+			referenceTestResults[id] = importResults[id];
+		}
+	});
+	return referenceTestResults;
+};
+
+/**
+ *
+ */
+export const findInactiveCriterionIdsByTheme = (state) => {
+	const fullCriteria = groupBy(rawInactiveCriteria(state), 'thematiqueId');
+	return each(fullCriteria, (criteria, themeId) => {
+		fullCriteria[themeId] = map(criteria, 'id');
+	});
+};
+
+/*
+ *
+ */
+export const findInactiveThemeIds = (state) => {
+	const importInactiveCriteriaByTheme = findInactiveCriterionIdsByTheme(state);
+	const referenceCriteriaByTheme = findCriterionIdsByTheme(state);
+	return chain(importInactiveCriteriaByTheme)
+		.map((criteria, themeId) => {
+			if (!referenceCriteriaByTheme[themeId]) {
+				return false;
+			}
+			if (difference(referenceCriteriaByTheme[themeId], criteria).length === 0) {
+				return themeId;
+			}
+			return false;
+		})
+		.uniq()
+		.filter()
+		.value();
+};
