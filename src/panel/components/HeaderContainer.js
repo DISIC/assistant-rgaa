@@ -1,5 +1,7 @@
 import {connect} from 'react-redux';
 import {open} from '../../common/actions/options';
+import {openModal, resetResults} from '../../common/actions/imports';
+import {isImportActive} from '../../common/selectors/imports';
 import Header from './Header';
 
 
@@ -7,7 +9,8 @@ import Header from './Header';
 /**
  *
  */
-const mapStateToProps = () => ({
+const mapStateToProps = (state) => ({
+	isImportActive: isImportActive(state)
 });
 
 /**
@@ -16,6 +19,14 @@ const mapStateToProps = () => ({
 const mapDispatchToProps = (dispatch) => ({
 	onOptionsClick() {
 		dispatch(open());
+	},
+
+	onStartImportClick() {
+		dispatch(openModal());
+	},
+
+	onResetImportClick() {
+		dispatch(resetResults());
 	}
 });
 

@@ -5,13 +5,13 @@
 .rgaaExt-Helper {
 	all: initial;
 	display: inline-block !important;
-	margin-left: $base-line-height / 4 !important;
+	margin: 0 ($base-line-height / 4) 0 0 !important;
 	padding: 0 $base-line-height / 4 !important;
 	background: $color-red !important;
 	color: $color-white !important;
 	line-height: $base-line-height !important;
 	font-family: $font-mono !important;
-	font-size: 1rem !important;
+	font-size: $base-font-size !important;
 	z-index: $max-z-index !important;
 
 	a {

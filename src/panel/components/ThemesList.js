@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
-import {Link} from 'react-router';
-import classNames from 'classnames';
-import Sly from './Sly';
+import {includes} from 'lodash';
+import Slyct from './Slyct';
+import ThemesListItem from './ThemesListItem';
 
 
 
@@ -22,27 +22,7 @@ const icons = {
 /**
  *
  */
-export default function ThemesList({themes, activeTheme}) {
-	const renderItems = (items) =>
-		items.map(({id, title}) => {
-			const className = classNames('ThemesList-item', {
-				'is-active': activeTheme.id === id
-			});
-			return (
-				<li className={className} key={id}>
-					<Link
-						className="InvisibleLink ThemesList-link"
-						to={`/themes/${id}`}
-						style={{
-							backgroundImage: `url('/img/${icons[id]}')`
-						}}
-					>
-						{title}
-					</Link>
-				</li>
-			);
-		});
-
+export default function ThemesList({themes, activeTheme, inactiveThemes}) {
 	return (
 		<nav className="ThemesList">
 			<button
@@ -52,12 +32,12 @@ export default function ThemesList({themes, activeTheme}) {
 				&larr;
 			</button>
 			<div className="ThemesList-tabs">
-				<Sly
+				<Slyct
 					config={{
 						horizontal: true,
 						itemNav: 'basic',
 						smart: true,
-						activateOn: 'click',
+						activateOn: null,
 						mouseDragging: true,
 						touchDragging: true,
 						releaseSwing: 1,
@@ -69,8 +49,16 @@ export default function ThemesList({themes, activeTheme}) {
 					}}
 					rawData={themes}
 				>
-					{renderItems(themes)}
-				</Sly>
+					{themes.map(theme =>
+						<ThemesListItem
+							{...theme}
+							icon={icons[theme.id]}
+							isActive={activeTheme.id === theme.id}
+							isDisabled={includes(inactiveThemes, theme.id)}
+							key={theme.id}
+						/>
+					)}
+				</Slyct>
 			</div>
 			<button
 				type="button"
@@ -84,5 +72,13 @@ export default function ThemesList({themes, activeTheme}) {
 
 ThemesList.propTypes = {
 	themes: PropTypes.array.isRequired,
-	activeTheme: PropTypes.object
+	activeTheme: PropTypes.object,
+	inactiveThemes: PropTypes.array
+};
+
+ThemesList.defaultProps = {
+	activeTheme: {
+		id: null
+	},
+	inactiveThemes: []
 };

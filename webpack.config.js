@@ -77,10 +77,7 @@ module.exports = {
 			},
 			{
 				test: /\.json$/,
-				loader: 'json',
-				include: [
-					fullPath('data')
-				]
+				loader: 'json'
 			}
 		]
 	},

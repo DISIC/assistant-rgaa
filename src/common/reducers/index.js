@@ -5,6 +5,7 @@ import reference from './reference';
 import instructions from './instructions';
 import checklist from './checklist';
 import tabs from './tabs';
+import imports from './imports';
 
 
 
@@ -14,7 +15,8 @@ export const reducers = {
 	reference,
 	instructions,
 	checklist,
-	tabs
+	tabs,
+	imports
 };
 
 export default combineReducers(reducers);

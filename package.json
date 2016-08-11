@@ -63,6 +63,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "ajv": "^4.4.0",
     "babel-polyfill": "^6.8.0",
     "classnames": "^2.2.5",
     "history": "^2.1.1",
@@ -75,6 +76,7 @@
     "react-draggable": "^2.2.0",
     "react-helmet": "^3.1.0",
     "react-intl": "^2.1.2",
+    "react-modal": "Leimi/react-modal#v1.5.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
     "recompose": "^0.20.2",

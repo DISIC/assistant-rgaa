@@ -1,0 +1,28 @@
+.ImportResult {
+	font-weight: bold;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 0 4px;
+	background: $color-black;
+	color: $color-white;
+	border-radius: 3px;
+	min-width: 28px;
+	text-align: center;
+}
+
+.ImportResult[data-import-result='nc'] {
+	background: $color-red;
+}
+
+.ImportResult[data-import-result='c'] {
+	background: $color-green;
+}
+
+.ImportResult[data-import-result='na'] {
+	background: $color-emperor;
+}
+
+.ImportResult[data-import-result='nt'] {
+	background: $color-orange;
+	color: $color-black;
+}

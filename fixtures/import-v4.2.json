@@ -1,0 +1,138 @@
+{
+	"version-referentiel": "4.2",
+	"criteres": [
+		{
+			"id": "1.1",
+			"priorite": "A",
+			"thematiqueId": "1",
+			"recommandation": "Titre du critère",
+			"resultat": "nc",
+			"tests": [
+				{
+					"id": "1.1.1",
+					"resultat": "c"
+				},
+				{
+					"id": "1.1.2",
+					"resultat": "c"
+				},
+				{
+					"id": "1.1.3",
+					"resultat": "nc"
+				},
+				{
+					"id": "1.1.4",
+					"resultat": "na"
+				}
+			]
+		},
+		{
+			"id": "1.2",
+			"thematiqueId": "1",
+			"resultat": "c",
+			"tests": [
+				{
+					"id": "1.2.1",
+					"resultat": "c"
+				},
+				{
+					"id": "1.2.2",
+					"resultat": "c"
+				},
+				{
+					"id": "1.2.3",
+					"resultat": "nc"
+				}
+			]
+		},
+		{
+			"id": "1.3",
+			"thematiqueId": "1",
+			"resultat": "na",
+			"tests": [
+				{
+					"id": "1.2.1",
+					"resultat": "na"
+				},
+				{
+					"id": "1.2.2",
+					"resultat": "na"
+				}
+			]
+		},
+		{
+			"id": "1.4",
+			"thematiqueId": "1",
+			"resultat": "nt",
+			"tests": [
+				{
+					"id": "1.4.1",
+					"resultat": "nt"
+				},
+				{
+					"id": "1.4.2",
+					"resultat": "nt"
+				}
+			]
+		},
+		{
+			"id": "2.1",
+			"thematiqueId": "2",
+			"resultat": "na",
+			"tests": [
+				{
+					"id": "2.1.1",
+					"resultat": "na"
+				},
+				{
+					"id": "2.1.2",
+					"resultat": "na"
+				},
+				{
+					"id": "2.1.3",
+					"resultat": "na"
+				}
+			]
+		},
+		{
+			"id": "2.2",
+			"thematiqueId": "2",
+			"resultat": "na",
+			"tests": [
+				{
+					"id": "2.2.1",
+					"resultat": "na"
+				},
+				{
+					"id": "2.2.2",
+					"resultat": "na"
+				}
+			]
+		},
+		{
+			"id": "492.12",
+			"priorite": "A",
+			"thematiqueId": "14",
+			"recommandation": "Critère qui n'existe pas et qui n'est pas géré pas l'appli",
+			"resultat": "nc",
+			"tests": [
+				{
+					"id": "492.12.23",
+					"resultat": "nt"
+				},
+				{
+					"id": "492.12.24",
+					"resultat": "c"
+				},
+				{
+					"id": "492.12.25",
+					"resultat": "nc"
+				},
+				{
+					"id": "492.12.26",
+					"resultat": "na"
+				}
+			]
+		}
+	]
+}

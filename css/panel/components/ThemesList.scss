@@ -26,13 +26,18 @@
 	border-left: 0;
 }
 
-.ThemesList-link:hover,
-.ThemesList-link:focus {
+.ThemesList-link:not(.is-disabled):hover,
+.ThemesList-link:not(.is-disabled):focus {
 	background-color: darken($color-white, 5%);
 }
 
-.ThemesList-link:active {
+.ThemesList-link:not(.is-disabled):active {
 	background-color: darken($color-white, 15%);
+}
+
+.ThemesList-link.is-disabled {
+	opacity: 0.4;
+	cursor: help;
 }
 
 .ThemesList-item.is-active .ThemesList-link {

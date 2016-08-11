@@ -1,12 +1,6 @@
 /* stylelint-disable
 declaration-no-important, selector-no-id, selector-id-pattern */
-
-#rgaaExt-Container,
-#rgaaExt-Container-wrapper,
-#rgaaExt-Container-panel,
-#rgaaExt-Container .vt-ResizeHandle,
-#rgaaExt-Container .vt-ResizeHandle-handle,
-#rgaaExt-Container .vt-ResizeHandle-overlay {
+@mixin reset() {
 	all: initial;
 	display: block;
 	padding: 0 !important;
@@ -15,6 +9,21 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	background: none !important;
 	border-radius: 0 !important;
 	box-shadow: none !important;
+}
+
+#rgaaExt-Container,
+#rgaaExt-Container-wrapper,
+#rgaaExt-Container-panel,
+#rgaaExt-Container .vt-ResizeHandle,
+#rgaaExt-Container .vt-ResizeHandle-handle,
+#rgaaExt-Container .vt-ResizeHandle-overlay,
+.rgaaExt-ImportModal,
+.rgaaExt-ImportModal [data-reactroot]:not([class]),
+.rgaaExt-ImportModal-container,
+.rgaaExt-ImportModal-content,
+.rgaaExt-ImportModal-buttons,
+.rgaaExt-ImportModal-overlay {
+	@include reset();
 }
 
 #rgaaExt-Container,
