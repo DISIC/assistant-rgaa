@@ -32,6 +32,10 @@ const messages = {
 	'Import.versionDifference': `&#9888; La version du référentiel RGAA utilisée par
 		l\'extension (configurable dans les options) va être définie à la version {version}
 		pour faire fonctionner l\'import.`,
+	'ImportResult.c.title': 'Résultat conforme d\'après le fichier importé',
+	'ImportResult.nc.title': 'Résultat non conforme d\'après le fichier importé',
+	'ImportResult.na.title': 'Résultat non applicable d\'après le fichier importé',
+	'ImportResult.nt.title': 'Résultat non testé d\'après le fichier importé',
 	'Options.references.label': 'Version du référentiel RGAA à utiliser :'
 };
 

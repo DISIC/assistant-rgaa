@@ -10,7 +10,7 @@ import TestHelpersContainer from './TestHelpersContainer';
 /**
  *
  */
-function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
+function Test({id, title, instructions, importResult, applied, done, onApply, onDone, intl}) {
 	const handleApplyChange = (event) =>
 		onApply(event.target.checked);
 
@@ -21,8 +21,8 @@ function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
 	const applyTranslateKey = applied ? 'uncheck' : 'check';
 
 	const htmlTitle = title.replace(
-		/^(Test \d+\.\d+\.\d+)(\s?:\s?)(.*)$/i,
-		'<span class="Test-id">$1</span>$2<span class="Test-description">$3</span>'
+		/^(Test \d+\.\d+\.\d+)\s?:\s?(.*)$/i,
+		'<span class="Test-id">$1</span><span class="Test-description">$2</span>'
 	);
 
 	return (
@@ -36,6 +36,20 @@ function Test({id, title, instructions, applied, done, onApply, onDone, intl}) {
 				/>
 
 				<div className="Test-actions">
+					{renderIf(importResult)(() => (
+						<div className="Test-action Test-action---import">
+							<span
+								className="ImportResult"
+								data-import-result={importResult}
+								title={intl.formatMessage({
+									id: `ImportResult.${importResult}.title`
+								})}
+							>
+								{importResult}
+							</span>
+						</div>
+					))}
+
 					<div className="Test-action Test-action---apply">
 						<label
 							htmlFor={`test-${id}-apply-input`}
@@ -89,6 +103,7 @@ Test.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	instructions: PropTypes.string,
+	importResult: PropTypes.string,
 	applied: PropTypes.bool,
 	done: PropTypes.bool,
 	onApply: PropTypes.func,
@@ -99,6 +114,7 @@ Test.propTypes = {
 Test.defaultProps = {
 	applied: false,
 	done: false,
+	importResult: '',
 	onApply: noop,
 	onDone: noop
 };

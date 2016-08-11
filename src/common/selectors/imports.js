@@ -41,6 +41,12 @@ export const getTestResults = property('imports.testResults');
 /**
  *
  */
+export const getOneTestResult = (state, id) =>
+	state.imports.testResults[id] || '';
+
+/**
+ *
+ */
 export const isPending = property('imports.pending');
 
 /*
