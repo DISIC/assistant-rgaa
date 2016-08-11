@@ -13,10 +13,12 @@ const icons = {
 	5: 'table.png',
 	6: 'link.png',
 	7: 'script-text.png',
+	8: 'navigation-090.png',
 	9: 'newspaper.png',
 	10: 'wand.png',
 	11: 'ui-toolbar.png',
-	12: 'arrow-split.png'
+	12: 'arrow-split.png',
+	13: 'book-brown.png'
 };
 
 /**
