@@ -1,9 +1,7 @@
 import React, {PropTypes} from 'react';
-import {injectIntl, intlShape} from 'react-intl';
-import {Link} from 'react-router';
 import {includes} from 'lodash';
-import classNames from 'classnames';
 import Slyct from './Slyct';
+import ThemesListItem from './ThemesListItem';
 
 
 
@@ -24,46 +22,7 @@ const icons = {
 /**
  *
  */
-function ThemesList({themes, activeTheme, inactiveThemes, intl}) {
-	const renderTab = ({id, title}) => {
-		const isActive = activeTheme.id === id;
-		const isDisabled = includes(inactiveThemes, id);
-		const tabStyles = {backgroundImage: `url('/img/${icons[id]}')`};
-		const props = {};
-		if (isActive) {
-			// this lets Slyct to be a "controlled" component
-			props['data-slyct-active-item'] = '';
-		}
-		const listItem = (tab) => (
-			<li className="ThemesList-item" key={id} {...props}>
-				{tab}
-			</li>
-		);
-		// do not allow to click on item if it is disabled
-		if (isDisabled) {
-			return listItem(
-				<span
-					className="ThemesList-link is-disabled"
-					style={tabStyles}
-					title={intl.formatMessage({
-						id: 'Theme.disabled'
-					})}
-				>
-					{title}
-				</span>
-			);
-		}
-		return listItem(
-			<Link
-				className="InvisibleLink ThemesList-link"
-				to={`/themes/${id}`}
-				style={tabStyles}
-			>
-				{title}
-			</Link>
-		);
-	};
-
+export default function ThemesList({themes, activeTheme, inactiveThemes}) {
 	return (
 		<nav className="ThemesList">
 			<button
@@ -90,7 +49,15 @@ function ThemesList({themes, activeTheme, inactiveThemes, intl}) {
 					}}
 					rawData={themes}
 				>
-					{themes.map(renderTab)}
+					{themes.map(theme =>
+						<ThemesListItem
+							{...theme}
+							icon={icons[theme.id]}
+							isActive={activeTheme.id === theme.id}
+							isDisabled={includes(inactiveThemes, theme.id)}
+							key={theme.id}
+						/>
+					)}
 				</Slyct>
 			</div>
 			<button
@@ -106,13 +73,12 @@ function ThemesList({themes, activeTheme, inactiveThemes, intl}) {
 ThemesList.propTypes = {
 	themes: PropTypes.array.isRequired,
 	activeTheme: PropTypes.object,
-	inactiveThemes: PropTypes.array,
-	intl: intlShape.isRequired
+	inactiveThemes: PropTypes.array
 };
 
 ThemesList.defaultProps = {
-	activeTheme: {},
+	activeTheme: {
+		id: null
+	},
 	inactiveThemes: []
 };
-
-export default injectIntl(ThemesList);
