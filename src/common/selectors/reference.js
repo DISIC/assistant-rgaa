@@ -30,6 +30,11 @@ export const getCurrentCriterion = property('reference.criterion');
 /**
  *
  */
+export const getEnabledTests = property('reference.tests');
+
+/**
+ *
+ */
 export const isTestApplied = (state, testId) => !!state.reference.tests[testId];
 
 /**
