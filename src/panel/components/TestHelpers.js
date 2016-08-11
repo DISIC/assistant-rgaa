@@ -13,13 +13,12 @@ const TestHelpers = ({helpers}) => (
 
 		<ol>
 			{helpers.map((helper, i) => (
-				<li key={i}>
-					<div
-						dangerouslySetInnerHTML={{
-							__html: describe(helper)
-						}}
-					/>
-				</li>
+				<li
+					key={i}
+					dangerouslySetInnerHTML={{
+						__html: describe(helper)
+					}}
+				/>
 			))}
 		</ol>
 	</div>

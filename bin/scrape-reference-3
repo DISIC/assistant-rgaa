@@ -1,0 +1,103 @@
+#!/usr/bin/env node
+const _ = require('lodash');
+const cheerio = require('cheerio');
+const scrape = require('./scrape');
+
+
+
+/**
+ *	Scrapes the version 3 of the RGAA reference into JSON.
+ *	This scripts takes one argument: the path to the JSON file
+ *	to be generated.
+ *
+ *	Use it like that from the application root diretcory:
+ *		bin/scrape-reference-3 data/references/3.json
+ */
+const SOURCE = 'http://references.modernisation.gouv.fr/rgaa-accessibilite/3.0';
+const DESTINATION = process.argv[2];
+
+
+
+/**
+ *
+ */
+const scrapeReference = (html) => {
+	const linkAnchors = scrape.linkAnchorsTo(SOURCE);
+	const $ = cheerio.load(html, {
+		normalizeWhitespace: true,
+		decodeEntities: false
+	});
+
+	const scrapeTest = (i, el) => {
+		const element = $(el);
+		const title = linkAnchors(element.html().trim());
+		const idMatches = /^Test (\d+\.\d+\.\d+)/i.exec(title);
+
+		if (idMatches === null) {
+			return null;
+		}
+
+		const id = idMatches[1];
+
+		return {id, title};
+	};
+
+	const scrapeCriterion = (i, el) => {
+		const element = $(el);
+		const title = linkAnchors(element.find('h5').html().trim());
+		const idMatches = /^Critère (\d+\.\d+)/i.exec(title);
+
+		if (idMatches === null) {
+			return null;
+		}
+
+		const id = idMatches[1];
+		const testElements = element.find('.rte > ul > li');
+		const tests = testElements.map(scrapeTest).get();
+
+		return {id, title, tests};
+	};
+
+	const scrapeTheme = (i, el) => {
+		const element = $(el);
+		const fullTitle = linkAnchors(element.find('h4').html().trim());
+		const title = fullTitle.replace(/^(\d+\.\d+\.)/i, '');
+		const idMatches = /^(\d+)/i.exec(title);
+
+		if (idMatches === null) {
+			return null;
+		}
+
+		const id = idMatches[1];
+		const criterionStopSelector = 'article:not([id^="critre-' + id + '"])';
+		const criterionElements = element.nextUntil(criterionStopSelector);
+		const criteria = criterionElements.map(scrapeCriterion).get();
+
+		return {id, title, criteria};
+	};
+
+	const scrapeThemes = () => {
+		const themeRx = /^12\d+-[a-z]+/i;
+		const themeElements = $('article').filter((i, el) =>
+			themeRx.test($(el).attr('id'))
+		);
+
+		return themeElements.map(scrapeTheme).get();
+	};
+
+	return {
+		name: 'RGAA 3',
+		version: '3',
+		themes: scrapeThemes()
+	};
+};
+
+
+
+/**
+ *
+ */
+scrape.fetchFrom(SOURCE)
+	.then(scrapeReference)
+	.then(scrape.writeJsonTo(DESTINATION))
+	.catch(scrape.logError);

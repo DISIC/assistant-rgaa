@@ -3,6 +3,10 @@
 	color: $color-white;
 	padding: $app-gutter;
 	font-weight: bold;
+
+	a {
+		color: $color-white;
+	}
 }
 
 .Criterion-test:nth-child(even) {
