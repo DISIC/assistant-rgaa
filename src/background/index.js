@@ -55,19 +55,23 @@ chrome.runtime.onMessage.addListener((message) =>
  */
 chrome.browserAction.onClicked.addListener(() => {
 	let tab;
-	fetchCurrentTab().then((tabId) => {
-		tab = tabId;
-		// empty cached store from chrome storage to have some sort of "session storage"
-		return storage.removeAllWithPrefix(storage.persistPrefix);
-	}).then(() => {
-		// restore reference from options if we want to open the panel
-		if (!isOpen(store.getState())) {
-			restoreReference();
-		}
-
-		store.dispatch(setCurrentTab(tab));
-		store.dispatch(toggle());
-	});
+	fetchCurrentTab()
+		.then((tabId) => {
+			tab = tabId;
+			// empty cached store from chrome storage to have some sort of "session storage"
+			return storage.removeAllWithPrefix(storage.persistPrefix);
+		})
+		.then(() => {
+			// restore reference from options if we want to open the panel
+			if (!isOpen(store.getState())) {
+				return restoreReference();
+			}
+			return true;
+		})
+		.then(() => {
+			store.dispatch(setCurrentTab(tab));
+			store.dispatch(toggle());
+		});
 });
 
 /*
