@@ -1,36 +1,30 @@
 #!/usr/bin/env node
 const _ = require('lodash');
 const cheerio = require('cheerio');
-const scrape = require('./scrape');
+const installResolveLinksPlugin = require('./resolveLinksPlugin');
 
 
 
 /**
- *	Scrapes the version 3 of the RGAA reference into JSON.
- *	This scripts takes one argument: the path to the JSON file
- *	to be generated.
+ *	Scrapes version 3 of the RGAA reference into JSON.
  *
- *	Use it like that from the application root diretcory:
- *		bin/scrape-reference-3 data/references/3.json
+ *	@param {object} options - Options:
+ *		- {string} source - Source URL.
+ *		- {string} destination - Destination file.
+ *		- {boolean} merge - Whether or not to merge the output
+ *			file with the existing one, if any.
  */
-const SOURCE = 'http://references.modernisation.gouv.fr/rgaa-accessibilite/3.0';
-const DESTINATION = process.argv[2];
-
-
-
-/**
- *
- */
-const scrapeReference = (html) => {
-	const linkAnchors = scrape.linkAnchorsTo(SOURCE);
+module.exports = (options) => (html) => {
 	const $ = cheerio.load(html, {
 		normalizeWhitespace: true,
 		decodeEntities: false
 	});
 
+	installResolveLinksPlugin($);
+
 	const scrapeTest = (i, el) => {
 		const element = $(el);
-		const title = linkAnchors(element.html().trim());
+		const title = element.resolveLinks(options.source).html().trim();
 		const idMatches = /^Test (\d+\.\d+\.\d+)/i.exec(title);
 
 		if (idMatches === null) {
@@ -44,7 +38,12 @@ const scrapeReference = (html) => {
 
 	const scrapeCriterion = (i, el) => {
 		const element = $(el);
-		const title = linkAnchors(element.find('h5').html().trim());
+		const title = element
+			.find('h5')
+			.resolveLinks(options.source)
+			.html()
+			.trim();
+
 		const idMatches = /^Critère (\d+\.\d+)/i.exec(title);
 
 		if (idMatches === null) {
@@ -60,7 +59,12 @@ const scrapeReference = (html) => {
 
 	const scrapeTheme = (i, el) => {
 		const element = $(el);
-		const fullTitle = linkAnchors(element.find('h4').html().trim());
+		const fullTitle = element
+			.find('h4')
+			.resolveLinks(options.source)
+			.html()
+			.trim();
+
 		const title = fullTitle.replace(/^(\d+\.\d+\.)/i, '');
 		const idMatches = /^(\d+)/i.exec(title);
 
@@ -91,13 +95,3 @@ const scrapeReference = (html) => {
 		themes: scrapeThemes()
 	};
 };
-
-
-
-/**
- *
- */
-scrape.fetchFrom(SOURCE)
-	.then(scrapeReference)
-	.then(scrape.writeJsonTo(DESTINATION))
-	.catch(scrape.logError);

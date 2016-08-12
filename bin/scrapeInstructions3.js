@@ -1,32 +1,26 @@
 #!/usr/bin/env node
 const _ = require('lodash');
 const cheerio = require('cheerio');
-const scrape = require('./scrape');
+const installResolveLinksPlugin = require('./resolveLinksPlugin');
 
 
 
 /**
  *	Scrapes version 3 of the RGAA instructions into JSON.
- *	This scripts takes one arguments: the path to the JSON file
- *	to be generated.
  *
- *	Use it like that from the application root diretcory:
- *		bin/scrape-instructions-3 data/instructions/3.json
+ *	@param {object} options - Options:
+ *		- {string} source - Source URL.
+ *		- {string} destination - Destination file.
+ *		- {boolean} merge - Whether or not to merge the output
+ *			file with the existing one, if any.
  */
-const SOURCE = 'http://disic.github.io/rgaa_methodologie';
-const DESTINATION = process.argv[2];
-
-
-
-/**
- *
- */
-const scrapeInstructions = (html) => {
-	const linkAnchors = scrape.linkAnchorsTo(SOURCE);
+module.exports = (options) => (html) => {
 	const $ = cheerio.load(html, {
 		normalizeWhitespace: true,
 		decodeEntities: false
 	});
+
+	installResolveLinksPlugin($);
 
 	const extractIds = (title) => {
 		const idsRx = /(\d+\.\d+\.\d+)/gi;
@@ -44,9 +38,16 @@ const scrapeInstructions = (html) => {
 			.filter(`.${className}`)
 			.children('ol');
 
-		return ol.length
-			? `<ol>${linkAnchors(ol.html().trim())}</ol>`
-			: null;
+		if (!ol.length) {
+			return null;
+		}
+
+		const text = ol
+			.resolveLinks(options.source)
+			.html()
+			.trim();
+
+		return `<ol>${text}</ol>`;
 	};
 
 	const scrapeTests = (el) => {
@@ -79,13 +80,3 @@ const scrapeInstructions = (html) => {
 
 	return tests;
 };
-
-
-
-/**
- *
- */
-scrape.fetchFrom(SOURCE)
-	.then(scrapeInstructions)
-	.then(scrape.writeJsonTo(DESTINATION))
-	.catch(scrape.logError);
