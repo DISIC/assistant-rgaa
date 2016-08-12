@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import {injectIntl, intlShape} from 'react-intl';
 import {map, get} from 'lodash';
 import classNames from 'classnames';
+import {stripTags} from '../../common/api/dom';
 import CriterionContainer from './CriterionContainer';
 import SelectField from './SelectField';
 
@@ -15,7 +16,7 @@ function Theme({
 }) {
 	const criteriaOptions = map(currentTheme.criteria, ({id = '', title = ''}) => ({
 		value: id,
-		text: title
+		text: stripTags(title)
 	}));
 
 	const focusCriterion = (criterionId) => {
