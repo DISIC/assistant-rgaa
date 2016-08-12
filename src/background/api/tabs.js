@@ -1,5 +1,8 @@
+import {get} from 'lodash';
 import {getCurrent} from '../../common/selectors/tabs';
+import {getPopupWindowId} from '../../common/selectors/container';
 import store from '../store';
+import {get as getWindowDetails} from './windows';
 
 
 
@@ -35,9 +38,27 @@ export const sendMessageToTab = (tab, message) => {
  *
  */
 export const sendToContent = (action) => {
-	const current = getCurrent(store.getState());
+	const state = store.getState();
+	const current = getCurrent(state);
+	const popupId = getPopupWindowId(state);
 
 	if (current) {
 		sendMessageToTab(current, action);
+	}
+
+	if (popupId) {
+		getWindowDetails(popupId)
+			.then(popupWindow => {
+				const popupTab = get(popupWindow, 'tabs[0].id', null);
+				if (popupTab) {
+					sendMessageToTab(popupTab, action);
+				}
+			})
+			.catch(() => {
+				// window was not found - nothing to do here
+				// meaning we tried to pass a message between the moment
+				// the window has been closed by the user and the moment
+				// the redux state was updated
+			});
 	}
 };

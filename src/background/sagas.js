@@ -11,6 +11,7 @@ import * as options from '../common/sagas/options';
 export default function* sagas() {
 	yield [
 		container.watchSetPosition(),
+		container.watchToggle(),
 		container.watchTogglePopup(),
 		imports.watchApply(),
 		options.watchOpen(),

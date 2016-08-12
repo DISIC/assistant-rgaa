@@ -2,8 +2,8 @@ import {takeEvery} from 'redux-saga';
 import {call, put, select} from 'redux-saga/effects';
 import {create as createWindow, remove as removeWindow} from '../../background/api/windows';
 import {IFRAME_FILE} from '../../container/api/iframe';
-import {SET_POSITION, TOGGLE_POPUP, setPopup} from '../actions/container';
-import {getPopupWindowId} from '../selectors/container';
+import {SET_POSITION, TOGGLE_POPUP, TOGGLE, setPopup, togglePopup} from '../actions/container';
+import {getPopupWindowId, isOpen} from '../selectors/container';
 
 
 
@@ -22,16 +22,33 @@ export function* setPositionWorker() {
 /**
  *
  */
-export function* togglePopupWorker({payload}) {
+export function* toggleWorker() {
+	const isAppOpen = yield select(isOpen);
 	const popupWindowId = yield select(getPopupWindowId);
 
-	if (popupWindowId && !payload.alreadyRemoved) {
+	// we we just said we wanted to close the app, but a popup is here
+	// close the popup
+	if (!isAppOpen && popupWindowId) {
+		yield put(togglePopup(false));
+	}
+}
+
+/**
+ * toggle popup by checking if a popup window is set
+ * or by checking the force prop if passed
+ */
+export function* togglePopupWorker({payload: {force}}) {
+	const popupWindowId = yield select(getPopupWindowId);
+
+	const remove = force === false || (force === undefined && popupWindowId);
+	const create = force === true || (force === undefined && !popupWindowId);
+
+	if (remove) {
 		yield call(removeWindow, popupWindowId);
+		yield put(setPopup(null));
 	}
 
-	if (popupWindowId) {
-		yield put(setPopup(null));
-	} else {
+	if (create) {
 		const popupWindow = yield call(createWindow, {
 			url: chrome.runtime.getURL(IFRAME_FILE),
 			type: 'popup'
@@ -42,12 +59,18 @@ export function* togglePopupWorker({payload}) {
 }
 
 
-
 /**
  *
  */
 export function* watchSetPosition() {
 	yield* takeEvery(SET_POSITION, setPositionWorker);
+}
+
+/**
+ *
+ */
+export function* watchToggle() {
+	yield* takeEvery(TOGGLE, toggleWorker);
 }
 
 /**
