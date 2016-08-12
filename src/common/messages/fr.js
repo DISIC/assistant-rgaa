@@ -12,6 +12,7 @@ const messages = {
 		car ils sont notés "non applicable".`,
 	'Theme.criterion.select.label': 'Aller au critère : ',
 	'Theme.criterion.select.emptyOption': 'Choisissez un critère',
+	'Criterion.done.label': 'Tests effectués',
 	'Test.apply.check.title': 'Appliquer les CSS et JS liés au test',
 	'Test.apply.uncheck.title': 'Enlever les CSS et JS liés au test',
 	'Test.apply.check.alt': 'Loupe',

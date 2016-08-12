@@ -1,12 +1,29 @@
-.Criterion-title {
+.Criterion-header {
+	display: flex;
+	justify-content: space-between;
 	background-color: $color-mariner;
 	color: $color-white;
-	padding: $app-gutter;
 	font-weight: bold;
 
 	a {
 		color: $color-white;
 	}
+}
+
+.Criterion-title {
+	padding: $app-gutter;
+}
+
+.Criterion-actions {
+	flex-shrink: 0;
+}
+
+.Criterion-action {
+	display: inline-block;
+	vertical-align: middle;
+	padding: vr(1/8);
+	border-left: 1px solid lighten($color-mariner, 20%);
+	height: 100%;
 }
 
 .Criterion.is-disabled {
