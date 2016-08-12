@@ -1,0 +1,19 @@
+#!/bin/bash
+echo -e "\e[33m## Starting extension build"
+echo -e "\e[33m## Pulling latest \e[93mmaster\e[33m branch…\e[0m"
+git checkout master
+git pull
+echo -e "\e[33m## Recreating local \e[93mpublication\e[33m branch with latest \e[93mmaster\e[33m changes…\e[0m"
+git branch -D publication
+git checkout -b publication origin/publication
+git pull
+git merge master --no-edit
+echo -e "\e[33m## Making the webpack build… This might take a few minutes.\e[0m"
+npm run build -- --devtool null
+echo -e "\e[33m## Making the extension build…\e[0m"
+npm run extension
+git add -f dist/*.{js,css,zip}
+git commit -m "new build"
+echo -e "\e[33m## Pushing changes to distant \e[93mpublication\e[33m…\e[0m"
+git push origin publication
+echo -e "\e[32m## Build done and pushed!\e[0m"
