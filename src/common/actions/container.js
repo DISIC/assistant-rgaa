@@ -45,9 +45,9 @@ export const dockToBottom = () => ({
 /**
  * content scripts will say they want the popup to show or hide
  */
-export const togglePopup = () => ({
+export const togglePopup = (options = {}) => ({
 	type: TOGGLE_POPUP,
-	payload: {}
+	payload: options
 });
 
 /**

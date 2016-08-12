@@ -1,12 +1,12 @@
-import store, {persistor} from './store';
+import store from './store';
 import {create} from './api/windows';
 import {fetchCurrentTab, sendToContent} from './api/tabs';
 import storage from '../common/api/storage';
 import {get as getOption} from '../common/api/options';
 import {setReferenceVersion} from '../common/actions/reference';
 import {setCurrent as setCurrentTab} from '../common/actions/tabs';
-import {toggle} from '../common/actions/container';
-import {isOpen} from '../common/selectors/container';
+import {toggle, togglePopup} from '../common/actions/container';
+import {isOpen, getPopupWindowId} from '../common/selectors/container';
 
 
 /**
@@ -70,3 +70,14 @@ chrome.browserAction.onClicked.addListener(() => {
 	});
 });
 
+/*
+* let the app know when the user closed the popup window
+*/
+chrome.windows.onRemoved.addListener(removedWindowId => {
+	const currentPopupId = getPopupWindowId(store.getState());
+	if (currentPopupId === removedWindowId) {
+		store.dispatch(togglePopup({
+			alreadyRemoved: true
+		}));
+	}
+});

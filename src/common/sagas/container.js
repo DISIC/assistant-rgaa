@@ -22,11 +22,14 @@ export function* setPositionWorker() {
 /**
  *
  */
-export function* togglePopupWorker() {
+export function* togglePopupWorker({payload}) {
 	const popupWindowId = yield select(getPopupWindowId);
 
-	if (popupWindowId) {
+	if (popupWindowId && !payload.alreadyRemoved) {
 		yield call(removeWindow, popupWindowId);
+	}
+
+	if (popupWindowId) {
 		yield put(setPopup(null));
 	} else {
 		const popupWindow = yield call(createWindow, {
@@ -50,6 +53,6 @@ export function* watchSetPosition() {
 /**
  *
  */
-export function* watchRequestPopup() {
+export function* watchTogglePopup() {
 	yield* takeEvery(TOGGLE_POPUP, togglePopupWorker);
 }
