@@ -1,28 +1,21 @@
 #!/usr/bin/env node
 const _ = require('lodash');
 const cheerio = require('cheerio');
-const scrape = require('./scrape');
+const linkAnchorsTo = require('./linkAnchorsTo');
 
 
 
 /**
- *	Scrapes the version 3 of the RGAA reference into JSON.
- *	This scripts takes one argument: the path to the JSON file
- *	to be generated.
+ *	Scrapes version 3 of the RGAA reference into JSON.
  *
- *	Use it like that from the application root diretcory:
- *		bin/scrape-reference-3 data/references/3.json
+ *	@param {object} options - Options:
+ *		- {string} source - Source URL.
+ *		- {string} destination - Destination file.
+ *		- {boolean} merge - Whether or not to merge the output
+ *			file with the existing one, if any.
  */
-const SOURCE = 'http://references.modernisation.gouv.fr/rgaa-accessibilite/3.0';
-const DESTINATION = process.argv[2];
-
-
-
-/**
- *
- */
-const scrapeReference = (html) => {
-	const linkAnchors = scrape.linkAnchorsTo(SOURCE);
+module.exports = (options) => (html) => {
+	const linkAnchors = linkAnchorsTo(options.source);
 	const $ = cheerio.load(html, {
 		normalizeWhitespace: true,
 		decodeEntities: false
@@ -91,13 +84,3 @@ const scrapeReference = (html) => {
 		themes: scrapeThemes()
 	};
 };
-
-
-
-/**
- *
- */
-scrape.fetchFrom(SOURCE)
-	.then(scrapeReference)
-	.then(scrape.writeJsonTo(DESTINATION))
-	.catch(scrape.logError);

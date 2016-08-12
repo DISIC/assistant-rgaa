@@ -1,0 +1,83 @@
+#!/usr/bin/env node
+const path = require('path');
+const program = require('commander');
+const scrapeWith = require('./scrapeWith');
+const scrapeReference3 = require('./scrapeReference3');
+const scrapeReference32016 = require('./scrapeReference32016');
+const scrapeInstructions3 = require('./scrapeInstructions3');
+
+
+
+/**
+ *
+ */
+program
+	.command('reference-3')
+	.alias('r-3')
+	.description('Scrapes version 3 of the reference.')
+	.option(
+		'-s, --source <source>',
+		'Source URL.',
+		'http://references.modernisation.gouv.fr/rgaa-accessibilite/3.0'
+	)
+	.option(
+		'-d, --dest <dest>',
+		'Destination file.',
+		path.resolve(__dirname, '../data/references/3.json')
+	)
+	.option(
+		'-m, --merge',
+		'Merges the generated file with the existing one, if any.'
+	)
+	.action(scrapeWith(scrapeReference3));
+
+/**
+ *
+ */
+program
+	.command('reference-3-2016')
+	.alias('r-3-2016')
+	.description('Scrapes version 3-2016 of the reference.')
+	.option(
+		'-s, --source <source>',
+		'Source URL.',
+		'http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html'
+	)
+	.option(
+		'-d, --dest <dest>',
+		'Destination file.',
+		path.resolve(__dirname, '../data/references/3-2016.json')
+	)
+	.option(
+		'-m, --merge',
+		'Merges the generated file with the existing one, if any.'
+	)
+	.action(scrapeWith(scrapeReference32016));
+
+/**
+ *
+ */
+program
+	.command('instructions-3')
+	.alias('i-3')
+	.description('Scrapes version 3 of the instructions.')
+	.option(
+		'-s, --source <source>',
+		'Source URL.',
+		'http://disic.github.io/rgaa_methodologie'
+	)
+	.option(
+		'-d, --dest <dest>',
+		'Destination file.',
+		path.resolve(__dirname, '../data/instructions/3.json')
+	)
+	.option(
+		'-m, --merge',
+		'Merges the generated file with the existing one, if any.'
+	)
+	.action(scrapeWith(scrapeInstructions3));
+
+/**
+ *
+ */
+program.parse(process.argv);
