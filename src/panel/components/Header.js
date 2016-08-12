@@ -7,7 +7,9 @@ import DockMenuContainer from './DockMenuContainer';
 /**
  *
  */
-function Header({isImportActive, onOptionsClick, onStartImportClick, onResetImportClick}) {
+function Header({
+	isImportActive, referenceVersion, onOptionsClick, onStartImportClick, onResetImportClick
+}) {
 	const onImportButtonClick = isImportActive
 		? onResetImportClick
 		: onStartImportClick;
@@ -18,7 +20,7 @@ function Header({isImportActive, onOptionsClick, onStartImportClick, onResetImpo
 	return (
 		<header className="Header">
 			<h1 className="Header-title">
-				<FormattedMessage id="Header.title" />
+				RGAA v{referenceVersion}
 			</h1>
 
 			<div className="Header-actions">
@@ -48,7 +50,8 @@ Header.propTypes = {
 	isImportActive: PropTypes.bool.isRequired,
 	onOptionsClick: PropTypes.func.isRequired,
 	onStartImportClick: PropTypes.func.isRequired,
-	onResetImportClick: PropTypes.func.isRequired
+	onResetImportClick: PropTypes.func.isRequired,
+	referenceVersion: PropTypes.string
 };
 
 export default injectIntl(Header);
