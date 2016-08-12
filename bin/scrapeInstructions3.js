@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const _ = require('lodash');
 const cheerio = require('cheerio');
-const linkAnchorsTo = require('./linkAnchorsTo');
+const installResolveLinksPlugin = require('./resolveLinksPlugin');
 
 
 
@@ -15,11 +15,12 @@ const linkAnchorsTo = require('./linkAnchorsTo');
  *			file with the existing one, if any.
  */
 module.exports = (options) => (html) => {
-	const linkAnchors = linkAnchorsTo(options.source);
 	const $ = cheerio.load(html, {
 		normalizeWhitespace: true,
 		decodeEntities: false
 	});
+
+	installResolveLinksPlugin($);
 
 	const extractIds = (title) => {
 		const idsRx = /(\d+\.\d+\.\d+)/gi;
@@ -37,9 +38,16 @@ module.exports = (options) => (html) => {
 			.filter(`.${className}`)
 			.children('ol');
 
-		return ol.length
-			? `<ol>${linkAnchors(ol.html().trim())}</ol>`
-			: null;
+		if (!ol.length) {
+			return null;
+		}
+
+		const text = ol
+			.resolveLinks(options.source)
+			.html()
+			.trim();
+
+		return `<ol>${text}</ol>`;
 	};
 
 	const scrapeTests = (el) => {

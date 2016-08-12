@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const _ = require('lodash');
 const cheerio = require('cheerio');
-const linkAnchorsTo = require('./linkAnchorsTo');
+const installResolveLinksPlugin = require('./resolveLinksPlugin');
 
 
 
@@ -15,15 +15,16 @@ const linkAnchorsTo = require('./linkAnchorsTo');
  *			file with the existing one, if any.
  */
 module.exports = (options) => (html) => {
-	const linkAnchors = linkAnchorsTo(options.source);
 	const $ = cheerio.load(html, {
 		normalizeWhitespace: true,
 		decodeEntities: false
 	});
 
+	installResolveLinksPlugin($);
+
 	const scrapeTest = (i, el) => {
 		const element = $(el);
-		const title = linkAnchors(element.html().trim());
+		const title = element.resolveLinks(options.source).html().trim();
 		const idMatches = /^Test (\d+\.\d+\.\d+)/i.exec(title);
 
 		if (idMatches === null) {
@@ -37,7 +38,12 @@ module.exports = (options) => (html) => {
 
 	const scrapeCriterion = (i, el) => {
 		const element = $(el);
-		const title = linkAnchors(element.find('h5').html().trim());
+		const title = element
+			.find('h5')
+			.resolveLinks(options.source)
+			.html()
+			.trim();
+
 		const idMatches = /^Critère (\d+\.\d+)/i.exec(title);
 
 		if (idMatches === null) {
@@ -53,7 +59,12 @@ module.exports = (options) => (html) => {
 
 	const scrapeTheme = (i, el) => {
 		const element = $(el);
-		const fullTitle = linkAnchors(element.find('h4').html().trim());
+		const fullTitle = element
+			.find('h4')
+			.resolveLinks(options.source)
+			.html()
+			.trim();
+
 		const title = fullTitle.replace(/^(\d+\.\d+\.)/i, '');
 		const idMatches = /^(\d+)/i.exec(title);
 
