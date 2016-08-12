@@ -18,6 +18,7 @@
 		"default_title": "RGAA Toolbar"
 	},
 	"permissions": [
+		"tabs",
 		"storage"
 	],
 	"background": {

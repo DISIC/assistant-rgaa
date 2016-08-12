@@ -99,3 +99,21 @@ chrome.tabs.onRemoved.addListener((removedTabId) => {
 		store.dispatch(toggle());
 	}
 });
+
+/*
+* let the app know when the user changed the current tab
+*/
+chrome.tabs.onUpdated.addListener((updatedTabId, tabData) => {
+	const state = store.getState();
+	if (getCurrentTab(state) !== updatedTabId) {
+		return;
+	}
+	if (!tabData.url) {
+		return;
+	}
+	// if the updated tab is the current tab, and the url has changed, reset container
+	store.dispatch(setPopup(null));
+	if (isOpen(state)) {
+		store.dispatch(toggle());
+	}
+});
