@@ -1,4 +1,4 @@
-import {SET_TEST_DONE} from '../actions/checklist';
+import {RESET, SET_TEST_DONE} from '../actions/checklist';
 
 
 
@@ -17,6 +17,9 @@ export default function checklist(state = initialState, {type, payload}) {
 				...state,
 				[payload.id]: payload.done
 			};
+
+		case RESET:
+			return initialState;
 
 		default:
 			return state;
