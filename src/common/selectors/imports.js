@@ -1,6 +1,6 @@
 import {
 	chain, property, map, flatten, difference, intersection,
-	includes, get, groupBy, filter, each, fromPairs
+	includes, get, groupBy, filter, each, fromPairs, isEmpty
 } from 'lodash';
 import {NON_APPLICABLE} from '../api/imports';
 import {findCriterionIdsByTheme, findCriterionIds, findTestIds} from './reference';
@@ -47,7 +47,10 @@ export const getOneTestResult = (state, id) =>
 /**
  *
  */
-export const isImportActive = (state) => !!state.imports.content;
+export const isImportActive = (state) =>
+	getInactiveCriterionIds(state).length > 0
+	|| getInactiveThemeIds(state).length > 0
+	|| !isEmpty(getTestResults(state));
 
 /**
  *

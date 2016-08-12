@@ -9,6 +9,7 @@ import {
 	setReference, setCurrentTheme, disableTest
 } from '../actions/reference';
 import {setHelpers, applyHelpers, revertHelpers} from '../actions/helpers';
+import {resetResults as resetImportResults} from '../actions/imports';
 import {getEnabledTests} from '../selectors/reference';
 import {getHelpersByTest} from '../selectors/helpers';
 
@@ -52,6 +53,7 @@ function* disableTestWorker({payload: {id}}) {
  */
 function* setReferenceVersionWorker({payload: {version}}) {
 	const data = yield call(getReference, version);
+	yield put(resetImportResults());
 	yield put(setReference(data));
 	yield put(setHelpers(getHelpers(version)));
 	yield call(save, 'reference', version);

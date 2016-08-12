@@ -95,9 +95,6 @@ export default function imports(state = initialState, {type, payload}) {
 		case RESET_RESULTS:
 			return {
 				...state,
-				errors: '',
-				content: null,
-				pending: false,
 				inactiveThemeIds: [],
 				inactiveCriterionIds: [],
 				testResults: {}

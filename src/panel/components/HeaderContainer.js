@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {open} from '../../common/actions/options';
-import {openModal, resetResults} from '../../common/actions/imports';
+import {openModal, resetModalContent, resetResults} from '../../common/actions/imports';
 import {isImportActive} from '../../common/selectors/imports';
 import Header from './Header';
 
@@ -22,6 +22,7 @@ const mapDispatchToProps = (dispatch) => ({
 	},
 
 	onStartImportClick() {
+		dispatch(resetModalContent());
 		dispatch(openModal());
 	},
 
