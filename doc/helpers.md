@@ -19,7 +19,7 @@ export const apply = (id, arg1, arg2, options = {}) => // n paramètres + option
 export const apply = (id, options = {}) => // options
 ```
 
-Les configuration des helpers à appliquer suivant les tests RGAA sont définies dans les fichiers `/data/helpers/*.json`.
+Les configuration des helpers à appliquer suivant les tests RGAA sont définies dans les fichiers `/data/helpers/*.json`. Chaque fichier correspond à une version de référentiel et est nommé en fonction.
 
 Ces fichiers définissent une liste de helpers pour chaque test, sous cette forme :
 
