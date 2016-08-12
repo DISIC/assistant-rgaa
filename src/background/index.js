@@ -7,6 +7,8 @@ import {setReferenceVersion} from '../common/actions/reference';
 import {setCurrent as setCurrentTab} from '../common/actions/tabs';
 import {toggle, setPopup} from '../common/actions/container';
 import {isOpen, getPopupWindowId} from '../common/selectors/container';
+import {getCurrent as getCurrentTab} from '../common/selectors/tabs';
+
 
 
 /**
@@ -81,6 +83,19 @@ chrome.windows.onRemoved.addListener(removedWindowId => {
 	const currentPopupId = getPopupWindowId(store.getState());
 	if (currentPopupId === removedWindowId) {
 		store.dispatch(setPopup(null));
+		store.dispatch(toggle());
+	}
+});
+
+/*
+* let the app know when the user closed the current tab
+*/
+chrome.tabs.onRemoved.addListener((removedTabId) => {
+	const state = store.getState();
+	if (getCurrentTab(state) === removedTabId) {
+		store.dispatch(setPopup(null));
+	}
+	if (getCurrentTab(state) === removedTabId && isOpen(state)) {
 		store.dispatch(toggle());
 	}
 });
