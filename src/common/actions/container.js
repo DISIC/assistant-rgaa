@@ -44,10 +44,13 @@ export const dockToBottom = () => ({
 
 /**
  * content scripts will say they want the popup to show or hide
+ * optionnaly pass a true/false to force show/hide the popup
  */
-export const togglePopup = (options = {}) => ({
+export const togglePopup = (force = undefined) => ({
 	type: TOGGLE_POPUP,
-	payload: options
+	payload: {
+		force
+	}
 });
 
 /**

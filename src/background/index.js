@@ -5,7 +5,7 @@ import storage from '../common/api/storage';
 import {get as getOption} from '../common/api/options';
 import {setReferenceVersion} from '../common/actions/reference';
 import {setCurrent as setCurrentTab} from '../common/actions/tabs';
-import {toggle, togglePopup} from '../common/actions/container';
+import {toggle, setPopup} from '../common/actions/container';
 import {isOpen, getPopupWindowId} from '../common/selectors/container';
 
 
@@ -76,8 +76,7 @@ chrome.browserAction.onClicked.addListener(() => {
 chrome.windows.onRemoved.addListener(removedWindowId => {
 	const currentPopupId = getPopupWindowId(store.getState());
 	if (currentPopupId === removedWindowId) {
-		store.dispatch(togglePopup({
-			alreadyRemoved: true
-		}));
+		store.dispatch(setPopup(null));
+		store.dispatch(toggle());
 	}
 });
