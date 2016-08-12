@@ -10,7 +10,7 @@ import TestHelpersContainer from './TestHelpersContainer';
 /**
  *
  */
-function Test({id, title, instructions, importResult, applied, done, onApply, onDone, intl}) {
+function Test({id, title, instructions, importResult, applicable, applied, done, onApply, onDone, intl}) {
 	const handleApplyChange = (event) =>
 		onApply(event.target.checked);
 
@@ -50,29 +50,31 @@ function Test({id, title, instructions, importResult, applied, done, onApply, on
 						</div>
 					))}
 
-					<div className="Test-action Test-action---apply">
-						<label
-							htmlFor={`test-${id}-apply-input`}
-							className="Test-actionLabel"
-							title={intl.formatMessage({
-								id: `Test.apply.${applyTranslateKey}.title`
-							})}
-						>
-							<img
-								src={`/img/${applyImage}`}
-								alt={intl.formatMessage({
-									id: `Test.apply.${applyTranslateKey}.alt`
+					{renderIf(applicable)(() => (
+						<div className="Test-action Test-action---apply">
+							<label
+								htmlFor={`test-${id}-apply-input`}
+								className="Test-actionLabel"
+								title={intl.formatMessage({
+									id: `Test.apply.${applyTranslateKey}.title`
 								})}
+							>
+								<img
+									src={`/img/${applyImage}`}
+									alt={intl.formatMessage({
+										id: `Test.apply.${applyTranslateKey}.alt`
+									})}
+								/>
+							</label>
+							<input
+								className="Test-actionInput u-hidden"
+								type="checkbox"
+								id={`test-${id}-apply-input`}
+								checked={applied}
+								onChange={handleApplyChange}
 							/>
-						</label>
-						<input
-							className="Test-actionInput u-hidden"
-							type="checkbox"
-							id={`test-${id}-apply-input`}
-							checked={applied}
-							onChange={handleApplyChange}
-						/>
-					</div>
+						</div>
+					))}
 
 					<div className="Test-action Test-action---done">
 						<input
@@ -104,6 +106,7 @@ Test.propTypes = {
 	title: PropTypes.string.isRequired,
 	instructions: PropTypes.string,
 	importResult: PropTypes.string,
+	applicable: PropTypes.bool,
 	applied: PropTypes.bool,
 	done: PropTypes.bool,
 	onApply: PropTypes.func,
@@ -112,6 +115,7 @@ Test.propTypes = {
 };
 
 Test.defaultProps = {
+	applicable: false,
 	applied: false,
 	done: false,
 	importResult: '',

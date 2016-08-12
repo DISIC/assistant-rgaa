@@ -1,4 +1,4 @@
-import {property} from 'lodash';
+import {property, omit, map} from 'lodash';
 import {takeEvery} from 'redux-saga';
 import {call, put, select} from 'redux-saga/effects';
 import {save} from '../api/options';
@@ -6,9 +6,10 @@ import {getTheme, getReference} from '../api/reference';
 import {getHelpers} from '../api/helpers';
 import {
 	SET_REFERENCE_VERSION, FETCH_THEME, ENABLE_TEST, DISABLE_TEST,
-	setReference, setCurrentTheme
+	setReference, setCurrentTheme, disableTest
 } from '../actions/reference';
 import {setHelpers, applyHelpers, revertHelpers} from '../actions/helpers';
+import {getEnabledTests} from '../selectors/reference';
 import {getHelpersByTest} from '../selectors/helpers';
 
 
@@ -22,18 +23,31 @@ function* fetchThemeWorker({payload: {id}}) {
 	yield put(setCurrentTheme(themeData));
 }
 
-/*
+/**
  *
  */
-function* toggleTestWorker(enable, {payload: {id}}) {
-	const helpers = yield select(getHelpersByTest, id);
-	yield put(enable
-		? applyHelpers(id, helpers)
-		: revertHelpers(id, helpers)
+function* enableTestWorker({payload: {id}}) {
+	// disables previously enabled tests
+	const enabled = yield select(getEnabledTests);
+	const otherEnabled = omit(enabled, id);
+
+	yield map(otherEnabled, (_, test) =>
+		put(disableTest(test))
 	);
+
+	const helpers = yield select(getHelpersByTest, id);
+	yield put(applyHelpers(id, helpers));
 }
 
-/*
+/**
+ *
+ */
+function* disableTestWorker({payload: {id}}) {
+	const helpers = yield select(getHelpersByTest, id);
+	yield put(revertHelpers(id, helpers));
+}
+
+/**
  *
  */
 function* setReferenceVersionWorker({payload: {version}}) {
@@ -56,14 +70,14 @@ export function* watchFetch() {
  *
  */
 export function* watchEnableTest() {
-	yield* takeEvery(ENABLE_TEST, toggleTestWorker, true);
+	yield* takeEvery(ENABLE_TEST, enableTestWorker);
 }
 
 /**
  *
  */
 export function* watchDisableTest() {
-	yield* takeEvery(DISABLE_TEST, toggleTestWorker, false);
+	yield* takeEvery(DISABLE_TEST, disableTestWorker);
 }
 
 /**

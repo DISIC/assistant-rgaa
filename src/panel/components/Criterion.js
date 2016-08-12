@@ -8,7 +8,7 @@ import TestContainer from './TestContainer';
 /**
  *
  */
-function Criterion({id, title, tests, isInactive, intl}) {
+function Criterion({id, title, tests, isInactive, isDone, intl}) {
 	const className = classNames('Criterion', {
 		'is-disabled': isInactive
 	});
@@ -17,12 +17,27 @@ function Criterion({id, title, tests, isInactive, intl}) {
 		: '';
 	return (
 		<div id={`criterion-${id}`} className={className} title={htmlTitle}>
-			<h1
-				className="Criterion-title"
-				dangerouslySetInnerHTML={{
-					__html: title
-				}}
-			/>
+			<header className="Criterion-header">
+				<h1
+					className="Criterion-title"
+					dangerouslySetInnerHTML={{
+						__html: title
+					}}
+				/>
+
+				<div className="Criterion-actions">
+					<div className="Criterion-action">
+						<input
+							type="checkbox"
+							title={intl.formatMessage({
+								id: 'Criterion.done.label'
+							})}
+							checked={isDone}
+							readOnly
+						/>
+					</div>
+				</div>
+			</header>
 
 			<ul className="Criterion-tests">
 				{tests.map(({id: testId, title: testTitle}) =>
@@ -40,11 +55,13 @@ Criterion.propTypes = {
 	title: PropTypes.string.isRequired,
 	tests: PropTypes.array.isRequired,
 	isInactive: PropTypes.bool,
+	isDone: PropTypes.bool,
 	intl: intlShape.isRequired
 };
 
 Criterion.defaultProps = {
-	isInactive: false
+	isInactive: false,
+	isDone: false
 };
 
 export default injectIntl(Criterion);
