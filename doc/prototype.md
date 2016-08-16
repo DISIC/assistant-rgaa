@@ -37,11 +37,7 @@ On a développé un robot qui récupère les données de référentiel en allant
 
 ## Tests non implémentés
 
-Implémenter un test est relativement long et c'est pourquoi beaucoup ne sont pas intégrés dans le prototype. Dans l'interface, un test où aucune icone de loupe n'est affichée est un test que nous n'avons pas implémenté pour le prototype. **Seuls certains tests de la version 3 du référentiel ont été implémentés**.
-
-## Tests non implémentés
-
-Implémenter un test est relativement long et c'est pourquoi beaucoup ne sont pas intégrés dans le prototype. Dans l'interface, un test où aucune icone de loupe n'est affichée est un test que nous n'avons pas implémenté pour le prototype.
+Implémenter un test est relativement long et c'est pourquoi beaucoup ne sont pas intégrés dans le prototype. Dans l'interface, un test où aucune icone de loupe n'est affichée est un test que nous n'avons pas implémenté pour le prototype. **Seuls certains tests de la version 3 du référentiel ont été implémentés**, pas ceux de la version 3-2016.
 
 ## Nom et icone de l'extension
 
