@@ -21,10 +21,8 @@ window.rgaaExt = {
 
 
 const restoreReference = () =>
-	getOption('reference').then(version => {
-		if (version) {
-			store.dispatch(setReferenceVersion(version));
-		}
+	getOption('reference').then((version = '3') => {
+		store.dispatch(setReferenceVersion(version));
 	});
 
 restoreReference();

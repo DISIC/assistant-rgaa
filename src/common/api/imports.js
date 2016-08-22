@@ -15,13 +15,8 @@ export const NON_TESTABLE = 'nt';
 /*
  *
  */
-export const validateImportContent = (content) => {
-	const reference = getReference(getReferenceVersion(content));
-	if (!reference) {
-		throw new Error('The RGAA version used in the imported file isn\'t supported.');
-	}
-	return validateJson(content);
-};
+export const getReferenceVersion = (importContent) =>
+	importContent['version-referentiel'] || null;
 
 /**
  * return true for given json object/string matching our schema
@@ -40,5 +35,7 @@ export const validateJson = (jsonObject) => {
 /*
  *
  */
-export const getReferenceVersion = (importContent) =>
-	importContent['version-referentiel'] || null;
+export const validateImportContent = (content) =>
+	getReference(getReferenceVersion(content))
+		.then(() => validateJson(content))
+		.catch(() => 'The RGAA version used in the imported file isn\'t supported.');

@@ -1,5 +1,4 @@
-import {find, get, flatten, map, sortBy} from 'lodash';
-import path from 'path';
+import {find, get, flatten, map} from 'lodash';
 
 
 
@@ -40,26 +39,15 @@ export const getFirstCriterion = (theme) => {
 /*
  * get an array of {name, filename, version}
  */
-export const getReferencesList = () => {
-	const req = require.context('../../../data/references', true, /\.json$/);
-	const references = req.keys().map(key => {
-		const {name} = req(key);
-		const version = path.basename(key, '.json');
-		return {
-			version,
-			name
-		};
-	});
-	return sortBy(references, 'name');
-};
+export const getReferencesList = () => ([
+	{name: 'RGAA 3', version: '3'},
+	{name: 'RGAA 3-2016', version: '3-2016'},
+	{name: 'RGAA 4.2', version: '4.2'}
+]);
 
 /*
  * retrieve the reference full json object from a given reference version property
  */
-export const getReference = (version) => {
-	try {
-		return require(`../../../data/references/${version}`);
-	} catch (e) {
-		return null;
-	}
-};
+export const getReference = (version) =>
+	fetch(chrome.extension.getURL(`data/references/${version}.json`))
+		.then((response) => response.json());

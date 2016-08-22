@@ -35,6 +35,12 @@ export const getEnabledTests = property('reference.tests');
 /**
  *
  */
+export const isLoaded = (state) =>
+	!!getVersion(state);
+
+/**
+ *
+ */
 export const isTestApplied = (state, testId) => !!state.reference.tests[testId];
 
 /**

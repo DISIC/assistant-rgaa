@@ -1,4 +1,6 @@
 import {connect} from 'react-redux';
+import {compose, branch, renderNothing} from 'recompose';
+import {identity} from 'lodash';
 import {
 	isModalOpen, isPending, getErrors, isValid, getVersion as getImportVersion
 } from '../../common/selectors/imports';
@@ -54,7 +56,15 @@ const mapDispatchToProps = (dispatch) => ({
 
 
 
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+export default compose(
+	connect(
+		mapStateToProps,
+		mapDispatchToProps
+	),
+	// renders nothing if no reference is set
+	branch(
+		({globalVersion}) => !!globalVersion,
+		identity,
+		renderNothing
+	)
 )(ImportModal);

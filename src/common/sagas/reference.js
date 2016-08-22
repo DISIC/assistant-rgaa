@@ -54,10 +54,12 @@ function* disableTestWorker({payload: {id}}) {
  */
 function* setReferenceVersionWorker({payload: {version}}) {
 	const data = yield call(getReference, version);
+	const helpers = yield call(getHelpers, version);
+
 	yield put(resetImportResults());
 	yield put(resetChecklist());
 	yield put(setReference(data));
-	yield put(setHelpers(getHelpers(version)));
+	yield put(setHelpers(helpers));
 	yield call(save, 'reference', version);
 }
 
