@@ -102,6 +102,10 @@ module.exports = {
 		new ExtractTextPlugin('[name].css', {
 			allChunks: true
 		}),
-		new webpack.optimize.CommonsChunkPlugin('common.js')
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'common',
+			filename: 'common.js',
+			minChunks: 2
+		})
 	]
 };
