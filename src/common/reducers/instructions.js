@@ -1,4 +1,3 @@
-import data from '../../../data/instructions/3';
 import {SET} from '../actions/instructions';
 
 
@@ -6,7 +5,7 @@ import {SET} from '../actions/instructions';
 /**
  *
  */
-const initialState = data;
+const initialState = {};
 
 /**
  *

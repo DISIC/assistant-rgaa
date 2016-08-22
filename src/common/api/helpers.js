@@ -3,4 +3,5 @@
  */
 export const getHelpers = (version) =>
 	fetch(chrome.extension.getURL(`data/helpers/${version}.json`))
-		.then((response) => response.json());
+		.then((response) => response.json())
+		.catch(() => ({}));

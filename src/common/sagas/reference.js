@@ -4,11 +4,13 @@ import {call, put, select} from 'redux-saga/effects';
 import {save} from '../api/options';
 import {getTheme, getReference} from '../api/reference';
 import {getHelpers} from '../api/helpers';
+import {fetchInstructions} from '../api/instructions';
 import {
 	SET_REFERENCE_VERSION, FETCH_THEME, ENABLE_TEST, DISABLE_TEST,
 	setReference, setCurrentTheme, disableTest
 } from '../actions/reference';
 import {setHelpers, applyHelpers, revertHelpers} from '../actions/helpers';
+import {set as setInstructions} from '../actions/instructions';
 import {resetResults as resetImportResults} from '../actions/imports';
 import {reset as resetChecklist} from '../actions/checklist';
 import {getEnabledTests} from '../selectors/reference';
@@ -53,13 +55,17 @@ function* disableTestWorker({payload: {id}}) {
  *
  */
 function* setReferenceVersionWorker({payload: {version}}) {
-	const data = yield call(getReference, version);
-	const helpers = yield call(getHelpers, version);
+	const [reference, helpers, instructions] = yield [
+		call(getReference, version),
+		call(getHelpers, version),
+		call(fetchInstructions, version)
+	];
 
 	yield put(resetImportResults());
 	yield put(resetChecklist());
-	yield put(setReference(data));
+	yield put(setReference(reference));
 	yield put(setHelpers(helpers));
+	yield put(setInstructions(instructions));
 	yield call(save, 'reference', version);
 }
 
