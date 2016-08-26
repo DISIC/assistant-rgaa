@@ -11,7 +11,7 @@ Pour installer et utiliser l'extension, il y a actuellement deux façons de fair
     * faites un drag&drop du fichier sur la page *chrome://extensions* : l'extension apparait
     * ouvrez un nouvel onglet pour pouvoir utiliser l'extension dessus
     * si au bout de quelques minutes, heures ou jours, Chrome désactive l'extension par sécurité, je sais pas trop ce que vous pouvez faire à part passer par la [méthode pas facile](#m%C3%A9thode-pas-facile)
-* sur Firefox (version 48 et plus) :
+* sur Firefox **[Developer Edition](https://www.mozilla.org/fr/firefox/developer/)** (:warning: installer des extensions non signées ne fonctionne pas sur la version standard de Firefox) :
     * allez sur la page *about:config* et mettez l'option `xpinstall.signatures.required` à `false`
     * allez sur la page *about:addons*, cliquez sur la roue en haut à droite, puis sur "Installer depuis un fichier" et sélectionnez le zip
     * Firefox vous demande de confirmer que vous voulez vraiment installer une application non sécurisée : DITES OUI
