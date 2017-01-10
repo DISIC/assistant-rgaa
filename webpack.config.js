@@ -3,6 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
+const VisualizerPlugin = require('webpack-visualizer-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const fullPath = path.resolve.bind(null, __dirname);
 
@@ -99,6 +100,7 @@ module.exports = {
 		];
 	},
 	plugins: [
+		new VisualizerPlugin(),
 		new ExtractTextPlugin('[name].css', {
 			allChunks: true
 		}),

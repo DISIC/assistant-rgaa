@@ -2,6 +2,7 @@ import {
 	chain, property, map, flatten, difference, intersection,
 	includes, get, groupBy, filter, each, fromPairs, isEmpty
 } from 'lodash';
+import fp from 'lodash/fp';
 import {NON_APPLICABLE} from '../api/imports';
 import {findCriterionIdsByTheme, findCriterionIds, findTestIds} from './reference';
 
@@ -133,8 +134,9 @@ export const findInactiveCriterionIdsByTheme = (state) => {
 export const findInactiveThemeIds = (state) => {
 	const importInactiveCriteriaByTheme = findInactiveCriterionIdsByTheme(state);
 	const referenceCriteriaByTheme = findCriterionIdsByTheme(state);
-	return chain(importInactiveCriteriaByTheme)
-		.map((criteria, themeId) => {
+
+	return fp.flow(
+		fp.map((criteria, themeId) => {
 			if (!referenceCriteriaByTheme[themeId]) {
 				return false;
 			}
@@ -142,8 +144,8 @@ export const findInactiveThemeIds = (state) => {
 				return themeId;
 			}
 			return false;
-		})
-		.uniq()
-		.filter()
-		.value();
+		}),
+		fp.uniq(),
+		fp.filter()
+	)(importInactiveCriteriaByTheme);
 };

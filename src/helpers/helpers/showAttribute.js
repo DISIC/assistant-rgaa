@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import {isString, chain} from 'lodash';
+import fp from 'lodash/fp';
 
 
 
@@ -23,11 +24,11 @@ const LINK_ATTRIBUTES = [
  */
 const linkIds = (name, value) =>
 	LINK_ATTRIBUTES.includes(name)
-		? chain(value)
-			.split(/\s+/)
-			.map((id) => `<a href="#${id}">#${id}</a>`)
-			.join(' ')
-			.value()
+		? fp.flow(
+			fp.split(/\s+/),
+			fp.map((id) => `<a href="#${id}">#${id}</a>`),
+			fp.join(' ')
+		)(value)
 		: value;
 
 /**
