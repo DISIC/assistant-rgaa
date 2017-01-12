@@ -61,13 +61,9 @@ chrome.browserAction.onClicked.addListener(() => {
 			// empty cached store from chrome storage to have some sort of "session storage"
 			return storage.removeAllWithPrefix(storage.persistPrefix);
 		})
-		.then(() => {
-			// restore reference from options if we want to open the panel
-			if (!isOpen(store.getState())) {
-				return restoreReference();
-			}
-			return true;
-		})
+		.then(() =>
+			restoreReference()
+		)
 		.then(() => {
 			store.dispatch(setCurrentTab(tab));
 			store.dispatch(toggle());
