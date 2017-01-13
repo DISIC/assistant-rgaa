@@ -1,4 +1,4 @@
-import {get, every, partial} from 'lodash';
+import {get, every} from 'lodash';
 
 
 
@@ -11,5 +11,7 @@ export const isTestDone = (state, id) =>
 /**
  *
  */
-export const areAllTestsDone = (state, ids) =>
-	every(ids, partial(isTestDone, state));
+export const areAllTestsDone = (state, tests) =>
+	every(tests, ({id}) =>
+		isTestDone(state, id)
+	);

@@ -1,12 +1,12 @@
 import React from 'react';
 import {Router, Route, createMemoryHistory} from 'react-router';
-import {fetchTheme} from '../common/actions/reference';
+import * as themesActions from '../common/actions/themes';
 import AppContainer from './components/AppContainer';
 
 
 export default function (store) {
 	const onThemeRoute = ({params}) => {
-		store.dispatch(fetchTheme(params.theme));
+		store.dispatch(themesActions.setCurrent(params.theme));
 	};
 
 	/**

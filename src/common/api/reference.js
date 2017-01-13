@@ -1,41 +1,3 @@
-import {find, get, flatten, map} from 'lodash';
-
-
-
-/*
- *
- */
-export const getTheme = (themeId, reference) =>
-	find(reference.themes, {id: themeId});
-
-/**
- *
- */
-export const getAllCriteria = (reference) =>
-	flatten(map(reference.themes, 'criteria'));
-
-/*
- *
- */
-export const getCriterion = (criterionId, reference) =>
-	find(getAllCriteria(reference), {id: criterionId});
-
-/*
- *
- */
-export const getFirstTheme = (reference) =>
-	get(reference, 'themes[0]', null);
-
-/*
- *
- */
-export const getFirstCriterion = (theme) => {
-	if (!theme) {
-		return null;
-	}
-	return get(theme, 'criteria[0]', null);
-};
-
 /*
  * get an array of {name, filename, version}
  */
@@ -51,3 +13,50 @@ export const getReferencesList = () => ([
 export const getReference = (version) =>
 	fetch(chrome.extension.getURL(`data/references/${version}.json`))
 		.then((response) => response.json());
+
+/**
+ *	Flattens a hierarchical reference object into a series of
+ *	objects referencing each other : "reference", "themes",
+ *	"criteria", and "tests".
+ */
+export const flattenReference = (data) => {
+	const themes = {};
+	const criteria = {};
+	const tests = {};
+
+	// HORREUR SORRY BISOUS
+	const reference = {
+		...data,
+		themes: data.themes.map((theme) => {
+			themes[theme.id] = {
+				...theme,
+				criteria: theme.criteria.map((criterion) => {
+					criteria[criterion.id] = {
+						...criterion,
+						themeId: theme.id,
+						tests: criterion.tests.map((test) => {
+							tests[test.id] = {
+								...test,
+								criterionId: criterion.id,
+								enabled: false
+							};
+
+							return test.id;
+						})
+					};
+
+					return criterion.id;
+				})
+			};
+
+			return theme.id;
+		})
+	};
+
+	return {
+		reference,
+		themes,
+		criteria,
+		tests
+	};
+};

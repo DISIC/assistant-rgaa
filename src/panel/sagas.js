@@ -1,11 +1,10 @@
-import * as reference from '../common/sagas/reference';
+import * as tests from '../common/sagas/tests';
 
 
 
 export default function* sagas() {
 	yield [
-		reference.watchFetch(),
-		reference.watchEnableTest(),
-		reference.watchDisableTest()
+		tests.watchEnable(),
+		tests.watchDisable()
 	];
 }

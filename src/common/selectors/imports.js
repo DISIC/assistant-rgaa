@@ -1,10 +1,12 @@
 import {
-	chain, property, map, flatten, difference, intersection,
+	property, map, flatten, difference, intersection, eq,
 	includes, get, groupBy, filter, each, fromPairs, isEmpty
 } from 'lodash';
 import fp from 'lodash/fp';
 import {NON_APPLICABLE} from '../api/imports';
-import {findCriterionIdsByTheme, findCriterionIds, findTestIds} from './reference';
+import * as themesSelectors from './themes';
+import * as criteriaSelectors from './criteria';
+import * as testsSelectors from './tests';
 
 
 
@@ -98,7 +100,7 @@ const rawTests = (state) =>
  */
 export const findInactiveCriterionIds = (state) => {
 	const importIds = map(rawInactiveCriteria(state), 'id');
-	const refIds = findCriterionIds(state);
+	const refIds = criteriaSelectors.getIds(state);
 	return intersection(importIds, refIds);
 };
 
@@ -108,7 +110,7 @@ export const findInactiveCriterionIds = (state) => {
 export const findTestResults = (state) => {
 	const allTests = rawTests(state);
 	const importResults = fromPairs(allTests.map(({id, resultat}) => [id, resultat]));
-	const testIds = findTestIds(state);
+	const testIds = testsSelectors.getIds(state);
 	const referenceTestResults = {};
 	testIds.forEach(id => {
 		if (importResults[id]) {
@@ -133,7 +135,7 @@ export const findInactiveCriterionIdsByTheme = (state) => {
  */
 export const findInactiveThemeIds = (state) => {
 	const importInactiveCriteriaByTheme = findInactiveCriterionIdsByTheme(state);
-	const referenceCriteriaByTheme = findCriterionIdsByTheme(state);
+	const referenceCriteriaByTheme = themesSelectors.getCriteriaIdsByTheme(state);
 
 	return fp.flow(
 		fp.map((criteria, themeId) => {
@@ -145,7 +147,7 @@ export const findInactiveThemeIds = (state) => {
 			}
 			return false;
 		}),
-		fp.uniq(),
-		fp.filter()
+		fp.uniqBy(eq),
+		fp.filter(Boolean)
 	)(importInactiveCriteriaByTheme);
 };
