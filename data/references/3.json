@@ -799,7 +799,12 @@
 				{
 					"id": "5.4",
 					"title": "Critère 5.4 [A] Chaque tableau de données a-t-il un titre ?",
-					"tests": []
+					"tests": [
+						{
+							"title": "Test 5.4.1 : Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/3.0#tableau-de-donnes%20complexe\" target=\"_blank\">tableau de données</a> (balise <code lang=\"en\" xml:lang=\"en\">table</code>) a-t-il une balise <code lang=\"en\" xml:lang=\"en\">caption</code> ?",
+							"id": "5.4.1"
+						}
+					]
 				},
 				{
 					"id": "5.5",

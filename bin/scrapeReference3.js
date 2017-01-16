@@ -22,18 +22,22 @@ module.exports = (options) => (html) => {
 
 	installResolveLinksPlugin($);
 
+	// In test 5.4.1, the title does not start with "Test", so
+	// we take care of this quirk by reconstructing a full
+	// title for each test.
 	const scrapeTest = (i, el) => {
 		const element = $(el);
 		const title = element.resolveLinks(options.source).html().trim();
-		const idMatches = /^Test (\d+\.\d+\.\d+)/i.exec(title);
+		const idMatches = /^(Test )?(\d+\.\d+\.\d+)(.*)/i.exec(title);
 
 		if (idMatches === null) {
 			return null;
 		}
 
-		const id = idMatches[1];
-
-		return {id, title};
+		return {
+			id: idMatches[2],
+			title: 'Test ' + idMatches[2] + idMatches[3]
+		};
 	};
 
 	const scrapeCriterion = (i, el) => {
