@@ -1,4 +1,7 @@
+import {compose} from 'recompose';
 import {connect} from 'react-redux';
+import {property} from 'lodash';
+import renderNothingUntil from '../../common/renderNothingUntil';
 import {isOpen, getPopupWindowId, getPosition} from '../../common/selectors/container';
 import App from './App';
 
@@ -14,4 +17,7 @@ const mapStateToProps = (state) => ({
 
 
 
-export default connect(mapStateToProps)(App);
+export default compose(
+	connect(mapStateToProps),
+	renderNothingUntil(property('open'))
+)(App);
