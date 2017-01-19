@@ -1,7 +1,8 @@
-import {compose, branch, renderNothing} from 'recompose';
+import {compose} from 'recompose';
 import {connect} from 'react-redux';
-import {get, identity} from 'lodash';
+import {get, property} from 'lodash';
 import Theme from './Theme';
+import renderNothingUntil from '../../common/renderNothingUntil';
 import * as criteriaActions from '../../common/actions/criteria';
 import * as themes from '../../common/selectors/themes';
 import * as criteria from '../../common/selectors/criteria';
@@ -40,9 +41,5 @@ export default compose(
 		mapStateToProps,
 		mapDispatchToProps
 	),
-	branch(
-		({theme}) => !!theme,
-		identity,
-		renderNothing()
-	)
+	renderNothingUntil(property('theme'))
 )(Theme);

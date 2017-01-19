@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
-import {compose, branch, renderNothing} from 'recompose';
-import {property, identity} from 'lodash';
+import {compose} from 'recompose';
+import {property} from 'lodash';
+import renderNothingUntil from '../../common/renderNothingUntil';
 import {isLoaded} from '../../common/selectors/reference';
 import App from './App';
 
@@ -17,10 +18,5 @@ const mapStateToProps = (state) => ({
 
 export default compose(
 	connect(mapStateToProps),
-	// renders nothing if no reference is loaded
-	branch(
-		property('isReferenceLoaded'),
-		identity,
-		renderNothing
-	)
+	renderNothingUntil(property('isReferenceLoaded'))
 )(App);

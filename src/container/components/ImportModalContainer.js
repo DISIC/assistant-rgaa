@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
-import {compose, branch, renderNothing} from 'recompose';
-import {identity} from 'lodash';
+import {compose} from 'recompose';
+import {property} from 'lodash';
+import renderNothingUntil from '../../common/renderNothingUntil';
 import {
 	isModalOpen, isPending, getErrors, isValid, getVersion as getImportVersion
 } from '../../common/selectors/imports';
@@ -61,10 +62,5 @@ export default compose(
 		mapStateToProps,
 		mapDispatchToProps
 	),
-	// renders nothing if no reference is set
-	branch(
-		({globalVersion}) => !!globalVersion,
-		identity,
-		renderNothing
-	)
+	renderNothingUntil(property('globalVersion'))
 )(ImportModal);
