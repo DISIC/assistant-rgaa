@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import {isString, chain} from 'lodash';
+import {isString} from 'lodash';
+import fp from 'lodash/fp';
 
 
 
@@ -21,14 +22,17 @@ const LINK_ATTRIBUTES = [
  *	@param {string} value - Attribute value.
  *	@return {string} - Attribute value containing anchors if needed.
  */
-const linkIds = (name, value) =>
-	LINK_ATTRIBUTES.includes(name)
-		? chain(value)
-			.split(/\s+/)
-			.map((id) => `<a href="#${id}">#${id}</a>`)
-			.join(' ')
-			.value()
-		: value;
+const linkIds = (name, value) => {
+	if (!LINK_ATTRIBUTES.includes(name)) {
+		return value;
+	}
+
+	return fp.flow(
+		fp.split(/\s+/),
+		fp.map((id) => `<a href="#${id}">#${id}</a>`),
+		fp.join(' ')
+	)(value);
+};
 
 /**
  *

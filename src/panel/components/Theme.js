@@ -12,9 +12,9 @@ import SelectField from './SelectField';
  *
  */
 function Theme({
-	currentReference, currentTheme, currentCriterion, isInactive, onCriterionSelect, intl
+	theme, criteria, currentCriterion, isInactive, onCriterionSelect, intl
 }) {
-	const criteriaOptions = map(currentTheme.criteria, ({id = '', title = ''}) => ({
+	const criteriaOptions = map(criteria, ({id = '', title = ''}) => ({
 		value: id,
 		text: stripTags(title)
 	}));
@@ -25,12 +25,13 @@ function Theme({
 
 	const onCriterionChange = (criterionId) => {
 		focusCriterion(criterionId);
-		onCriterionSelect(criterionId, currentReference);
+		onCriterionSelect(criterionId);
 	};
 
 	const className = classNames('Theme', {
 		'is-disabled': isInactive
 	});
+
 	const title = isInactive
 		? intl.formatMessage({id: 'Theme.disabled'})
 		: '';
@@ -38,10 +39,10 @@ function Theme({
 	return (
 		<div className={className} title={title}>
 			<header className="Theme-header">
-				<h1 className="Theme-title">{currentTheme.title}</h1>
+				<h1 className="Theme-title">{theme.title}</h1>
 
 				<SelectField
-					id={`Theme-${currentTheme.id}-criterion-select`}
+					id={`Theme-${theme.id}-criterion-select`}
 					name="criteria"
 					label={intl.formatMessage({
 						id: 'Theme.criterion.select.label'
@@ -58,7 +59,7 @@ function Theme({
 
 			<div className="Theme-content">
 				<ul className="Theme-criteria">
-					{map(currentTheme.criteria, criterion =>
+					{map(criteria, criterion =>
 						<li
 							key={`criterion-${criterion.id}`}
 							className="Theme-criterion"
@@ -73,8 +74,8 @@ function Theme({
 }
 
 Theme.propTypes = {
-	currentReference: PropTypes.object.isRequired,
-	currentTheme: PropTypes.object,
+	theme: PropTypes.object,
+	criteria: PropTypes.array,
 	currentCriterion: PropTypes.object,
 	isInactive: PropTypes.bool,
 	onCriterionSelect: PropTypes.func.isRequired,

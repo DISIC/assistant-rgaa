@@ -1,11 +1,10 @@
+import {compose, branch, renderNothing} from 'recompose';
 import {connect} from 'react-redux';
-import {get} from 'lodash';
+import {get, identity} from 'lodash';
 import Theme from './Theme';
-import {setCurrentCriterion} from '../../common/actions/reference';
-import {getCriterion} from '../../common/api/reference';
-import {
-	getCurrent, getCurrentTheme, getCurrentCriterion
-} from '../../common/selectors/reference';
+import * as criteriaActions from '../../common/actions/criteria';
+import * as themes from '../../common/selectors/themes';
+import * as criteria from '../../common/selectors/criteria';
 import {isThemeInactive} from '../../common/selectors/imports';
 
 
@@ -13,25 +12,37 @@ import {isThemeInactive} from '../../common/selectors/imports';
 /**
  *
  */
-const mapStateToProps = (state) => ({
-	currentReference: getCurrent(state),
-	currentTheme: getCurrentTheme(state),
-	currentCriterion: getCurrentCriterion(state),
-	isInactive: isThemeInactive(state, get(getCurrentTheme(state), 'id', null))
-});
+const mapStateToProps = (state) => {
+	const theme = themes.getCurrent(state);
+	const themeId = get(theme, 'id', null);
+
+	return {
+		theme,
+		criteria: criteria.getAllByTheme(state, themeId),
+		currentCriterion: criteria.getCurrent(state),
+		isInactive: isThemeInactive(state, themeId)
+	};
+};
 
 /**
  *
  */
 const mapDispatchToProps = (dispatch) => ({
-	onCriterionSelect(criterionId, reference) {
-		dispatch(setCurrentCriterion(getCriterion(criterionId, reference)));
+	onCriterionSelect(criterionId) {
+		dispatch(criteriaActions.setCurrent(criterionId));
 	}
 });
 
 
 
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+export default compose(
+	connect(
+		mapStateToProps,
+		mapDispatchToProps
+	),
+	branch(
+		({theme}) => !!theme,
+		identity,
+		renderNothing()
+	)
 )(Theme);

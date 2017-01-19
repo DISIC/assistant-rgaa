@@ -1,4 +1,3 @@
-import data from '../../../data/helpers/3';
 import {SET_HELPERS} from '../actions/helpers';
 
 
@@ -6,7 +5,7 @@ import {SET_HELPERS} from '../actions/helpers';
 /**
  *
  */
-const initialState = data;
+const initialState = {};
 
 /**
  *

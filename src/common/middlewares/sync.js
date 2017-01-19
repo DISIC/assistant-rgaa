@@ -23,7 +23,8 @@ export const createGatherMiddleware = (name) =>
 			}
 		});
 
-		return (action) => next(action);
+		return (action) =>
+			next(action);
 	};
 
 /**

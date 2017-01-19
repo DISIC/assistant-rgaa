@@ -14,26 +14,26 @@ const createId = (id, index) =>
 	`rgaaExt-Helper--${id}-${index}`.replace(/\./g, '-');
 
 /**
- *	Returns a call effect that will call a function of the
- *	given helper, passing it context variables and options.
+ *	Calls a specific function on each of the given helpers.
  *
  *	@param {string} func - Name of the module's function to call,
  *		either 'apply' or 'revert'.
- *	@param {string|array} helper - Helper descriptor.
  *	@param {string} id - Id.
- *	@return {function} - Call effect.
+ *	@param {string|array} helper - Helper descriptor.
  */
-const createCall = (func, helper, id) => {
-	const {module, args} = info(helper);
+function* execHelpers(func, id, helpers) {
+	const helpersInfo = yield helpers.map((helper) =>
+		call(info, helper)
+	);
 
-	// creates a call effect that will call a function of the
-	// module, with id as a first argument, and args as the rest.
-	return call.apply(null, [
-		module[func],
-		id,
-		...args
-	]);
-};
+	yield helpersInfo.map((helperInfo, i) =>
+		call(
+			helperInfo.module[func],
+			createId(id, i),
+			...helperInfo.args
+		)
+	);
+}
 
 
 
@@ -42,13 +42,11 @@ const createCall = (func, helper, id) => {
  */
 function* applySaga({
 	payload: {
-		helpers,
-		id
+		id,
+		helpers
 	}
 }) {
-	yield helpers.map((helper, index) =>
-		createCall('apply', helper, createId(id, index))
-	);
+	yield* execHelpers('apply', id, helpers);
 }
 
 /**
@@ -56,13 +54,11 @@ function* applySaga({
  */
 function* revertSaga({
 	payload: {
-		helpers,
-		id
+		id,
+		helpers
 	}
 }) {
-	yield helpers.map((helper, index) =>
-		createCall('revert', helper, createId(id, index))
-	);
+	yield* execHelpers('revert', id, helpers);
 }
 
 

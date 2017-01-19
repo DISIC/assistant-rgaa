@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {includes} from 'lodash';
+import {map, includes} from 'lodash';
 import Slyct from './Slyct';
 import ThemesListItem from './ThemesListItem';
 
@@ -51,11 +51,11 @@ export default function ThemesList({themes, activeTheme, inactiveThemes}) {
 					}}
 					rawData={themes}
 				>
-					{themes.map(theme =>
+					{map(themes, (theme) =>
 						<ThemesListItem
 							{...theme}
 							icon={icons[theme.id]}
-							isActive={activeTheme.id === theme.id}
+							isActive={activeTheme === theme.id}
 							isDisabled={includes(inactiveThemes, theme.id)}
 							key={theme.id}
 						/>
@@ -74,7 +74,7 @@ export default function ThemesList({themes, activeTheme, inactiveThemes}) {
 
 ThemesList.propTypes = {
 	themes: PropTypes.array.isRequired,
-	activeTheme: PropTypes.object,
+	activeTheme: PropTypes.string,
 	inactiveThemes: PropTypes.array
 };
 

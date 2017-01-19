@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {debounce, omit, get, toInteger, isEqual, find} from 'lodash';
-require('sly/dist/sly');
+import 'sly/dist/sly';
 
 
 

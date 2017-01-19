@@ -15,17 +15,20 @@ import {
  */
 function* applyWorker() {
 	const importVersion = yield select(getVersion);
-	if (importVersion) {
-		yield put(setReferenceVersion(importVersion));
 
-		const inactiveThemes = yield select(findInactiveThemeIds);
-		const inactiveCriteria = yield select(findInactiveCriterionIds);
-		const testResults = yield select(findTestResults);
-
-		yield put(setNonApplicableThemes(inactiveThemes));
-		yield put(setNonApplicableCriteria(inactiveCriteria));
-		yield put(setTestsResults(testResults));
+	if (!importVersion) {
+		return;
 	}
+
+	yield put(setReferenceVersion(importVersion));
+
+	const inactiveThemes = yield select(findInactiveThemeIds);
+	const inactiveCriteria = yield select(findInactiveCriterionIds);
+	const testResults = yield select(findTestResults);
+
+	yield put(setNonApplicableThemes(inactiveThemes));
+	yield put(setNonApplicableCriteria(inactiveCriteria));
+	yield put(setTestsResults(testResults));
 }
 
 /**
