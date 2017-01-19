@@ -1,21 +1,20 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import HeaderContainer from './HeaderContainer';
-import ThemesListContainer from './ThemesListContainer';
-import ThemeContainer from './ThemeContainer';
 
 
 
 /**
  *
  */
-export default function App() {
+export default function App({children}) {
 	return (
 		<div className="App">
 			<HeaderContainer />
-
-			<ThemesListContainer />
-
-			<ThemeContainer />
+			{children}
 		</div>
 	);
 }
+
+App.propTypes = {
+	children: PropTypes.element
+};

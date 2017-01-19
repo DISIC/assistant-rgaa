@@ -1,8 +1,6 @@
 import {
-	OPEN_MODAL, CLOSE_MODAL,
-	RESET_MODAL_CONTENT, RESET_RESULTS,
-	SET_ERRORS, SET_CONTENT, SET_PENDING,
-	SET_NON_APPLICABLE_THEMES, SET_NON_APPLICABLE_CRITERIA, SET_TESTS_RESULTS
+	SET_ERRORS, SET_CONTENT, SET_PENDING, SET_NON_APPLICABLE_THEMES,
+	SET_NON_APPLICABLE_CRITERIA, SET_TESTS_RESULTS, RESET
 } from '../actions/imports';
 
 
@@ -11,9 +9,6 @@ import {
  *
  */
 const initialState = {
-	modal: {
-		open: false
-	},
 	errors: '',
 	content: null,
 	pending: false,
@@ -27,32 +22,6 @@ const initialState = {
  */
 export default function imports(state = initialState, {type, payload}) {
 	switch (type) {
-		case OPEN_MODAL:
-			return {
-				...state,
-				modal: {
-					...state.modal,
-					open: true
-				}
-			};
-
-		case CLOSE_MODAL:
-			return {
-				...state,
-				modal: {
-					...state.modal,
-					open: false
-				}
-			};
-
-		case RESET_MODAL_CONTENT:
-			return {
-				...state,
-				errors: '',
-				content: null,
-				pending: false
-			};
-
 		case SET_ERRORS:
 			return {
 				...state,
@@ -92,13 +61,8 @@ export default function imports(state = initialState, {type, payload}) {
 				testResults: payload.data
 			};
 
-		case RESET_RESULTS:
-			return {
-				...state,
-				inactiveThemeIds: [],
-				inactiveCriterionIds: [],
-				testResults: {}
-			};
+		case RESET:
+			return initialState;
 
 		default:
 			return state;

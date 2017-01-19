@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage, FormattedHTMLMessage, injectIntl} from 'react-intl';
-import Modal from 'react-modal';
 import renderIf from 'render-if';
 
 
@@ -8,8 +7,8 @@ import renderIf from 'render-if';
 /**
  *
  */
-function ImportModal({
-	pending, valid, errors, open, importVersion, globalVersion, onClose, onFileSelection, onSubmit
+function ImportPage({
+	pending, valid, errors, importVersion, globalVersion, onReset, onFileSelection, onSubmit
 }) {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
@@ -28,28 +27,22 @@ function ImportModal({
 	};
 
 	return (
-		<Modal
-			isOpen={open}
-			onRequestClose={onClose}
-			portalClassName="rgaaExt-ImportModal"
-			className="rgaaExt-ImportModal-container"
-			overlayClassName="rgaaExt-ImportModal-overlay"
-		>
-			<h1 className="rgaaExt-ImportModal-title">
+		<div>
+			<h1 className="ImportPage-title">
 				<FormattedMessage id="Import.title" />
 			</h1>
 
-			<div className="rgaaExt-ImportModal-content">
+			<div className="ImportPage-content">
 				<form onSubmit={onFormSubmit}>
-					<label htmlFor="rgaaExt-ImportModal-fileInput">
+					<label htmlFor="ImportPage-fileInput">
 						<FormattedMessage id="Import.file.label" />
 					</label>
 					{/* `value=""` is a dirty trick to allow selection of same file
 					multiples times in a row... but this messes up the UI,
 					not that great */}
 					<input
-						id="rgaaExt-ImportModal-fileInput"
-						className="rgaaExt-ImportModal-fileInput"
+						id="ImportPage-fileInput"
+						className="ImportPage-fileInput"
 						name="file"
 						type="file"
 						accept="application/json"
@@ -58,12 +51,12 @@ function ImportModal({
 					/>
 
 					{renderIf(valid)(
-						<p className="rgaaExt-ImportModal-success">
+						<p className="ImportPage-success">
 							<FormattedMessage id="Import.success" />
 						</p>
 					)}
 					{renderIf(valid && importVersion !== globalVersion)(
-						<p className="rgaaExt-ImportModal-warning">
+						<p className="ImportPage-warning">
 							<FormattedHTMLMessage
 								id="Import.versionDifference"
 								values={{
@@ -73,36 +66,35 @@ function ImportModal({
 						</p>
 					)}
 					{renderIf(pending && !valid)([
-						(<p key="failure" className="rgaaExt-ImportModal-failure">
+						(<p key="failure" className="ImportPage-failure">
 							<FormattedMessage id="Import.failure" />
 						</p>),
-						(<ul key="errors" className="rgaaExt-ImportModal-errors">
+						(<ul key="errors" className="ImportPage-errors">
 							{errors.split('\n').map((error, i) =>
 								<li key={`error-${i}`}>{error}</li>
 							)}
 						</ul>)
 					])}
 
-					<div className="rgaaExt-ImportModal-buttons">
-						<button disabled={!valid} className="rgaaExt-ImportModal-button">
+					<div className="ImportPage-buttons">
+						<button disabled={!valid} className="ImportPage-button">
 							<FormattedMessage id="Import.submit" />
 						</button>
 
-						<button type="button" onClick={onClose} className="rgaaExt-ImportModal-button">
-							<FormattedMessage id="Import.close" />
+						<button type="button" onClick={onReset} className="ImportPage-button">
+							<FormattedMessage id="Import.reset" />
 						</button>
 					</div>
 				</form>
 			</div>
-		</Modal>
+		</div>
 	);
 }
 
-ImportModal.propTypes = {
-	open: PropTypes.bool.isRequired,
+ImportPage.propTypes = {
 	importVersion: PropTypes.string,
 	globalVersion: PropTypes.string.isRequired,
-	onClose: PropTypes.func.isRequired,
+	onReset: PropTypes.func.isRequired,
 	onFileSelection: PropTypes.func.isRequired,
 	onSubmit: PropTypes.func.isRequired,
 	errors: PropTypes.string.isRequired,
@@ -110,8 +102,8 @@ ImportModal.propTypes = {
 	pending: PropTypes.bool.isRequired
 };
 
-ImportModal.defaultProps = {
+ImportPage.defaultProps = {
 	importVersion: ''
 };
 
-export default injectIntl(ImportModal);
+export default injectIntl(ImportPage);

@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import {CONTAINER_ID} from '../api/iframe';
 import ResizeHandle from './ResizeHandle';
 import Iframe from './Iframe';
-import ImportModalContainer from './ImportModalContainer';
 
 
 
@@ -34,8 +33,6 @@ export default function App({position}) {
 			>
 				<Iframe />
 			</ResizeHandle>
-
-			<ImportModalContainer />
 		</div>
 	);
 }
