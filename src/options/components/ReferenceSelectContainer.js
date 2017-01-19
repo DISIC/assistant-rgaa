@@ -2,7 +2,7 @@ import {compose, withProps} from 'recompose';
 import {connect} from 'react-redux';
 import ReferenceSelect from './ReferenceSelect';
 import {setReferenceVersion} from '../../common/actions/reference';
-import {resetImportResults} from '../../common/actions/imports';
+import {resetResults as resetImportResults} from '../../common/actions/imports';
 import {getReferencesList} from '../../common/api/reference';
 import {getCurrent} from '../../common/selectors/reference';
 
