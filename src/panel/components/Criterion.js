@@ -17,8 +17,8 @@ function Criterion({id, title, tests, isInactive, isDone, intl}) {
 		: '';
 	return (
 		<div id={`criterion-${id}`} className={className} title={htmlTitle}>
-			<header className="Criterion-header">
-				<h1
+			<header className="Criterion-header Title Title--sub">
+				<h3
 					className="Criterion-title"
 					dangerouslySetInnerHTML={{
 						__html: title

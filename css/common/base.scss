@@ -19,7 +19,7 @@ body {
 
 body {
 	@include typi-base();
-	font-family: $font-sans-serif;
+	font-family: $font-body;
 	background: $color-white;
 }
 

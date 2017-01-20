@@ -3,8 +3,6 @@ import {connect} from 'react-redux';
 import {get, property} from 'lodash';
 import Theme from './Theme';
 import renderNothingUntil from '../../common/renderNothingUntil';
-import * as criteriaActions from '../../common/actions/criteria';
-import * as themes from '../../common/selectors/themes';
 import * as criteria from '../../common/selectors/criteria';
 import {isThemeInactive} from '../../common/selectors/imports';
 
@@ -13,14 +11,11 @@ import {isThemeInactive} from '../../common/selectors/imports';
 /**
  *
  */
-const mapStateToProps = (state) => {
-	const theme = themes.getCurrent(state);
-	const themeId = get(theme, 'id', null);
+const mapStateToProps = (state, ownProps) => {
+	const themeId = get(ownProps.theme, 'id', null);
 
 	return {
-		theme,
 		criteria: criteria.getAllByTheme(state, themeId),
-		currentCriterion: criteria.getCurrent(state),
 		isInactive: isThemeInactive(state, themeId)
 	};
 };
@@ -28,11 +23,7 @@ const mapStateToProps = (state) => {
 /**
  *
  */
-const mapDispatchToProps = (dispatch) => ({
-	onCriterionSelect(criterionId) {
-		dispatch(criteriaActions.setCurrent(criterionId));
-	}
-});
+const mapDispatchToProps = () => ({});
 
 
 

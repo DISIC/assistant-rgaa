@@ -19,10 +19,10 @@
 }
 
 .ImportResult[data-import-result='na'] {
-	background: $color-emperor;
+	background: $color-gray-dark;
 }
 
 .ImportResult[data-import-result='nt'] {
 	background: $color-orange;
-	color: $color-black;
+	color: $color-orange-text;
 }

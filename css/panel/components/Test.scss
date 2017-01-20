@@ -1,5 +1,5 @@
 .Test {
-	border: 1px solid lighten($color-black, 30%);
+	border-top: 1px solid lighten($color-black, 60%);
 	border-bottom: none;
 }
 
@@ -9,8 +9,7 @@
 }
 
 .Test-title {
-	padding: vr(0.25);
-	padding-left: $app-gutter;
+	padding: vr(0.25) $app-gutter;
 }
 
 .Test-actions {

@@ -1,5 +1,5 @@
 .TestInstructions {
-	padding: vr(0.25) vr(0.5);
+	padding: vr(0.25) $app-gutter;
 	border-top: 1px solid lighten($color-black, 80%);
 }
 

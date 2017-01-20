@@ -1,9 +1,11 @@
+.Criterion {
+	border-top: 1px solid lighten($color-black, 60%);
+}
+
 .Criterion-header {
 	display: flex;
 	justify-content: space-between;
-	background-color: $color-mariner;
-	color: $color-white;
-	font-weight: bold;
+	padding: 0;
 
 	a {
 		color: $color-white;
@@ -11,7 +13,8 @@
 }
 
 .Criterion-title {
-	padding: $app-gutter;
+	padding: vr(0.25) $app-gutter;
+	font-weight: bold;
 }
 
 .Criterion-actions {
@@ -22,7 +25,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	padding: vr(1/8);
-	border-left: 1px solid lighten($color-mariner, 20%);
+	border-left: 1px solid lighten($color-theme, 20%);
 	height: 100%;
 }
 
@@ -39,23 +42,28 @@
 }
 
 .Criterion-test:nth-child(even) {
-	background: rgba($color-mariner, 0.05);
+	background: rgba($color-blue, 0.05);
 }
 
 .Criterion-test:hover {
-	background: rgba(yellow, 0.1);
+	background: $color-highlight;
 }
 
 .Criterion:target .Criterion-title {
 	animation: highlight 0.5s ease-in;
 }
 
+.Criterion-test:last-child .Test-header:last-child,
+.Criterion-test:last-child .TestInstructions {
+	padding-bottom: vr(2);
+}
+
 @keyframes highlight {
 	0% {
-		background-color: lighten($color-mariner, 40%);
+		background-color: lighten($color-blue, 40%);
 	}
 
 	100% {
-		background-color: $color-mariner;
+		background-color: $color-blue;
 	}
 }

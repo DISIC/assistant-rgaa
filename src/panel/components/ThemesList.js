@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {map, includes} from 'lodash';
-import Slyct from './Slyct';
+import {FormattedMessage} from 'react-intl';
 import ThemesListItem from './ThemesListItem';
 
 
@@ -27,47 +27,20 @@ const icons = {
 export default function ThemesList({themes, activeTheme, inactiveThemes}) {
 	return (
 		<nav className="ThemesList">
-			<button
-				type="button"
-				className="Button ThemesList-navButton ThemesList-navButton--prev"
-			>
-				&larr;
-			</button>
-			<div className="ThemesList-tabs">
-				<Slyct
-					config={{
-						horizontal: true,
-						itemNav: 'basic',
-						smart: true,
-						activateOn: null,
-						mouseDragging: true,
-						touchDragging: true,
-						releaseSwing: 1,
-						nextPage: '.ThemesList-navButton--next',
-						prevPage: '.ThemesList-navButton--prev',
-						speed: 250,
-						activeClass: 'is-active',
-						keyboardNavBy: 'items'
-					}}
-					rawData={themes}
-				>
-					{map(themes, (theme) =>
-						<ThemesListItem
-							{...theme}
-							icon={icons[theme.id]}
-							isActive={activeTheme === theme.id}
-							isDisabled={includes(inactiveThemes, theme.id)}
-							key={theme.id}
-						/>
-					)}
-				</Slyct>
-			</div>
-			<button
-				type="button"
-				className="Button ThemesList-navButton ThemesList-navButton--next"
-			>
-				&rarr;
-			</button>
+			<h2 className="ThemesList-title Title">
+				<FormattedMessage id="ThemesList.title" />
+			</h2>
+			<ul className="ThemesList-list">
+				{map(themes, (theme) =>
+					<ThemesListItem
+						{...theme}
+						icon={icons[theme.id]}
+						isActive={activeTheme === theme.id}
+						isDisabled={includes(inactiveThemes, theme.id)}
+						key={theme.id}
+					/>
+				)}
+			</ul>
 		</nav>
 	);
 }

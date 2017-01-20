@@ -4,13 +4,9 @@ import {Link} from 'react-router';
 
 
 
-function ThemesListItem({id, title, icon, isActive, isDisabled, intl}) {
+function ThemesListItem({id, title, icon, isDisabled, intl}) {
 	const style = {backgroundImage: `url('/img/${icon}')`};
 	const props = {};
-	if (isActive) {
-		// this tells Slyct to activate the item
-		props['data-slyct-active-item'] = '';
-	}
 	const listItem = (tab) => (
 		<li className="ThemesList-item" {...props}>
 			{tab}

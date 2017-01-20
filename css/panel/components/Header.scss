@@ -1,6 +1,5 @@
-$Header-color: #555;
-
 .Header {
+	flex-shrink: 0;
 	display: flex;
 	padding: vr(0.25) vr(0.5);
 	align-items: center;

@@ -7,6 +7,15 @@ $base-font-size: 13px;
 $typi: (
 	null: ($base-font-size, 1.5)
 );
+$typi-xlarge: (
+	null: (1.0625em, 1.5)
+);
+$typi-large: (
+	null: (0.9375em, 1.5)
+);
+$typi-regular: (
+	null: (0.8125em, 1.5)
+);
 
 $base-line-height: $base-font-size * 1.5;
 
@@ -16,17 +25,20 @@ $base-line-height: $base-font-size * 1.5;
 
 $app-gutter: vr(0.5);
 
+$indent: 10px;
+
 /**
  *
  */
 
-$font-serif:
+$font-title:
+	'Avenir',
 	'Georgia',
 	'DejaVu Serif',
 	'Norasi',
 	serif;
 
-$font-sans-serif:
+$font-body:
 	'Arial',
 	'Helvetica',
 	'Liberation Sans',
@@ -41,15 +53,25 @@ $font-mono: monospace;
 
 $color-black: #111;
 $color-white: #fff;
-
-// colors used on
-// http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html
-$color-wild-sand: #f5f5f5;
-$color-mariner: #2868c9;
-$color-orange: orange;
+$color-sand: #f5f5f5;
+$color-gray-dark: #555;
+$color-blue: #2868c9;
+$color-blue-text: $color-white;
+$color-blue-light: #4c93ff;
+$color-blue-light-text: #000;
+$color-blue-dark: #0c397c;
+$color-blue-dark-text: $color-white;
+$color-orange: #e6a420;
+$color-orange-text: #222;
 $color-red: firebrick;
-$color-emperor: #555;
 $color-green: green;
 $color-highlight: rgba(yellow, 0.1);
+
+$color-theme: #2868c9;
+$color-theme-text: $color-white;
+$color-theme-light: #4c93ff;
+$color-theme-light-text: #000;
+$color-theme-dark: #0c397c;
+$color-theme-dark-text: $color-white;
 
 $max-z-index: 2147483647;

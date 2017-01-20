@@ -1,8 +1,5 @@
 .Theme {
-	flex: 1;
 	background: $color-white;
-	display: flex;
-	flex-direction: column;
 
 	code {
 		padding: 0 2px;
@@ -22,32 +19,4 @@
 .Theme.is-disabled select,
 .Theme.is-disabled label {
 	pointer-events: none;
-}
-
-.Theme-header {
-	flex-shrink: 0;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding: $app-gutter;
-	border-bottom: 1px dashed darken($color-wild-sand, 20%);
-}
-
-.Theme-title {
-	font-weight: bold;
-}
-
-.Theme-criterionSelect {
-	max-width: 100%;
-}
-
-.Theme-criterionSelect select {
-	max-width: 300px;
-}
-
-.Theme-content {
-	overflow-x: hidden;
-	overflow-y: auto;
-	flex: 1 1 1px; //set a minimum height so that content grows to fit
-	// if we put auto it wouldn't work correctly in firefox
 }

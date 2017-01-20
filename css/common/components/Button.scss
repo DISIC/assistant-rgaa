@@ -1,20 +1,20 @@
 .Button {
 	display: inline-block;
 	padding: vr(0.125) vr(0.5);
-	background: $color-mariner;
-	color: $color-white;
+	background: $color-theme;
+	color: $color-theme-text;
 	border-radius: 3px;
 	border: 1px solid transparent;
 	cursor: pointer;
 
 	&:not([disabled]):hover,
 	&:not([disabled]):focus {
-		background: darken($color-mariner, 10%);
-		border-color: darken($color-mariner, 20%);
+		background: darken($color-theme, 10%);
+		border-color: darken($color-theme, 20%);
 	}
 
 	&:not([disabled]):active {
-		background: darken($color-mariner, 20%);
+		background: darken($color-theme, 20%);
 	}
 }
 

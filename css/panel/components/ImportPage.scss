@@ -17,7 +17,7 @@
 	margin: auto;
 	max-width: 600px;
 	border: 1px solid #ccc;
-	background: $color-wild-sand;
+	background: $color-sand;
 	overflow: auto;
 	outline: none;
 	z-index: ($max-z-index - 3);
@@ -29,8 +29,8 @@
 }
 
 .ImportPage-title {
-	background: $color-mariner;
-	color: $color-white;
+	background: $color-blue;
+	color: $color-blue-text;
 	padding: $base-line-height;
 	margin: 0;
 	font-size: $base-font-size;

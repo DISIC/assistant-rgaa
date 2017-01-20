@@ -1,38 +1,42 @@
-.ThemesList {
-	display: flex;
-	position: relative;
-	top: 1px;
+.ThemesList-list {
+	background: $color-white;
+	padding-bottom: vr(2);
+	border: 1px solid darken($color-sand, 30%);
+	border-top: 0;
+	border-bottom: 0;
 }
 
-.ThemesList-tabs {
-	flex: 1;
-	overflow: hidden;
-}
-
-.ThemesList-item {
-	display: inline-block;
+.ThemesList-title {
+	flex-shrink: 0;
 }
 
 .ThemesList-link {
 	display: block;
-	padding: vr(0.125) vr(1);
-	padding-left: 36px;
-	background: darken($color-white, 10%) none no-repeat 6px 50%;
+	padding: vr(0.125) $app-gutter;
+	padding-left: 2.6rem;
+	background: $color-white none no-repeat 0.6rem 50%;
 	background-size: 24px;
-	border: 1px solid darken($color-wild-sand, 30%);
+	border: 1px solid darken($color-sand, 30%);
+	border-left: 0;
+	border-right: 0;
+	text-decoration: underline;
 }
 
 .ThemesList-item + .ThemesList-item .ThemesList-link {
-	border-left: 0;
+	border-top: 0;
+}
+
+.ThemesList-item:last-child .ThemesList-link {
+	border-bottom: 0;
 }
 
 .ThemesList-link:not(.is-disabled):hover,
 .ThemesList-link:not(.is-disabled):focus {
-	background-color: darken($color-white, 5%);
+	background-color: $color-highlight;
 }
 
 .ThemesList-link:not(.is-disabled):active {
-	background-color: darken($color-white, 15%);
+	background-color: darken($color-highlight, 10%);
 }
 
 .ThemesList-link.is-disabled {
@@ -43,11 +47,4 @@
 .ThemesList-item.is-active .ThemesList-link {
 	background-color: $color-white;
 	border-bottom: 0;
-}
-
-.ThemesList-navButton {
-	padding-left: vr(0.25);
-	padding-right: vr(0.25);
-	font-weight: bolder;
-	border-radius: 0;
 }
