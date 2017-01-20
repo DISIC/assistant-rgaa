@@ -29,13 +29,13 @@ function ThemesListItem({id, title, icon, isDisabled, intl}) {
 	}
 
 	return listItem(
-		<Link
+		<a
 			className="InvisibleLink ThemesList-link"
-			to={`/themes/${id}`}
+			href={`#${title}`}
 			style={style}
 		>
 			{title}
-		</Link>
+		</a>
 	);
 }
 

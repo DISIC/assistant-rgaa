@@ -1,14 +1,48 @@
+.ThemesList {
+	z-index: 100;
+}
+
+.ThemesList-nav {
+	border-bottom: 2px solid $color-theme;
+}
+
 .ThemesList-list {
+	position: absolute;
+	left: $app-gutter;
+	right: $app-gutter;
+	margin: auto;
 	background: $color-white;
-	padding-bottom: vr(2);
-	border: 1px solid darken($color-sand, 30%);
+	padding-bottom: vr(0.25);
+	border: 2px solid $color-theme;
 	border-top: 0;
-	border-bottom: 0;
+	display: none;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
+}
+
+
+.ThemesList-nav:hover .ThemesList-list {
+	display: block;
 }
 
 .ThemesList-title {
 	flex-shrink: 0;
+	display: block;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
 }
+
+.ThemesList-title:before {
+	display: inline;
+	margin-right: 10px;
+	content: '►';
+
+	.ThemesList-nav:hover &,
+	.ThemesList-nav:focus & {
+		content: '▼';
+	}
+}
+
 
 .ThemesList-link {
 	display: block;

@@ -6,6 +6,11 @@
 	padding: vr(1/4) $app-gutter;
 }
 
+.Title--accent {
+	background-color: $color-accent;
+	color: $color-accent-text;
+}
+
 .Title--sub {
 	background-color: $color-theme;
 	color: $color-theme-text;

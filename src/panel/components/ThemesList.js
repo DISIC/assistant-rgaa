@@ -1,6 +1,9 @@
 import React, {PropTypes} from 'react';
+import classNames from 'classnames';
+import renderIf from 'render-if';
 import {map, includes} from 'lodash';
 import {FormattedMessage} from 'react-intl';
+import Sticky from 'react-sticky-position';
 import ThemesListItem from './ThemesListItem';
 
 
@@ -26,22 +29,24 @@ const icons = {
  */
 export default function ThemesList({themes, activeTheme, inactiveThemes}) {
 	return (
-		<nav className="ThemesList">
-			<h2 className="ThemesList-title Title">
-				<FormattedMessage id="ThemesList.title" />
-			</h2>
-			<ul className="ThemesList-list">
-				{map(themes, (theme) =>
-					<ThemesListItem
-						{...theme}
-						icon={icons[theme.id]}
-						isActive={activeTheme === theme.id}
-						isDisabled={includes(inactiveThemes, theme.id)}
-						key={theme.id}
-					/>
-				)}
-			</ul>
-		</nav>
+		<Sticky className="ThemesList">
+			<nav className="ThemesList-nav">
+				<h2 id="menu" className="ThemesList-title Title Title--accent">
+					<FormattedMessage id="ThemesList.title" />
+				</h2>
+				<ul className="ThemesList-list">
+					{map(themes, (theme) =>
+						<ThemesListItem
+							{...theme}
+							icon={icons[theme.id]}
+							isActive={activeTheme === theme.id}
+							isDisabled={includes(inactiveThemes, theme.id)}
+							key={theme.id}
+						/>
+					)}
+				</ul>
+			</nav>
+		</Sticky>
 	);
 }
 

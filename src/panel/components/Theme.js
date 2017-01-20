@@ -19,7 +19,7 @@ function Theme({theme, criteria, isInactive, intl}) {
 		: '';
 
 	return (
-		<div className={className} title={title}>
+		<div id={theme.title} className={className} title={title}>
 			<h2 className="Theme-title Title">{theme.title}</h2>
 
 			<div className="Theme-content">
