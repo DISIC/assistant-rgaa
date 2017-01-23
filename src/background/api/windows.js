@@ -1,7 +1,7 @@
 /**
  *
  */
-export const create = (options) =>
+export const openWindow = (options) =>
 	new Promise((resolve, reject) => // eslint-disable-line no-new
 		chrome.windows.create(options, (newWindow) => {
 			if (chrome.runtime.lastError) {
@@ -15,7 +15,7 @@ export const create = (options) =>
 /**
  *
  */
-export const remove = (id) =>
+export const closeWindow = (id) =>
 	new Promise((resolve, reject) => // eslint-disable-line no-new
 		chrome.windows.remove(id, () => {
 			if (chrome.runtime.lastError) {
@@ -29,7 +29,7 @@ export const remove = (id) =>
 /**
  *
  */
-export const get = (id, options = {populate: true}) =>
+export const getWindow = (id, options = {populate: true}) =>
 	new Promise((resolve, reject) => // eslint-disable-line no-new
 		chrome.windows.get(id, options, (windowInfo) => {
 			if (chrome.runtime.lastError) {

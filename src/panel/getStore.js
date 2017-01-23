@@ -1,7 +1,15 @@
-import createStoreFromStorage from '../common/store/fromStorage';
-import {reducers} from '../common/reducers';
+import createStore from '../common/createStore';
+import reducer from '../common/reducers';
+import getInitialState from '../common/store/getInitialState';
 import sagas from './sagas';
 
 
 
-export default () => createStoreFromStorage('panel', reducers, sagas);
+/**
+ *
+ */
+export default () =>
+	getInitialState()
+		.then((state) =>
+			createStore('panel', reducer, sagas, state)
+		);

@@ -1,7 +1,6 @@
-/**
- *
- */
-const TYPE_REDUX_ACTION = 'TYPE_REDUX_ACTION';
+import {REDUX_ACTION} from '../actions/runtime';
+
+
 
 /**
  *	Gathers actions from other stores and passes it down to
@@ -10,14 +9,10 @@ const TYPE_REDUX_ACTION = 'TYPE_REDUX_ACTION';
  */
 export const createGatherMiddleware = (name) =>
 	() => (next) => {
-		chrome.runtime.onMessage.addListener((message) => {
-			if (
-				message.action
-				&& message.type === TYPE_REDUX_ACTION
-				&& message.sender !== name
-			) {
+		chrome.runtime.onMessage.addListener(({type, sender, action}) => {
+			if (action && type === REDUX_ACTION && sender !== name) {
 				next({
-					...message.action,
+					...action,
 					gathered: true
 				});
 			}
@@ -35,7 +30,7 @@ export const createBroadcastMiddleware = (name, send = chrome.runtime.sendMessag
 	() => (next) => (action) => {
 		if (!action.gathered) {
 			send({
-				type: TYPE_REDUX_ACTION,
+				type: REDUX_ACTION,
 				sender: name,
 				action
 			});

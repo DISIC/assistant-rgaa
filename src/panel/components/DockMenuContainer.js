@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
-import {getPopupWindowId, getPosition} from '../../common/selectors/container';
-import * as actions from '../../common/actions/container';
+import {getPosition} from '../../common/selectors/panel';
+import {setPosition} from '../../common/actions/panel';
 import DockMenu from './DockMenu';
 
 
@@ -9,7 +9,6 @@ import DockMenu from './DockMenu';
  *
  */
 const mapStateToProps = (state) => ({
-	popup: !!getPopupWindowId(state),
 	position: getPosition(state)
 });
 
@@ -17,20 +16,8 @@ const mapStateToProps = (state) => ({
  *
  */
 const mapDispatchToProps = (dispatch) => ({
-	onDockToBottom() {
-		dispatch(actions.dockToBottom());
-	},
-
-	onDockToLeft() {
-		dispatch(actions.dockToLeft());
-	},
-
-	onDockToRight() {
-		dispatch(actions.dockToRight());
-	},
-
-	onTogglePopup() {
-		dispatch(actions.togglePopup());
+	onPositionChange(position) {
+		dispatch(setPosition(position));
 	}
 });
 

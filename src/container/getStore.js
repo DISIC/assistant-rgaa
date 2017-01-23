@@ -10,5 +10,5 @@ import getInitialState from '../common/store/getInitialState';
 export default () =>
 	getInitialState()
 		.then((state) =>
-			createStore('options', reducer, undefined, state)
+			createStore('container', reducer, undefined, state)
 		);

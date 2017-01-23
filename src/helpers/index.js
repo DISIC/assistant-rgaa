@@ -1,1 +1,8 @@
-import './store';
+import getStore from './getStore';
+
+
+
+/**
+ *
+ */
+getStore();

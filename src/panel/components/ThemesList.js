@@ -73,7 +73,7 @@ export default function ThemesList({themes, activeTheme, inactiveThemes}) {
 }
 
 ThemesList.propTypes = {
-	themes: PropTypes.array.isRequired,
+	themes: PropTypes.object.isRequired,
 	activeTheme: PropTypes.string,
 	inactiveThemes: PropTypes.array
 };

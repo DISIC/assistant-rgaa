@@ -11,7 +11,8 @@ import ImportPageContainer from './components/ImportPageContainer';
  * Application routes.
  */
 export default function (store) {
-	const onThemeRoute = ({params}) => {
+	// eslint-disable-next-line react/prop-types
+	const onEnterTheme = ({params}) => {
 		store.dispatch(themesActions.setCurrent(params.theme));
 	};
 
@@ -23,7 +24,7 @@ export default function (store) {
 				<Route
 					path="themes/:theme"
 					component={ReferencePageContainer}
-					onEnter={onThemeRoute}
+					onEnter={onEnterTheme}
 				/>
 
 				<Route

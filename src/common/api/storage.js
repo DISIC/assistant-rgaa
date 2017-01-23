@@ -1,59 +1,52 @@
-import {keys, noop, filter, startsWith} from 'lodash';
+import {keys, filter, startsWith} from 'lodash';
 import {keyPrefix} from 'redux-persist/constants';
 
 
 
-const Storage = chrome.storage.local;
-const Runtime = chrome.runtime;
+const storage = chrome.storage.local;
+const runtime = chrome.runtime;
 const persistPrefix = keyPrefix;
 
 
 
-const setItem = (key, data, callback = noop) =>
+const setItem = (key, data) =>
 	new Promise((resolve, reject) => {
-		Storage.set({[key]: data}, () => {
-			if (Runtime.lastError) {
-				callback(Runtime.lastError);
-				reject(Runtime.lastError);
+		storage.set({[key]: data}, () => {
+			if (runtime.lastError) {
+				reject(runtime.lastError);
 			}
-			callback(null);
 			resolve();
 		});
 	});
 
-const getItem = (key, callback = noop) =>
+const getItem = (key) =>
 	new Promise((resolve, reject) => {
-		Storage.get(key, (item) => {
-			if (Runtime.lastError) {
-				callback(Runtime.lastError);
-				reject(Runtime.lastError);
+		storage.get(key, (item) => {
+			if (runtime.lastError) {
+				reject(runtime.lastError);
 			}
 			const data = item[key] || item;
-			callback(null, data);
 			resolve(data);
 		});
 	});
 
-const removeItem = (key, callback = noop) =>
+const removeItem = (key) =>
 	new Promise((resolve, reject) => {
-		Storage.remove(key, () => {
-			if (Runtime.lastError) {
-				callback(Runtime.lastError);
-				reject(Runtime.lastError);
+		storage.remove(key, () => {
+			if (runtime.lastError) {
+				reject(runtime.lastError);
 			}
 			resolve();
 		});
 	});
 
-const getAllKeys = (callback = noop) =>
+const getAllKeys = () =>
 	new Promise((resolve, reject) => {
-		Storage.get(null, (items) => {
-			if (Runtime.lastError) {
-				callback(Runtime.lastError);
-				reject(Runtime.lastError);
+		storage.get(null, (items) => {
+			if (runtime.lastError) {
+				reject(runtime.lastError);
 			}
 			const allKeys = keys(items);
-			callback(null, allKeys);
 			resolve(allKeys);
 		});
 	});
@@ -67,7 +60,7 @@ const removeAllWithPrefix = (prefix) =>
 	getAllKeys().then(allKeys =>
 		filter(allKeys, (key) => startsWith(key, prefix))
 	).then(filteredKeys => {
-		const promises = filteredKeys.map((key) => removeItem(key));
+		const promises = filteredKeys.map(removeItem);
 		return Promise.all(promises);
 	});
 

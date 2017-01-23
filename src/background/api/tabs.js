@@ -1,8 +1,4 @@
-import {get} from 'lodash';
-import {getCurrent} from '../../common/selectors/tabs';
-import {getPopupWindowId} from '../../common/selectors/container';
-import store from '../store';
-import {get as getWindowDetails} from './windows';
+import {isObject} from 'lodash';
 
 
 
@@ -28,37 +24,17 @@ export const fetchCurrentTab = () => {
 /**
  *
  */
-export const sendMessageToTab = (tab, message) => {
-	if (tab) {
-		chrome.tabs.sendMessage(tab, message);
-	}
-};
+export const sendMessageToTab = (id, message) =>
+	new Promise((resolve) => {
+		const promise = chrome.tabs.sendMessage(id, message, {}, resolve);
+
+		if (isObject(promise) && promise.then) {
+			resolve(promise);
+		}
+	});
 
 /**
  *
  */
-export const sendToContent = (action) => {
-	const state = store.getState();
-	const current = getCurrent(state);
-	const popupId = getPopupWindowId(state);
-
-	if (current) {
-		sendMessageToTab(current, action);
-	}
-
-	if (popupId) {
-		getWindowDetails(popupId)
-			.then(popupWindow => {
-				const popupTab = get(popupWindow, 'tabs[0].id', null);
-				if (popupTab) {
-					sendMessageToTab(popupTab, action);
-				}
-			})
-			.catch(() => {
-				// window was not found - nothing to do here
-				// meaning we tried to pass a message between the moment
-				// the window has been closed by the user and the moment
-				// the redux state was updated
-			});
-	}
-};
+export const closeTab = (id) =>
+	chrome.tabs.remove(id);
