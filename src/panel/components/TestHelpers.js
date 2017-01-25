@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage} from 'react-intl';
-import {describe} from '../../helpers/api/helpers';
+import {describe} from '../../helpers/api';
 
 
 
