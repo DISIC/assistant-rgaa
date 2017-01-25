@@ -3,21 +3,22 @@
  */
 
 $base-font-size: 13px;
+$line-height: 1.5;
 
 $typi: (
-	null: ($base-font-size, 1.5)
+	null: ($base-font-size, $line-height)
 );
 $typi-xlarge: (
-	null: (1.0625em, 1.5)
+	null: (1.0625em, $line-height / 1.0625)
 );
 $typi-large: (
-	null: (0.9375em, 1.5)
+	null: (0.9375em, $line-height / 0.9375)
 );
 $typi-regular: (
-	null: (0.8125em, 1.5)
+	null: (0.8125em, $line-height / 0.8125)
 );
 
-$base-line-height: $base-font-size * 1.5;
+$base-line-height: $base-font-size * $line-height;
 
 /**
  *
