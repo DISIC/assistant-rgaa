@@ -4,7 +4,8 @@ import {REQUEST_INITIAL_STATE} from '../actions/runtime';
 
 
 /**
- *	Create a store with initialState fetched from redux-persist given storage
+ *	Creates a store with initialState fetched from background
+ *	store.
  *
  *	@return {Promise} promise resolved with initial state.
  */

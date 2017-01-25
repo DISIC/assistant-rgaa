@@ -7,8 +7,8 @@ import getInitialState from '../common/store/getInitialState';
 /**
  *
  */
-export default () =>
-	getInitialState()
-		.then((state) =>
-			createStore('container', reducer, undefined, state)
-		);
+export default function getStore() {
+	return getInitialState().then((state) =>
+		createStore('container', reducer, undefined, state)
+	);
+}

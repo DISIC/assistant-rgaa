@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {IntlProvider, addLocaleData} from 'react-intl';
 import fr from 'react-intl/locale-data/fr';
+import {noop} from 'lodash';
 import messages from '../common/messages/fr';
 import {OPEN_PANEL, CLOSE_PANEL} from '../common/actions/runtime';
 import getStore from './getStore';
@@ -24,30 +25,29 @@ let container = null;
 /**
  *	Renders the panel.
  */
-const start = () => {
-	container = document.createElement('div');
-	container.id = CONTAINER_ID;
-	document.body.appendChild(container);
+const start = () =>
+	getStore().then((store) => {
+		container = document.createElement('div');
+		container.id = CONTAINER_ID;
+		document.body.appendChild(container);
 
-	return getStore()
-		.then((store) => (
+		render((
 			<Provider store={store}>
 				<IntlProvider locale="fr" messages={messages}>
 					<AppContainer />
 				</IntlProvider>
 			</Provider>
-		))
-		.then((app) =>
-			render(app, container)
-		);
-};
+		), container);
+	}, noop);
 
 /**
  *	Removes the panel from the page.
  */
 const shutdown = () => {
-	document.body.removeChild(container);
-	container = null;
+	if (container) {
+		document.body.removeChild(container);
+		container = null;
+	}
 };
 
 /**
@@ -73,3 +73,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	// Returning true states that sendResponse is asynchronous
 	return true;
 });
+
+/**
+ *	We're trying to start the app as soon as possible.
+ *	This will be useful when a tab is reloaded and its
+ *	associated data already exists.
+ */
+start();

@@ -8,3 +8,4 @@ export const REQUEST_INITIAL_STATE = 'common/runtime/REQUEST_INITIAL_STATE';
 export const OPEN_POPUP = 'common/runtime/OPEN_POPUP';
 export const CLOSE_POPUP = 'common/runtime/CLOSE_POPUP';
 export const REDUX_ACTION = 'common/runtime/REDUX_ACTION';
+export const INVALID_RESPONSE = 'common/runtime/INVALID_RESPONSE';

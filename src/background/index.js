@@ -1,6 +1,7 @@
 import {get} from 'lodash';
 import {
-	OPEN_PANEL, CLOSE_PANEL, REQUEST_INITIAL_STATE, OPEN_POPUP, CLOSE_POPUP
+	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP,
+	REQUEST_INITIAL_STATE, INVALID_RESPONSE
 } from '../common/actions/runtime';
 import {IFRAME_FILE} from '../container/api/iframe';
 import {openWindow} from './api/windows';
@@ -17,16 +18,6 @@ import createAppInstance from './createAppInstance';
 const instances = {};
 
 /**
- *	Opens a devtools popup in development mode.
- */
-if (process.env.NODE_ENV !== 'production') {
-	openWindow({
-		url: chrome.runtime.getURL('src/devtools/content.html'),
-		type: 'popup'
-	});
-}
-
-/**
  *	Dispatches every message to the content scripts, allowing
  *	content scripts to talk to each other.
  */
@@ -35,7 +26,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	const instance = instances[tabId];
 
 	if (!instance) {
-		return;
+		return sendResponse(INVALID_RESPONSE);
 	}
 
 	switch (message.type) {
