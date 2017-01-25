@@ -1,9 +1,10 @@
 import React, {PropTypes} from 'react';
 import classNames from 'classnames';
 import renderIf from 'render-if';
-import {map, includes} from 'lodash';
+import {withState} from 'recompose';
+import {map, includes, noop} from 'lodash';
 import {FormattedMessage} from 'react-intl';
-import Sticky from 'react-stickynode';
+import {Wrapper, Button, Menu} from 'react-aria-menubutton';
 import ThemesListItem from './ThemesListItem';
 
 
@@ -27,13 +28,22 @@ const icons = {
 /**
  *
  */
-export default function ThemesList({themes, activeTheme, inactiveThemes}) {
+function ThemesList({themes, activeTheme, inactiveThemes, isOpen, setOpen}) {
 	return (
-		<nav className="ThemesList">
-			<h2 id="menu" className="ThemesList-title Title Title--accent">
+		<Wrapper
+			className={classNames('ThemesList', {'is-open': isOpen})}
+			onSelection={(href) => {
+				document.location.href = href;
+			}}
+			onMenuToggle={(menu) => setOpen(menu.isOpen)}
+		>
+			<Button
+				tag="h2"
+				className="ThemesList-title Title Title--accent ThemesList-toggle"
+			>
 				<FormattedMessage id="ThemesList.title" />
-			</h2>
-			<ul className="ThemesList-list">
+			</Button>
+			<Menu tag="ul" className="ThemesList-list">
 				{map(themes, (theme) =>
 					<ThemesListItem
 						{...theme}
@@ -43,15 +53,17 @@ export default function ThemesList({themes, activeTheme, inactiveThemes}) {
 						key={theme.id}
 					/>
 				)}
-			</ul>
-		</nav>
+			</Menu>
+		</Wrapper>
 	);
 }
 
 ThemesList.propTypes = {
 	themes: PropTypes.object.isRequired,
 	activeTheme: PropTypes.string,
-	inactiveThemes: PropTypes.array
+	inactiveThemes: PropTypes.array,
+	isOpen: PropTypes.bool.isRequired,
+	setOpen: PropTypes.func.isRequired
 };
 
 ThemesList.defaultProps = {
@@ -60,3 +72,5 @@ ThemesList.defaultProps = {
 	},
 	inactiveThemes: []
 };
+
+export default withState('isOpen', 'setOpen', false)(ThemesList);

@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react';
 import {injectIntl, intlShape} from 'react-intl';
-import {Link} from 'react-router';
+import {MenuItem} from 'react-aria-menubutton';
 
 
 
-function ThemesListItem({id, title, icon, isDisabled, intl}) {
+function ThemesListItem({title, icon, isDisabled, intl}) {
 	const style = {backgroundImage: `url('/img/${icon}')`};
 	const props = {};
 	const listItem = (tab) => (
@@ -29,13 +29,15 @@ function ThemesListItem({id, title, icon, isDisabled, intl}) {
 	}
 
 	return listItem(
-		<a
+		<MenuItem
+			tag="a"
 			className="InvisibleLink ThemesList-link"
 			href={`#${title}`}
+			value={`#${title}`}
 			style={style}
 		>
 			{title}
-		</a>
+		</MenuItem>
 	);
 }
 

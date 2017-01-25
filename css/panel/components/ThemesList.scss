@@ -12,33 +12,33 @@
 	padding-bottom: vr(0.25);
 	border: 2px solid $color-theme;
 	border-top: 0;
-	display: none;
 	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
-}
-
-.ThemesList:hover .ThemesList-list {
-	display: block;
 }
 
 .ThemesList-title {
 	flex-shrink: 0;
+	padding: 0;
 	display: block;
 	width: 100%;
 	text-align: left;
 	cursor: pointer;
 }
 
-.ThemesList-title:before {
+.ThemesList-toggle {
+	padding: vr(1/4) $app-gutter;
+	display: block;
+}
+
+.ThemesList-toggle:before {
 	display: inline;
-	margin-right: 10px;
+	font-family: $font-body;
+	margin-right: 6px;
 	content: '►';
 
-	.ThemesList:hover &,
-	.ThemesList:focus & {
+	.ThemesList.is-open & {
 		content: '▼';
 	}
 }
-
 
 .ThemesList-link {
 	display: block;
