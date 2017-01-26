@@ -10,7 +10,7 @@ import TestContainer from './TestContainer';
  *
  */
 function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl}) {
-	const className = classNames('Criterion', {
+	const className = classNames('Criterion Theme-criterion', {
 		'is-disabled': isInactive,
 		'is-open': isOpen
 	});
@@ -48,13 +48,15 @@ function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl
 			</header>
 
 			{renderIf(isOpen)(() =>
-				<ul className="Criterion-tests">
-					{tests.map(({id: testId, title: testTitle}) =>
-						<li className="Criterion-test" key={`criterion-${id}-test-${testId}`}>
-							<TestContainer id={testId} title={testTitle} />
-						</li>
-					)}
-				</ul>
+				<div className="Criterion-content">
+					<ul className="Criterion-tests">
+						{tests.map(({id: testId, title: testTitle}) =>
+							<li className="Criterion-test" key={`criterion-${id}-test-${testId}`}>
+								<TestContainer id={testId} title={testTitle} />
+							</li>
+						)}
+					</ul>
+				</div>
 			)}
 		</li>
 	);

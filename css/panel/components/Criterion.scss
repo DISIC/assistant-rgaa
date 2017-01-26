@@ -6,12 +6,25 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 0;
-	background-color: $color-theme;
-	color: $color-theme-text;
+	background-color: $color-white;
+	color: $color-black;
 
 	a {
 		color: $color-white;
 	}
+}
+
+.Criterion:nth-child(even) .Criterion-header {
+	background: rgba($color-blue, 0.05);
+}
+
+.Criterion .Criterion-header:hover {
+	background: $color-highlight;
+}
+
+.Criterion.is-open .Criterion-header {
+	background-color: $color-theme;
+	color: $color-theme-text;
 }
 
 .Criterion-title,
@@ -48,8 +61,12 @@
 	display: inline-block;
 	vertical-align: middle;
 	padding: vr(1/8);
-	border-left: 1px solid lighten($color-theme, 20%);
+	border-left: 1px solid lighten($color-black, 60%);
 	height: 100%;
+}
+
+.Criterion.is-open .Criterion-action {
+	border-color: lighten($color-theme, 20%);
 }
 
 .Criterion.is-disabled {
@@ -62,6 +79,15 @@
 .Criterion.is-disabled input,
 .Criterion.is-disabled label {
 	pointer-events: none;
+}
+
+.Criterion-content {
+	background-color: $color-theme;
+	padding-left: $app-gutter;
+}
+
+.Criterion-tests {
+	background: $color-white;
 }
 
 .Criterion-test:nth-child(even) {
