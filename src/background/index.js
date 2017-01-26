@@ -8,6 +8,7 @@ import {openWindow} from './api/windows';
 import {fetchCurrentTab, closeTab} from './api/tabs';
 import {get as getOption} from '../common/api/options';
 import {setReferenceVersion} from '../common/actions/reference';
+import createInstancePool from './createInstancePool';
 import createAppInstance from './createAppInstance';
 
 
@@ -15,25 +16,57 @@ import createAppInstance from './createAppInstance';
 /**
  *	A map of open instances, indexed by tab id.
  */
-const instances = {};
+const instances = createInstancePool();
 
 /**
- *	Dispatches every message to the content scripts, allowing
- *	content scripts to talk to each other.
+ *
  */
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-	const tabId = sender.tab && sender.tab.id;
-	const instance = instances[tabId];
+const openPanel = (id) => {
+	// creates an instance and indexes it on the tab id.
+	const instance = createAppInstance(id);
+	instances.set(id, instance);
+
+	// opens the panel and loads initial data.
+	instance
+		.sendMessage({
+			type: OPEN_PANEL
+		})
+		.then(() =>
+			getOption('reference')
+		)
+		.then((version = '3') =>
+			instance.dispatch(setReferenceVersion(version))
+		);
+};
+
+/**
+ *
+ */
+const closePanel = (id) => {
+	instances
+		.get(id)
+		.sendMessage({
+			type: CLOSE_PANEL
+		})
+		.then(() =>
+			instances.unset(id)
+		);
+};
+
+/**
+ *
+ */
+const handleMessage = (message, tabId) => {
+	const instance = instances.get(tabId);
 
 	if (!instance) {
-		return sendResponse(INVALID_RESPONSE);
+		return INVALID_RESPONSE;
 	}
 
 	switch (message.type) {
 		// sends the store's state to the instance.
 		case REQUEST_INITIAL_STATE:
-			sendResponse(instance.store.getState());
-			break;
+			return instance.store.getState();
 
 		// if the instance runs in a tab, opens a popup and
 		// indexes the instance on the new tab id,
@@ -45,8 +78,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 				}).then((popup) => {
 					const id = get(popup, 'tabs[0].id');
 					instance.switchToPopup(id);
-					instances[id] = instance;
-					delete instances[tabId];
+					instances.set(id, instance);
+					instances.unset(tabId);
 				});
 			}
 			break;
@@ -56,8 +89,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 		case CLOSE_POPUP:
 			if (instance.isPopup()) {
 				const id = instance.switchToTab();
-				instances[id] = instance;
-				delete instances[tabId];
+				instances.set(id, instance);
+				instances.unset(tabId);
 				closeTab(tabId);
 			}
 			break;
@@ -67,7 +100,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 			instance.sendMessage(message);
 			break;
 	}
-});
+};
 
 /**
  *	Asks the content script to toggle the extension's container
@@ -75,37 +108,28 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
  */
 chrome.browserAction.onClicked.addListener(() =>
 	fetchCurrentTab().then((id) => {
-		// shutdowns the extension on the tab if it is already open
-		if (instances[id]) {
-			instances[id].sendMessage({
-				type: CLOSE_PANEL
-			}).then(() => {
-				delete instances[id];
-			});
-
-			return;
+		if (instances.has(id)) {
+			closePanel(id);
+		} else {
+			openPanel(id);
 		}
-
-		// creates an instance and indexes it on the tab id.
-		const instance = createAppInstance(id);
-		instances[id] = instance;
-
-		// opens the panel and load initial data.
-		instance.sendMessage({
-			type: OPEN_PANEL
-		}).then(() =>
-			getOption('reference')
-		).then((version = '3') => {
-			instance.dispatch(setReferenceVersion(version));
-		});
 	})
 );
+
+/**
+ *	Dispatches every message to the content scripts, allowing
+ *	content scripts to talk to each other.
+ */
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+	const tabId = sender.tab && sender.tab.id;
+	const response = handleMessage(message, tabId);
+
+	sendResponse(response);
+});
 
 /**
  *	Removes associated data when a tab is closed.
  */
 chrome.tabs.onRemoved.addListener((id) => {
-	if (instances[id]) {
-		delete instances[id];
-	}
+	instances.unset(id);
 });
