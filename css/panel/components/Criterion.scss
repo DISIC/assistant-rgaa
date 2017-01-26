@@ -23,6 +23,7 @@
 }
 
 .Criterion.is-open .Criterion-header {
+	@include typi($typi-large);
 	background-color: $color-theme;
 	color: $color-theme-text;
 }
@@ -43,14 +44,15 @@
 }
 
 .Criterion-toggle:before {
-	display: inline;
+	display: inline-block;
 	font-family: $font-body;
 	margin-right: 6px;
 	content: '►';
+	transition: transform 0.25s;
+}
 
-	.Criterion.is-open & {
-		content: '▼';
-	}
+.Criterion.is-open .Criterion-toggle:before {
+	transform: rotate(90deg);
 }
 
 .Criterion-actions {
@@ -69,20 +71,12 @@
 	border-color: lighten($color-theme, 20%);
 }
 
-.Criterion.is-disabled {
-	opacity: 0.4;
-	cursor: help;
-}
-
-.Criterion.is-disabled a,
-.Criterion.is-disabled button,
-.Criterion.is-disabled input,
-.Criterion.is-disabled label {
-	pointer-events: none;
-}
-
 .Criterion-content {
 	background-color: $color-theme;
+	transition: padding-left 0.3s;
+}
+
+.Criterion.is-open .Criterion-content {
 	padding-left: $app-gutter;
 }
 
@@ -98,21 +92,19 @@
 	background: $color-highlight;
 }
 
-.Criterion:target .Criterion-title {
-	animation: highlight 0.5s ease-in;
-}
-
 .Criterion-test:last-child .Test-header:last-child,
 .Criterion-test:last-child .TestInstructions {
 	padding-bottom: vr(1);
 }
 
-@keyframes highlight {
-	0% {
-		background-color: lighten($color-blue, 40%);
-	}
+.Criterion.is-disabled {
+	opacity: 0.4;
+	cursor: help;
+}
 
-	100% {
-		background-color: $color-blue;
-	}
+.Criterion.is-disabled a,
+.Criterion.is-disabled button,
+.Criterion.is-disabled input,
+.Criterion.is-disabled label {
+	pointer-events: none;
 }

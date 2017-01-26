@@ -47,8 +47,8 @@ function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl
 				</div>
 			</header>
 
-			{renderIf(isOpen)(() =>
-				<div className="Criterion-content">
+			<div className="Criterion-content">
+				{renderIf(isOpen)(() =>
 					<ul className="Criterion-tests">
 						{tests.map(({id: testId, title: testTitle}) =>
 							<li className="Criterion-test" key={`criterion-${id}-test-${testId}`}>
@@ -56,8 +56,8 @@ function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl
 							</li>
 						)}
 					</ul>
-				</div>
-			)}
+				)}
+			</div>
 		</li>
 	);
 }
