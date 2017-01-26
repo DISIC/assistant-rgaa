@@ -6,15 +6,38 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 0;
+	background-color: $color-theme;
+	color: $color-theme-text;
 
 	a {
 		color: $color-white;
 	}
 }
 
+.Criterion-title,
+.Criterion-toggle {
+	display: block;
+	width: 100%;
+}
+
 .Criterion-title {
-	padding: vr(0.25) $app-gutter;
 	font-weight: bold;
+}
+
+.Criterion-toggle {
+	padding: vr(0.25) $app-gutter;
+	text-align: left;
+}
+
+.Criterion-toggle:before {
+	display: inline;
+	font-family: $font-body;
+	margin-right: 6px;
+	content: '►';
+
+	.Criterion.is-open & {
+		content: '▼';
+	}
 }
 
 .Criterion-actions {

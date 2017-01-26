@@ -22,18 +22,14 @@ function Theme({theme, criteria, isInactive, intl}) {
 		<div id={theme.title} className={className} title={title}>
 			<h2 className="Theme-title Title">{theme.title}</h2>
 
-			<div className="Theme-content">
-				<ul className="Theme-criteria">
-					{map(criteria, criterion =>
-						<li
-							key={`criterion-${criterion.id}`}
-							className="Theme-criterion"
-						>
-							<CriterionContainer {...criterion} />
-						</li>
-					)}
-				</ul>
-			</div>
+			<ul className="Theme-criteria">
+				{map(criteria, criterion =>
+					<CriterionContainer
+						key={`criterion-${criterion.id}`}
+						{...criterion}
+					/>
+				)}
+			</ul>
 		</div>
 	);
 }
