@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {map} from 'lodash';
 import ThemesListContainer from './ThemesListContainer';
 import ThemeContainer from './ThemeContainer';
@@ -8,7 +8,7 @@ import ThemeContainer from './ThemeContainer';
 /**
  *
  */
-export default ({themes}) => (
+const ReferencePage = ({themes}) => (
 	<div className="ReferencePage">
 		<ThemesListContainer />
 		<div className="ReferencePage-themes">
@@ -18,3 +18,9 @@ export default ({themes}) => (
 		</div>
 	</div>
 );
+
+ReferencePage.propTypes = {
+	themes: PropTypes.array.isRequired
+};
+
+export default ReferencePage;
