@@ -20,17 +20,9 @@ const mapStateToProps = (state, ownProps) => {
 	};
 };
 
-/**
- *
- */
-const mapDispatchToProps = () => ({});
-
 
 
 export default compose(
-	connect(
-		mapStateToProps,
-		mapDispatchToProps
-	),
+	connect(mapStateToProps),
 	renderNothingUntil(property('theme'))
 )(Theme);

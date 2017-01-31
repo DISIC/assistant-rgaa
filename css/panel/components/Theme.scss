@@ -20,3 +20,11 @@
 .Theme.is-disabled label {
 	pointer-events: none;
 }
+
+.Theme-header {
+	display: flex;
+}
+
+.Theme-title {
+	flex: 1 1 auto;
+}
