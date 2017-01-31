@@ -3,6 +3,12 @@
 	background: $color-white;
 	display: flex;
 	flex-direction: column;
+
+	code {
+		padding: 0 2px;
+		border-radius: 2px;
+		background: #ffeaea;
+	}
 }
 
 .Theme.is-disabled {
