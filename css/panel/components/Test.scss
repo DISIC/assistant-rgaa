@@ -42,3 +42,21 @@
 		font-weight: normal;
 	}
 }
+
+.Test-title ul {
+	list-style-type: disc;
+	padding-left: vr(1);
+}
+
+.Test a {
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:active {
+		text-decoration: underline;
+	}
+}

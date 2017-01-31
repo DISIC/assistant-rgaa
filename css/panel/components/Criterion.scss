@@ -10,7 +10,17 @@
 	color: $color-black;
 
 	a {
-		color: $color-white;
+		color: $color-black;
+		text-decoration: underline;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+
+		&:active {
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -26,6 +36,10 @@
 	@include typi($typi-large);
 	background-color: $color-theme;
 	color: $color-theme-text;
+
+	a {
+		color: $color-theme-text;
+	}
 }
 
 .Criterion-title,
