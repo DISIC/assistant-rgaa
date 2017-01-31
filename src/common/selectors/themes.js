@@ -20,3 +20,9 @@ export const getCurrent = (state) => {
  */
 export const getCriteriaIdsByTheme = (state) =>
 	mapValues(getAll(state), 'id');
+
+/**
+ *
+ */
+export const isMenuOpen = (state) =>
+	!!get(state, 'themes.menuIsOpen');

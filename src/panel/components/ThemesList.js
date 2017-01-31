@@ -1,8 +1,7 @@
 import React, {PropTypes} from 'react';
 import classNames from 'classnames';
 import renderIf from 'render-if';
-import {withState} from 'recompose';
-import {map, includes, noop} from 'lodash';
+import {map, includes} from 'lodash';
 import {FormattedMessage} from 'react-intl';
 import {Wrapper, Button, Menu} from 'react-aria-menubutton';
 import ThemesListItem from './ThemesListItem';
@@ -59,7 +58,7 @@ function ThemesList({themes, activeTheme, inactiveThemes, isOpen, setOpen}) {
 }
 
 ThemesList.propTypes = {
-	themes: PropTypes.object.isRequired,
+	themes: PropTypes.array.isRequired,
 	activeTheme: PropTypes.string,
 	inactiveThemes: PropTypes.array,
 	isOpen: PropTypes.bool.isRequired,
@@ -73,4 +72,4 @@ ThemesList.defaultProps = {
 	inactiveThemes: []
 };
 
-export default withState('isOpen', 'setOpen', false)(ThemesList);
+export default ThemesList;
