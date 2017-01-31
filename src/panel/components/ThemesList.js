@@ -5,6 +5,7 @@ import {map, includes} from 'lodash';
 import {FormattedMessage} from 'react-intl';
 import {Wrapper, Button, Menu} from 'react-aria-menubutton';
 import ThemesListItem from './ThemesListItem';
+import Icon from './Icon';
 
 
 
@@ -46,21 +47,7 @@ function ThemesList({themes, activeTheme, inactiveThemes, isOpen, setOpen}) {
 					<span aria-hidden className="ThemesList-toggleIcon">▼</span>
 				)}
 				{renderIf(!isOpen)(() =>
-					<svg
-						aria-hidden
-						viewBox="0 0 24 24"
-						width="24"
-						height="24"
-						className="ThemesList-toggleIcon Icon"
-					>
-						<path
-							d={[
-								'M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 ',
-								'4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z'
-							].join('')}
-						/>
-						<path fill="none" d="M0 0h24v24H0z" />
-					</svg>
+					<Icon name="list" className="ThemesList-toggleIcon" />
 				)}
 				<FormattedMessage id="ThemesList.title" />
 			</Button>
