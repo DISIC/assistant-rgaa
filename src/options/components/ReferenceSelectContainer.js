@@ -4,7 +4,7 @@ import ReferenceSelect from './ReferenceSelect';
 import {setReferenceVersion} from '../../common/actions/reference';
 import {reset as resetImport} from '../../common/actions/imports';
 import {getReferencesList} from '../../common/api/reference';
-import {getCurrent} from '../../common/selectors/reference';
+import {getVersion} from '../../common/selectors/reference';
 
 
 
@@ -12,7 +12,7 @@ import {getCurrent} from '../../common/selectors/reference';
  *
  */
 const mapStateToProps = (state) => ({
-	value: getCurrent(state).version
+	value: getVersion(state)
 });
 
 /**

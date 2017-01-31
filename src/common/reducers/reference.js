@@ -14,12 +14,11 @@ export const initialState = {
  */
 export default function reference(state = initialState, {type, payload}) {
 	switch (type) {
-		case SET_REFERENCE: {
+		case SET_REFERENCE:
 			return {
 				...state,
 				data: payload.data
 			};
-		}
 
 		default:
 			return state;

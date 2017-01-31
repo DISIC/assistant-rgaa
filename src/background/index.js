@@ -6,10 +6,9 @@ import {
 import {IFRAME_FILE} from '../container/api/iframe';
 import {openWindow} from './api/windows';
 import {fetchCurrentTab, closeTab} from './api/tabs';
-import {get as getOption} from '../common/api/options';
+import {getOption} from '../common/api/options';
 import {setReferenceVersion} from '../common/actions/reference';
 import createInstancePool from './createInstancePool';
-import createAppInstance from './createAppInstance';
 
 
 
@@ -23,8 +22,7 @@ const instances = createInstancePool();
  */
 const openPanel = (id) => {
 	// creates an instance and indexes it on the tab id.
-	const instance = createAppInstance(id);
-	instances.set(id, instance);
+	const instance = instances.create(id);
 
 	// opens the panel and loads initial data.
 	instance
@@ -49,20 +47,24 @@ const closePanel = (id) => {
 			type: CLOSE_PANEL
 		})
 		.then(() =>
-			instances.unset(id)
+			instances.removeInstance(id)
 		);
 };
 
 /**
  *
  */
-const handleMessage = (message, tabId) => {
-	const instance = instances.get(tabId);
-
-	if (!instance) {
-		return INVALID_RESPONSE;
+const handleUnknownInstanceMessage = (message) => {
+	switch (message.type) {
+		default:
+			return INVALID_RESPONSE;
 	}
+};
 
+/**
+ *
+ */
+const handleKnownInstanceMessage = (message, tabId, instance) => {
 	switch (message.type) {
 		// sends the store's state to the instance.
 		case REQUEST_INITIAL_STATE:
@@ -77,9 +79,7 @@ const handleMessage = (message, tabId) => {
 					type: 'popup'
 				}).then((popup) => {
 					const id = get(popup, 'tabs[0].id');
-					instance.switchToPopup(id);
-					instances.set(id, instance);
-					instances.unset(tabId);
+					instances.switchToPopup(tabId, id);
 				});
 			}
 			break;
@@ -88,9 +88,7 @@ const handleMessage = (message, tabId) => {
 		// closes it.
 		case CLOSE_POPUP:
 			if (instance.isPopup()) {
-				const id = instance.switchToTab();
-				instances.set(id, instance);
-				instances.unset(tabId);
+				instances.switchToTab(tabId);
 				closeTab(tabId);
 			}
 			break;
@@ -108,7 +106,7 @@ const handleMessage = (message, tabId) => {
  */
 chrome.browserAction.onClicked.addListener(() =>
 	fetchCurrentTab().then((id) => {
-		if (instances.has(id)) {
+		if (instances.hasInstance(id)) {
 			closePanel(id);
 		} else {
 			openPanel(id);
@@ -122,7 +120,13 @@ chrome.browserAction.onClicked.addListener(() =>
  */
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	const tabId = sender.tab && sender.tab.id;
-	const response = handleMessage(message, tabId);
+	const instance = tabId
+		? instances.getInstance(tabId)
+		: instances.getOptionsInstance();
+
+	const response = instance
+		? handleKnownInstanceMessage(message, tabId, instance)
+		: handleUnknownInstanceMessage(message);
 
 	sendResponse(response);
 });
@@ -131,5 +135,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
  *	Removes associated data when a tab is closed.
  */
 chrome.tabs.onRemoved.addListener((id) => {
-	instances.unset(id);
+	instances.removeInstance(id);
 });

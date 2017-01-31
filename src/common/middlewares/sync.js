@@ -7,9 +7,9 @@ import {REDUX_ACTION} from '../actions/runtime';
  *	the next middlewares.
  *	This should be the first middleware in the chain.
  */
-export const createGatherMiddleware = (name) =>
+export const createGatherMiddleware = (name, register = chrome.runtime.onMessage.addListener) =>
 	() => (next) => {
-		chrome.runtime.onMessage.addListener(({type, sender, action}) => {
+		register(({type, sender, action}) => {
 			if (action && type === REDUX_ACTION && sender !== name) {
 				next({
 					...action,

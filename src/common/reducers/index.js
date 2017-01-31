@@ -11,16 +11,30 @@ import imports from './imports';
 
 
 
-export const reducers = {
-	panel,
-	helpers,
+/**
+ *	Reducers shared by each instance in the background.
+ */
+export const sharedReducers = {
 	reference,
 	themes,
 	criteria,
-	tests,
+	tests
+};
+
+/**
+ *	Reducers that are instance-specific in the background.
+ */
+export const appReducers = {
+	panel,
+	helpers,
 	instructions,
 	checklist,
 	imports
+};
+
+export const reducers = {
+	...sharedReducers,
+	...appReducers
 };
 
 export default combineReducers(reducers);

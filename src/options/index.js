@@ -21,4 +21,5 @@ getStore()
 	))
 	.then((app) =>
 		render(app, document.getElementById('options'))
-	);
+	)
+	.catch(() => {});

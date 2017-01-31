@@ -1,7 +1,7 @@
 import {get, first, keys} from 'lodash';
 import {takeEvery} from 'redux-saga';
 import {call, put} from 'redux-saga/effects';
-import {save} from '../api/options';
+import {setOption} from '../api/options';
 import {getReference, flattenReference} from '../api/reference';
 import {getHelpers} from '../api/helpers';
 import {fetchInstructions} from '../api/instructions';
@@ -48,7 +48,7 @@ function* setReferenceVersionWorker({payload: {version}}) {
 	yield put(setHelpers(helpers));
 	yield put(setInstructions(instructions));
 
-	yield call(save, 'reference', version);
+	yield call(setOption, 'reference', version);
 }
 
 

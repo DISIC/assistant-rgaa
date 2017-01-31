@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-spacing */
 export * as addClassName from './addClassName';
 export * as disableAllStyles from './disableAllStyles';
 export * as outline from './outline';
