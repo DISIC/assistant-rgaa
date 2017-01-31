@@ -7,7 +7,7 @@ import {REDUX_ACTION} from '../actions/runtime';
  *	the next middlewares.
  *	This should be the first middleware in the chain.
  */
-export const createGatherMiddleware = (name, register = chrome.runtime.onMessage.addListener) =>
+export const createGatherMiddleware = (name, register = ::chrome.runtime.onMessage.addListener) =>
 	() => (next) => {
 		register(({type, sender, action}) => {
 			if (action && type === REDUX_ACTION && sender !== name) {
@@ -26,7 +26,7 @@ export const createGatherMiddleware = (name, register = chrome.runtime.onMessage
  *	Broadcasts actions to the other stores.
  *	This should be the last middleware in the chain.
  */
-export const createBroadcastMiddleware = (name, send = chrome.runtime.sendMessage) =>
+export const createBroadcastMiddleware = (name, send = ::chrome.runtime.sendMessage) =>
 	() => (next) => (action) => {
 		if (!action.gathered) {
 			send({
