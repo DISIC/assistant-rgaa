@@ -9,7 +9,7 @@ const fullPath = path.resolve.bind(null, __dirname);
 module.exports = function(config) {
 	config.set({
 		files: [
-			'test/**/*.js'
+			'src/**/*.test.js'
 		],
 		frameworks: [
 			'mocha',
@@ -23,24 +23,20 @@ module.exports = function(config) {
 			'Firefox'
 		],
 		preprocessors: {
-			'js/**/*.js': ['webpack'],
-			'test/**/*.js': ['webpack']
+			'src/**/*.js': ['webpack']
 		},
 		webpack: {
 			devtool: 'inline-source-map',
 			resolve: {
 				alias: {
-					'rgaa-toolbar': fullPath('js')
+					'rgaa-toolbar': fullPath('src')
 				}
 			},
 			module: {
 				loaders: [
 					{
 						test: /\.js$/,
-						include: [
-							fullPath('js'),
-							fullPath('test')
-						],
+						include: fullPath('src'),
 						loader: 'babel'
 					},
 					{
