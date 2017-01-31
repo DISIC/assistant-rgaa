@@ -21,13 +21,14 @@ function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl
 		? intl.formatMessage({id: 'Theme.criterion.disabled'})
 		: '';
 	return (
-		<li id={`criterion-${id}`} className={className} title={htmlTitle}>
+		<li id={`Criterion-${id}`} className={className} title={htmlTitle}>
 			<header className={headerClassName}>
 				<h3 className="Criterion-title">
 					<button
 						className="InvisibleButton Criterion-toggle"
 						type="button"
 						onClick={onToggle}
+						aria-controls={`Criterion-${id}-content`}
 					>
 						<span dangerouslySetInnerHTML={{__html: title}} />
 					</button>
@@ -47,7 +48,11 @@ function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl
 				</div>
 			</header>
 
-			<div className="Criterion-content">
+			<div
+				className="Criterion-content"
+				aria-expanded={isOpen}
+				id={`Criterion-${id}-content`}
+			>
 				{renderIf(isOpen)(() =>
 					<ul className="Criterion-tests">
 						{tests.map(({id: testId, title: testTitle}) =>
