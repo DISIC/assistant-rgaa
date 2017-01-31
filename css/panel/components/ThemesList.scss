@@ -29,15 +29,17 @@
 	display: block;
 }
 
-.ThemesList-toggle:before {
-	display: inline;
-	font-family: $font-body;
-	margin-right: 6px;
-	content: '►';
+.ThemesList-toggleIcon {
+	display: inline-block;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	margin-right: 3px;
+}
 
-	.ThemesList.is-open & {
-		content: '▼';
-	}
+.ThemesList:not(.is-open) .ThemesList-toggleIcon {
+	margin-top: -2px; //yes, this is magic
+	// (better vertical alignement without changing line height)
 }
 
 .ThemesList-link {

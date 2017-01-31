@@ -35,11 +35,33 @@ function ThemesList({themes, activeTheme, inactiveThemes, isOpen, setOpen}) {
 				document.location.href = href;
 			}}
 			onMenuToggle={(menu) => setOpen(menu.isOpen)}
+			id="ThemesList-wrapper"
 		>
 			<Button
 				tag="h2"
 				className="ThemesList-title Title Title--accent ThemesList-toggle"
+				id="themesMenu"
 			>
+				{renderIf(isOpen)(() =>
+					<span aria-hidden className="ThemesList-toggleIcon">▼</span>
+				)}
+				{renderIf(!isOpen)(() =>
+					<svg
+						aria-hidden
+						viewBox="0 0 24 24"
+						width="24"
+						height="24"
+						className="ThemesList-toggleIcon Icon"
+					>
+						<path
+							d={[
+								'M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 ',
+								'4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z'
+							].join('')}
+						/>
+						<path fill="none" d="M0 0h24v24H0z" />
+					</svg>
+				)}
 				<FormattedMessage id="ThemesList.title" />
 			</Button>
 			<Menu tag="ul" className="ThemesList-list">
