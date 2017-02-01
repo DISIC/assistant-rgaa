@@ -22,7 +22,6 @@ function Test({
 	const handleDoneChange = (event) =>
 		onDone(event.target.checked);
 
-	const applyImage = applied ? 'cross.png' : 'magnifier-zoom.png';
 	const applyTranslateKey = applied ? 'uncheck' : 'check';
 
 	const htmlTitle = title.replace(
@@ -57,22 +56,11 @@ function Test({
 
 					{renderIf(applicable)(() => (
 						<div className="Test-action Test-action---apply">
-							<label
-								htmlFor={`test-${id}-apply-input`}
-								className="Test-actionLabel"
+							<input
 								title={intl.formatMessage({
 									id: `Test.apply.${applyTranslateKey}.title`
 								})}
-							>
-								<img
-									src={`/img/${applyImage}`}
-									alt={intl.formatMessage({
-										id: `Test.apply.${applyTranslateKey}.alt`
-									})}
-								/>
-							</label>
-							<input
-								className="Test-actionInput u-hidden"
+								className="Test-actionInput"
 								type="checkbox"
 								id={`test-${id}-apply-input`}
 								checked={applied}
