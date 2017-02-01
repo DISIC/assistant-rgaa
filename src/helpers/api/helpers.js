@@ -1,5 +1,5 @@
 import {isArray, first, tail} from 'lodash';
-import * as modules from './helpers';
+import * as modules from '../helpers';
 
 
 

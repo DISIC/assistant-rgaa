@@ -1,6 +1,6 @@
 import {REDUX_ACTION} from '../common/actions/runtime';
 import {APPLY, REVERT} from '../common/actions/helpers';
-import {applyHelpers, revertHelpers} from './api';
+import {applyHelpers, revertHelpers} from './api/helpers';
 
 
 
