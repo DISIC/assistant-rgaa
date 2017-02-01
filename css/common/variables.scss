@@ -8,6 +8,9 @@ $line-height: 1.5;
 $typi: (
 	null: ($base-font-size, $line-height)
 );
+$typi-xxlarge: (
+	null: (1.313em, $line-height / 1.313)
+);
 $typi-xlarge: (
 	null: (1.0625em, $line-height / 1.0625)
 );

@@ -1,7 +1,9 @@
 import React, {PropTypes} from 'react';
 import {injectIntl, intlShape} from 'react-intl';
 import renderIf from 'render-if';
+import classNames from 'classnames';
 import {noop} from 'lodash';
+import Icon from './Icon';
 import TestInstructions from './TestInstructions';
 import TestHelpersContainer from './TestHelpersContainer';
 
@@ -79,13 +81,24 @@ function Test({
 						</div>
 					))}
 
-					<div className="Test-action Test-action---done">
-						<input
-							className="Test-actionInput"
-							type="checkbox"
+					<div
+						className={classNames('Test-action Test-action--done', {
+							'Test-action--checked': done
+						})}
+					>
+						<label
+							htmlFor={`test-${id}-done-input`}
+							className="Test-actionLabel"
 							title={intl.formatMessage({
-								id: 'Test.done'
+								id: done ? 'Test.done' : 'Test.todo'
 							})}
+						>
+							<Icon name="flag" />
+						</label>
+						<input
+							className="Test-actionInput u-hidden"
+							type="checkbox"
+							id={`test-${id}-done-input`}
 							checked={done}
 							onChange={handleDoneChange}
 						/>
