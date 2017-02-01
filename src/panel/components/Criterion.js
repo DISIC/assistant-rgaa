@@ -3,6 +3,7 @@ import {injectIntl, intlShape} from 'react-intl';
 import renderIf from 'render-if';
 import classNames from 'classnames';
 import TestContainer from './TestContainer';
+import Icon from './Icon';
 
 
 
@@ -35,12 +36,25 @@ function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl
 				</h3>
 
 				<div className="Criterion-actions">
-					<div className="Criterion-action">
+					<div
+						className={classNames('Criterion-action Criterion-action--done', {
+							'Criterion-action--checked': isDone
+						})}>
+						<label
+							htmlFor={`criterion-${id}-done-input`}
+							className="Criterion-actionLabel"
+							title={intl.formatMessage({
+								id: isDone
+									? 'Criterion.done.label'
+									: 'Criterion.todo.label'
+							})}
+						>
+							<Icon name="flag" />
+						</label>
 						<input
 							type="checkbox"
-							title={intl.formatMessage({
-								id: 'Criterion.done.label'
-							})}
+							id={`criterion-${id}-done-input`}
+							className="u-hidden"
 							checked={isDone}
 							readOnly
 						/>
