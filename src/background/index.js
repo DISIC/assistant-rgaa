@@ -6,6 +6,7 @@ import {
 import {IFRAME_FILE} from '../container/api/iframe';
 import {openWindow} from './api/windows';
 import {fetchCurrentTab, closeTab} from './api/tabs';
+import {createMessageHandler} from '../common/api/runtime';
 import {getOption} from '../common/api/options';
 import {setReferenceVersion} from '../common/actions/reference';
 import createInstancePool from './createInstancePool';
@@ -95,8 +96,7 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 
 		// broadcasts message
 		default:
-			instance.sendMessage(message);
-			break;
+			return instance.sendMessage(message);
 	}
 };
 
@@ -118,18 +118,18 @@ chrome.browserAction.onClicked.addListener(() =>
  *	Dispatches every message to the content scripts, allowing
  *	content scripts to talk to each other.
  */
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-	const tabId = sender.tab && sender.tab.id;
-	const instance = tabId
-		? instances.getInstance(tabId)
-		: instances.getOptionsInstance();
+chrome.runtime.onMessage.addListener(
+	createMessageHandler((message, sender) => {
+		const tabId = sender.tab && sender.tab.id;
+		const instance = tabId
+			? instances.getInstance(tabId)
+			: instances.getOptionsInstance();
 
-	const response = instance
-		? handleKnownInstanceMessage(message, tabId, instance)
-		: handleUnknownInstanceMessage(message);
-
-	sendResponse(response);
-});
+		return instance
+			? handleKnownInstanceMessage(message, tabId, instance)
+			: handleUnknownInstanceMessage(message);
+	})
+);
 
 /**
  *	Removes associated data when a tab is closed.
