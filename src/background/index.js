@@ -42,7 +42,7 @@ const openPanel = (id) => {
  */
 const closePanel = (id) => {
 	instances
-		.get(id)
+		.getInstance(id)
 		.sendMessage({
 			type: CLOSE_PANEL
 		})

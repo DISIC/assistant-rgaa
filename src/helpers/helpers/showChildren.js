@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import showChildren from './showChildren';
+import showChildren from '../api/showChildren';
 
 
 
