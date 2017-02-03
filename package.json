@@ -93,6 +93,7 @@
     "render-if": "^0.1.1",
     "susy": "^2.2.12",
     "typi": "^2.2.1",
+    "wcag-contrast-verifier": "^1.1.0",
     "whatwg-fetch": "^1.0.0"
   }
 }
