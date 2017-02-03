@@ -36,5 +36,29 @@ export const sendMessageToTab = (id, message) =>
 /**
  *
  */
+export const captureVisibleTab = () =>
+	new Promise((resolve, reject) => {
+		const callback = (source) => {
+			if (chrome.runtime.lastError) {
+				reject(chrome.runtime.lastError);
+			} else {
+				const image = new Image();
+				image.src = source;
+				resolve(image);
+			}
+		};
+
+		const promise = chrome.tabs.captureVisibleTab(null, {
+			format: 'png'
+		}, callback);
+
+		if (isObject(promise) && promise.then) {
+			promise.then(callback);
+		}
+	});
+
+/**
+ *
+ */
 export const closeTab = (id) =>
 	chrome.tabs.remove(id);

@@ -19,7 +19,8 @@
 	},
 	"permissions": [
 		"tabs",
-		"storage"
+		"storage",
+		"activeTab"
 	],
 	"background": {
 		"scripts": [
