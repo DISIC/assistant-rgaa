@@ -1,16 +1,12 @@
 import React, {PropTypes} from 'react';
 import {injectIntl, intlShape} from 'react-intl';
-import {Link} from 'react-router';
+import {MenuItem} from 'react-aria-menubutton';
 
 
 
-function ThemesListItem({id, title, icon, isActive, isDisabled, intl}) {
+function ThemesListItem({title, icon, isDisabled, intl}) {
 	const style = {backgroundImage: `url('/img/${icon}')`};
 	const props = {};
-	if (isActive) {
-		// this tells Slyct to activate the item
-		props['data-slyct-active-item'] = '';
-	}
 	const listItem = (tab) => (
 		<li className="ThemesList-item" {...props}>
 			{tab}
@@ -33,13 +29,15 @@ function ThemesListItem({id, title, icon, isActive, isDisabled, intl}) {
 	}
 
 	return listItem(
-		<Link
+		<MenuItem
+			tag="a"
 			className="InvisibleLink ThemesList-link"
-			to={`/themes/${id}`}
+			href={`#${title}`}
+			value={`#${title}`}
 			style={style}
 		>
 			{title}
-		</Link>
+		</MenuItem>
 	);
 }
 

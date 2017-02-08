@@ -28,7 +28,7 @@ function ImportPage({
 
 	return (
 		<div>
-			<h1 className="ImportPage-title">
+			<h1 className="ImportPage-title Title">
 				<FormattedMessage id="Import.title" />
 			</h1>
 

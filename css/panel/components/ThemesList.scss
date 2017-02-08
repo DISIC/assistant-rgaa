@@ -1,38 +1,74 @@
 .ThemesList {
-	display: flex;
-	position: relative;
-	top: 1px;
+	z-index: 100;
+	border-bottom: 2px solid $color-theme;
 }
 
-.ThemesList-tabs {
-	flex: 1;
-	overflow: hidden;
+.ThemesList-list {
+	position: absolute;
+	left: $app-gutter;
+	right: $app-gutter;
+	margin: auto;
+	background: $color-white;
+	padding-bottom: vr(0.25);
+	border: 2px solid $color-theme;
+	border-top: 0;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
 }
 
-.ThemesList-item {
+.ThemesList-title {
+	flex-shrink: 0;
+	padding: 0;
+	display: block;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+}
+
+.ThemesList-toggle {
+	padding: vr(1/4) $app-gutter;
+	display: block;
+}
+
+.ThemesList-toggleIcon {
 	display: inline-block;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	margin-right: 3px;
+}
+
+.ThemesList:not(.is-open) .ThemesList-toggleIcon {
+	margin-top: -2px; //yes, this is magic
+	// (better vertical alignement without changing line height)
 }
 
 .ThemesList-link {
 	display: block;
-	padding: vr(0.125) vr(1);
-	padding-left: 36px;
-	background: darken($color-white, 10%) none no-repeat 6px 50%;
+	padding: vr(0.125) $app-gutter;
+	padding-left: 2.6rem;
+	background: $color-white none no-repeat 0.6rem 50%;
 	background-size: 24px;
-	border: 1px solid darken($color-wild-sand, 30%);
+	border: 1px solid darken($color-sand, 30%);
+	border-left: 0;
+	border-right: 0;
+	text-decoration: underline;
 }
 
 .ThemesList-item + .ThemesList-item .ThemesList-link {
-	border-left: 0;
+	border-top: 0;
+}
+
+.ThemesList-item:last-child .ThemesList-link {
+	border-bottom: 0;
 }
 
 .ThemesList-link:not(.is-disabled):hover,
 .ThemesList-link:not(.is-disabled):focus {
-	background-color: darken($color-white, 5%);
+	background-color: $color-highlight;
 }
 
 .ThemesList-link:not(.is-disabled):active {
-	background-color: darken($color-white, 15%);
+	background-color: darken($color-highlight, 10%);
 }
 
 .ThemesList-link.is-disabled {
@@ -43,11 +79,4 @@
 .ThemesList-item.is-active .ThemesList-link {
 	background-color: $color-white;
 	border-bottom: 0;
-}
-
-.ThemesList-navButton {
-	padding-left: vr(0.25);
-	padding-right: vr(0.25);
-	font-weight: bolder;
-	border-radius: 0;
 }

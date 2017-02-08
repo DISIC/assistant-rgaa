@@ -31,7 +31,7 @@ function Test({
 	return (
 		<article className="Test">
 			<header className="Test-header">
-				<h2
+				<p
 					className="Test-title"
 					dangerouslySetInnerHTML={{
 						__html: htmlTitle

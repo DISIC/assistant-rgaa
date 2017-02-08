@@ -17,22 +17,14 @@
 	margin: auto;
 	max-width: 600px;
 	border: 1px solid #ccc;
-	background: $color-wild-sand;
+	background: $color-sand;
 	overflow: auto;
 	outline: none;
 	z-index: ($max-z-index - 3);
 }
 
 .ImportPage-container * {
-	font-family: $font-sans-serif;
-	font-size: $base-font-size;
-}
-
-.ImportPage-title {
-	background: $color-mariner;
-	color: $color-white;
-	padding: $base-line-height;
-	margin: 0;
+	font-family: $font-body;
 	font-size: $base-font-size;
 }
 

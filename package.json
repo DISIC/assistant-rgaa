@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack --watch --config webpack.config.dev.js",
     "serve": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "npm run clean && webpack --config webpack.config.production.js",
+    "icons": "spritesh --input ./icons --output ./dist/icons.svg",
+    "build": "npm run clean && npm run icons && webpack --config webpack.config.production.js",
     "extension": "web-ext build --artifacts-dir=dist/",
     "clean": "npm prune && npm install && npm dedupe",
     "test": "karma start"
@@ -57,6 +58,7 @@
     "redux-devtools-log-monitor": "^1.0.11",
     "request": "^2.74.0",
     "sass-loader": "^3.2.0",
+    "spritesh": "^1.2.0",
     "style-loader": "^0.13.1",
     "stylelint": "^6.3.3",
     "stylelint-config-vtech": "^0.2.0",
@@ -76,7 +78,7 @@
     "lodash": "^4.12.0",
     "react": "^15.0.2",
     "react-addons-update": "^15.0.2",
-    "react-aria-menubutton": "^4.1.3",
+    "react-aria-menubutton": "^4.3.0",
     "react-dom": "^15.0.2",
     "react-draggable": "^2.2.0",
     "react-helmet": "^3.1.0",

@@ -1,17 +1,72 @@
+.Criterion {
+	border-top: 1px solid lighten($color-black, 60%);
+}
+
 .Criterion-header {
 	display: flex;
 	justify-content: space-between;
-	background-color: $color-mariner;
-	color: $color-white;
-	font-weight: bold;
+	padding: 0;
+	background-color: $color-white;
+	color: $color-black;
 
 	a {
-		color: $color-white;
+		color: $color-black;
+		text-decoration: underline;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+
+		&:active {
+			text-decoration: underline;
+		}
 	}
 }
 
+.Criterion:nth-child(even) .Criterion-header {
+	background: rgba($color-blue, 0.05);
+}
+
+.Criterion .Criterion-header:hover {
+	background: $color-highlight;
+}
+
+.Criterion.is-open .Criterion-header {
+	@include typi($typi-large);
+	background-color: $color-theme;
+	color: $color-theme-text;
+
+	a {
+		color: $color-theme-text;
+	}
+}
+
+.Criterion-title,
+.Criterion-toggle {
+	display: block;
+	width: 100%;
+}
+
 .Criterion-title {
-	padding: $app-gutter;
+	font-weight: bold;
+}
+
+.Criterion-toggle {
+	padding: vr(0.25) $app-gutter;
+	text-align: left;
+}
+
+.Criterion-toggle:before {
+	display: inline-block;
+	font-family: $font-body;
+	margin-right: 6px;
+	content: '►';
+	transition: transform 0.25s;
+}
+
+.Criterion.is-open .Criterion-toggle:before {
+	transform: rotate(90deg);
 }
 
 .Criterion-actions {
@@ -22,8 +77,38 @@
 	display: inline-block;
 	vertical-align: middle;
 	padding: vr(1/8);
-	border-left: 1px solid lighten($color-mariner, 20%);
+	border-left: 1px solid lighten($color-black, 60%);
 	height: 100%;
+}
+
+.Criterion.is-open .Criterion-action {
+	border-color: lighten($color-theme, 20%);
+}
+
+.Criterion-content {
+	background-color: $color-theme;
+	transition: padding-left 0.3s;
+}
+
+.Criterion.is-open .Criterion-content {
+	padding-left: $app-gutter;
+}
+
+.Criterion-tests {
+	background: $color-white;
+}
+
+.Criterion-test:nth-child(even) {
+	background: rgba($color-blue, 0.05);
+}
+
+.Criterion-test:hover {
+	background: $color-highlight;
+}
+
+.Criterion-test:last-child .Test-header:last-child,
+.Criterion-test:last-child .TestInstructions {
+	padding-bottom: vr(1);
 }
 
 .Criterion.is-disabled {
@@ -36,26 +121,4 @@
 .Criterion.is-disabled input,
 .Criterion.is-disabled label {
 	pointer-events: none;
-}
-
-.Criterion-test:nth-child(even) {
-	background: rgba($color-mariner, 0.05);
-}
-
-.Criterion-test:hover {
-	background: rgba(yellow, 0.1);
-}
-
-.Criterion:target .Criterion-title {
-	animation: highlight 0.5s ease-in;
-}
-
-@keyframes highlight {
-	0% {
-		background-color: lighten($color-mariner, 40%);
-	}
-
-	100% {
-		background-color: $color-mariner;
-	}
 }

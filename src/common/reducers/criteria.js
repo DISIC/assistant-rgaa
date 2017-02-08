@@ -1,4 +1,7 @@
-import {SET_ALL, SET_CURRENT} from '../actions/criteria';
+import {
+	SET_ALL, SET_CURRENT, OPEN_CRITERION, CLOSE_CRITERION
+} from '../actions/criteria';
+import {without} from 'lodash';
 
 
 
@@ -7,7 +10,8 @@ import {SET_ALL, SET_CURRENT} from '../actions/criteria';
  */
 export const initialState = {
 	list: {},
-	current: null
+	current: null,
+	opened: []
 };
 
 /**
@@ -25,6 +29,18 @@ export default function criteria(state = initialState, {type, payload}) {
 			return {
 				...state,
 				current: payload
+			};
+
+		case CLOSE_CRITERION:
+			return {
+				...state,
+				opened: without(state.opened, payload)
+			};
+
+		case OPEN_CRITERION:
+			return {
+				...state,
+				opened: [...state.opened, payload]
 			};
 
 		default:

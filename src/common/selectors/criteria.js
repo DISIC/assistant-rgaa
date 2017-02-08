@@ -1,4 +1,4 @@
-import {get, property, map, filter} from 'lodash';
+import {includes, get, property, map, filter} from 'lodash';
 
 
 
@@ -26,3 +26,9 @@ export const getIds = (state) =>
  */
 export const getAllByTheme = (state, themeId) =>
 	filter(getAll(state), ['themeId', themeId]);
+
+/**
+ *
+ */
+export const isOpen = (state, criterionId) =>
+	includes(get(state, 'criteria.opened', []), criterionId);
