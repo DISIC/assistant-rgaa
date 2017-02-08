@@ -13,6 +13,7 @@ export default function* sagas() {
 		panel.watchSetPosition(),
 		imports.watchApply(),
 		tests.watchEnable(),
+		tests.watchDisable(),
 		criteria.watchToggleCriterion()
 	];
 }
