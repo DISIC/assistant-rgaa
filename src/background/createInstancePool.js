@@ -1,5 +1,5 @@
 import {createStore, combineReducers} from 'redux';
-import {has, get, remove, forEach, method} from 'lodash';
+import {has, get, unset, forEach, method} from 'lodash';
 import {sharedReducers} from '../common/reducers';
 import createAppInstance from './createAppInstance';
 import createOptionsInstance from './createOptionsInstance';
@@ -58,6 +58,6 @@ export default function createInstancePool() {
 		dispatch,
 		hasInstance: has.bind(null, instances),
 		getInstance: get.bind(null, instances),
-		removeInstance: remove.bind(null, instances)
+		removeInstance: unset.bind(null, instances)
 	};
 }
