@@ -59,7 +59,7 @@ const createId = (id, index) =>
 const runHelpers = (func) => (id, helpers) => {
 	helpers.forEach((helper, i) => {
 		const {module, args} = info(helper);
-		module[func](createId(id, i), args);
+		module[func](createId(id, i), ...args);
 	});
 };
 
