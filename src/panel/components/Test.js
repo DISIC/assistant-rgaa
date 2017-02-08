@@ -10,7 +10,10 @@ import TestHelpersContainer from './TestHelpersContainer';
 /**
  *
  */
-function Test({id, title, instructions, importResult, applicable, applied, done, onApply, onDone, intl}) {
+function Test({
+	id, title, instructions, importResult, applicable, applied,
+	done, onApply, onDone, intl
+}) {
 	const handleApplyChange = (event) =>
 		onApply(event.target.checked);
 

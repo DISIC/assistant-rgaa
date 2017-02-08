@@ -1,113 +1,139 @@
-import store from './store';
-import {create} from './api/windows';
-import {fetchCurrentTab, sendToContent} from './api/tabs';
-import storage from '../common/api/storage';
-import {get as getOption} from '../common/api/options';
+import {get} from 'lodash';
+import {
+	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP,
+	REQUEST_INITIAL_STATE, INVALID_RESPONSE
+} from '../common/actions/runtime';
+import {IFRAME_FILE} from '../container/api/iframe';
+import {openWindow} from './api/windows';
+import {fetchCurrentTab, closeTab} from './api/tabs';
+import {createMessageHandler} from '../common/api/runtime';
+import {getOption} from '../common/api/options';
 import {setReferenceVersion} from '../common/actions/reference';
-import {setCurrent as setCurrentTab} from '../common/actions/tabs';
-import {toggle, setPopup} from '../common/actions/container';
-import {isOpen, getPopupWindowId} from '../common/selectors/container';
-import {getCurrent as getCurrentTab} from '../common/selectors/tabs';
+import createInstancePool from './createInstancePool';
 
 
+
+/**
+ *	A map of open instances, indexed by tab id.
+ */
+const instances = createInstancePool();
 
 /**
  *
  */
-window.rgaaExt = {
-	store
+const openPanel = (id) => {
+	// creates an instance and indexes it on the tab id.
+	const instance = instances.create(id);
+
+	// opens the panel and loads initial data.
+	instance
+		.sendMessage({
+			type: OPEN_PANEL
+		})
+		.then(() =>
+			getOption('reference')
+		)
+		.then((version = '3') =>
+			instance.dispatch(setReferenceVersion(version))
+		);
 };
 
-
-
-const restoreReference = () =>
-	getOption('reference').then((version = '3') => {
-		store.dispatch(setReferenceVersion(version));
-	});
-
-restoreReference();
-
-
+/**
+ *
+ */
+const closePanel = (id) => {
+	instances
+		.getInstance(id)
+		.sendMessage({
+			type: CLOSE_PANEL
+		})
+		.then(() =>
+			instances.removeInstance(id)
+		);
+};
 
 /**
- *	Opens a devtools popup in development mode.
+ *
  */
-if (process.env.NODE_ENV !== 'production') {
-	create({
-		url: chrome.runtime.getURL('src/devtools/content.html'),
-		type: 'popup'
-	});
-}
-
-
+const handleUnknownInstanceMessage = (message) => {
+	switch (message.type) {
+		default:
+			return INVALID_RESPONSE;
+	}
+};
 
 /**
- *	Dispatches every message to the content scripts, allowing
- *	content scripts to talk to each other.
+ *
  */
-chrome.runtime.onMessage.addListener((message) =>
-	sendToContent(message)
-);
+const handleKnownInstanceMessage = (message, tabId, instance) => {
+	switch (message.type) {
+		// sends the store's state to the instance.
+		case REQUEST_INITIAL_STATE:
+			return instance.store.getState();
+
+		// if the instance runs in a tab, opens a popup and
+		// indexes the instance on the new tab id,
+		case OPEN_POPUP:
+			if (!instance.isPopup()) {
+				openWindow({
+					url: chrome.runtime.getURL(IFRAME_FILE),
+					type: 'popup'
+				}).then((popup) => {
+					const id = get(popup, 'tabs[0].id');
+					instances.switchToPopup(tabId, id);
+				});
+			}
+			break;
+
+		// if the instance runs in a popup, desindexes it and
+		// closes it.
+		case CLOSE_POPUP:
+			if (instance.isPopup()) {
+				instances.switchToTab(tabId);
+				closeTab(tabId);
+			}
+			break;
+
+		// broadcasts message
+		default:
+			return instance.sendMessage(message);
+	}
+};
 
 /**
  *	Asks the content script to toggle the extension's container
  *	when one clicks the extension icon in the browser UI.
  */
-chrome.browserAction.onClicked.addListener(() => {
-	let tab;
-	fetchCurrentTab()
-		.then((tabId) => {
-			tab = tabId;
-			// empty cached store from chrome storage to have some sort of "session storage"
-			return storage.removeAllWithPrefix(storage.persistPrefix);
-		})
-		.then(() =>
-			restoreReference()
-		)
-		.then(() => {
-			store.dispatch(setCurrentTab(tab));
-			store.dispatch(toggle());
-		});
-});
+chrome.browserAction.onClicked.addListener(() =>
+	fetchCurrentTab().then((id) => {
+		if (instances.hasInstance(id)) {
+			closePanel(id);
+		} else {
+			openPanel(id);
+		}
+	})
+);
 
-/*
-* let the app know when the user closed the popup window
-*/
-chrome.windows.onRemoved.addListener(removedWindowId => {
-	const currentPopupId = getPopupWindowId(store.getState());
-	if (currentPopupId === removedWindowId) {
-		store.dispatch(setPopup(null));
-		store.dispatch(toggle());
-	}
-});
+/**
+ *	Dispatches every message to the content scripts, allowing
+ *	content scripts to talk to each other.
+ */
+chrome.runtime.onMessage.addListener(
+	createMessageHandler((message, sender) => {
+		const tabId = sender.tab && sender.tab.id;
+		const instance = tabId
+			? instances.getInstance(tabId)
+			: instances.getOptionsInstance();
 
-/*
-* let the app know when the user closed the current tab
-*/
-chrome.tabs.onRemoved.addListener((removedTabId) => {
-	const state = store.getState();
-	if (getCurrentTab(state) === removedTabId) {
-		store.dispatch(setPopup(null));
-	}
-	if (getCurrentTab(state) === removedTabId && isOpen(state)) {
-		store.dispatch(toggle());
-	}
-});
+		return instance
+			? handleKnownInstanceMessage(message, tabId, instance)
+			: handleUnknownInstanceMessage(message);
+	})
+);
 
-/*
-* let the app know when the user changed the current tab
-*/
-chrome.tabs.onUpdated.addListener((updatedTabId, tabData) => {
-	const state = store.getState();
-	if (getCurrentTab(state) !== updatedTabId) {
-		return;
-	}
-	if (!tabData.url) {
-		return;
-	}
-	// if the updated tab is the current tab, and the url has changed, reset container
-	store.dispatch(setPopup(null));
-	if (isOpen(state)) {
-		store.dispatch(toggle());
-	}
+/**
+ *	Removes associated data when a tab is closed.
+ */
+chrome.tabs.onRemoved.addListener((id) => {
+	instances.removeInstance(id);
 });

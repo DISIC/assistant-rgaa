@@ -11,15 +11,15 @@ import App from './components/App';
 
 addLocaleData(fr);
 
-getStore().then((store) => {
-	/**
-	 *	Renders the application.
-	 */
-	render((
+getStore()
+	.then((store) => (
 		<Provider store={store}>
 			<IntlProvider locale="fr" messages={messages}>
 				<App />
 			</IntlProvider>
 		</Provider>
-	), document.getElementById('options'));
-});
+	))
+	.then((app) =>
+		render(app, document.getElementById('options'))
+	)
+	.catch(() => {});

@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import container from './container';
+import panel from './panel';
 import helpers from './helpers';
 import reference from './reference';
 import themes from './themes';
@@ -7,22 +7,34 @@ import criteria from './criteria';
 import tests from './tests';
 import instructions from './instructions';
 import checklist from './checklist';
-import tabs from './tabs';
 import imports from './imports';
 
 
 
-export const reducers = {
-	container,
-	helpers,
+/**
+ *	Reducers shared by each instance in the background.
+ */
+export const sharedReducers = {
 	reference,
 	themes,
 	criteria,
-	tests,
+	tests
+};
+
+/**
+ *	Reducers that are instance-specific in the background.
+ */
+export const appReducers = {
+	panel,
+	helpers,
 	instructions,
 	checklist,
-	tabs,
 	imports
+};
+
+export const reducers = {
+	...sharedReducers,
+	...appReducers
 };
 
 export default combineReducers(reducers);

@@ -4,8 +4,8 @@
 const messages = {
 	'Header.title': 'Panel d\'outils RGAA',
 	'Header.options': 'Options',
-	'Header.import.start': 'Import',
-	'Header.import.reset': 'Réinitialiser l\'import',
+	'Header.themes': 'Référentiel',
+	'Header.import': 'Import',
 	'Theme.disabled': `Cette thématique a été désactivée lors de l\'import
 		car tous ses critères sont notés "non applicable".`,
 	'Theme.criterion.disabled': `Ce critère et ses tests ont été désactivés lors de l\'import
@@ -30,7 +30,7 @@ const messages = {
 	'Import.success': 'Vérification du fichier… OK. Vous pouvez lancer l\'import.',
 	'Import.failure': 'Votre fichier ne suit pas le format attendu. Veuillez corriger les erreurs :',
 	'Import.submit': 'Lancer l\'import',
-	'Import.close': 'Fermer la fenêtre',
+	'Import.reset': 'Réinitialiser l\'import',
 	'Import.versionDifference': `&#9888; La version du référentiel RGAA utilisée par
 		l\'extension (configurable dans les options) va être définie à la version {version}
 		pour faire fonctionner l\'import.`,

@@ -14,23 +14,14 @@ import messages from '../common/messages/fr';
  */
 addLocaleData(fr);
 
-
-getStore().then((store) => {
-	const appRoutes = routes(store);
-
-	/**
-	 *	Wraps the application with data and intl providers.
-	 */
-	const app = (
+getStore()
+	.then((store) => (
 		<Provider store={store}>
 			<IntlProvider locale="fr" messages={messages}>
-				{appRoutes}
+				{routes(store)}
 			</IntlProvider>
 		</Provider>
+	))
+	.then((app) =>
+		render(app, document.getElementById('panel'))
 	);
-
-	/**
-	 *	Renders the application on #app.
-	 */
-	render(app, document.getElementById('panel'));
-});

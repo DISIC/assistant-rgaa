@@ -1,35 +1,5 @@
 import $ from 'jquery';
-import {lowerCase} from 'lodash';
-import {serializeAttribute} from './showAttribute';
-
-
-
-/**
- *
- */
-const serializeElement = (element, attributes, showMissing) => {
-	const name = lowerCase(element.get(0).tagName);
-	const attributesString = attributes
-		.map((attribute) => serializeAttribute(element, attribute, showMissing))
-		.join(' ');
-
-	return `&lt;${name} ${attributesString} /&gt;`;
-};
-
-/**
- *
- */
-const showChildren = (id, element, childrenSelector, attributes, showMissing) =>
-	element
-		.find(childrenSelector)
-		.each((i, child) =>
-			element.after(
-				$('<code />', {
-					class: `${id} rgaaExt-Helper rgaaExt-SerializeChildrenHelper`,
-					html: serializeElement($(child), attributes, showMissing)
-				})
-			)
-		);
+import showChildren from '../api/showChildren';
 
 
 

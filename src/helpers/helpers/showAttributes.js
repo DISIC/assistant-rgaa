@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {showAttribute} from './showAttribute';
+import showAttribute from '../api/showAttribute';
 
 
 

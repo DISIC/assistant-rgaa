@@ -1,0 +1,68 @@
+.ImportPage-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.3);
+	z-index: ($max-z-index - 4);
+}
+
+.ImportPage-container {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	right: 40px;
+	bottom: 40px;
+	margin: auto;
+	max-width: 600px;
+	border: 1px solid #ccc;
+	background: $color-wild-sand;
+	overflow: auto;
+	outline: none;
+	z-index: ($max-z-index - 3);
+}
+
+.ImportPage-container * {
+	font-family: $font-sans-serif;
+	font-size: $base-font-size;
+}
+
+.ImportPage-title {
+	background: $color-mariner;
+	color: $color-white;
+	padding: $base-line-height;
+	margin: 0;
+	font-size: $base-font-size;
+}
+
+.ImportPage-content {
+	padding: $base-line-height;
+}
+
+.ImportPage-success {
+	color: green;
+	margin-top: $base-line-height;
+}
+
+.ImportPage-failure,
+.ImportPage-errors {
+	color: red;
+}
+
+.ImportPage-warning {
+	color: orangered;
+}
+
+.ImportPage-failure {
+	margin-top: $base-line-height;
+}
+
+.ImportPage-buttons {
+	text-align: center;
+	margin-top: $base-line-height;
+}
+
+.ImportPage-button + .ImportPage-button {
+	margin-left: $base-line-height / 2;
+}

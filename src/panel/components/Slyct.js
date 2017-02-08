@@ -105,7 +105,7 @@ Slyct.propTypes = {
 	 * This is usefull to check if data actually changed from
 	 * one render to another
 	 */
-	rawData: PropTypes.array,
+	rawData: PropTypes.object,
 	config: PropTypes.object
 };
 

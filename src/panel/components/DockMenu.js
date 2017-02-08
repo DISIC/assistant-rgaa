@@ -1,55 +1,84 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
 import {Wrapper, Button, Menu, MenuItem} from 'react-aria-menubutton';
-import {POSITION_RIGHT, POSITION_LEFT, POSITION_BOTTOM} from '../../common/reducers/container';
+import {Position} from '../../common/api/panel';
 
 
 
 /**
  *
  */
-function DockMenu({popup, position, onDockToBottom, onDockToLeft, onDockToRight, onTogglePopup}) {
-	const onDropdownSelection = (callback) =>
-		callback();
+const DockMenuItem = ({position, currentPosition, onSelect}) => {
+	const disabled = (position === currentPosition);
+	const handleClick = () => {
+		if (!disabled) {
+			onSelect(position);
+		}
+	};
 
-	const renderItem = (name, onClick, isEnabled) => {
-		const button = (
+	return (
+		<MenuItem value={handleClick}>
 			<button
 				className="DockMenu-button Button"
 				type="button"
-				disabled={!isEnabled}
+				disabled={disabled}
 			>
-				<FormattedMessage id={`DockMenu.${name}`} />
+				<FormattedMessage id={`DockMenu.${position}`} />
 			</button>
-		);
-		if (!isEnabled) {
-			return button;
-		}
-		return (
-			<MenuItem value={onClick}>
-				{button}
-			</MenuItem>
-		);
-	};
+		</MenuItem>
+	);
+};
+
+DockMenuItem.propTypes = {
+	position: PropTypes.string.isRequired,
+	currentPosition: PropTypes.string.isRequired,
+	onSelect: PropTypes.func.isRequired
+};
+
+
+
+/**
+ *
+ */
+function DockMenu({position, onPositionChange}) {
+	const onDropdownSelection = (callback) =>
+		callback();
 
 	return (
 		<Wrapper onSelection={onDropdownSelection} className="DockMenu Dropdown-container">
 			<Button className="Link Dropdown-toggle">
 				<FormattedMessage id="DockMenu.button" />
 			</Button>
+
 			<Menu>
 				<ul className="Dropdown-list Dropdown-list--right">
 					<li>
-						{renderItem('bottom', onDockToBottom, popup || POSITION_BOTTOM !== position)}
+						<DockMenuItem
+							position={Position.bottom}
+							currentPosition={position}
+							onSelect={onPositionChange}
+						/>
 					</li>
 					<li>
-						{renderItem('left', onDockToLeft, popup || POSITION_LEFT !== position)}
+						<DockMenuItem
+							position={Position.left}
+							currentPosition={position}
+							onSelect={onPositionChange}
+						/>
 					</li>
 					<li>
-						{renderItem('right', onDockToRight, popup || POSITION_RIGHT !== position)}
+						<DockMenuItem
+							position={Position.right}
+							currentPosition={position}
+							onSelect={onPositionChange}
+						/>
 					</li>
 					<li>
-						{renderItem('popup', onTogglePopup, !popup)}
+						<DockMenuItem
+							position={Position.popup}
+							currentPosition={position}
+							onSelect={onPositionChange}
+						/>
 					</li>
 				</ul>
 			</Menu>
@@ -58,12 +87,8 @@ function DockMenu({popup, position, onDockToBottom, onDockToLeft, onDockToRight,
 }
 
 DockMenu.propTypes = {
-	popup: PropTypes.bool.isRequired,
 	position: PropTypes.string.isRequired,
-	onDockToBottom: PropTypes.func.isRequired,
-	onDockToLeft: PropTypes.func.isRequired,
-	onDockToRight: PropTypes.func.isRequired,
-	onTogglePopup: PropTypes.func.isRequired
+	onPositionChange: PropTypes.func.isRequired
 };
 
 export default injectIntl(DockMenu);

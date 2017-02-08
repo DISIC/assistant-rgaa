@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
+import {Link} from 'react-router';
 import DockMenuContainer from './DockMenuContainer';
 
 
@@ -7,51 +8,37 @@ import DockMenuContainer from './DockMenuContainer';
 /**
  *
  */
-function Header({
-	isImportActive, referenceVersion, onOptionsClick, onStartImportClick, onResetImportClick
-}) {
-	const onImportButtonClick = isImportActive
-		? onResetImportClick
-		: onStartImportClick;
-	const importButtonText = isImportActive
-		? 'Header.import.reset'
-		: 'Header.import.start';
+const Header = ({referenceVersion, onOptionsClick}) => (
+	<header className="Header">
+		<h1 className="Header-title">
+			RGAA v{referenceVersion}
+		</h1>
 
-	return (
-		<header className="Header">
-			<h1 className="Header-title">
-				RGAA v{referenceVersion}
-			</h1>
+		<div className="Header-actions">
+			<Link className="Link" to="/">
+				<FormattedMessage id="Header.themes" />
+			</Link>
 
-			<div className="Header-actions">
-				<DockMenuContainer />
+			<Link className="Link" to="/import">
+				<FormattedMessage id="Header.import" />
+			</Link>
 
-				<button
-					type="button"
-					onClick={onImportButtonClick}
-					className="Link"
-				>
-					<FormattedMessage id={importButtonText} />
-				</button>
+			<DockMenuContainer />
 
-				<button
-					type="button"
-					onClick={onOptionsClick}
-					className="Link"
-				>
-					<FormattedMessage id="Header.options" />
-				</button>
-			</div>
-		</header>
-	);
-}
+			<button
+				type="button"
+				onClick={onOptionsClick}
+				className="Link"
+			>
+				<FormattedMessage id="Header.options" />
+			</button>
+		</div>
+	</header>
+);
 
 Header.propTypes = {
-	isImportActive: PropTypes.bool.isRequired,
-	onOptionsClick: PropTypes.func.isRequired,
-	onStartImportClick: PropTypes.func.isRequired,
-	onResetImportClick: PropTypes.func.isRequired,
-	referenceVersion: PropTypes.string
+	referenceVersion: PropTypes.string,
+	onOptionsClick: PropTypes.func.isRequired
 };
 
 export default injectIntl(Header);

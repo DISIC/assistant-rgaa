@@ -1,15 +1,14 @@
 import {connect} from 'react-redux';
-import {compose, branch, renderNothing} from 'recompose';
-import {identity} from 'lodash';
+import {compose} from 'recompose';
+import {property} from 'lodash';
+import renderNothingUntil from '../../common/renderNothingUntil';
+import {validateImportContent} from '../../common/api/imports';
 import {
-	isModalOpen, isPending, getErrors, isValid, getVersion as getImportVersion
+	isPending, getErrors, isValid, getVersion as getImportVersion
 } from '../../common/selectors/imports';
 import {getVersion as getReferenceVersion} from '../../common/selectors/reference';
-import {
-	closeModal, setErrors, setContent, setPending, resetModalContent, apply
-} from '../../common/actions/imports';
-import ImportModal from './ImportModal';
-import {validateImportContent} from '../../common/api/imports';
+import {setErrors, setContent, setPending, apply, reset} from '../../common/actions/imports';
+import ImportPage from './ImportPage';
 
 
 
@@ -17,7 +16,6 @@ import {validateImportContent} from '../../common/api/imports';
  *
  */
 const mapStateToProps = (state) => ({
-	open: isModalOpen(state),
 	pending: isPending(state),
 	valid: isValid(state),
 	errors: getErrors(state),
@@ -29,9 +27,8 @@ const mapStateToProps = (state) => ({
  *
  */
 const mapDispatchToProps = (dispatch) => ({
-	onClose() {
-		dispatch(resetModalContent());
-		dispatch(closeModal());
+	onReset() {
+		dispatch(reset());
 	},
 
 	onFileSelection(content) {
@@ -49,7 +46,6 @@ const mapDispatchToProps = (dispatch) => ({
 	onSubmit(valid) {
 		if (valid) {
 			dispatch(apply());
-			dispatch(closeModal());
 		}
 	}
 });
@@ -61,10 +57,5 @@ export default compose(
 		mapStateToProps,
 		mapDispatchToProps
 	),
-	// renders nothing if no reference is set
-	branch(
-		({globalVersion}) => !!globalVersion,
-		identity,
-		renderNothing
-	)
-)(ImportModal);
+	renderNothingUntil(property('globalVersion'))
+)(ImportPage);

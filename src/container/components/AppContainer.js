@@ -1,5 +1,8 @@
+import {compose} from 'recompose';
 import {connect} from 'react-redux';
-import {isOpen, getPopupWindowId, getPosition} from '../../common/selectors/container';
+import renderNothingUntil from '../../common/renderNothingUntil';
+import {getPosition} from '../../common/selectors/panel';
+import {Position} from '../../common/api/panel';
 import App from './App';
 
 
@@ -8,10 +11,14 @@ import App from './App';
  *
  */
 const mapStateToProps = (state) => ({
-	open: isOpen(state) && !getPopupWindowId(state),
 	position: getPosition(state)
 });
 
 
 
-export default connect(mapStateToProps)(App);
+export default compose(
+	connect(mapStateToProps),
+	renderNothingUntil(({position}) => (
+		position !== Position.popup
+	))
+)(App);
