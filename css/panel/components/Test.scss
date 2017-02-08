@@ -26,10 +26,6 @@
 
 .Test-actionLabel {
 	display: block;
-}
-
-.Test-actionLabel img {
-	height: $base-line-height;
 	cursor: pointer;
 }
 
@@ -59,4 +55,19 @@
 	&:active {
 		text-decoration: underline;
 	}
+}
+
+.Test-action--done {
+	color: $color-gray-dark;
+	font-size: 0;
+}
+
+.Test-action--done .Icon {
+	@include typi($typi-xxlarge);
+	line-height: 1;
+	transition: transform 0.2s ease-out;
+}
+
+.Test-action--done.Test-action--checked .Icon {
+	transform: rotate(60deg);
 }

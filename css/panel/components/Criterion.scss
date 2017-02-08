@@ -122,3 +122,26 @@
 .Criterion.is-disabled label {
 	pointer-events: none;
 }
+
+.Criterion-actionLabel {
+	display: block;
+}
+
+.Criterion-action--done {
+	font-size: 0;
+	cursor: default;
+}
+
+.Criterion-action--done .Icon {
+	@include typi($typi-xxlarge);
+	line-height: 1;
+	transition: transform 0.2s ease-out;
+}
+
+.Criterion-action--done.Criterion-action--checked .Icon {
+	transform: rotate(60deg);
+}
+
+.Criterion.is-open .Criterion-action--done {
+	padding-top: vr(1/4);
+}

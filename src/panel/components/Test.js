@@ -1,7 +1,9 @@
 import React, {PropTypes} from 'react';
 import {injectIntl, intlShape} from 'react-intl';
 import renderIf from 'render-if';
+import classNames from 'classnames';
 import {noop} from 'lodash';
+import Icon from './Icon';
 import TestInstructions from './TestInstructions';
 import TestHelpersContainer from './TestHelpersContainer';
 
@@ -20,7 +22,6 @@ function Test({
 	const handleDoneChange = (event) =>
 		onDone(event.target.checked);
 
-	const applyImage = applied ? 'cross.png' : 'magnifier-zoom.png';
 	const applyTranslateKey = applied ? 'uncheck' : 'check';
 
 	const htmlTitle = title.replace(
@@ -55,22 +56,11 @@ function Test({
 
 					{renderIf(applicable)(() => (
 						<div className="Test-action Test-action---apply">
-							<label
-								htmlFor={`test-${id}-apply-input`}
-								className="Test-actionLabel"
+							<input
 								title={intl.formatMessage({
 									id: `Test.apply.${applyTranslateKey}.title`
 								})}
-							>
-								<img
-									src={`/img/${applyImage}`}
-									alt={intl.formatMessage({
-										id: `Test.apply.${applyTranslateKey}.alt`
-									})}
-								/>
-							</label>
-							<input
-								className="Test-actionInput u-hidden"
+								className="Test-actionInput"
 								type="checkbox"
 								id={`test-${id}-apply-input`}
 								checked={applied}
@@ -79,13 +69,24 @@ function Test({
 						</div>
 					))}
 
-					<div className="Test-action Test-action---done">
-						<input
-							className="Test-actionInput"
-							type="checkbox"
+					<div
+						className={classNames('Test-action Test-action--done', {
+							'Test-action--checked': done
+						})}
+					>
+						<label
+							htmlFor={`test-${id}-done-input`}
+							className="Test-actionLabel"
 							title={intl.formatMessage({
-								id: 'Test.done'
+								id: done ? 'Test.done' : 'Test.todo'
 							})}
+						>
+							<Icon name="flag" />
+						</label>
+						<input
+							className="Test-actionInput u-hidden"
+							type="checkbox"
+							id={`test-${id}-done-input`}
 							checked={done}
 							onChange={handleDoneChange}
 						/>
