@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import serializeAttribute from './serializeAttribute';
+import showCodeNearElement from './showCodeNearElement';
 
 
 
@@ -17,7 +18,8 @@ export default function showAttribute(id, element, attribute, showMissing) {
 	const serialized = serializeAttribute(element, attribute, showMissing);
 
 	if (serialized) {
-		$(element).after(
+		showCodeNearElement(
+			element,
 			$('<code />', {
 				class: `${id} rgaaExt-Helper rgaaExt-ShowAttributeHelper`,
 				html: serialized

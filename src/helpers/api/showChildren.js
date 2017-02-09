@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import serializeElement from './serializeElement';
+import showCodeNearElement from './showCodeNearElement';
 
 
 
@@ -17,7 +18,8 @@ export default function showChildren(id, element, childrenSelector, attributes, 
 	element
 		.find(childrenSelector)
 		.each((i, child) =>
-			element.after(
+			showCodeNearElement(
+				element,
 				$('<code />', {
 					class: `${id} rgaaExt-Helper rgaaExt-SerializeChildrenHelper`,
 					html: serializeElement($(child), attributes, showMissing)
