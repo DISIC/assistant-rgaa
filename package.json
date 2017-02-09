@@ -90,7 +90,6 @@
     "redux-persist": "^3.2.2",
     "redux-saga": "^0.10.4",
     "render-if": "^0.1.1",
-    "sly": "darsain/sly#v1.6.1",
     "susy": "^2.2.12",
     "typi": "^2.2.1",
     "whatwg-fetch": "^1.0.0"

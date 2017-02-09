@@ -7,8 +7,7 @@ import {SET_ALL, ENABLE, DISABLE} from '../actions/tests';
  *
  */
 export const initialState = {
-	list: {},
-	current: null
+	list: {}
 };
 
 /**

@@ -45,13 +45,11 @@ ThemesListItem.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	icon: PropTypes.string.isRequired,
-	isActive: PropTypes.bool,
 	isDisabled: PropTypes.bool,
 	intl: intlShape.isRequired
 };
 
 ThemesListItem.defaultProps = {
-	isActive: false,
 	isDisabled: false
 };
 

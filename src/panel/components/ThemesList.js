@@ -28,7 +28,7 @@ const icons = {
 /**
  *
  */
-function ThemesList({themes, activeTheme, inactiveThemes, isOpen, setOpen}) {
+function ThemesList({themes, inactiveThemes, isOpen, setOpen}) {
 	return (
 		<Wrapper
 			className={classNames('ThemesList', {'is-open': isOpen})}
@@ -56,7 +56,6 @@ function ThemesList({themes, activeTheme, inactiveThemes, isOpen, setOpen}) {
 					<ThemesListItem
 						{...theme}
 						icon={icons[theme.id]}
-						isActive={activeTheme === theme.id}
 						isDisabled={includes(inactiveThemes, theme.id)}
 						key={theme.id}
 					/>
@@ -68,16 +67,12 @@ function ThemesList({themes, activeTheme, inactiveThemes, isOpen, setOpen}) {
 
 ThemesList.propTypes = {
 	themes: PropTypes.array.isRequired,
-	activeTheme: PropTypes.string,
 	inactiveThemes: PropTypes.array,
 	isOpen: PropTypes.bool.isRequired,
 	setOpen: PropTypes.func.isRequired
 };
 
 ThemesList.defaultProps = {
-	activeTheme: {
-		id: null
-	},
 	inactiveThemes: []
 };
 

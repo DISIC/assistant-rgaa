@@ -39,7 +39,8 @@ function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl
 					<div
 						className={classNames('Criterion-action Criterion-action--done', {
 							'Criterion-action--checked': isDone
-						})}>
+						})}
+					>
 						<label
 							htmlFor={`criterion-${id}-done-input`}
 							className="Criterion-actionLabel"

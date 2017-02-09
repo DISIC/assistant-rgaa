@@ -1,4 +1,4 @@
-import {SET_ALL, SET_CURRENT, TOGGLE_MENU} from '../actions/themes';
+import {SET_ALL, TOGGLE_MENU} from '../actions/themes';
 
 
 
@@ -7,7 +7,6 @@ import {SET_ALL, SET_CURRENT, TOGGLE_MENU} from '../actions/themes';
  */
 export const initialState = {
 	list: {},
-	current: null,
 	menuIsOpen: false
 };
 
@@ -20,12 +19,6 @@ export default function themes(state = initialState, {type, payload}) {
 			return {
 				...state,
 				list: payload
-			};
-
-		case SET_CURRENT:
-			return {
-				...state,
-				current: payload
 			};
 
 		case TOGGLE_MENU:

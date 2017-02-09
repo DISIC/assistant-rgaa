@@ -5,11 +5,6 @@ import {get, property, filter, map} from 'lodash';
 /**
  *
  */
-export const getCurrent = property('tests.current');
-
-/**
- *
- */
 export const getAll = property('tests.list');
 
 /**
