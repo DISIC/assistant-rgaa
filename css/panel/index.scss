@@ -15,6 +15,7 @@
 @import '../common/components/Button';
 @import '../common/components/Title';
 @import '../common/components/ScreenReaderOnly';
+@import '../common/components/Form';
 @import './components/Icon';
 @import './components/Dropdown';
 @import './components/App';
@@ -30,3 +31,4 @@
 @import './components/Test';
 @import './components/TestInstructions';
 @import './components/TestHelpers';
+@import '../helpers/components/ColorContrastWidget';

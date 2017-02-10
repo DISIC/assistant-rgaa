@@ -1,8 +1,8 @@
 import {createMessageHandler, sendMessage} from '../../common/api/runtime';
 import waitForEvent from '../api/waitForEvent';
 import getSelectionStyle from '../api/getSelectionStyle';
-import {REQUEST_STYLE, UPDATE_STYLE} from './analyzeColorContrast/actions';
-import ColorContrastWidgetContainer from './analyzeColorContrast/ColorContrastWidgetContainer';
+import {REQUEST_STYLE, UPDATE_STYLE} from '../actions/colorContrast';
+import ColorContrastWidgetContainer from '../components/ColorContrastWidgetContainer';
 
 
 
@@ -12,14 +12,18 @@ import ColorContrastWidgetContainer from './analyzeColorContrast/ColorContrastWi
 const handleMessage = createMessageHandler(({type}) => {
 	switch (type) {
 		case REQUEST_STYLE:
+			document.body.classList.add('rgaaExt-ColorContrastHelper--picking');
+
 			waitForEvent('mouseup')
 				.then(getSelectionStyle)
-				.then((style) =>
+				.then((style) => {
+					document.body.classList.remove('rgaaExt-ColorContrastHelper--picking');
+
 					sendMessage({
 						type: UPDATE_STYLE,
 						style
-					})
-				);
+					});
+				});
 			break;
 	}
 });

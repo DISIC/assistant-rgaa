@@ -1,4 +1,4 @@
-import {isObject, isEmpty} from 'lodash';
+import {isObject, isFunction, isEmpty} from 'lodash';
 import {INVALID_RESPONSE} from '../actions/runtime';
 
 
@@ -17,15 +17,19 @@ export const sendMessage = (message, options = {}) =>
 		};
 
 		// Chrome uses a callback as the third parameter...
-		const promise = chrome.runtime.sendMessage(
-			message,
-			options,
-			handleResponse
-		);
+		if (typeof browser === 'undefined') {
+			chrome.runtime.sendMessage(message, options, (value) => {
+				if (chrome.runtime.lastError) {
+					reject(chrome.runtime.lastError);
+				} else {
+					handleResponse(value);
+				}
+			});
 
 		// Firefox returns a promise instead.
-		if (isObject(promise) && promise.then) {
-			promise.then(handleResponse, reject);
+		} else {
+			browser.runtime.sendMessage(message, options)
+				.then(handleResponse);
 		}
 	});
 

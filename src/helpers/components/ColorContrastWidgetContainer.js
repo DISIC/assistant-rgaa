@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {createMessageHandler, sendMessage} from '../../../common/api/runtime';
-import {REQUEST_STYLE, UPDATE_STYLE} from './actions';
+import {verifyContrastRatio} from 'wcag-contrast-verifier/lib/wcag';
+import {createMessageHandler, sendMessage} from '../../common/api/runtime';
+import {REQUEST_STYLE, UPDATE_STYLE} from '../actions/colorContrast';
 import ColorContrastWidget from './ColorContrastWidget';
 
 
@@ -48,9 +49,14 @@ export default class ColorContrastWidgetContainer extends Component {
 	}
 
 	render() {
+		const {backgroundColor, color, fontSize} = this.state;
+		const {WCAG_AA, WCAG_AAA} = verifyContrastRatio(backgroundColor, color, fontSize);
+
 		return (
 			<ColorContrastWidget
 				{...this.state}
+				conformityAA={WCAG_AA}
+				conformityAAA={WCAG_AAA}
 				onSelectRequest={this.handleSelectRequest}
 			/>
 		);

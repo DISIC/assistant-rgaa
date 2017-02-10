@@ -3,7 +3,6 @@ import reducer from '../common/reducers';
 import getInitialState from '../common/store/getInitialState';
 
 
-
 /**
  *
  */

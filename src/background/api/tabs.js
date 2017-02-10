@@ -1,4 +1,4 @@
-import {isObject} from 'lodash';
+import {isObject, isFunction} from 'lodash';
 
 
 
@@ -28,7 +28,7 @@ export const sendMessageToTab = (id, message) =>
 	new Promise((resolve) => {
 		const promise = chrome.tabs.sendMessage(id, message, {}, resolve);
 
-		if (isObject(promise) && promise.then) {
+		if (isObject(promise) && isFunction(promise.then)) {
 			resolve(promise);
 		}
 	});
@@ -52,7 +52,7 @@ export const captureVisibleTab = () =>
 			format: 'png'
 		}, callback);
 
-		if (isObject(promise) && promise.then) {
+		if (isObject(promise) && isFunction(promise.then)) {
 			promise.then(callback);
 		}
 	});
