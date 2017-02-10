@@ -432,9 +432,15 @@
 
 	"6.1.1": [
 		"disableAllStyles",
-		["outline", "a:not([role]), *[role='link']"],
-		["showAttribute", "a:not([role]), *[role='link']", "title"],
-		["showAttribute", "svg[aria-label]", "aria-label"]
+		["outline", "a:not([role]), *[role='link']", {
+			"showTag": true
+		}],
+		["showAttribute", "a:not([role]), *[role='link']", "title", {
+			"showTag": true
+		}],
+		["showAttribute", "svg[aria-label]", "aria-label", {
+			"showTag": true
+		}]
 	],
 	"6.1.2": [
 		"disableAllStyles",
