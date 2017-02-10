@@ -433,7 +433,8 @@
 	"6.1.1": [
 		"disableAllStyles",
 		["outline", "a:not([role]), *[role='link']"],
-		["showAttribute", "a:not([role]), *[role='link']", "title"]
+		["showAttribute", "a:not([role]), *[role='link']", "title"],
+		["showAttribute", "svg[aria-label]", "aria-label"]
 	],
 	"6.1.2": [
 		"disableAllStyles",
