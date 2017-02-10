@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import showAttribute from '../api/showAttribute';
+import showTagApi from '../api/showTag';
 
 
 
@@ -14,11 +15,14 @@ export const describe = (selector, attributes) => `
 /**
  *
  */
-export const apply = (id, selector, attributes, {showMissing = false} = {}) =>
+export const apply = (id, selector, attributes, {showMissing = false, showTag = false} = {}) =>
 	$(selector).each((i, element) => {
 		attributes.forEach((attribute) =>
 			showAttribute(id, $(element), attribute, showMissing)
 		);
+		if (showTag) {
+			showTagApi(id, $(element));
+		}
 	});
 
 /**

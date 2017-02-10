@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import showAttribute from '../api/showAttribute';
+import showTagApi from '../api/showTag';
 
 
 
@@ -24,11 +25,15 @@ export const describe = (selector, attribute) => `
  *	@param {object} options - Options:
  *		- {boolean} showMissing - Whether or not to show attributes
  *			that aren't set.
+ *	@param {boolean} showTag - Whether or not to show the element's tag
  */
-export const apply = (id, selector, attribute, {showMissing = false} = {}) =>
-	$(selector).each((i, element) =>
-		showAttribute(id, $(element), attribute, showMissing)
-	);
+export const apply = (id, selector, attribute, {showMissing = false, showTag = false} = {}) =>
+	$(selector).each((i, element) => {
+		showAttribute(id, $(element), attribute, showMissing);
+		if (showTag) {
+			showTagApi(id, $(element));
+		}
+	});
 
 /**
  *	Removes all boxes previously added using apply().
