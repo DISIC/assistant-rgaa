@@ -551,6 +551,14 @@
 
 
 
+	"7.1.3": [
+		["showAttributes", "[role]", "role", {
+			"showTag": true
+		}]
+	],
+
+
+
 	"8.1.1": [],
 	"8.1.2": [],
 	"8.1.3": ["showTag", "html"],
@@ -883,5 +891,33 @@
 	"11.9.1": [
 		["outline", "input, button"],
 		["showAttributes", "[type='submit'], [type='reset'], [type='button'], value, title", "[type, value, title]", {"showTag": true}]
+	],
+
+
+
+
+	"12.1.1": [
+		"disableAllStyles"
+	],
+
+	"12.2.1": [
+		"disableAllStyles"
+	],
+	"12.2.2": [
+		"disableAllStyles"
+	],
+
+	"12.5.1": [
+		"disableAllStyles"
+	],
+	"12.5.3": [
+		"disableAllStyles"
+	],
+
+	"12.6.1": [
+		"disableAllStyles"
+	],
+	"12.6.3": [
+		"disableAllStyles"
 	]
 }
