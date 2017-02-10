@@ -553,55 +553,66 @@
 
 	"8.1.1": [],
 	"8.1.2": [],
-	"8.1.3": [],
+	"8.1.3": ["showTag", "html"],
 
 	"8.2.1": [],
 	"8.2.2": [],
 
 	"8.3.1": [
-		["showAttributes", "*", ["lang", "xml:lang"], {
-			"showMissing": true,
+		["showAttributes", "[lang], [xml\\:lang]", ["lang", "xml:lang"], {
 			"showTag": true
 		}]
 	],
 
 	"8.4.1": [
-		["showAttributes", "*", ["lang", "xml:lang"], {
-			"showMissing": true,
+		["showAttributes", "[lang], [xml\\:lang]", ["lang", "xml:lang"], {
 			"showTag": true
 		}]
 	],
 
 	"8.5.1": [
-		["outline", "title", {"showTag": true}]
+		["outline", "title", {
+			"showMissing": true,
+			"showTag": true
+		}]
 	],
 
 	"8.6.1": [
-		["outline", "title", {"showTag": true}]
+		["outline", "title", {
+			"showTag": true
+		}]
 	],
 
 	"8.7.1": [
-		["showAttributes", "*", ["lang", "xml:lang"]]
+		["showAttributes", "[lang], [xml\\:lang]", ["lang", "xml:lang"], {
+			"showTag": true
+		}]
 	],
 
 	"8.8.1": [
-		["showAttributes", "*", ["lang", "xml:lang"]]
+		["showAttributes", "[lang], [xml\\:lang]", ["lang", "xml:lang"], {
+			"showTag": true
+		}]
 	],
 	"8.8.2": [
-		["showAttributes", "*", ["lang", "xml:lang"]]
+		["showAttributes", "[lang], [xml\\:lang]", ["lang", "xml:lang"], {
+			"showTag": true
+		}]
 	],
 
 	"8.9.1": [
 		"disableAllStyles",
-		["outline", "h1, h2, h3, h4, h5, h6, p, blockquote"],
-		["showAttribute", "*[role='presentation']", "role"]
+		["outline", "h1, h2, h3, h4, h5, h6, p, p:empty, li, blockquote", {
+			"showTag": true
+		}],
+		["showAttribute", "[role='presentation']", "role"]
 	],
 
 	"8.10.1": [
-		["showAttribute", "*[dir]", "dir"]
+		["showAttribute", "[dir]", "dir"]
 	],
 	"8.10.2": [
-		["showAttribute", "*[dir]", "dir"]
+		["showAttribute", "[dir]", "dir"]
 	],
 
 
@@ -658,17 +669,23 @@
 	],
 	"9.6.1": [
 		"disableAllStyles",
-		["outline", "q"]
+		["outline", "q", {
+			"showTag": true
+		}]
 	],
 	"9.6.2": [
 		"disableAllStyles",
-		["outline", "blockquote"]
+		["outline", "blockquote", {
+			"showTag": true
+		}]
 	],
 
 
 
 	"10.1.1": [
-		["outline", "basefont, blink, center, font, marquee, s, strike, tt, u, bing, small"]
+		["outline", "basefont, blink, center, font, marquee, s, strike, tt, u, bing, small", {
+			"showTag": true
+		}]
 	],
 	"10.1.2": [
 		"showAttributes",
