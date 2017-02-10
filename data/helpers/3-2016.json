@@ -1,0 +1,868 @@
+{
+	"1.1.1": [
+		"disableAllStyles",
+		["outline", "img"],
+		["showAttribute", "img", "alt"]
+	],
+	"1.1.2": [
+		["outline", "map"],
+		["showChildren", "map", "area[href]", ["alt"], {
+			"showMissing": true
+		}]
+	],
+	"1.1.3": [
+		"disableAllStyles",
+		["outline", "input[type=\"image\"]"],
+		["showAttribute", "input[type=\"image\"]", "alt"]
+	],
+	"1.1.4": [
+		["outline", "img[ismap]"],
+		["showAttribute", "a", "href"]
+	],
+
+
+
+	"1.2.1": [
+		"disableAllStyles",
+		["outline", "img[alt]"],
+		["showAttributes", "img[alt]", ["alt", "title ,role, aria-label, aria-describedby, aria-labelledby"]]
+	],
+	"1.2.2": [
+		"disableAllStyles",
+		["outline", "map"],
+		["showChildren", "map", "area:not([href])", ["alt"], {
+			"showMissing": true
+		}],
+		["showChildren", "map", "area:not([href])", ["aria-label, aria-describedby, aria-labelledby, title"]]
+	],
+	"1.2.3": [
+		["outline", "object[type=\"image\"]"]
+	],
+	"1.2.4": [
+		"disableAllStyles",
+		["outline", "svg"],
+		["showAttribute", "svg", "role"]
+	],
+	"1.2.5": [
+		"disableAllStyles",
+		["outline", "canvas"]
+	],
+
+
+
+	"1.3.1": [
+		"disableAllStyles",
+		["outline", "a"],
+		["showAttributes", "img", ["alt", "title"]]
+	],
+	"1.3.2": [
+		"disableAllStyles",
+		["outline", "map"],
+		["showAttributes", "area[href]", ["alt", "title"]]
+	],
+	"1.3.4": [
+		"disableAllStyles",
+		["outline", "object[type=\"image\"]"]
+	],
+	"1.3.5": [
+		"disableAllStyles",
+		["outline", "embed[type=\"image\"]"]
+	],
+	"1.3.6": [
+		"disableAllStyles",
+		["outline", "svg"],
+		["showAttributes", "svg", ["title", "desc", "aria-label"]]
+	],
+	"1.3.7": [
+		["outline", "svg"]
+	],
+	"1.3.8": [
+		"disableAllStyles",
+		["outline", "canvas"]
+	],
+	"1.3.9": [
+		"disableAllStyles",
+		["outline", "canvas"]
+	],
+
+
+
+	"1.4.1": [
+		"disableAllStyles",
+		["outline", "img[alt]"],
+		["showAttributes", "img[alt]", ["alt", "title", "aria-label", "aria-labelledby"]]
+	],
+	"1.4.2": [
+		"disableAllStyles",
+		["outline", "area[alt]"],
+		["showAttributes", "area[alt]", ["alt", "title", "aria-label", "aria-labelledby"]]
+	],
+	"1.4.3": [
+		"disableAllStyles",
+		["outline", "input[type=\"image\"][alt]"],
+		["showAttributes", "input[type=\"image\"][alt]", ["alt", "title", "aria-label", "aria-labelledby"]]
+	],
+	"1.4.4": [
+		"disableAllStyles",
+		["outline", "object[type=\"image\"]"]
+	],
+	"1.4.5": [
+		"disableAllStyles",
+		[
+			"outline",
+			"object[type=\"image\"][title], object[type=\"image\"][aria-label], object[type=\"image\"][aria-labelledby]"
+		],
+		[
+			"showAttributes",
+			"object[type=\"image\"][title], object[type=\"image\"][aria-label], object[type=\"image\"][aria-labelledby]",
+			["title", "aria-label", "aria-labelledby"]
+		]
+	],
+	"1.4.6": [
+		"disableAllStyles",
+		["outline", "embed[type=\"image\"]"]
+	],
+	"1.4.7": [
+		"disableAllStyles",
+		[
+			"outline",
+			"embed[type=\"image\"][title], embed[type=\"image\"][aria-label], embed[type=\"image\"][aria-labelledby]"
+		],
+		[
+			"showAttributes",
+			"embed[type=\"image\"][title], embed[type=\"image\"][aria-label], embed[type=\"image\"][aria-labelledby]",
+			["title", "aria-label", "aria-labelledby"]
+		]
+	],
+	"1.4.9": [
+		"disableAllStyles",
+		["outline", "svg"]
+	],
+	"1.4.10": [
+		"disableAllStyles",
+		["outline", "canvas"]
+	],
+	"1.4.11": [
+		"disableAllStyles",
+		[
+			"outline",
+			"canvas[title], canvas[aria-label], canvas[aria-labelledby]"
+		],
+		[
+			"showAttributes",
+			"canvas[title], canvas[aria-label], canvas[aria-labelledby]",
+			["title", "aria-label", "aria-labelledby"]
+		]
+	],
+
+
+	"2.1.1": [
+		"disableAllStyles",
+		["outline", "iframe"],
+		["showAttributes", "iframe", ["title"]]
+	],
+	"2.2.1": [
+		"disableAllStyles",
+		["outline", "iframe"],
+		["showAttributes", "iframe", ["title"]]
+	],
+
+	"4.1.1": [
+		"disableAllStyles",
+		["outline", "object, audio"]
+	],
+	"4.1.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.1.3": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.2.1": [
+		"disableAllStyles",
+		["outline", "object, audio"]
+	],
+	"4.2.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.2.3": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.3.1": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.3.2": [
+		"disableAllStyles",
+		["outline", "video"],
+		["showChildren", "video", "track", ["type"], {
+			"showMissing": true
+		}]
+	],
+	"4.4.1": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.5.1": [
+		"disableAllStyles",
+		["outline", "object, audio"]
+	],
+	"4.5.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.6.1": [
+		"disableAllStyles",
+		["outline", "object, audio"]
+	],
+	"4.6.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.7.1": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.7.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.8.1": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.8.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.9.1": [
+		"disableAllStyles",
+		["outline", "object, audio"]
+	],
+	"4.9.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.10.1": [
+		"disableAllStyles",
+		["outline", "object, audio"]
+	],
+	"4.10.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.11.1": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.11.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.12.1": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.12.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.13.1": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.13.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.14.1": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.14.2": [
+		"disableAllStyles",
+		["outline", "object, video"]
+	],
+	"4.15.1": [
+		"disableAllStyles",
+		["outline", "object, video, audio"]
+	],
+	"4.15.2": [
+		"disableAllStyles",
+		["outline", "object, video, audio"]
+	],
+	"4.16.1": [
+		"disableAllStyles",
+		["outline", "object, svg, canvas"]
+	],
+	"4.16.2": [
+		"disableAllStyles",
+		["outline", "object, svg, canvas"]
+	],
+	"4.17.1": [
+		"disableAllStyles",
+		["outline", "object, svg, canvas"]
+	],
+	"4.18.1": [
+		["outline", "audio, video, object, embed, bgsound"]
+	],
+	"4.19.1": [
+		"disableAllStyles",
+		["outline", "audio, video, object, embed, bgsound"]
+	],
+	"4.20.1": [
+		"disableAllStyles",
+		["outline", "audio, video, object"]
+	],
+	"4.20.2": [
+		"disableAllStyles",
+		["outline", "audio, video, object"]
+	],
+	"4.20.3": [
+		"disableAllStyles",
+		["outline", "audio, video, object"]
+	],
+	"4.21.1": [
+		"disableAllStyles",
+		["outline", "object, svg, canvas"],
+		["showChildren", "object", "param", ["wmode"], {
+			"showMissing": false
+		}]
+	],
+	"4.21.2": [
+		"disableAllStyles",
+		["outline", "object, svg, canvas"],
+		["showChildren", "object", "param", ["wmode"], {
+			"showMissing": false
+		}]
+	],
+	"4.22.1": [
+		"disableAllStyles",
+		["outline", "embed, object"]
+	],
+	"4.22.2": [
+		"disableAllStyles",
+		["outline", "embed, object"]
+	],
+
+
+
+	"5.1.1": [
+		"disableAllStyles",
+		["outline", "table"],
+		["outline", "caption", {"showTag": true}]
+	],
+	"5.2.1": [
+		"disableAllStyles",
+		["outline", "table"],
+		["outline", "caption", {"showTag": true}]
+	],
+	"5.3.1": [
+		"disableAllStyles",
+		["outline", "td"],
+		["outline", "th"],
+		["showAttribute", "table", "role", {
+			"showMissing": true,
+			"showTag": true
+		}]
+	],
+	"5.4.1": [
+		"disableAllStyles",
+		["outline", "table"],
+		["outline", "caption", {"showTag": true}]
+	],
+	"5.5.1": [
+		"disableAllStyles",
+		["outline", "table"],
+		["outline", "caption", {"showTag": true}]
+	],
+	"5.6.1": [
+		"disableAllStyles",
+		["outline", "table"],
+		["outline", "th", {"showTag": true}]
+	],
+	"5.6.2": [
+		"disableAllStyles",
+		["outline", "table"],
+		["outline", "th", {"showTag": true}]
+	],
+	"5.7.1": [
+		"disableAllStyles",
+		["outline", "th"],
+		["showAttributes", "th", ["id", "scope"], {
+			"showMissing": true,
+			"showTag": true
+		}]
+	],
+	"5.7.2": [
+		"disableAllStyles",
+		["outline", "th[scope]"],
+		["showAttribute", "th", "scope"]
+	],
+	"5.7.3": [
+		"disableAllStyles",
+		["outline", "th"],
+		["outline", "td"],
+		["showAttributes", "th", ["id", "scope"], {
+			"showMissing": true,
+			"showTag": true
+		}]
+	],
+	"5.7.4": [
+		"disableAllStyles",
+		["outline", "th"],
+		["outline", "td"],
+		["showAttribute", "th, td", "headers", {
+			"showMissing": true
+		}]
+	],
+	"5.8.1": [
+		"disableAllStyles",
+		["outline", "table"],
+		["showTag", "caption"],
+		["showTag", "thead"],
+		["showTag", "tfoot"],
+		["showTag", "th"],
+		["showAttributes", "td", ["scope", "headers", "colgroup", "axis"]]
+	],
+
+
+	"6.1.1": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link']"],
+		["showAttribute", "a:not([role]), *[role='link']", "title"]
+	],
+	"6.1.2": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link'], img[usemap]"],
+		["showAttribute", "a:not([role]), *[role='link']", "title"],
+		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
+		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
+		["showTag", "a:not([role]) object, *[role='link'] object"],
+		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
+		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+	],
+	"6.1.3": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link'], img[usemap]"],
+		["showAttribute", "a:not([role]), *[role='link']", "title"],
+		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
+		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
+		["showTag", "a:not([role]) object, *[role='link'] object"],
+		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
+		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+	],
+	"6.2.1": [
+		"disableAllStyles",
+		["outline", "a[title]:not([role]), *[role='link'][title]"],
+		["showAttribute", "a[title]:not([role]), *[role='link'][title]", "title"]
+	],
+	"6.2.2": [
+		"disableAllStyles",
+		["outline", "a[title]:not([role]), *[role='link'][title]"],
+		["showAttribute", "a[title]:not([role]), *[role='link'][title]", "title"],
+		["showAttribute", "a[title]:not([role]) img, *[role='link'] img, area[href]", "alt"],
+		["showAttributes", "a[title]:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
+		["showTag", "a[title]:not([role]) svg desc, *[role='link'] svg desc"],
+		["showTag", "a[title]:not([role]) object, *[role='link'] object"],
+		["showTag", "a[title]:not([role]) canvas, *[role='link'] canvas"],
+		["showTag", "a[title]:not([role]) embed, *[role='link'] embed"]
+	],
+	"6.2.3": [
+		"disableAllStyles",
+		["outline", "a[title]:not([role]), *[role='link'][title]"],
+		["showAttribute", "a[title]:not([role]), *[role='link'][title]", "title"],
+		["showAttribute", "a[title]:not([role]) img, *[role='link'] img, area[href]", "alt"],
+		["showAttributes", "a[title]:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
+		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
+		["showTag", "a:not([role]) object, *[role='link'] object"],
+		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
+		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+	],
+	"6.3.1": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link']"],
+		["showAttribute", "a:not([role]), *[role='link']", "title"]
+	],
+	"6.3.2": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link'], img[usemap]"],
+		["showAttribute", "a:not([role]), *[role='link']", "title"],
+		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
+		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
+		["showTag", "a:not([role]) object, *[role='link'] object"],
+		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
+		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+	],
+	"6.3.3": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link'], img[usemap]"],
+		["showAttribute", "a:not([role]), *[role='link']", "title"],
+		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
+		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
+		["showTag", "a:not([role]) object, *[role='link'] object"],
+		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
+		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+	],
+	"6.4.1": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link']"],
+		["showAttribute", "a:not([role]), *[role='link']", "title"]
+	],
+	"6.4.2": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link'], img[usemap]"],
+		["showAttribute", "a:not([role]), *[role='link']", "title"],
+		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
+		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
+		["showTag", "a:not([role]) object, *[role='link'] object"],
+		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
+		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+	],
+	"6.4.3": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link'], img[usemap]"],
+		["showAttribute", "a:not([role]), *[role='link']", "title"],
+		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
+		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
+		["showTag", "a:not([role]) object, *[role='link'] object"],
+		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
+		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+	],
+	"6.5.1": [
+		"disableAllStyles",
+		["outline", "a:not([role]), *[role='link']"],
+		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
+		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
+		["showTag", "a:not([role]) object, *[role='link'] object"],
+		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
+		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+	],
+
+
+
+	"8.1.1": [],
+	"8.1.2": [],
+	"8.1.3": [],
+
+	"8.2.1": [],
+	"8.2.2": [],
+
+	"8.3.1": [
+		["showAttributes", "*", ["lang", "xml:lang"], {
+			"showMissing": true,
+			"showTag": true
+		}]
+	],
+
+	"8.4.1": [
+		["showAttributes", "*", ["lang", "xml:lang"], {
+			"showMissing": true,
+			"showTag": true
+		}]
+	],
+
+	"8.5.1": [
+		["outline", "title", {"showTag": true}]
+	],
+
+	"8.6.1": [
+		["outline", "title", {"showTag": true}]
+	],
+
+	"8.7.1": [
+		["showAttributes", "*", ["lang", "xml:lang"]]
+	],
+
+	"8.8.1": [
+		["showAttributes", "*", ["lang", "xml:lang"]]
+	],
+	"8.8.2": [
+		["showAttributes", "*", ["lang", "xml:lang"]]
+	],
+
+	"8.9.1": [
+		"disableAllStyles",
+		["outline", "h1, h2, h3, h4, h5, h6, p, blockquote"],
+		["showAttribute", "*[role='presentation']", "role"]
+	],
+
+	"8.10.1": [
+		["showAttribute", "*[dir]", "dir"]
+	],
+	"8.10.2": [
+		["showAttribute", "*[dir]", "dir"]
+	],
+
+
+
+	"9.1.1": [
+		"disableAllStyles",
+		["outline", "h1, *[role='heading'][aria-level='1']"]
+	],
+	"9.1.2": [
+		"disableAllStyles",
+		["outline", "h1,h2,h3,h4,h5,h6, *[role='heading'][aria-level]", {"showTag": true}],
+		["showAttribute", "*[role='heading'][aria-level]", "aria-level"]
+	],
+	"9.1.3": [
+		"disableAllStyles",
+		["outline", "h1,h2,h3,h4,h5,h6, *[role='heading'][aria-level]", {"showTag": true}],
+		["showAttribute", "*[role='heading'][aria-level]", "aria-level"]
+	],
+	"9.1.4": [
+		"disableAllStyles",
+		["outline", "h1,h2,h3,h4,h5,h6, *[role='heading'][aria-level]", {"showTag": true}],
+		["showAttribute", "*[role='heading'][aria-level]", "aria-level"]
+	],
+	"9.2.1": [
+		"disableAllStyles",
+		["outline", "header, nav, main, footer", {"showTag": true}]
+	],
+	"9.2.2": [],
+	"9.3.1": [
+		"disableAllStyles",
+		["outline", "ul,li,[role='list'],[role='list'] [role='listitem']", {"showTag": true}]
+		],
+	"9.3.2": [
+		"disableAllStyles",
+		["outline", "ol,li", {"showTag": true}]
+	],
+	"9.3.3": [
+		"disableAllStyles",
+		["outline", "dl,dt,dd", {"showTag": true}]
+	],
+	"9.4.1": [
+		"disableAllStyles",
+		["outline", "abbr"],
+		["showAttribute", "abbr, a", "title", {
+			"showMissing": true
+		}]
+	],
+	"9.5.1": [
+		"disableAllStyles",
+		["outline", "abbr"],
+		["showAttribute", "abbr, a", "title", {
+			"showMissing": true
+		}]
+	],
+	"9.6.1": [
+		"disableAllStyles",
+		["outline", "q"]
+	],
+	"9.6.2": [
+		"disableAllStyles",
+		["outline", "blockquote"]
+	],
+
+
+
+	"10.1.1": [
+		["outline", "basefont, blink, center, font, marquee, s, strike, tt, u, bing, small"]
+	],
+	"10.1.2": [
+		"showAttributes",
+		"*",
+		[
+			"align",
+			"alink",
+			"background",
+			"bgcolor",
+			"border",
+			"cellpading",
+			"cellspacing",
+			"char",
+			"charoff",
+			"clear",
+			"compact",
+			"color",
+			"frameborder",
+			"hspace",
+			"link",
+			"marginheight",
+			"marginwidth",
+			"text",
+			"valign",
+			"vlink",
+			"vspace",
+			"size",
+			"width",
+			"height",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"10.1.3": [],
+
+	"10.2.1": [
+		"disableAllStyles"
+	],
+
+	"10.3.1": [
+		"disableAllStyles"
+	],
+
+	"10.4.1": [],
+	"10.4.2": [],
+	"10.4.3": [],
+
+	"10.5.1": [],
+	"10.5.2": [],
+	"10.5.3": [
+		["style", "* { background-image: none; }"]
+	],
+
+	"10.6.1": [
+		["outline", "a"]
+	],
+
+	"10.7.1": [],
+	"10.7.2": [],
+	"10.7.3": [
+		["outline", "a"]
+	],
+
+	"10.8.1": [],
+	"10.8.2": [],
+	"10.8.3": [],
+	"10.8.4": [],
+
+	"10.9.1": [
+		["showAttribute", "*[style='text-align: justify;']", "style"]
+	],
+	"10.10.1": [],
+
+	"10.11.1": [],
+
+	"10.12.1": [],
+	"10.12.2": [],
+
+	"10.13.1": [
+		["showAttribute", "*[style='display: none;']", "style", {"showTag": true}],
+		["showAttribute", "*[style='visibility: hidden;']", "style", {"showTag": true}],
+		["showAttribute", "*[style='width: 0;'], *[style='height: 0;']", "style", {"showTag": true}],
+		["showAttribute", "*[style='font-size: 0;']", "style", {"showTag": true}],
+		["showAttributes", "[hidden], [aria-hidden='true'], [aria-hidden='true']", "['hidden' , 'aria-hidden']", {"showTag": true}],
+		["showAttribute", "[role]", "role", {"showTag": true}]
+	],
+
+	"10.14.1": [],
+	"10.14.2": [],
+	"10.14.3": [],
+	"10.14.4": [],
+
+	"10.15.1": [],
+	"10.15.2": [],
+	"10.15.3": [],
+	"10.15.4": [],
+
+
+
+
+
+	"11.1.1": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+	"11.1.2": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+	"11.1.3": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+	"11.1.4": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+	"11.1.5": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+
+	"11.2.1": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+	"11.2.2": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+	"11.2.3": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+	"11.2.4": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+
+	"11.3.1": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+	"11.3.2": [
+		["outline", "input, select, textarea"],
+		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+	],
+
+	"11.4.1": [
+		["outline", "label, input, select, textarea"]
+	],
+
+	"11.5.1": [
+		["outline", "fieldset, legend"]
+	],
+
+	"11.6.1": [
+		["outline", "fieldset, legend"]
+	],
+
+	"11.7.1": [
+		["outline", "fieldset, legend"]
+	],
+
+	"11.8.1": [
+		["outline", "select"],
+		["showChildren", "select", "optgroup", {"showTag": true}],
+		["showAttribute", "optgroup", "label", {"showTag": true, "showMissing": true}]
+	],
+	"11.8.2": [
+		["outline", "select"],
+		["showChildren", "select", "optgroup", {"showTag": true}],
+		["showAttribute", "optgroup", "label", {"showTag": true, "showMissing": true}]
+	],
+	"11.8.3": [
+		["outline", "select"],
+		["showChildren", "select", "optgroup", {"showTag": true}],
+		["showAttribute", "optgroup", "label", {"showTag": true, "showMissing": true}]
+	],
+
+	"11.9.1": [
+		["outline", "input, button"],
+		["showAttributes", "[type='submit'], [type='reset'], [type='button'], value, title", "[type, value, title]", {"showTag": true}]
+	]
+}
