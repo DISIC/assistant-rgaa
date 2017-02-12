@@ -10,7 +10,6 @@ import {REQUEST_INITIAL_STATE} from '../actions/runtime';
  *	@return {Promise} promise resolved with initial state.
  */
 export default function getInitialState() {
-	console.log('REQ INITIAL STATE')
 	return sendMessage({
 		type: REQUEST_INITIAL_STATE
 	});

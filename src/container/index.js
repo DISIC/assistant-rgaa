@@ -27,7 +27,6 @@ let container = null;
  */
 const start = () =>
 	getStore().then((store) => {
-		console.log('lkjfslkjf',store.getState())
 		container = document.createElement('div');
 		container.id = CONTAINER_ID;
 		document.body.appendChild(container);

@@ -126,14 +126,6 @@ chrome.browserAction.onClicked.addListener(() =>
  *	Dispatches every message to the content scripts, allowing
  *	content scripts to talk to each other.
  */
-chrome.runtime.onMessage.addListener((m, s, respond) => {
-	//return;
-	respond({
-		type: 'test',
-		payload: 'COUCOU'
-	});
-});
-/*
 chrome.runtime.onMessage.addListener(
 	createMessageHandler((message, sender) => {
 		const tabId = sender.tab && sender.tab.id;
@@ -146,7 +138,6 @@ chrome.runtime.onMessage.addListener(
 			: handleUnknownInstanceMessage(message);
 	})
 );
-*/
 
 /**
  *	Removes associated data when a tab is closed.
