@@ -14,17 +14,25 @@
 				<label for="genre1">Genre 1</label>
 				<input type="radio" name="genre1" id="genre1" />
 			</p>
+
 			<p>
-				<label for="genre2">Genre 2</label>
+				<label>Genre 2</label>
 				<input type="radio" name="genre2" id="genre2" />
 			</p>
+
+			<div id="facturation">Adresse de facturation</div>
+			<p id="nom">Nom</p>
+
 			<p>
-				<label form="nom">Nom *</label>
-				<input type="text" name="nom" id="nom" />
+				<input type="text" name="nom" required aria-labelledby="nom facturation" />
 			</p>
+
+			<p>Texte accompagnant le champ de form utilisant aria-label :</p>
+			<input type="text" name="nom" aria-label="Nom de facturation" />
+
 			<p>
 				<label for="dep">Choisir un département</label>
-				<select id="dep" name="dep" required>
+				<select id="dep" name="dep">
 					<optgroup label="Pays de la Loire">
 						<option>département 1.1</option>
 						<option>département 1.2</option>
@@ -41,14 +49,28 @@
 					</optgroup>
 				</select>
 			</p>
+
 			<p>
 				<label for="sujet">Sujet</label>
-				<textarea type="radio" name="sujet" id="sujet" rows="10" cols="50" placeholder="Vous pouvez écrire quelque chose ici" title="Vous pouvez écrire quelque chose ici"></textarea>
+				<textarea name="sujet" id="sujet" rows="10" cols="50" placeholder="Vous pouvez écrire quelque chose ici" title="Vous pouvez écrire quelque chose ici"></textarea>
+			</p>
+
+			<input type="number" disabled  value="50" /> + <input type="number" disabled  value="10" /> = <output>60</output><br />
+
+			<progress value="70" max="100" title="70 %">70 %</progress><br />
+
+			<p>
+			  Il a eu <meter low="0" high="100" max="100" value="84" title="84/100">84</meter> à son examen.
 			</p>
 		</fieldset>
-		<input type="submit" value="Submit" title="Submit" />
-		<input type="reset" value="Reset" title="Reset" />
-		<button type="submit" title="submit">Submit</button>
+
+		<input type="hidden" value="input type hidden" /><br />
+		<input type="submit" value="input type Submit" /><br />
+		<input type="reset" value="input type Reset" /><br />
+		<input type="button" value="input type button" /><br />
+		<button type="submit">button type Submit</button><br />
+		<button>button (dans un form donc type submit)</button><br />
 	</form>
+	<button>button (hors form)</button>
 </body>
 </html>

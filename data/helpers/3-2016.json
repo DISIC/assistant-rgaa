@@ -804,93 +804,90 @@
 
 
 	"11.1.1": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
+		["outline", "label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter", ["title", "aria-label", "aria-labelledby"], {"showTag": true}],
+		["showAttribute", "[id]", "id"],
 		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
 	],
 	"11.1.2": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter", ["id"], {"showTag": true}],
+		["showAttribute", "label", "for", {"showMissing": true}]
 	],
 	"11.1.3": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"],
+		["showAttribute", "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]", "aria-labelledby"],
+		["showAttribute", "[id]", "id", {"showTag": true}]
 	],
 	"11.1.4": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"],
+		["showAttribute", "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]", "aria-label"]
 	],
 	"11.1.5": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]"],
+		["showAttributes", "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]", ["title", "placeholder"], {"showTag": true}]
 	],
 
 	"11.2.1": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter", ["id"], {"showTag": true}],
+		["showAttribute", "label", "for", {"showMissing": true}]
 	],
 	"11.2.2": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]"],
+		["showAttribute", "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]", "title", {"showTag": true}]
 	],
 	"11.2.3": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"],
+		["showAttribute", "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]", "aria-label"]
 	],
 	"11.2.4": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"],
+		["showAttribute", "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]", "aria-labelledby", {"showTag": true}]
 	],
 
 	"11.3.1": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter", ["title", "aria-label", "aria-labelledby"], {"showTag": true}]
 	],
 	"11.3.2": [
-		["outline", "input, select, textarea"],
-		["showAttributes", "input, select, textarea", ["id", "title", "aria-label", "aria-labelledby", "placeholder", {"showTag": true}]],
-		["showAttribute", "label", "for", {"showTag": true, "showMissing": true}]
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter", ["title", "aria-label", "aria-labelledby"], {"showTag": true}]
 	],
 
 	"11.4.1": [
-		["outline", "label, input, select, textarea"]
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"]
 	],
 
 	"11.5.1": [
-		["outline", "fieldset, legend"]
+		["outline", "fieldset, legend", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"]
 	],
 
 	"11.6.1": [
-		["outline", "fieldset, legend"]
+		["outline", "fieldset, legend", {"showTag": true}]
 	],
 
 	"11.7.1": [
-		["outline", "fieldset, legend"]
+		["outline", "fieldset, legend", {"showTag": true}]
 	],
 
 	"11.8.1": [
 		["outline", "select"],
-		["showChildren", "select", "optgroup", {"showTag": true}],
-		["showAttribute", "optgroup", "label", {"showTag": true, "showMissing": true}]
+		["showChildren", "select", "optgroup", {"showTag": true}]
 	],
 	"11.8.2": [
 		["outline", "select"],
 		["showChildren", "select", "optgroup", {"showTag": true}],
-		["showAttribute", "optgroup", "label", {"showTag": true, "showMissing": true}]
+		["showAttribute", "optgroup", "label", {"showMissing": true}]
 	],
 	"11.8.3": [
 		["outline", "select"],
 		["showChildren", "select", "optgroup", {"showTag": true}],
-		["showAttribute", "optgroup", "label", {"showTag": true, "showMissing": true}]
+		["showAttribute", "optgroup", "label", {"showMissing": true}]
 	],
 
 	"11.9.1": [
