@@ -1,6 +1,6 @@
 {
 	"1.1.1": [
-		"analyzeColorContrast"
+		"colorContrast"
 	],
 	"1.1.2": [
 		["showAttributes", "*", ["lang", "xml:lang"]]

@@ -29,7 +29,7 @@ export const sendMessage = (message, options = {}) =>
 		// Firefox returns a promise instead.
 		} else {
 			browser.runtime.sendMessage(message, options)
-				.then(handleResponse);
+				.then(handleResponse, reject);
 		}
 	});
 
