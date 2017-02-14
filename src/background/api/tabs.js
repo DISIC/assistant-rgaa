@@ -1,7 +1,3 @@
-import {isObject, isFunction} from 'lodash';
-
-
-
 /**
  *
  */
@@ -24,38 +20,51 @@ export const fetchCurrentTab = () => {
 /**
  *
  */
-export const sendMessageToTab = (id, message) =>
-	new Promise((resolve) => {
-		const promise = chrome.tabs.sendMessage(id, message, {}, resolve);
+export const sendMessageToTab = (id, message, options = {}) => {
+	// Chrome API wrapper
+	if (typeof browser === 'undefined') {
+		return new Promise((resolve, reject) => {
+			chrome.tabs.sendMessage(id, message, options, (response) => {
+				if (chrome.runtime.lastError) {
+					reject(chrome.runtime.lastError);
+				} else {
+					resolve(response);
+				}
+			});
+		});
+	}
 
-		if (isObject(promise) && isFunction(promise.then)) {
-			resolve(promise);
-		}
-	});
+	return browser.tabs.sendMessage(id, message, options);
+};
 
 /**
  *
  */
-export const captureVisibleTab = () =>
-	new Promise((resolve, reject) => {
-		const callback = (source) => {
-			if (chrome.runtime.lastError) {
-				reject(chrome.runtime.lastError);
-			} else {
-				const image = new Image();
-				image.src = source;
-				resolve(image);
-			}
-		};
+export const captureVisibleTab = (options = {
+	format: 'png'
+}) => {
+	const toImage = (source) => {
+		const image = new Image();
+		image.src = source;
+		return image;
+	};
 
-		const promise = chrome.tabs.captureVisibleTab(null, {
-			format: 'png'
-		}, callback);
+	// Chrome API wrapper
+	if (typeof browser === 'undefined') {
+		return new Promise((resolve, reject) => {
+			chrome.tabs.captureVisibleTab(null, options, (source) => {
+				if (chrome.runtime.lastError) {
+					reject(chrome.runtime.lastError);
+				} else {
+					resolve(toImage(source));
+				}
+			});
+		});
+	}
 
-		if (isObject(promise) && isFunction(promise.then)) {
-			promise.then(callback);
-		}
-	});
+	return browser.tabs.captureVisibleTab(null, options)
+		.then(toImage);
+};
 
 /**
  *
