@@ -3,55 +3,8 @@
 <head>
 	<meta charset="utf-8" />
 	<title>test thématique 8</title>
-	<style type="text/css" media="screen">
-		* {
-			/*background-color: purple;*/
-		}
-	</style>
 </head>
-<body lang="po" xml:lang="ru" alink="#FF0000" background="img.jpg" color="#000" link="#FF0000" vlink="#FF0000">
-	<p><basefont color="#FF0000" face="Helvetica" size="+2" />Élement basefont</p>
-	<blink>Élement blink</blink><br />
-	<center>Élement center</center><br />
-	<font size="2">Élement font</font><br />
-	<marquee>Élement marquee</marquee><br />
-	<s>Élement s</s><br />
-	<strike>Élement strike</strike><br />
-	<tt>Élement tt</tt><br />
-	<u>Élement u</u><br />
-	<bing>Élement bing</bing><br />
-	<small>Élement small</small><br />
-
-	<iframe frameborder="1" src=""></iframe><br />
-
-	<span></span><br />
-	<span marginheight="1">marginheight</span><br />
-	<span marginwidth="1">marginwidth</span><br />
-	<span text="textttt">texte</span><br />
-
-	<img src="vide" alt="texte img" width="200" height="30" /><br />
-
-	<table clear="both" cellpading="5" cellspacing="1" border="1" bgcolor="#FF0000">
-		<tr valign="middle" hspace="5" vspace="1">
-			<td align="char" char="." charoff="2">$100.00</td>
-			<td>$10.00</td>
-			<td>$100000.00</td>
-		</tr>
-		<tr>
-			<td>$100000.00</td>
-			<td>$100.00</td>
-			<td>$10.00</td>
-		</tr>
-	</table>
-
-	<p></p>
-
-	<ul compact>
-		<li>Coffee</li>
-		<li>Tea</li>
-		<li>Milk</li>
-	</ul>
-
+<body lang="po" xml:lang="ru">
 	<object src="" width="" height="">texte object</object><br />
 	<embed src="" type=""  width="" height="">texte embed</embed><br />
 	<canvas id="mon_canvas-0" width="100" height="100">
@@ -65,17 +18,18 @@
 			V123.509z M148.214,106.189h-5.973V99.32h5.973V106.189z M149.111,88.869h-5.973V82h5.973V88.869z M161.057,123.509h-5.974v-6.869
 			h5.974V123.509z M161.057,106.189h-5.974V99.32h5.974V106.189z M161.952,88.869h-5.974V82h5.974V88.869z"/>
 		</g>
-	</svg><br style="width: 0; height: 0;" />
-
+	</svg>
 
 	<hr />
-	<h1 style="color: #bf3c28; background-color: pink;">Titre h1</h1>
-	<h2 style="font-size: 0;">Titre h2</h2>
-	<h3 style="text-align: justify;">Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3 Titre h3</h3>
+
+	<h1>Titre h1</h1>
+	<h2>Titre h2</h2>
+	<h3>Titre h3</h3>
 	<h4>Titre h4</h4>
 	<h5>Titre h5</h5>
 	<h6>Titre h6</h6>
-	<p lang="en" role="tab">
+
+	<p lang="en">
 		<a href="" title="test title">lien normal</a><br />
 		<a href="" title="test title">lien <img src="" alt="composite"/></a><br />
 		<a href="" title="test title"><img src="" alt="lien image"/></a><br />
@@ -84,7 +38,7 @@
 		<span style="visibility: hidden;" href="" role="button" title="test title">span avec role button</span><br />
 		<a role="button" title="test title">a avec role button, tu crois que c'est un lien ?</a><br />
 	</p>
-	<hr style="display: none;" />
+	<hr />
 	<p>
 		MAP + AREA
 		<img hidden aria-hidden="true" src="http://w3c.github.io/html/images/sample-usemap.png" usemap="#shapes"
@@ -135,6 +89,8 @@
 		<li role="presentation">Item de liste à puce avec <code>role="presentation"</code></li>
 	</ul>
 
+	<p dir="ltr"></p>
+
 	<hr />
 	<h1>Liste ordonnée</h1>
 	<ol>
@@ -142,20 +98,5 @@
 		<li>Item de liste ordonnée 2</li>
 		<li>Item de liste ordonnée 3</li>
 	</ol>
-
-	<hr />
-	<h1>h1 vide</h1>
-	<p dir="ltr"></p>
-
-	<hr />
-	<h1>blockquote</h1>
-	<blockquote>
-		<p dir="rtl">
-			בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּמַיִם וְאֵת הָאָרֶץ ׃ וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל-פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַלֿ-פְּנֵי הַמָּיִם׃ וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי-אוֹר ׃ וַיַּרְא אֱלֹהִים אֶת-הָאוֹר כִּי-טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ׃ וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי-עֶרֶב וַיְהִיבֹקֶר יוֹם אֶחָד׃       פ
-		</p>
-		<p>
-			Paragraphe 2.
-		</p>
-	</blockquote>
 </body>
 </html>
