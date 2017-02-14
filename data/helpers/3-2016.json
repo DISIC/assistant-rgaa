@@ -771,7 +771,7 @@
 	"10.8.4": [],
 
 	"10.9.1": [
-		["showAttribute", "*[style='text-align: justify;']", "style"]
+		["showAttribute", "*[style*='text-align: justify;']", "style"]
 	],
 	"10.10.1": [],
 
@@ -781,10 +781,10 @@
 	"10.12.2": [],
 
 	"10.13.1": [
-		["showAttribute", "*[style='display: none;']", "style", {"showTag": true}],
-		["showAttribute", "*[style='visibility: hidden;']", "style", {"showTag": true}],
-		["showAttribute", "*[style='width: 0;'], *[style='height: 0;']", "style", {"showTag": true}],
-		["showAttribute", "*[style='font-size: 0;']", "style", {"showTag": true}],
+		["showAttribute", "*[style*='display: none;']", "style", {"showTag": true}],
+		["showAttribute", "*[style*='visibility: hidden;']", "style", {"showTag": true}],
+		["showAttribute", "*[style*='width: 0;'], *[style*='height: 0;']", "style", {"showTag": true}],
+		["showAttribute", "*[style*='font-size: 0;']", "style", {"showTag": true}],
 		["showAttributes", "[hidden], [aria-hidden='true'], [aria-hidden='true']", "['hidden' , 'aria-hidden']", {"showTag": true}],
 		["showAttribute", "[role]", "role", {"showTag": true}]
 	],
@@ -891,8 +891,136 @@
 	],
 
 	"11.9.1": [
-		["outline", "input, button"],
-		["showAttributes", "[type='submit'], [type='reset'], [type='button'], value, title", "[type, value, title]", {"showTag": true}]
+		["outline", "form button, [type='submit'], [type='reset'], [type='image'], [type='button']"],
+		["showAttributes", "form button, [type='submit'], [type='reset'], [type='image'], [type='button']",
+			[
+				"type",
+				"value",
+				"alt",
+				"title",
+				"aria-label"
+			],
+			{
+				"showTag": true
+			}
+		],
+		["showAttribute", "[aria-labelledby]", "aria-labelledby"],
+		["showAttribute", "[id]", "id", {
+				"showTag": true
+			}
+		]
+	],
+	"11.9.2": [
+		["outline", "form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]"],
+		["showAttribute", "form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]", "aria-labelledby",
+			{
+				"showTag": true
+			}
+		],
+		["showAttribute", "[id]", "id", {
+				"showTag": true
+			}
+		]
+	],
+
+	"11.10.1":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[required], [aria-required='true'], [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
+			[
+				"required",
+				"aria-required",
+				"title",
+				"aria-labelledby",
+				"aria-label",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
+	"11.10.2":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[required], [aria-required='true'], [aria-label], [aria-labelledby], [aria-describedby], [id]",
+			[
+				"required",
+				"aria-required",
+				"aria-label",
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
+	"11.10.3":[
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[required], [aria-required='true'], [aria-labelledby], [aria-describedby], [id]",
+			[
+				"required",
+				"aria-required",
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
+	"11.10.4":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter, [title], [aria-labelledby], [aria-label], [aria-describedby], [aria-invalid='true'], [id]",
+			[
+				"type",
+				"title",
+				"aria-labelledby",
+				"aria-label",
+				"aria-describedby",
+				"aria-invalid",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
+	"11.10.5":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[aria-invalid='true'], [aria-label], [aria-labelledby], [aria-describedby], [id]",
+			[
+				"aria-invalid",
+				"aria-label",
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
+	"11.10.6":[
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[required], [aria-required='true'], [aria-labelledby], [aria-describedby], [id]",
+			[
+				"required",
+				"aria-required",
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		]
 	],
 
 
