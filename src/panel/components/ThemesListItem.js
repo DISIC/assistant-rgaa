@@ -1,10 +1,9 @@
 import React, {PropTypes} from 'react';
-import {injectIntl, intlShape} from 'react-intl';
 import {MenuItem} from 'react-aria-menubutton';
 
 
 
-function ThemesListItem({title, icon, isDisabled, intl}) {
+function ThemesListItem({title, icon}) {
 	const style = {backgroundImage: `url('/img/${icon}')`};
 	const props = {};
 	const listItem = (tab) => (
@@ -12,21 +11,6 @@ function ThemesListItem({title, icon, isDisabled, intl}) {
 			{tab}
 		</li>
 	);
-
-	// do not allow to click on item if it is disabled
-	if (isDisabled) {
-		return listItem(
-			<span
-				className="ThemesList-link is-disabled"
-				style={style}
-				title={intl.formatMessage({
-					id: 'Theme.disabled'
-				})}
-			>
-				{title}
-			</span>
-		);
-	}
 
 	return listItem(
 		<MenuItem
@@ -44,13 +28,7 @@ function ThemesListItem({title, icon, isDisabled, intl}) {
 ThemesListItem.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
-	icon: PropTypes.string.isRequired,
-	isDisabled: PropTypes.bool,
-	intl: intlShape.isRequired
+	icon: PropTypes.string.isRequired
 };
 
-ThemesListItem.defaultProps = {
-	isDisabled: false
-};
-
-export default injectIntl(ThemesListItem);
+export default ThemesListItem;

@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
-import {injectIntl, intlShape, FormattedMessage} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import {map} from 'lodash';
-import classNames from 'classnames';
 import CriterionContainer from './CriterionContainer';
 
 
@@ -9,17 +8,9 @@ import CriterionContainer from './CriterionContainer';
 /**
  *
  */
-function Theme({theme, criteria, isInactive, intl}) {
-	const className = classNames('Theme', {
-		'is-disabled': isInactive
-	});
-
-	const title = isInactive
-		? intl.formatMessage({id: 'Theme.disabled'})
-		: '';
-
+function Theme({theme, criteria}) {
 	return (
-		<div id={theme.title} className={className} title={title}>
+		<div id={theme.title} className="Theme">
 			<div className="Theme-header">
 				<h2 className="Theme-title Title">{theme.title}</h2>
 				<a
@@ -44,13 +35,7 @@ function Theme({theme, criteria, isInactive, intl}) {
 
 Theme.propTypes = {
 	theme: PropTypes.object,
-	criteria: PropTypes.array,
-	isInactive: PropTypes.bool,
-	intl: intlShape.isRequired
+	criteria: PropTypes.array
 };
 
-Theme.defaultProps = {
-	isInactive: false
-};
-
-export default injectIntl(Theme);
+export default Theme;

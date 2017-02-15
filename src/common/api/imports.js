@@ -5,16 +5,6 @@ import {getReference} from '../../common/api/reference';
 
 
 /**
- *
- */
-export const VALID = 'C';
-export const INVALID = 'NC';
-export const NON_APPLICABLE = 'NA';
-export const NON_TESTABLE = 'NT';
-
-
-
-/**
  * schema of one row we expect from an import file
  */
 const csvRowSchema = {

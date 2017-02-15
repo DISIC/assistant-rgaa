@@ -12,8 +12,6 @@ const initialState = {
 	errors: [],
 	content: null,
 	pending: false,
-	inactiveThemeIds: [],
-	inactiveCriterionIds: [],
 	testResults: {}
 };
 
@@ -41,18 +39,6 @@ export default function imports(state = initialState, {type, payload}) {
 			return {
 				...state,
 				pending: payload.pending
-			};
-
-		case SET_NON_APPLICABLE_THEMES:
-			return {
-				...state,
-				inactiveThemeIds: payload.ids
-			};
-
-		case SET_NON_APPLICABLE_CRITERIA:
-			return {
-				...state,
-				inactiveCriterionIds: payload.ids
 			};
 
 		case SET_TESTS_RESULTS:

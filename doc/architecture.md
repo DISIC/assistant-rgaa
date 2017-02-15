@@ -55,7 +55,6 @@ Aucun fichier de build n'est généré avec ce code : c'est dans chaque partie d
 Ce code correspond à un *content-script* de l'extension. Il est injecté dans chaque page que vous chargez. Dans cette partie :
 
 * on génère (ou détruit) l'`iframe` contenant le *panel* et les quelques `div` l'entourant.
-* on s'occupe d'afficher la modal d'import
 * on créé un store synchronisé (voir détails plus bas)
 
 :warning: le CSS étant directement injecté sur la page, toutes les règles sont préfixées par `rgaaExt-` et sont déclarées en `!important`.

@@ -8,19 +8,6 @@
 	}
 }
 
-.Theme.is-disabled {
-	opacity: 0.4;
-	cursor: help;
-}
-
-.Theme.is-disabled a,
-.Theme.is-disabled button,
-.Theme.is-disabled input,
-.Theme.is-disabled select,
-.Theme.is-disabled label {
-	pointer-events: none;
-}
-
 .Theme-header {
 	display: flex;
 }

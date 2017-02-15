@@ -111,18 +111,6 @@
 	padding-bottom: vr(1);
 }
 
-.Criterion.is-disabled {
-	opacity: 0.4;
-	cursor: help;
-}
-
-.Criterion.is-disabled a,
-.Criterion.is-disabled button,
-.Criterion.is-disabled input,
-.Criterion.is-disabled label {
-	pointer-events: none;
-}
-
 .Criterion-actionLabel {
 	display: block;
 }

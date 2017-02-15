@@ -10,19 +10,15 @@ import Icon from './Icon';
 /**
  *
  */
-function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl}) {
+function Criterion({id, title, tests, isDone, isOpen, onToggle, intl}) {
 	const className = classNames('Criterion Theme-criterion', {
-		'is-disabled': isInactive,
 		'is-open': isOpen
 	});
 	const headerClassName = classNames('Criterion-header', {
 		'Title Title--sub': isOpen
 	});
-	const htmlTitle = isInactive
-		? intl.formatMessage({id: 'Theme.criterion.disabled'})
-		: '';
 	return (
-		<li id={`Criterion-${id}`} className={className} title={htmlTitle}>
+		<li id={`Criterion-${id}`} className={className}>
 			<header className={headerClassName}>
 				<h3 className="Criterion-title">
 					<button
@@ -86,7 +82,6 @@ Criterion.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	tests: PropTypes.array.isRequired,
-	isInactive: PropTypes.bool,
 	isOpen: PropTypes.bool.isRequired,
 	onToggle: PropTypes.func.isRequired,
 	isDone: PropTypes.bool,
@@ -94,7 +89,6 @@ Criterion.propTypes = {
 };
 
 Criterion.defaultProps = {
-	isInactive: false,
 	isDone: false
 };
 
