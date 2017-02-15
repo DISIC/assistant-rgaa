@@ -9,7 +9,7 @@ import {
  *
  */
 const initialState = {
-	errors: '',
+	errors: [],
 	content: null,
 	pending: false,
 	inactiveThemeIds: [],
@@ -34,7 +34,7 @@ export default function imports(state = initialState, {type, payload}) {
 				...state,
 				content: payload.content,
 				pending: false,
-				errors: ''
+				errors: []
 			};
 
 		case SET_PENDING:

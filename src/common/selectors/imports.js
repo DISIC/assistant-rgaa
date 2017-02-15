@@ -1,6 +1,6 @@
 import {
 	property, map, flatten, difference, intersection, eq,
-	includes, get, groupBy, filter, each, fromPairs, isEmpty
+	includes, get, groupBy, filter, each, fromPairs, isEmpty, upperFirst
 } from 'lodash';
 import fp from 'lodash/fp';
 import {NON_APPLICABLE} from '../api/imports';
@@ -19,12 +19,22 @@ export const getContent = property('imports.content');
  *
  */
 export const getVersion = (state) =>
-	get(state.imports, 'content.version-referentiel', null);
+	get(getContent(state), '[0][\'Version référentiel\']', null);
 
 /**
  *
  */
 export const getErrors = property('imports.errors');
+
+/**
+ *
+ */
+export const getHumanReadableErrors = (state) =>
+	getErrors(state).map(({message, row}) => (
+		row
+			? `Ligne ${row} : ${message}.`
+			: `${upperFirst(message)}.`
+	));
 
 /**
  *
@@ -76,7 +86,7 @@ export const isCriterionInactive = (state, id) =>
  * check if the current import is valid
  */
 export const isValid = (state) =>
-	state.imports.content !== null && state.imports.errors === '';
+	state.imports.content !== null && !state.imports.errors.length;
 
 /**
  *

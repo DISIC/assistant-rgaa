@@ -2,9 +2,9 @@ import {connect} from 'react-redux';
 import {compose} from 'recompose';
 import {property} from 'lodash';
 import renderNothingUntil from '../../common/renderNothingUntil';
-import {validateImportContent} from '../../common/api/imports';
+import {getCsv} from '../../common/api/imports';
 import {
-	isPending, getErrors, isValid, getVersion as getImportVersion
+	isPending, getHumanReadableErrors, isValid, getVersion as getImportVersion
 } from '../../common/selectors/imports';
 import {getVersion as getReferenceVersion} from '../../common/selectors/reference';
 import {setErrors, setContent, setPending, apply, reset} from '../../common/actions/imports';
@@ -18,7 +18,7 @@ import ImportPage from './ImportPage';
 const mapStateToProps = (state) => ({
 	pending: isPending(state),
 	valid: isValid(state),
-	errors: getErrors(state),
+	errors: getHumanReadableErrors(state),
 	importVersion: getImportVersion(state),
 	globalVersion: getReferenceVersion(state)
 });
@@ -26,25 +26,28 @@ const mapStateToProps = (state) => ({
 /**
  *
  */
-const mapDispatchToProps = (dispatch) => ({
+const mergeProps = (stateProps, {dispatch}, ownProps) => ({
+	...stateProps,
+	...ownProps,
+
 	onReset() {
 		dispatch(reset());
 	},
 
 	onFileSelection(content) {
 		dispatch(setPending(true));
-		try {
-			const data = JSON.parse(content);
-			if (validateImportContent(data)) {
-				dispatch(setContent(data));
+		getCsv(content).then(({data, errors}) => {
+			if (errors.length) {
+				return dispatch(setErrors(errors));
 			}
-		} catch (e) {
-			dispatch(setErrors(e.message));
-		}
+			return errors.length
+				? dispatch(setErrors(errors))
+				: dispatch(setContent(data));
+		});
 	},
 
-	onSubmit(valid) {
-		if (valid) {
+	onSubmit() {
+		if (stateProps.valid) {
 			dispatch(apply());
 		}
 	}
@@ -55,7 +58,8 @@ const mapDispatchToProps = (dispatch) => ({
 export default compose(
 	connect(
 		mapStateToProps,
-		mapDispatchToProps
+		null,
+		mergeProps
 	),
 	renderNothingUntil(property('globalVersion'))
 )(ImportPage);

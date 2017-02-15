@@ -12,7 +12,7 @@ function ImportPage({
 }) {
 	const onFormSubmit = (event) => {
 		event.preventDefault();
-		onSubmit(valid);
+		onSubmit();
 	};
 
 	const onFileChange = (event) => {
@@ -70,7 +70,7 @@ function ImportPage({
 							<FormattedMessage id="Import.failure" />
 						</p>),
 						(<ul key="errors" className="ImportPage-errors">
-							{errors.split('\n').map((error, i) =>
+							{errors.map((error, i) =>
 								<li key={`error-${i}`}>{error}</li>
 							)}
 						</ul>)
@@ -97,7 +97,7 @@ ImportPage.propTypes = {
 	onReset: PropTypes.func.isRequired,
 	onFileSelection: PropTypes.func.isRequired,
 	onSubmit: PropTypes.func.isRequired,
-	errors: PropTypes.string.isRequired,
+	errors: PropTypes.array.isRequired,
 	valid: PropTypes.bool.isRequired,
 	pending: PropTypes.bool.isRequired
 };
