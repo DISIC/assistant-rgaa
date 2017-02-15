@@ -1165,5 +1165,32 @@
 	],
 	"12.6.3": [
 		"disableAllStyles"
+	],
+	"12.10.3": [
+		["outline", "main"],
+		["showAttributes", "main, [role='main']", ["id"],{"showTag": true}],		
+		["showChildren", "main, [role='main']", "a:not([href])", ["id"], {
+			"showMissing": true
+		}]
+	],
+	"12.10.4": [
+		["outline", "main"],
+		["showAttributes", "
+			main,
+			[role='banner'],
+			[role='navigation'],
+			[role='contentinfo'],
+			[role='main'],
+			[role='search'],
+			header[role='banner'],
+			nav[role='navigation'],
+			footer[role='contentinfo'],
+			main[role='main'],
+			input[role='search'],
+			form[role='search'] ",
+			["role"],{
+				"showTag": true
+			}
+		],
 	]
 }
