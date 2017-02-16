@@ -1,6 +1,15 @@
 /* stylelint-disable declaration-no-important */
 
 
+.rgaaExt-Attribute {
+	color: $color-orange-text-dark !important;
+	background: $color-orange !important;
+}
+
+.rgaaExt-Attribute-name {
+	color: $color-orange-text-dark !important;
+	background: $color-orange !important;
+}
 
 .rgaaExt-Attribute-missing {
 	text-decoration: line-through !important;

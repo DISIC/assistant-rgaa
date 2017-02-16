@@ -7,19 +7,20 @@
 	display: inline-block !important;
 	margin: 0 ($base-line-height / 4) 0 0 !important;
 	padding: 0 $base-line-height / 4 !important;
-	background: $color-orange !important;
-	color: $color-orange-text-dark !important;
+	color: $color-white !important;
 	line-height: $base-line-height !important;
 	font-family: $font-mono !important;
 	font-size: $base-font-size !important;
 	z-index: $max-z-index !important;
+	background: $color-red !important;
 
 	a {
 		color: $color-orange-text-dark !important;
 	}
 }
 
-.rgaaExt-ShowTagHelper {
+.rgaaExt-ShowTagHelper,
+.rgaaExt-Element-name {
 	color: $color-white !important;
 	background: $color-red !important;
 
@@ -27,3 +28,4 @@
 		color: $color-white !important;
 	}
 }
+
