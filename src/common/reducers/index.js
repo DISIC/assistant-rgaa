@@ -18,7 +18,8 @@ export const sharedReducers = {
 	reference,
 	themes,
 	criteria,
-	tests
+	tests,
+	helpers
 };
 
 /**
@@ -26,7 +27,6 @@ export const sharedReducers = {
  */
 export const appReducers = {
 	panel,
-	helpers,
 	instructions,
 	checklist,
 	imports

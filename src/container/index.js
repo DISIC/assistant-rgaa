@@ -80,3 +80,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
  *	associated data already exists.
  */
 start();
+

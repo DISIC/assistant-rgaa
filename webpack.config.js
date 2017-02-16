@@ -15,31 +15,31 @@ const fullPath = path.resolve.bind(null, __dirname);
 module.exports = {
 	entry: {
 		panel: [
-			'babel-polyfill',
+			//'babel-polyfill',
 			'./src/panel/index',
 			'./css/panel/index.scss'
 		],
 		container: [
-			'babel-polyfill',
+			//'babel-polyfill',
 			'./src/container/index',
 			'./css/container/index.scss'
 		],
 		helpers: [
-			'babel-polyfill',
+			//'babel-polyfill',
 			'./src/helpers/index',
 			'./css/helpers/index.scss'
 		],
 		options: [
-			'babel-polyfill',
+			//'babel-polyfill',
 			'./src/options/index',
 			'./css/options/index.scss'
 		],
 		background: [
-			'babel-polyfill',
+			//'babel-polyfill',
 			'./src/background/index'
 		],
 		devtools: [
-			'babel-polyfill',
+			//'babel-polyfill',
 			'./src/devtools/index'
 		]
 	},
@@ -54,10 +54,6 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{
-				test: require.resolve('sly/dist/sly'),
-				loader: 'imports?jQuery=jquery,$=jquery,this=>window'
-			},
 			{
 				test: /\.js$/,
 				loader: 'babel',

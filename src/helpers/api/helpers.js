@@ -41,6 +41,16 @@ export const describe = (helper) => {
 };
 
 /**
+ *
+ */
+export const component = (helper) => {
+	const {module, args} = info(helper);
+	return ('component' in module)
+		? module.component(...args)
+		: null;
+};
+
+/**
  *	Creates an uuid from a test id and a helper index.
  *	Also ensures that there is no dot in the name, so it can
  *	be queried if used as an id or class name in the DOM.
@@ -57,10 +67,14 @@ const createId = (id, index) =>
  *	@param {string|array} helper - Helper descriptor.
  */
 const runHelpers = (func) => (id, helpers) => {
-	helpers.forEach((helper, i) => {
-		const {module, args} = info(helper);
-		module[func](createId(id, i), ...args);
-	});
+	try {
+		helpers.forEach((helper, i) => {
+			const {module, args} = info(helper);
+			module[func](createId(id, i), ...args);
+		});
+	} catch (e) {
+		console.error(e);
+	}
 };
 
 /**

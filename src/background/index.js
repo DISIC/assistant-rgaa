@@ -1,13 +1,14 @@
 import {get} from 'lodash';
 import {
 	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP,
-	REQUEST_INITIAL_STATE, INVALID_RESPONSE
+	REQUEST_INITIAL_STATE, GET_PIXEL, INVALID_RESPONSE
 } from '../common/actions/runtime';
 import {IFRAME_FILE} from '../container/api/iframe';
 import {openWindow} from './api/windows';
-import {fetchCurrentTab, closeTab} from './api/tabs';
+import {fetchCurrentTab, captureVisibleTab, closeTab} from './api/tabs';
 import {createMessageHandler} from '../common/api/runtime';
 import {getOption} from '../common/api/options';
+import {getPixelAt} from '../common/api/image';
 import {setReferenceVersion} from '../common/actions/reference';
 import createInstancePool from './createInstancePool';
 
@@ -93,6 +94,13 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 				closeTab(tabId);
 			}
 			break;
+
+		// sends the store's state to the instance.
+		case GET_PIXEL:
+			return captureVisibleTab()
+				.then((image) =>
+					getPixelAt(image, message.x, message.y)
+				);
 
 		// broadcasts message
 		default:
