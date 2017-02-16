@@ -88,8 +88,8 @@ const formattedError = ({code, message, row}) => ({
 /**
  *
  */
-const parsedCsv = (csvString) => {
-	const csv = Papa.parse(csvString, {header: true});
+const parsedCsv = (csvString, config) => {
+	const csv = Papa.parse(csvString, config);
 	let errors = csv.errors;
 	csv.data.forEach((row, n) => {
 		let currentRowErrors = rowErrors(row, csvRowSchema);
@@ -138,8 +138,8 @@ const checkCsvReferenceVersion = (rows) => {
 /**
  *
  */
-export const getCsv = (csvString) => {
-	const csv = parsedCsv(csvString);
+export const getCsv = (csvString, config = {}) => {
+	const csv = parsedCsv(csvString, config);
 
 	return checkCsvReferenceVersion(csv.data)
 		.then(() => csv)

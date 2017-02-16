@@ -1,4 +1,4 @@
-import {property, get, fromPairs, isEmpty, upperFirst} from 'lodash';
+import {property, get, fromPairs, upperFirst} from 'lodash';
 import {getIds as getTestIds} from './tests';
 
 
@@ -7,6 +7,11 @@ import {getIds as getTestIds} from './tests';
  *
  */
 export const getContent = property('imports.content');
+
+/**
+ *
+ */
+export const getConfig = property('imports.config');
 
 /**
  *

@@ -4,10 +4,12 @@ import {property} from 'lodash';
 import renderNothingUntil from '../../common/renderNothingUntil';
 import {getCsv} from '../../common/api/imports';
 import {
-	isPending, getHumanReadableErrors, isValid, getVersion as getImportVersion
+	setErrors, setConfig, setContent, setPending, apply, reset
+} from '../../common/actions/imports';
+import {
+	isPending, getHumanReadableErrors, isValid, getVersion as getImportVersion, getConfig
 } from '../../common/selectors/imports';
 import {getVersion as getReferenceVersion} from '../../common/selectors/reference';
-import {setErrors, setContent, setPending, apply, reset} from '../../common/actions/imports';
 import ImportPage from './ImportPage';
 
 
@@ -20,7 +22,8 @@ const mapStateToProps = (state) => ({
 	valid: isValid(state),
 	errors: getHumanReadableErrors(state),
 	importVersion: getImportVersion(state),
-	globalVersion: getReferenceVersion(state)
+	globalVersion: getReferenceVersion(state),
+	config: getConfig(state)
 });
 
 /**
@@ -36,7 +39,7 @@ const mergeProps = (stateProps, {dispatch}, ownProps) => ({
 
 	onFileSelection(content) {
 		dispatch(setPending(true));
-		getCsv(content).then(({data, errors}) => {
+		getCsv(content, stateProps.config).then(({data, errors}) => {
 			if (errors.length) {
 				return dispatch(setErrors(errors));
 			}
@@ -50,6 +53,10 @@ const mergeProps = (stateProps, {dispatch}, ownProps) => ({
 		if (stateProps.valid) {
 			dispatch(apply());
 		}
+	},
+
+	onConfigChange(name, value) {
+		dispatch(setConfig(name, value));
 	}
 });
 
