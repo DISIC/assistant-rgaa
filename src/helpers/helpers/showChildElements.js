@@ -34,9 +34,8 @@ export const apply = (id, selector, childrenSelector, attributes = [], options =
 
 		$element
 			.find(childrenSelector)
-			.each((child) => {
-				const $child = $(child);
-				const html = serializeElement($child, attributes, options);
+			.each((j, child) => {
+				const html = serializeElement($(child), attributes, options);
 
 				if (html) {
 					showCodeNearElement(

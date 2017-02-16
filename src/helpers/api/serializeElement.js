@@ -1,4 +1,4 @@
-import {serializeAttributes} from './showAttribute';
+import serializeAttributes from './serializeAttributes';
 
 
 
