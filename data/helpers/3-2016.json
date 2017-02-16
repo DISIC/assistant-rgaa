@@ -1109,7 +1109,55 @@
 		["showAttribute", "[aria-label]", "aria-label", {"showTag": true}],
 		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
 	],
-
+	"11.14.3":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[aria-describedby], [id]",
+			[
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
+	"11.14.4":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, datalist, output, progress, meter"],
+		["showAttributes", "[title], [aria-label], [aria-labelledby], [aria-describedby], [id]",
+			[
+				"title",
+				"aria-label",
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		],
+		["showAttribute", "[contenteditable='true']", "contenteditable"],
+		["showAttribute", "[spellcheck='true']", "spellcheck"]
+	],
+	"11.14.5":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, datalist, output, progress, meter"],
+		["showAttribute", "[aria-label]", "aria-label", {"showTag": true}]
+	],
+	"11.14.6":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[aria-describedby], [id]",
+			[
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
 
 
 
