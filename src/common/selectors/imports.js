@@ -1,4 +1,4 @@
-import {property, get, fromPairs, upperFirst} from 'lodash';
+import {property, isEmpty, get, fromPairs, upperFirst} from 'lodash';
 import {getIds as getTestIds} from './tests';
 
 
@@ -55,6 +55,12 @@ export const isPending = property('imports.pending');
  */
 export const isValid = (state) =>
 	state.imports.content !== null && !state.imports.errors.length;
+
+/**
+ *
+ */
+export const isImportActive = (state) =>
+	!isEmpty(getTestResults(state));
 
 /*
  *
