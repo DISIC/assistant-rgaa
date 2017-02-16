@@ -117,16 +117,18 @@ function ImportPage({
 							/>
 						</p>
 					)}
-					{renderIf(pending && !valid)([
-						(<p key="failure" className="ImportPage-failure">
-							<FormattedMessage id="Import.failure" />
-						</p>),
-						(<ul key="errors" className="ImportPage-errors">
-							{errors.map((error, i) =>
-								<li key={`error-${i}`}>{error}</li>
-							)}
-						</ul>)
-					])}
+					{renderIf(pending && !valid)(
+						<details className="ImportPage-failure" open={errors.length < 10}>
+							<summary>
+								<FormattedMessage id="Import.failure" />
+							</summary>
+							<ul className="ImportPage-errors">
+								{errors.map((error, i) =>
+									<li key={`error-${i}`}>{error}</li>
+								)}
+							</ul>
+						</details>
+					)}
 
 					<div className="ImportPage-buttons">
 						<button disabled={!valid} className="ImportPage-button">
