@@ -841,16 +841,16 @@
 	],
 
 	"11.8.1": [
-		["outline", "select"],
+		["outline", "select:has(optgroup)"],
 		["showChildren", "select", "optgroup", {"showTag": true}]
 	],
 	"11.8.2": [
-		["outline", "select"],
+		["outline", "select:has(optgroup)"],
 		["showChildren", "select", "optgroup", {"showTag": true}],
 		["showAttribute", "optgroup", "label", {"showMissing": true}]
 	],
 	"11.8.3": [
-		["outline", "select"],
+		["outline", "select:has(optgroup)"],
 		["showChildren", "select", "optgroup", {"showTag": true}],
 		["showAttribute", "optgroup", "label", {"showMissing": true}]
 	],
