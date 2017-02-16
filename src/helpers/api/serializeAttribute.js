@@ -36,14 +36,19 @@ const linkIds = (name, value) => {
  */
 export default function serializeAttribute(element, name, showMissing) {
 	const value = element.attr(name);
-	let content = '';
 
 	if (isString(value)) {
-		content = `<span class="rgaaExt-Attribute-name">${name}</span>`
-			+ `="<span class="rgaaExt-Attribute-value">${linkIds(name, value)}</span>"`;
-	} else if (showMissing) {
-		content = `<span class="rgaaExt-Attribute-missing">${name}</span>`;
+		return '<span class="rgaaExt-Attribute">'
+				+ `<span class="rgaaExt-Attribute-name">${name}</span>`
+				+ `="<span class="rgaaExt-Attribute-value">${linkIds(name, value)}</span>"`
+			+ '</span>';
 	}
 
-	return `<span class="rgaaExt-Attribute">${content}</span>`;
+	if (showMissing) {
+		return '<span class="rgaaExt-Attribute">'
+				+ `<span class="rgaaExt-Attribute-missing">${name}</span>`
+			+ '</span>';
+	}
+
+	return null;
 }
