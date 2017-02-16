@@ -7,8 +7,9 @@ import showCodeNearElement from '../api/showCodeNearElement';
 /**
  *	Describes the helper.
  */
-export const describe = (selector, attributes = []) => `
-	Affiche les éléments <code>${selector}</code>,
+export const describe = (selector, childrenSelector, attributes = []) => `
+	Pour chaque élément <code>${selector}</code>,
+	affiche les éléments enfants <code>${childrenSelector}</code>
 	et leurs attributs <code>${attributes.join(', ')}</code>.
 `;
 
@@ -17,6 +18,7 @@ export const describe = (selector, attributes = []) => `
  *
  *	@param {string} id - UUID.
  *	@param {string} selector - Selector.
+ *	@param {string} childrenSelector - Children selector.
  *	@param {array} attributes - Children attributes to show.
  *	@param {object} options - Options:
  *		- {bool} showEmpty - Show the tag even if it is empty
@@ -26,20 +28,26 @@ export const describe = (selector, attributes = []) => `
  *			that are not set on the element.
  *		- {bool} showContent - Show text content.
  */
-export const apply = (id, selector, attributes = [], options = {}) =>
+export const apply = (id, selector, childrenSelector, attributes = [], options = {}) =>
 	$(selector).each((i, element) => {
 		const $element = $(element);
-		const html = serializeElement($element, attributes, options);
 
-		if (html) {
-			showCodeNearElement(
-				$element,
-				$('<code />', {
-					class: `${id} rgaaExt-Helper rgaaExt-ShowElementHelper`,
-					html
-				})
-			);
-		}
+		$element
+			.find(childrenSelector)
+			.each((child) => {
+				const $child = $(child);
+				const html = serializeElement($child, attributes, options);
+
+				if (html) {
+					showCodeNearElement(
+						$element,
+						$('<code />', {
+							class: `${id} rgaaExt-Helper rgaaExt-ShowChildElementsHelper`,
+							html
+						})
+					);
+				}
+			});
 	});
 
 /**
