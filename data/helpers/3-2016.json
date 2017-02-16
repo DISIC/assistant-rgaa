@@ -564,22 +564,14 @@
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.1.3": [
 		"disableAllStyles",
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.2.1": [
 		"disableAllStyles",
@@ -591,22 +583,14 @@
 		["outline", "a[title]:not([role]), *[role='link'][title]"],
 		["showAttribute", "a[title]:not([role]), *[role='link'][title]", "title"],
 		["showAttribute", "a[title]:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a[title]:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a[title]:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a[title]:not([role]) object, *[role='link'] object"],
-		["showTag", "a[title]:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a[title]:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.2.3": [
 		"disableAllStyles",
 		["outline", "a[title]:not([role]), *[role='link'][title]"],
 		["showAttribute", "a[title]:not([role]), *[role='link'][title]", "title"],
 		["showAttribute", "a[title]:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a[title]:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.3.1": [
 		"disableAllStyles",
@@ -618,22 +602,14 @@
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.3.3": [
 		"disableAllStyles",
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.4.1": [
 		"disableAllStyles",
@@ -645,32 +621,20 @@
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.4.3": [
 		"disableAllStyles",
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.5.1": [
 		"disableAllStyles",
 		["outline", "a:not([role]), *[role='link']"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 
 
@@ -890,7 +854,7 @@
 	"10.8.4": [],
 
 	"10.9.1": [
-		["showAttribute", "*[style*='text-align: justify;']", "style"]
+		["showAttribute", "[style*='text-align: justify;']", "style"]
 	],
 	"10.10.1": [],
 
@@ -995,16 +959,16 @@
 	],
 
 	"11.8.1": [
-		["outline", "select"],
+		["outline", "select:has(optgroup)"],
 		["showChildren", "select", "optgroup", {"showTag": true}]
 	],
 	"11.8.2": [
-		["outline", "select"],
+		["outline", "select:has(optgroup)"],
 		["showChildren", "select", "optgroup", {"showTag": true}],
 		["showAttribute", "optgroup", "label", {"showMissing": true}]
 	],
 	"11.8.3": [
-		["outline", "select"],
+		["outline", "select:has(optgroup)"],
 		["showChildren", "select", "optgroup", {"showTag": true}],
 		["showAttribute", "optgroup", "label", {"showMissing": true}]
 	],
@@ -1045,10 +1009,9 @@
 	"11.10.1":[
 		["outline", "label", {"showTag": true}],
 		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
-		["showAttributes", "[required], [aria-required='true'], [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
+		["showAttributes", "[required], [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
 			[
 				"required",
-				"aria-required",
 				"title",
 				"aria-labelledby",
 				"aria-label",
@@ -1058,15 +1021,15 @@
 			{
 				"showTag": true
 			}
-		]
+		],
+		["showAttribute", "[aria-required='true']", "aria-required", {"showTag": true}]
 	],
 	"11.10.2":[
 		["outline", "label", {"showTag": true}],
 		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
-		["showAttributes", "[required], [aria-required='true'], [aria-label], [aria-labelledby], [aria-describedby], [id]",
+		["showAttributes", "[required], [aria-label], [aria-labelledby], [aria-describedby], [id]",
 			[
 				"required",
-				"aria-required",
 				"aria-label",
 				"aria-labelledby",
 				"aria-describedby",
@@ -1075,14 +1038,14 @@
 			{
 				"showTag": true
 			}
-		]
+		],
+		["showAttribute", "[aria-required='true']", "aria-required", {"showTag": true}]
 	],
 	"11.10.3":[
 		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
-		["showAttributes", "[required], [aria-required='true'], [aria-labelledby], [aria-describedby], [id]",
+		["showAttributes", "[required], [aria-labelledby], [aria-describedby], [id]",
 			[
 				"required",
-				"aria-required",
 				"aria-labelledby",
 				"aria-describedby",
 				"id"
@@ -1090,32 +1053,32 @@
 			{
 				"showTag": true
 			}
-		]
+		],
+		["showAttribute", "[aria-required='true']", "aria-required", {"showTag": true}]
 	],
 	"11.10.4":[
 		["outline", "label", {"showTag": true}],
 		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
-		["showAttributes", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter, [title], [aria-labelledby], [aria-label], [aria-describedby], [aria-invalid='true'], [id]",
+		["showAttributes", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter, [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
 			[
 				"type",
 				"title",
 				"aria-labelledby",
 				"aria-label",
 				"aria-describedby",
-				"aria-invalid",
 				"id"
 			],
 			{
 				"showTag": true
 			}
-		]
+		],
+		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
 	],
 	"11.10.5":[
 		["outline", "label", {"showTag": true}],
 		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
-		["showAttributes", "[aria-invalid='true'], [aria-label], [aria-labelledby], [aria-describedby], [id]",
+		["showAttributes", "[aria-label], [aria-labelledby], [aria-describedby], [id]",
 			[
-				"aria-invalid",
 				"aria-label",
 				"aria-labelledby",
 				"aria-describedby",
@@ -1124,14 +1087,64 @@
 			{
 				"showTag": true
 			}
-		]
+		],
+		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
 	],
 	"11.10.6":[
 		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
-		["showAttributes", "[required], [aria-required='true'], [aria-labelledby], [aria-describedby], [id]",
+		["showAttributes", "[aria-labelledby], [aria-describedby], [id]",
+			[
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		],
+		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
+	],
+	"11.10.7":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[required], [title], [aria-label], [aria-labelledby], [aria-describedby], [id]",
 			[
 				"required",
-				"aria-required",
+				"title",
+				"aria-label",
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		],
+		["showAttribute", "[aria-required='true']", "aria-required", {"showTag": true}],
+		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
+	],
+	"11.10.8":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[aria-label], [aria-labelledby], [aria-describedby], [id]",
+			[
+				"title",
+				"aria-label",
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		],
+		["showAttribute", "[aria-required='true']", "aria-required", {"showTag": true}],
+		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
+	],
+	"11.10.9":[
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[aria-labelledby], [aria-describedby], [id]",
+			[
 				"aria-labelledby",
 				"aria-describedby",
 				"id"
@@ -1140,6 +1153,79 @@
 				"showTag": true
 			}
 		]
+	],
+	"11.10.10": [
+		["outline", "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]"],
+		["showAttributes", "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]",
+			[
+				"title",
+				"placeholder"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
+
+	"11.11.1":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[aria-label], [aria-labelledby], [aria-describedby], [id]",
+			[
+				"aria-label",
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		],
+		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
+	],
+	"11.11.2":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[aria-label], [aria-labelledby], [aria-describedby], [id]",
+			[
+				"aria-label",
+				"aria-labelledby",
+				"aria-describedby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		],
+		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
+	],
+
+	"11.12.1":[],
+	"11.12.2":[],
+
+	"11.13.1":[],
+	"11.13.2":[],
+
+	"11.14.1":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttributes", "[title], [aria-label], [aria-labelledby], [id]",
+			[
+				"title",
+				"aria-label",
+				"aria-labelledby",
+				"id"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
+	"11.14.2":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttribute", "[aria-label]", "aria-label", {"showTag": true}],
+		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
 	],
 
 
@@ -1168,5 +1254,40 @@
 	],
 	"12.6.3": [
 		"disableAllStyles"
+	],
+	"12.10.3": [
+		["outline", "main"],
+		["showAttributes", "main, [role='main']", ["id"],{"showTag": true}],
+		["showChildren", "main, [role='main']", "a:not([href])", ["id"], {
+			"showMissing": true
+		}]
+	],
+	"12.10.4": [
+		["outline", "main"],
+		["showAttributes", "main, [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search'], header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search']",
+			["role"],
+			{
+				"showTag": true
+			}
+		]
+	],
+	"12.11.1": [
+		"disableAllStyles"
+	],
+	"12.11.2": [
+		"disableAllStyles",
+		["outline", "main"]
+	],
+	"12.11.3": [
+		"disableAllStyles"
+	],
+	"12.13.1": [
+		["style", "*:focus{ border:2px solid red!important; }"]
+	],
+	"12.13.2": [
+		["style", "*:focus{ border:2px solid red!important; }"]
+	],
+	"12.14.1": [
+		["style", "*:focus{ border:2px solid red!important; }"]
 	]
 }
