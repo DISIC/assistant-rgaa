@@ -1118,7 +1118,7 @@
 	],
 
 	"11.12.1":[],
-	"11.12.1":[],
+	"11.12.2":[],
 
 	"11.13.1":[],
 	"11.13.2":[],
@@ -1137,6 +1137,12 @@
 				"showTag": true
 			}
 		]
+	],
+	"11.14.2":[
+		["outline", "label", {"showTag": true}],
+		["outline", "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"],
+		["showAttribute", "[aria-label]", "aria-label", {"showTag": true}],
+		["showAttribute", "[aria-invalid='true']", "aria-invalid", {"showTag": true}]
 	],
 
 
@@ -1168,29 +1174,18 @@
 	],
 	"12.10.3": [
 		["outline", "main"],
-		["showAttributes", "main, [role='main']", ["id"],{"showTag": true}],		
+		["showAttributes", "main, [role='main']", ["id"],{"showTag": true}],
 		["showChildren", "main, [role='main']", "a:not([href])", ["id"], {
 			"showMissing": true
 		}]
 	],
 	"12.10.4": [
 		["outline", "main"],
-		["showAttributes", "
-			main,
-			[role='banner'],
-			[role='navigation'],
-			[role='contentinfo'],
-			[role='main'],
-			[role='search'],
-			header[role='banner'],
-			nav[role='navigation'],
-			footer[role='contentinfo'],
-			main[role='main'],
-			input[role='search'],
-			form[role='search'] ",
-			["role"],{
+		["showAttributes", "main, [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search'], header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search']",
+			["role"],
+			{
 				"showTag": true
 			}
-		],
+		]
 	]
 }
