@@ -25,62 +25,107 @@
 	"1.2.1": [
 		"disableAllStyles",
 		["outline", "img[alt]"],
-		["showAttributes", "img[alt]", ["alt", "title ,role, aria-label, aria-describedby, aria-labelledby"]]
+		["showAttributes", "img[alt]", ["alt", "title" , "role", "aria-label", "aria-describedby", "aria-labelledby"]]
 	],
 	"1.2.2": [
 		"disableAllStyles",
 		["outline", "map"],
-		["showChildren", "map", "area:not([href])", ["alt"], {
+		["showChildren", "map", "area:not([href])[alt]", ["alt"], {
 			"showMissing": true
 		}],
-		["showChildren", "map", "area:not([href])", ["aria-label, aria-describedby, aria-labelledby, title"]]
+		["showChildren", "map", "area:not([href])[alt]", ["aria-label", "aria-describedby", "aria-labelledby", "title"]]
 	],
 	"1.2.3": [
-		["outline", "object[type=\"image\"]"]
+		["outline", "object[type^=\"image\"]"],
+		["showAttributes", "object[type^=\"image\"]", ["aria-hidden", "role", "aria-label", "aria-describedby", "aria-labelledby"]],
+		["showChildren", "object[type^=\"image\"]", "*", ["role", "aria-label", "aria-describedby", "aria-labelledby"]]
 	],
 	"1.2.4": [
 		"disableAllStyles",
 		["outline", "svg"],
-		["showAttribute", "svg", "role"]
+		["showAttributes", "svg", ["aria-hidden", "aria-label", "aria-describedby", "aria-labelledby", "title"]],
+		["showChildren", "svg", "title, desc", ["aria-label", "aria-describedby", "aria-labelledby", "title"], {
+			"showMissing": true
+		}]
 	],
 	"1.2.5": [
 		"disableAllStyles",
-		["outline", "canvas"]
+		["outline", "canvas"],
+		["showAttributes", "canvas", ["aria-hidden", "aria-label", "aria-describedby", "aria-labelledby"]],
+		["showChildren", "canvas", "*", ["aria-label", "aria-describedby", "aria-labelledby"]]
 	],
-
+	"1.2.6": [
+		"disableAllStyles",
+		["outline", "embed"],
+		["showAttributes", "embed", ["aria-hidden", "aria-label", "aria-describedby", "aria-labelledby"]],
+		["showChildren", "embed", "*", ["aria-label", "aria-describedby", "aria-labelledby"]]
+	],
 
 
 	"1.3.1": [
 		"disableAllStyles",
-		["outline", "a"],
-		["showAttributes", "img", ["alt", "title"]]
+		["outline", "a, input"],
+		["showAttributes", "img, input[type=\"image\"][alt]", ["alt", "title","aria-label", "aria-labelledby"]]
 	],
 	"1.3.2": [
 		"disableAllStyles",
 		["outline", "map"],
-		["showAttributes", "area[href]", ["alt", "title"]]
+		["showChildren", "map", "area[alt]", ["alt", "title", "aria-label", "aria-labelledby"], {
+			"showMissing": true
+		}]
 	],
-	"1.3.4": [
+	"1.3.3": [
 		"disableAllStyles",
-		["outline", "object[type=\"image\"]"]
+		["outline", "input[type=\"image\"][alt]"],
+		["showAttributes", "input[type=\"image\"][alt]", ["alt", "title", "aria-label", "aria-labelledby"]]
 	],
 	"1.3.5": [
 		"disableAllStyles",
-		["outline", "embed[type=\"image\"]"]
+		["outline", "object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"],
+		["showAttributes", "object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]", [
+			"title",
+			"aria-label",
+			"aria-labelledby"
+		]]
 	],
 	"1.3.6": [
 		"disableAllStyles",
-		["outline", "svg"],
-		["showAttributes", "svg", ["title", "desc", "aria-label"]]
+		["outline", "embed[type^=\"image\"]"],
+		["showAttributes", "embed[type=\"image\"][title]", ["alt", "title", "aria-label", "aria-labelledby"]]
 	],
 	"1.3.7": [
-		["outline", "svg"]
+		"disableAllStyles",
+		["outline", "embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"],
+		["showAttributes", "embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]", [
+			"title",
+			"aria-label",
+			"aria-labelledby"
+		]]
 	],
 	"1.3.8": [
 		"disableAllStyles",
-		["outline", "canvas"]
+		["outline", "svg:has(desc)", {"showTag": true}],
+		["showAttributes", "svg:has(desc)", ["role", "title", "aria-label"]]
 	],
 	"1.3.9": [
+		"disableAllStyles",
+		["outline", "svg:has(desc)", {"showTag": true}]
+	],
+	"1.3.10": [
+		"disableAllStyles",
+		["outline", "canvas"],
+		["showAttributes", "canvas[title], canvas[aria-label], canvas[aria-labelledby]", ["title", "aria-label", "aria-labelledby"]]
+	],
+	"1.3.11": [
+		"disableAllStyles",
+		["outline", "canvas[title], canvas[aria-label], canvas[aria-labelledby]"],
+		["showAttributes", "canvas[title], canvas[aria-label], canvas[aria-labelledby]", [
+			"title",
+			"aria-label",
+			"aria-labelledby"
+		]]
+	],
+	"1.3.12": [
 		"disableAllStyles",
 		["outline", "canvas"]
 	],
@@ -94,8 +139,8 @@
 	],
 	"1.4.2": [
 		"disableAllStyles",
-		["outline", "area[alt]"],
-		["showAttributes", "area[alt]", ["alt", "title", "aria-label", "aria-labelledby"]]
+		["outline", "map"],
+		["showChildren", "map", "area[alt]", ["aria-label", "aria-describedby", "aria-labelledby", "title"]]
 	],
 	"1.4.3": [
 		"disableAllStyles",
@@ -110,11 +155,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"object[type=\"image\"][title], object[type=\"image\"][aria-label], object[type=\"image\"][aria-labelledby]"
+			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
 		],
 		[
 			"showAttributes",
-			"object[type=\"image\"][title], object[type=\"image\"][aria-label], object[type=\"image\"][aria-labelledby]",
+			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
 			["title", "aria-label", "aria-labelledby"]
 		]
 	],
@@ -126,17 +171,22 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"embed[type=\"image\"][title], embed[type=\"image\"][aria-label], embed[type=\"image\"][aria-labelledby]"
+			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
 		],
 		[
 			"showAttributes",
-			"embed[type=\"image\"][title], embed[type=\"image\"][aria-label], embed[type=\"image\"][aria-labelledby]",
+			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
 			["title", "aria-label", "aria-labelledby"]
 		]
 	],
+	"1.4.8": [
+		"disableAllStyles",
+		["outline", "svg:has(desc)", {"showTag": true}],
+		["showAttributes", "svg:has(desc)", ["role", "title", "aria-label"]]
+	],
 	"1.4.9": [
 		"disableAllStyles",
-		["outline", "svg"]
+		["outline", "svg:has(desc)", {"showTag": true}]
 	],
 	"1.4.10": [
 		"disableAllStyles",
@@ -154,6 +204,75 @@
 			["title", "aria-label", "aria-labelledby"]
 		]
 	],
+	"1.4.12": [
+		"disableAllStyles",
+		["outline", "canvas"]
+	],
+
+	"1.5.1": [
+		"disableAllStyles",
+		["outline", "img, area, object, embed, svg, canvas", {"showTag": true}]
+	],
+	"1.5.2": [
+		"disableAllStyles",
+		["outline", "input[type=\"image\"]", {"showTag": true}]
+	],
+
+	"1.6.1": [
+		"disableAllStyles",
+		["outline", "img", {"showTag": true}],
+		["showAttributes", "img", ["alt", "longdesc"], {"showMissing": true}]
+	],
+	"1.6.2": [
+		"disableAllStyles",
+		["outline", "object[type^=\"image\"]", {"showTag": true}]
+	],
+	"1.6.3": [
+		"disableAllStyles",
+		["outline", "embed[type^=\"image\"]", {"showTag": true}]
+	],
+	"1.6.4": [
+		"disableAllStyles",
+		["outline", "input[type=\"image\"]", {"showTag": true}],
+		["showAttributes", "input[type=\"image\"]", ["alt", "aria-describedby"], {"showMissing": true}]
+	],
+	"1.6.5": [
+		"disableAllStyles",
+		["outline", "input[type=\"image\"][aria-describedby]", {"showTag": true}],
+		["showAttributes", "input[type=\"image\"][aria-describedby]", ["alt", "aria-describedby"]]
+	],
+	"1.6.6": [
+		"disableAllStyles",
+		["outline", "svg:has(desc)", {"showTag": true}],
+		["showAttributes", "svh:has(desc)", ["aria-label"]]
+	],
+	"1.6.7": [
+		"disableAllStyles",
+		["outline", "svg:has(desc), svg[aria-label]", {"showTag": true}],
+		["showAttributes", "svg[aria-label]", ["aria-label"]]
+	],
+	"1.6.8": [
+		"disableAllStyles",
+		["outline", "canvas", {"showTag": true}]
+	],
+	"1.6.9": [
+		"disableAllStyles",
+		["outline", "canvas", {"showTag": true}]
+	],
+	"1.6.10": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby]:has(desc), canvas[aria-describedby]",
+			{"showTag": true}
+		],
+		[
+			"showAttributes",
+			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby]:has(desc), canvas[aria-describedby]",
+			["aria-describedby"]
+		]
+	],
+
 
 
 	"2.1.1": [
@@ -471,8 +590,7 @@
 		["outline", "a[title]:not([role]), *[role='link'][title]"],
 		["showAttribute", "a[title]:not([role]), *[role='link'][title]", "title"],
 		["showAttribute", "a[title]:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.3.1": [
 		"disableAllStyles",
@@ -1200,5 +1318,24 @@
 				"showTag": true
 			}
 		]
+	],
+	"12.11.1": [
+		"disableAllStyles"
+	],
+	"12.11.2": [
+		"disableAllStyles",
+		["outline", "main"]
+	],
+	"12.11.3": [
+		"disableAllStyles"
+	],
+	"12.13.1": [
+		["style", "*:focus{ border:2px solid red!important; }"]
+	],
+	"12.13.2": [
+		["style", "*:focus{ border:2px solid red!important; }"]
+	],
+	"12.14.1": [
+		["style", "*:focus{ border:2px solid red!important; }"]
 	]
 }
