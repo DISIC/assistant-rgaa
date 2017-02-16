@@ -471,8 +471,7 @@
 		["outline", "a[title]:not([role]), *[role='link'][title]"],
 		["showAttribute", "a[title]:not([role]), *[role='link'][title]", "title"],
 		["showAttribute", "a[title]:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]]
 	],
 	"6.3.1": [
 		"disableAllStyles",
@@ -1152,5 +1151,24 @@
 				"showTag": true
 			}
 		]
+	],
+	"12.11.1": [
+		"disableAllStyles"
+	],
+	"12.11.2": [
+		"disableAllStyles",
+		["outline", "main"]
+	],
+	"12.11.3": [
+		"disableAllStyles"
+	],
+	"12.13.1": [
+		["style", "*:focus{ border:2px solid red!important; }"]
+	],
+	"12.13.2": [
+		["style", "*:focus{ border:2px solid red!important; }"]
+	],
+	"12.14.1": [
+		["style", "*:focus{ border:2px solid red!important; }"]
 	]
 }
