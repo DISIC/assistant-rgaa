@@ -1,5 +1,6 @@
 import React from 'react';
-import {Router, Route, IndexRoute, createMemoryHistory} from 'react-router';
+import {Router, Route, IndexRoute} from 'react-router';
+import memoryHistory from '../common/history';
 import App from './components/App';
 import ReferencePageContainer from './components/ReferencePageContainer';
 import ImportPageContainer from './components/ImportPageContainer';
@@ -11,7 +12,7 @@ import ImportPageContainer from './components/ImportPageContainer';
  */
 export default function () {
 	return (
-		<Router history={createMemoryHistory()}>
+		<Router history={memoryHistory}>
 			<Route path="/" component={App}>
 				<IndexRoute component={ReferencePageContainer} />
 
