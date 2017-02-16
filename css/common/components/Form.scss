@@ -1,0 +1,11 @@
+.Form-label {
+	display: block;
+}
+
+.Form-input {
+	box-sizing: border-box;
+	border: 1px solid $color-gray-dark;
+	width: 100%;
+	padding: vr(1/4);
+	font-size: $base-font-size;
+}

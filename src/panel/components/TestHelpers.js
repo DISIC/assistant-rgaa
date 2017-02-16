@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage} from 'react-intl';
-import {describe} from '../../helpers/api/helpers';
+import {describe, component} from '../../helpers/api/helpers';
 
 
 
@@ -21,6 +21,16 @@ const TestHelpers = ({helpers}) => (
 				/>
 			))}
 		</ol>
+
+		{helpers
+			.map(component)
+			.filter((Component) =>
+				!!Component
+			)
+			.map((Component, i) =>
+				<Component key={i} />
+			)
+		}
 	</div>
 );
 

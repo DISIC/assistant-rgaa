@@ -42,7 +42,14 @@ const messages = {
 	'ImportResult.nc.title': 'Résultat non conforme d\'après le fichier importé',
 	'ImportResult.na.title': 'Résultat non applicable d\'après le fichier importé',
 	'ImportResult.nt.title': 'Résultat non testé d\'après le fichier importé',
-	'Options.references.label': 'Version du référentiel RGAA à utiliser :'
+	'Options.references.label': 'Version du référentiel RGAA à utiliser :',
+	'ColorContrastWidget.backgroundColor': 'Couleur du fond',
+	'ColorContrastWidget.textColor': 'Couleur du texte',
+	'ColorContrastWidget.textSize': 'Taille du texte',
+	'ColorContrastWidget.conformity': `Conformité {grade} : {conformity, select,
+		true {conforme}
+		false {non conforme}
+	}`
 };
 
 

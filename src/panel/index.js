@@ -25,3 +25,4 @@ getStore()
 	.then((app) =>
 		render(app, document.getElementById('panel'))
 	);
+

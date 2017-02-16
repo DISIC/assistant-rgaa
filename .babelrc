@@ -1,11 +1,21 @@
 {
 	"plugins": [
-		"lodash"
+		"lodash",
+		"transform-object-rest-spread",
+		"transform-function-bind",
+		"transform-export-extensions"
 	],
 	"presets": [
-		"es2015",
-		"stage-0",
-		"react"
+		"react",
+		["env", {
+			"targets": {
+				"chrome": 56,
+				"firefox": 51
+			},
+			"exclude": [
+				"transform-regenerator"
+			]
+		}]
 	],
 	"env": {
 		"production": {
