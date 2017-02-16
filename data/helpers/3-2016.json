@@ -2205,6 +2205,7 @@
 			"showChildren",
 			"select",
 			"optgroup",
+			[],
 			{
 				"showTag": true
 			}
@@ -2219,6 +2220,7 @@
 			"showChildren",
 			"select",
 			"optgroup",
+			[],
 			{
 				"showTag": true
 			}
@@ -2241,6 +2243,7 @@
 			"showChildren",
 			"select",
 			"optgroup",
+			[],
 			{
 				"showTag": true
 			}
