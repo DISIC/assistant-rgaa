@@ -40,8 +40,32 @@ const messages = {
 	'Import.reset': 'Réinitialiser',
 	'Import.singleReset': 'Réinitialiser les données d\'import actuelles',
 	'Import.versionDifference': `&#9888; La version du référentiel RGAA utilisée par
-		l\'extension (configurable dans les options) va être définie à la version {version}
-		pour faire fonctionner l\'import.`,
+		l'extension (configurable dans les options) va être définie à la version {version}
+		pour faire fonctionner l'import.`,
+	'ImportResults.c.title': `
+		{count, plural,
+			one {# test conforme d'après le fichier importé}
+			other {# tests conformes d'après le fichier importé}
+		}
+	`,
+	'ImportResults.nc.title': `
+		{count, plural,
+			one {# test non conforme d'après le fichier importé}
+			other {# tests non conformes d'après le fichier importé}
+		}
+	`,
+	'ImportResults.na.title': `
+		{count, plural,
+			one {# test non applicable d'après le fichier importé}
+			other {# tests non applicables d'après le fichier importé}
+		}
+	`,
+	'ImportResults.nt.title': `
+		{count, plural,
+			one {# test non testé d'après le fichier importé}
+			other {# tests non testés d'après le fichier importé}
+		}
+	`,
 	'ImportResult.c.title': 'Résultat conforme d\'après le fichier importé',
 	'ImportResult.nc.title': 'Résultat non conforme d\'après le fichier importé',
 	'ImportResult.na.title': 'Résultat non applicable d\'après le fichier importé',

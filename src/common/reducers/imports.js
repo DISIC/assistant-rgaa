@@ -1,6 +1,6 @@
 import {
 	SET_ERRORS, SET_CONTENT, SET_PENDING, SET_CONFIG,
-	SET_TESTS_RESULTS, RESET
+	SET_TESTS_RESULTS, SET_CRITERIA_RESULTS, RESET
 } from '../actions/imports';
 
 
@@ -17,7 +17,8 @@ const initialState = {
 		header: true
 	},
 	pending: false,
-	testResults: {}
+	testResults: {},
+	criteriaResults: {}
 };
 
 /**
@@ -59,6 +60,12 @@ export default function imports(state = initialState, {type, payload}) {
 			return {
 				...state,
 				testResults: payload.data
+			};
+
+		case SET_CRITERIA_RESULTS:
+			return {
+				...state,
+				criteriaResults: payload.data
 			};
 
 		case RESET:

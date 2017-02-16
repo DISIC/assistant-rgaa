@@ -1,4 +1,6 @@
-import {property, isEmpty, get, fromPairs, upperFirst} from 'lodash';
+import {
+	property, isEmpty, get, fromPairs, upperFirst, mapValues, groupBy, countBy, map
+} from 'lodash';
 import {getIds as getTestIds} from './tests';
 
 
@@ -48,6 +50,12 @@ export const getOneTestResult = (state, id) =>
 /**
  *
  */
+export const getOneCriterionResults = (state, id) =>
+	state.imports.criteriaResults[id] || null;
+
+/**
+ *
+ */
 export const isPending = property('imports.pending');
 
 /**
@@ -61,6 +69,17 @@ export const isValid = (state) =>
  */
 export const isImportActive = (state) =>
 	!isEmpty(getTestResults(state));
+
+/*
+ *
+ */
+export const findCriteriaResults = (state) => {
+	const allTests = getContent(state);
+	const resultsByCriterion = mapValues(groupBy(allTests, 'Critère'), (tests) => (
+		countBy(map(tests, (test) => test.Statut.toLowerCase()))
+	));
+	return resultsByCriterion;
+};
 
 /*
  *

@@ -69,6 +69,14 @@
 	transform: rotate(90deg);
 }
 
+.Criterion-importResults {
+	display: inline-block;
+}
+
+.Criterion-importResults .ImportResult {
+	margin: 0 3px;
+}
+
 .Criterion-actions {
 	flex-shrink: 0;
 }

@@ -3,6 +3,7 @@ import Criterion from './Criterion';
 import {toggleCriterion} from '../../common/actions/criteria';
 import {isOpen} from '../../common/selectors/criteria';
 import {getAllByCriterion} from '../../common/selectors/tests';
+import {getOneCriterionResults} from '../../common/selectors/imports';
 import {areAllTestsDone} from '../../common/selectors/checklist';
 
 
@@ -16,7 +17,8 @@ const mapStateToProps = (state, {id}) => {
 	return {
 		tests,
 		isOpen: isOpen(state, id),
-		isDone: areAllTestsDone(state, tests)
+		isDone: areAllTestsDone(state, tests),
+		importResults: getOneCriterionResults(state, id)
 	};
 };
 

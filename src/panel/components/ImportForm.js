@@ -96,12 +96,12 @@ export default function ImportForm({
 				/>
 			</div>
 
-			{renderIf(valid)(
+			{renderIf(valid)(() =>
 				<p className="ImportForm-success">
 					<FormattedMessage id="Import.success" />
 				</p>
 			)}
-			{renderIf(valid && importVersion !== globalVersion)(
+			{renderIf(valid && importVersion !== globalVersion)(() =>
 				<p className="ImportForm-warning">
 					<FormattedHTMLMessage
 						id="Import.versionDifference"
@@ -111,7 +111,7 @@ export default function ImportForm({
 					/>
 				</p>
 			)}
-			{renderIf(pending && !valid)(
+			{renderIf(pending && !valid)(() =>
 				<details className="ImportForm-failure" open={errors.length < 10}>
 					<summary>
 						<FormattedMessage id="Import.failure" />
