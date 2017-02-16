@@ -445,22 +445,14 @@
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
 	],
 	"6.1.3": [
 		"disableAllStyles",
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
 	],
 	"6.2.1": [
 		"disableAllStyles",
@@ -472,21 +464,14 @@
 		["outline", "a[title]:not([role]), *[role='link'][title]"],
 		["showAttribute", "a[title]:not([role]), *[role='link'][title]", "title"],
 		["showAttribute", "a[title]:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a[title]:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a[title]:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a[title]:not([role]) object, *[role='link'] object"],
-		["showTag", "a[title]:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a[title]:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
 	],
 	"6.2.3": [
 		"disableAllStyles",
 		["outline", "a[title]:not([role]), *[role='link'][title]"],
 		["showAttribute", "a[title]:not([role]), *[role='link'][title]", "title"],
 		["showAttribute", "a[title]:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a[title]:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
 		["showTag", "a:not([role]) embed, *[role='link'] embed"]
 	],
 	"6.3.1": [
@@ -499,22 +484,14 @@
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
 	],
 	"6.3.3": [
 		"disableAllStyles",
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
 	],
 	"6.4.1": [
 		"disableAllStyles",
@@ -526,32 +503,20 @@
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
 	],
 	"6.4.3": [
 		"disableAllStyles",
 		["outline", "a:not([role]), *[role='link'], img[usemap]"],
 		["showAttribute", "a:not([role]), *[role='link']", "title"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
 	],
 	"6.5.1": [
 		"disableAllStyles",
 		["outline", "a:not([role]), *[role='link']"],
 		["showAttribute", "a:not([role]) img, *[role='link'] img, area[href]", "alt"],
-		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["title", "aria-label"]],
-		["showTag", "a:not([role]) svg desc, *[role='link'] svg desc"],
-		["showTag", "a:not([role]) object, *[role='link'] object"],
-		["showTag", "a:not([role]) canvas, *[role='link'] canvas"],
-		["showTag", "a:not([role]) embed, *[role='link'] embed"]
+		["showAttributes", "a:not([role]) svg, *[role='link'] svg", ["aria-label"]],
 	],
 
 
