@@ -130,16 +130,31 @@ const checkCsvReferenceVersion = (rows) => {
 		getReference(version)
 			.then(() => resolve(version))
 			.catch(() =>
-				reject(`version de référentiel "${version}" non supportée par l\'extension`)
+				reject(`version de référentiel "${version}" non supportée par l'extension`)
 			);
 	});
+};
+
+const withHeader = (rawCsvString) => {
+	const hasHeader = rawCsvString.startsWith('Version référentiel')
+		|| rawCsvString.startsWith('"Version référentiel"');
+	if (hasHeader) {
+		return rawCsvString;
+	}
+
+	const csvString = `${[
+		'Version référentiel', 'Ref-audit', 'Auditeur', 'Url', 'Thématique',
+		'Critère', 'Niveau', 'Test', 'Statut', 'Dérogé', 'Remarque', 'Note dérogation'
+	].join(',')}\n${rawCsvString}`;
+	return csvString;
 };
 
 /**
  *
  */
-export const getCsv = (csvString, config = {}) => {
-	const csv = parsedCsv(csvString, config);
+export const getCsv = (rawCsvString, config = {}) => {
+	const csvString = withHeader(rawCsvString);
+	const csv = parsedCsv(csvString, {...config, header: true});
 
 	return checkCsvReferenceVersion(csv.data)
 		.then(() => csv)

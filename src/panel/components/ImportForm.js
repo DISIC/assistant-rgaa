@@ -28,9 +28,6 @@ export default function ImportForm({
 		reader.readAsText(event.target.files[0]);
 	};
 
-	const onCheckboxChange = (name, event) =>
-		onConfigChange(name, event.target.checked);
-
 	const onTextChange = (name, event) =>
 		onConfigChange(name, event.target.value);
 
@@ -61,19 +58,6 @@ export default function ImportForm({
 						type="text"
 						onChange={partial(onTextChange, 'quoteChar')}
 						value={config.quoteChar}
-					/>
-				</div>
-
-				<div className="ImportForm-input">
-					<label htmlFor="ImportForm-headerInput">
-						<FormattedMessage id="Import.header.label" />
-					</label>
-					<input
-						id="ImportForm-headerInput"
-						name="header"
-						type="checkbox"
-						onChange={partial(onCheckboxChange, 'header')}
-						checked={config.header}
 					/>
 				</div>
 			</fieldset>
@@ -145,8 +129,7 @@ ImportForm.propTypes = {
 	onConfigChange: PropTypes.func.isRequired,
 	config: PropTypes.shape({
 		delimiter: PropTypes.string,
-		quoteChar: PropTypes.string,
-		header: PropTypes.bool
+		quoteChar: PropTypes.string
 	}).isRequired,
 	onSubmit: PropTypes.func.isRequired,
 	errors: PropTypes.array.isRequired,

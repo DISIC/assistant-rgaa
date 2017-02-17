@@ -32,7 +32,6 @@ const messages = {
 	'Import.title': 'Import d\'un fichier d\'audit',
 	'Import.delimiter.label': 'Caractère délimitant les colonnes',
 	'Import.quoteChar.label': 'Caractère délimitant les chaînes de caractères',
-	'Import.header.label': 'Le fichier comporte une ligne d\'entête',
 	'Import.file.label': 'Sélectionnez un fichier d\'import : ',
 	'Import.success': 'Vérification du fichier… OK. Vous pouvez lancer l\'import.',
 	'Import.failure': 'Votre fichier ne suit pas le format attendu. Veuillez corriger les erreurs :',

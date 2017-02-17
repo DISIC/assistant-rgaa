@@ -13,8 +13,7 @@ const initialState = {
 	content: null,
 	config: {
 		delimiter: ',',
-		quoteChar: '"',
-		header: true
+		quoteChar: '"'
 	},
 	pending: false,
 	testResults: {},
