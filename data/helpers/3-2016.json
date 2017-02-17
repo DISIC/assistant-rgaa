@@ -17,14 +17,14 @@
 			"map"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"map",
 			"area[href]",
 			[
 				"alt"
 			],
 			{
-				"showMissing": true
+				"showMissingAttributes": true
 			}
 		]
 	],
@@ -77,18 +77,18 @@
 			"map"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"map",
 			"area:not([href])[alt]",
 			[
 				"alt"
 			],
 			{
-				"showMissing": true
+				"showMissingAttributes": true
 			}
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"map",
 			"area:not([href])[alt]",
 			[
@@ -116,7 +116,7 @@
 			]
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"object[type^=\"image\"]",
 			"*",
 			[
@@ -145,7 +145,7 @@
 			]
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"svg",
 			"title, desc",
 			[
@@ -155,7 +155,7 @@
 				"title"
 			],
 			{
-				"showMissing": true
+				"showMissingAttributes": true
 			}
 		]
 	],
@@ -176,7 +176,7 @@
 			]
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"canvas",
 			"*",
 			[
@@ -203,7 +203,7 @@
 			]
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"embed",
 			"*",
 			[
@@ -237,7 +237,7 @@
 			"map"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"map",
 			"area[alt]",
 			[
@@ -247,7 +247,7 @@
 				"aria-labelledby"
 			],
 			{
-				"showMissing": true
+				"showMissingAttributes": true
 			}
 		]
 	],
@@ -409,7 +409,7 @@
 			"map"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"map",
 			"area[alt]",
 			[
@@ -797,14 +797,14 @@
 			"video"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"video",
 			"track",
 			[
 				"type"
 			],
 			{
-				"showMissing": true
+				"showMissingAttributes": true
 			}
 		]
 	],
@@ -1031,14 +1031,14 @@
 			"object, svg, canvas"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"object",
 			"param",
 			[
 				"wmode"
 			],
 			{
-				"showMissing": false
+				"showMissingAttributes": true
 			}
 		]
 	],
@@ -1049,14 +1049,14 @@
 			"object, svg, canvas"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"object",
 			"param",
 			[
 				"wmode"
 			],
 			{
-				"showMissing": false
+				"showMissingAttributes": true
 			}
 		]
 	],
@@ -2232,12 +2232,10 @@
 			"select:has(optgroup)"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"select",
 			"optgroup",
-			{
-				"showTag": true
-			}
+			[]
 		]
 	],
 	"11.8.2": [
@@ -2246,12 +2244,10 @@
 			"select:has(optgroup)"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"select",
 			"optgroup",
-			{
-				"showTag": true
-			}
+			[]
 		],
 		[
 			"showAttribute",
@@ -2268,12 +2264,10 @@
 			"select:has(optgroup)"
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"select",
 			"optgroup",
-			{
-				"showTag": true
-			}
+			[]
 		],
 		[
 			"showAttribute",
@@ -2872,14 +2866,14 @@
 			]
 		],
 		[
-			"showChildren",
+			"showChildElements",
 			"main, [role='main']",
 			"a:not([href])",
 			[
 				"id"
 			],
 			{
-				"showMissing": true
+				"showMissingAttributes": true
 			}
 		]
 	],

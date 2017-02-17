@@ -1,17 +1,45 @@
-import $ from 'jquery';
-import {lowerCase} from 'lodash';
-import {serializeAttribute} from './showAttribute';
+import serializeAttributes from './serializeAttributes';
 
 
 
 /**
  *
  */
-export default function serializeElement(element, attributes, showMissing) {
-	const name = lowerCase(element.get(0).tagName);
-	const attributesString = attributes
-		.map((attribute) => serializeAttribute(element, attribute, showMissing))
-		.join(' ');
+export default function serializeElement(element, attributes, {
+	showEmpty = false,
+	showName = true,
+	showMissingAttributes = false,
+	showContent = false
+} = {}) {
+	const name = showName
+		? `<span class="rgaaExt-Element-name">${element.get(0).nodeName.toLowerCase()}</span>`
+		: '';
 
-	return `&lt;${name} ${attributesString} /&gt;`;
+	const serializedAttributes = serializeAttributes(
+		element,
+		attributes,
+		showMissingAttributes
+	);
+
+	const content = showContent
+		? `<span class="rgaaExt-Element-content">${element.get(0).textContent}</span>`
+		: '';
+
+	if (!showEmpty && !serializedAttributes && !content) {
+		return '';
+	}
+
+	let html = `<span class="rgaaExt-Element">&lt;${name}`;
+
+	if (serializedAttributes) {
+		html += ` ${serializedAttributes}`;
+	}
+
+	if (content) {
+		html += `&gt;${content}&lt;/${name}&gt;`;
+	} else {
+		html += ' /&gt;</span>';
+	}
+
+	return html;
 }
