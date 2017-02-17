@@ -34,7 +34,7 @@ const openPanel = (id) => {
 		.then(() =>
 			getOption('reference')
 		)
-		.then((version = '3') =>
+		.then((version = '3-2016') =>
 			instance.dispatch(setReferenceVersion(version))
 		);
 };
