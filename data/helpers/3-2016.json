@@ -978,6 +978,265 @@
 			}
 		]
 	],
+	"1.8.1": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.8.2": [
+		"disableAllStyles",
+		[
+			"outline",
+			"input[type=\"image\"]",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.8.3": [
+		"disableAllStyles",
+		[
+			"outline",
+			"object[type^=\"image\"]",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.8.4": [
+		"disableAllStyles",
+		[
+			"outline",
+			"embed[type^=\"image\"]",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.8.5": [
+		"disableAllStyles",
+		[
+			"outline",
+			"canvas",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.9.1": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.9.2": [
+		"disableAllStyles",
+		[
+			"outline",
+			"input[type=\"image\"]",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.9.3": [
+		"disableAllStyles",
+		[
+			"outline",
+			"object[type^=\"image\"]",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.9.4": [
+		"disableAllStyles",
+		[
+			"outline",
+			"embed[type^=\"image\"]",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.9.5": [
+		"disableAllStyles",
+		[
+			"outline",
+			"canvas",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.10.1": [
+		"disableAllStyles",
+		[
+			"outline",
+			"figure:has(img) > figcaption, figure:has(input[type=\"image\"]) > figcaption",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"figure:has(img), figure:has(input[type=\"image\"])"
+		],
+		[
+			"showAttributes",
+			"figure:has(img), figure:has(input[type=\"image\"])",
+			[
+				"role"
+			],
+			{
+				"showMissing": true,
+				"showTag": true
+			}
+		],
+		[
+			"showAttributes",
+			"figure > img, figure > input[type=\"image\"]",
+			[
+				"alt"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
+	"1.10.2": [
+		"disableAllStyles",
+		[
+			"outline",
+			"figure:has(object[type^=\"image\"]) > figcaption",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"figure:has(object[type^=\"image\"])"
+		],
+		[
+			"showAttributes",
+			"figure:has(object[type^=\"image\"])",
+			[
+				"role"
+			],
+			{
+				"showMissing": true,
+				"showTag": true
+			}
+		]
+	],
+	"1.10.3": [
+		"disableAllStyles",
+		[
+			"outline",
+			"figure:has(embed[type^=\"image\"]) > figcaption",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"figure:has(embed[type^=\"image\"])"
+		],
+		[
+			"showAttributes",
+			"figure:has(embed[type^=\"image\"])",
+			[
+				"role"
+			],
+			{
+				"showMissing": true,
+				"showTag": true
+			}
+		]
+	],
+	"1.10.4": [
+		"disableAllStyles",
+		[
+			"outline",
+			"figure:has(svg) > figcaption",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"figure:has(svg)"
+		],
+		[
+			"showAttributes",
+			"figure:has(svg)",
+			[
+				"role"
+			],
+			{
+				"showMissing": true,
+				"showTag": true
+			}
+		],
+		[
+			"showChildElements",
+			"figure:has(svg) > svg:has(desc)",
+			"desc",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showAttributes",
+			"figure:has(svg) > svg",
+			[
+				"aria-label"
+			]
+		]
+	],
+	"1.10.5": [
+		"disableAllStyles",
+		[
+			"outline",
+			"figure:has(canvas) > figcaption",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"figure:has(canvas)"
+		],
+		[
+			"showAttributes",
+			"figure:has(canvas)",
+			[
+				"role"
+			],
+			{
+				"showMissing": true,
+				"showTag": true
+			}
+		],
+		[
+			"showElement",
+			"figure:has(canvas) > canvas",
+			[],
+			{
+				"showContent": true
+			}
+		]
+	],
 	"2.1.1": [
 		"disableAllStyles",
 		[
