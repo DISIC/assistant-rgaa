@@ -1,6 +1,6 @@
 import {
-	SET_ERRORS, SET_CONTENT, SET_PENDING, SET_NON_APPLICABLE_THEMES,
-	SET_NON_APPLICABLE_CRITERIA, SET_TESTS_RESULTS, RESET
+	SET_ERRORS, SET_CONTENT, SET_PENDING, SET_CONFIG,
+	SET_TESTS_RESULTS, SET_CRITERIA_RESULTS, RESET
 } from '../actions/imports';
 
 
@@ -9,12 +9,15 @@ import {
  *
  */
 const initialState = {
-	errors: '',
+	errors: [],
 	content: null,
+	config: {
+		delimiter: ',',
+		quoteChar: '"'
+	},
 	pending: false,
-	inactiveThemeIds: [],
-	inactiveCriterionIds: [],
-	testResults: {}
+	testResults: {},
+	criteriaResults: {}
 };
 
 /**
@@ -34,7 +37,7 @@ export default function imports(state = initialState, {type, payload}) {
 				...state,
 				content: payload.content,
 				pending: false,
-				errors: ''
+				errors: []
 			};
 
 		case SET_PENDING:
@@ -43,22 +46,25 @@ export default function imports(state = initialState, {type, payload}) {
 				pending: payload.pending
 			};
 
-		case SET_NON_APPLICABLE_THEMES:
+		case SET_CONFIG:
 			return {
 				...state,
-				inactiveThemeIds: payload.ids
-			};
-
-		case SET_NON_APPLICABLE_CRITERIA:
-			return {
-				...state,
-				inactiveCriterionIds: payload.ids
+				config: {
+					...state.config,
+					[payload.name]: payload.value
+				}
 			};
 
 		case SET_TESTS_RESULTS:
 			return {
 				...state,
 				testResults: payload.data
+			};
+
+		case SET_CRITERIA_RESULTS:
+			return {
+				...state,
+				criteriaResults: payload.data
 			};
 
 		case RESET:

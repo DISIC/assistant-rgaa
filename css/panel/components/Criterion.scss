@@ -69,6 +69,14 @@
 	transform: rotate(90deg);
 }
 
+.Criterion-importResults {
+	display: inline-block;
+}
+
+.Criterion-importResults .ImportResult {
+	margin: 0 3px;
+}
+
 .Criterion-actions {
 	flex-shrink: 0;
 }
@@ -109,18 +117,6 @@
 .Criterion-test:last-child .Test-header:last-child,
 .Criterion-test:last-child .TestInstructions {
 	padding-bottom: vr(1);
-}
-
-.Criterion.is-disabled {
-	opacity: 0.4;
-	cursor: help;
-}
-
-.Criterion.is-disabled a,
-.Criterion.is-disabled button,
-.Criterion.is-disabled input,
-.Criterion.is-disabled label {
-	pointer-events: none;
 }
 
 .Criterion-actionLabel {

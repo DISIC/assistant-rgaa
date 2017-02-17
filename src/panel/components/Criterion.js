@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {map} from 'lodash';
 import {injectIntl, intlShape} from 'react-intl';
 import renderIf from 'render-if';
 import classNames from 'classnames';
@@ -10,19 +11,15 @@ import Icon from './Icon';
 /**
  *
  */
-function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl}) {
+function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, intl}) {
 	const className = classNames('Criterion Theme-criterion', {
-		'is-disabled': isInactive,
 		'is-open': isOpen
 	});
 	const headerClassName = classNames('Criterion-header', {
 		'Title Title--sub': isOpen
 	});
-	const htmlTitle = isInactive
-		? intl.formatMessage({id: 'Theme.criterion.disabled'})
-		: '';
 	return (
-		<li id={`Criterion-${id}`} className={className} title={htmlTitle}>
+		<li id={`Criterion-${id}`} className={className}>
 			<header className={headerClassName}>
 				<h3 className="Criterion-title">
 					<button
@@ -32,6 +29,24 @@ function Criterion({id, title, tests, isInactive, isDone, isOpen, onToggle, intl
 						aria-controls={`Criterion-${id}-content`}
 					>
 						<span dangerouslySetInnerHTML={{__html: title}} />
+						{renderIf(!isOpen && importResults)(() =>
+							<div className="Criterion-importResults">
+								{map(importResults, (count, status) =>
+									<span
+										key={status}
+										className="ImportResult"
+										data-import-result={status}
+										title={intl.formatMessage({
+											id: `ImportResults.${status}.title`
+										}, {
+											count
+										})}
+									>
+										{count} × {status}
+									</span>
+								)}
+							</div>
+						)}
 					</button>
 				</h3>
 
@@ -86,15 +101,14 @@ Criterion.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	tests: PropTypes.array.isRequired,
-	isInactive: PropTypes.bool,
 	isOpen: PropTypes.bool.isRequired,
+	importResults: PropTypes.object,
 	onToggle: PropTypes.func.isRequired,
 	isDone: PropTypes.bool,
 	intl: intlShape.isRequired
 };
 
 Criterion.defaultProps = {
-	isInactive: false,
 	isDone: false
 };
 

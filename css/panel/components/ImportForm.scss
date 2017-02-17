@@ -1,0 +1,49 @@
+.ImportForm-success {
+	color: green;
+	margin-top: vr(1);
+}
+
+.ImportForm-failure,
+.ImportForm-errors {
+	color: red;
+}
+
+.ImportForm-errors {
+	margin-top: vr(1/2);
+	padding-left: vr(1);
+	list-style-type: disc;
+}
+
+.ImportForm-warning {
+	color: orangered;
+}
+
+.ImportForm-failure {
+	margin-top: vr(1);
+}
+
+.ImportForm-buttons {
+	text-align: center;
+	margin-top: vr(1);
+}
+
+.ImportForm-button + .ImportForm-button {
+	margin-left: vr(1) / 2;
+}
+
+.ImportForm-file {
+	margin-top: vr(1);
+}
+
+.ImportForm-input {
+	display: flex;
+}
+
+.ImportForm-input input {
+	margin-left: auto;
+}
+
+.ImportForm-input input[type='text'] {
+	text-align: center;
+	max-width: vr(1);
+}
