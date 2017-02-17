@@ -10,13 +10,59 @@
 	<p>
 		<img src="https://www.w3.org/2008/site/images/logo-shadow" alt="" aria-labelledby="salut" />
 	</p>
-
+	<p>
+		<img src="https://www.w3.org/2008/site/images/logo-shadow" longdesc="description bla bla bla" aria-labelledby="salut" />
+	</p>
 	<p>Click on the sun or on one of the planets to watch it closer:</p>
 
 	<a href="form_action.asp">
 		<img src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" alt="W3C" width="100" height="132" ismap>
 	</a>
 
+	<figure role="group">
+		<img src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" alt="Voir la légende" />
+		<figcaption>Voici la légende de l'image</figcaption>
+	</figure>
+	<figure>
+		<img src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" alt="Voir la légende" />
+		<figcaption>Voici la légende de l'image</figcaption>
+	</figure>
+	<br />
+	<img src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" alt="Voir la légende" />
+	<figcaption>Voici la légende de l'image</figcaption>
+	<br />
+	<figure>
+		<object aria-hidden="true" title="My object" aria-label="My object" data="https://www.w3.org/2008/site/images/logo-shadow" type="image/png">
+		</object>
+		<figcaption>Voici la légende de l'image</figcaption>
+	</figure>
+	<br />
+	<figure>
+		<svg width="100" height="100" aria-hidden="true" aria-label="idididi" aria-describedby="yoyoy">
+			<desc aria-label="cercle">Cercle</desc>
+			<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+		</svg>
+		<figcaption>Voici la légende de l'image</figcaption>
+	</figure>
+	<br />
+	<figure>
+		<canvas title="my title" aria-label="my title" id="myCanvas" width="578" height="400" aria-hidden="true">
+			<p aria-label="hello">Hello</p>
+			<p aria-label="yo">yo</p>
+		</canvas>
+		<script>
+			var canvas1 = document.getElementById('myCanvas');
+			var context1 = canvas1.getContext('2d');
+			var imageObj1 = new Image();
+
+			imageObj1.onload = function() {
+			context1.drawImage(imageObj1, 69, 50);
+			};
+			imageObj1.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+		</script>
+		<figcaption>Voici la légende de l'image</figcaption>
+	</figure>
+	<hr />
 	<p>
 		MAP + AREA
 		<img aria-hidden="true" src="http://w3c.github.io/html/images/sample-usemap.png" usemap="#shapes"
@@ -30,12 +76,32 @@
 			href="yellow.html" alt="Yellow star.">
 		</map>
 	</p>
+	<p>
+		MAP + AREA
+		<img aria-hidden="true" src="http://w3c.github.io/html/images/sample-usemap.png" usemap="#shapes"
+		alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
+		<map name="shapes">
+			<area shape=rect coords="50,50,100,100"> <!-- the hole in the red box -->
+			<area shape=rect coords="25,25,125,125" alt="Red box.">
+			<area shape=circle coords="200,75,50" alt="Green circle.">
+			<area shape=poly coords="325,25,262,125,388,125" alt="Blue triangle.">
+			<area shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60"
+			 alt="Yellow star.">
+		</map>
+	</p>
 	<hr />
+	<object aria-label="My object" data="https://www.w3.org/2008/site/images/logo-shadow" type="image/png">
+	</object>
+	<br />
 	<object aria-hidden="true" aria-label="My object" data="https://www.w3.org/2008/site/images/logo-shadow" type="image/png">
 		<p aria-label="Children 1">Children 1</p>
 	</object>
 	<br />
 	<object aria-hidden="true" title="My object" aria-label="My object" data="https://www.w3.org/2008/site/images/logo-shadow" type="image/png">
+		<p aria-label="Children 1">Children 1</p>
+	</object>
+	<br />
+	<object aria-hidden="true" title="My object" longdesc="my long desc" data="https://www.w3.org/2008/site/images/logo-shadow" type="image/png">
 		<p aria-label="Children 1">Children 1</p>
 	</object>
 	<hr />
@@ -44,12 +110,16 @@
 		<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 	</svg>
 	<svg role="img" width="100" height="100" aria-hidden="true">
-		<desc aria-label="cercle">Cercle</desc>
+		<desc >Cercle</desc>
+		<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+	</svg>
+	<svg role="img" aria-label="cercle" longdesc="hello" width="100" height="100" aria-hidden="true">
 		<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 	</svg>
 	<hr />
 	<canvas title="my title" aria-label="my title" id="myCanvas2" width="578" height="400" aria-hidden="true">
-		<p aria-label="yo">Hello</p>
+		<p aria-label="hello">Hello</p>
+		<p aria-label="yo">yo</p>
 	</canvas>
 	<script>
 		var canvas = document.getElementById('myCanvas2');
@@ -66,6 +136,9 @@
 	</embed>
 	<br />
 	<embed title="my embed" aria-hidden="true" src="https://www.w3.org/2008/site/images/logo-shadow" type="image/png">
+	</embed>
+	<br />
+	<embed title="my embed" longdesc="my long description" aria-hidden="true" src="https://www.w3.org/2008/site/images/logo-shadow" type="image/png">
 	</embed>
 	<hr />
 	<input type="image" aria-label="W3C" src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" alt="W3C" width="48" height="48">
