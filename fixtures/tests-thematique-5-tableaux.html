@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<title>test thématique 5</title>
+	<style type="text/css" media="screen">
+
+	</style>
+</head>
+<body>
+	<main role="main">
+		<h1>tableau de présentation</h1>
+		<table>
+			<caption>Jours d'ouverture du service à la population</caption>
+			<thead>
+				<tr>
+					<th scope="col">Lundi</th>
+					<th scope="col">Mardi</th>
+					<th scope="col">Mercredi</th>
+					<th scope="col">Jeudi</th>
+					<th scope="col">Vendredi</th>
+					<th scope="col">Samedi</th>
+					<th scope="col">Dimanche</th>
+				<tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>Fermé</td>
+					<td>Fermé</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr />
+
+		<h1>tableau de données simple</h1>
+		<table>
+			<caption>Jours d'ouverture du service à la population</caption>
+			<thead>
+				<tr>
+					<th scope="col">Lundi</th>
+					<th scope="col">Mardi</th>
+					<th scope="col">Mercredi</th>
+					<th scope="col">Jeudi</th>
+					<th scope="col">Vendredi</th>
+					<th scope="col">Samedi</th>
+					<th scope="col">Dimanche</th>
+				<tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>Fermé</td>
+					<td>Fermé</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr />
+
+		<h1>tableau de données simple 2</h1>
+		<table>
+			<caption>Heures d'ouverture du service à la population</caption>
+			<tbody>
+				<tr>
+					<th scope="col">Jour</th>
+					<th scope="col">Matinée</th>
+					<th scope="col">Après-midi</th>
+				</tr>
+				<tr>
+					<th scope="row">Lundi</th>
+					<td>08:00 - 12:00</td>
+					<td>14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th scope="row">Mardi</th>
+					<td>08:00 - 12:00</td>
+					<td>Fermé</td>
+				</tr>
+				<tr>
+					<th scope="row">Mercredi</th>
+					<td>08:00 - 12:00</td>
+					<td>14:00 - 20:00</td>
+				</tr>
+				<tr>
+					<th scope="row">Jeudi</th>
+					<td>Fermé</td>
+					<td>14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th scope="row">Vendredi</th>
+					<td>08:00 - 12:00</td>
+					<td>Fermé</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr />
+
+		<h1>tableau de données complexe</h1>
+		<table>
+			<caption>Heures d'ouverture de la maison communale et du CPAS</caption>
+			<tbody>
+				<tr>
+					<td></td>
+					<th colspan="2" id="mc">Maison communale</th>
+					<th colspan="2" id="cp">CPAS</th>
+				</tr>
+				<tr>
+					<td></td>
+					<th id="mc-am">Matin</th>
+					<th id="mc-pm">Après-midi</th>
+					<th id="cpas-am">Matin</th>
+					<th id="cpas-pm">Après-midi</th>
+				</tr>
+				<tr>
+					<th id="lu">Lundi</th>
+					<td headers="mc mc-am lu">08:00 - 12:00</td>
+					<td headers="mc mc-pm lu">Fermé</td>
+					<td headers="cp cp-am lu">Fermé</td>
+					<td headers="cp cp-pm lu">14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th id="ma">Mardi</th>
+					<td headers="mc mc-am ma">08:00 - 12:00</td>
+					<td headers="mc mc-pm ma">Fermé</td>
+					<td headers="cp cp-am ma">Fermé</td>
+					<td headers="cp cp-pm ma">14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th id="me">Mercredi</th>
+					<td headers="mc mc-am me">08:00 - 12:00</td>
+					<td headers="mc mc-pm me">Fermé</td>
+					<td headers="cp cp-am me">Fermé</td>
+					<td headers="cp cp-pm me">14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th id="je">Jeudi</th>
+					<td headers="mc mc-am je">08:00 - 12:00</td>
+					<td headers="mc mc-pm je">Fermé</td>
+					<td headers="cp cp-am je">Fermé</td>
+					<td headers="cp cp-pm je">14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th id="ve">Vendredi</th>
+					<td headers="mc mc-am ve">08:00 - 12:00</td>
+					<td headers="mc mc-pm ve">Fermé</td>
+					<td headers="cp cp-am ve">Fermé</td>
+					<td headers="cp cp-pm ve">14:00 - 18:00</td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+</body>
+</html>
