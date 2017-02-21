@@ -775,7 +775,6 @@
 				"showContent": true
 			}
 		]
-
 	],
 	"1.6.8": [
 		"disableAllStyles",
@@ -921,7 +920,6 @@
 				"showContent": true
 			}
 		]
-
 	],
 	"1.7.6": [
 		"disableAllStyles",
@@ -3355,7 +3353,7 @@
 			]
 		]
 	],
-	"11.15.1":[],
+	"11.15.1": [],
 	"12.1.1": [
 		"disableAllStyles"
 	],
@@ -3445,91 +3443,197 @@
 			"*:focus{ border:2px solid red!important; }"
 		]
 	],
-	"13.1.1" : [
-		["outline", "object, embed, svg, canvas"],
-		["showAttributes", "[http-equiv='refresh']", ["http-equiv", "content"], {
-			"showTag": true
-		}]
+	"13.1.1": [
+		[
+			"outline",
+			"object, embed, svg, canvas"
+		],
+		[
+			"showAttributes",
+			"[http-equiv='refresh']",
+			[
+				"http-equiv",
+				"content"
+			],
+			{
+				"showTag": true
+			}
+		]
 	],
-	"13.1.2" : [
-		["showAttributes", "[http-equiv='refresh']", ["http-equiv", "content"], {
-			"showTag": true
-		}]
+	"13.1.2": [
+		[
+			"showAttributes",
+			"[http-equiv='refresh']",
+			[
+				"http-equiv",
+				"content"
+			],
+			{
+				"showTag": true
+			}
+		]
 	],
-	"13.1.3" : [],
-	"13.1.4" : [],
-	"13.2.1" : [
-		["outline", "a[target]"],
-		["showAttributes", "a[target]", ["title", "target"]]
+	"13.1.3": [],
+	"13.1.4": [],
+	"13.2.1": [
+		[
+			"outline",
+			"a[target]"
+		],
+		[
+			"showAttributes",
+			"a[target]",
+			[
+				"title",
+				"target"
+			]
+		]
 	],
-	"13.2.2" : [
-		["outline", "object,embed"],
-		["showAttributes", "object,embed", ["title"]]
+	"13.2.2": [
+		[
+			"outline",
+			"object,embed"
+		],
+		[
+			"showAttributes",
+			"object,embed",
+			[
+				"title"
+			]
+		]
 	],
-	"13.2.3" : [
-		["outline", "input,select,textarea,button"],
-		["showAttributes", "input,select,textarea,button", ["title"]]
+	"13.2.3": [
+		[
+			"outline",
+			"input,select,textarea,button"
+		],
+		[
+			"showAttributes",
+			"input,select,textarea,button",
+			[
+				"title"
+			]
+		]
 	],
-	"13.3.1" : [],
-	"13.4.1" : [],
-	"13.5.1" : [],
-	"13.6.1" : [
-		["outline", "input[type='button'],input[type='submit'],button,a"],
-		["showAttributes", "input[type='button'],input[type='submit'],button,a", ["title"]]
+	"13.3.1": [],
+	"13.4.1": [],
+	"13.5.1": [],
+	"13.6.1": [
+		[
+			"outline",
+			"input[type='button'],input[type='submit'],button,a"
+		],
+		[
+			"showAttributes",
+			"input[type='button'],input[type='submit'],button,a",
+			[
+				"title"
+			]
+		]
 	],
-	"13.6.2" : [
-		["outline", "input[type='button'],input[type='submit'],button,a"],
-		["showAttributes", "input[type='button'],input[type='submit'],button,a", ["title"]]
+	"13.6.2": [
+		[
+			"outline",
+			"input[type='button'],input[type='submit'],button,a"
+		],
+		[
+			"showAttributes",
+			"input[type='button'],input[type='submit'],button,a",
+			[
+				"title"
+			]
+		]
 	],
-	"13.6.3" : [
-		["outline", "input[type='button'],input[type='submit'],button,a"],
-		["showAttributes", "input[type='button'],input[type='submit'],button,a", ["title"]]
+	"13.6.3": [
+		[
+			"outline",
+			"input[type='button'],input[type='submit'],button,a"
+		],
+		[
+			"showAttributes",
+			"input[type='button'],input[type='submit'],button,a",
+			[
+				"title"
+			]
+		]
 	],
-	"13.7.1" : [
+	"13.7.1": [
 		"disableAllStyles",
-		["outline", "input[type='button'],input[type='submit'],button,a[href$='.doc'],a[href$='.docx'],a[href$='.pdf'],a[href$='.odt'],a[href$='.epub']"]
+		[
+			"outline",
+			"input[type='button'],input[type='submit'],button,a[href$='.doc'],a[href$='.docx'],a[href$='.pdf'],a[href$='.odt'],a[href$='.epub']"
+		]
 	],
-	"13.8.1" : [
+	"13.8.1": [
 		"disableAllStyles",
-		["outline", "input[type='button'],input[type='submit'],button,a[href$='.doc'],a[href$='.docx'],a[href$='.pdf'],a[href$='.odt'],a[href$='.epub']"]
+		[
+			"outline",
+			"input[type='button'],input[type='submit'],button,a[href$='.doc'],a[href$='.docx'],a[href$='.pdf'],a[href$='.odt'],a[href$='.epub']"
+		]
 	],
-	"13.9.1" : [
+	"13.9.1": [
 		"disableAllStyles",
-		["outline", "dfn,dl,dt,dd", {
-			"showTag": true
-		}]
+		[
+			"outline",
+			"dfn,dl,dt,dd",
+			{
+				"showTag": true
+			}
+		]
 	],
-	"13.10.1" : [
+	"13.10.1": [
 		"disableAllStyles",
-		["outline", "dfn,dl,dt,dd", {
-			"showTag": true
-		}]
+		[
+			"outline",
+			"dfn,dl,dt,dd",
+			{
+				"showTag": true
+			}
+		]
 	],
-	"13.11.1" : [
+	"13.11.1": [
 		"disableAllStyles",
-		["showAttributes", "*", ["title"]]
+		[
+			"showAttributes",
+			"*",
+			[
+				"title"
+			]
+		]
 	],
-	"13.12.1" : [
+	"13.12.1": [
 		"disableAllStyles",
-		["showAttributes", "*", ["title"]]
+		[
+			"showAttributes",
+			"*",
+			[
+				"title"
+			]
+		]
 	],
-	"13.13.1" : [
+	"13.13.1": [
 		"disableAllStyles"
 	],
-	"13.14.1" : [
+	"13.14.1": [
 		"disableAllStyles"
 	],
-	"13.15.1" : [
+	"13.15.1": [
 		"disableAllStyles",
-		["outline", "img, svg, canvas, embed, object"]
+		[
+			"outline",
+			"img, svg, canvas, embed, object"
+		]
 	],
-	"13.15.2" : [],
-	"13.15.3" : [],
-	"13.16.1" : [
+	"13.15.2": [],
+	"13.15.3": [],
+	"13.16.1": [
 		"disableAllStyles",
-		["outline", "img, svg, canvas, embed, object"]
+		[
+			"outline",
+			"img, svg, canvas, embed, object"
+		]
 	],
-	"13.16.2" : [],
-	"13.16.3" : [],
-	"13.17.1" : []
+	"13.16.2": [],
+	"13.16.3": [],
+	"13.17.1": []
 }
