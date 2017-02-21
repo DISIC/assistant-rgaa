@@ -31,6 +31,27 @@ const getHeadingText = (element) => {
 /**
  *
  */
+const addMissingHeadings = (hierarchy) => {
+	const newHierarchy = [];
+	let previousLevel = 0;
+	hierarchy.forEach((heading) => {
+		for (let missingLevel = previousLevel + 1; missingLevel < heading.level; missingLevel++) {
+			newHierarchy.push({
+				level: missingLevel,
+				text: 'Titre manquant',
+				fake: true
+			});
+		}
+		newHierarchy.push(heading);
+		previousLevel = heading.level;
+	});
+
+	return newHierarchy;
+};
+
+/**
+ *
+ */
 export default function getHeadingsHierarchy() {
 	const headings = [].slice.call(document.querySelectorAll(
 		'h1, h2, h3, h4, h5, h6, [role="heading"][aria-level]'
@@ -42,9 +63,9 @@ export default function getHeadingsHierarchy() {
 
 	const hierarchy = headings.map((element) => ({
 		level: getHeadingLevel(element),
-		text: getHeadingText(element)
+		text: getHeadingText(element),
+		fake: false
 	}));
 
-	console.log(hierarchy);
-	return hierarchy;
+	return addMissingHeadings(hierarchy);
 }

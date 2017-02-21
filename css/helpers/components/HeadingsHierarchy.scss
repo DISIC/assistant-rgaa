@@ -39,6 +39,15 @@
 
 .HeadingsHierarchy-level {
 	width: 20px;
-	background: #565656;
+	background: $color-green;
 	margin-right: vr(0.2);
+}
+
+.HeadingsHierarchy-item--fake .HeadingsHierarchy-level {
+	background: $color-red;
+}
+
+.HeadingsHierarchy-item--fake .HeadingsHierarchy-text {
+	font-weight: bold;
+	color: $color-red;
 }

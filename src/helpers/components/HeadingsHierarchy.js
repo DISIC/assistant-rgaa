@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage} from 'react-intl';
+import classNames from 'classnames';
 import renderIf from 'render-if';
 
 
@@ -15,9 +16,12 @@ const HeadingsHierarchy = ({items}) => (
 
 		{renderIf(items.length)(() =>
 			<ul className="HeadingsHierarchy-list">
-				{items.map(({level, text}) =>
+				{items.map(({level, text, fake}) =>
 					<li
-						className={`HeadingsHierarchy-item HeadingsHierarchy-item--level-${level}`}
+						className={classNames('HeadingsHierarchy-item', {
+							[`HeadingsHierarchy-item--level-${level}`]: true,
+							'HeadingsHierarchy-item--fake': fake
+						})}
 						key={`${level}${text}`}
 					>
 						<span className="Label HeadingsHierarchy-level">{level}</span>
@@ -37,7 +41,8 @@ const HeadingsHierarchy = ({items}) => (
 HeadingsHierarchy.propTypes = {
 	items: PropTypes.arrayOf(PropTypes.shape({
 		level: PropTypes.number,
-		text: PropTypes.string
+		text: PropTypes.string,
+		fake: PropTypes.bool
 	}))
 };
 
