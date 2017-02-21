@@ -2255,7 +2255,8 @@
 			"showAttribute",
 			"*[role='heading'][aria-level]",
 			"aria-level"
-		]
+		],
+		"headingsHierarchy"
 	],
 	"9.1.3": [
 		"disableAllStyles",
