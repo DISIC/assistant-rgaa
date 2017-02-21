@@ -2594,7 +2594,10 @@
 	"10.6.1": [
 		[
 			"outline",
-			"a"
+			"a[href]",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"10.7.1": [],
@@ -3740,10 +3743,13 @@
 			":focus{ border: 2px solid red !important; }"
 		]
 	],
-	"13.1.1": [
+	"13.1.1" : [
 		[
 			"outline",
-			"object, embed, svg, canvas"
+			"object, embed, svg, canvas",
+			{
+				"showTag": true
+			}
 		],
 		[
 			"showAttributes",
