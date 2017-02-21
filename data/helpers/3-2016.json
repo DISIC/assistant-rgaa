@@ -1967,21 +1967,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -1991,21 +1991,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2015,11 +2015,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a[title]:not([role]), *[role='link'][title]"
+			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]), *[role='link'][title]",
+			"a[title]:not([role]), [role='link'][title]",
 			"title"
 		]
 	],
@@ -2027,21 +2027,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a[title]:not([role]), *[role='link'][title]"
+			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]), *[role='link'][title]",
+			"a[title]:not([role]), [role='link'][title]",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]) img, *[role='link'] img, area[href]",
+			"a[title]:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2051,21 +2051,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a[title]:not([role]), *[role='link'][title]"
+			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]), *[role='link'][title]",
+			"a[title]:not([role]), [role='link'][title]",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]) img, *[role='link'] img, area[href]",
+			"a[title]:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2075,11 +2075,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link']"
+			"a:not([role]), [role='link']"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		]
 	],
@@ -2087,21 +2087,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2111,21 +2111,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2135,11 +2135,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link']"
+			"a:not([role]), [role='link']"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		]
 	],
@@ -2147,21 +2147,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2171,21 +2171,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2195,16 +2195,16 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link']"
+			"a:not([role]), [role='link']"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2357,21 +2357,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"h1, *[role='heading'][aria-level='1']"
+			"h1, [role='heading'][aria-level='1']"
 		]
 	],
 	"9.1.2": [
 		"disableAllStyles",
 		[
 			"outline",
-			"h1,h2,h3,h4,h5,h6, *[role='heading'][aria-level]",
+			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttribute",
-			"*[role='heading'][aria-level]",
+			"[role='heading'][aria-level]",
 			"aria-level"
 		]
 	],
@@ -2379,14 +2379,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"h1,h2,h3,h4,h5,h6, *[role='heading'][aria-level]",
+			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttribute",
-			"*[role='heading'][aria-level]",
+			"[role='heading'][aria-level]",
 			"aria-level"
 		]
 	],
@@ -2394,14 +2394,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"h1,h2,h3,h4,h5,h6, *[role='heading'][aria-level]",
+			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttribute",
-			"*[role='heading'][aria-level]",
+			"[role='heading'][aria-level]",
 			"aria-level"
 		]
 	],
@@ -2590,7 +2590,7 @@
 	"10.13.1": [
 		[
 			"showAttribute",
-			"*[style*='display: none;']",
+			"[style*='display: none;']",
 			"style",
 			{
 				"showTag": true
@@ -2598,7 +2598,7 @@
 		],
 		[
 			"showAttribute",
-			"*[style*='visibility: hidden;']",
+			"[style*='visibility: hidden;']",
 			"style",
 			{
 				"showTag": true
@@ -2606,7 +2606,7 @@
 		],
 		[
 			"showAttribute",
-			"*[style*='width: 0;'], *[style*='height: 0;']",
+			"[style*='width: 0;'], [style*='height: 0;']",
 			"style",
 			{
 				"showTag": true
@@ -2614,7 +2614,7 @@
 		],
 		[
 			"showAttribute",
-			"*[style*='font-size: 0;']",
+			"[style*='font-size: 0;']",
 			"style",
 			{
 				"showTag": true
@@ -3514,23 +3514,25 @@
 	"12.10.3": [
 		[
 			"outline",
-			"main"
+			"main, [role='main']"
 		],
 		[
 			"showElement",
 			"main, [role='main']",
 			[
-				"id"
+				"id",
+				"role"
 			]
 		],
 		[
-			"showChildElements",
-			"main, [role='main']",
+			"showElement",
 			"a:not([href])",
 			[
-				"id"
+				"id",
+				"name"
 			],
 			{
+				"showTag": true,
 				"showMissingAttributes": true
 			}
 		]
@@ -3538,45 +3540,99 @@
 	"12.10.4": [
 		[
 			"outline",
-			"main"
+			"main, header, main, nav, footer, header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search']"
 		],
 		[
 			"showElement",
-			"main, [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search'], header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search']",
+			"header, main, nav, footer, header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search']",
 			[
 				"role"
-			]
+			],
+			{
+				"showTag": true,
+				"showMissingAttributes": true
+			}
 		]
 	],
 	"12.11.1": [
-		"disableAllStyles"
+		"disableAllStyles",
+		[
+			"outline",
+			"a[href^='#']"
+		],
+		[
+			"showElement",
+			"a[href^='#']",
+			[
+				"href"
+			],
+			{
+				"showTag": true
+			}
+		]
 	],
 	"12.11.2": [
 		"disableAllStyles",
 		[
 			"outline",
-			"main"
+			"a[href^='#'], main, [role='main']"
+		],
+		[
+			"showElement",
+			"a[href^='#']",
+			[
+				"href"
+			],
+			{
+				"showTag": true
+			}
+		],
+		[
+			"showElement",
+			"main, [role='main']",
+			[
+				"role",
+				"id"
+			],
+			{
+				"showTag": true,
+				"showMissingAttributes": true
+			}
 		]
 	],
 	"12.11.3": [
-		"disableAllStyles"
+		"disableAllStyles",
+		[
+			"outline",
+			"a[href^='#']"
+		],
+		[
+			"showElement",
+			"a[href^='#']",
+			[
+				"href"
+			],
+			{
+				"showTag": true
+			}
+		]
 	],
 	"12.13.1": [
 		[
 			"style",
-			"*:focus{ border:2px solid red!important; }"
+			":focus{ border: 2px solid red !important; }"
 		]
 	],
 	"12.13.2": [
 		[
 			"style",
-			"*:focus{ border:2px solid red!important; }"
+			":focus{ border: 2px solid red !important; }"
 		]
 	],
 	"12.14.1": [
 		[
 			"style",
-			"*:focus{ border:2px solid red!important; }"
+			":focus{ border: 2px solid red !important; }"
 		]
 	],
 	"13.1.1" : [
