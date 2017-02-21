@@ -1600,13 +1600,27 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"caption",
+			"table:not([role='presentation'])",
 			{
 				"showTag": true
+			}
+		],
+		[
+			"showChildElements",
+			"table:not([role='presentation'])",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showAttributes",
+			"table:not([role='presentation'])",
+			"summary",
+			{
+				"showMissing": true,
+				"showContent": true
 			}
 		]
 	],
@@ -1614,28 +1628,46 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"caption",
+			"table:not([role='presentation'])",
 			{
 				"showTag": true
+			}
+		],
+		[
+			"showChildElements",
+			"table:not([role='presentation'])",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showAttributes",
+			"table:not([role='presentation'])",
+			"summary",
+			{
+				"showMissing": true,
+				"showContent": true
 			}
 		]
 	],
 	"5.3.1": [
 		"disableAllStyles",
 		[
+			"style",
+			"table { display: block; }"
+		],
+		[
+			"style",
+			"table * { display: block; }"
+		],
+		[
 			"outline",
 			"td"
 		],
 		[
-			"outline",
-			"th"
-		],
-		[
-			"showAttribute",
+			"showAttributes",
 			"table",
 			"role",
 			{
@@ -1648,13 +1680,27 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"caption",
+			"table:not([role='presentation'])",
 			{
 				"showTag": true
+			}
+		],
+		[
+			"showChildElements",
+			"table:not([role='presentation'])",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showAttribute",
+			"table:not([role='presentation'])",
+			"summary",
+			{
+				"showMissing": true,
+				"showContent": true
 			}
 		]
 	],
@@ -1662,13 +1708,27 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"caption",
+			"table:not([role='presentation'])",
 			{
 				"showTag": true
+			}
+		],
+		[
+			"showChildElements",
+			"table:not([role='presentation'])",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showAttributes",
+			"table:not([role='presentation'])",
+			"summary",
+			{
+				"showMissing": true,
+				"showContent": true
 			}
 		]
 	],
@@ -1676,11 +1736,18 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
+			"table:not([role='presentation'])"
 		],
 		[
 			"outline",
-			"th",
+			"table:not([role='presentation']) th",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
 			{
 				"showTag": true
 			}
@@ -1690,11 +1757,18 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
+			"table:not([role='presentation'])"
 		],
 		[
 			"outline",
-			"th",
+			"table:not([role='presentation']) th",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
 			{
 				"showTag": true
 			}
@@ -1704,17 +1778,24 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"th"
+			"table:not([role='presentation']) th"
 		],
 		[
 			"showElement",
-			"th",
+			"table:not([role='presentation']) th",
 			[
 				"id",
 				"scope"
 			],
 			{
 				"showMissingAttributes": true
+			}
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
+			{
+				"showTag": true
 			}
 		]
 	],
@@ -1722,27 +1803,34 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"th[scope]"
+			"table:not([role='presentation']) th[scope]"
 		],
 		[
 			"showAttribute",
-			"th",
+			"table:not([role='presentation']) th",
 			"scope"
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"5.7.3": [
 		"disableAllStyles",
 		[
 			"outline",
-			"th"
+			"table:not([role='presentation']) th"
 		],
 		[
 			"outline",
-			"td"
+			"table:not([role='presentation']) td"
 		],
 		[
 			"showElement",
-			"th",
+			"table:not([role='presentation']) th",
 			[
 				"id",
 				"scope"
@@ -1750,21 +1838,42 @@
 			{
 				"showMissingAttributes": true
 			}
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"5.7.4": [
 		"disableAllStyles",
 		[
 			"outline",
-			"th"
+			"table:not([role='presentation']) th",
+			{
+				"showTag": true
+			}
 		],
 		[
 			"outline",
-			"td"
+			"table:not([role='presentation']) td",
+			{
+				"showTag": true
+			}
 		],
 		[
-			"showAttribute",
-			"th, td",
+			"showAttributes",
+			"table:not([role='presentation']) th, table:not([role='presentation']) td",
+			"id",
+			{
+				"showMissing": true
+			}
+		],
+		[
+			"showAttributes",
+			"table:not([role='presentation']) th, table:not([role='presentation']) td",
 			"headers",
 			{
 				"showMissing": true
@@ -1775,33 +1884,58 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
+			"table",
+			{
+				"showTag": true
+			}
 		],
 		[
-			"showTag",
-			"caption"
+			"showChildElements",
+			"table",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
-			"showTag",
-			"thead"
+			"showChildElements",
+			"table",
+			"thead",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
-			"showTag",
-			"tfoot"
+			"showChildElements",
+			"table",
+			"th",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
-			"showTag",
-			"th"
+			"showChildElements",
+			"table",
+			"tfoot",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"outline",
+			"td"
 		],
 		[
 			"showAttributes",
 			"td",
-			[
-				"scope",
-				"headers",
-				"colgroup",
-				"axis"
-			]
+			["scope", "headers", "colgroup", "axis"],
+			{
+				"showTag": true
+			}
 		]
 	],
 	"6.1.1": [
