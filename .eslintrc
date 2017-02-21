@@ -1,7 +1,10 @@
 {
 	"extends": "vtech",
 	"env": {
-        "browser": true,
-        "webextensions": true
-    }
+		"browser": true,
+		"webextensions": true
+	},
+	"rules": {
+		"import/prefer-default-export": 0
+	}
 }
