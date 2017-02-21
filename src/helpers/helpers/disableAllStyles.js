@@ -1,4 +1,5 @@
 import toggleStyleSheets from '../api/toggleStyleSheets';
+import toggleInlineStyles from '../api/toggleInlineStyles';
 
 
 
@@ -11,12 +12,16 @@ export const describe = () =>
 /**
  *	Disable all style sheets in the page.
  */
-export const apply = () =>
+export const apply = () => {
 	toggleStyleSheets(false);
+	toggleInlineStyles(false);
+};
 
 /**
  *	Enable all style sheets that were previously disabled using
  *	apply().
  */
-export const revert = () =>
+export const revert = () => {
 	toggleStyleSheets(true);
+	toggleInlineStyles(true);
+};

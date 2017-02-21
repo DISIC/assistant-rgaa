@@ -236,9 +236,9 @@ ResizeHandle.defaultProps = {
 	useOverlay: false,
 	foldOnClick: false,
 	classes: {
-		container: 'vt-ResizeHandle',
-		handle: 'vt-ResizeHandle-handle',
-		overlay: 'vt-ResizeHandle-overlay'
+		container: 'rgaaExt-ResizeHandle',
+		handle: 'rgaaExt-ResizeHandle-handle',
+		overlay: 'rgaaExt-ResizeHandle-overlay'
 	},
 	styles: {
 		container: {},
