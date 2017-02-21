@@ -8,7 +8,10 @@
 		[
 			"showAttribute",
 			"img",
-			"alt"
+			"alt",
+			{
+				"showMissing": true
+			}
 		]
 	],
 	"1.1.2": [
@@ -22,7 +25,7 @@
 		[
 			"showChildElements",
 			"map",
-			"area[href]",
+			"area[href]:not([nohref])",
 			[
 				"alt"
 			],
@@ -35,12 +38,18 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input[type=\"image\"]"
+			"input[type=\"image\"]",
+			{
+				"showTag": true
+			}
 		],
 		[
 			"showAttribute",
 			"input[type=\"image\"]",
-			"alt"
+			"alt",
+			{
+				"showMissing": true
+			}
 		]
 	],
 	"1.1.4": [
@@ -50,7 +59,7 @@
 		],
 		[
 			"showAttribute",
-			"a",
+			"a:has(img[ismap])",
 			"href"
 		]
 	],
@@ -99,6 +108,7 @@
 			"map",
 			"area[alt]:not([href])",
 			[
+				"role",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
@@ -113,8 +123,15 @@
 		[
 			"showAttributes",
 			"object[type^=\"image\"]",
+			["aria-hidden"],
+			{
+				"showMissingAttributes": true
+			}
+		],
+		[
+			"showAttributes",
+			"object[type^=\"image\"]",
 			[
-				"aria-hidden",
 				"role",
 				"aria-label",
 				"aria-describedby",
@@ -124,13 +141,7 @@
 		[
 			"showChildElements",
 			"object[type^=\"image\"]",
-			"*",
-			[
-				"role",
-				"aria-label",
-				"aria-describedby",
-				"aria-labelledby"
-			]
+			"*"
 		]
 	],
 	"1.2.4": [
@@ -334,14 +345,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"svg:has(desc)",
+			"svg",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttributes",
-			"svg:has(desc)",
+			"svg",
 			[
 				"role",
 				"title",
