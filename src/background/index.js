@@ -1,7 +1,8 @@
 import {get} from 'lodash';
 import {
 	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP,
-	REQUEST_INITIAL_STATE, GET_PIXEL, INVALID_RESPONSE
+	REQUEST_INITIAL_STATE, GET_PIXEL, GET_CURRENT_TAB,
+	INVALID_RESPONSE
 } from '../common/actions/runtime';
 import {IFRAME_FILE} from '../container/api/iframe';
 import {openWindow} from './api/windows';
@@ -102,6 +103,10 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 					getPixelAt(image, message.x, message.y)
 				);
 
+		// sends current tab's info to the instance.
+		case GET_CURRENT_TAB:
+			return fetchCurrentTab();
+
 		// broadcasts message
 		default:
 			return instance.sendMessage(message);
@@ -113,7 +118,7 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
  *	when one clicks the extension icon in the browser UI.
  */
 chrome.browserAction.onClicked.addListener(() =>
-	fetchCurrentTab().then((id) => {
+	fetchCurrentTab().then(({id}) => {
 		if (instances.hasInstance(id)) {
 			closePanel(id);
 		} else {

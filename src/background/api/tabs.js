@@ -11,7 +11,7 @@ export const fetchCurrentTab = () => {
 	return new Promise((resolve, reject) =>
 		chrome.tabs.query(query, (tabs) => (
 			tabs.length
-				? resolve(tabs[0].id)
+				? resolve(tabs[0])
 				: reject('No tab found')
 		))
 	);
