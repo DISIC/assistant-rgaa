@@ -2561,8 +2561,11 @@
 	"10.6.1": [
 		[
 			"outline",
-			"a"
-		]
+			"a[href]"
+		],
+		{
+			"showTag": true
+		}
 	],
 	"10.7.1": [],
 	"10.7.2": [],
@@ -3636,15 +3639,30 @@
 		]
 	],
 	"13.1.1" : [
-		["outline", "object, embed, svg, canvas"],
-		["showAttributes", "[http-equiv='refresh']", ["http-equiv", "content"], {
-			"showTag": true
-		}]
+		[
+			"outline",
+			"object, embed, svg, canvas",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"showAttributes",
+			"[http-equiv='refresh']",
+			["http-equiv", "content"],
+			{
+				"showTag": true
+			}
+		]
 	],
 	"13.1.2" : [
-		["showAttributes", "[http-equiv='refresh']", ["http-equiv", "content"], {
-			"showTag": true
-		}]
+		["showAttributes",
+			"[http-equiv='refresh']",
+			["http-equiv", "content"],
+			{
+				"showTag": true
+			}
+		]
 	],
 	"13.1.3" : [],
 	"13.1.4" : [],
