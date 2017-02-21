@@ -34,7 +34,7 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, i
 								{map(importResults, (count, status) =>
 									<span
 										key={status}
-										className="ImportResult"
+										className="Label ImportResult"
 										data-import-result={status}
 										title={intl.formatMessage({
 											id: `ImportResults.${status}.title`
