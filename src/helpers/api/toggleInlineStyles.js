@@ -10,8 +10,9 @@ import $ from 'jquery';
 export default function toggleInlineStyles(toggled) {
 	const from = toggled ? 'data-rgaa-ext-style' : 'style';
 	const to = toggled ? 'style' : 'data-rgaa-ext-style';
+	const selector = `[${from}]:not([class^="rgaaExt"])`;
 
-	$('[style]:not([class^="rgaaExt"])').each((i, element) => {
+	$(selector).each((i, element) => {
 		const $element = $(element);
 
 		$element.attr(to, $element.attr(from));
