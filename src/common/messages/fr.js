@@ -77,7 +77,9 @@ const messages = {
 		true {conforme}
 		false {non conforme}
 	}`,
-	'ExternalToolWidget.linkTitle': 'Ouvrir l\'outil (s\'ouvre dans une nouvelle fenêtre)'
+	'ExternalToolWidget.linkTitle': 'Ouvrir l\'outil (s\'ouvre dans une nouvelle fenêtre)',
+	'HeadingsHierarchy.title': 'Hiérarchie de titres',
+	'HeadingsHierarchy.noItems': 'Aucun titre trouvé dans la page.'
 };
 
 
