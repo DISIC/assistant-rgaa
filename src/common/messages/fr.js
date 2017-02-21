@@ -76,7 +76,8 @@ const messages = {
 	'ColorContrastWidget.conformity': `Conformité {grade} : {conformity, select,
 		true {conforme}
 		false {non conforme}
-	}`
+	}`,
+	'ExternalToolWidget.linkTitle': 'Ouvrir l\'outil (s\'ouvre dans une nouvelle fenêtre)'
 };
 
 
