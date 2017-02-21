@@ -27,7 +27,9 @@ const TestHelpers = ({helpers}) => (
 				const {args} = info(config);
 				const Helper = component(config);
 
-				return <Helper key={i} args={args} />;
+				return Helper
+					? <Helper key={i} args={args} />
+					: null;
 			})
 			.filter((helper) =>
 				!!helper
