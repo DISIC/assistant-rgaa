@@ -16,13 +16,13 @@ const HeadingsHierarchy = ({items}) => (
 
 		{renderIf(items.length)(() =>
 			<ul className="HeadingsHierarchy-list">
-				{items.map(({level, text, fake}) =>
+				{items.map(({level, text, fake}, i) =>
 					<li
 						className={classNames('HeadingsHierarchy-item', {
 							[`HeadingsHierarchy-item--level-${level}`]: true,
 							'HeadingsHierarchy-item--fake': fake
 						})}
-						key={`${level}${text}`}
+						key={i}
 					>
 						<span className="Label HeadingsHierarchy-level">{level}</span>
 						<span className="HeadingsHierarchy-text">{text}</span>
