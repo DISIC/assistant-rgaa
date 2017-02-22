@@ -2088,6 +2088,11 @@
 			"showElement",
 			"[role]",
 			"role"
+		],
+		[
+			"externalTool",
+			"Validateur W3C",
+			"https://validator.w3.org/check?uri=:url"
 		]
 	],
 	"7.1.5": [
