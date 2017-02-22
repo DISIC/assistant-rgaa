@@ -2167,17 +2167,17 @@
 			"outline",
 			"title",
 			{
-				"showMissing": true,
 				"showTag": true
 			}
 		]
 	],
 	"8.6.1": [
 		[
-			"outline",
+			"showElement",
 			"title",
+			[],
 			{
-				"showTag": true
+				"showContent": true
 			}
 		]
 	],
@@ -2228,16 +2228,16 @@
 	],
 	"8.10.1": [
 		[
-			"showAttribute",
+			"showAttributes",
 			"[dir]",
-			"dir"
+			["dir"]
 		]
 	],
 	"8.10.2": [
 		[
-			"showAttribute",
+			"showAttributes",
 			"[dir]",
-			"dir"
+			["dir"]
 		]
 	],
 	"9.1.1": [
