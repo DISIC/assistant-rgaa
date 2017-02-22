@@ -3216,70 +3216,8 @@
 			]
 		]
 	],
-	"11.11.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-label], [aria-labelledby], [aria-describedby], [id]",
-			[
-				"aria-label",
-				"aria-labelledby",
-				"aria-describedby",
-				"id"
-			]
-		],
-		[
-			"showAttribute",
-			"[aria-invalid='true']",
-			"aria-invalid",
-			{
-				"showTag": true
-			}
-		]
-	],
-	"11.11.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-label], [aria-labelledby], [aria-describedby], [id]",
-			[
-				"aria-label",
-				"aria-labelledby",
-				"aria-describedby",
-				"id"
-			]
-		],
-		[
-			"showAttribute",
-			"[aria-invalid='true']",
-			"aria-invalid",
-			{
-				"showTag": true
-			}
-		]
-	],
+	"11.11.1": [],
+	"11.11.2": [],
 	"11.12.1": [
 		"disableAllStyles"
 	],
