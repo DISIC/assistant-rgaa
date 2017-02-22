@@ -6,6 +6,7 @@ import {
 } from '../common/actions/runtime';
 import {IFRAME_FILE} from '../container/api/iframe';
 import {openWindow} from './api/windows';
+import {OPTIONS_FILE} from './api/options';
 import {fetchCurrentTab, captureVisibleTab, closeTab} from './api/tabs';
 import {createMessageHandler} from '../common/api/runtime';
 import {getOption} from '../common/api/options';
@@ -133,8 +134,9 @@ chrome.browserAction.onClicked.addListener(() =>
  */
 chrome.runtime.onMessage.addListener(
 	createMessageHandler((message, sender) => {
+		const isOptionsPage = sender.url && sender.url.endsWith(OPTIONS_FILE);
 		const tabId = sender.tab && sender.tab.id;
-		const instance = tabId
+		const instance = !isOptionsPage
 			? instances.getInstance(tabId)
 			: instances.getOptionsInstance();
 
