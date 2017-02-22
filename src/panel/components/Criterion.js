@@ -26,6 +26,7 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, i
 						className="InvisibleButton Criterion-toggle"
 						type="button"
 						onClick={onToggle}
+						aria-expanded={isOpen}
 						aria-controls={`Criterion-${id}-content`}
 					>
 						<span dangerouslySetInnerHTML={{__html: title}} />
@@ -80,7 +81,6 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, i
 
 			<div
 				className="Criterion-content"
-				aria-expanded={isOpen}
 				id={`Criterion-${id}-content`}
 			>
 				{renderIf(isOpen)(() =>
