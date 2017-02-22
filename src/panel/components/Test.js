@@ -43,7 +43,7 @@ function Test({
 					{renderIf(importResult)(() => (
 						<div className="Test-action Test-action---import">
 							<span
-								className="ImportResult"
+								className="Label ImportResult"
 								data-import-result={importResult}
 								title={intl.formatMessage({
 									id: `ImportResult.${importResult}.title`

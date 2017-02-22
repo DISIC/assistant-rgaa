@@ -4,32 +4,32 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 // ResizeHandle width/height are not !important to
 // allow resizing via JS
 
-#rgaaExt-Container .vt-ResizeHandle--left,
-#rgaaExt-Container .vt-ResizeHandle--right {
+.rgaaExt-ResizeHandle--left,
+.rgaaExt-ResizeHandle--right {
 	width: 400px;
 }
 
-#rgaaExt-Container .vt-ResizeHandle--left,
-#rgaaExt-Container .vt-ResizeHandle--right,
-#rgaaExt-Container .vt-ResizeHandle--left .vt-ResizeHandle-handle,
-#rgaaExt-Container .vt-ResizeHandle--right .vt-ResizeHandle-handle {
+.rgaaExt-ResizeHandle--left,
+.rgaaExt-ResizeHandle--right,
+.rgaaExt-ResizeHandle--left .rgaaExt-ResizeHandle-handle,
+.rgaaExt-ResizeHandle--right .rgaaExt-ResizeHandle-handle {
 	height: 100% !important;
 }
 
-#rgaaExt-Container .vt-ResizeHandle--top {
+.rgaaExt-ResizeHandle--top {
 	height: 400px;
 }
 
-#rgaaExt-Container .vt-ResizeHandle--top,
-#rgaaExt-Container .vt-ResizeHandle--top .vt-ResizeHandle-handle {
+.rgaaExt-ResizeHandle--top,
+.rgaaExt-ResizeHandle--top .rgaaExt-ResizeHandle-handle {
 	width: 100% !important;
 }
 
-#rgaaExt-Container .vt-ResizeHandle-handle {
+.rgaaExt-ResizeHandle-handle {
 	background-color: orange !important;
 }
 
-#rgaaExt-Container .vt-ResizeHandle-handle:before {
+.rgaaExt-ResizeHandle-handle:before {
 	content: '\02016'; // ‖
 	color: #222;
 	display: block;
@@ -45,7 +45,7 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	font-size: 16px;
 }
 
-#rgaaExt-Container .vt-ResizeHandle--top .vt-ResizeHandle-handle:before {
+.rgaaExt-ResizeHandle--top .rgaaExt-ResizeHandle-handle:before {
 	transform: rotate(90deg); // for the handle "‖" to be horizontal
 }
 

@@ -18,3 +18,16 @@
 		content: '▼';
 	}
 }
+
+.TestInstructions a {
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:active {
+		text-decoration: underline;
+	}
+}

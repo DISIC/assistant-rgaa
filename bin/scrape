@@ -60,7 +60,7 @@ program
 program
 	.command('instructions-3')
 	.alias('i-3')
-	.description('Scrapes version 3 of the instructions.')
+	.description('Scrapes version 3 of the instructions. Does *not* get toolbar\'s instructions.')
 	.option(
 		'-s, --source <source>',
 		'Source URL.',

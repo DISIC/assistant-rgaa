@@ -6,7 +6,6 @@ const resolve = require('url').resolve;
  *
  */
 const resolveLinksPlugin = ($) => {
-
 	/**
 	 *	Ugly thing that prepends the given URL to anchor links in
 	 *	a string.
@@ -22,6 +21,13 @@ const resolveLinksPlugin = ($) => {
 			}
 
 			link.attr('target', '_blank');
+
+			const title = link.attr('title');
+			const text = link.text();
+			link.attr('title', title
+				? `${title} (nouvelle fenêtre)`
+				: `${text} (nouvelle fenêtre)`
+			);
 		});
 
 		return this;

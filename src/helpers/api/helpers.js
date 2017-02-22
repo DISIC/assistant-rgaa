@@ -17,7 +17,7 @@ const getModule = (name) =>
  *		array containing the helper's name, followed by its
  *		arguments, for example : ["helperName", "arg1", "arg2"].
  */
-const info = (helper) => {
+export const info = (helper) => {
 	const infoArray = isArray(helper) ? helper : [helper];
 	const name = first(infoArray);
 	const args = tail(infoArray);

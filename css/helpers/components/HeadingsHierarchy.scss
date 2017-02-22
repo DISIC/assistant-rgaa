@@ -1,0 +1,53 @@
+.HeadingsHierarchy {
+	max-height: vr(20);
+	overflow: auto;
+}
+
+.HeadingsHierarchy-title {
+	font-weight: bold;
+	margin-bottom: ($app-gutter / 2);
+}
+
+.HeadingsHierarchy-item {
+	margin-left: vr(2);
+	margin-bottom: vr(1/16);
+}
+
+.HeadingsHierarchy-item--level-1 {
+	margin-left: 0;
+}
+
+.HeadingsHierarchy-item--level-2 {
+	margin-left: 10px;
+}
+
+.HeadingsHierarchy-item--level-3 {
+	margin-left: 20px;
+}
+
+.HeadingsHierarchy-item--level-4 {
+	margin-left: 30px;
+}
+
+.HeadingsHierarchy-item--level-5 {
+	margin-left: 40px;
+}
+
+.HeadingsHierarchy-item--level-6 {
+	margin-left: 50px;
+}
+
+.HeadingsHierarchy-level {
+	width: 20px;
+	background: $color-green;
+	margin-right: vr(0.2);
+}
+
+.HeadingsHierarchy-item--fake .HeadingsHierarchy-level {
+	background: $color-red;
+}
+
+.HeadingsHierarchy-item--fake .HeadingsHierarchy-text {
+	font-weight: bold;
+	color: $color-red;
+}

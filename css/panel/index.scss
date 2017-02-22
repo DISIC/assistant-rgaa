@@ -25,6 +25,7 @@
 @import './components/Panel';
 @import './components/Header';
 @import './components/DockMenu';
+@import './components/Label';
 @import './components/ThemesList';
 @import './components/Theme';
 @import './components/ImportResult';
@@ -32,4 +33,7 @@
 @import './components/Test';
 @import './components/TestInstructions';
 @import './components/TestHelpers';
+@import '../helpers/components/Widget';
+@import '../helpers/components/ExternalTool';
+@import '../helpers/components/HeadingsHierarchy';
 @import '../helpers/components/ColorContrastWidget';

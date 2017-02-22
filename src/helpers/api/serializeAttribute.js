@@ -46,7 +46,9 @@ export default function serializeAttribute(element, name, showMissing) {
 
 	if (showMissing) {
 		return '<span class="rgaaExt-Attribute">'
-				+ `<span class="rgaaExt-Attribute-missing">${name}</span>`
+				+ '<span class="rgaaExt-Attribute-missing">'
+					+ `${name} <span class="rgaaExt-ScreenReaderOnly">absent</span>`
+				+ '</span>'
 			+ '</span>';
 	}
 
