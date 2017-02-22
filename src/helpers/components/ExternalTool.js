@@ -1,21 +1,18 @@
 import React, {PropTypes} from 'react';
-import {intlShape, injectIntl} from 'react-intl';
 
 
 
 /**
  *
  */
-const ExternalTool = ({name, url, intl}) => (
-	<div className="ExternalTool">
+const ExternalTool = ({name, url}) => (
+	<div className="Widget ExternalTool">
 		<a
 			className="Button"
 			href={url}
 			target="_blank"
 			rel="noopener noreferrer"
-			title={intl.formatMessage({
-				id: 'ExternalTool.linkTitle'
-			})}
+			title={`${name} (nouvelle fenêtre)`}
 		>
 			{name}
 		</a>
@@ -24,8 +21,7 @@ const ExternalTool = ({name, url, intl}) => (
 
 ExternalTool.propTypes = {
 	name: PropTypes.string.isRequired,
-	url: PropTypes.string.isRequired,
-	intl: intlShape
+	url: PropTypes.string.isRequired
 };
 
-export default injectIntl(ExternalTool);
+export default ExternalTool;
