@@ -14,9 +14,9 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 #rgaaExt-Container,
 #rgaaExt-Container-wrapper,
 #rgaaExt-Container-panel,
-#rgaaExt-Container .vt-ResizeHandle,
-#rgaaExt-Container .vt-ResizeHandle-handle,
-#rgaaExt-Container .vt-ResizeHandle-overlay {
+#rgaaExt-Container .rgaaExt-ResizeHandle,
+#rgaaExt-Container .rgaaExt-ResizeHandle-handle,
+#rgaaExt-Container .rgaaExt-ResizeHandle-overlay {
 	@include reset();
 }
 
