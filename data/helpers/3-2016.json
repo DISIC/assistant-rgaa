@@ -3662,6 +3662,13 @@
 	"12.2.2": [
 		"disableAllStyles"
 	],
+	"12.4.2": [
+		[
+			"externalTool",
+			"Validateur de liens",
+			"https://validator.w3.org/checklink?uri=:url"
+		]
+	],
 	"12.5.1": [
 		"disableAllStyles"
 	],
