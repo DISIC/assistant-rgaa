@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<title>test thématique 5</title>
+	<style type="text/css" media="screen">
+		main {
+			width: 60%;
+		}
+		h1 {
+			margin: 1em 0 .5em 0;
+		}
+		table {
+			position: relative;
+			width: 80%;
+			margin: 0 0 50px;
+			border: 0;
+			border-collapse: collapse;
+		}
+		table caption {
+			position: absolute;
+			bottom: -30px;
+			right: 0;
+			font-family: "alwyn_new_rgregular", sans-serif;
+			font-size: 14px;
+			font-size: 0.875rem;
+			font-style: italic;
+		}
+		table th,
+		table td {
+			padding: 5px;
+			text-align: left;
+			font-weight: normal;
+		}
+		table thead {
+			background: transparent;
+		}
+		table thead tr {
+			border-bottom: 3px #0C397C solid;
+		}
+		table thead th {
+			color: #021b27;
+			font-family: "alwyn_newmedium", sans-serif;
+			font-size: 17px;
+			font-size: 1.0625rem;
+			font-weight: normal;
+			text-transform: uppercase;
+			border: 0;
+			background: transparent;
+		}
+		table thead th a {
+			color: #0C397C;
+		}
+		table thead td {
+			color: #021b27;
+			font-family: "alwyn_newlight", sans-serif;
+			font-size: 16px;
+			font-size: 1rem;
+			line-height: 1.5em;
+			background: transparent;
+		}
+		table tbody tr {
+			border-bottom: 2px #fff solid;
+			background: transparent;
+		}
+		table tbody th {
+			color: #0C397C;
+			font-family: "alwyn_newmedium", sans-serif;
+			font-size: 17px;
+			font-size: 1.0625rem;
+			border-bottom: 3px #0C397C solid;
+			text-transform: uppercase;
+			background: transparent;
+		}
+		table tbody td {
+			color: #021b27;
+			font-family: "alwyn_newlight", sans-serif;
+			font-size: 16px;
+			font-size: 1rem;
+			border: none;
+		}
+		table tbody td:empty {
+			border: 0;
+		}
+		hr {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<main role="main">
+		<h1>tableau de présentation</h1>
+		<table role="presentation" summary="summary du tableau">
+			<caption>Un joli tableau de présentation qui ne devrait pas avoir de résumé ni de th</caption>
+			<tr>
+				<th>Lundi</th>
+				<th>Mardi</th>
+				<th>Mercredi</th>
+				<th>Jeudi</th>
+				<th>Vendredi</th>
+				<th>Samedi</th>
+				<th>Dimanche</th>
+			<tr>
+			<tr>
+				<td>08:00 - 17:00</td>
+				<td>08:00 - 17:00</td>
+				<td>08:00 - 17:00</td>
+				<td>08:00 - 17:00</td>
+				<td>08:00 - 17:00</td>
+				<td>Fermé</td>
+				<td>Fermé</td>
+			</tr>
+		</table>
+
+		<hr />
+
+		<h1>tableau de données simple</h1>
+		<table>
+			<caption>Jours d'ouverture du service à la population</caption>
+			<thead>
+				<tr>
+					<th scope="col">Lundi</th>
+					<th scope="col">Mardi</th>
+					<th scope="col">Mercredi</th>
+					<th scope="col">Jeudi</th>
+					<th scope="col">Vendredi</th>
+					<th scope="col">Samedi</th>
+					<th scope="col">Dimanche</th>
+				<tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>08:00 - 17:00</td>
+					<td>Fermé</td>
+					<td>Fermé</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th scope="col">Lundi</th>
+					<th scope="col">Mardi</th>
+					<th scope="col">Mercredi</th>
+					<th scope="col">Jeudi</th>
+					<th scope="col">Vendredi</th>
+					<th scope="col">Samedi</th>
+					<th scope="col">Dimanche</th>
+				</tr>
+			</tfoot>
+		</table>
+
+		<hr />
+
+		<h1>tableau de données simple 2</h1>
+		<table>
+			<caption>Heures d'ouverture du service à la population</caption>
+			<tbody>
+				<tr>
+					<th scope="col">Jour</th>
+					<th scope="col">Matinée</th>
+					<th scope="col">Après-midi</th>
+				</tr>
+				<tr>
+					<th scope="row">Lundi</th>
+					<td>08:00 - 12:00</td>
+					<td>14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th scope="row">Mardi</th>
+					<td>08:00 - 12:00</td>
+					<td>Fermé</td>
+				</tr>
+				<tr>
+					<th scope="row">Mercredi</th>
+					<td>08:00 - 12:00</td>
+					<td>14:00 - 20:00</td>
+				</tr>
+				<tr>
+					<th scope="row">Jeudi</th>
+					<td>Fermé</td>
+					<td>14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th scope="row">Vendredi</th>
+					<td>08:00 - 12:00</td>
+					<td>Fermé</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr />
+
+		<h1>tableau de données complexe</h1>
+		<table>
+			<caption>Heures d'ouverture de la maison communale et du CPAS</caption>
+			<tbody>
+				<tr>
+					<td></td>
+					<th colspan="2" id="mc">Maison communale</th>
+					<th colspan="2" id="cp">CPAS</th>
+				</tr>
+				<tr>
+					<td></td>
+					<th id="mc-am">Matin</th>
+					<th id="mc-pm">Après-midi</th>
+					<th id="cpas-am">Matin</th>
+					<th id="cpas-pm">Après-midi</th>
+				</tr>
+				<tr>
+					<th id="lu">Lundi</th>
+					<td headers="mc mc-am lu">08:00 - 12:00</td>
+					<td headers="mc mc-pm lu">Fermé</td>
+					<td headers="cp cp-am lu">Fermé</td>
+					<td headers="cp cp-pm lu">14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th id="ma">Mardi</th>
+					<td headers="mc mc-am ma">08:00 - 12:00</td>
+					<td headers="mc mc-pm ma">Fermé</td>
+					<td headers="cp cp-am ma">Fermé</td>
+					<td headers="cp cp-pm ma">14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th id="me">Mercredi</th>
+					<td headers="mc mc-am me">08:00 - 12:00</td>
+					<td headers="mc mc-pm me">Fermé</td>
+					<td headers="cp cp-am me">Fermé</td>
+					<td headers="cp cp-pm me">14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th id="je">Jeudi</th>
+					<td headers="mc mc-am je">08:00 - 12:00</td>
+					<td headers="mc mc-pm je">Fermé</td>
+					<td headers="cp cp-am je">Fermé</td>
+					<td headers="cp cp-pm je">14:00 - 18:00</td>
+				</tr>
+				<tr>
+					<th id="ve">Vendredi</th>
+					<td headers="mc mc-am ve">08:00 - 12:00</td>
+					<td headers="mc mc-pm ve">Fermé</td>
+					<td headers="cp cp-am ve">Fermé</td>
+					<td headers="cp cp-pm ve">14:00 - 18:00</td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+</body>
+</html>

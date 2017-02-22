@@ -8,7 +8,10 @@
 		[
 			"showAttribute",
 			"img",
-			"alt"
+			"alt",
+			{
+				"showMissing": true
+			}
 		]
 	],
 	"1.1.2": [
@@ -22,7 +25,7 @@
 		[
 			"showChildElements",
 			"map",
-			"area[href]",
+			"area[href]:not([nohref])",
 			[
 				"alt"
 			],
@@ -35,12 +38,18 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input[type=\"image\"]"
+			"input[type=\"image\"]",
+			{
+				"showTag": true
+			}
 		],
 		[
 			"showAttribute",
 			"input[type=\"image\"]",
-			"alt"
+			"alt",
+			{
+				"showMissing": true
+			}
 		]
 	],
 	"1.1.4": [
@@ -50,7 +59,7 @@
 		],
 		[
 			"showAttribute",
-			"a",
+			"a:has(img[ismap])",
 			"href"
 		]
 	],
@@ -99,6 +108,7 @@
 			"map",
 			"area[alt]:not([href])",
 			[
+				"role",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
@@ -113,8 +123,15 @@
 		[
 			"showAttributes",
 			"object[type^=\"image\"]",
+			["aria-hidden"],
+			{
+				"showMissingAttributes": true
+			}
+		],
+		[
+			"showAttributes",
+			"object[type^=\"image\"]",
 			[
-				"aria-hidden",
 				"role",
 				"aria-label",
 				"aria-describedby",
@@ -124,13 +141,7 @@
 		[
 			"showChildElements",
 			"object[type^=\"image\"]",
-			"*",
-			[
-				"role",
-				"aria-label",
-				"aria-describedby",
-				"aria-labelledby"
-			]
+			"*"
 		]
 	],
 	"1.2.4": [
@@ -334,14 +345,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"svg:has(desc)",
+			"svg",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttributes",
-			"svg:has(desc)",
+			"svg",
 			[
 				"role",
 				"title",
@@ -1600,13 +1611,27 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"caption",
+			"table:not([role='presentation'])",
 			{
 				"showTag": true
+			}
+		],
+		[
+			"showChildElements",
+			"table:not([role='presentation'])",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showAttributes",
+			"table:not([role='presentation'])",
+			"summary",
+			{
+				"showMissing": true,
+				"showContent": true
 			}
 		]
 	],
@@ -1614,28 +1639,46 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"caption",
+			"table:not([role='presentation'])",
 			{
 				"showTag": true
+			}
+		],
+		[
+			"showChildElements",
+			"table:not([role='presentation'])",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showAttributes",
+			"table:not([role='presentation'])",
+			"summary",
+			{
+				"showMissing": true,
+				"showContent": true
 			}
 		]
 	],
 	"5.3.1": [
 		"disableAllStyles",
 		[
+			"style",
+			"table { display: block; }"
+		],
+		[
+			"style",
+			"table * { display: block; }"
+		],
+		[
 			"outline",
 			"td"
 		],
 		[
-			"outline",
-			"th"
-		],
-		[
-			"showAttribute",
+			"showAttributes",
 			"table",
 			"role",
 			{
@@ -1648,13 +1691,27 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"caption",
+			"table:not([role='presentation'])",
 			{
 				"showTag": true
+			}
+		],
+		[
+			"showChildElements",
+			"table:not([role='presentation'])",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showAttribute",
+			"table:not([role='presentation'])",
+			"summary",
+			{
+				"showMissing": true,
+				"showContent": true
 			}
 		]
 	],
@@ -1662,13 +1719,27 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"caption",
+			"table:not([role='presentation'])",
 			{
 				"showTag": true
+			}
+		],
+		[
+			"showChildElements",
+			"table:not([role='presentation'])",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showAttributes",
+			"table:not([role='presentation'])",
+			"summary",
+			{
+				"showMissing": true,
+				"showContent": true
 			}
 		]
 	],
@@ -1676,11 +1747,18 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
+			"table:not([role='presentation'])"
 		],
 		[
 			"outline",
-			"th",
+			"table:not([role='presentation']) th",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
 			{
 				"showTag": true
 			}
@@ -1690,11 +1768,18 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
+			"table:not([role='presentation'])"
 		],
 		[
 			"outline",
-			"th",
+			"table:not([role='presentation']) th",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
 			{
 				"showTag": true
 			}
@@ -1704,17 +1789,24 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"th"
+			"table:not([role='presentation']) th"
 		],
 		[
 			"showElement",
-			"th",
+			"table:not([role='presentation']) th",
 			[
 				"id",
 				"scope"
 			],
 			{
 				"showMissingAttributes": true
+			}
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
+			{
+				"showTag": true
 			}
 		]
 	],
@@ -1722,27 +1814,34 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"th[scope]"
+			"table:not([role='presentation']) th[scope]"
 		],
 		[
 			"showAttribute",
-			"th",
+			"table:not([role='presentation']) th",
 			"scope"
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"5.7.3": [
 		"disableAllStyles",
 		[
 			"outline",
-			"th"
+			"table:not([role='presentation']) th"
 		],
 		[
 			"outline",
-			"td"
+			"table:not([role='presentation']) td"
 		],
 		[
 			"showElement",
-			"th",
+			"table:not([role='presentation']) th",
 			[
 				"id",
 				"scope"
@@ -1750,21 +1849,42 @@
 			{
 				"showMissingAttributes": true
 			}
+		],
+		[
+			"outline",
+			"table:not([role='presentation']) td",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"5.7.4": [
 		"disableAllStyles",
 		[
 			"outline",
-			"th"
+			"table:not([role='presentation']) th",
+			{
+				"showTag": true
+			}
 		],
 		[
 			"outline",
-			"td"
+			"table:not([role='presentation']) td",
+			{
+				"showTag": true
+			}
 		],
 		[
-			"showAttribute",
-			"th, td",
+			"showAttributes",
+			"table:not([role='presentation']) th, table:not([role='presentation']) td",
+			"id",
+			{
+				"showMissing": true
+			}
+		],
+		[
+			"showAttributes",
+			"table:not([role='presentation']) th, table:not([role='presentation']) td",
 			"headers",
 			{
 				"showMissing": true
@@ -1775,33 +1895,58 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table"
+			"table",
+			{
+				"showTag": true
+			}
 		],
 		[
-			"showTag",
-			"caption"
+			"showChildElements",
+			"table",
+			"caption",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
-			"showTag",
-			"thead"
+			"showChildElements",
+			"table",
+			"thead",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
-			"showTag",
-			"tfoot"
+			"showChildElements",
+			"table",
+			"th",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
-			"showTag",
-			"th"
+			"showChildElements",
+			"table",
+			"tfoot",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"outline",
+			"td"
 		],
 		[
 			"showAttributes",
 			"td",
-			[
-				"scope",
-				"headers",
-				"colgroup",
-				"axis"
-			]
+			["scope", "headers", "colgroup", "axis"],
+			{
+				"showTag": true
+			}
 		]
 	],
 	"6.1.1": [
@@ -1831,21 +1976,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -1855,21 +2000,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -1879,11 +2024,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a[title]:not([role]), *[role='link'][title]"
+			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]), *[role='link'][title]",
+			"a[title]:not([role]), [role='link'][title]",
 			"title"
 		]
 	],
@@ -1891,21 +2036,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a[title]:not([role]), *[role='link'][title]"
+			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]), *[role='link'][title]",
+			"a[title]:not([role]), [role='link'][title]",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]) img, *[role='link'] img, area[href]",
+			"a[title]:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -1915,21 +2060,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a[title]:not([role]), *[role='link'][title]"
+			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]), *[role='link'][title]",
+			"a[title]:not([role]), [role='link'][title]",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a[title]:not([role]) img, *[role='link'] img, area[href]",
+			"a[title]:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -1939,11 +2084,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link']"
+			"a:not([role]), [role='link']"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		]
 	],
@@ -1951,21 +2096,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -1975,21 +2120,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -1999,11 +2144,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link']"
+			"a:not([role]), [role='link']"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		]
 	],
@@ -2011,21 +2156,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2035,21 +2180,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
 			"showAttribute",
-			"a:not([role]), *[role='link']",
+			"a:not([role]), [role='link']",
 			"title"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2059,16 +2204,16 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), *[role='link']"
+			"a:not([role]), [role='link']"
 		],
 		[
 			"showAttribute",
-			"a:not([role]) img, *[role='link'] img, area[href]",
+			"a:not([role]) img, [role='link'] img, area[href]",
 			"alt"
 		],
 		[
 			"showAttributes",
-			"a:not([role]) svg, *[role='link'] svg",
+			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
 			]
@@ -2244,21 +2389,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"h1, *[role='heading'][aria-level='1']"
+			"h1, [role='heading'][aria-level='1']"
 		]
 	],
 	"9.1.2": [
 		"disableAllStyles",
 		[
 			"outline",
-			"h1,h2,h3,h4,h5,h6, *[role='heading'][aria-level]",
+			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttribute",
-			"*[role='heading'][aria-level]",
+			"[role='heading'][aria-level]",
 			"aria-level"
 		],
 		"headingsHierarchy"
@@ -2267,14 +2412,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"h1,h2,h3,h4,h5,h6, *[role='heading'][aria-level]",
+			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttribute",
-			"*[role='heading'][aria-level]",
+			"[role='heading'][aria-level]",
 			"aria-level"
 		]
 	],
@@ -2282,14 +2427,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"h1,h2,h3,h4,h5,h6, *[role='heading'][aria-level]",
+			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttribute",
-			"*[role='heading'][aria-level]",
+			"[role='heading'][aria-level]",
 			"aria-level"
 		]
 	],
@@ -2449,7 +2594,10 @@
 	"10.6.1": [
 		[
 			"outline",
-			"a"
+			"a[href]",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"10.7.1": [],
@@ -2478,7 +2626,7 @@
 	"10.13.1": [
 		[
 			"showAttribute",
-			"*[style*='display: none;']",
+			"[style*='display: none;']",
 			"style",
 			{
 				"showTag": true
@@ -2486,7 +2634,7 @@
 		],
 		[
 			"showAttribute",
-			"*[style*='visibility: hidden;']",
+			"[style*='visibility: hidden;']",
 			"style",
 			{
 				"showTag": true
@@ -2494,7 +2642,7 @@
 		],
 		[
 			"showAttribute",
-			"*[style*='width: 0;'], *[style*='height: 0;']",
+			"[style*='width: 0;'], [style*='height: 0;']",
 			"style",
 			{
 				"showTag": true
@@ -2502,7 +2650,7 @@
 		],
 		[
 			"showAttribute",
-			"*[style*='font-size: 0;']",
+			"[style*='font-size: 0;']",
 			"style",
 			{
 				"showTag": true
@@ -3412,23 +3560,25 @@
 	"12.10.3": [
 		[
 			"outline",
-			"main"
+			"main, [role='main']"
 		],
 		[
 			"showElement",
 			"main, [role='main']",
 			[
-				"id"
+				"id",
+				"role"
 			]
 		],
 		[
-			"showChildElements",
-			"main, [role='main']",
+			"showElement",
 			"a:not([href])",
 			[
-				"id"
+				"id",
+				"name"
 			],
 			{
+				"showTag": true,
 				"showMissingAttributes": true
 			}
 		]
@@ -3436,51 +3586,108 @@
 	"12.10.4": [
 		[
 			"outline",
-			"main"
+			"main, header, main, nav, footer, header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search']"
 		],
 		[
 			"showElement",
-			"main, [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search'], header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search']",
+			"header, main, nav, footer, header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search']",
 			[
 				"role"
-			]
+			],
+			{
+				"showTag": true,
+				"showMissingAttributes": true
+			}
 		]
 	],
 	"12.11.1": [
-		"disableAllStyles"
+		"disableAllStyles",
+		[
+			"outline",
+			"a[href^='#']"
+		],
+		[
+			"showElement",
+			"a[href^='#']",
+			[
+				"href"
+			],
+			{
+				"showTag": true
+			}
+		]
 	],
 	"12.11.2": [
 		"disableAllStyles",
 		[
 			"outline",
-			"main"
+			"a[href^='#'], main, [role='main']"
+		],
+		[
+			"showElement",
+			"a[href^='#']",
+			[
+				"href"
+			],
+			{
+				"showTag": true
+			}
+		],
+		[
+			"showElement",
+			"main, [role='main']",
+			[
+				"role",
+				"id"
+			],
+			{
+				"showTag": true,
+				"showMissingAttributes": true
+			}
 		]
 	],
 	"12.11.3": [
-		"disableAllStyles"
+		"disableAllStyles",
+		[
+			"outline",
+			"a[href^='#']"
+		],
+		[
+			"showElement",
+			"a[href^='#']",
+			[
+				"href"
+			],
+			{
+				"showTag": true
+			}
+		]
 	],
 	"12.13.1": [
 		[
 			"style",
-			"*:focus{ border:2px solid red!important; }"
+			":focus{ border: 2px solid red !important; }"
 		]
 	],
 	"12.13.2": [
 		[
 			"style",
-			"*:focus{ border:2px solid red!important; }"
+			":focus{ border: 2px solid red !important; }"
 		]
 	],
 	"12.14.1": [
 		[
 			"style",
-			"*:focus{ border:2px solid red!important; }"
+			":focus{ border: 2px solid red !important; }"
 		]
 	],
-	"13.1.1": [
+	"13.1.1" : [
 		[
 			"outline",
-			"object, embed, svg, canvas"
+			"object, embed, svg, canvas",
+			{
+				"showTag": true
+			}
 		],
 		[
 			"showAttributes",
