@@ -6,7 +6,7 @@ const messages = {
 	'Header.options': 'Options',
 	'Header.themes': 'Référentiel',
 	'Header.import': 'Import',
-	'ThemesList.title': 'Thématiques',
+	'ThemesList.title': 'Voir les thématiques',
 	'Theme.themesMenu': 'Retourner au menu des thématiques',
 	'Theme.disabled': `Cette thématique a été désactivée lors de l\'import
 		car tous ses critères sont notés "non applicable".`,
