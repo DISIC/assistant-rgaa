@@ -238,11 +238,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a, input"
+			"a, img"
 		],
 		[
 			"showAttributes",
-			"img, input[type=\"image\"][alt]",
+			"img",
 			[
 				"alt",
 				"title",
@@ -437,6 +437,92 @@
 				"showContent": true
 			}
 		]
+	],
+	"1.3.13": [
+
+
+		"disableAllStyles",
+		[
+			"outline",
+			"a, img, map, svg, input[type=\"image\"][alt], object[type^=\"image\"], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby], embed[type^=\"image\"], embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
+			{
+				"showTag": true
+			}
+		],
+
+		[
+			"showAttributes",
+			"img, input[type=\"image\"][alt]",
+			[
+				"alt",
+				"title",
+				"aria-label",
+				"aria-labelledby"
+			]
+		],
+		[
+			"showAttributes",
+			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
+			[
+				"title",
+				"aria-label",
+				"aria-labelledby"
+			]
+		],
+		[
+			"showAttributes",
+			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
+			[
+				"title",
+				"aria-label",
+				"aria-labelledby"
+			]
+		],
+
+		[
+			"showChildElements",
+			"map",
+			"area[alt]",
+			[
+				"alt",
+				"title",
+				"aria-label",
+				"aria-labelledby"
+			],
+			{
+				"showMissingAttributes": true
+			}
+		],
+		[
+			"showChildElements",
+			"svg:has(desc)",
+			"desc",
+			[
+				"role",
+				"title",
+				"aria-label"
+			],
+			{
+				"showContent": true
+			}
+		],
+		[
+			"showElement",
+			"canvas",
+			[
+				"title",
+				"aria-label",
+				"aria-labelledby"
+			],
+			{
+				"showContent": true
+			}
+		]
+
+
+
+
+
 	],
 	"1.4.1": [
 		"disableAllStyles",
@@ -1260,20 +1346,51 @@
 			]
 		]
 	],
-	"2.2.1": [
+	"3.1.1": [],
+	"3.1.2": [],
+	"3.1.3": [
 		"disableAllStyles",
 		[
 			"outline",
-			"iframe"
-		],
-		[
-			"showAttributes",
-			"iframe",
-			[
-				"title"
-			]
+			"img"
 		]
 	],
+	"3.1.4": [],
+	"3.1.5": [
+		[
+			"outline",
+			"object, video, object, embed, svg, cavnas"
+		]
+	],
+	"3.1.6": [
+		[
+			"outline",
+			"object, object, embed, svg, cavnas"
+		]
+	],
+	"3.2.1": [],
+	"3.2.2": [],
+	"3.2.3": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img"
+		]
+	],
+	"3.2.4": [],
+	"3.2.5": [
+		[
+			"outline",
+			"object, video, object, embed, svg, cavnas"
+		]
+	],
+	"3.2.6": [
+		[
+			"outline",
+			"object, object, embed, svg, cavnas"
+		]
+	],
+
 	"4.1.1": [
 		"disableAllStyles",
 		[
@@ -3663,6 +3780,23 @@
 			}
 		]
 	],
+	"12.11.4": [
+		"disableAllStyles",
+		[
+			"outline",
+			"a[href^='#']"
+		],
+		[
+			"showElement",
+			"a[href^='#']",
+			[
+				"href"
+			],
+			{
+				"showTag": true
+			}
+		]
+	],
 	"12.13.1": [
 		[
 			"style",
@@ -3759,59 +3893,11 @@
 	"13.3.1": [],
 	"13.4.1": [],
 	"13.5.1": [],
-	"13.6.1": [
-		[
-			"outline",
-			"input[type='button'],input[type='submit'],button,a"
-		],
-		[
-			"showAttributes",
-			"input[type='button'],input[type='submit'],button,a",
-			[
-				"title"
-			]
-		]
-	],
-	"13.6.2": [
-		[
-			"outline",
-			"input[type='button'],input[type='submit'],button,a"
-		],
-		[
-			"showAttributes",
-			"input[type='button'],input[type='submit'],button,a",
-			[
-				"title"
-			]
-		]
-	],
-	"13.6.3": [
-		[
-			"outline",
-			"input[type='button'],input[type='submit'],button,a"
-		],
-		[
-			"showAttributes",
-			"input[type='button'],input[type='submit'],button,a",
-			[
-				"title"
-			]
-		]
-	],
-	"13.7.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type='button'],input[type='submit'],button,a[href$='.doc'],a[href$='.docx'],a[href$='.pdf'],a[href$='.odt'],a[href$='.epub']"
-		]
-	],
-	"13.8.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type='button'],input[type='submit'],button,a[href$='.doc'],a[href$='.docx'],a[href$='.pdf'],a[href$='.odt'],a[href$='.epub']"
-		]
-	],
+	"13.6.1": [],
+	"13.6.2": [],
+	"13.6.3": [],
+	"13.7.1": [],
+	"13.8.1": [],
 	"13.9.1": [
 		"disableAllStyles",
 		[
