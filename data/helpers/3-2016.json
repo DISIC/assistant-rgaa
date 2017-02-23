@@ -116,6 +116,7 @@
 		]
 	],
 	"1.2.3": [
+		"disableAllStyles",
 		[
 			"outline",
 			"object[type^=\"image\"]"
