@@ -2342,14 +2342,14 @@
 		[
 			"showElement",
 			"[role]",
-			"role"
+			["role"]
 		]
 	],
 	"7.1.4": [
 		[
 			"showElement",
 			"[role]",
-			"role"
+			["role"]
 		],
 		[
 			"externalTool",
@@ -2361,21 +2361,21 @@
 		[
 			"showElement",
 			"[role]",
-			"role"
+			["role"]
 		]
 	],
 	"7.1.6": [
 		[
 			"showElement",
 			"[role]",
-			"role"
+			["role"]
 		]
 	],
 	"7.3.3": [
 		[
 			"showElement",
 			"[role]",
-			"role"
+			["role"]
 		]
 	],
 	"8.1.1": [],
