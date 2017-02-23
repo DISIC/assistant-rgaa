@@ -14,23 +14,3 @@
 .rgaaExt-Attribute-missing {
 	text-decoration: line-through !important;
 }
-
-:target {
-	&::before {
-		position: relative !important;
-		top: -2px !important;
-		z-index: 1000 !important;
-		display: inline-block !important;
-		margin: 0 0 0 1.1em !important;
-		content: "\25ba" !important;  /* ► */
-		// font: 70% Arial,"Nimbus Sans L",sans-serif !important !important;
-		color: $color-green !important;
-		// vertical-align: 20%;
-		border: 2px $color-green solid !important;
-		background: #fff !important;
-	}
-
-	& + .rgaaExt-ShowAttributeHelper {
-		margin-left: 1.5em !important;
-	}
-}
