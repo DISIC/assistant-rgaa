@@ -1,3 +1,7 @@
+import {get} from 'lodash';
+
+
+
 /**
  *
  */
@@ -39,3 +43,25 @@ export const getWindow = (id, options = {populate: true}) =>
 			}
 		})
 	);
+
+/**
+ * get the window first tab's id by making a new getWindow request if necessary
+ *
+ * this is necessary because depending on context, a window object might not
+ * have a tabs property (ie, the result of a windows.create in firefox < 52)
+ */
+export const getWindowTabId = (windowObject) =>
+	new Promise((resolve, reject) => {
+		const id = get(windowObject, 'tabs[0].id');
+		if (id) {
+			resolve(id);
+		} else {
+			getWindow(windowObject.id, {populate: true})
+				.then((data) =>
+					resolve(get(data, 'tabs[0].id'))
+				)
+				.catch((message) =>
+					reject(message)
+				);
+		}
+	});

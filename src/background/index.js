@@ -5,7 +5,7 @@ import {
 	INVALID_RESPONSE
 } from '../common/actions/runtime';
 import {IFRAME_FILE} from '../container/api/iframe';
-import {openWindow} from './api/windows';
+import {openWindow, getWindowTabId} from './api/windows';
 import {OPTIONS_FILE} from './api/options';
 import {fetchCurrentTab, captureVisibleTab, closeTab} from './api/tabs';
 import {createMessageHandler} from '../common/api/runtime';
@@ -81,9 +81,10 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 				openWindow({
 					url: chrome.runtime.getURL(IFRAME_FILE),
 					type: 'popup'
-				}).then((popup) => {
-					const id = get(popup, 'tabs[0].id');
-					instances.switchToPopup(tabId, id);
+				}).then((popup) => (
+					getWindowTabId(popup)
+				)).then((popupTabId) => {
+					instances.switchToPopup(tabId, popupTabId);
 				});
 			}
 			break;
