@@ -2389,7 +2389,13 @@
 			["role"]
 		]
 	],
-	"8.1.1": [],
+	"8.1.1": [
+		[
+			"externalTool",
+			"Voir les sources",
+			"view-source::url"
+		]
+	],
 	"8.1.2": [
 		[
 			"externalTool",
@@ -2398,8 +2404,11 @@
 		]
 	],
 	"8.1.3": [
-		"showTag",
-		"html"
+		[
+			"externalTool",
+			"Voir les sources",
+			"view-source::url"
+		]
 	],
 	"8.2.1": [
 		[
