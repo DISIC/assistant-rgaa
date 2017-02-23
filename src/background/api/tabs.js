@@ -71,3 +71,17 @@ export const captureVisibleTab = (options = {
  */
 export const closeTab = (id) =>
 	chrome.tabs.remove(id);
+
+/**
+ *
+ */
+export const createTab = (options) =>
+	new Promise((resolve, reject) => // eslint-disable-line no-new
+		chrome.tabs.create(options, (newTab) => {
+			if (chrome.runtime.lastError) {
+				reject(chrome.runtime.lastError);
+			} else {
+				resolve(newTab);
+			}
+		})
+	);

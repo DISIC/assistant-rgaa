@@ -1,13 +1,13 @@
 import {get} from 'lodash';
 import {
 	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP,
-	REQUEST_INITIAL_STATE, GET_PIXEL, GET_CURRENT_TAB,
+	REQUEST_INITIAL_STATE, GET_PIXEL, GET_CURRENT_TAB, CREATE_TAB,
 	INVALID_RESPONSE
 } from '../common/actions/runtime';
 import {IFRAME_FILE} from '../container/api/iframe';
 import {openWindow, getWindowTabId} from './api/windows';
 import {OPTIONS_FILE} from './api/options';
-import {fetchCurrentTab, captureVisibleTab, closeTab} from './api/tabs';
+import {fetchCurrentTab, captureVisibleTab, closeTab, createTab} from './api/tabs';
 import {createMessageHandler} from '../common/api/runtime';
 import {getOption} from '../common/api/options';
 import {getPixelAt} from '../common/api/image';
@@ -108,6 +108,15 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 		// sends current tab's info to the instance.
 		case GET_CURRENT_TAB:
 			return fetchCurrentTab();
+
+		// create a tab with the given url, next to the current tab
+		case CREATE_TAB:
+			return fetchCurrentTab().then(currentTab => (
+				createTab({
+					url: message.url,
+					index: currentTab.index + 1
+				})
+			));
 
 		// broadcasts message
 		default:

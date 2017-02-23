@@ -5,23 +5,22 @@ import React, {PropTypes} from 'react';
 /**
  *
  */
-const ExternalTool = ({name, url}) => (
+const ExternalTool = ({name, onClick}) => (
 	<div className="Widget ExternalTool">
-		<a
+		<button
 			className="Button"
-			href={url}
-			target="_blank"
-			rel="noopener noreferrer"
-			title={`${name} (nouvelle fenêtre)`}
+			type="button"
+			onClick={onClick}
+			title={`${name} (ouverture de page dans nouvelle fenêtre)`}
 		>
 			{name}
-		</a>
+		</button>
 	</div>
 );
 
 ExternalTool.propTypes = {
 	name: PropTypes.string.isRequired,
-	url: PropTypes.string.isRequired
+	onClick: PropTypes.func.isRequired
 };
 
 export default ExternalTool;

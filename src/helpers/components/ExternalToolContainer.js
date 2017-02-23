@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {sendMessage} from '../../common/api/runtime';
-import {GET_CURRENT_TAB} from '../../common/actions/runtime';
+import {GET_CURRENT_TAB, CREATE_TAB} from '../../common/actions/runtime';
 import ExternalTool from './ExternalTool';
 
 
@@ -9,15 +9,15 @@ import ExternalTool from './ExternalTool';
  *
  */
 export default class ExternalToolContainer extends Component {
-
 	/**
 	 *
 	 */
 	constructor(props) {
 		super(props);
+		this.onClick = this.onClick.bind(this);
 
 		this.state = {
-			url: ''
+			tabUrl: ''
 		};
 	}
 
@@ -29,7 +29,7 @@ export default class ExternalToolContainer extends Component {
 			type: GET_CURRENT_TAB
 		}).then(({url}) => {
 			this.setState({
-				url
+				tabUrl: url
 			});
 		});
 	}
@@ -37,11 +37,21 @@ export default class ExternalToolContainer extends Component {
 	/**
 	 *
 	 */
-	render() {
-		const [name, url] = this.props.args;
-		const interpolated = url.replace(':url', this.state.url);
+	onClick() {
+		const url = this.props.args[1];
+		const interpolated = url.replace(':url', this.state.tabUrl);
+		sendMessage({
+			type: CREATE_TAB,
+			url: interpolated
+		});
+	}
 
-		return <ExternalTool name={name} url={interpolated} />;
+	/**
+	 *
+	 */
+	render() {
+		const name = this.props.args[0];
+		return <ExternalTool name={name} onClick={this.onClick} />;
 	}
 }
 
