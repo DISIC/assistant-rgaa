@@ -70,14 +70,14 @@ const messages = {
 	'ImportResult.na.title': 'Résultat non applicable d\'après le fichier importé',
 	'ImportResult.nt.title': 'Résultat non testé d\'après le fichier importé',
 	'Options.references.label': 'Version du référentiel RGAA à utiliser :',
-	'ColorContrastWidget.backgroundColor': 'Couleur du fond',
-	'ColorContrastWidget.textColor': 'Couleur du texte',
-	'ColorContrastWidget.textSize': 'Taille du texte',
-	'ColorContrastWidget.conformity': `Conformité {grade} : {conformity, select,
-		true {conforme}
-		false {non conforme}
-	}`,
-	'ExternalToolWidget.linkTitle': 'Ouvrir l\'outil (s\'ouvre dans une nouvelle fenêtre)',
+	'ColorInput.pickButtonTitle': 'Prélever une couleur dans la page',
+	'ColorContrast.backgroundColor': 'Couleur du fond',
+	'ColorContrast.color': 'Couleur du texte',
+	'ColorContrast.switchColorsButtonTitle': 'Inverser les couleurs',
+	'ColorContrast.textSize': 'Taille du texte',
+	'ColorContrast.pickTextButton': 'Prélever les informations de couleur dans la page à partir d\'une sélection de texte',
+	'ColorContrast.ratio': 'Ratio de contraste',
+	'ExternalTool.linkTitle': 'Ouvrir l\'outil (s\'ouvre dans une nouvelle fenêtre)',
 	'HeadingsHierarchy.title': 'Hiérarchie de titres',
 	'HeadingsHierarchy.noItems': 'Aucun titre trouvé dans la page.'
 };

@@ -1,3 +1,7 @@
+.Form-field {
+	margin-bottom: vr(1/2);
+}
+
 .Form-label {
 	display: block;
 }
@@ -8,4 +12,9 @@
 	width: 100%;
 	padding: vr(1/4);
 	font-size: $base-font-size;
+
+	&[pattern]:invalid {
+		border-color: $color-red;
+		color: $color-red;
+	}
 }

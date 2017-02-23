@@ -1,4 +1,4 @@
-import colorString from 'color-string';
+import createColor from 'color';
 
 
 
@@ -16,7 +16,7 @@ export const getPixelAt = (image, x, y) =>
 			context.drawImage(image, 0, 0);
 
 			const pixel = context.getImageData(x, y, 1, 1);
-			const hex = colorString.to.hex(pixel.data);
+			const hex = createColor(pixel.data).hex().toString();
 
 			resolve(hex);
 		};
