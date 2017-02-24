@@ -3699,40 +3699,17 @@
 	"12.6.3": [
 		"disableAllStyles"
 	],
-	"12.10.3": [
-		[
-			"outline",
-			"main, [role='main']"
-		],
-		[
-			"showElement",
-			"main, [role='main']",
-			[
-				"id",
-				"role"
-			]
-		],
-		[
-			"showElement",
-			"a:not([href])",
-			[
-				"id",
-				"name"
-			],
-			{
-				"showTag": true,
-				"showMissingAttributes": true
-			}
-		]
-	],
+	"12.10.1": [],
+	"12.10.2": [],
+	"12.10.3": [],
 	"12.10.4": [
 		[
 			"outline",
-			"main, header, main, nav, footer, header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search']"
+			"header, main, nav, footer, input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='search']"
 		],
 		[
 			"showElement",
-			"header, main, nav, footer, header[role='banner'], nav[role='navigation'], footer[role='contentinfo'], main[role='main'], input[role='search'], form[role='search'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='main'], [role='search']",
+			"header, main, nav, footer, input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='search']",
 			[
 				"role"
 			],
