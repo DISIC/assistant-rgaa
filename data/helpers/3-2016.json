@@ -2131,7 +2131,12 @@
 		[
 			"showAttributes",
 			"td",
-			["scope", "headers", "colgroup", "axis"],
+			[
+				"scope",
+				"headers",
+				"colgroup",
+				"axis"
+			],
 			{
 				"showTag": true
 			}
@@ -2735,38 +2740,41 @@
 			}
 		]
 	],
+
+
 	"10.1.2": [
-		"showAttributes",
-		"[align], [alink], [background], [bgcolor], [border], [cellpading], [cellspacing], [char], [charoff], [clear], [compact], [color], [frameborder], [hspace], [link], [marginheight], [marginwidth], [text], [valign], [vlink], [vspace], [size], [width], [height]",
 		[
-			"align",
-			"alink",
-			"background",
-			"bgcolor",
-			"border",
-			"cellpading",
-			"cellspacing",
-			"char",
-			"charoff",
-			"clear",
-			"compact",
-			"color",
-			"frameborder",
-			"hspace",
-			"link",
-			"marginheight",
-			"marginwidth",
-			"text",
-			"valign",
-			"vlink",
-			"vspace",
-			"size",
-			"width",
-			"height"
-		],
-		{
-			"showTag": true
-		}
+			"showAttributes",
+			"[align],[alink], [background], [bgcolor], [border], [cellpading], [cellspacing], [char], [charoff], [clear], [compact], [color], [frameborder], [hspace], [link], [marginheight], [marginwidth], [text], [valign], [vlink], [vspace], [size], [width], [height]",
+			[
+				"align",
+				"alink",
+				"background",
+				"bgcolor",
+				"border",
+				"cellpading",
+				"cellspacing",
+				"char",
+				"charoff",
+				"clear",
+				"compact",
+				"color",
+				"frameborder",
+				"hspace",
+				"link",
+				"marginheight",
+				"marginwidth",  "text",
+				"valign",
+				"vlink",
+				"vspace",
+				"size",
+				"width",
+				"height"
+			],
+			{
+				"showTag": true
+			}
+		]
 	],
 	"10.1.3": [
 		"disableAllStyles"
