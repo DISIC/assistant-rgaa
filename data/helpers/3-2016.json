@@ -1405,6 +1405,62 @@
 			"object, object, embed, svg, cavnas"
 		]
 	],
+	"3.3.1": [
+		["colorContrast",
+			{
+				"minimumRatio": 4.5
+			}
+		]
+	],
+	"3.3.2": [
+		["colorContrast",
+			{
+				"minimumRatio": 4.5
+			}
+		]
+	],
+	"3.3.3": [
+		["colorContrast",
+			{
+				"minimumRatio": 3
+			}
+		]
+	],
+	"3.3.4": [
+		["colorContrast",
+			{
+				"minimumRatio": 3
+			}
+		]
+	],
+	"3.4.1": [
+		["colorContrast",
+			{
+				"minimumRatio": 7
+			}
+		]
+	],
+	"3.4.2": [
+		["colorContrast",
+			{
+				"minimumRatio": 7
+			}
+		]
+	],
+	"3.4.3": [
+		["colorContrast",
+			{
+				"minimumRatio": 4.5
+			}
+		]
+	],
+	"3.4.4": [
+		["colorContrast",
+			{
+				"minimumRatio": 4.5
+			}
+		]
+	],
 
 	"4.1.1": [
 		"disableAllStyles",
@@ -2738,6 +2794,11 @@
 			"a[href]",
 			{
 				"showTag": true
+			}
+		],
+		["colorContrast",
+			{
+				"minimumRatio": 3
 			}
 		]
 	],
