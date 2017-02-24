@@ -3604,24 +3604,13 @@
 		],
 		[
 			"showElement",
-			"[title], [aria-label], [aria-labelledby], [aria-describedby], [id]",
+			"[title], [aria-label], [aria-labelledby], [aria-describedby]",
 			[
 				"title",
 				"aria-label",
 				"aria-labelledby",
-				"aria-describedby",
-				"id"
+				"aria-describedby"
 			]
-		],
-		[
-			"showAttribute",
-			"[contenteditable='true']",
-			"contenteditable"
-		],
-		[
-			"showAttribute",
-			"[spellcheck='true']",
-			"spellcheck"
 		]
 	],
 	"11.14.5": [
