@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import showTag from '../api/showTag';
+import {sanitize} from '../api/selectors';
 
 
 
@@ -9,7 +10,7 @@ import showTag from '../api/showTag';
  *	@param {string} selector - Selector.
  */
 export const describe = (selector) => `
-	Affiche les éléments <code>${selector}</code>.
+	Affiche les éléments <code>${sanitize(selector)}</code>.
 `;
 
 

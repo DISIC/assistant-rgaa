@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import {apply as addClassName, revert as removeClassName} from './addClassName';
 import showTagApi from '../api/showTag';
+import {sanitize} from '../api/selectors';
 
 
 
@@ -10,7 +11,7 @@ import showTagApi from '../api/showTag';
  *	@param {string} selector - Selector.
  */
 export const describe = (selector) =>
-	`Entoure les éléments <code>${selector}</code>.`;
+	`Entoure les éléments <code>${sanitize(selector)}</code>.`;
 
 /**
  *	Adds an outline to each element matched by the given selector.

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import {sanitize} from '../api/selectors';
 
 
 
@@ -10,7 +11,7 @@ import $ from 'jquery';
  */
 export const describe = (selector, className) => `
 	Ajoute une classe <code>${className}</code>
-	sur les éléments <code>${selector}</code>.
+	sur les éléments <code>${sanitize(selector)}</code>.
 `;
 
 /**

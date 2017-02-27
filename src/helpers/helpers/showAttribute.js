@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import showAttribute from '../api/showAttribute';
 import showTagApi from '../api/showTag';
+import {sanitize} from '../api/selectors';
 
 
 
@@ -12,7 +13,7 @@ import showTagApi from '../api/showTag';
  */
 export const describe = (selector, attribute) => `
 	Affiche l'attribut <code>${attribute}</code>
-	des éléments <code>${selector}</code>.
+	des éléments <code>${sanitize(selector)}</code>.
 `;
 
 /**

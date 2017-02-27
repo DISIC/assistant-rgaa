@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import serializeElement from '../api/serializeElement';
 import showCodeNearElement from '../api/showCodeNearElement';
+import {sanitize} from '../api/selectors';
 
 
 
@@ -8,7 +9,7 @@ import showCodeNearElement from '../api/showCodeNearElement';
  *	Describes the helper.
  */
 export const describe = (selector, attributes = []) => `
-	Affiche les éléments <code>${selector}</code>,
+	Affiche les éléments <code>${sanitize(selector)}</code>,
 	et leurs attributs <code>${attributes.join(', ')}</code>.
 `;
 
