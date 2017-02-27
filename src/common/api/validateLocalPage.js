@@ -30,7 +30,7 @@ export const validateLocalPage = (url) => {
 				if (status !== 'complete' || tabId !== tab.id) {
 					return;
 				}
-				const tabWindow = getWindowObject(tab.id);
+				const tabWindow = getWindowObject(tab.url, {type: 'tab', windowId: tab.windowId});
 				if (!tabWindow || !tabWindow.validateSource) {
 					return;
 				}
