@@ -3,18 +3,15 @@
 }
 
 .ImportResult[data-import-result='nc'] {
-	background: $color-red;
+	background: #de1b3e;
 }
 
 .ImportResult[data-import-result='c'] {
-	background: $color-green;
+	background: #07838b;
 }
 
 .ImportResult[data-import-result='na'] {
-	background: $color-gray-dark;
-}
-
-.ImportResult[data-import-result='nt'] {
-	background: $color-orange;
-	color: $color-orange-text;
+	border-color: #999;
+	background: #fff;
+	color: #555;
 }
