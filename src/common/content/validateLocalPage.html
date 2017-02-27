@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Validation des sources</title>
+	</head>
+
+	<body>
+		<form
+			action="http://validator.w3.org/check"
+			enctype="multipart/form-data"
+			method="post"
+			id="validationForm"
+			style="display: none !important;"
+		>
+			<input type="hidden" name="ss" value="1">
+			<input type="hidden" name="verbose" value="1">
+			<input type="text" name="fragment" value="" />
+		</form>
+		<p>Chargement…</p>
+
+		<script src="validateLocalPage.js"></script>
+	</body>
+</html>

@@ -4,6 +4,7 @@ export * as colorContrast from './colorContrast';
 export * as headingsHierarchy from './headingsHierarchy';
 export * as disableAllStyles from './disableAllStyles';
 export * as externalTool from './externalTool';
+export * as validateLocalPage from './validateLocalPage';
 export * as outline from './outline';
 export * as showAttribute from './showAttribute';
 export * as showAttributes from './showAttributes';

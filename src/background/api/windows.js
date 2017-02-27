@@ -65,3 +65,8 @@ export const getWindowTabId = (windowObject) =>
 				);
 		}
 	});
+
+export const getWindowObject = (tabId) => {
+	const views = chrome.extension.getViews({tabId});
+	return views.length ? views[0] : null;
+};

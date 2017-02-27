@@ -1,6 +1,5 @@
-import {get} from 'lodash';
 import {
-	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP,
+	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP, VALIDATE_PAGE,
 	REQUEST_INITIAL_STATE, GET_PIXEL, GET_CURRENT_TAB, CREATE_TAB,
 	INVALID_RESPONSE
 } from '../common/actions/runtime';
@@ -11,6 +10,7 @@ import {fetchCurrentTab, captureVisibleTab, closeTab, createTab} from './api/tab
 import {createMessageHandler} from '../common/api/runtime';
 import {getOption} from '../common/api/options';
 import {getPixelAt} from '../common/api/image';
+import {validateLocalPage} from '../common/api/validateLocalPage';
 import {setReferenceVersion} from '../common/actions/reference';
 import createInstancePool from './createInstancePool';
 
@@ -108,6 +108,9 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 		// sends current tab's info to the instance.
 		case GET_CURRENT_TAB:
 			return fetchCurrentTab();
+
+		case VALIDATE_PAGE:
+			return validateLocalPage(message.url);
 
 		// create a tab with the given url, next to the current tab
 		case CREATE_TAB:

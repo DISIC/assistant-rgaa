@@ -3,3 +3,7 @@
 	margin-top: $app-gutter;
 	padding: $app-gutter 0;
 }
+
+.Widget + .Widget {
+	margin-top: 0;
+}

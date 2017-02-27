@@ -85,3 +85,9 @@ export const createTab = (options) =>
 			}
 		})
 	);
+
+/**
+ *
+ */
+export const onUpdate = (callback) =>
+	chrome.tabs.onUpdated.addListener(callback);
