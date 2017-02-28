@@ -133,9 +133,13 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
  */
 chrome.browserAction.onClicked.addListener(() =>
 	fetchCurrentTab().then(({id}) => {
-		if (instances.hasInstance(id)) {
+		if (instances.hasInstance(id)
+			&& confirm('Voulez-vous vraiment fermer l\'extension ? Votre travail sera perdu.')
+		) {
 			closePanel(id);
-		} else {
+		}
+
+		if (!instances.hasInstance(id)) {
 			openPanel(id);
 		}
 	})
