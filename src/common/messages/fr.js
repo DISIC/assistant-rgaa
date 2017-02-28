@@ -8,10 +8,6 @@ const messages = {
 	'Header.import': 'Import',
 	'ThemesList.title': 'Voir les thématiques',
 	'Theme.themesMenu': 'Retourner au menu des thématiques',
-	'Theme.disabled': `Cette thématique a été désactivée lors de l\'import
-		car tous ses critères sont notés "non applicable".`,
-	'Theme.criterion.disabled': `Ce critère et ses tests ont été désactivés lors de l\'import
-		car ils sont notés "non applicable".`,
 	'Theme.criterion.select.label': 'Aller au critère : ',
 	'Theme.criterion.select.emptyOption': 'Choisissez un critère',
 	'Criterion.done.label': 'Tous les tests du critère sont faits - Cliquer pour marquer les tests comme "à faire"',
