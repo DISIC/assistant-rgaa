@@ -121,11 +121,11 @@
 
 .Criterion-actionLabel {
 	display: block;
+	cursor: pointer;
 }
 
 .Criterion-action--done {
 	font-size: 0;
-	cursor: default;
 }
 
 .Criterion-action--done .Icon {

@@ -5,6 +5,7 @@ import {isOpen} from '../../common/selectors/criteria';
 import {getAllByCriterion} from '../../common/selectors/tests';
 import {getOneCriterionResults} from '../../common/selectors/imports';
 import {areAllTestsDone} from '../../common/selectors/checklist';
+import {setTestDone} from '../../common/actions/checklist';
 
 
 
@@ -22,12 +23,22 @@ const mapStateToProps = (state, {id}) => {
 	};
 };
 
-const mapDispatchToProps = (dispatch, {id}) => ({
+/**
+ *
+ */
+const mergeProps = (stateProps, {dispatch}, ownProps) => ({
+	...ownProps,
+	...stateProps,
 	onToggle() {
-		dispatch(toggleCriterion(id));
+		dispatch(toggleCriterion(ownProps.id));
+	},
+	onDone(done) {
+		stateProps.tests.forEach(({id}) =>
+			dispatch(setTestDone(id, done))
+		);
 	}
 });
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Criterion);
+export default connect(mapStateToProps, null, mergeProps)(Criterion);

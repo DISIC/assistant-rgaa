@@ -11,13 +11,16 @@ import Icon from './Icon';
 /**
  *
  */
-function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, intl}) {
+function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, onDone, intl}) {
 	const className = classNames('Criterion Theme-criterion', {
 		'is-open': isOpen
 	});
 	const headerClassName = classNames('Criterion-header', {
 		'Title Title--sub': isOpen
 	});
+	const handleDoneChange = (event) =>
+		onDone(event.target.checked);
+
 	return (
 		<li id={`Criterion-${id}`} className={className}>
 			<header className={headerClassName}>
@@ -73,7 +76,7 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, i
 							id={`criterion-${id}-done-input`}
 							className="u-hidden"
 							checked={isDone}
-							readOnly
+							onChange={handleDoneChange}
 						/>
 					</div>
 				</div>
@@ -105,6 +108,7 @@ Criterion.propTypes = {
 	importResults: PropTypes.object,
 	onToggle: PropTypes.func.isRequired,
 	isDone: PropTypes.bool,
+	onDone: PropTypes.func.isRequired,
 	intl: intlShape.isRequired
 };
 
