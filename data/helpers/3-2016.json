@@ -2738,6 +2738,7 @@
 		]
 	],
 	"10.1.1": [
+		"disableAllStyles",
 		[
 			"outline",
 			"basefont, blink, center, font, marquee, s, strike, tt, u, bing, small",
@@ -2749,6 +2750,7 @@
 
 
 	"10.1.2": [
+		"disableAllStyles",
 		[
 			"showAttributes",
 			"[align],[alink], [background], [bgcolor], [border], [cellpading], [cellspacing], [char], [charoff], [clear], [compact], [color], [frameborder], [hspace], [link], [marginheight], [marginwidth], [text], [valign], [vlink], [vspace], [size], [width], [height]",
