@@ -4,6 +4,7 @@
 
 .rgaaExt-Helper {
 	all: initial;
+	position: relative;
 	display: inline-block !important;
 	margin: 0 ($base-line-height / 4) 0 0 !important;
 	padding: 0 $base-line-height / 4 !important;
@@ -31,6 +32,6 @@
 
 .rgaaExt-Element-content {
 	color: $color-orange-text-dark !important;
-	padding: 0 .2em !important;
+	padding: 0 0.2em !important;
 	background: $color-white !important;
 }
