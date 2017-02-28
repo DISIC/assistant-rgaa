@@ -1,5 +1,5 @@
 import {isString} from 'lodash';
-import {flow, split, map, join} from 'lodash/fp';
+import {flow, split, flatMap, join} from 'lodash/fp';
 
 
 
@@ -8,28 +8,33 @@ import {flow, split, map, join} from 'lodash/fp';
  */
 const linkAttributes = [
 	'for',
-	'aria-labelledby'
+	'aria-labelledby',
+	'aria-describedby'
 ];
 
 /**
- *	If an attribute with the given name contains a list of id,
- *	makes a anchor to each of the linked ids.
+ *	Transforms the given id into a link.
+ */
+const linkId = (id) => {
+	const count = document.querySelectorAll(`#${id}`).length;
+	const countString = (count !== 1)
+		? ` (${count})`
+		: '';
+
+	return `<a class="rgaaExt-Attribute-link" href="#${id}">#${id}${countString}</a>`;
+};
+
+/**
+ *	Makes a anchor to each of the linked ids.
  *
- *	@param {string} name - Attribute name.
  *	@param {string} value - Attribute value.
  *	@return {string} - Attribute value containing anchors if needed.
  */
-const linkIds = (name, value) => {
-	if (!linkAttributes.includes(name)) {
-		return value;
-	}
-
-	return flow(
-		split(/\s+/),
-		map((id) => `<a href="#${id}">#${id}</a>`),
-		join(' ')
-	)(value);
-};
+const linkIds = flow(
+	split(/\s+/),
+	flatMap(linkId),
+	join(' ')
+);
 
 /**
  *
@@ -38,9 +43,13 @@ export default function serializeAttribute(element, name, showMissing) {
 	const value = element.attr(name);
 
 	if (isString(value)) {
+		const linkedIds = linkAttributes.includes(name)
+			? linkIds(value)
+			: value;
+
 		return '<span class="rgaaExt-Attribute">'
 				+ `<span class="rgaaExt-Attribute-name">${name}</span>`
-				+ `="<span class="rgaaExt-Attribute-value">${linkIds(name, value)}</span>"`
+				+ `="<span class="rgaaExt-Attribute-value">${linkedIds}</span>"`
 			+ '</span>';
 	}
 
