@@ -2837,36 +2837,52 @@
 	"10.12.2": [],
 	"10.13.1": [
 		[
-			"showAttribute",
+			"outline",
 			"[style*='display: none;']",
-			"style",
 			{
 				"showTag": true
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
+			"[style*='display: none;']",
+			["style"]
+		],
+		[
+			"outline",
 			"[style*='visibility: hidden;']",
-			"style",
 			{
 				"showTag": true
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
+			"[style*='visibility: hidden;']",
+			["style"]
+		],
+		[
+			"outline",
 			"[style*='width: 0;'], [style*='height: 0;']",
-			"style",
 			{
 				"showTag": true
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
+			"[style*='width: 0;'], [style*='height: 0;']",
+			["style"]
+		],
+		[
+			"outline",
 			"[style*='font-size: 0;']",
-			"style",
 			{
 				"showTag": true
 			}
+		],
+		[
+			"showAttributes",
+			"[style*='font-size: 0;']",
+			["style"]
 		],
 		[
 			"showElement",
@@ -2874,12 +2890,16 @@
 			"['hidden' , 'aria-hidden']"
 		],
 		[
-			"showAttribute",
+			"outline",
 			"[role]",
-			"role",
 			{
 				"showTag": true
 			}
+		],
+		[
+			"showAttributes",
+			"[role]",
+			["role"]
 		]
 	],
 	"10.14.1": [],
