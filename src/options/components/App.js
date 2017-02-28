@@ -1,5 +1,5 @@
 import React from 'react';
-import ReferenceSelectContainer from './ReferenceSelectContainer';
+import ReferenceFormContainer from './ReferenceFormContainer';
 
 
 
@@ -9,7 +9,7 @@ import ReferenceSelectContainer from './ReferenceSelectContainer';
 export default function App() {
 	return (
 		<div>
-			<ReferenceSelectContainer />
+			<ReferenceFormContainer />
 		</div>
 	);
 }

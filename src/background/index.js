@@ -11,6 +11,7 @@ import {createMessageHandler} from '../common/api/runtime';
 import {getOption} from '../common/api/options';
 import {getPixelAt} from '../common/api/image';
 import {validateLocalPage} from '../common/api/validateLocalPage';
+import {DEFAULT_VERSION} from '../common/api/reference';
 import {setReferenceVersion} from '../common/actions/reference';
 import createInstancePool from './createInstancePool';
 
@@ -36,7 +37,7 @@ const openPanel = (id) => {
 		.then(() =>
 			getOption('reference')
 		)
-		.then((version = '3-2016') =>
+		.then((version = DEFAULT_VERSION) =>
 			instance.dispatch(setReferenceVersion(version))
 		);
 };

@@ -1,3 +1,5 @@
+export const DEFAULT_VERSION = '3-2016';
+
 /*
  * get an array of {name, filename, version}
  */

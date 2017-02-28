@@ -66,6 +66,8 @@ const messages = {
 	'ImportResult.na.title': 'Résultat non applicable d\'après le fichier importé',
 	'ImportResult.nt.title': 'Résultat non testé d\'après le fichier importé',
 	'Options.references.label': 'Version du référentiel RGAA à utiliser :',
+	'Options.references.submit': 'Valider',
+	'Options.references.successMessage': 'Version mise à jour',
 	'ColorInput.pickButtonTitle': 'Prélever une couleur dans la page',
 	'ColorContrast.backgroundColor': 'Couleur du fond',
 	'ColorContrast.color': 'Couleur du texte',
