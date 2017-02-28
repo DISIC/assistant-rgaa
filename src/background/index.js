@@ -13,6 +13,7 @@ import {getPixelAt} from '../common/api/image';
 import {validateLocalPage} from '../common/api/validateLocalPage';
 import {DEFAULT_VERSION} from '../common/api/reference';
 import {setReferenceVersion} from '../common/actions/reference';
+import {setPageInfo} from '../common/actions/panel';
 import createInstancePool from './createInstancePool';
 
 
@@ -25,7 +26,7 @@ const instances = createInstancePool();
 /**
  *
  */
-const openPanel = (id) => {
+const openPanel = ({id, url, title}) => {
 	// creates an instance and indexes it on the tab id.
 	const instance = instances.create(id);
 
@@ -37,15 +38,19 @@ const openPanel = (id) => {
 		.then(() =>
 			getOption('reference')
 		)
-		.then((version = DEFAULT_VERSION) =>
-			instance.dispatch(setReferenceVersion(version))
-		);
+		.then((version = DEFAULT_VERSION) => {
+			instance.dispatch(setReferenceVersion(version));
+			instance.dispatch(setPageInfo({
+				url,
+				title
+			}));
+		});
 };
 
 /**
  *
  */
-const closePanel = (id) => {
+const closePanel = ({id}) => {
 	instances
 		.getInstance(id)
 		.sendMessage({
@@ -133,15 +138,15 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
  *	when one clicks the extension icon in the browser UI.
  */
 chrome.browserAction.onClicked.addListener(() =>
-	fetchCurrentTab().then(({id}) => {
-		if (instances.hasInstance(id)
+	fetchCurrentTab().then((tab) => {
+		if (instances.hasInstance(tab.id)
 			&& confirm('Voulez-vous vraiment fermer l\'extension ? Votre travail sera perdu.')
 		) {
-			closePanel(id);
+			closePanel(tab);
 		}
 
-		if (!instances.hasInstance(id)) {
-			openPanel(id);
+		if (!instances.hasInstance(tab.id)) {
+			openPanel(tab);
 		}
 	})
 );

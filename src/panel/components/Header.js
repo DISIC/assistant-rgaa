@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
+import {truncate} from 'lodash';
 import {FormattedMessage, injectIntl} from 'react-intl';
 import {Link} from 'react-router';
+import renderIf from 'render-if';
 import DockMenuContainer from './DockMenuContainer';
 
 
@@ -8,9 +10,10 @@ import DockMenuContainer from './DockMenuContainer';
 /**
  *
  */
-const Header = ({referenceVersion, onOptionsClick}) => (
+const Header = ({referenceVersion, inPopup, title, onOptionsClick}) => (
 	<header className="Header">
 		<h1 className="Header-title">
+			{renderIf(inPopup)(() => `${title} | `)}
 			RGAA v{referenceVersion}
 		</h1>
 
@@ -38,6 +41,8 @@ const Header = ({referenceVersion, onOptionsClick}) => (
 
 Header.propTypes = {
 	referenceVersion: PropTypes.string,
+	title: PropTypes.string,
+	inPopup: PropTypes.bool,
 	onOptionsClick: PropTypes.func.isRequired
 };
 
