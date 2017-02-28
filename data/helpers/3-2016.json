@@ -2661,7 +2661,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"ul,li,[role='list'],[role='list'] [role='listitem']",
+			"ul, ul li, [role='list'], [role='list'] [role='listitem']",
 			{
 				"showTag": true
 			}
@@ -2671,7 +2671,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"ol,li",
+			"ol, ol li",
 			{
 				"showTag": true
 			}
