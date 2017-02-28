@@ -2578,6 +2578,7 @@
 		]
 	],
 	"8.10.1": [
+		"disableAllStyles",
 		[
 			"showAttributes",
 			"[dir]",
@@ -2585,6 +2586,7 @@
 		]
 	],
 	"8.10.2": [
+		"disableAllStyles",
 		[
 			"showAttributes",
 			"[dir]",
