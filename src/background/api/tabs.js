@@ -1,6 +1,15 @@
 /**
  *
  */
+export const CONTENT_SCRIPTS = [
+	'dist/common.js',
+	'dist/container.js',
+	'dist/helpers.js'
+];
+
+/**
+ *
+ */
 export const fetchCurrentTab = () => {
 	const query = {
 		active: true,
@@ -85,6 +94,25 @@ export const createTab = (options) =>
 			}
 		})
 	);
+
+/**
+ *
+ */
+export const executeScript = (tabId, details) => {
+	if (typeof browser === 'undefined') {
+		return new Promise((resolve, reject) => // eslint-disable-line no-new
+			chrome.tabs.executeScript(tabId, details, (results) => {
+				if (chrome.runtime.lastError) {
+					reject(chrome.runtime.lastError);
+				} else {
+					resolve(results);
+				}
+			})
+		);
+	}
+
+	return browser.tabs.executeScript(tabId, details);
+};
 
 /**
  *

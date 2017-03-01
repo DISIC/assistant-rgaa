@@ -6,7 +6,10 @@ import {
 import {IFRAME_FILE} from '../container/api/iframe';
 import {openWindow, getWindowTabId} from './api/windows';
 import {OPTIONS_FILE} from './api/options';
-import {fetchCurrentTab, captureVisibleTab, closeTab, createTab} from './api/tabs';
+import {
+	CONTENT_SCRIPTS, executeScript,
+	fetchCurrentTab, captureVisibleTab, closeTab, createTab
+} from './api/tabs';
 import {createMessageHandler} from '../common/api/runtime';
 import {getOption} from '../common/api/options';
 import {getPixelAt} from '../common/api/image';
@@ -26,9 +29,16 @@ const instances = createInstancePool();
 /**
  *
  */
+const injectContentScripts = (tabId) =>
+	Promise.all(CONTENT_SCRIPTS.map(file =>
+		executeScript(tabId, {file})
+	));
+
+/**
+ *
+ */
 const openPanel = ({id, url, title}) => {
-	// creates an instance and indexes it on the tab id.
-	const instance = instances.create(id);
+	const instance = instances.getInstance(id);
 
 	// opens the panel and loads initial data.
 	instance
@@ -140,13 +150,16 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 chrome.browserAction.onClicked.addListener(() =>
 	fetchCurrentTab().then((tab) => {
 		if (instances.hasInstance(tab.id)
-			&& confirm('Voulez-vous vraiment fermer l\'extension ? Votre travail sera perdu.')
+			&& confirm('Attention ! En fermant l\'extention, votre travail en cours sera perdu.')
 		) {
 			closePanel(tab);
 		}
 
 		if (!instances.hasInstance(tab.id)) {
-			openPanel(tab);
+			instances.create(tab.id);
+			injectContentScripts(tab.id).then(() => {
+				openPanel(tab);
+			});
 		}
 	})
 );
@@ -174,4 +187,17 @@ chrome.runtime.onMessage.addListener(
  */
 chrome.tabs.onRemoved.addListener((id) => {
 	instances.removeInstance(id);
+});
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+	if (changeInfo.status !== 'complete') {
+		return false;
+	}
+
+	// if we just reloaded the page and we had the toolbar loaded, reload it directly
+	if (!changeInfo.url && instances.hasInstance(tabId)) {
+		return injectContentScripts(tabId);
+	}
+
+	return false;
 });
