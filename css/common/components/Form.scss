@@ -13,6 +13,7 @@
 	padding: vr(1/4);
 	font-size: $base-font-size;
 
+	&.isInvalid,
 	&[pattern]:invalid {
 		border-color: $color-red;
 		color: $color-red;

@@ -69,6 +69,7 @@ const messages = {
 	'Options.references.submit': 'Valider',
 	'Options.references.successMessage': 'Version mise à jour',
 	'ColorInput.pickButtonTitle': 'Prélever une couleur dans la page',
+	'ColorInput.invalidFormatError': 'Cette couleur est invalide. Veuillez utiliser un code hexadécimal (#f00, #a2a2a2, ...) ou un nom de couleur HTML (red, yellow, ...)',
 	'ColorContrast.backgroundColor': 'Couleur du fond',
 	'ColorContrast.color': 'Couleur du texte',
 	'ColorContrast.switchColorsButtonTitle': 'Inverser les couleurs',
