@@ -154,9 +154,7 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
  */
 chrome.browserAction.onClicked.addListener(() =>
 	fetchCurrentTab().then((tab) => {
-		if (instances.hasInstance(tab.id)
-			&& confirm('Attention ! En fermant l\'extention, votre travail en cours sera perdu.')
-		) {
+		if (instances.hasInstance(tab.id)) {
 			closePanel(tab);
 		}
 
