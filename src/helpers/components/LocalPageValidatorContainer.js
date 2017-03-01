@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {sendMessage} from '../../common/api/runtime';
 import {GET_CURRENT_TAB, VALIDATE_PAGE} from '../../common/actions/runtime';
 import {isFirefox} from '../../common/api/uasniffer';
-import ExternalTool from './ExternalTool';
+import HelperButton from './HelperButton';
 
 
 
@@ -51,7 +51,7 @@ export default class LocalPageValidatorContainer extends Component {
 	render() {
 		if (isFirefox(window.navigator.userAgent)) {
 			return (
-				<ExternalTool
+				<HelperButton
 					name="Validateur W3C (HTML local)"
 					onClick={this.onClick}
 					disabled
@@ -61,7 +61,7 @@ export default class LocalPageValidatorContainer extends Component {
 		}
 
 		return (
-			<ExternalTool
+			<HelperButton
 				name="Validateur W3C (HTML local)"
 				onClick={this.onClick}
 			/>

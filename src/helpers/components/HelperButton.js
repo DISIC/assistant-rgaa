@@ -5,8 +5,8 @@ import React, {PropTypes} from 'react';
 /**
  *
  */
-const ExternalTool = ({name, title, disabled, onClick}) => (
-	<div className="Widget ExternalTool">
+const HelperButton = ({name, title, disabled, onClick}) => (
+	<div className="Widget HelperButton">
 		<button
 			className="Button"
 			type="button"
@@ -19,11 +19,11 @@ const ExternalTool = ({name, title, disabled, onClick}) => (
 	</div>
 );
 
-ExternalTool.propTypes = {
+HelperButton.propTypes = {
 	name: PropTypes.string.isRequired,
 	onClick: PropTypes.func.isRequired,
 	title: PropTypes.string,
 	disabled: PropTypes.bool
 };
 
-export default ExternalTool;
+export default HelperButton;

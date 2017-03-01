@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {sendMessage} from '../../common/api/runtime';
 import {GET_CURRENT_TAB, CREATE_TAB} from '../../common/actions/runtime';
-import ExternalTool from './ExternalTool';
+import HelperButton from './HelperButton';
 
 
 
@@ -51,7 +51,7 @@ export default class ExternalToolContainer extends Component {
 	 */
 	render() {
 		const name = this.props.args[0];
-		return <ExternalTool name={name} onClick={this.onClick} />;
+		return <HelperButton name={name} onClick={this.onClick} />;
 	}
 }
 
