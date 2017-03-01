@@ -11,12 +11,14 @@ import sagas from './sagas';
 
 
 /**
- * If there is a state at load, it means we reloaded a tab with the panel opened.
- * Directly apply tests if any.
+ *
  */
 const createHelpersStore = (state) =>
 	createStore('helpers', reducer, sagas, state);
 
+/**
+ *
+ */
 const applyInitialTests = (store) => {
 	const tests = getEnabled(store.getState());
 	tests.forEach(({id}) =>
@@ -24,7 +26,9 @@ const applyInitialTests = (store) => {
 	);
 };
 
+/**
+ *
+ */
 getInitialState()
 	.then(createHelpersStore)
-	.then(applyInitialTests)
-	.catch(() => {});
+	.then(applyInitialTests);
