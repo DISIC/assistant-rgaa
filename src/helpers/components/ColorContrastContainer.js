@@ -102,7 +102,7 @@ export default class ColorContrastContainer extends Component {
 				ratio={this.ratio()}
 				onPickText={this.handlePickText}
 				onPickColor={this.handlePickColor}
-				onSwitchColors={this.handleSwitchColors}
+				onChangeColor={this.handleChangeColor}
 			/>
 		);
 	}

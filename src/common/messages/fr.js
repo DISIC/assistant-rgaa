@@ -75,6 +75,7 @@ const messages = {
 	'ColorContrast.textSize': 'Taille du texte',
 	'ColorContrast.pickTextButton': 'Prélever les informations de couleur dans la page à partir d\'une sélection de texte',
 	'ColorContrast.ratio': 'Ratio de contraste',
+	'ColorContrast.invalidResult': 'invalide',
 	'ExternalTool.linkTitle': 'Ouvrir l\'outil (s\'ouvre dans une nouvelle fenêtre)',
 	'HeadingsHierarchy.title': 'Hiérarchie de titres',
 	'HeadingsHierarchy.noItems': 'Aucun titre trouvé dans la page.'
