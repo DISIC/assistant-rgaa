@@ -11,33 +11,6 @@ import sagas from './sagas';
 
 
 /**
- *
- */
-const handleAction = ({type, payload}) => {
-	// eslint-disable-next-line default-case
-	switch (type) {
-		case APPLY:
-			applyHelpers(payload.id, payload.helpers);
-			break;
-
-		case REVERT:
-			revertHelpers(payload.id, payload.helpers);
-			break;
-	}
-};
-
-/**
- *
- */
-chrome.runtime.onMessage.addListener(({type, action}) => {
-	if (type === REDUX_ACTION) {
-		handleAction(action);
-	}
-});
-
-
-
-/**
  * If there is a state at load, it means we reloaded a tab with the panel opened.
  * Directly apply tests if any.
  */

@@ -1,4 +1,4 @@
-import * as tests from '../common/sagas/tests';
+import * as helpers from '../common/sagas/helpers';
 
 
 
@@ -7,6 +7,9 @@ import * as tests from '../common/sagas/tests';
  */
 export default function* sagas() {
 	yield [
-		tests.watchEnable()
+		helpers.watchApply(),
+		helpers.watchRevert(),
+		helpers.watchEnableTest(),
+		helpers.watchDisableTest()
 	];
 }
