@@ -154,7 +154,16 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
  */
 chrome.browserAction.onClicked.addListener(() =>
 	fetchCurrentTab().then((tab) => {
-		if (instances.hasInstance(tab.id)) {
+		if (instances.hasInstance(tab.id)
+			&& (
+				isFirefox()
+				|| confirm([
+					'Attention : en fermant l\'extension, ',
+					'votre travail en cours sera perdu.',
+					'\n\nÊtes-vous sûr de vouloir continuer ?'
+				].join(''))
+			)
+		) {
 			closePanel(tab);
 		}
 
@@ -200,7 +209,6 @@ chrome.tabs.onRemoved.addListener((id) => {
  *  - Firefox does not trigger such events.
  *  - And anyway, they have different changeInfo objects for same things happening
  */
-const ua = window.navigator.userAgent;
 const previousUpdates = {};
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	let hasReloaded = false;
@@ -217,7 +225,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	//  - one event with {status: loading}
 	//  - one event with {status: complete}
 	if (
-		isChrome(ua)
+		isChrome()
 		&& changeInfo.status === 'complete'
 		&& previousStatus === null
 	) {
@@ -232,7 +240,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	// - {status: loading, url: ...}
 	// - {status: complete}
 	if (
-		isFirefox(ua)
+		isFirefox()
 		&& changeInfo.status === 'complete'
 		&& previousStatus === 'loading'
 		&& previousUrl === tab.url
