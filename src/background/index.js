@@ -1,3 +1,4 @@
+import {get} from 'lodash';
 import {
 	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP, VALIDATE_PAGE, VIEW_PAGE_SOURCE,
 	REQUEST_INITIAL_STATE, GET_PIXEL, GET_CURRENT_TAB, CREATE_TAB,
@@ -18,6 +19,7 @@ import {viewSource} from '../common/api/viewSource';
 import {DEFAULT_VERSION} from '../common/api/reference';
 import {setReferenceVersion} from '../common/actions/reference';
 import {setPageInfo} from '../common/actions/panel';
+import {isFirefox, isChrome} from '../common/api/uasniffer';
 import createInstancePool from './createInstancePool';
 
 
@@ -40,7 +42,6 @@ const injectContentScripts = (tabId) =>
  */
 const openPanel = ({id, url, title}) => {
 	const instance = instances.getInstance(id);
-
 	// opens the panel and loads initial data.
 	instance
 		.sendMessage({
@@ -193,15 +194,41 @@ chrome.tabs.onRemoved.addListener((id) => {
 	instances.removeInstance(id);
 });
 
-chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
-	if (changeInfo.status !== 'complete') {
-		return false;
+/**
+ * if we just reloaded the page and we had the toolbar loaded, reload it directly:
+ * the "did the tab just reload" check is EXTREMELY FRAGILE here and, without a doubt, buggy
+ * we do it like this, differently on Chrome and Firefox, because
+ *  - Chrome triggers events when we internally change anchors in our panel iframe for some reason
+ *  - Firefox does not trigger such events.
+ *  - And anyway, they have different changeInfo objects for same things happening
+ */
+const ua = window.navigator.userAgent;
+const previousUpdates = {};
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+	let hasReloaded = false;
+	const previousStatus = get(previousUpdates, [tabId, 'changeInfo', 'status'], null);
+	const previousUrl = get(previousUpdates, [tabId, 'changeInfo', 'url'], null);
+
+	if (
+		isChrome(ua)
+		&& changeInfo.status === 'complete'
+		&& previousStatus === null
+	) {
+		hasReloaded = true;
 	}
 
-	// if we just reloaded the page and we had the toolbar loaded, reload it directly
-	if (!changeInfo.url && instances.hasInstance(tabId)) {
-		return injectContentScripts(tabId);
+	if (
+		isFirefox(ua)
+		&& changeInfo.status === 'complete'
+		&& previousStatus === 'loading'
+		&& previousUrl === tab.url
+	) {
+		hasReloaded = true;
 	}
 
-	return false;
+	if (hasReloaded && instances.hasInstance(tabId)) {
+		injectContentScripts(tabId);
+	}
+
+	previousUpdates[tabId] = {tabId, changeInfo, tab};
 });
