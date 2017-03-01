@@ -1,5 +1,5 @@
 import {
-	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP, VALIDATE_PAGE,
+	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP, VALIDATE_PAGE, VIEW_PAGE_SOURCE,
 	REQUEST_INITIAL_STATE, GET_PIXEL, GET_CURRENT_TAB, CREATE_TAB,
 	INVALID_RESPONSE
 } from '../common/actions/runtime';
@@ -14,6 +14,7 @@ import {createMessageHandler} from '../common/api/runtime';
 import {getOption} from '../common/api/options';
 import {getPixelAt} from '../common/api/image';
 import {validateLocalPage} from '../common/api/validateLocalPage';
+import {viewSource} from '../common/api/viewSource';
 import {DEFAULT_VERSION} from '../common/api/reference';
 import {setReferenceVersion} from '../common/actions/reference';
 import {setPageInfo} from '../common/actions/panel';
@@ -127,6 +128,9 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 
 		case VALIDATE_PAGE:
 			return validateLocalPage(message.url);
+
+		case VIEW_PAGE_SOURCE:
+			return viewSource(message.url);
 
 		// create a tab with the given url, next to the current tab
 		case CREATE_TAB:
