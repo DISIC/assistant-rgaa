@@ -207,6 +207,15 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	const previousStatus = get(previousUpdates, [tabId, 'changeInfo', 'status'], null);
 	const previousUrl = get(previousUpdates, [tabId, 'changeInfo', 'url'], null);
 
+	// I ended up seeing that, when loading a page, chrome has this timeline:
+	// - trigger one event with changeInfo = {status: loading}. If it's the first time loading
+	//   the page, there might be the url prop too
+	// - trigger one or more event with changeInfo = {title: ...}, or {favIconUrl: ...},
+	//   or other info, but no status or url
+	// - trigger one event with changeInfo = {status: complete}
+	// When changing anchor within our iframe, Chrome triggers like this:
+	//  - one event with {status: loading}
+	//  - one event with {status: complete}
 	if (
 		isChrome(ua)
 		&& changeInfo.status === 'complete'
@@ -215,6 +224,13 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 		hasReloaded = true;
 	}
 
+	// firefox does not trigger anything when doing stuff in our panel
+	// when loading or reloading pages:
+	// - {status: loading}
+	// - when first loading a page, {favIconUrl: ...}, or {title: ...}, etc. This does not
+	//   happen when reloading a page
+	// - {status: loading, url: ...}
+	// - {status: complete}
 	if (
 		isFirefox(ua)
 		&& changeInfo.status === 'complete'
