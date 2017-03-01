@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {FormattedMessage, intlShape, injectIntl} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import renderIf from 'render-if';
 import classNames from 'classnames';
 import ColorInput from './ColorInput';
@@ -17,8 +17,7 @@ const ColorContrast = ({
 	minimumRatio,
 	onPickText,
 	onPickColor,
-	onChangeColor,
-	intl
+	onChangeColor
 }) => (
 	<div className="ColorContrast Widget">
 		<form className="ColorContrast-form">
@@ -115,10 +114,10 @@ ColorContrast.propTypes = {
 	color: PropTypes.string,
 	fontSize: PropTypes.string,
 	ratio: PropTypes.number,
+	minimumRatio: PropTypes.number,
 	onPickText: PropTypes.func,
 	onPickColor: PropTypes.func,
-	onChangeColor: PropTypes.func,
-	intl: intlShape
+	onChangeColor: PropTypes.func
 };
 
-export default injectIntl(ColorContrast);
+export default ColorContrast;
