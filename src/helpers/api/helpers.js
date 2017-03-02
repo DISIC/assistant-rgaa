@@ -61,12 +61,12 @@ const createId = (id, index) =>
 /**
  *	Calls a specific function on each of the given helpers.
  *
- *	@param {string} func - Name of the module's function to call,
- *		either 'apply' or 'revert'.
  *	@param {string} id - Id.
  *	@param {string|array} helper - Helper descriptor.
+ *	@param {string} func - Name of the module's function to call,
+ *		either 'apply' or 'revert'.
  */
-const runHelpers = (func) => (id, helpers) => {
+const runHelpers = (id, helpers, func) => {
 	try {
 		helpers.forEach((helper, i) => {
 			const {module, args} = info(helper);
@@ -80,5 +80,15 @@ const runHelpers = (func) => (id, helpers) => {
 /**
  *
  */
-export const applyHelpers = runHelpers('apply');
-export const revertHelpers = runHelpers('revert');
+export const applyHelpers = (id, helpers) => {
+	document.body.classList.add('rgaaExt-Body', 'rgaaExt-Body--withHelpers');
+	runHelpers(id, helpers, 'apply');
+};
+
+/**
+ *
+ */
+export const revertHelpers = (id, helpers) => {
+	runHelpers(id, helpers, 'revert');
+	document.body.classList.remove('rgaaExt-Body', 'rgaaExt-Body--withHelpers');
+};
