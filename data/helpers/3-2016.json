@@ -6,9 +6,11 @@
 			"img"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"img",
-			"alt",
+			[
+				"alt"
+			],
 			{
 				"showMissing": true
 			}
@@ -45,9 +47,11 @@
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"input[type=\"image\"]",
-			"alt",
+			[
+				"alt"
+			],
 			{
 				"showMissing": true
 			}
@@ -59,9 +63,11 @@
 			"img[ismap]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:has(img[ismap])",
-			"href"
+			[
+				"href"
+			]
 		]
 	],
 	"1.2.1": [
@@ -125,7 +131,9 @@
 		[
 			"showAttributes",
 			"object[type^=\"image\"]",
-			["aria-hidden"],
+			[
+				"aria-hidden"
+			],
 			{
 				"showMissingAttributes": true
 			}
@@ -445,8 +453,6 @@
 		]
 	],
 	"1.3.13": [
-
-
 		"disableAllStyles",
 		[
 			"outline",
@@ -455,7 +461,6 @@
 				"showTag": true
 			}
 		],
-
 		[
 			"showAttributes",
 			"img, input[type=\"image\"][alt]",
@@ -484,7 +489,6 @@
 				"aria-labelledby"
 			]
 		],
-
 		[
 			"showChildElements",
 			"map",
@@ -524,11 +528,6 @@
 				"showContent": true
 			}
 		]
-
-
-
-
-
 	],
 	"1.4.1": [
 		"disableAllStyles",
@@ -1406,62 +1405,69 @@
 		]
 	],
 	"3.3.1": [
-		["colorContrast",
+		[
+			"colorContrast",
 			{
 				"minimumRatio": 4.5
 			}
 		]
 	],
 	"3.3.2": [
-		["colorContrast",
+		[
+			"colorContrast",
 			{
 				"minimumRatio": 4.5
 			}
 		]
 	],
 	"3.3.3": [
-		["colorContrast",
+		[
+			"colorContrast",
 			{
 				"minimumRatio": 3
 			}
 		]
 	],
 	"3.3.4": [
-		["colorContrast",
+		[
+			"colorContrast",
 			{
 				"minimumRatio": 3
 			}
 		]
 	],
 	"3.4.1": [
-		["colorContrast",
+		[
+			"colorContrast",
 			{
 				"minimumRatio": 7
 			}
 		]
 	],
 	"3.4.2": [
-		["colorContrast",
+		[
+			"colorContrast",
 			{
 				"minimumRatio": 7
 			}
 		]
 	],
 	"3.4.3": [
-		["colorContrast",
+		[
+			"colorContrast",
 			{
 				"minimumRatio": 4.5
 			}
 		]
 	],
 	"3.4.4": [
-		["colorContrast",
+		[
+			"colorContrast",
 			{
 				"minimumRatio": 4.5
 			}
 		]
 	],
-
 	"4.1.1": [
 		"disableAllStyles",
 		[
@@ -1894,9 +1900,11 @@
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"table:not([role='presentation'])",
-			"summary",
+			[
+				"summary"
+			],
 			{
 				"showMissing": true,
 				"showContent": true
@@ -2005,9 +2013,11 @@
 			"table:not([role='presentation']) th[scope]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"table:not([role='presentation']) th",
-			"scope"
+			[
+				"scope"
+			]
 		],
 		[
 			"outline",
@@ -2152,14 +2162,18 @@
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]), [role='link']",
-			"title"
+			[
+				"title"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"svg[aria-label]",
-			"aria-label",
+			[
+				"aria-label"
+			],
 			{
 				"showTag": true
 			}
@@ -2172,14 +2186,18 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]), [role='link']",
-			"title"
+			[
+				"title"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]) img, [role='link'] img, area[href]",
-			"alt"
+			[
+				"alt"
+			]
 		],
 		[
 			"showAttributes",
@@ -2196,14 +2214,18 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]), [role='link']",
-			"title"
+			[
+				"title"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]) img, [role='link'] img, area[href]",
-			"alt"
+			[
+				"alt"
+			]
 		],
 		[
 			"showAttributes",
@@ -2220,9 +2242,11 @@
 			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a[title]:not([role]), [role='link'][title]",
-			"title"
+			[
+				"title"
+			]
 		]
 	],
 	"6.2.2": [
@@ -2232,14 +2256,18 @@
 			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a[title]:not([role]), [role='link'][title]",
-			"title"
+			[
+				"title"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a[title]:not([role]) img, [role='link'] img, area[href]",
-			"alt"
+			[
+				"alt"
+			]
 		],
 		[
 			"showAttributes",
@@ -2256,14 +2284,18 @@
 			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a[title]:not([role]), [role='link'][title]",
-			"title"
+			[
+				"title"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a[title]:not([role]) img, [role='link'] img, area[href]",
-			"alt"
+			[
+				"alt"
+			]
 		],
 		[
 			"showAttributes",
@@ -2280,9 +2312,11 @@
 			"a:not([role]), [role='link']"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]), [role='link']",
-			"title"
+			[
+				"title"
+			]
 		]
 	],
 	"6.3.2": [
@@ -2292,14 +2326,18 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]), [role='link']",
-			"title"
+			[
+				"title"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]) img, [role='link'] img, area[href]",
-			"alt"
+			[
+				"alt"
+			]
 		],
 		[
 			"showAttributes",
@@ -2316,14 +2354,18 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]), [role='link']",
-			"title"
+			[
+				"title"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]) img, [role='link'] img, area[href]",
-			"alt"
+			[
+				"alt"
+			]
 		],
 		[
 			"showAttributes",
@@ -2340,9 +2382,11 @@
 			"a:not([role]), [role='link']"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]), [role='link']",
-			"title"
+			[
+				"title"
+			]
 		]
 	],
 	"6.4.2": [
@@ -2352,14 +2396,18 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]), [role='link']",
-			"title"
+			[
+				"title"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]) img, [role='link'] img, area[href]",
-			"alt"
+			[
+				"alt"
+			]
 		],
 		[
 			"showAttributes",
@@ -2376,14 +2424,18 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]), [role='link']",
-			"title"
+			[
+				"title"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]) img, [role='link'] img, area[href]",
-			"alt"
+			[
+				"alt"
+			]
 		],
 		[
 			"showAttributes",
@@ -2400,9 +2452,11 @@
 			"a:not([role]), [role='link']"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"a:not([role]) img, [role='link'] img, area[href]",
-			"alt"
+			[
+				"alt"
+			]
 		],
 		[
 			"showAttributes",
@@ -2418,14 +2472,18 @@
 		[
 			"showElement",
 			"[role]",
-			["role"]
+			[
+				"role"
+			]
 		]
 	],
 	"7.1.4": [
 		[
 			"showElement",
 			"[role]",
-			["role"]
+			[
+				"role"
+			]
 		],
 		[
 			"externalTool",
@@ -2438,21 +2496,27 @@
 		[
 			"showElement",
 			"[role]",
-			["role"]
+			[
+				"role"
+			]
 		]
 	],
 	"7.1.6": [
 		[
 			"showElement",
 			"[role]",
-			["role"]
+			[
+				"role"
+			]
 		]
 	],
 	"7.3.3": [
 		[
 			"showElement",
 			"[role]",
-			["role"]
+			[
+				"role"
+			]
 		]
 	],
 	"8.1.1": [
@@ -2564,9 +2628,11 @@
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[role='presentation']",
-			"role"
+			[
+				"role"
+			]
 		]
 	],
 	"8.10.1": [
@@ -2574,7 +2640,9 @@
 		[
 			"showAttributes",
 			"[dir]",
-			["dir"]
+			[
+				"dir"
+			]
 		]
 	],
 	"8.10.2": [
@@ -2582,7 +2650,9 @@
 		[
 			"showAttributes",
 			"[dir]",
-			["dir"]
+			[
+				"dir"
+			]
 		]
 	],
 	"9.1.1": [
@@ -2602,9 +2672,11 @@
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[role='heading'][aria-level]",
-			"aria-level"
+			[
+				"aria-level"
+			]
 		],
 		"headingsHierarchy"
 	],
@@ -2618,9 +2690,11 @@
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[role='heading'][aria-level]",
-			"aria-level"
+			[
+				"aria-level"
+			]
 		]
 	],
 	"9.1.4": [
@@ -2633,9 +2707,11 @@
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[role='heading'][aria-level]",
-			"aria-level"
+			[
+				"aria-level"
+			]
 		]
 	],
 	"9.2.1": [
@@ -2686,9 +2762,11 @@
 			"abbr"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"abbr, a",
-			"title",
+			[
+				"title"
+			],
 			{
 				"showMissing": true
 			}
@@ -2701,9 +2779,11 @@
 			"abbr"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"abbr, a",
-			"title",
+			[
+				"title"
+			],
 			{
 				"showMissing": true
 			}
@@ -2739,8 +2819,6 @@
 			}
 		]
 	],
-
-
 	"10.1.2": [
 		"disableAllStyles",
 		[
@@ -2763,7 +2841,8 @@
 				"hspace",
 				"link",
 				"marginheight",
-				"marginwidth",  "text",
+				"marginwidth",
+				"text",
 				"valign",
 				"vlink",
 				"vspace",
@@ -2804,7 +2883,8 @@
 				"showTag": true
 			}
 		],
-		["colorContrast",
+		[
+			"colorContrast",
 			{
 				"minimumRatio": 3
 			}
@@ -2838,7 +2918,9 @@
 		[
 			"showAttributes",
 			"[style*='display: none;']",
-			["style"]
+			[
+				"style"
+			]
 		],
 		[
 			"outline",
@@ -2850,7 +2932,9 @@
 		[
 			"showAttributes",
 			"[style*='visibility: hidden;']",
-			["style"]
+			[
+				"style"
+			]
 		],
 		[
 			"outline",
@@ -2862,7 +2946,9 @@
 		[
 			"showAttributes",
 			"[style*='width: 0;'], [style*='height: 0;']",
-			["style"]
+			[
+				"style"
+			]
 		],
 		[
 			"outline",
@@ -2874,7 +2960,9 @@
 		[
 			"showAttributes",
 			"[style*='font-size: 0;']",
-			["style"]
+			[
+				"style"
+			]
 		],
 		[
 			"showElement",
@@ -2891,7 +2979,9 @@
 		[
 			"showAttributes",
 			"[role]",
-			["role"]
+			[
+				"role"
+			]
 		]
 	],
 	"10.14.1": [],
@@ -2918,14 +3008,18 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[id]",
-			"id"
+			[
+				"id"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"label",
-			"for",
+			[
+				"for"
+			],
 			{
 				"showTag": true,
 				"showMissing": true
@@ -2946,9 +3040,11 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"label",
-			"for",
+			[
+				"for"
+			],
 			{
 				"showMissing": true
 			}
@@ -2961,14 +3057,18 @@
 			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
-			"aria-labelledby"
+			[
+				"aria-labelledby"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[id]",
-			"id",
+			[
+				"id"
+			],
 			{
 				"showTag": true
 			}
@@ -2981,9 +3081,11 @@
 			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
-			"aria-label"
+			[
+				"aria-label"
+			]
 		]
 	],
 	"11.1.5": [
@@ -3015,9 +3117,11 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"label",
-			"for",
+			[
+				"for"
+			],
 			{
 				"showMissing": true
 			}
@@ -3030,9 +3134,11 @@
 			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]",
-			"title",
+			[
+				"title"
+			],
 			{
 				"showTag": true
 			}
@@ -3045,9 +3151,11 @@
 			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
-			"aria-label"
+			[
+				"aria-label"
+			]
 		]
 	],
 	"11.2.4": [
@@ -3057,9 +3165,11 @@
 			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
-			"aria-labelledby",
+			[
+				"aria-labelledby"
+			],
 			{
 				"showTag": true
 			}
@@ -3201,7 +3311,9 @@
 			"showChildElements",
 			"select:has(optgroup)",
 			"optgroup",
-			["label"],
+			[
+				"label"
+			],
 			{
 				"showMissingAttributes": true
 			}
@@ -3225,7 +3337,9 @@
 			"showChildElements",
 			"select:has(optgroup)",
 			"optgroup",
-			["label"]
+			[
+				"label"
+			]
 		],
 		[
 			"showChildElements",
@@ -3256,14 +3370,18 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-labelledby]",
-			"aria-labelledby"
+			[
+				"aria-labelledby"
+			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[id]",
-			"id",
+			[
+				"id"
+			],
 			{
 				"showTag": true
 			}
@@ -3276,17 +3394,21 @@
 			"form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]",
-			"aria-labelledby",
+			[
+				"aria-labelledby"
+			],
 			{
 				"showTag": true
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[id]",
-			"id",
+			[
+				"id"
+			],
 			{
 				"showTag": true
 			}
@@ -3318,9 +3440,11 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-required='true']",
-			"aria-required",
+			[
+				"aria-required"
+			],
 			{
 				"showTag": true
 			}
@@ -3351,9 +3475,11 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-required='true']",
-			"aria-required",
+			[
+				"aria-required"
+			],
 			{
 				"showTag": true
 			}
@@ -3376,9 +3502,11 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-required='true']",
-			"aria-required",
+			[
+				"aria-required"
+			],
 			{
 				"showTag": true
 			}
@@ -3410,9 +3538,11 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-invalid='true']",
-			"aria-invalid",
+			[
+				"aria-invalid"
+			],
 			{
 				"showTag": true
 			}
@@ -3442,9 +3572,11 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-invalid='true']",
-			"aria-invalid",
+			[
+				"aria-invalid"
+			],
 			{
 				"showTag": true
 			}
@@ -3466,9 +3598,11 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-invalid='true']",
-			"aria-invalid",
+			[
+				"aria-invalid"
+			],
 			{
 				"showTag": true
 			}
@@ -3500,17 +3634,21 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-required='true']",
-			"aria-required",
+			[
+				"aria-required"
+			],
 			{
 				"showTag": true
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-invalid='true']",
-			"aria-invalid",
+			[
+				"aria-invalid"
+			],
 			{
 				"showTag": true
 			}
@@ -3541,17 +3679,21 @@
 			]
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-required='true']",
-			"aria-required",
+			[
+				"aria-required"
+			],
 			{
 				"showTag": true
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-invalid='true']",
-			"aria-invalid",
+			[
+				"aria-invalid"
+			],
 			{
 				"showTag": true
 			}
@@ -3640,17 +3782,21 @@
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-label]",
-			"aria-label",
+			[
+				"aria-label"
+			],
 			{
 				"showTag": true
 			}
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-invalid='true']",
-			"aria-invalid",
+			[
+				"aria-invalid"
+			],
 			{
 				"showTag": true
 			}
@@ -3716,9 +3862,11 @@
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, datalist, output, progress, meter"
 		],
 		[
-			"showAttribute",
+			"showAttributes",
 			"[aria-label]",
-			"aria-label",
+			[
+				"aria-label"
+			],
 			{
 				"showTag": true
 			}
@@ -3746,7 +3894,7 @@
 			]
 		]
 	],
-	"11.15.1":[
+	"11.15.1": [
 		"disableAllStyles"
 	],
 	"12.1.1": [
@@ -3895,7 +4043,7 @@
 			":focus{ border: 2px solid red !important; }"
 		]
 	],
-	"13.1.1" : [
+	"13.1.1": [
 		[
 			"outline",
 			"object, embed, svg, canvas",

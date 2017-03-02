@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import showAttribute from '../api/showAttribute';
+import serializeAttributes from '../api/serializeAttributes';
+import showCodeNearElement from '../api/showCodeNearElement';
 import showTagApi from '../api/showTag';
 import {sanitize} from '../api/selectors';
 
@@ -14,20 +15,41 @@ export const describe = (selector, attributes) => `
 `;
 
 /**
+ *	Shows a box containing attributes' name and value on
+ *	each element matched by the given selector.
  *
+ *	@param {string} id - UUID.
+ *	@param {string} selector - Selector.
+ *	@param {array} attributes - Attribute list.
+ *	@param {object} options - Options:
+ *		- {boolean} showMissing - Whether or not to show attributes
+ *			that aren't set.
+ *	@param {boolean} showTag - Whether or not to show the element's tag
  */
 export const apply = (id, selector, attributes, {showMissing = false, showTag = false} = {}) =>
 	$(selector).each((i, element) => {
-		attributes.forEach((attribute) =>
-			showAttribute(id, $(element), attribute, showMissing)
-		);
+		const $element = $(element);
+		const html = serializeAttributes($element, attributes, showMissing);
+
+		if (html) {
+			showCodeNearElement(
+				$element,
+				$('<code />', {
+					class: `${id} rgaaExt-Helper rgaaExt-ShowAttributesHelper`,
+					html
+				})
+			);
+		}
+
 		if (showTag) {
 			showTagApi(id, $(element));
 		}
 	});
 
 /**
+ *	Removes all boxes previously added using apply().
  *
+ *	@param {string} id - UUID.
  */
 export const revert = (id) =>
 	$(`.${id}`).remove();
