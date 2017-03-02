@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import serializeAttributes from '../api/serializeAttributes';
 import showCodeNearElement from '../api/showCodeNearElement';
-import showTagApi from '../api/showTag';
 import {sanitize} from '../api/selectors';
 
 
@@ -24,9 +23,8 @@ export const describe = (selector, attributes) => `
  *	@param {object} options - Options:
  *		- {boolean} showMissing - Whether or not to show attributes
  *			that aren't set.
- *	@param {boolean} showTag - Whether or not to show the element's tag
  */
-export const apply = (id, selector, attributes, {showMissing = false, showTag = false} = {}) =>
+export const apply = (id, selector, attributes, {showMissing = false} = {}) =>
 	$(selector).each((i, element) => {
 		const $element = $(element);
 		const html = serializeAttributes($element, attributes, showMissing);
@@ -39,10 +37,6 @@ export const apply = (id, selector, attributes, {showMissing = false, showTag = 
 					html
 				})
 			);
-		}
-
-		if (showTag) {
-			showTagApi(id, $(element));
 		}
 	});
 
