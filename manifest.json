@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "RGAA toolbar",
 	"description": "RGAA toolbar",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"icons": {
 		"48": "img/icon-48.png",
 		"96": "img/icon-96.png"
