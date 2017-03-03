@@ -6,16 +6,17 @@ Pour installer et utiliser l'extension, il y a actuellement deux façons de fair
 
 ### Installer directement un fichier zip
 
-* téléchargez le fichier de l'extension (*rgaa_toolbar-version.zip*) présent dans le dossier *dist* de la branche *publication* https://git.vtech.fr/sgmap/rgaa-toolbar/tree/publication/dist
+* Sur le projet Gitlab, allez dans *Repository > Tags* et téléchargez le fichier **rgaa_toolbar-version.zip** correspondant à la version souhaitée. Si vous n'êtes pas sûr, prenez la version la plus récente.
 * sur Chrome (version 52 et plus) :
-    * faites un drag&drop du fichier sur la page *chrome://extensions* : l'extension apparait
+    * extrayez l'archive où bon vous semble sur votre machine
+    * faites un drag&drop du dossier extrait sur la page *chrome://extensions* : l'extension apparait. S'il y a une erreur, essayez de drag&drop directement le fichier zip.
     * ouvrez un nouvel onglet pour pouvoir utiliser l'extension dessus
     * si au bout de quelques minutes, heures ou jours, Chrome désactive l'extension par sécurité, je sais pas trop ce que vous pouvez faire à part passer par la [méthode développeur](#installer-en-mode-d%C3%A9veloppeur)
 * sur Firefox : il semble y avoir des bugs avec Firefox Dev en ce moment, il faut donc installer l'extension en mode développeur sur Firefox le temps de tester
 
 ### Installer en mode développeur
 
-* téléchargez le zip de la branche *publication* entière https://git.vtech.fr/sgmap/rgaa-toolbar/repository/archive.zip?ref=publication
+* Sur le projet Gitlab, allez dans *Repository > Tags* et téléchargez le fichier **rgaa_toolbar-version.zip** correspondant à la version souhaitée. Si vous n'êtes pas sûr, prenez la version la plus récente.
 * extrayez l'archive où bon vous semble sur votre machine
 * sur Chrome (version 52 et plus) :
     * allez sur la page *chrome://extensions* et activez le "Mode développeur" (case en haut à droite)
