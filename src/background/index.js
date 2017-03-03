@@ -154,16 +154,7 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
  */
 chrome.browserAction.onClicked.addListener(() =>
 	fetchCurrentTab().then((tab) => {
-		if (instances.hasInstance(tab.id)
-			&& (
-				isFirefox()
-				|| confirm([
-					'Attention : en fermant l\'extension, ',
-					'votre travail en cours sera perdu.',
-					'\n\nÊtes-vous sûr de vouloir continuer ?'
-				].join(''))
-			)
-		) {
+		if (instances.hasInstance(tab.id)) {
 			closePanel(tab);
 		}
 
