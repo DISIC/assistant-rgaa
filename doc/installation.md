@@ -23,7 +23,7 @@ Pour installer et utiliser l'extension, il y a actuellement deux façons de fair
     * sélectionnez le dossier que vous venez d'extraire. Ce dossier contient les dossiers *bin*, *css*, *data*, *dist*, etc.
     * l'extension apparait !
     * ouvrez un nouvel onglet pour pouvoir utiliser l'extension dessus
-* sur Firefox (version 48 et plus, ou Developer Edition) :
+* sur Firefox (version 48 et plus, pas Developer Edition) :
     * allez sur la page *about:addons*, cliquez sur la roue en haut à droite, puis sur "Deboguer des modules"
     * sélectionnez le fichier *manifest.json* contenu dans le dossier que vous avez extrait
     * l'extension apparait !
