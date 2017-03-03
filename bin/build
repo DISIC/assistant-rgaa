@@ -12,6 +12,6 @@ echo -e "\e[33m## Making the webpack build… This might take a few minutes.\e[0
 npm run build -- --devtool null
 echo -e "\e[33m## Making the extension build…\e[0m"
 npm run extension
-git add -f dist/*.{js,css,zip}
+git add -f dist/*.{js,css,svg,zip}
 git commit -m "new build"
 echo -e "\e[32m## Build done and commited! Please verify before pushing.\e[0m"
