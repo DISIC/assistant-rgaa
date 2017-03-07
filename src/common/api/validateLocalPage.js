@@ -18,7 +18,7 @@ export const validateLocalPage = (url) => {
 		)
 		.then(currentTab => (
 			createTab({
-				url: chrome.runtime.getURL('src/common/content/validateLocalPage.html'),
+				url: chrome.runtime.getURL('pages/validateLocalPage.html'),
 				index: currentTab.index + 1
 			})
 		))

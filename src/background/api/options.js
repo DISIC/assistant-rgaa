@@ -1,7 +1,7 @@
 /**
  *
  */
-export const OPTIONS_FILE = 'src/options/content.html';
+export const OPTIONS_FILE = 'pages/options.html';
 
 /**
  *

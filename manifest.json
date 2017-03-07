@@ -39,11 +39,11 @@
 		}
 	],
 	"options_ui": {
-		"page": "src/options/content.html"
+		"page": "pages/options.html"
 	},
 	"web_accessible_resources": [
-		"src/container/content.html",
-		"src/devtools/content.html",
+		"pages/container.html",
+		"pages/devtools.html",
 		"data/helpers/3.json",
 		"data/instructions/3.json",
 		"data/references/3.json",

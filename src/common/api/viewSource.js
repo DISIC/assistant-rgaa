@@ -18,7 +18,7 @@ export const viewSource = (url) => {
 		)
 		.then(currentTab => (
 			createTab({
-				url: chrome.runtime.getURL('src/common/content/viewSource.html'),
+				url: chrome.runtime.getURL('pages/viewSource.html'),
 				index: currentTab.index + 1
 			})
 		))
