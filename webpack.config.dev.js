@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const VisualizerPlugin = require('webpack-visualizer-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const config = require('./webpack.config');
 const fullPath = path.resolve.bind(null, __dirname);
@@ -26,6 +27,7 @@ config.plugins.push(
 	new webpack.DefinePlugin({
 		'process.env.NODE_ENV': JSON.stringify('development')
 	}),
+	new VisualizerPlugin(),
 	new StyleLintPlugin({
 		failOnError: false,
 		syntax: 'scss'
