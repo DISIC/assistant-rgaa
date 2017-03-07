@@ -8,7 +8,7 @@
     "serve": "webpack-dev-server --config webpack.config.dev.js",
     "icons": "spritesh --input ./icons --output ./dist/icons.svg",
     "build": "npm run clean && npm run icons && webpack --config webpack.config.production.js",
-    "extension": "web-ext build --artifacts-dir=dist/",
+    "extension": "web-ext build --artifacts-dir artifacts/ --ignore-files ./bin ./css ./doc ./fixtures ./src ./test ./karma.conf.js ./package.json ./webpack.config.*",
     "clean": "npm prune && npm install && npm dedupe",
     "test": "karma start"
   },
@@ -70,7 +70,7 @@
     "stylelint-config-vtech": "^0.2.0",
     "stylelint-webpack-plugin": "^0.2.0",
     "watch": "^0.18.0",
-    "web-ext": "^1.4.0",
+    "web-ext": "^1.8.1",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-visualizer-plugin": "^0.1.5"
