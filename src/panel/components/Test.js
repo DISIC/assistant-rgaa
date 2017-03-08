@@ -14,10 +14,15 @@ import TestHelpersContainer from './TestHelpersContainer';
  */
 function Test({
 	id, title, instructions, importResult, applicable, applied,
+	areInstructionsOpen, toggleInstructions,
 	done, onApply, onDone, intl
 }) {
-	const handleApplyChange = (event) =>
+	const handleApplyChange = (event) => {
 		onApply(event.target.checked);
+		if (event.target.checked) {
+			toggleInstructions(true);
+		}
+	};
 
 	const handleDoneChange = (event) =>
 		onDone(event.target.checked);
@@ -99,7 +104,11 @@ function Test({
 			))}
 
 			{renderIf(instructions)(() => (
-				<TestInstructions instructions={instructions} />
+				<TestInstructions
+					instructions={instructions}
+					isOpen={areInstructionsOpen}
+					onToggleRequest={toggleInstructions}
+				/>
 			))}
 		</article>
 	);
@@ -115,7 +124,9 @@ Test.propTypes = {
 	done: PropTypes.bool,
 	onApply: PropTypes.func,
 	onDone: PropTypes.func,
-	intl: intlShape.isRequired
+	intl: intlShape.isRequired,
+	areInstructionsOpen: PropTypes.bool,
+	toggleInstructions: PropTypes.func
 };
 
 Test.defaultProps = {

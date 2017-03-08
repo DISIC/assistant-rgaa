@@ -1,15 +1,13 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
 import classNames from 'classnames';
-import {curryRight} from 'lodash';
-import {compose, withState} from 'recompose';
 
 
 
 /**
  *
  */
-function TestInstructions({isOpen, setOpenState, instructions}) {
+function TestInstructions({isOpen, onToggleRequest, instructions}) {
 	const containerClass = classNames('TestInstructions', {
 		'is-open': isOpen
 	});
@@ -18,7 +16,7 @@ function TestInstructions({isOpen, setOpenState, instructions}) {
 	});
 
 	const toggle = () =>
-		setOpenState(!isOpen);
+		onToggleRequest(!isOpen);
 
 	return (
 		<div className={containerClass}>
@@ -45,13 +43,9 @@ function TestInstructions({isOpen, setOpenState, instructions}) {
 TestInstructions.propTypes = {
 	instructions: PropTypes.string,
 	isOpen: PropTypes.bool.isRequired,
-	setOpenState: PropTypes.func.isRequired
+	onToggleRequest: PropTypes.func.isRequired
 };
 
-// @see https://github.com/yahoo/react-intl/issues/498#issuecomment-228672077
-const injectIntlDecorator = curryRight(injectIntl);
 
-export default compose(
-	injectIntlDecorator(),
-	withState('isOpen', 'setOpenState', false)
-)(TestInstructions);
+
+export default injectIntl(TestInstructions);

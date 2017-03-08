@@ -1,4 +1,5 @@
 import {connect} from 'react-redux';
+import {compose, withState} from 'recompose';
 import {isTestDone} from '../../common/selectors/checklist';
 import {isEnabled} from '../../common/selectors/tests';
 import {getInstructionsByTest} from '../../common/selectors/instructions';
@@ -35,7 +36,14 @@ const mapDispatchToProps = (dispatch, {id}) => ({
 
 
 
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+export default compose(
+	connect(
+		mapStateToProps,
+		mapDispatchToProps
+	),
+	withState(
+		'areInstructionsOpen',
+		'toggleInstructions',
+		(props) => (props.applied)
+	)
 )(Test);
