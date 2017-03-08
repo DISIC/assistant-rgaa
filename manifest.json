@@ -10,7 +10,7 @@
 	"applications": {
 		"gecko": {
 			"id": "rgaa-toolbar@vtech.fr",
-			"strict_min_version": "45"
+			"strict_min_version": "51.0"
 		}
 	},
 	"browser_action": {
