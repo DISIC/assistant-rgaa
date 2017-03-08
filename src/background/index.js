@@ -12,11 +12,10 @@ import {
 	fetchCurrentTab, captureVisibleTab, closeTab, createTab
 } from './api/tabs';
 import {createMessageHandler} from '../common/api/runtime';
-import {getOption} from '../common/api/options';
 import {getPixelAt} from '../common/api/image';
 import {validateLocalPage} from '../common/api/validateLocalPage';
 import {viewSource} from '../common/api/viewSource';
-import {DEFAULT_VERSION} from '../common/api/reference';
+import {DEFAULT_VERSION, getReferenceOption} from '../common/api/reference';
 import {setReferenceVersion} from '../common/actions/reference';
 import {setPageInfo} from '../common/actions/panel';
 import {isFirefox, isChrome} from '../common/api/uasniffer';
@@ -52,7 +51,7 @@ const openPanel = ({id, url, title}) => {
 			type: OPEN_PANEL
 		})
 		.then(() =>
-			getOption('reference')
+			getReferenceOption()
 		)
 		.then((version = DEFAULT_VERSION) => {
 			instance.dispatch(setReferenceVersion(version));
