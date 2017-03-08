@@ -6,11 +6,11 @@
   "scripts": {
     "start": "webpack --watch --config webpack.config.dev.js",
     "serve": "webpack-dev-server --config webpack.config.dev.js",
-    "icons": "spritesh --input ./icons --output ./dist/icons.svg",
+    "icons": "touch ./dist/icons.svg && spritesh --input ./icons --output ./dist/icons.svg",
     "build": "npm run clean && npm run icons && webpack --config webpack.config.production.js",
-    "extension": "web-ext build --artifacts-dir artifacts/ --ignore-files ./bin ./css ./doc ./fixtures ./src ./test ./karma.conf.js ./package.json ./webpack.config.*",
-    "sign": "web-ext sign --artifacts-dir artifacts/ --ignore-files ./bin ./css ./doc ./fixtures ./src ./test ./karma.conf.js ./package.json ./webpack.config.*",
-    "clean": "npm prune && npm install && npm dedupe",
+    "build-extension": "npm run build && web-ext build --artifacts-dir artifacts/ --ignore-files ./bin ./css ./doc ./fixtures ./src ./test ./karma.conf.js ./package.json ./webpack.config.*",
+    "sign-extension": "npm run build && web-ext sign --artifacts-dir artifacts/ --ignore-files ./bin ./css ./doc ./fixtures ./src ./test ./karma.conf.js ./package.json ./webpack.config.*",
+    "clean": "rm -f ./dist/*",
     "test": "karma start"
   },
   "devDependencies": {
