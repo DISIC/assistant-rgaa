@@ -99,16 +99,16 @@ function Test({
 				</div>
 			</header>
 
-			{renderIf(applied)(() => (
-				<TestHelpersContainer id={id} />
-			))}
-
 			{renderIf(instructions)(() => (
 				<TestInstructions
 					instructions={instructions}
 					isOpen={areInstructionsOpen}
 					onToggleRequest={toggleInstructions}
 				/>
+			))}
+
+			{renderIf(applied)(() => (
+				<TestHelpersContainer id={id} />
 			))}
 		</article>
 	);
