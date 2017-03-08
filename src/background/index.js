@@ -18,6 +18,7 @@ import {viewSource} from '../common/api/viewSource';
 import {DEFAULT_VERSION, getReferenceOption} from '../common/api/reference';
 import {setReferenceVersion} from '../common/actions/reference';
 import {setPageInfo} from '../common/actions/panel';
+import {revertAllHelpers} from '../common/actions/helpers';
 import {isFirefox, isChrome} from '../common/api/uasniffer';
 import createInstancePool from './createInstancePool';
 
@@ -66,8 +67,9 @@ const openPanel = ({id, url, title}) => {
  *
  */
 const closePanel = ({id}) => {
-	instances
-		.getInstance(id)
+	const instance = instances.getInstance(id);
+	instance.dispatch(revertAllHelpers());
+	instance
 		.sendMessage({
 			type: CLOSE_PANEL
 		})

@@ -1,7 +1,9 @@
 import {takeEvery} from 'redux-saga';
-import {call} from 'redux-saga/effects';
-import {APPLY, REVERT} from '../actions/helpers';
+import {call, put, select} from 'redux-saga/effects';
+import {APPLY, REVERT, REVERT_ALL, revertHelpers} from '../actions/helpers';
 import * as helpersApi from '../../helpers/api/helpers';
+import {getEnabled} from '../selectors/tests';
+import {getHelpersByTest} from '../selectors/helpers';
 
 
 
@@ -19,6 +21,18 @@ function* revertSaga({payload: {id, helpers}}) {
 	yield call(helpersApi.revertHelpers, id, helpers);
 }
 
+/**
+ *
+ */
+function* revertAllSaga() {
+	const enabledTests = yield select(getEnabled);
+
+	for (const test of enabledTests) {
+		const helpers = yield select(getHelpersByTest, test.id);
+		yield put(revertHelpers(test.id, helpers));
+	}
+}
+
 
 
 /**
@@ -33,4 +47,11 @@ export function* watchApply() {
  */
 export function* watchRevert() {
 	yield* takeEvery(REVERT, revertSaga);
+}
+
+/**
+ *
+ */
+export function* watchRevertAll() {
+	yield* takeEvery(REVERT_ALL, revertAllSaga);
 }
