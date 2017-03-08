@@ -31,7 +31,7 @@ const messages = {
 	'Import.file.label': 'Sélectionnez un fichier d\'import : ',
 	'Import.success': 'Vérification du fichier… OK. Vous pouvez lancer l\'import.',
 	'Import.failure': 'Votre fichier ne suit pas le format attendu. Veuillez corriger les erreurs :',
-	'Import.submit': 'Lancer l\'import',
+	'Import.submit': 'Importer',
 	'Import.reset': 'Réinitialiser',
 	'Import.singleReset': 'Réinitialiser les données d\'import actuelles',
 	'Import.versionDifference': `&#9888; La version du référentiel RGAA utilisée par
