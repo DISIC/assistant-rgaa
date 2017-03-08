@@ -4,9 +4,7 @@ export const DEFAULT_VERSION = '3-2016';
  * get an array of {name, filename, version}
  */
 export const getReferencesList = () => ([
-	{name: 'RGAA 3', version: '3'},
-	{name: 'RGAA 3-2016', version: '3-2016'},
-	{name: 'RGAA 4.2', version: '4.2'}
+	{name: 'RGAA 3-2016', version: '3-2016'}
 ]);
 
 /*

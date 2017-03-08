@@ -44,10 +44,6 @@
 	"web_accessible_resources": [
 		"pages/container.html",
 		"pages/devtools.html",
-		"data/helpers/3.json",
-		"data/instructions/3.json",
-		"data/references/3.json",
-		"data/references/3-2016.json",
-		"data/references/4.2.json"
+		"data/references/3-2016.json"
 	]
 }
