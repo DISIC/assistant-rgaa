@@ -30,12 +30,16 @@ import createInstancePool from './createInstancePool';
 const instances = createInstancePool();
 
 /**
- *
+ *	Injects content scripts, one after the other.
  */
 const injectContentScripts = (tabId) =>
-	Promise.all(CONTENT_SCRIPTS.map(file =>
-		executeScript(tabId, {file})
-	));
+	CONTENT_SCRIPTS.reduce(
+		(promise, file) =>
+			promise.then(() =>
+				executeScript(tabId, {file})
+			),
+		Promise.resolve()
+	);
 
 /**
  *
