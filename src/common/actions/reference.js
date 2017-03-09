@@ -5,6 +5,7 @@ export const FETCH_THEME = 'common/reference/FETCH';
 export const SET_REFERENCE = 'common/reference/SET_REFERENCE';
 export const SET_REFERENCE_VERSION = 'common/reference/SET_REFERENCE_VERSION';
 export const SET_THEMES = 'common/reference/SET_THEMES';
+export const SET_CRITERIA = 'common/criteria/SET_CRITERIA';
 
 
 
@@ -34,4 +35,12 @@ export const setReference = (data) => ({
 export const setThemes = (themes) => ({
 	type: SET_THEMES,
 	payload: themes
+});
+
+/**
+ *
+ */
+export const setCriteria = (criteria) => ({
+	type: SET_CRITERIA,
+	payload: criteria
 });

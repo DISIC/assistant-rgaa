@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {get, property} from 'lodash';
 import Theme from './Theme';
 import renderNothingUntil from '../../common/renderNothingUntil';
-import {getAllByTheme} from '../../common/selectors/criteria';
+import {getAllCriteriaByTheme} from '../../common/selectors/reference';
 
 
 
@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 	const themeId = get(ownProps.theme, 'id', null);
 
 	return {
-		criteria: getAllByTheme(state, themeId)
+		criteria: getAllCriteriaByTheme(state, themeId)
 	};
 };
 

@@ -5,7 +5,6 @@ import {getReference, flattenReference} from '../api/reference';
 import {getHelpers} from '../api/helpers';
 import {fetchInstructions} from '../api/instructions';
 import * as referenceActions from '../actions/reference';
-import * as criteriaActions from '../actions/criteria';
 import * as testsActions from '../actions/tests';
 import {setHelpers} from '../actions/helpers';
 import {set as setInstructions} from '../actions/instructions';
@@ -28,7 +27,7 @@ function* setReferenceVersionWorker({payload: {version}}) {
 	yield put(resetChecklist());
 	yield put(referenceActions.setReference(flattened.reference));
 	yield put(referenceActions.setThemes(flattened.themes));
-	yield put(criteriaActions.setAll(flattened.criteria));
+	yield put(referenceActions.setCriteria(flattened.criteria));
 	yield put(testsActions.setAll(flattened.tests));
 	yield put(setHelpers(helpers));
 	yield put(setInstructions(instructions));

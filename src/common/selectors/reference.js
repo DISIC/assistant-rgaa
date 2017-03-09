@@ -1,4 +1,4 @@
-import {mapValues, property} from 'lodash';
+import {map, filter, property} from 'lodash';
 
 
 
@@ -21,5 +21,16 @@ export const getAllThemes = property('reference.themes');
 /**
  *
  */
-export const getCriteriaIdsByTheme = (state) =>
-	mapValues(getAllThemes(state), 'id');
+export const getAllCriteria = property('reference.criteria');
+
+/**
+ *
+ */
+export const getCriteriaIds = (state) =>
+	map(getAllCriteria(state), 'id');
+
+/**
+ *
+ */
+export const getAllCriteriaByTheme = (state, themeId) =>
+	filter(getAllCriteria(state), ['themeId', themeId]);
