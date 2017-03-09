@@ -14,3 +14,7 @@ summary {
 button:disabled {
 	cursor: default;
 }
+
+*:focus {
+	outline: 2px solid orange;
+}
