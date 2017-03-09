@@ -4,7 +4,7 @@ import {setOption} from '../api/options';
 import {getReference, flattenReference} from '../api/reference';
 import {getHelpers} from '../api/helpers';
 import {fetchInstructions} from '../api/instructions';
-import * as referenceActions from '../actions/reference';
+import {setData, SET_REFERENCE_VERSION} from '../actions/reference';
 import {setHelpers} from '../actions/helpers';
 import {set as setInstructions} from '../actions/instructions';
 import {reset as resetChecklist} from '../actions/checklist';
@@ -24,10 +24,7 @@ function* setReferenceVersionWorker({payload: {version}}) {
 	const flattened = flattenReference(reference);
 
 	yield put(resetChecklist());
-	yield put(referenceActions.setReference(flattened.reference));
-	yield put(referenceActions.setThemes(flattened.themes));
-	yield put(referenceActions.setCriteria(flattened.criteria));
-	yield put(referenceActions.setTests(flattened.tests));
+	yield put(setData(flattened));
 	yield put(setHelpers(helpers));
 	yield put(setInstructions(instructions));
 
@@ -40,6 +37,6 @@ function* setReferenceVersionWorker({payload: {version}}) {
  *
  */
 export function* watchSetReferenceVersion() {
-	yield* takeEvery(referenceActions.SET_REFERENCE_VERSION, setReferenceVersionWorker);
+	yield* takeEvery(SET_REFERENCE_VERSION, setReferenceVersionWorker);
 }
 

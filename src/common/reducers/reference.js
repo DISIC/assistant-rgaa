@@ -1,4 +1,4 @@
-import {SET_REFERENCE, SET_THEMES, SET_CRITERIA, SET_TESTS} from '../actions/reference';
+import {SET_DATA} from '../actions/reference';
 
 
 
@@ -6,7 +6,7 @@ import {SET_REFERENCE, SET_THEMES, SET_CRITERIA, SET_TESTS} from '../actions/ref
  *
  */
 export const initialState = {
-	data: {},
+	reference: {},
 	themes: {},
 	criteria: {},
 	tests: {}
@@ -17,28 +17,12 @@ export const initialState = {
  */
 export default function reference(state = initialState, {type, payload}) {
 	switch (type) {
-		case SET_REFERENCE:
+		case SET_DATA:
 			return {
-				...state,
-				data: payload.data
-			};
-
-		case SET_THEMES:
-			return {
-				...state,
-				themes: payload
-			};
-
-		case SET_CRITERIA:
-			return {
-				...state,
-				criteria: payload
-			};
-
-		case SET_TESTS:
-			return {
-				...state,
-				tests: payload
+				reference: payload.reference,
+				themes: payload.themes,
+				criteria: payload.criteria,
+				tests: payload.tests
 			};
 
 		default:

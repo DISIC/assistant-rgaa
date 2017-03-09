@@ -1,11 +1,11 @@
-import {map, filter, property, get} from 'lodash';
+import {map, filter, property} from 'lodash';
 
 
 
 /**
  *
  */
-export const getVersion = property('reference.data.version');
+export const getVersion = property('reference.reference.version');
 
 /**
  *
