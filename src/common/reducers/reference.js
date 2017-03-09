@@ -1,4 +1,4 @@
-import {SET_REFERENCE} from '../actions/reference';
+import {SET_REFERENCE, SET_THEMES} from '../actions/reference';
 
 
 
@@ -6,7 +6,10 @@ import {SET_REFERENCE} from '../actions/reference';
  *
  */
 export const initialState = {
-	data: {}
+	data: {},
+	themes: {},
+	criteria: {},
+	tests: {}
 };
 
 /**
@@ -18,6 +21,12 @@ export default function reference(state = initialState, {type, payload}) {
 			return {
 				...state,
 				data: payload.data
+			};
+
+		case SET_THEMES:
+			return {
+				...state,
+				themes: payload
 			};
 
 		default:

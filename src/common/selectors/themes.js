@@ -1,17 +1,6 @@
-import {get, property, mapValues} from 'lodash';
+import {get} from 'lodash';
 
 
-
-/**
- *
- */
-export const getAll = property('themes.list');
-
-/**
- *
- */
-export const getCriteriaIdsByTheme = (state) =>
-	mapValues(getAll(state), 'id');
 
 /**
  *

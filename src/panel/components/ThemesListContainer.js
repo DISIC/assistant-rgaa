@@ -1,7 +1,8 @@
 import {connect} from 'react-redux';
 import {values} from 'lodash';
 import {toggleMenu} from '../../common/actions/themes';
-import * as themes from '../../common/selectors/themes';
+import {getAllThemes} from '../../common/selectors/reference';
+import {isMenuOpen} from '../../common/selectors/themes';
 import ThemesList from './ThemesList';
 
 
@@ -10,8 +11,8 @@ import ThemesList from './ThemesList';
  *
  */
 const mapStateToProps = (state) => ({
-	themes: values(themes.getAll(state)),
-	isOpen: themes.isMenuOpen(state)
+	themes: values(getAllThemes(state)),
+	isOpen: isMenuOpen(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({
