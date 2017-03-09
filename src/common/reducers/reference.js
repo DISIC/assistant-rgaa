@@ -1,4 +1,4 @@
-import {SET_REFERENCE, SET_THEMES, SET_CRITERIA} from '../actions/reference';
+import {SET_REFERENCE, SET_THEMES, SET_CRITERIA, SET_TESTS} from '../actions/reference';
 
 
 
@@ -33,6 +33,12 @@ export default function reference(state = initialState, {type, payload}) {
 			return {
 				...state,
 				criteria: payload
+			};
+
+		case SET_TESTS:
+			return {
+				...state,
+				tests: payload
 			};
 
 		default:

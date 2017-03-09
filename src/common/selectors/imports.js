@@ -1,7 +1,7 @@
 import {
 	property, isEmpty, get, fromPairs, upperFirst, mapValues, groupBy, countBy, map
 } from 'lodash';
-import {getIds as getTestIds} from './tests';
+import {getTestIds} from './reference';
 
 
 

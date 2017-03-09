@@ -1,5 +1,5 @@
-import update from 'react-addons-update';
-import {SET_ALL, ENABLE, DISABLE} from '../actions/tests';
+import {without} from 'lodash';
+import {ENABLE, DISABLE} from '../actions/tests';
 
 
 
@@ -7,7 +7,7 @@ import {SET_ALL, ENABLE, DISABLE} from '../actions/tests';
  *
  */
 export const initialState = {
-	list: {}
+	enabled: []
 };
 
 /**
@@ -15,33 +15,17 @@ export const initialState = {
  */
 export default function tests(state = initialState, {type, payload}) {
 	switch (type) {
-		case SET_ALL:
+		case ENABLE:
 			return {
 				...state,
-				list: payload
+				enabled: [...state.enabled, payload]
 			};
 
-		case ENABLE:
-			return update(state, {
-				list: {
-					[payload]: {
-						enabled: {
-							$set: true
-						}
-					}
-				}
-			});
-
 		case DISABLE:
-			return update(state, {
-				list: {
-					[payload]: {
-						enabled: {
-							$set: false
-						}
-					}
-				}
-			});
+			return {
+				...state,
+				enabled: without(state.enabled, payload)
+			};
 
 		default:
 			return state;

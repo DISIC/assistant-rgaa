@@ -1,38 +1,26 @@
-import {get, property, filter, map} from 'lodash';
+import {includes, property, filter} from 'lodash';
+import {getAllTests} from './reference';
 
 
 
 /**
  *
  */
-export const getAll = property('tests.list');
+export const getEnabledIds = property('tests.enabled');
 
 /**
  *
  */
-export const getOne = (state, id) =>
-	get(getAll(state), id);
+export const getEnabled = (state) => {
+	const tests = getAllTests(state);
+	const enabledIds = getEnabledIds(state);
+	return filter(tests, ({id}) =>
+		includes(enabledIds, id)
+	);
+};
 
 /**
  *
  */
 export const isEnabled = (state, id) =>
-	get(getAll(state), [id, 'enabled'], false);
-
-/**
- *
- */
-export const getEnabled = (state) =>
-	filter(getAll(state), 'enabled');
-
-/**
- *
- */
-export const getIds = (state) =>
-	map(getAll(state), 'id');
-
-/**
- *
- */
-export const getAllByCriterion = (state, criterionId) =>
-	filter(getAll(state), ['criterionId', criterionId]);
+	includes(getEnabledIds(state), id);

@@ -16,7 +16,6 @@ import imports from './imports';
  */
 export const sharedReducers = {
 	reference,
-	tests,
 	helpers
 };
 
@@ -27,6 +26,7 @@ export const appReducers = {
 	panel,
 	themes,
 	criteria,
+	tests,
 	instructions,
 	checklist,
 	imports

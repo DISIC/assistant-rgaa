@@ -1,19 +1,10 @@
 /**
  *
  */
-export const SET_ALL = 'common/tests/SET_ALL';
 export const ENABLE = 'common/tests/ENABLE';
 export const DISABLE = 'common/tests/DISABLE';
 
 
-
-/**
- *
- */
-export const setAll = (tests) => ({
-	type: SET_ALL,
-	payload: tests
-});
 
 /**
  *
