@@ -1374,12 +1374,14 @@
 	],
 	"3.1.4": [],
 	"3.1.5": [
+		"disableAllStyles",
 		[
 			"outline",
 			"object, video, object, embed, svg, canvas"
 		]
 	],
 	"3.1.6": [
+		"disableAllStyles",
 		[
 			"outline",
 			"object, object, embed, svg, canvas"
@@ -1396,12 +1398,14 @@
 	],
 	"3.2.4": [],
 	"3.2.5": [
+		"disableAllStyles",
 		[
 			"outline",
 			"object, video, object, embed, svg, canvas"
 		]
 	],
 	"3.2.6": [
+		"disableAllStyles",
 		[
 			"outline",
 			"object, object, embed, svg, canvas"
