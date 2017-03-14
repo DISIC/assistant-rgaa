@@ -1376,13 +1376,13 @@
 	"3.1.5": [
 		[
 			"outline",
-			"object, video, object, embed, svg, cavnas"
+			"object, video, object, embed, svg, canvas"
 		]
 	],
 	"3.1.6": [
 		[
 			"outline",
-			"object, object, embed, svg, cavnas"
+			"object, object, embed, svg, canvas"
 		]
 	],
 	"3.2.1": [],
@@ -1398,13 +1398,13 @@
 	"3.2.5": [
 		[
 			"outline",
-			"object, video, object, embed, svg, cavnas"
+			"object, video, object, embed, svg, canvas"
 		]
 	],
 	"3.2.6": [
 		[
 			"outline",
-			"object, object, embed, svg, cavnas"
+			"object, object, embed, svg, canvas"
 		]
 	],
 	"3.3.1": [
