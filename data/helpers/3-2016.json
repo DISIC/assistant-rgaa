@@ -2725,10 +2725,21 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"ul, ul li, [role='list'], [role='list'] [role='listitem']",
+			"ul, ul li",
 			{
 				"showTag": true
 			}
+		],
+		[
+			"outline",
+			"[role='list'], [role='list'] [role='listitem']"
+		],
+		[
+			"showAttributes",
+			"[role='list'], [role='list'] [role='listitem']",
+			[
+				"role"
+			]
 		]
 	],
 	"9.3.2": [
