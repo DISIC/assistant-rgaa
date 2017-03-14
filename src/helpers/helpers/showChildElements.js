@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import {cond, list} from '../api/description';
 import serializeElement from '../api/serializeElement';
 import showCodeNearElement from '../api/showCodeNearElement';
 import {sanitize} from '../api/selectors';
@@ -8,11 +9,23 @@ import {sanitize} from '../api/selectors';
 /**
  *	Describes the helper.
  */
-export const describe = (selector, childrenSelector, attributes = []) => `
-	Pour chaque élément <code>${sanitize(selector)}</code>,
-	affiche les éléments enfants <code>${sanitize(childrenSelector)}</code>
-	et leurs attributs <code>${attributes.join(', ')}</code>.
-`;
+export const describe = (selector, childrenSelector, attributes = [], {
+	showEmpty = false,
+	showName = true,
+	showMissingAttributes = false,
+	showContent = false
+} = {}) =>
+	list(
+		`Pour chaque élément <code>${sanitize(selector)}</code>,
+		affiche les éléments enfants <code>${sanitize(childrenSelector)}</code>
+		${cond(showEmpty, '(y compris si ils sont vides)')}`,
+		cond(showName, 'leur type'),
+		cond(attributes.length,
+			`leurs attributs <code>${attributes.join(', ')}</code>
+			${cond(showMissingAttributes, '(y compris si ils ne sont pas définis)')}`
+		),
+		cond(showContent, 'leur contenu')
+	);
 
 /**
  *	Shows a DOM element.

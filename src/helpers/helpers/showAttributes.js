@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import {cond} from '../api/description';
 import serializeAttributes from '../api/serializeAttributes';
 import showCodeNearElement from '../api/showCodeNearElement';
 import {sanitize} from '../api/selectors';
@@ -8,10 +9,10 @@ import {sanitize} from '../api/selectors';
 /**
  *	Describes the helper.
  */
-export const describe = (selector, attributes) => `
-	Affiche les attributs <code>${attributes.join(', ')}</code>
-	des éléments <code>${sanitize(selector)}</code>.
-`;
+export const describe = (selector, attributes, {showMissing = false} = {}) =>
+	`Affiche les attributs <code>${attributes.join(', ')}</code>
+	des éléments <code>${sanitize(selector)}</code>
+	${cond(showMissing, '(y compris si ils ne sont pas définis)')}`;
 
 /**
  *	Shows a box containing attributes' name and value on
