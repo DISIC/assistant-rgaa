@@ -407,7 +407,7 @@
 		],
 		[
 			"showElement",
-			"canvas[title], canvas[aria-label], canvas[aria-labelledby]",
+			"canvas:not(:empty), canvas[title], canvas[aria-label], canvas[aria-labelledby]",
 			[
 				"title",
 				"aria-label",
