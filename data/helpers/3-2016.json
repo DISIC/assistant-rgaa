@@ -3205,20 +3205,7 @@
 			]
 		]
 	],
-	"11.4.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
-		]
-	],
+	"11.4.1": [],
 	"11.5.1": [
 		"disableAllStyles",
 		[
