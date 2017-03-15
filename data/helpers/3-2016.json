@@ -2821,10 +2821,7 @@
 			"abbr, a",
 			[
 				"title"
-			],
-			{
-				"showMissing": true
-			}
+			]
 		]
 	],
 	"9.5.1": [
@@ -2838,10 +2835,7 @@
 			"abbr, a",
 			[
 				"title"
-			],
-			{
-				"showMissing": true
-			}
+			]
 		]
 	],
 	"9.6.1": [
