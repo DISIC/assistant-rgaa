@@ -2113,16 +2113,7 @@
 			"showAttributes",
 			"table th, table td",
 			[
-				"id"
-			],
-			{
-				"showMissing": true
-			}
-		],
-		[
-			"showAttributes",
-			"table th, table td",
-			[
+				"id",
 				"headers"
 			],
 			{
