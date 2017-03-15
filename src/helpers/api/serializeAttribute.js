@@ -13,15 +13,29 @@ const linkAttributes = [
 ];
 
 /**
- *	Transforms the given id into a link.
+ *	Transforms the given id into a link if possible, otherwise just return the id
  */
 const linkId = (id) => {
-	const count = document.querySelectorAll(`#${id}`).length;
+	let elements;
+	let error = false;
+
+	try {
+		elements = document.querySelectorAll(`#${id}`);
+	} catch (e) {
+		error = true;
+	}
+
+	// return a simple text if we can't link to the given id
+	if (error || elements.length === 0) {
+		return id;
+	}
+
+	const count = elements.length;
 	const countString = (count !== 1)
 		? ` (${count})`
 		: '';
 
-	return `<a class="rgaaExt-Attribute-link" href="#${id}">#${id}${countString}</a>`;
+	return `<a class="rgaaExt-Attribute-link" href="#${id}">${id}${countString}</a>`;
 };
 
 /**
