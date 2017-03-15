@@ -3980,11 +3980,11 @@
 	"13.2.1": [
 		[
 			"outline",
-			"a[target='_blank']"
+			"a[target]:not([target='_self'], [target='_top'], [target='_parent'])"
 		],
 		[
 			"showAttributes",
-			"a[target='_blank']",
+			"a[target]:not([target='_self'], [target='_top'], [target='_parent'])",
 			[
 				"title",
 				"target"
