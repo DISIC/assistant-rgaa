@@ -2754,6 +2754,17 @@
 			{
 				"showTag": true
 			}
+		],
+		[
+			"outline",
+			"[role='list'], [role='list'] [role='listitem']"
+		],
+		[
+			"showAttributes",
+			"[role='list'], [role='list'] [role='listitem']",
+			[
+				"role"
+			]
 		]
 	],
 	"9.3.3": [
