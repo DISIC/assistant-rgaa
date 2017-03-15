@@ -6,9 +6,10 @@ import ViewSourceContainer from '../components/ViewSourceContainer';
 /**
  *	Describes the helper.
  */
-export const describe = () => (
-	'Ouvre l\'outil externe "Voir les sources".'
-);
+export const describe = (intl) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.viewSource'
+	});
 
 /**
  *

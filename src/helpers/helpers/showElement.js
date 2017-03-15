@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import join from '../../common/api/join';
 import serializeElement from '../api/serializeElement';
 import showCodeNearElement from '../api/showCodeNearElement';
 import {sanitize} from '../api/selectors';
@@ -8,10 +9,23 @@ import {sanitize} from '../api/selectors';
 /**
  *	Describes the helper.
  */
-export const describe = (selector, attributes = []) => `
-	Affiche les éléments <code>${sanitize(selector)}</code>,
-	et leurs attributs <code>${attributes.join(', ')}</code>.
-`;
+export const describe = (intl, selector, attributes = [], {
+	showEmpty = false,
+	showName = true,
+	showMissingAttributes = false,
+	showContent = false
+} = {}) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.showElement'
+	}, {
+		selector: sanitize(selector),
+		attributes: join(attributes),
+		attributeCount: attributes.length,
+		showEmpty,
+		showName,
+		showMissingAttributes,
+		showContent
+	});
 
 /**
  *	Shows a DOM element.

@@ -8,11 +8,13 @@ import ExternalToolContainer from '../components/ExternalToolContainer';
  *
  *	@param {string} name - Tool name.
  */
-export const describe = (name) => (
-	name
-		? `Ouvre l'outil externe "${name}".`
-		: 'Ouvre un outil externe.'
-);
+export const describe = (intl, name) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.externalTool'
+	}, {
+		name,
+		hasName: !!name
+	});
 
 /**
  *

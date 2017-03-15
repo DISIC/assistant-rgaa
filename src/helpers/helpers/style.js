@@ -5,8 +5,10 @@ import $ from 'jquery';
 /**
  *	Describes the helper.
  */
-export const describe = () =>
-	'Ajoute des styles dans la page.';
+export const describe = (intl) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.style'
+	});
 
 /**
  *	Injects a custom style block in the <head />.

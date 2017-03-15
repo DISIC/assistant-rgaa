@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {FormattedMessage} from 'react-intl';
+import {FormattedMessage, intlShape, injectIntl} from 'react-intl';
 import {describe, info, component} from '../../helpers/api/helpers';
 
 
@@ -7,7 +7,7 @@ import {describe, info, component} from '../../helpers/api/helpers';
 /**
  *
  */
-const TestHelpers = ({helpers}) => (
+const TestHelpers = ({helpers, intl}) => (
 	<div className="TestHelpers">
 		<p><FormattedMessage id="TestHelpers.intro" /></p>
 
@@ -16,7 +16,7 @@ const TestHelpers = ({helpers}) => (
 				<li
 					key={i}
 					dangerouslySetInnerHTML={{
-						__html: describe(helper)
+						__html: describe(intl, helper)
 					}}
 				/>
 			))}
@@ -39,9 +39,10 @@ const TestHelpers = ({helpers}) => (
 );
 
 TestHelpers.propTypes = {
-	helpers: PropTypes.array.isRequired
+	helpers: PropTypes.array.isRequired,
+	intl: intlShape.isRequired
 };
 
 
 
-export default TestHelpers;
+export default injectIntl(TestHelpers);

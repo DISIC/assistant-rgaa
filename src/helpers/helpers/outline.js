@@ -10,8 +10,13 @@ import {sanitize} from '../api/selectors';
  *
  *	@param {string} selector - Selector.
  */
-export const describe = (selector) =>
-	`Entoure les éléments <code>${sanitize(selector)}</code>.`;
+export const describe = (intl, selector, {showTag = false} = {}) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.outline'
+	}, {
+		showTag,
+		selector: sanitize(selector)
+	});
 
 /**
  *	Adds an outline to each element matched by the given selector.
