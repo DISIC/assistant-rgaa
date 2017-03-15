@@ -1384,7 +1384,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"object, object, embed, svg, canvas, iframe"
+			"object, embed, svg, canvas, iframe"
 		]
 	],
 	"3.2.1": [],
@@ -1408,7 +1408,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"object, object, embed, svg, canvas, iframe"
+			"object, embed, svg, canvas, iframe"
 		]
 	],
 	"3.3.1": [
