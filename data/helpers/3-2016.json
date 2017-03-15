@@ -1812,14 +1812,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table:not([role='presentation'])",
+			"table",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showChildElements",
-			"table:not([role='presentation'])",
+			"table",
 			"caption",
 			[],
 			{
@@ -1828,27 +1828,32 @@
 		],
 		[
 			"showAttributes",
-			"table:not([role='presentation'])",
+			"table",
 			[
 				"summary"
 			],
 			{
 				"showMissing": true
 			}
+		],
+		[
+			"showAttributes",
+			"table",
+			"[role]"
 		]
 	],
 	"5.2.1": [
 		"disableAllStyles",
 		[
 			"outline",
-			"table:not([role='presentation'])",
+			"table",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showChildElements",
-			"table:not([role='presentation'])",
+			"table",
 			"caption",
 			[],
 			{
@@ -1857,13 +1862,18 @@
 		],
 		[
 			"showAttributes",
-			"table:not([role='presentation'])",
+			"table",
 			[
 				"summary"
 			],
 			{
 				"showMissing": true
 			}
+		],
+		[
+			"showAttributes",
+			"table",
+			"[role]"
 		]
 	],
 	"5.3.1": [
@@ -1895,14 +1905,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"table:not([role='presentation'])",
+			"table",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showChildElements",
-			"table:not([role='presentation'])",
+			"table",
 			"caption",
 			[],
 			{
@@ -1911,7 +1921,7 @@
 		],
 		[
 			"showAttributes",
-			"table:not([role='presentation'])",
+			"table",
 			[
 				"summary"
 			],
@@ -1919,20 +1929,25 @@
 				"showMissing": true,
 				"showContent": true
 			}
+		],
+		[
+			"showAttributes",
+			"table",
+			"[role]"
 		]
 	],
 	"5.5.1": [
 		"disableAllStyles",
 		[
 			"outline",
-			"table:not([role='presentation'])",
+			"table",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showChildElements",
-			"table:not([role='presentation'])",
+			"table",
 			"caption",
 			[],
 			{
@@ -1941,7 +1956,7 @@
 		],
 		[
 			"showAttributes",
-			"table:not([role='presentation'])",
+			"table",
 			[
 				"summary"
 			],
@@ -1949,59 +1964,74 @@
 				"showMissing": true,
 				"showContent": true
 			}
+		],
+		[
+			"showAttributes",
+			"table",
+			"[role]"
 		]
 	],
 	"5.6.1": [
 		"disableAllStyles",
 		[
 			"outline",
-			"table:not([role='presentation'])"
+			"table"
 		],
 		[
 			"outline",
-			"table:not([role='presentation']) th",
+			"table th",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"outline",
-			"table:not([role='presentation']) td",
+			"table td",
 			{
 				"showTag": true
 			}
+		],
+		[
+			"showAttributes",
+			"table",
+			"[role]"
 		]
 	],
 	"5.6.2": [
 		"disableAllStyles",
 		[
 			"outline",
-			"table:not([role='presentation'])"
+			"table"
 		],
 		[
 			"outline",
-			"table:not([role='presentation']) th",
+			"table th",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"outline",
-			"table:not([role='presentation']) td",
+			"table td",
 			{
 				"showTag": true
 			}
+		],
+		[
+			"showAttributes",
+			"table",
+			"[role]"
 		]
 	],
 	"5.7.1": [
 		"disableAllStyles",
 		[
 			"outline",
-			"table:not([role='presentation']) th"
+			"table th"
 		],
 		[
 			"showElement",
-			"table:not([role='presentation']) th",
+			"table th",
 			[
 				"id",
 				"scope"
@@ -2012,46 +2042,56 @@
 		],
 		[
 			"outline",
-			"table:not([role='presentation']) td",
+			"table td",
 			{
 				"showTag": true
 			}
+		],
+		[
+			"showAttributes",
+			"table",
+			"[role]"
 		]
 	],
 	"5.7.2": [
 		"disableAllStyles",
 		[
 			"outline",
-			"table:not([role='presentation']) th[scope]"
+			"table th[scope]"
 		],
 		[
 			"showAttributes",
-			"table:not([role='presentation']) th",
+			"table th",
 			[
 				"scope"
 			]
 		],
 		[
 			"outline",
-			"table:not([role='presentation']) td",
+			"table td",
 			{
 				"showTag": true
 			}
+		],
+		[
+			"showAttributes",
+			"table",
+			"[role]"
 		]
 	],
 	"5.7.3": [
 		"disableAllStyles",
 		[
 			"outline",
-			"table:not([role='presentation']) th"
+			"table th"
 		],
 		[
 			"outline",
-			"table:not([role='presentation']) td"
+			"table td"
 		],
 		[
 			"showElement",
-			"table:not([role='presentation']) th",
+			"table th",
 			[
 				"id",
 				"scope"
@@ -2062,31 +2102,36 @@
 		],
 		[
 			"outline",
-			"table:not([role='presentation']) td",
-			{
-				"showTag": true
-			}
-		]
-	],
-	"5.7.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table:not([role='presentation']) th",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"table:not([role='presentation']) td",
+			"table td",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttributes",
-			"table:not([role='presentation']) th, table:not([role='presentation']) td",
+			"table",
+			"[role]"
+		]
+	],
+	"5.7.4": [
+		"disableAllStyles",
+		[
+			"outline",
+			"table th",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"outline",
+			"table td",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"showAttributes",
+			"table th, table td",
 			[
 				"id"
 			],
@@ -2096,13 +2141,18 @@
 		],
 		[
 			"showAttributes",
-			"table:not([role='presentation']) th, table:not([role='presentation']) td",
+			"table th, table td",
 			[
 				"headers"
 			],
 			{
 				"showMissing": true
 			}
+		],
+		[
+			"showAttributes",
+			"table",
+			"[role]"
 		]
 	],
 	"5.8.1": [
