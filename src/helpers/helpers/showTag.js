@@ -9,9 +9,12 @@ import {sanitize} from '../api/selectors';
  *
  *	@param {string} selector - Selector.
  */
-export const describe = (selector) => `
-	Affiche les éléments <code>${sanitize(selector)}</code>.
-`;
+export const describe = (intl, selector) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.showTag'
+	}, {
+		selector: sanitize(selector)
+	});
 
 
 

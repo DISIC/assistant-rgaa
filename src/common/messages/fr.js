@@ -79,7 +79,115 @@ const messages = {
 	'ColorContrast.invalidResult': 'invalide',
 	'ExternalTool.linkTitle': 'Ouvrir l\'outil (s\'ouvre dans une nouvelle fenêtre)',
 	'HeadingsHierarchy.title': 'Hiérarchie de titres',
-	'HeadingsHierarchy.noItems': 'Aucun titre trouvé dans la page.'
+	'HeadingsHierarchy.noItems': 'Aucun titre trouvé dans la page.',
+	'Helper.addClassName': `
+		Ajoute une classe <code>{className}</code>
+		aux éléments <code>{selector}</code>
+	`,
+	'Helper.colorContrast': 'Affiche un outil d\'analyse des contrastes',
+	'Helper.disableAllStyles': 'Désactive tous les styles de la page',
+	'Helper.externalTool': `
+		{hasName, select,
+			true {Ouvre l'outil externe "{name}"}
+			other {Ouvre un outil externe}
+		}
+	`,
+	'Helper.headingsHierarchy': 'Affiche la hiérarchie de titres de la page',
+	'Helper.outline': `Entoure les éléments <code>{selector}</code> {showTag, select,
+		true {et affiche leur type}
+		other {}
+	}`,
+	'Helper.showAttributes': `
+		{attributeCount, plural,
+			one {Affiche l'attribut <code>{attributes}</code>}
+			other {Affiche les attributs <code>{attributes}</code>}
+		}
+		des éléments <code>{selector}</code>
+		{showMissing, select,
+			true {
+				{attributeCount, plural,
+					one {(y compris si n'est pas défini)}
+					other {(y compris si ils ne sont pas définis)}
+				}
+			}
+			other {}
+		}
+	`,
+	'Helper.showChildElements': `
+		Dans les éléments <code>{selector}</code>,
+		pour chaque élément enfant <code>{childrenSelector}</code> :
+		<ul>
+			{showName, select,
+				true {
+					<li>Affiche le type {showMissingAttributes, select,
+						true {(y compris si l'élément est vide)}
+						other {}
+					}</li>
+				}
+				other {}
+			}
+			{attributeCount, plural,
+				zero {}
+				one {
+					<li>Affiche l'attribut <code>{attributes}</code> {showMissingAttributes, select,
+						true {(y compris si il n'est pas défini)}
+						other {}
+					}</li>
+				}
+				other {
+					<li>Affiche les attributs <code>{attributes}</code> {showMissingAttributes, select,
+						true {(y compris si ils ne sont pas définis)}
+						other {}
+					}</li>
+				}
+			}
+			{showContent, select,
+				true {
+					<li>Affiche le contenu</li>
+				}
+				other {}
+			}
+		</ul>
+	`,
+	'Helper.showElement': `
+		Pour chaque élément <code>{selector}</code> :
+		<ul>
+			{showName, select,
+				true {
+					<li>Affiche le type {showMissingAttributes, select,
+						true {(y compris si l'élément est vide)}
+						other {}
+					}</li>
+				}
+				other {}
+			}
+			{attributeCount, plural,
+				zero {}
+				one {
+					<li>Affiche l'attribut <code>{attributes}</code> {showMissingAttributes, select,
+						true {(y compris si il n'est pas défini)}
+						other {}
+					}</li>
+				}
+				other {
+					<li>Affiche les attributs <code>{attributes}</code> {showMissingAttributes, select,
+						true {(y compris si ils ne sont pas définis)}
+						other {}
+					}</li>
+				}
+			}
+			{showContent, select,
+				true {
+					<li>Affiche le contenu</li>
+				}
+				other {}
+			}
+		</ul>
+	`,
+	'Helper.showTag': 'Affiche les éléments <code>{selector}</code>',
+	'Helper.style': 'Ajoute des styles dans la page',
+	'Helper.validateLocalPage': 'Ouvre l\'outil externe "Validateur W3C pour HTML local"',
+	'Helper.viewSource': 'Ouvre l\'outil "Voir les sources".'
 };
 
 

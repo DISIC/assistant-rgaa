@@ -6,8 +6,10 @@ import toggleInlineStyles from '../api/toggleInlineStyles';
 /**
  *	Describes the helper.
  */
-export const describe = () =>
-	'Désactive tous les styles de la page.';
+export const describe = (intl) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.disableAllStyles'
+	});
 
 /**
  *	Disable all style sheets in the page.

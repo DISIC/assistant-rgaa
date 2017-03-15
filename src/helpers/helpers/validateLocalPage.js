@@ -6,9 +6,10 @@ import LocalPageValidatorContainer from '../components/LocalPageValidatorContain
 /**
  *	Describes the helper.
  */
-export const describe = () => (
-	'Ouvre l\'outil externe "Validateur W3C pour HTML local".'
-);
+export const describe = (intl) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.validateLocalPage'
+	});
 
 /**
  *

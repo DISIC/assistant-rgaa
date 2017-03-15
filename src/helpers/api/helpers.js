@@ -35,9 +35,9 @@ export const info = (helper) => {
  *
  *	@param {string|array} helper - Helper descriptor.
  */
-export const describe = (helper) => {
+export const describe = (intl, helper) => {
 	const {module, args} = info(helper);
-	return module.describe(...args);
+	return module.describe(intl, ...args);
 };
 
 /**

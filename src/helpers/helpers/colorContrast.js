@@ -65,8 +65,10 @@ export const component = () =>
 /**
  *	Describes the helper.
  */
-export const describe = () =>
-	`Affiche un outil d'analyse des contrastes.`;
+export const describe = (intl) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.colorContrast'
+	});
 
 /**
  *

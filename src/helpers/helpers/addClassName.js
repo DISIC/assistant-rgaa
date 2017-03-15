@@ -9,10 +9,13 @@ import {sanitize} from '../api/selectors';
  *	@param {string} selector - Selector.
  *	@param {string} className - Class name.
  */
-export const describe = (selector, className) => `
-	Ajoute une classe <code>${className}</code>
-	sur les éléments <code>${sanitize(selector)}</code>.
-`;
+export const describe = (intl, selector, className) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.addClassName'
+	}, {
+		className,
+		selector: sanitize(selector)
+	});
 
 /**
  *	Adds a custom class name to each element matched by the

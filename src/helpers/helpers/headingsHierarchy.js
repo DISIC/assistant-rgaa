@@ -14,8 +14,10 @@ export const component = () =>
 /**
  *	Describes the helper.
  */
-export const describe = () =>
-	'Affiche la hiérarchie de titres de la page.';
+export const describe = (intl) =>
+	intl.formatHTMLMessage({
+		id: 'Helper.headingsHierarchy'
+	});
 
 /**
  *
