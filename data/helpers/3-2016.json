@@ -1994,13 +1994,6 @@
 			}
 		],
 		[
-			"outline",
-			"table td",
-			{
-				"showTag": true
-			}
-		],
-		[
 			"showAttributes",
 			"table",
 			[
@@ -2017,13 +2010,6 @@
 		[
 			"outline",
 			"table th",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"table td",
 			{
 				"showTag": true
 			}
@@ -2054,13 +2040,6 @@
 			}
 		],
 		[
-			"outline",
-			"table td",
-			{
-				"showTag": true
-			}
-		],
-		[
 			"showAttributes",
 			"table",
 			[
@@ -2082,13 +2061,6 @@
 			]
 		],
 		[
-			"outline",
-			"table td",
-			{
-				"showTag": true
-			}
-		],
-		[
 			"showAttributes",
 			"table",
 			[
@@ -2103,10 +2075,6 @@
 			"table th"
 		],
 		[
-			"outline",
-			"table td"
-		],
-		[
 			"showElement",
 			"table th",
 			[
@@ -2115,13 +2083,6 @@
 			],
 			{
 				"showMissingAttributes": true
-			}
-		],
-		[
-			"outline",
-			"table td",
-			{
-				"showTag": true
 			}
 		],
 		[
@@ -2223,11 +2184,11 @@
 		],
 		[
 			"outline",
-			"td"
+			"td[scope], td[headers], td[colgroup], td[axis]"
 		],
 		[
 			"showElement",
-			"td",
+			"td[scope], td[headers], td[colgroup], td[axis]",
 			[
 				"scope",
 				"headers",
