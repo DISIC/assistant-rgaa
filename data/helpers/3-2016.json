@@ -2951,7 +2951,7 @@
 	"10.5.3": [
 		[
 			"style",
-			"* { background-image: none; }"
+			"* { background-image: none !important; }"
 		]
 	],
 	"10.6.1": [
