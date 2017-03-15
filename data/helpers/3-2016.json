@@ -3930,7 +3930,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a[href^='#'], main, [role='main']"
+			"a[href^='#']"
 		],
 		[
 			"showElement",
@@ -3940,18 +3940,6 @@
 			],
 			{
 				"showTag": true
-			}
-		],
-		[
-			"showElement",
-			"main, [role='main']",
-			[
-				"role",
-				"id"
-			],
-			{
-				"showTag": true,
-				"showMissingAttributes": true
 			}
 		]
 	],
