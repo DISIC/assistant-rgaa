@@ -31,7 +31,9 @@
 }
 
 .rgaaExt-Element-content {
+	margin: 0 !important;
 	color: $color-orange-text-dark !important;
 	padding: 0 0.2em !important;
 	background: $color-white !important;
+	white-space: normal !important;
 }

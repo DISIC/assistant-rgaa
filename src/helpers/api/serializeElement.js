@@ -3,6 +3,26 @@ import serializeAttributes from './serializeAttributes';
 
 
 /**
+ *	@see http://stackoverflow.com/a/30930653
+ */
+const escape = (html) =>
+	document
+		.createElement('div')
+		.appendChild(document.createTextNode(html))
+		.parentNode
+		.innerHTML;
+
+/**
+ *	Returns inner HTML of the given element, without reserved
+ *	extension's elements.
+ */
+const innerHtml = (element) => {
+	const copy = element.clone();
+	copy.find('[class*=rgaaExt]').remove();
+	return escape(copy.html());
+};
+
+/**
  *
  */
 export default function serializeElement(element, attributes, {
@@ -22,7 +42,7 @@ export default function serializeElement(element, attributes, {
 	);
 
 	const content = showContent
-		? `<span class="rgaaExt-Element-content">${element.get(0).textContent}</span>`
+		? `<pre class="rgaaExt-Element-content">${innerHtml(element)}</pre>`
 		: '';
 
 	if (!showEmpty && !serializedAttributes && !content) {
