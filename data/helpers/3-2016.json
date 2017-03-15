@@ -1831,8 +1831,7 @@
 			"table:not([role='presentation'])",
 			"summary",
 			{
-				"showMissing": true,
-				"showContent": true
+				"showMissing": true
 			}
 		]
 	],
@@ -1859,8 +1858,7 @@
 			"table:not([role='presentation'])",
 			"summary",
 			{
-				"showMissing": true,
-				"showContent": true
+				"showMissing": true
 			}
 		]
 	],
