@@ -1829,7 +1829,9 @@
 		[
 			"showAttributes",
 			"table:not([role='presentation'])",
-			"summary",
+			[
+				"summary"
+			],
 			{
 				"showMissing": true
 			}
@@ -1856,7 +1858,9 @@
 		[
 			"showAttributes",
 			"table:not([role='presentation'])",
-			"summary",
+			[
+				"summary"
+			],
 			{
 				"showMissing": true
 			}
@@ -1879,7 +1883,9 @@
 		[
 			"showElement",
 			"table",
-			"role",
+			[
+				"role"
+			],
 			{
 				"showMissingAttributes": true
 			}
@@ -1936,7 +1942,9 @@
 		[
 			"showAttributes",
 			"table:not([role='presentation'])",
-			"summary",
+			[
+				"summary"
+			],
 			{
 				"showMissing": true,
 				"showContent": true
@@ -2079,7 +2087,9 @@
 		[
 			"showAttributes",
 			"table:not([role='presentation']) th, table:not([role='presentation']) td",
-			"id",
+			[
+				"id"
+			],
 			{
 				"showMissing": true
 			}
@@ -2087,7 +2097,9 @@
 		[
 			"showAttributes",
 			"table:not([role='presentation']) th, table:not([role='presentation']) td",
-			"headers",
+			[
+				"headers"
+			],
 			{
 				"showMissing": true
 			}
