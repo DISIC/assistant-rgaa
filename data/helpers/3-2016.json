@@ -2565,7 +2565,7 @@
 	"7.1.6": [
 		[
 			"showElement",
-			"[role]",
+			"[role='presentation']",
 			[
 				"role"
 			]
