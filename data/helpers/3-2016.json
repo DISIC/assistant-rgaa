@@ -3980,11 +3980,11 @@
 	"13.2.1": [
 		[
 			"outline",
-			"a[target]"
+			"a[target='_blank']"
 		],
 		[
 			"showAttributes",
-			"a[target]",
+			"a[target='_blank']",
 			[
 				"title",
 				"target"
