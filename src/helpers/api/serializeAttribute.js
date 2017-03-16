@@ -27,12 +27,12 @@ const linkId = (id) => {
 
 	// return a simple text if we can't link to the given id
 	if (error || elements.length === 0) {
-		return id;
+		return `${id} (introuvable)`;
 	}
 
 	const count = elements.length;
 	const countString = (count !== 1)
-		? ` (${count})`
+		? ` (${count} occurrences)`
 		: '';
 
 	return `<a class="rgaaExt-Attribute-link" href="#${id}">${id}${countString}</a>`;
