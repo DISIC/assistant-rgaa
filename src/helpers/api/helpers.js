@@ -66,11 +66,19 @@ const createId = (id, index) =>
  *	@param {string} func - Name of the module's function to call,
  *		either 'apply' or 'revert'.
  */
-const runHelpers = (id, helpers, func) => {
+const toggleHelpers = (id, helpers, toggle) => {
+	const method = toggle ? 'apply' : 'revert';
+
+	if (toggle) {
+		document.body.classList.toggle('rgaaExt-Body', toggle);
+		document.body.classList.toggle('rgaaExt-Body--withHelpers', toggle);
+	}
+
 	try {
 		helpers.forEach((helper, i) => {
-			const {module, args} = info(helper);
-			module[func](createId(id, i), ...args);
+			const {name, module, args} = info(helper);
+			module[method](createId(id, i), ...args);
+			document.body.classList.toggle(`rgaaExt-Body--${name}Helper`, toggle);
 		});
 	} catch (e) {
 		console.error(e);
@@ -80,15 +88,11 @@ const runHelpers = (id, helpers, func) => {
 /**
  *
  */
-export const applyHelpers = (id, helpers) => {
-	document.body.classList.add('rgaaExt-Body', 'rgaaExt-Body--withHelpers');
-	runHelpers(id, helpers, 'apply');
-};
+export const applyHelpers = (id, helpers) =>
+	toggleHelpers(id, helpers, true);
 
 /**
  *
  */
-export const revertHelpers = (id, helpers) => {
-	runHelpers(id, helpers, 'revert');
-	document.body.classList.remove('rgaaExt-Body', 'rgaaExt-Body--withHelpers');
-};
+export const revertHelpers = (id, helpers) =>
+	toggleHelpers(id, helpers, false);

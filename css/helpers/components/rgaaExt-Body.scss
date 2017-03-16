@@ -6,3 +6,10 @@
 	outline: 1px $color-green solid !important;
 	box-shadow: 0 0 10px $color-green !important;
 }
+
+.rgaaExt-Body--disableAllStylesHelper {
+	legend {
+		// prevents background content to be seen under the legend
+		background: #fff;
+	}
+}
