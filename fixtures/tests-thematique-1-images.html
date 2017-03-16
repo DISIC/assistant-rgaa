@@ -165,5 +165,19 @@
         <embed type='image' src='https://c1.staticflickr.com/3/2445/32700300162_58998bbb9a.jpg'></embed>
         <figcaption>Figure caption for embed image</figcaption>
     </figure>
+	<hr />
+	<p id="img1">Label</p>
+	<input type="image" alt="mon bouton image" title="bouton" aria-labelledby="img1"  aria-label="texte aria label" src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" />
+
+
+	<p id="img1">Label avec id erronné</p>
+	<input type="image" alt="mon bouton image" title="bouton" aria-labelledby="#img1"  aria-label="texte aria label" src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" />
+
+	<p id="img100">Label avec id introuvable</p>
+	<input type="image" alt="mon bouton image" title="bouton" aria-labelledby="img1000"  aria-label="texte aria label" src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" />
+
+	<p id="img1020">Label ok</p>
+	<input type="image" alt="mon bouton image" title="bouton" aria-labelledby="img1020"  aria-label="texte aria label" src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" />
+
 </body>
 </html>
