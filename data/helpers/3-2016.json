@@ -1971,7 +1971,7 @@
 		[
 			"showChildElements",
 			"table",
-			"caption",
+			"> caption",
 			[],
 			{
 				"showContent": true
@@ -2007,7 +2007,7 @@
 		[
 			"showChildElements",
 			"table",
-			"caption",
+			"> caption",
 			[],
 			{
 				"showContent": true
@@ -2068,7 +2068,7 @@
 		[
 			"showChildElements",
 			"table",
-			"caption",
+			"> caption",
 			[],
 			{
 				"showContent": true
@@ -2105,7 +2105,7 @@
 		[
 			"showChildElements",
 			"table",
-			"caption",
+			"> caption",
 			[],
 			{
 				"showContent": true
@@ -2290,7 +2290,7 @@
 		[
 			"showChildElements",
 			"table",
-			"caption",
+			"> caption",
 			[],
 			{
 				"showContent": true
