@@ -8,8 +8,10 @@ git branch -D publication
 git checkout -B publication
 echo -e "\e[33m## Making the webpack and extension builds… This might take a few minutes.\e[0m"
 npm run build-extension
-npm run sign-extension
-git add -f dist/*.{js,css,svg,zip}
+if [ "$#" -ne 0 ]; then
+	npm run sign-extension -- "$@"
+fi
+git add -f dist/*.{js,css,svg}
 git add -f artifacts/*
-git commit -m "new build"
-echo -e "\e[32m## Build done and commited! Please verify and force push publication branch when ready.\e[0m"
+echo -e "\e[32m## Build done! Please verify if everything works.\e[0m"
+echo -e "\e[32m## If everything is ok, commit the built files and force push the publication branch.\e[0m"
