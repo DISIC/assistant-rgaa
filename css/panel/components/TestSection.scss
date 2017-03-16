@@ -1,0 +1,35 @@
+.TestSection {
+	border-top: 1px solid lighten($color-black, 80%);
+}
+
+.TestSection-header {
+	position: relative;
+	display: block;
+}
+
+.TestSection-title {
+	padding: vr(1/4) $app-gutter;
+	font-weight: bold;
+	color: $color-gray-dark;
+
+	.Test.is-applied & {
+		color: $color-blue;
+	}
+}
+
+.TestSection-body {
+	padding: vr(1/4) $app-gutter vr(1/2) $app-gutter;
+}
+
+.TestSection a {
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:active {
+		text-decoration: underline;
+	}
+}

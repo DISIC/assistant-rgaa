@@ -28,6 +28,10 @@ function Test({
 		onDone(event.target.checked);
 
 	const applyTranslateKey = applied ? 'uncheck' : 'check';
+	const className = classNames({
+		Test: true,
+		'is-applied': applied
+	});
 
 	const htmlTitle = title.replace(
 		/^(Test \d+\.\d+\.\d+)\s?:\s?(.*)$/i,
@@ -35,7 +39,7 @@ function Test({
 	);
 
 	return (
-		<article className="Test">
+		<article className={className}>
 			<header className="Test-header">
 				<p
 					className="Test-title"

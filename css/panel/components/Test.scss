@@ -1,6 +1,9 @@
 .Test {
-	border-top: 1px solid lighten($color-black, 60%);
-	border-bottom: none;
+	border-bottom: 1px solid lighten($color-black, 60%);
+
+	&.is-applied {
+		background: $color-blue-lighter;
+	}
 }
 
 .Test-header {

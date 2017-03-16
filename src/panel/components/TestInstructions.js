@@ -8,10 +8,10 @@ import classNames from 'classnames';
  *
  */
 function TestInstructions({isOpen, onToggleRequest, instructions}) {
-	const containerClass = classNames('TestInstructions', {
+	const containerClass = classNames('TestInstructions', 'TestSection', {
 		'is-open': isOpen
 	});
-	const textClass = classNames('TestInstructions-text', {
+	const textClass = classNames('TestSection-body', {
 		'u-hidden': !isOpen
 	});
 
@@ -20,10 +20,10 @@ function TestInstructions({isOpen, onToggleRequest, instructions}) {
 
 	return (
 		<div className={containerClass}>
-			<h3 className="TestInstructions-title">
+			<h3 className="TestSection-header">
 				<button
 					type="button"
-					className="TestInstructions-toggle InvisibleButton"
+					className="TestSection-title TestInstructions-toggle InvisibleButton"
 					onClick={toggle}
 				>
 					<FormattedMessage id="Test.instructions" />
