@@ -1,6 +1,6 @@
 {
   "name": "rgaa-toolbar",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "RGAA toolbar",
   "main": "js/index.js",
   "scripts": {
