@@ -1353,7 +1353,10 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"iframe"
+			"iframe",
+			{
+				"showTag": true
+			}
 		],
 		[
 			"showAttributes",
@@ -1369,7 +1372,10 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"img"
+			"img",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"3.1.4": [],
@@ -1377,14 +1383,20 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"object, video, object, embed, svg, canvas, iframe"
+			"object, video, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"3.1.6": [
 		"disableAllStyles",
 		[
 			"outline",
-			"object, embed, svg, canvas, iframe"
+			"object, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"3.2.1": [],
@@ -1393,7 +1405,10 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"img"
+			"img",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"3.2.4": [],
@@ -1401,14 +1416,20 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"object, video, object, embed, svg, canvas, iframe"
+			"object, video, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"3.2.6": [
 		"disableAllStyles",
 		[
 			"outline",
-			"object, embed, svg, canvas, iframe"
+			"object, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
 		]
 	],
 	"3.3.1": [
@@ -3107,13 +3128,67 @@
 		"disableAllStyles"
 	],
 	"10.14.1": [],
-	"10.14.2": [],
-	"10.14.3": [],
-	"10.14.4": [],
+	"10.14.2": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img, object, video, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"10.14.3": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img, object, video, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"10.14.4": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img, object, video, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
+		]
+	],
 	"10.15.1": [],
-	"10.15.2": [],
-	"10.15.3": [],
-	"10.15.4": [],
+	"10.15.2": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img, object, video, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"10.15.3": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img, object, video, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
+		]
+	],
+	"10.15.4": [
+		"disableAllStyles",
+		[
+			"outline",
+			"img, object, video, embed, svg, canvas, iframe",
+			{
+				"showTag": true
+			}
+		]
+	],
 	"11.1.1": [
 		"disableAllStyles",
 		[
