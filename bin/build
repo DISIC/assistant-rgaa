@@ -5,13 +5,11 @@ git checkout master
 git pull
 echo -e "\e[33m## Recreating local \e[93mpublication\e[33m branch with latest \e[93mmaster\e[33m changes…\e[0m"
 git branch -D publication
-git checkout -b publication origin/publication
-git pull
-git merge master --no-edit
-echo -e "\e[33m## Making the webpack build… This might take a few minutes.\e[0m"
-npm run build -- --devtool null
-echo -e "\e[33m## Making the extension build…\e[0m"
-npm run extension
+git checkout -B publication
+echo -e "\e[33m## Making the webpack and extension builds… This might take a few minutes.\e[0m"
+npm run build-extension
+npm run sign-extension
 git add -f dist/*.{js,css,svg,zip}
+git add -f artifacts/*
 git commit -m "new build"
-echo -e "\e[32m## Build done and commited! Please verify before pushing.\e[0m"
+echo -e "\e[32m## Build done and commited! Please verify and force push publication branch when ready.\e[0m"
