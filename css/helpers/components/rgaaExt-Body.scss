@@ -10,6 +10,18 @@
 .rgaaExt-Body--disableAllStylesHelper {
 	legend {
 		// prevents background content to be seen under the legend
-		background: #fff;
+		background: #fff !important;
+	}
+
+	label,
+	input,
+	textarea,
+	select {
+		display: block !important;
+	}
+
+	.rgaaExt-Helper {
+		margin-bottom: $base-line-height / 2 !important;
+		font-weight: bold !important;
 	}
 }
