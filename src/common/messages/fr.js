@@ -126,9 +126,9 @@ const messages = {
 				}
 				other {}
 			}
-			{attributeCount, plural,
-				zero {}
-				one {
+			{attributeCount, select,
+				0 {}
+				1 {
 					<li>Affiche l'attribut <code>{attributes}</code> {showMissingAttributes, select,
 						true {(y compris si il n'est pas défini)}
 						other {}
@@ -161,9 +161,9 @@ const messages = {
 				}
 				other {}
 			}
-			{attributeCount, plural,
-				zero {}
-				one {
+			{attributeCount, select,
+				0 {}
+				1 {
 					<li>Affiche l'attribut <code>{attributes}</code> {showMissingAttributes, select,
 						true {(y compris si il n'est pas défini)}
 						other {}
