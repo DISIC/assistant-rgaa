@@ -969,7 +969,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"object[type^=\"image\"][longdesc], object[type^=\"image\"][alt]",
+			"object[type^=\"image\"]",
 			{
 				"showTag": true
 			}
