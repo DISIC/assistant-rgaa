@@ -56,10 +56,8 @@ export default function serializeElement(element, attributes, {
 	}
 
 	if (content) {
-		html += `&gt;${content}&lt;/${name}&gt;`;
-	} else {
-		html += ' /&gt;</span>';
+		html += `&gt;${content}&lt;/${name}`;
 	}
 
-	return html;
+	return `${html}&gt;</span>`;
 }
