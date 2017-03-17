@@ -162,7 +162,7 @@
 			"svg"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"svg",
 			[
 				"aria-hidden",
