@@ -3514,16 +3514,6 @@
 			[
 				"label"
 			]
-		],
-		[
-			"showChildElements",
-			"select:has(optgroup)",
-			"option",
-			[],
-			{
-				"showContent": true,
-				"showEmpty": true
-			}
 		]
 	],
 	"11.9.1": [
