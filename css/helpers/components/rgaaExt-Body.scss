@@ -20,7 +20,12 @@
 		display: block !important;
 	}
 
+	a {
+		display: inline-block !important;
+	}
+
 	.rgaaExt-Helper {
 		margin-bottom: $base-line-height / 2 !important;
 	}
 }
+
