@@ -827,22 +827,22 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"svg:has(desc)",
+			"svg",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttributes",
-			"svh:has(desc)",
+			"svg",
 			[
 				"aria-label"
 			]
 		],
 		[
 			"showChildElements",
-			"svg:has(desc)",
-			"desc",
+			"svg",
+			"title, desc",
 			[],
 			{
 				"showContent": true
