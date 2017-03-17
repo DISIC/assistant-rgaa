@@ -175,7 +175,7 @@
 		[
 			"showChildElements",
 			"svg",
-			"title, desc",
+			"title, desc, [aria-label], [aria-describedby], [aria-labelledby], [title]",
 			[
 				"aria-label",
 				"aria-describedby",
