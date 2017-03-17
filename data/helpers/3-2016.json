@@ -389,7 +389,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"svg:has(desc)",
+			"svg",
 			{
 				"showTag": true
 			}
@@ -639,14 +639,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"svg:has(desc)",
+			"svg",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttributes",
-			"svg:has(desc)",
+			"svg",
 			[
 				"role",
 				"title",
@@ -655,7 +655,7 @@
 		],
 		[
 			"showChildElements",
-			"svg:has(desc)",
+			"svg",
 			"desc",
 			[],
 			{
@@ -667,14 +667,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"svg:has(desc)",
+			"svg",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showChildElements",
-			"svg:has(desc)",
+			"svg",
 			"desc",
 			[],
 			{
@@ -920,14 +920,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby]:has(desc), canvas[aria-describedby]",
+			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttributes",
-			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby]:has(desc), canvas[aria-describedby]",
+			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
 			[
 				"aria-describedby"
 			]
@@ -1010,7 +1010,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"svg:has(desc), svg[longdesc]",
+			"svg",
 			{
 				"showTag": true
 			}
