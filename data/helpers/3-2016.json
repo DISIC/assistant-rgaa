@@ -588,7 +588,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"object[type=\"image\"]"
+			"object[type^=\"image\"]"
 		]
 	],
 	"1.4.5": [
