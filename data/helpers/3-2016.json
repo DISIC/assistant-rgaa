@@ -611,7 +611,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"embed[type=\"image\"]"
+			"embed[type^=\"image\"]"
 		]
 	],
 	"1.4.7": [
