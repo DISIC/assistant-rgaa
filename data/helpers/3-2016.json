@@ -152,7 +152,12 @@
 		[
 			"showChildElements",
 			"object[type^=\"image\"]",
-			"*"
+			"*",
+			[
+				"aria-label",
+				"aria-describedby",
+				"aria-labelledby"
+			]
 		]
 	],
 	"1.2.4": [
