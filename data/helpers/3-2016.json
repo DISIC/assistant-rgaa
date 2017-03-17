@@ -3300,11 +3300,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter",
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
 			[
 				"id"
 			]
@@ -3324,11 +3324,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]"
+			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
 		],
 		[
 			"showElement",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]",
+			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
 			[
 				"title"
 			]
@@ -3338,11 +3338,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
+			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
 		],
 		[
 			"showAttributes",
-			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], datalist[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
+			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
 			[
 				"aria-label"
 			]
@@ -3352,11 +3352,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
+			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
 		],
 		[
 			"showElement",
-			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], datalist[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
+			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
 			[
 				"aria-labelledby"
 			]
@@ -3373,11 +3373,11 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter",
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
 			[
 				"title",
 				"aria-label",
@@ -3396,11 +3396,11 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter",
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
 			[
 				"title",
 				"aria-label",
@@ -3420,7 +3420,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		]
 	],
 	"11.6.1": [
@@ -3590,7 +3590,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3623,7 +3623,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3648,7 +3648,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3679,11 +3679,11 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter, [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter, [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
 			[
 				"type",
 				"title",
@@ -3712,7 +3712,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3736,7 +3736,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3766,7 +3766,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3806,7 +3806,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3838,7 +3838,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3854,11 +3854,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]"
+			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
 		],
 		[
 			"showElement",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], datalist[title], output[title], progress[title], meter[title]",
+			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
 			[
 				"title",
 				"placeholder"
@@ -3882,7 +3882,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3906,7 +3906,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3934,7 +3934,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3956,7 +3956,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -3980,7 +3980,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
 		],
 		[
 			"showElement",
@@ -4001,7 +4001,7 @@
 		],
 		[
 			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, datalist, output, progress, meter"
+			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
 		],
 		[
 			"showElement",
