@@ -8,19 +8,25 @@ import {describe, info, component} from '../../helpers/api/helpers';
  *
  */
 const TestHelpers = ({helpers, intl}) => (
-	<div className="TestHelpers">
-		<p><FormattedMessage id="TestHelpers.intro" /></p>
+	<div className="TestHelpers TestSection">
+		<div className="TestSection-header">
+			<h3 className="TestSection-title">
+				<FormattedMessage id="TestHelpers.intro" />
+			</h3>
+		</div>
 
-		<ol>
-			{helpers.map((helper, i) => (
-				<li
-					key={i}
-					dangerouslySetInnerHTML={{
-						__html: describe(intl, helper)
-					}}
-				/>
-			))}
-		</ol>
+		<div className="TestSection-body">
+			<ol>
+				{helpers.map((helper, i) => (
+					<li
+						key={i}
+						dangerouslySetInnerHTML={{
+							__html: describe(intl, helper)
+						}}
+					/>
+				))}
+			</ol>
+		</div>
 
 		{helpers
 			.map((config, i) => {

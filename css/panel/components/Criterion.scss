@@ -1,5 +1,5 @@
 .Criterion {
-	border-top: 1px solid lighten($color-black, 60%);
+	border-bottom: 1px solid lighten($color-black, 60%);
 }
 
 .Criterion-header {
@@ -112,11 +112,6 @@
 
 .Criterion-test:hover {
 	background: $color-highlight;
-}
-
-.Criterion-test:last-child .Test-header:last-child,
-.Criterion-test:last-child .TestInstructions {
-	padding-bottom: vr(1);
 }
 
 .Criterion-actionLabel {

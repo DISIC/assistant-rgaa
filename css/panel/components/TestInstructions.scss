@@ -1,34 +1,19 @@
 .TestInstructions {
-	padding: vr(0.25) $app-gutter;
-	border-top: 1px solid lighten($color-black, 80%);
 }
 
-.TestInstructions-title {
-	display: inline-block;
-	padding-right: vr(1);
-	position: relative;
-}
+.TestInstructions-toggle {
+	display: block;
+	width: 100%;
+	text-align: left;
 
-.TestInstructions-toggle:before {
-	display: inline;
-	margin-right: 3px;
-	content: '►';
+	&:before {
+		display: inline;
+		margin-right: 3px;
+		content: '►';
 
-	.TestInstructions.is-open & {
-		content: '▼';
-	}
-}
-
-.TestInstructions a {
-	text-decoration: underline;
-
-	&:hover,
-	&:focus {
-		text-decoration: none;
-	}
-
-	&:active {
-		text-decoration: underline;
+		.TestInstructions.is-open & {
+			content: '▼';
+		}
 	}
 }
 
