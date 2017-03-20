@@ -42,25 +42,29 @@
 	}
 }
 
-.Criterion-title,
-.Criterion-toggle {
+.Criterion-title {
 	display: block;
 	width: 100%;
 }
 
 .Criterion-title {
+	cursor: pointer;
+	font-weight: normal;
+	padding: vr(0.25) $app-gutter;
+	text-align: left;
+}
+
+.Criterion.is-open .Criterion-title {
 	font-weight: bold;
 }
 
 .Criterion-toggle {
-	padding: vr(0.25) $app-gutter;
-	text-align: left;
+	margin-right: 3px;
 }
 
 .Criterion-toggle:before {
 	display: inline-block;
 	font-family: $font-body;
-	margin-right: 6px;
 	content: '►';
 	transition: transform 0.25s;
 }

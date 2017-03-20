@@ -29,7 +29,8 @@ const mapStateToProps = (state, {id}) => {
 const mergeProps = (stateProps, {dispatch}, ownProps) => ({
 	...ownProps,
 	...stateProps,
-	onToggle() {
+	onToggle(event) {
+		event.stopPropagation();
 		dispatch(toggleCriterion(ownProps.id));
 	},
 	onDone(done) {

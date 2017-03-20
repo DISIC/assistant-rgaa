@@ -12,6 +12,8 @@ const messages = {
 	'Theme.criterion.select.emptyOption': 'Choisissez un critère',
 	'Criterion.done.label': 'Tous les tests du critère sont faits - Cliquer pour marquer les tests comme "à faire"',
 	'Criterion.todo.label': 'Des tests restent à faire sur ce critère - Cliquer pour marquer les tests comme "fait"',
+	'Criterion.toggle.show': 'Afficher les tests du critère {id}',
+	'Criterion.toggle.hide': 'Cacher les tests du critère {id}',
 	'Test.apply.check.title': 'Appliquer les CSS et JS liés au test',
 	'Test.apply.uncheck.title': 'Enlever les CSS et JS liés au test',
 	'Test.apply.check.alt': 'Loupe',
