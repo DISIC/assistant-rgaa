@@ -3537,11 +3537,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"form button, [type='submit'], [type='reset'], [type='image'], [type='button']"
+			"button, [type='submit'], [type='reset'], [type='image'], [type='button']"
 		],
 		[
 			"showElement",
-			"form button, [type='submit'], [type='reset'], [type='image'], [type='button']",
+			"button, [type='submit'], [type='reset'], [type='image'], [type='button']",
 			[
 				"type",
 				"value",
