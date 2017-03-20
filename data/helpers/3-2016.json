@@ -4015,7 +4015,24 @@
 		]
 	],
 	"11.15.1": [
-		"disableAllStyles"
+		"disableAllStyles",
+		[
+			"outline",
+			"label",
+			{
+				"showTag": true
+			}
+		],
+		[
+			"showElement",
+			"[title], [aria-label], [aria-describedby], [aria-labelledby]",
+			[
+				"title",
+				"aria-label",
+				"aria-describedby",
+				"aria-labelledby"
+			]
+		]
 	],
 	"12.1.1": [
 		"disableAllStyles"
