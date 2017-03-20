@@ -71,13 +71,9 @@ const openPanel = ({id, url, title}) => {
 const closePanel = ({id}) => {
 	const instance = instances.getInstance(id);
 	instance.dispatch(revertAllHelpers());
-	instance
-		.sendMessage({
-			type: CLOSE_PANEL
-		})
-		.then(() =>
-			instances.removeInstance(id)
-		);
+	return instance.sendMessage({
+		type: CLOSE_PANEL
+	});
 };
 
 /**
@@ -162,14 +158,28 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 chrome.browserAction.onClicked.addListener(() =>
 	fetchCurrentTab().then((tab) => {
 		if (instances.hasInstance(tab.id)) {
-			closePanel(tab);
+			closePanel(tab).then(() =>
+				instances.removeInstance(tab.id)
+			);
 		}
 
 		if (!instances.hasInstance(tab.id)) {
-			instances.create(tab.id);
-			injectContentScripts(tab.id).then(() => {
-				openPanel(tab);
-			});
+			const instance = instances.create(tab.id);
+			// send an empty message, just to check if we have a response
+			// if we have a response, it means there already is a content script loaded
+			// and we don't need to load them again
+			// if there is no response, we'll trigger an error, it means there is no
+			// content script and we need to load them
+			instance
+				.sendMessage('')
+				.then(() =>
+					openPanel(tab)
+				)
+				.catch(() => {
+					injectContentScripts(tab.id).then(() => {
+						openPanel(tab);
+					});
+				});
 		}
 	})
 );

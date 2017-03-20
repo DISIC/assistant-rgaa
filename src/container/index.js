@@ -71,7 +71,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 			}
 		})
 		.then(() =>
-			sendResponse()
+			sendResponse({message: 'ok'})
 		);
 
 	// Returning true states that sendResponse is asynchronous
