@@ -3130,7 +3130,19 @@
 	"10.12.1": [],
 	"10.12.2": [],
 	"10.13.1": [
-		"disableAllStyles"
+		"disableAllStyles",
+		[
+			"outline",
+			"[hidden], [aria-hidden]"
+		],
+		[
+			"showAttributes",
+			"[hidden], [aria-hidden]",
+			[
+				"hidden",
+				"aria-hidden"
+			]
+		]
 	],
 	"10.14.1": [],
 	"10.14.2": [

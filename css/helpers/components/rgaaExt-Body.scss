@@ -28,5 +28,9 @@
 	.rgaaExt-Helper {
 		margin-bottom: $base-line-height / 2 !important;
 	}
+
+	[hidden] {
+		display: inline-block !important;
+	}
 }
 
