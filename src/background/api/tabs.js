@@ -39,7 +39,7 @@ export const fetchCurrentTab = () => {
  */
 export const sendMessageToTab = (id, message, options = {}) => {
 	// Chrome API wrapper
-	if (typeof browser === 'undefined') {
+	if (typeof browser === 'undefined' || browser.runtime === undefined) {
 		return new Promise((resolve, reject) => {
 			chrome.tabs.sendMessage(id, message, options, (response) => {
 				if (chrome.runtime.lastError) {
@@ -67,7 +67,7 @@ export const captureVisibleTab = (options = {
 	};
 
 	// Chrome API wrapper
-	if (typeof browser === 'undefined') {
+	if (typeof browser === 'undefined' || browser.runtime === undefined) {
 		return new Promise((resolve, reject) => {
 			chrome.tabs.captureVisibleTab(null, options, (source) => {
 				if (chrome.runtime.lastError) {
@@ -107,7 +107,7 @@ export const createTab = (options) =>
  *
  */
 export const executeScript = (tabId, details) => {
-	if (typeof browser === 'undefined') {
+	if (typeof browser === 'undefined' || browser.runtime === undefined) {
 		return new Promise((resolve, reject) => // eslint-disable-line no-new
 			chrome.tabs.executeScript(tabId, details, (results) => {
 				if (chrome.runtime.lastError) {
@@ -126,7 +126,7 @@ export const executeScript = (tabId, details) => {
  *
  */
 export const insertCSS = (tabId, details) => {
-	if (typeof browser === 'undefined') {
+	if (typeof browser === 'undefined' || browser.runtime === undefined) {
 		return new Promise((resolve, reject) => // eslint-disable-line no-new
 			chrome.tabs.insertCSS(tabId, details, (results) => {
 				if (chrome.runtime.lastError) {

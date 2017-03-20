@@ -17,7 +17,7 @@ export const sendMessage = (message, options = {}) =>
 		};
 
 		// Chrome uses a callback as the third parameter...
-		if (typeof browser === 'undefined') {
+		if (typeof browser === 'undefined' || browser.runtime === undefined) {
 			chrome.runtime.sendMessage(message, options, (value) => {
 				if (chrome.runtime.lastError) {
 					reject(chrome.runtime.lastError);
