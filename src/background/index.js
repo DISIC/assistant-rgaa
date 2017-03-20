@@ -1,4 +1,4 @@
-import {get} from 'lodash';
+import {get, endsWith} from 'lodash';
 import {
 	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP, VALIDATE_PAGE, VIEW_PAGE_SOURCE,
 	REQUEST_INITIAL_STATE, GET_PIXEL, GET_CURRENT_TAB, CREATE_TAB,
@@ -8,7 +8,7 @@ import {IFRAME_FILE} from '../container/api/iframe';
 import {openWindow, getWindowTabId} from './api/windows';
 import {OPTIONS_FILE} from './api/options';
 import {
-	CONTENT_SCRIPTS, executeScript,
+	CONTENT_STYLES, CONTENT_SCRIPTS, executeScript, insertCSS,
 	fetchCurrentTab, captureVisibleTab, closeTab, createTab
 } from './api/tabs';
 import {createMessageHandler} from '../common/api/runtime';
@@ -30,13 +30,15 @@ import createInstancePool from './createInstancePool';
 const instances = createInstancePool();
 
 /**
- *	Injects content scripts, one after the other.
+ *	Injects content styles and javascripts one after the other.
  */
 const injectContentScripts = (tabId) =>
-	CONTENT_SCRIPTS.reduce(
+	[...CONTENT_STYLES, ...CONTENT_SCRIPTS].reduce(
 		(promise, file) =>
 			promise.then(() =>
-				executeScript(tabId, {file})
+				endsWith(file, '.css')
+					? insertCSS(tabId, {file})
+					: executeScript(tabId, {file})
 			),
 		Promise.resolve()
 	);

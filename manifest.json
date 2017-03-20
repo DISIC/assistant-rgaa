@@ -28,16 +28,6 @@
 			"dist/background.js"
 		]
 	},
-	"content_scripts": [
-		{
-			"css": [
-				"dist/container.css",
-				"dist/helpers.css"
-			],
-			"matches": ["<all_urls>"],
-			"run_at": "document_idle"
-		}
-	],
 	"options_ui": {
 		"page": "pages/options.html"
 	},

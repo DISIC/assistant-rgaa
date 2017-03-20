@@ -10,6 +10,14 @@ export const CONTENT_SCRIPTS = [
 /**
  *
  */
+export const CONTENT_STYLES = [
+	'dist/container.css',
+	'dist/helpers.css'
+];
+
+/**
+ *
+ */
 export const fetchCurrentTab = () => {
 	const query = {
 		active: true,
@@ -112,6 +120,25 @@ export const executeScript = (tabId, details) => {
 	}
 
 	return browser.tabs.executeScript(tabId, details);
+};
+
+/**
+ *
+ */
+export const insertCSS = (tabId, details) => {
+	if (typeof browser === 'undefined') {
+		return new Promise((resolve, reject) => // eslint-disable-line no-new
+			chrome.tabs.insertCSS(tabId, details, (results) => {
+				if (chrome.runtime.lastError) {
+					reject(chrome.runtime.lastError);
+				} else {
+					resolve(results);
+				}
+			})
+		);
+	}
+
+	return browser.tabs.insertCSS(tabId, details);
 };
 
 /**
