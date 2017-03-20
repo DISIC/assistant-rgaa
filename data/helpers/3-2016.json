@@ -3634,8 +3634,9 @@
 		],
 		[
 			"showElement",
-			"[required], [aria-label], [aria-labelledby], [aria-describedby], [id]",
+			"[required], [aria-label], [aria-labelledby], [aria-describedby], [id], input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
 			[
+				"title",
 				"required",
 				"aria-label",
 				"aria-labelledby",
