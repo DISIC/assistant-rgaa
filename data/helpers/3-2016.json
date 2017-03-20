@@ -3754,13 +3754,6 @@
 				"aria-describedby",
 				"id"
 			]
-		],
-		[
-			"showElement",
-			"[aria-invalid='true']",
-			[
-				"aria-invalid"
-			]
 		]
 	],
 	"11.10.7": [
