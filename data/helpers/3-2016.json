@@ -2041,7 +2041,7 @@
 		[
 			"style",
 			"Linéarise les tableaux",
-			"table, table * { display: block; }"
+			"table, tr, th, td { display: block; }"
 		],
 		[
 			"outline",
