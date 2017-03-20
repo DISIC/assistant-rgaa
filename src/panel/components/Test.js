@@ -33,20 +33,20 @@ function Test({
 		'is-applied': applied
 	});
 
-	const htmlTitle = title.replace(
-		/^(Test \d+\.\d+\.\d+)&nbsp;:\s(.*)$/i,
-		'<span class="Test-id">$1</span><span class="Test-description">$2</span>'
-	);
-
 	return (
 		<article className={className}>
 			<header className="Test-header">
-				<p
-					className="Test-title"
-					dangerouslySetInnerHTML={{
-						__html: htmlTitle
-					}}
-				/>
+				<div className="Test-title">
+					<h4 className="Test-id">
+						{intl.formatMessage({id: 'Test.title'}, {id})}
+					</h4>
+					<div
+						className="Test-description"
+						dangerouslySetInnerHTML={{
+							__html: title
+						}}
+					/>
+				</div>
 
 				<div className="Test-actions">
 					{renderIf(importResult)(() => (

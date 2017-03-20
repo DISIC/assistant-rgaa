@@ -15,21 +15,10 @@
 	padding: vr(0.25) $app-gutter;
 }
 
-.Test-actions {
-	flex-shrink: 0;
-}
-
-.Test-action {
-	display: inline-block;
-	vertical-align: middle;
-	padding: vr(0.125);
-	border-left: 1px solid lighten($color-black, 80%);
-	height: 100%;
-}
-
-.Test-actionLabel {
-	display: block;
-	cursor: pointer;
+.Test-id,
+.Test-description,
+.Test-description p {
+	display: inline;
 }
 
 .Test-id {
@@ -45,6 +34,23 @@
 .Test-title ul {
 	list-style-type: disc;
 	padding-left: vr(1);
+}
+
+.Test-actions {
+	flex-shrink: 0;
+}
+
+.Test-action {
+	display: inline-block;
+	vertical-align: middle;
+	padding: vr(0.125);
+	border-left: 1px solid lighten($color-black, 80%);
+	height: 100%;
+}
+
+.Test-actionLabel {
+	display: block;
+	cursor: pointer;
 }
 
 .Test-header a {

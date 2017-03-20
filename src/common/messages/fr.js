@@ -14,6 +14,7 @@ const messages = {
 	'Criterion.todo.label': 'Des tests restent à faire sur ce critère - Cliquer pour marquer les tests comme "fait"',
 	'Criterion.toggle.show': 'Afficher les tests du critère {id}',
 	'Criterion.toggle.hide': 'Cacher les tests du critère {id}',
+	'Test.title': 'Test {id}',
 	'Test.apply.check.title': 'Appliquer les CSS et JS liés au test',
 	'Test.apply.uncheck.title': 'Enlever les CSS et JS liés au test',
 	'Test.apply.check.alt': 'Loupe',
