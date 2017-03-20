@@ -26,7 +26,7 @@ const resolveLinksPlugin = ($) => {
 			const text = link.text();
 			link.attr('title', title
 				? `${title} (nouvelle fenêtre)`
-				: `${text} (nouvelle fenêtre)`
+				: `${text.replace(/"/g, '&quot;')} (nouvelle fenêtre)`
 			);
 		});
 

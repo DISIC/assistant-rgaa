@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {map} from 'lodash';
-import {injectIntl, intlShape} from 'react-intl';
+import {injectIntl, intlShape, FormattedMessage} from 'react-intl';
 import renderIf from 'render-if';
 import classNames from 'classnames';
 import TestContainer from './TestContainer';
@@ -20,11 +20,10 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, o
 	});
 	const handleDoneChange = (event) =>
 		onDone(event.target.checked);
-
 	return (
 		<li id={`Criterion-${id}`} className={className}>
 			<header className={headerClassName}>
-				<h3 className="Criterion-title">
+				<h3 className="Criterion-title" onClick={onToggle}>
 					<button
 						className="InvisibleButton Criterion-toggle"
 						type="button"
@@ -32,26 +31,36 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, o
 						aria-expanded={isOpen}
 						aria-controls={`Criterion-${id}-content`}
 					>
-						<span dangerouslySetInnerHTML={{__html: title}} />
-						{renderIf(!isOpen && importResults)(() =>
-							<div className="Criterion-importResults">
-								{map(importResults, (count, status) =>
-									<span
-										key={status}
-										className="Label ImportResult"
-										data-import-result={status}
-										title={intl.formatMessage({
-											id: `ImportResults.${status}.title`
-										}, {
-											count
-										})}
-									>
-										{count} × {status}
-									</span>
-								)}
-							</div>
-						)}
+						<span className="ScreenReaderOnly">
+							<FormattedMessage
+								id={`Criterion.toggle.${isOpen ? 'hide' : 'show'}`}
+								values={{
+									id
+								}}
+							/>
+						</span>
 					</button>
+
+					<span dangerouslySetInnerHTML={{__html: title}} />
+
+					{renderIf(!isOpen && importResults)(() =>
+						<div className="Criterion-importResults">
+							{map(importResults, (count, status) =>
+								<span
+									key={status}
+									className="Label ImportResult"
+									data-import-result={status}
+									title={intl.formatMessage({
+										id: `ImportResults.${status}.title`
+									}, {
+										count
+									})}
+								>
+									{count} × {status}
+								</span>
+							)}
+						</div>
+					)}
 				</h3>
 
 				<div className="Criterion-actions">

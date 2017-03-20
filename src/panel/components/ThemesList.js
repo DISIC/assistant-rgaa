@@ -38,19 +38,20 @@ function ThemesList({themes, isOpen, setOpen}) {
 			onMenuToggle={(menu) => setOpen(menu.isOpen)}
 			id="ThemesList-wrapper"
 		>
-			<Button
-				tag="h2"
-				className="ThemesList-title Title Title--accent ThemesList-toggle"
-				id="themesMenu"
-			>
-				{renderIf(isOpen)(() =>
-					<span aria-hidden className="ThemesList-toggleIcon">▼</span>
-				)}
-				{renderIf(!isOpen)(() =>
-					<Icon name="list" className="ThemesList-toggleIcon" />
-				)}
-				<FormattedMessage id="ThemesList.title" />
-			</Button>
+			<h2 className="ThemesList-title Title Title--accent">
+				<Button
+					className="ThemesList-toggle"
+					id="themesMenu"
+				>
+					{renderIf(isOpen)(() =>
+						<span aria-hidden className="ThemesList-toggleIcon">▼</span>
+					)}
+					{renderIf(!isOpen)(() =>
+						<Icon name="list" className="ThemesList-toggleIcon" />
+					)}
+					<FormattedMessage id="ThemesList.title" />
+				</Button>
+			</h2>
 			<Menu tag="ul" className="ThemesList-list">
 				{map(themes, (theme) =>
 					<ThemesListItem

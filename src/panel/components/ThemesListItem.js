@@ -3,7 +3,7 @@ import {MenuItem} from 'react-aria-menubutton';
 
 
 
-function ThemesListItem({title, icon}) {
+function ThemesListItem({id, title, icon}) {
 	const style = {backgroundImage: `url('/img/${icon}')`};
 	const props = {};
 	const listItem = (tab) => (
@@ -16,8 +16,8 @@ function ThemesListItem({title, icon}) {
 		<MenuItem
 			tag="a"
 			className="InvisibleLink ThemesList-link"
-			href={`#${title}`}
-			value={`#${title}`}
+			href={`#theme-${id}`}
+			value={`#theme-${id}`}
 			style={style}
 		>
 			{title}
