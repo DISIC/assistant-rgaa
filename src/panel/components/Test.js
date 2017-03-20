@@ -34,7 +34,7 @@ function Test({
 	});
 
 	const htmlTitle = title.replace(
-		/^(Test \d+\.\d+\.\d+)\s?:\s?(.*)$/i,
+		/^(Test \d+\.\d+\.\d+)&nbsp;:\s(.*)$/i,
 		'<span class="Test-id">$1</span><span class="Test-description">$2</span>'
 	);
 
