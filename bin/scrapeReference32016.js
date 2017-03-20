@@ -28,7 +28,6 @@ module.exports = (options) => (html) => {
 			.resolveLinks(options.source)
 			.html()
 			.trim();
-
 		const idMatches = /^Test (\d+\.\d+\.\d+)/i.exec(title);
 
 		if (idMatches === null) {
@@ -37,7 +36,27 @@ module.exports = (options) => (html) => {
 
 		const id = idMatches[1];
 
-		return {id, title};
+		let formattedTitle = title.replace(
+			/^Test \d+\.\d+\.\d+&nbsp;:\s/i,
+			''
+		);
+
+		if (element.find('ul').length) {
+			let conditions = element.find('ul')
+				.resolveLinks(options.source)
+				.html()
+				.trim();
+			conditions = `<ul>${conditions}</ul>`;
+			formattedTitle = formattedTitle.replace(
+				/<ul>(.*)<\/ul>/,
+				''
+			);
+			formattedTitle = `<p>${formattedTitle}</p>${conditions}`;
+		} else {
+			formattedTitle = `<p>${formattedTitle}</p>`;
+		}
+
+		return {id, title: formattedTitle};
 	};
 
 	const scrapeCriterion = (i, el) => {

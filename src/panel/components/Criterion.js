@@ -23,25 +23,27 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, o
 	return (
 		<li id={`Criterion-${id}`} className={className}>
 			<header className={headerClassName}>
-				<h3 className="Criterion-title" onClick={onToggle}>
-					<button
-						className="InvisibleButton Criterion-toggle"
-						type="button"
-						onClick={onToggle}
-						aria-expanded={isOpen}
-						aria-controls={`Criterion-${id}-content`}
-					>
-						<span className="ScreenReaderOnly">
-							<FormattedMessage
-								id={`Criterion.toggle.${isOpen ? 'hide' : 'show'}`}
-								values={{
-									id
-								}}
-							/>
-						</span>
-					</button>
+				<div className="Criterion-title" onClick={onToggle}>
+					<h3 className="Criterion-titleText">
+						<button
+							className="InvisibleButton Criterion-toggle"
+							type="button"
+							onClick={onToggle}
+							aria-expanded={isOpen}
+							aria-controls={`Criterion-${id}-content`}
+						>
+							<span className="ScreenReaderOnly">
+								<FormattedMessage
+									id={`Criterion.toggle.${isOpen ? 'hide' : 'show'}`}
+									values={{
+										id
+									}}
+								/>
+							</span>
+						</button>
 
-					<span dangerouslySetInnerHTML={{__html: title}} />
+						<span dangerouslySetInnerHTML={{__html: title}} />
+					</h3>
 
 					{renderIf(!isOpen && importResults)(() =>
 						<div className="Criterion-importResults">
@@ -61,7 +63,7 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, o
 							)}
 						</div>
 					)}
-				</h3>
+				</div>
 
 				<div className="Criterion-actions">
 					<div
