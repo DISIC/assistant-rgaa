@@ -5,9 +5,12 @@ import $ from 'jquery';
 /**
  *	Describes the helper.
  */
-export const describe = (intl) =>
+export const describe = (intl, description) =>
 	intl.formatHTMLMessage({
 		id: 'Helper.style'
+	}, {
+		description,
+		hasDescription: !!description
 	});
 
 /**
@@ -16,7 +19,7 @@ export const describe = (intl) =>
  *	@param {string} id - UUID.
  *	@param {string} style - CSS code.
  */
-export const apply = (id, style) =>
+export const apply = (id, description, style) =>
 	$('head').append(
 		$('<style />', {
 			id,

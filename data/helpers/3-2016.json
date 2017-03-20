@@ -2040,11 +2040,8 @@
 		"disableAllStyles",
 		[
 			"style",
-			"table { display: block; }"
-		],
-		[
-			"style",
-			"table * { display: block; }"
+			"Linéarise les tableaux",
+			"table, table * { display: block; }"
 		],
 		[
 			"outline",
@@ -3078,6 +3075,7 @@
 	"10.5.3": [
 		[
 			"style",
+			"Cache les images de fond",
 			"* { background-image: none !important; }"
 		]
 	],
@@ -4153,18 +4151,21 @@
 	"12.13.1": [
 		[
 			"style",
+			"Renforce la visibilité du focus (encadré rouge)",
 			":focus{ border: 2px solid red !important; }"
 		]
 	],
 	"12.13.2": [
 		[
 			"style",
+			"Renforce la visibilité du focus (encadré rouge)",
 			":focus{ border: 2px solid red !important; }"
 		]
 	],
 	"12.14.1": [
 		[
 			"style",
+			"Renforce la visibilité du focus (encadré rouge)",
 			":focus{ border: 2px solid red !important; }"
 		]
 	],

@@ -187,7 +187,12 @@ const messages = {
 		</ul>
 	`,
 	'Helper.showTag': 'Affiche les éléments <code>{selector}</code>',
-	'Helper.style': 'Ajoute des styles dans la page',
+	'Helper.style': `
+		{hasDescription, select,
+			true {{description}}
+			other {Ajoute des styles dans la page}
+		}
+	`,
 	'Helper.validateLocalPage': 'Ouvre l\'outil externe "Validateur W3C pour HTML local"',
 	'Helper.viewSource': 'Ouvre l\'outil "Voir les sources".'
 };
