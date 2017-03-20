@@ -3887,10 +3887,11 @@
 		],
 		[
 			"showElement",
-			"[title], [aria-label], [aria-labelledby], [id]",
+			"[title], [aria-label], [aria-describedby], [aria-labelledby], [id]",
 			[
 				"title",
 				"aria-label",
+				"aria-describedby",
 				"aria-labelledby",
 				"id"
 			]
