@@ -1832,11 +1832,11 @@
 				},
 				{
 					"id": "12.4",
-					"title": "Critère 12.4 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] La <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page \"plan du site\" (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle pertinente&nbsp;?",
+					"title": "Critère 12.4 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] La <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle pertinente&nbsp;?",
 					"tests": [
 						{
 							"id": "12.4.1",
-							"title": "Test 12.4.1&nbsp;: La <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page \"plan du site\" (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle représentative de l’architecture générale du site&nbsp;?"
+							"title": "Test 12.4.1&nbsp;: La <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle représentative de l’architecture générale du site&nbsp;?"
 						},
 						{
 							"id": "12.4.2",
@@ -1850,19 +1850,19 @@
 				},
 				{
 					"id": "12.5",
-					"title": "Critère 12.5 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page \"plan du site\" (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle atteignable de manière identique&nbsp;?",
+					"title": "Critère 12.5 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle atteignable de manière identique&nbsp;?",
 					"tests": [
 						{
 							"id": "12.5.1",
-							"title": "Test 12.5.1&nbsp;: Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page \"plan du site\" (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle accessible à partir d’une fonctionnalité identique&nbsp;?"
+							"title": "Test 12.5.1&nbsp;: Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle accessible à partir d’une fonctionnalité identique&nbsp;?"
 						},
 						{
 							"id": "12.5.2",
-							"title": "Test 12.5.2&nbsp;: Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la fonctionnalité vers la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page \"plan du site\" (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle située à la même place dans la présentation&nbsp;?"
+							"title": "Test 12.5.2&nbsp;: Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la fonctionnalité vers la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle située à la même place dans la présentation&nbsp;?"
 						},
 						{
 							"id": "12.5.3",
-							"title": "Test 12.5.3&nbsp;: Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la fonctionnalité vers la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page \"plan du site\" (nouvelle fenêtre)\">page \"plan du site\"</a> se présente-t-elle toujours dans le même ordre relatif dans le code source&nbsp;?"
+							"title": "Test 12.5.3&nbsp;: Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la fonctionnalité vers la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> se présente-t-elle toujours dans le même ordre relatif dans le code source&nbsp;?"
 						}
 					]
 				},
