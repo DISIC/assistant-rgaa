@@ -2,6 +2,7 @@ import $ from 'jquery';
 import join from '../../common/api/join';
 import serializeAttributes from '../api/serializeAttributes';
 import showCodeNearElement from '../api/showCodeNearElement';
+import hideHelperElement from '../api/hideHelperElement';
 import {sanitize} from '../api/selectors';
 
 
@@ -52,4 +53,4 @@ export const apply = (id, selector, attributes, {showMissing = false} = {}) =>
  *	@param {string} id - UUID.
  */
 export const revert = (id) =>
-	$(`.${id}`).remove();
+	hideHelperElement(`.${id}`);
