@@ -60,9 +60,6 @@
 	display: inline;
 }
 
-.Criterion.is-open .Criterion-title {
-	font-weight: bold;
-}
 
 .Criterion-description {
 	display: block;
@@ -81,6 +78,10 @@
 
 .Criterion-id {
 	font-weight: bold;
+}
+
+.Criterion.is-open .Criterion-id {
+	font-weight: normal;
 }
 
 .Criterion-toggle {
