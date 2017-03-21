@@ -11,19 +11,19 @@ import Icon from './Icon';
 
 
 const icons = {
-	1: 'image.png',
-	2: 'application-sidebar.png',
-	3: 'color.png',
-	4: 'film.png',
-	5: 'table.png',
-	6: 'link.png',
-	7: 'script-text.png',
-	8: 'navigation-090.png',
-	9: 'newspaper.png',
-	10: 'wand.png',
-	11: 'ui-toolbar.png',
-	12: 'arrow-split.png',
-	13: 'book-brown.png'
+	1: 'image',
+	2: 'window-maximize',
+	3: 'paint-brush',
+	4: 'film',
+	5: 'table',
+	6: 'chain',
+	7: 'code',
+	8: 'exclamation-triangle',
+	9: 'mouse-pointer',
+	10: 'columns',
+	11: 'list-alt',
+	12: 'check-square-o',
+	13: 'desktop'
 };
 
 /**
@@ -48,7 +48,7 @@ function ThemesList({themes, isOpen, setOpen}) {
 						<span aria-hidden className="ThemesList-toggleIcon">▼</span>
 					)}
 					{renderIf(!isOpen)(() =>
-						<Icon name="list" className="ThemesList-toggleIcon" />
+						<Icon name="list-ul" className="ThemesList-toggleIcon" />
 					)}
 					<FormattedMessage id="ThemesList.title" />
 				</Button>

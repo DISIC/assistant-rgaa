@@ -9,7 +9,6 @@
 	right: $app-gutter;
 	margin: auto;
 	background: $color-white;
-	padding-bottom: vr(0.25);
 	border: 2px solid $color-theme;
 	border-top: 0;
 	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
@@ -38,9 +37,10 @@
 .ThemesList-toggleIcon {
 	display: inline-block;
 	text-align: center;
-	width: 24px;
-	height: 24px;
-	margin-right: 3px;
+	width: 20px;
+	height: 20px;
+	margin-right: 6px;
+	margin-bottom: 2px;
 }
 
 .ThemesList:not(.is-open) .ThemesList-toggleIcon {
@@ -51,7 +51,6 @@
 .ThemesList-link {
 	display: block;
 	padding: vr(0.125) $app-gutter;
-	padding-left: 2.6rem;
 	background: $color-white none no-repeat 0.6rem 50%;
 	background-size: 24px;
 	border: 1px solid darken($color-sand, 30%);
@@ -62,6 +61,13 @@
 
 .ThemesList-item + .ThemesList-item .ThemesList-link {
 	border-top: 0;
+}
+
+.ThemesList-itemIcon {
+	margin-right: $app-gutter;
+	width: 1.2em;
+	height: 1.2em;
+	vertical-align: -0.3em;
 }
 
 .ThemesList-item:last-child .ThemesList-link {
