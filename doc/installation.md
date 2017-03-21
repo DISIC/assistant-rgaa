@@ -19,7 +19,7 @@ Sur Chrome, vous pouvez installer l'extension directement depuis le Chrome Web S
 * sur Firefox (version 52 et plus) :
     * Sur le projet Gitlab, allez dans *Repository > Tags* et téléchargez le fichier **xpi** correspondant à la version souhaitée. Si vous n'êtes pas sûr, prenez la version la plus récente.
     * faites un drag&drop du fichier sur n'importe quel onglet ouvert sur Firefox : une boîte de dialogue apparait, vous demandant si vous voulez installer l'extension.
-    * ouvrez un nouvel onglet pour pouvoir utiliser l'extension dessus
+    * redémarrez firefox et ouvrez un nouvel onglet pour pouvoir utiliser l'extension dessus
 
 ### Installer en mode développeur
 
