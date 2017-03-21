@@ -11,7 +11,9 @@ import Icon from './Icon';
 /**
  *
  */
-function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, onDone, intl}) {
+function Criterion({
+	id, level, title, tests, isDone, isOpen, importResults, onToggle, onDone, intl
+}) {
 	const className = classNames('Criterion Theme-criterion', {
 		'is-open': isOpen
 	});
@@ -24,7 +26,7 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, o
 		<li id={`Criterion-${id}`} className={className}>
 			<header className={headerClassName}>
 				<div className="Criterion-title" onClick={onToggle}>
-					<h3 className="Criterion-titleText">
+					<div className="Criterion-titleText">
 						<button
 							className="InvisibleButton Criterion-toggle"
 							type="button"
@@ -42,8 +44,21 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, o
 							</span>
 						</button>
 
-						<span dangerouslySetInnerHTML={{__html: title}} />
-					</h3>
+						<h3 className="Criterion-id">
+							{intl.formatMessage({id: 'Criterion.title'}, {id})}
+						</h3>
+
+						{renderIf(level)(() =>
+							<span className="Criterion-level">
+								{intl.formatMessage({id: 'Criterion.level'}, {lvl: level})}
+							</span>
+						)}
+
+						<p
+							className="Criterion-description"
+							dangerouslySetInnerHTML={{__html: title}}
+						/>
+					</div>
 
 					{renderIf(!isOpen && importResults)(() =>
 						<div className="Criterion-importResults">
@@ -114,6 +129,7 @@ function Criterion({id, title, tests, isDone, isOpen, importResults, onToggle, o
 Criterion.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
+	level: PropTypes.string,
 	tests: PropTypes.array.isRequired,
 	isOpen: PropTypes.bool.isRequired,
 	importResults: PropTypes.object,

@@ -20,6 +20,9 @@ $typi-large: (
 $typi-regular: (
 	null: (0.8125em, $line-height / 0.8125)
 );
+$typi-small: (
+	null: (0.688em, $line-height / 0.688)
+);
 
 $base-line-height: $base-font-size * $line-height;
 

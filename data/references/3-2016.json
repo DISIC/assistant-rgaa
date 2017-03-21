@@ -8,7 +8,8 @@
 			"criteria": [
 				{
 					"id": "1.1",
-					"title": "Critère 1.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque image a-t-elle une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative-textuelle-image\" target=\"_blank\" title=\"alternative textuelle (nouvelle fenêtre)\">alternative textuelle</a>&nbsp;?",
+					"title": "Chaque image a-t-elle une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative-textuelle-image\" target=\"_blank\" title=\"alternative textuelle (nouvelle fenêtre)\">alternative textuelle</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "1.1.1",
@@ -30,7 +31,8 @@
 				},
 				{
 					"id": "1.2",
-					"title": "Critère 1.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-de-dcoration\" target=\"_blank\" title=\"image de décoration (nouvelle fenêtre)\">image de décoration</a> ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative-textuelle-image\" target=\"_blank\" title=\"alternative textuelle (nouvelle fenêtre)\">alternative textuelle</a>, cette alternative est-elle vide&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-de-dcoration\" target=\"_blank\" title=\"image de décoration (nouvelle fenêtre)\">image de décoration</a> ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative-textuelle-image\" target=\"_blank\" title=\"alternative textuelle (nouvelle fenêtre)\">alternative textuelle</a>, cette alternative est-elle vide&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "1.2.1",
@@ -60,7 +62,8 @@
 				},
 				{
 					"id": "1.3",
-					"title": "Critère 1.3 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"image porteuse d’information (nouvelle fenêtre)\">image porteuse d’information</a> ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative-textuelle-image\" target=\"_blank\" title=\"alternative textuelle (nouvelle fenêtre)\">alternative textuelle</a>, cette alternative est-elle pertinente (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-1-3\" title=\"Cas particuliers pour le critère 1.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"image porteuse d’information (nouvelle fenêtre)\">image porteuse d’information</a> ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative-textuelle-image\" target=\"_blank\" title=\"alternative textuelle (nouvelle fenêtre)\">alternative textuelle</a>, cette alternative est-elle pertinente (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-1-3\" title=\"Cas particuliers pour le critère 1.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "1.3.1",
@@ -118,7 +121,8 @@
 				},
 				{
 					"id": "1.4",
-					"title": "Critère 1.4 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque image utilisée comme <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#captcha\" target=\"_blank\" title=\"CAPTCHA (nouvelle fenêtre)\">CAPTCHA</a> ou comme <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-test\" target=\"_blank\" title=\"image-test (nouvelle fenêtre)\">image-test</a>, ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative-textuelle-image\" target=\"_blank\" title=\"alternative textuelle (nouvelle fenêtre)\">alternative textuelle</a>, cette alternative permet-elle d’identifier la nature et la fonction de l’image&nbsp;?",
+					"title": "Pour chaque image utilisée comme <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#captcha\" target=\"_blank\" title=\"CAPTCHA (nouvelle fenêtre)\">CAPTCHA</a> ou comme <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-test\" target=\"_blank\" title=\"image-test (nouvelle fenêtre)\">image-test</a>, ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative-textuelle-image\" target=\"_blank\" title=\"alternative textuelle (nouvelle fenêtre)\">alternative textuelle</a>, cette alternative permet-elle d’identifier la nature et la fonction de l’image&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "1.4.1",
@@ -172,7 +176,8 @@
 				},
 				{
 					"id": "1.5",
-					"title": "Critère 1.5 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque image utilisée comme <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#captcha\" target=\"_blank\" title=\"CAPTCHA (nouvelle fenêtre)\">CAPTCHA</a>, une solution d’accès alternatif au contenu ou à la fonction du CAPTCHA est-elle présente&nbsp;?",
+					"title": "Pour chaque image utilisée comme <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#captcha\" target=\"_blank\" title=\"CAPTCHA (nouvelle fenêtre)\">CAPTCHA</a>, une solution d’accès alternatif au contenu ou à la fonction du CAPTCHA est-elle présente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "1.5.1",
@@ -186,7 +191,8 @@
 				},
 				{
 					"id": "1.6",
-					"title": "Critère 1.6 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"image porteuse d’information (nouvelle fenêtre)\">image porteuse d’information</a> a-t-elle, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#description-dtaille-image\" target=\"_blank\" title=\"description détaillée (nouvelle fenêtre)\">description détaillée</a>&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"image porteuse d’information (nouvelle fenêtre)\">image porteuse d’information</a> a-t-elle, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#description-dtaille-image\" target=\"_blank\" title=\"description détaillée (nouvelle fenêtre)\">description détaillée</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "1.6.1",
@@ -232,7 +238,8 @@
 				},
 				{
 					"id": "1.7",
-					"title": "Critère 1.7 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"image porteuse d’information (nouvelle fenêtre)\">image porteuse d’information</a> ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#description-dtaille-image\" target=\"_blank\" title=\"description détaillée (nouvelle fenêtre)\">description détaillée</a>, cette description est-elle pertinente&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"image porteuse d’information (nouvelle fenêtre)\">image porteuse d’information</a> ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#description-dtaille-image\" target=\"_blank\" title=\"description détaillée (nouvelle fenêtre)\">description détaillée</a>, cette description est-elle pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "1.7.1",
@@ -270,7 +277,8 @@
 				},
 				{
 					"id": "1.8",
-					"title": "Critère 1.8 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-texte\" target=\"_blank\" title=\"image texte (nouvelle fenêtre)\">image texte</a> <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"porteuse d’information (nouvelle fenêtre)\">porteuse d’information</a>, en l’absence d’un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mcanisme-de-remplacement\" target=\"_blank\" title=\"mécanisme de remplacement (nouvelle fenêtre)\">mécanisme de remplacement</a>, doit si possible être remplacée par du <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#texte-styl\" target=\"_blank\" title=\"texte stylé (nouvelle fenêtre)\">texte stylé</a>. Cette règle est-elle respectée (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-1-8\" title=\"Cas particuliers pour le critère 1.8 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-texte\" target=\"_blank\" title=\"image texte (nouvelle fenêtre)\">image texte</a> <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"porteuse d’information (nouvelle fenêtre)\">porteuse d’information</a>, en l’absence d’un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mcanisme-de-remplacement\" target=\"_blank\" title=\"mécanisme de remplacement (nouvelle fenêtre)\">mécanisme de remplacement</a>, doit si possible être remplacée par du <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#texte-styl\" target=\"_blank\" title=\"texte stylé (nouvelle fenêtre)\">texte stylé</a>. Cette règle est-elle respectée (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-1-8\" title=\"Cas particuliers pour le critère 1.8 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "1.8.1",
@@ -296,7 +304,8 @@
 				},
 				{
 					"id": "1.9",
-					"title": "Critère 1.9 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-texte\" target=\"_blank\" title=\"image texte (nouvelle fenêtre)\">image texte</a> <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"porteuse d’information (nouvelle fenêtre)\">porteuse d’information</a>, doit si possible être remplacée par du <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#texte-styl\" target=\"_blank\" title=\"texte stylé (nouvelle fenêtre)\">texte stylé</a>. Cette règle est-elle respectée (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-1-9\" title=\"Cas particuliers pour le critère 1.9 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-texte\" target=\"_blank\" title=\"image texte (nouvelle fenêtre)\">image texte</a> <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#image-porteuse-dinformation\" target=\"_blank\" title=\"porteuse d’information (nouvelle fenêtre)\">porteuse d’information</a>, doit si possible être remplacée par du <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#texte-styl\" target=\"_blank\" title=\"texte stylé (nouvelle fenêtre)\">texte stylé</a>. Cette règle est-elle respectée (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-1-9\" title=\"Cas particuliers pour le critère 1.9 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "1.9.1",
@@ -322,7 +331,8 @@
 				},
 				{
 					"id": "1.10",
-					"title": "Critère 1.10 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#lgende-dimage\" target=\"_blank\" title=\"légende (nouvelle fenêtre)\">légende</a> d’image est-elle, si nécessaire, correctement reliée à l’image correspondante&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#lgende-dimage\" target=\"_blank\" title=\"légende (nouvelle fenêtre)\">légende</a> d’image est-elle, si nécessaire, correctement reliée à l’image correspondante&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "1.10.1",
@@ -354,7 +364,8 @@
 			"criteria": [
 				{
 					"id": "2.1",
-					"title": "Critère 2.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#cadre-en-ligne\" target=\"_blank\" title=\"cadre en ligne (nouvelle fenêtre)\">cadre en ligne</a> a-t-il un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titre-de-cadre\" target=\"_blank\" title=\"titre de cadre (nouvelle fenêtre)\">titre de cadre</a>&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#cadre-en-ligne\" target=\"_blank\" title=\"cadre en ligne (nouvelle fenêtre)\">cadre en ligne</a> a-t-il un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titre-de-cadre\" target=\"_blank\" title=\"titre de cadre (nouvelle fenêtre)\">titre de cadre</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "2.1.1",
@@ -364,7 +375,8 @@
 				},
 				{
 					"id": "2.2",
-					"title": "Critère 2.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#cadre-en-ligne\" target=\"_blank\" title=\"cadre en ligne (nouvelle fenêtre)\">cadre en ligne</a> ayant un titre de cadre, ce <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titre-de-cadre\" target=\"_blank\" title=\"titre de cadre (nouvelle fenêtre)\">titre de cadre</a> est-il pertinent&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#cadre-en-ligne\" target=\"_blank\" title=\"cadre en ligne (nouvelle fenêtre)\">cadre en ligne</a> ayant un titre de cadre, ce <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titre-de-cadre\" target=\"_blank\" title=\"titre de cadre (nouvelle fenêtre)\">titre de cadre</a> est-il pertinent&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "2.2.1",
@@ -380,7 +392,8 @@
 			"criteria": [
 				{
 					"id": "3.1",
-					"title": "Critère 3.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, l’<a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#information-donne-par-la-couleur\" target=\"_blank\" title=\"information (nouvelle fenêtre)\">information</a> ne doit pas être donnée uniquement par la couleur. Cette règle est-elle respectée&nbsp;?",
+					"title": "Dans chaque page Web, l’<a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#information-donne-par-la-couleur\" target=\"_blank\" title=\"information (nouvelle fenêtre)\">information</a> ne doit pas être donnée uniquement par la couleur. Cette règle est-elle respectée&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "3.1.1",
@@ -410,7 +423,8 @@
 				},
 				{
 					"id": "3.2",
-					"title": "Critère 3.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, l’<a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#information-donne-par-la-couleur\" target=\"_blank\" title=\"information (nouvelle fenêtre)\">information</a> ne doit pas être donnée uniquement par la couleur. Cette règle est-elle implémentée de façon pertinente&nbsp;?",
+					"title": "Dans chaque page Web, l’<a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#information-donne-par-la-couleur\" target=\"_blank\" title=\"information (nouvelle fenêtre)\">information</a> ne doit pas être donnée uniquement par la couleur. Cette règle est-elle implémentée de façon pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "3.2.1",
@@ -440,7 +454,8 @@
 				},
 				{
 					"id": "3.3",
-					"title": "Critère 3.3 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque page Web, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contraste\" target=\"_blank\" title=\"contraste (nouvelle fenêtre)\">contraste</a> entre la couleur du texte et la couleur de son arrière-plan est-il suffisamment élevé (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-3-3,3-4\" title=\"Cas particuliers pour le critère 3.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Dans chaque page Web, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contraste\" target=\"_blank\" title=\"contraste (nouvelle fenêtre)\">contraste</a> entre la couleur du texte et la couleur de son arrière-plan est-il suffisamment élevé (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-3-3,3-4\" title=\"Cas particuliers pour le critère 3.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "3.3.1",
@@ -462,7 +477,8 @@
 				},
 				{
 					"id": "3.4",
-					"title": "Critère 3.4 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contraste\" target=\"_blank\" title=\"contraste (nouvelle fenêtre)\">contraste</a> entre la couleur du texte et la couleur de son arrière-plan est-il amélioré (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-3-3,3-4\" title=\"Cas particuliers pour le critère 3.4 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Dans chaque page Web, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contraste\" target=\"_blank\" title=\"contraste (nouvelle fenêtre)\">contraste</a> entre la couleur du texte et la couleur de son arrière-plan est-il amélioré (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-3-3,3-4\" title=\"Cas particuliers pour le critère 3.4 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "3.4.1",
@@ -490,7 +506,8 @@
 			"criteria": [
 				{
 					"id": "4.1",
-					"title": "Critère 4.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré a-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a> ou une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-synchronise-media-temporel\" target=\"_blank\" title=\"audio-description (nouvelle fenêtre)\">audio-description</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.2 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré a-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a> ou une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-synchronise-media-temporel\" target=\"_blank\" title=\"audio-description (nouvelle fenêtre)\">audio-description</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.2 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.1.1",
@@ -508,7 +525,8 @@
 				},
 				{
 					"id": "4.2",
-					"title": "Critère 4.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a> ou une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-synchronise-media-temporel\" target=\"_blank\" title=\"audio-description (nouvelle fenêtre)\">audio-description</a> synchronisée, celles-ci sont-elles pertinentes (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.2 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a> ou une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-synchronise-media-temporel\" target=\"_blank\" title=\"audio-description (nouvelle fenêtre)\">audio-description</a> synchronisée, celles-ci sont-elles pertinentes (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.2 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.2.1",
@@ -526,7 +544,8 @@
 				},
 				{
 					"id": "4.3",
-					"title": "Critère 4.3 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> synchronisé pré-enregistré a-t-il, si nécessaire, des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#soustitres-synchroniss-objet-multimdia\" target=\"_blank\" title=\"sous-titres synchronisés (nouvelle fenêtre)\">sous-titres synchronisés</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> synchronisé pré-enregistré a-t-il, si nécessaire, des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#soustitres-synchroniss-objet-multimdia\" target=\"_blank\" title=\"sous-titres synchronisés (nouvelle fenêtre)\">sous-titres synchronisés</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.3.1",
@@ -540,7 +559,8 @@
 				},
 				{
 					"id": "4.4",
-					"title": "Critère 4.4 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> synchronisé pré-enregistré ayant des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#soustitres-synchroniss-objet-multimdia\" target=\"_blank\" title=\"sous-titres synchronisés (nouvelle fenêtre)\">sous-titres synchronisés</a>, ces sous-titres sont-ils pertinents&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> synchronisé pré-enregistré ayant des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#soustitres-synchroniss-objet-multimdia\" target=\"_blank\" title=\"sous-titres synchronisés (nouvelle fenêtre)\">sous-titres synchronisés</a>, ces sous-titres sont-ils pertinents&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.4.1",
@@ -550,7 +570,8 @@
 				},
 				{
 					"id": "4.5",
-					"title": "Critère 4.5 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> en direct a-t-il, si nécessaire, des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#soustitres-synchroniss-objet-multimdia\" target=\"_blank\" title=\"sous-titres synchronisés (nouvelle fenêtre)\">sous-titres synchronisés</a> ou une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.5 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> en direct a-t-il, si nécessaire, des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#soustitres-synchroniss-objet-multimdia\" target=\"_blank\" title=\"sous-titres synchronisés (nouvelle fenêtre)\">sous-titres synchronisés</a> ou une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.5 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "4.5.1",
@@ -564,7 +585,8 @@
 				},
 				{
 					"id": "4.6",
-					"title": "Critère 4.6 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> en direct ayant des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#soustitres-synchroniss-objet-multimdia\" target=\"_blank\" title=\"sous-titres synchronisés (nouvelle fenêtre)\">sous-titres synchronisés</a> ou une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a>, ceux-ci sont-ils pertinents&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> en direct ayant des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#soustitres-synchroniss-objet-multimdia\" target=\"_blank\" title=\"sous-titres synchronisés (nouvelle fenêtre)\">sous-titres synchronisés</a> ou une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a>, ceux-ci sont-ils pertinents&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "4.6.1",
@@ -578,7 +600,8 @@
 				},
 				{
 					"id": "4.7",
-					"title": "Critère 4.7 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré a-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-synchronise-media-temporel\" target=\"_blank\" title=\"audio-description (nouvelle fenêtre)\">audio-description</a> synchronisée (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.7 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré a-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-synchronise-media-temporel\" target=\"_blank\" title=\"audio-description (nouvelle fenêtre)\">audio-description</a> synchronisée (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.7 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "4.7.1",
@@ -592,7 +615,8 @@
 				},
 				{
 					"id": "4.8",
-					"title": "Critère 4.8 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-synchronise-media-temporel\" target=\"_blank\" title=\"audio-description (nouvelle fenêtre)\">audio-description</a> synchronisée, celle-ci est-elle pertinente&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-synchronise-media-temporel\" target=\"_blank\" title=\"audio-description (nouvelle fenêtre)\">audio-description</a> synchronisée, celle-ci est-elle pertinente&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "4.8.1",
@@ -606,7 +630,8 @@
 				},
 				{
 					"id": "4.9",
-					"title": "Critère 4.9 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré a-t-il, si nécessaire, une interprétation en langue des signes (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.9 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré a-t-il, si nécessaire, une interprétation en langue des signes (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.9 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "4.9.1",
@@ -620,7 +645,8 @@
 				},
 				{
 					"id": "4.10",
-					"title": "Critère 4.10 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré ayant une interprétation en langue des signes, celle-ci est-elle pertinente&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré ayant une interprétation en langue des signes, celle-ci est-elle pertinente&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "4.10.1",
@@ -634,7 +660,8 @@
 				},
 				{
 					"id": "4.11",
-					"title": "Critère 4.11 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré a-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-tendue\" target=\"_blank\" title=\"audio-description étendue (nouvelle fenêtre)\">audio-description étendue</a> synchronisée (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.11 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré a-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-tendue\" target=\"_blank\" title=\"audio-description étendue (nouvelle fenêtre)\">audio-description étendue</a> synchronisée (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.11 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "4.11.1",
@@ -648,7 +675,8 @@
 				},
 				{
 					"id": "4.12",
-					"title": "Critère 4.12 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-tendue\" target=\"_blank\" title=\"audio-description étendue (nouvelle fenêtre)\">audio-description étendue</a> synchronisée, celle-ci est-elle pertinente&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> pré-enregistré ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#audiodescription-tendue\" target=\"_blank\" title=\"audio-description étendue (nouvelle fenêtre)\">audio-description étendue</a> synchronisée, celle-ci est-elle pertinente&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "4.12.1",
@@ -662,7 +690,8 @@
 				},
 				{
 					"id": "4.13",
-					"title": "Critère 4.13 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> synchronisé ou seulement vidéo a-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.13 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> synchronisé ou seulement vidéo a-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-1,4-2,4-3,4-5,4-7,4-9,4-11,4-13\" title=\"Cas particuliers pour le critère 4.13 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "4.13.1",
@@ -676,7 +705,8 @@
 				},
 				{
 					"id": "4.14",
-					"title": "Critère 4.14 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> synchronisé ou seulement vidéo, ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a>, celle-ci est-elle pertinente&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> synchronisé ou seulement vidéo, ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#transcription-textuelle-media-temporel\" target=\"_blank\" title=\"transcription textuelle (nouvelle fenêtre)\">transcription textuelle</a>, celle-ci est-elle pertinente&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "4.14.1",
@@ -690,7 +720,8 @@
 				},
 				{
 					"id": "4.15",
-					"title": "Critère 4.15 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> est-il clairement identifiable (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-15\" title=\"Cas particuliers pour le critère 4.15 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> est-il clairement identifiable (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-15\" title=\"Cas particuliers pour le critère 4.15 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.15.1",
@@ -704,7 +735,8 @@
 				},
 				{
 					"id": "4.16",
-					"title": "Critère 4.16 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-non-temporel\" target=\"_blank\" title=\"média non temporel (nouvelle fenêtre)\">média non temporel</a> a-t-il, si nécessaire, une alternative (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-16\" title=\"Cas particuliers pour le critère 4.16 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-non-temporel\" target=\"_blank\" title=\"média non temporel (nouvelle fenêtre)\">média non temporel</a> a-t-il, si nécessaire, une alternative (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-16\" title=\"Cas particuliers pour le critère 4.16 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.16.1",
@@ -718,7 +750,8 @@
 				},
 				{
 					"id": "4.17",
-					"title": "Critère 4.17 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-non-temporel\" target=\"_blank\" title=\"média non temporel (nouvelle fenêtre)\">média non temporel</a> ayant une alternative, cette alternative est-elle pertinente&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-non-temporel\" target=\"_blank\" title=\"média non temporel (nouvelle fenêtre)\">média non temporel</a> ayant une alternative, cette alternative est-elle pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.17.1",
@@ -728,7 +761,8 @@
 				},
 				{
 					"id": "4.18",
-					"title": "Critère 4.18 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque son déclenché automatiquement est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#controle-son\" target=\"_blank\" title=\"contrôlable (nouvelle fenêtre)\">contrôlable</a> par l’utilisateur&nbsp;?",
+					"title": "Chaque son déclenché automatiquement est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#controle-son\" target=\"_blank\" title=\"contrôlable (nouvelle fenêtre)\">contrôlable</a> par l’utilisateur&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.18.1",
@@ -738,7 +772,8 @@
 				},
 				{
 					"id": "4.19",
-					"title": "Critère 4.19 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> seulement audio pré-enregistré, les dialogues sont-ils suffisamment audibles (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-19\" title=\"Cas particuliers pour le critère 4.19 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> seulement audio pré-enregistré, les dialogues sont-ils suffisamment audibles (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-19\" title=\"Cas particuliers pour le critère 4.19 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "4.19.1",
@@ -748,7 +783,8 @@
 				},
 				{
 					"id": "4.20",
-					"title": "Critère 4.20 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] La consultation de chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> est-elle, si nécessaire, <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#accessible-et-activable-par-le-clavier-et-la-souris\" target=\"_blank\" title=\"contrôlable par le clavier et la souris (nouvelle fenêtre)\">contrôlable par le clavier et la souris</a>&nbsp;?",
+					"title": "La consultation de chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> est-elle, si nécessaire, <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#accessible-et-activable-par-le-clavier-et-la-souris\" target=\"_blank\" title=\"contrôlable par le clavier et la souris (nouvelle fenêtre)\">contrôlable par le clavier et la souris</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.20.1",
@@ -766,7 +802,8 @@
 				},
 				{
 					"id": "4.21",
-					"title": "Critère 4.21 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] La consultation de chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-non-temporel\" target=\"_blank\" title=\"média non temporel (nouvelle fenêtre)\">média non temporel</a> est-elle <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#accessible-et-activable-par-le-clavier-et-la-souris\" target=\"_blank\" title=\"contrôlable par le clavier et la souris (nouvelle fenêtre)\">contrôlable par le clavier et la souris</a>&nbsp;?",
+					"title": "La consultation de chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-non-temporel\" target=\"_blank\" title=\"média non temporel (nouvelle fenêtre)\">média non temporel</a> est-elle <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#accessible-et-activable-par-le-clavier-et-la-souris\" target=\"_blank\" title=\"contrôlable par le clavier et la souris (nouvelle fenêtre)\">contrôlable par le clavier et la souris</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.21.1",
@@ -780,7 +817,8 @@
 				},
 				{
 					"id": "4.22",
-					"title": "Critère 4.22 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> et <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-non-temporel\" target=\"_blank\" title=\"non temporel (nouvelle fenêtre)\">non temporel</a> est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#compatible-avec-les-technologies-dassistance\" target=\"_blank\" title=\"compatible avec les technologies d’assistance (nouvelle fenêtre)\">compatible avec les technologies d’assistance</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-22\" title=\"Cas particuliers pour le critère 4.22 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\" target=\"_blank\" title=\"média temporel (nouvelle fenêtre)\">média temporel</a> et <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#mdia-non-temporel\" target=\"_blank\" title=\"non temporel (nouvelle fenêtre)\">non temporel</a> est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#compatible-avec-les-technologies-dassistance\" target=\"_blank\" title=\"compatible avec les technologies d’assistance (nouvelle fenêtre)\">compatible avec les technologies d’assistance</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-4-22\" title=\"Cas particuliers pour le critère 4.22 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "4.22.1",
@@ -800,7 +838,8 @@
 			"criteria": [
 				{
 					"id": "5.1",
-					"title": "Critère 5.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes-complexe\" target=\"_blank\" title=\"tableau de données complexe (nouvelle fenêtre)\">tableau de données complexe</a> a-t-il un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#rsum-de-tableau\" target=\"_blank\" title=\"résumé (nouvelle fenêtre)\">résumé</a>&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes-complexe\" target=\"_blank\" title=\"tableau de données complexe (nouvelle fenêtre)\">tableau de données complexe</a> a-t-il un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#rsum-de-tableau\" target=\"_blank\" title=\"résumé (nouvelle fenêtre)\">résumé</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "5.1.1",
@@ -810,7 +849,8 @@
 				},
 				{
 					"id": "5.2",
-					"title": "Critère 5.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes-complexe\" target=\"_blank\" title=\"tableau de données complexe (nouvelle fenêtre)\">tableau de données complexe</a> ayant un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#rsum-de-tableau\" target=\"_blank\" title=\"résumé (nouvelle fenêtre)\">résumé</a>, celui-ci est-il pertinent&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes-complexe\" target=\"_blank\" title=\"tableau de données complexe (nouvelle fenêtre)\">tableau de données complexe</a> ayant un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#rsum-de-tableau\" target=\"_blank\" title=\"résumé (nouvelle fenêtre)\">résumé</a>, celui-ci est-il pertinent&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "5.2.1",
@@ -820,7 +860,8 @@
 				},
 				{
 					"id": "5.3",
-					"title": "Critère 5.3 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-mise-en-forme\" target=\"_blank\" title=\"tableau de mise en forme (nouvelle fenêtre)\">tableau de mise en forme</a>, le contenu linéarisé reste-t-il compréhensible (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-5-3\" title=\"Cas particuliers pour le critère 5.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-mise-en-forme\" target=\"_blank\" title=\"tableau de mise en forme (nouvelle fenêtre)\">tableau de mise en forme</a>, le contenu linéarisé reste-t-il compréhensible (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-5-3\" title=\"Cas particuliers pour le critère 5.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "5.3.1",
@@ -830,7 +871,8 @@
 				},
 				{
 					"id": "5.4",
-					"title": "Critère 5.4 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableau de données (nouvelle fenêtre)\">tableau de données</a> a-t-il un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titreTab\" target=\"_blank\" title=\"titre (nouvelle fenêtre)\">titre</a>&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableau de données (nouvelle fenêtre)\">tableau de données</a> a-t-il un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titreTab\" target=\"_blank\" title=\"titre (nouvelle fenêtre)\">titre</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "5.4.1",
@@ -840,7 +882,8 @@
 				},
 				{
 					"id": "5.5",
-					"title": "Critère 5.5 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableau de données (nouvelle fenêtre)\">tableau de données</a> ayant un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titreTab\" target=\"_blank\" title=\"titre (nouvelle fenêtre)\">titre</a>, celui-ci est-il pertinent&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableau de données (nouvelle fenêtre)\">tableau de données</a> ayant un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titreTab\" target=\"_blank\" title=\"titre (nouvelle fenêtre)\">titre</a>, celui-ci est-il pertinent&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "5.5.1",
@@ -850,7 +893,8 @@
 				},
 				{
 					"id": "5.6",
-					"title": "Critère 5.6 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableau de données (nouvelle fenêtre)\">tableau de données</a>, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#entte-de-colonne-ou-de-ligne\" target=\"_blank\" title=\"en-tête de colonnes (nouvelle fenêtre)\">en-tête de colonnes</a> et chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#entte-de-colonne-ou-de-ligne\" target=\"_blank\" title=\"en-tête de lignes (nouvelle fenêtre)\">en-tête de lignes</a> sont-ils correctement déclarés&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableau de données (nouvelle fenêtre)\">tableau de données</a>, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#entte-de-colonne-ou-de-ligne\" target=\"_blank\" title=\"en-tête de colonnes (nouvelle fenêtre)\">en-tête de colonnes</a> et chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#entte-de-colonne-ou-de-ligne\" target=\"_blank\" title=\"en-tête de lignes (nouvelle fenêtre)\">en-tête de lignes</a> sont-ils correctement déclarés&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "5.6.1",
@@ -864,7 +908,8 @@
 				},
 				{
 					"id": "5.7",
-					"title": "Critère 5.7 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableau de données (nouvelle fenêtre)\">tableau de données</a>, la technique appropriée permettant d’associer chaque cellule avec ses <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#entte-de-colonne-ou-de-ligne\" target=\"_blank\" title=\"en-têtes (nouvelle fenêtre)\">en-têtes</a> est-elle utilisée&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableau de données (nouvelle fenêtre)\">tableau de données</a>, la technique appropriée permettant d’associer chaque cellule avec ses <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#entte-de-colonne-ou-de-ligne\" target=\"_blank\" title=\"en-têtes (nouvelle fenêtre)\">en-têtes</a> est-elle utilisée&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "5.7.1",
@@ -886,7 +931,8 @@
 				},
 				{
 					"id": "5.8",
-					"title": "Critère 5.8 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-mise-en-forme\" target=\"_blank\" title=\"tableau de mise en forme (nouvelle fenêtre)\">tableau de mise en forme</a> ne doit pas utiliser d’éléments propres aux <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableaux de données (nouvelle fenêtre)\">tableaux de données</a>. Cette règle est-elle respectée&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-mise-en-forme\" target=\"_blank\" title=\"tableau de mise en forme (nouvelle fenêtre)\">tableau de mise en forme</a> ne doit pas utiliser d’éléments propres aux <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tableau-de-donnes\" target=\"_blank\" title=\"tableaux de données (nouvelle fenêtre)\">tableaux de données</a>. Cette règle est-elle respectée&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "5.8.1",
@@ -902,7 +948,8 @@
 			"criteria": [
 				{
 					"id": "6.1",
-					"title": "Critère 6.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque lien est-il explicite (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-6-1,6-3\" title=\"Cas particuliers pour le critère 6.1 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque lien est-il explicite (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-6-1,6-3\" title=\"Cas particuliers pour le critère 6.1 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "6.1.1",
@@ -920,7 +967,8 @@
 				},
 				{
 					"id": "6.2",
-					"title": "Critère 6.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque lien ayant un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titre-de-lien\" target=\"_blank\" title=\"titre de lien (nouvelle fenêtre)\">titre de lien</a>, celui-ci est-il pertinent&nbsp;?",
+					"title": "Pour chaque lien ayant un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titre-de-lien\" target=\"_blank\" title=\"titre de lien (nouvelle fenêtre)\">titre de lien</a>, celui-ci est-il pertinent&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "6.2.1",
@@ -938,7 +986,8 @@
 				},
 				{
 					"id": "6.3",
-					"title": "Critère 6.3 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Chaque intitulé de lien seul est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#lien-explicite-hors-contexte\" target=\"_blank\" title=\"explicite hors contexte (nouvelle fenêtre)\">explicite hors contexte</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-6-1,6-3\" title=\"Cas particuliers pour le critère 6.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque intitulé de lien seul est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#lien-explicite-hors-contexte\" target=\"_blank\" title=\"explicite hors contexte (nouvelle fenêtre)\">explicite hors contexte</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-6-1,6-3\" title=\"Cas particuliers pour le critère 6.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "6.3.1",
@@ -956,7 +1005,8 @@
 				},
 				{
 					"id": "6.4",
-					"title": "Critère 6.4 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#liens-identiques\" target=\"_blank\" title=\"lien identique (nouvelle fenêtre)\">lien identique</a> a-t-il les mêmes fonction et destination&nbsp;?",
+					"title": "Pour chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#liens-identiques\" target=\"_blank\" title=\"lien identique (nouvelle fenêtre)\">lien identique</a> a-t-il les mêmes fonction et destination&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "6.4.1",
@@ -974,7 +1024,8 @@
 				},
 				{
 					"id": "6.5",
-					"title": "Critère 6.5 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, chaque lien, à l’exception des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ancre\" target=\"_blank\" title=\"ancres (nouvelle fenêtre)\">ancres</a>, a-t-il un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#intitul-de-lien\" target=\"_blank\" title=\"intitulé (nouvelle fenêtre)\">intitulé</a>&nbsp;?",
+					"title": "Dans chaque page Web, chaque lien, à l’exception des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ancre\" target=\"_blank\" title=\"ancres (nouvelle fenêtre)\">ancres</a>, a-t-il un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#intitul-de-lien\" target=\"_blank\" title=\"intitulé (nouvelle fenêtre)\">intitulé</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "6.5.1",
@@ -990,7 +1041,8 @@
 			"criteria": [
 				{
 					"id": "7.1",
-					"title": "Critère 7.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> est-il, si nécessaire, <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#compatible-avec-les-technologies-dassistance\" target=\"_blank\" title=\"compatible avec les technologies d’assistance (nouvelle fenêtre)\">compatible avec les technologies d’assistance</a>&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> est-il, si nécessaire, <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#compatible-avec-les-technologies-dassistance\" target=\"_blank\" title=\"compatible avec les technologies d’assistance (nouvelle fenêtre)\">compatible avec les technologies d’assistance</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "7.1.1",
@@ -1020,7 +1072,8 @@
 				},
 				{
 					"id": "7.2",
-					"title": "Critère 7.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative--script\" target=\"_blank\" title=\"alternative (nouvelle fenêtre)\">alternative</a>, cette alternative est-elle pertinente&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alternative--script\" target=\"_blank\" title=\"alternative (nouvelle fenêtre)\">alternative</a>, cette alternative est-elle pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "7.2.1",
@@ -1034,7 +1087,8 @@
 				},
 				{
 					"id": "7.3",
-					"title": "Critère 7.3 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#accessible-et-activable-par-le-clavier-et-la-souris\" target=\"_blank\" title=\"contrôlable par le clavier et la souris (nouvelle fenêtre)\">contrôlable par le clavier et la souris</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-7-3\" title=\"Cas particuliers pour le critère 7.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#accessible-et-activable-par-le-clavier-et-la-souris\" target=\"_blank\" title=\"contrôlable par le clavier et la souris (nouvelle fenêtre)\">contrôlable par le clavier et la souris</a> (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-7-3\" title=\"Cas particuliers pour le critère 7.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "7.3.1",
@@ -1052,7 +1106,8 @@
 				},
 				{
 					"id": "7.4",
-					"title": "Critère 7.4 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> qui initie un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changement-de-contexte\" target=\"_blank\" title=\"changement de contexte (nouvelle fenêtre)\">changement de contexte</a>, l’utilisateur est-il averti ou en a-t-il le contrôle&nbsp;?",
+					"title": "Pour chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> qui initie un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changement-de-contexte\" target=\"_blank\" title=\"changement de contexte (nouvelle fenêtre)\">changement de contexte</a>, l’utilisateur est-il averti ou en a-t-il le contrôle&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "7.4.1",
@@ -1062,7 +1117,8 @@
 				},
 				{
 					"id": "7.5",
-					"title": "Critère 7.5 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> qui provoque une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alerte\" target=\"_blank\" title=\"alerte (nouvelle fenêtre)\">alerte</a> non sollicitée est-il contrôlable par l’utilisateur (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-7-5\" title=\"Cas particuliers pour le critère 7.5 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#script\" target=\"_blank\" title=\"script (nouvelle fenêtre)\">script</a> qui provoque une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#alerte\" target=\"_blank\" title=\"alerte (nouvelle fenêtre)\">alerte</a> non sollicitée est-il contrôlable par l’utilisateur (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-7-5\" title=\"Cas particuliers pour le critère 7.5 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "7.5.1",
@@ -1078,7 +1134,8 @@
 			"criteria": [
 				{
 					"id": "8.1",
-					"title": "Critère 8.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque page Web est-elle définie par un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#type-de-document\" target=\"_blank\" title=\"type de document (nouvelle fenêtre)\">type de document</a>&nbsp;?",
+					"title": "Chaque page Web est-elle définie par un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#type-de-document\" target=\"_blank\" title=\"type de document (nouvelle fenêtre)\">type de document</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "8.1.1",
@@ -1096,7 +1153,8 @@
 				},
 				{
 					"id": "8.2",
-					"title": "Critère 8.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque page Web, le code source est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#code-valide\" target=\"_blank\" title=\"valide (nouvelle fenêtre)\">valide</a> selon le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#type-de-document\" target=\"_blank\" title=\"type de document (nouvelle fenêtre)\">type de document</a> spécifié (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-8-2\" title=\"Cas particuliers pour le critère 8.2 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Pour chaque page Web, le code source est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#code-valide\" target=\"_blank\" title=\"valide (nouvelle fenêtre)\">valide</a> selon le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#type-de-document\" target=\"_blank\" title=\"type de document (nouvelle fenêtre)\">type de document</a> spécifié (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-8-2\" title=\"Cas particuliers pour le critère 8.2 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "8.2.1",
@@ -1110,7 +1168,8 @@
 				},
 				{
 					"id": "8.3",
-					"title": "Critère 8.3 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, la langue par défaut est-elle présente&nbsp;?",
+					"title": "Dans chaque page Web, la langue par défaut est-elle présente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "8.3.1",
@@ -1120,7 +1179,8 @@
 				},
 				{
 					"id": "8.4",
-					"title": "Critère 8.4 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque page Web ayant une langue par défaut, le code de langue est-il pertinent&nbsp;?",
+					"title": "Pour chaque page Web ayant une langue par défaut, le code de langue est-il pertinent&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "8.4.1",
@@ -1130,7 +1190,8 @@
 				},
 				{
 					"id": "8.5",
-					"title": "Critère 8.5 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque page Web a-t-elle un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titrePage\" target=\"_blank\" title=\"titre de page (nouvelle fenêtre)\">titre de page</a>&nbsp;?",
+					"title": "Chaque page Web a-t-elle un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titrePage\" target=\"_blank\" title=\"titre de page (nouvelle fenêtre)\">titre de page</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "8.5.1",
@@ -1140,7 +1201,8 @@
 				},
 				{
 					"id": "8.6",
-					"title": "Critère 8.6 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque page Web ayant un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titrePage\" target=\"_blank\" title=\"titre de page (nouvelle fenêtre)\">titre de page</a>, ce titre est-il pertinent&nbsp;?",
+					"title": "Pour chaque page Web ayant un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titrePage\" target=\"_blank\" title=\"titre de page (nouvelle fenêtre)\">titre de page</a>, ce titre est-il pertinent&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "8.6.1",
@@ -1150,7 +1212,8 @@
 				},
 				{
 					"id": "8.7",
-					"title": "Critère 8.7 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changement-de-langue\" target=\"_blank\" title=\"changement de langue (nouvelle fenêtre)\">changement de langue</a> est-il indiqué dans le code source (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-8-7\" title=\"Cas particuliers pour le critère 8.7 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Dans chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changement-de-langue\" target=\"_blank\" title=\"changement de langue (nouvelle fenêtre)\">changement de langue</a> est-il indiqué dans le code source (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-8-7\" title=\"Cas particuliers pour le critère 8.7 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "8.7.1",
@@ -1160,7 +1223,8 @@
 				},
 				{
 					"id": "8.8",
-					"title": "Critère 8.8 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changement-de-langue\" target=\"_blank\" title=\"changement de langue (nouvelle fenêtre)\">changement de langue</a> est-il pertinent&nbsp;?",
+					"title": "Dans chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changement-de-langue\" target=\"_blank\" title=\"changement de langue (nouvelle fenêtre)\">changement de langue</a> est-il pertinent&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "8.8.1",
@@ -1174,7 +1238,8 @@
 				},
 				{
 					"id": "8.9",
-					"title": "Critère 8.9 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, les balises ne doivent pas être utilisées <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#uniquement--des-fins-de-prsentation\" target=\"_blank\" title=\"uniquement à des fins de présentation (nouvelle fenêtre)\">uniquement à des fins de présentation</a>. Cette règle est-elle respectée&nbsp;?",
+					"title": "Dans chaque page Web, les balises ne doivent pas être utilisées <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#uniquement--des-fins-de-prsentation\" target=\"_blank\" title=\"uniquement à des fins de présentation (nouvelle fenêtre)\">uniquement à des fins de présentation</a>. Cette règle est-elle respectée&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "8.9.1",
@@ -1184,7 +1249,8 @@
 				},
 				{
 					"id": "8.10",
-					"title": "Critère 8.10 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, les changements du <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#sens-de-lecture\" target=\"_blank\" title=\"sens de lecture (nouvelle fenêtre)\">sens de lecture</a> sont-ils signalés&nbsp;?",
+					"title": "Dans chaque page Web, les changements du <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#sens-de-lecture\" target=\"_blank\" title=\"sens de lecture (nouvelle fenêtre)\">sens de lecture</a> sont-ils signalés&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "8.10.1",
@@ -1204,7 +1270,8 @@
 			"criteria": [
 				{
 					"id": "9.1",
-					"title": "Critère 9.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, l’information est-elle structurée par l’utilisation appropriée de <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titre\" target=\"_blank\" title=\"titres (nouvelle fenêtre)\">titres</a>&nbsp;?",
+					"title": "Dans chaque page Web, l’information est-elle structurée par l’utilisation appropriée de <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#titre\" target=\"_blank\" title=\"titres (nouvelle fenêtre)\">titres</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "9.1.1",
@@ -1226,7 +1293,8 @@
 				},
 				{
 					"id": "9.2",
-					"title": "Critère 9.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, la structure du document est-elle cohérente&nbsp;?",
+					"title": "Dans chaque page Web, la structure du document est-elle cohérente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "9.2.1",
@@ -1240,7 +1308,8 @@
 				},
 				{
 					"id": "9.3",
-					"title": "Critère 9.3 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#listes\" target=\"_blank\" title=\"liste (nouvelle fenêtre)\">liste</a> est-elle correctement structurée&nbsp;?",
+					"title": "Dans chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#listes\" target=\"_blank\" title=\"liste (nouvelle fenêtre)\">liste</a> est-elle correctement structurée&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "9.3.1",
@@ -1258,7 +1327,8 @@
 				},
 				{
 					"id": "9.4",
-					"title": "Critère 9.4 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, la première occurrence de chaque abréviation permet-elle d’en connaître la signification&nbsp;?",
+					"title": "Dans chaque page Web, la première occurrence de chaque abréviation permet-elle d’en connaître la signification&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "9.4.1",
@@ -1268,7 +1338,8 @@
 				},
 				{
 					"id": "9.5",
-					"title": "Critère 9.5 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, la signification de chaque abréviation est-elle pertinente&nbsp;?",
+					"title": "Dans chaque page Web, la signification de chaque abréviation est-elle pertinente&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "9.5.1",
@@ -1278,7 +1349,8 @@
 				},
 				{
 					"id": "9.6",
-					"title": "Critère 9.6 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, chaque citation est-elle correctement indiquée&nbsp;?",
+					"title": "Dans chaque page Web, chaque citation est-elle correctement indiquée&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "9.6.1",
@@ -1298,7 +1370,8 @@
 			"criteria": [
 				{
 					"id": "10.1",
-					"title": "Critère 10.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans le site Web, des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#feuille-de-style\" target=\"_blank\" title=\"feuilles de styles (nouvelle fenêtre)\">feuilles de styles</a> sont-elles utilisées pour contrôler la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#prsentation-de-linformation\" target=\"_blank\" title=\"présentation de l’information (nouvelle fenêtre)\">présentation de l’information</a>&nbsp;?",
+					"title": "Dans le site Web, des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#feuille-de-style\" target=\"_blank\" title=\"feuilles de styles (nouvelle fenêtre)\">feuilles de styles</a> sont-elles utilisées pour contrôler la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#prsentation-de-linformation\" target=\"_blank\" title=\"présentation de l’information (nouvelle fenêtre)\">présentation de l’information</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "10.1.1",
@@ -1316,7 +1389,8 @@
 				},
 				{
 					"id": "10.2",
-					"title": "Critère 10.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contenu-visible\" target=\"_blank\" title=\"contenu visible (nouvelle fenêtre)\">contenu visible</a> reste-t-il présent lorsque les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#feuille-de-style\" target=\"_blank\" title=\"feuilles de styles (nouvelle fenêtre)\">feuilles de styles</a> sont désactivées&nbsp;?",
+					"title": "Dans chaque page Web, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contenu-visible\" target=\"_blank\" title=\"contenu visible (nouvelle fenêtre)\">contenu visible</a> reste-t-il présent lorsque les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#feuille-de-style\" target=\"_blank\" title=\"feuilles de styles (nouvelle fenêtre)\">feuilles de styles</a> sont désactivées&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "10.2.1",
@@ -1326,7 +1400,8 @@
 				},
 				{
 					"id": "10.3",
-					"title": "Critère 10.3 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, l’information reste-t-elle <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#comprhensible-ordre-de-lecture\" target=\"_blank\" title=\"compréhensible (nouvelle fenêtre)\">compréhensible</a> lorsque les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#feuille-de-style\" target=\"_blank\" title=\"feuilles de styles (nouvelle fenêtre)\">feuilles de styles</a> sont désactivées&nbsp;?",
+					"title": "Dans chaque page Web, l’information reste-t-elle <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#comprhensible-ordre-de-lecture\" target=\"_blank\" title=\"compréhensible (nouvelle fenêtre)\">compréhensible</a> lorsque les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#feuille-de-style\" target=\"_blank\" title=\"feuilles de styles (nouvelle fenêtre)\">feuilles de styles</a> sont désactivées&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "10.3.1",
@@ -1336,7 +1411,8 @@
 				},
 				{
 					"id": "10.4",
-					"title": "Critère 10.4 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque page Web, le texte reste-t-il lisible lorsque la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#taille-des-caractres\" target=\"_blank\" title=\"taille des caractères (nouvelle fenêtre)\">taille des caractères</a> est augmentée jusqu’à 200%, au moins&nbsp;?",
+					"title": "Dans chaque page Web, le texte reste-t-il lisible lorsque la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#taille-des-caractres\" target=\"_blank\" title=\"taille des caractères (nouvelle fenêtre)\">taille des caractères</a> est augmentée jusqu’à 200%, au moins&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "10.4.1",
@@ -1354,7 +1430,8 @@
 				},
 				{
 					"id": "10.5",
-					"title": "Critère 10.5 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque page Web, les déclarations CSS de couleurs de fond d’élément et de police sont-elles correctement utilisées?",
+					"title": "Dans chaque page Web, les déclarations CSS de couleurs de fond d’élément et de police sont-elles correctement utilisées?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "10.5.1",
@@ -1372,7 +1449,8 @@
 				},
 				{
 					"id": "10.6",
-					"title": "Critère 10.6 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#lien-nature-pas-evidente\" target=\"_blank\" title=\"lien dont la nature n’est pas évidente (nouvelle fenêtre)\">lien dont la nature n’est pas évidente</a> est-il visible par rapport au texte environnant&nbsp;?",
+					"title": "Dans chaque page Web, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#lien-nature-pas-evidente\" target=\"_blank\" title=\"lien dont la nature n’est pas évidente (nouvelle fenêtre)\">lien dont la nature n’est pas évidente</a> est-il visible par rapport au texte environnant&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "10.6.1",
@@ -1382,7 +1460,8 @@
 				},
 				{
 					"id": "10.7",
-					"title": "Critère 10.7 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, pour chaque élément recevant le focus, la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#prise-de-focus\" target=\"_blank\" title=\"prise de focus (nouvelle fenêtre)\">prise de focus</a> est-elle visible&nbsp;?",
+					"title": "Dans chaque page Web, pour chaque élément recevant le focus, la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#prise-de-focus\" target=\"_blank\" title=\"prise de focus (nouvelle fenêtre)\">prise de focus</a> est-elle visible&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "10.7.1",
@@ -1400,7 +1479,8 @@
 				},
 				{
 					"id": "10.8",
-					"title": "Critère 10.8 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, le choix de la couleur de fond et de police du texte est-il contrôlable par l’utilisateur&nbsp;?",
+					"title": "Dans chaque page Web, le choix de la couleur de fond et de police du texte est-il contrôlable par l’utilisateur&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "10.8.1",
@@ -1422,7 +1502,8 @@
 				},
 				{
 					"id": "10.9",
-					"title": "Critère 10.9 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque page Web, le texte ne doit pas être justifié. Cette règle est-elle respectée&nbsp;?",
+					"title": "Pour chaque page Web, le texte ne doit pas être justifié. Cette règle est-elle respectée&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "10.9.1",
@@ -1432,7 +1513,8 @@
 				},
 				{
 					"id": "10.10",
-					"title": "Critère 10.10 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque page Web, en affichage plein écran et avec une taille de police à 200%, chaque bloc de texte reste-t-il lisible sans l’utilisation de la barre de défilement horizontal&nbsp;?",
+					"title": "Pour chaque page Web, en affichage plein écran et avec une taille de police à 200%, chaque bloc de texte reste-t-il lisible sans l’utilisation de la barre de défilement horizontal&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "10.10.1",
@@ -1442,7 +1524,8 @@
 				},
 				{
 					"id": "10.11",
-					"title": "Critère 10.11 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque page Web, les blocs de texte ont-ils une largeur inférieure ou égale à 80 caractères (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-10-11\" title=\"Cas particuliers pour le critère 10.11 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Pour chaque page Web, les blocs de texte ont-ils une largeur inférieure ou égale à 80 caractères (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-10-11\" title=\"Cas particuliers pour le critère 10.11 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "10.11.1",
@@ -1452,7 +1535,8 @@
 				},
 				{
 					"id": "10.12",
-					"title": "Critère 10.12 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque page Web, l’espace entre les lignes et les paragraphes est-il suffisant&nbsp;?",
+					"title": "Pour chaque page Web, l’espace entre les lignes et les paragraphes est-il suffisant&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "10.12.1",
@@ -1466,7 +1550,8 @@
 				},
 				{
 					"id": "10.13",
-					"title": "Critère 10.13 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque page Web, les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#texte-cach\" target=\"_blank\" title=\"textes cachés (nouvelle fenêtre)\">textes cachés</a> sont-ils correctement affichés pour être restitués par les technologies d’assistance&nbsp;?",
+					"title": "Pour chaque page Web, les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#texte-cach\" target=\"_blank\" title=\"textes cachés (nouvelle fenêtre)\">textes cachés</a> sont-ils correctement affichés pour être restitués par les technologies d’assistance&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "10.13.1",
@@ -1476,7 +1561,8 @@
 				},
 				{
 					"id": "10.14",
-					"title": "Critère 10.14 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, l’information ne doit pas être donnée uniquement <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#indication-forme-taille-position\" target=\"_blank\" title=\"par la forme, taille ou position (nouvelle fenêtre)\">par la forme, taille ou position</a>. Cette règle est-elle respectée&nbsp;?",
+					"title": "Dans chaque page Web, l’information ne doit pas être donnée uniquement <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#indication-forme-taille-position\" target=\"_blank\" title=\"par la forme, taille ou position (nouvelle fenêtre)\">par la forme, taille ou position</a>. Cette règle est-elle respectée&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "10.14.1",
@@ -1498,7 +1584,8 @@
 				},
 				{
 					"id": "10.15",
-					"title": "Critère 10.15 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, l’information ne doit pas être donnée <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#indication-forme-taille-position\" target=\"_blank\" title=\"par la forme, taille ou position (nouvelle fenêtre)\">par la forme, taille ou position</a> uniquement. Cette règle est-elle implémentée de façon pertinente&nbsp;?",
+					"title": "Dans chaque page Web, l’information ne doit pas être donnée <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#indication-forme-taille-position\" target=\"_blank\" title=\"par la forme, taille ou position (nouvelle fenêtre)\">par la forme, taille ou position</a> uniquement. Cette règle est-elle implémentée de façon pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "10.15.1",
@@ -1526,7 +1613,8 @@
 			"criteria": [
 				{
 					"id": "11.1",
-					"title": "Critère 11.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champ de formulaire (nouvelle fenêtre)\">champ de formulaire</a> a-t-il une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tiquette-de-champs-de-formulaire\" target=\"_blank\" title=\"étiquette (nouvelle fenêtre)\">étiquette</a>&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champ de formulaire (nouvelle fenêtre)\">champ de formulaire</a> a-t-il une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tiquette-de-champs-de-formulaire\" target=\"_blank\" title=\"étiquette (nouvelle fenêtre)\">étiquette</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "11.1.1",
@@ -1552,7 +1640,8 @@
 				},
 				{
 					"id": "11.2",
-					"title": "Critère 11.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tiquette-de-champs-de-formulaire\" target=\"_blank\" title=\"étiquette (nouvelle fenêtre)\">étiquette</a> associée à un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champ de formulaire (nouvelle fenêtre)\">champ de formulaire</a> est-elle pertinente&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tiquette-de-champs-de-formulaire\" target=\"_blank\" title=\"étiquette (nouvelle fenêtre)\">étiquette</a> associée à un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champ de formulaire (nouvelle fenêtre)\">champ de formulaire</a> est-elle pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "11.2.1",
@@ -1574,7 +1663,8 @@
 				},
 				{
 					"id": "11.3",
-					"title": "Critère 11.3 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque formulaire, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tiquette-de-champs-de-formulaire\" target=\"_blank\" title=\"étiquette (nouvelle fenêtre)\">étiquette</a> associée à un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champ de formulaire (nouvelle fenêtre)\">champ de formulaire</a> ayant la même fonction et répété plusieurs fois dans une même page ou dans un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a> est-elle cohérente&nbsp;?",
+					"title": "Dans chaque formulaire, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tiquette-de-champs-de-formulaire\" target=\"_blank\" title=\"étiquette (nouvelle fenêtre)\">étiquette</a> associée à un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champ de formulaire (nouvelle fenêtre)\">champ de formulaire</a> ayant la même fonction et répété plusieurs fois dans une même page ou dans un <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a> est-elle cohérente&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "11.3.1",
@@ -1588,7 +1678,8 @@
 				},
 				{
 					"id": "11.4",
-					"title": "Critère 11.4 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque formulaire, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tiquette-de-champs-de-formulaire\" target=\"_blank\" title=\"étiquette de champ (nouvelle fenêtre)\">étiquette de champ</a> et son <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champ (nouvelle fenêtre)\">champ</a> associé sont-ils accolés&nbsp;?",
+					"title": "Dans chaque formulaire, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#tiquette-de-champs-de-formulaire\" target=\"_blank\" title=\"étiquette de champ (nouvelle fenêtre)\">étiquette de champ</a> et son <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champ (nouvelle fenêtre)\">champ</a> associé sont-ils accolés&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "11.4.1",
@@ -1598,7 +1689,8 @@
 				},
 				{
 					"id": "11.5",
-					"title": "Critère 11.5 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque formulaire, les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#bloc-dinformations-de-mme-nature\" target=\"_blank\" title=\"informations de même nature (nouvelle fenêtre)\">informations de même nature</a> sont-elles regroupées, si nécessaire&nbsp;?",
+					"title": "Dans chaque formulaire, les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#bloc-dinformations-de-mme-nature\" target=\"_blank\" title=\"informations de même nature (nouvelle fenêtre)\">informations de même nature</a> sont-elles regroupées, si nécessaire&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "11.5.1",
@@ -1608,7 +1700,8 @@
 				},
 				{
 					"id": "11.6",
-					"title": "Critère 11.6 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque formulaire, chaque regroupement de <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champs de formulaire (nouvelle fenêtre)\">champs de formulaire</a> a-t-il une légende&nbsp;?",
+					"title": "Dans chaque formulaire, chaque regroupement de <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champs de formulaire (nouvelle fenêtre)\">champs de formulaire</a> a-t-il une légende&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "11.6.1",
@@ -1618,7 +1711,8 @@
 				},
 				{
 					"id": "11.7",
-					"title": "Critère 11.7 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque formulaire, chaque légende associée à un groupement de <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champs de formulaire (nouvelle fenêtre)\">champs de formulaire</a> est-elle pertinente&nbsp;?",
+					"title": "Dans chaque formulaire, chaque légende associée à un groupement de <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#champ-de-saisie-de-formulaire\" target=\"_blank\" title=\"champs de formulaire (nouvelle fenêtre)\">champs de formulaire</a> est-elle pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "11.7.1",
@@ -1628,7 +1722,8 @@
 				},
 				{
 					"id": "11.8",
-					"title": "Critère 11.8 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque formulaire, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#liste-de-choix\" target=\"_blank\" title=\"liste de choix (nouvelle fenêtre)\">liste de choix</a> est-elle structurée de manière pertinente&nbsp;?",
+					"title": "Dans chaque formulaire, chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#liste-de-choix\" target=\"_blank\" title=\"liste de choix (nouvelle fenêtre)\">liste de choix</a> est-elle structurée de manière pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "11.8.1",
@@ -1646,7 +1741,8 @@
 				},
 				{
 					"id": "11.9",
-					"title": "Critère 11.9 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque formulaire, l’intitulé de chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#bouton-formulaire\" target=\"_blank\" title=\"bouton (nouvelle fenêtre)\">bouton</a> est-il pertinent&nbsp;?",
+					"title": "Dans chaque formulaire, l’intitulé de chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#bouton-formulaire\" target=\"_blank\" title=\"bouton (nouvelle fenêtre)\">bouton</a> est-il pertinent&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "11.9.1",
@@ -1660,7 +1756,8 @@
 				},
 				{
 					"id": "11.10",
-					"title": "Critère 11.10 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque formulaire, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contrle-de-saisie-formulaire\" target=\"_blank\" title=\"contrôle de saisie (nouvelle fenêtre)\">contrôle de saisie</a> est-il utilisé de manière pertinente&nbsp;?",
+					"title": "Dans chaque formulaire, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contrle-de-saisie-formulaire\" target=\"_blank\" title=\"contrôle de saisie (nouvelle fenêtre)\">contrôle de saisie</a> est-il utilisé de manière pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "11.10.1",
@@ -1706,7 +1803,8 @@
 				},
 				{
 					"id": "11.11",
-					"title": "Critère 11.11 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque formulaire, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contrle-de-saisie-formulaire\" target=\"_blank\" title=\"contrôle de saisie (nouvelle fenêtre)\">contrôle de saisie</a> est-il accompagné, si nécessaire, de suggestions facilitant la correction des erreurs de saisie&nbsp;?",
+					"title": "Dans chaque formulaire, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#contrle-de-saisie-formulaire\" target=\"_blank\" title=\"contrôle de saisie (nouvelle fenêtre)\">contrôle de saisie</a> est-il accompagné, si nécessaire, de suggestions facilitant la correction des erreurs de saisie&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "11.11.1",
@@ -1720,7 +1818,8 @@
 				},
 				{
 					"id": "11.12",
-					"title": "Critère 11.12 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Pour chaque formulaire, les données à caractère financier, juridique ou personnel peuvent-elles être modifiées, mises à jour ou récupérées par l’utilisateur&nbsp;?",
+					"title": "Pour chaque formulaire, les données à caractère financier, juridique ou personnel peuvent-elles être modifiées, mises à jour ou récupérées par l’utilisateur&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "11.12.1",
@@ -1734,7 +1833,8 @@
 				},
 				{
 					"id": "11.13",
-					"title": "Critère 11.13 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque formulaire, toutes les données peuvent-elles être modifiées, mises à jour ou récupérées par l’utilisateur&nbsp;?",
+					"title": "Pour chaque formulaire, toutes les données peuvent-elles être modifiées, mises à jour ou récupérées par l’utilisateur&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "11.13.1",
@@ -1748,7 +1848,8 @@
 				},
 				{
 					"id": "11.14",
-					"title": "Critère 11.14 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque formulaire, des aides à la saisie sont-elles présentes&nbsp;?",
+					"title": "Pour chaque formulaire, des aides à la saisie sont-elles présentes&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "11.14.1",
@@ -1778,7 +1879,8 @@
 				},
 				{
 					"id": "11.15",
-					"title": "Critère 11.15 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Pour chaque formulaire, chaque aide à la saisie est-elle pertinente&nbsp;?",
+					"title": "Pour chaque formulaire, chaque aide à la saisie est-elle pertinente&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "11.15.1",
@@ -1794,7 +1896,8 @@
 			"criteria": [
 				{
 					"id": "12.1",
-					"title": "Critère 12.1 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a> dispose-t-il de deux <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#systeme-de-navigation\" target=\"_blank\" title=\"systèmes de navigation (nouvelle fenêtre)\">systèmes de navigation</a> différents, au moins (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-1\" title=\"Cas particuliers pour le critère 12.1 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a> dispose-t-il de deux <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#systeme-de-navigation\" target=\"_blank\" title=\"systèmes de navigation (nouvelle fenêtre)\">systèmes de navigation</a> différents, au moins (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-1\" title=\"Cas particuliers pour le critère 12.1 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "12.1.1",
@@ -1804,7 +1907,8 @@
 				},
 				{
 					"id": "12.2",
-					"title": "Critère 12.2 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#menu-de-navigation\" target=\"_blank\" title=\"menu (nouvelle fenêtre)\">menu</a> et les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#barre-de-navigation\" target=\"_blank\" title=\"barres de navigation (nouvelle fenêtre)\">barres de navigation</a> sont-ils toujours à la même place (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-2,12-3\" title=\"Cas particuliers pour le critère 12.2 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#menu-de-navigation\" target=\"_blank\" title=\"menu (nouvelle fenêtre)\">menu</a> et les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#barre-de-navigation\" target=\"_blank\" title=\"barres de navigation (nouvelle fenêtre)\">barres de navigation</a> sont-ils toujours à la même place (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-2,12-3\" title=\"Cas particuliers pour le critère 12.2 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "12.2.1",
@@ -1818,7 +1922,8 @@
 				},
 				{
 					"id": "12.3",
-					"title": "Critère 12.3 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#menu-de-navigation\" target=\"_blank\" title=\"menu (nouvelle fenêtre)\">menu</a> et les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#barre-de-navigation\" target=\"_blank\" title=\"barres de navigation (nouvelle fenêtre)\">barres de navigation</a> ont-ils une présentation cohérente (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-2,12-3\" title=\"Cas particuliers pour le critère 12.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#menu-de-navigation\" target=\"_blank\" title=\"menu (nouvelle fenêtre)\">menu</a> et les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#barre-de-navigation\" target=\"_blank\" title=\"barres de navigation (nouvelle fenêtre)\">barres de navigation</a> ont-ils une présentation cohérente (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-2,12-3\" title=\"Cas particuliers pour le critère 12.3 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "12.3.1",
@@ -1832,7 +1937,8 @@
 				},
 				{
 					"id": "12.4",
-					"title": "Critère 12.4 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] La <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle pertinente&nbsp;?",
+					"title": "La <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle pertinente&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "12.4.1",
@@ -1850,7 +1956,8 @@
 				},
 				{
 					"id": "12.5",
-					"title": "Critère 12.5 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle atteignable de manière identique&nbsp;?",
+					"title": "Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#page-plan-du-site\" target=\"_blank\" title=\"page &quot;plan du site&quot; (nouvelle fenêtre)\">page \"plan du site\"</a> est-elle atteignable de manière identique&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "12.5.1",
@@ -1868,7 +1975,8 @@
 				},
 				{
 					"id": "12.6",
-					"title": "Critère 12.6 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#moteur-de-recherche-interne--un-site-web\" target=\"_blank\" title=\"moteur de recherche (nouvelle fenêtre)\">moteur de recherche</a> est-il atteignable de manière identique&nbsp;?",
+					"title": "Dans chaque <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ensemble-de-pages\" target=\"_blank\" title=\"ensemble de pages (nouvelle fenêtre)\">ensemble de pages</a>, le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#moteur-de-recherche-interne--un-site-web\" target=\"_blank\" title=\"moteur de recherche (nouvelle fenêtre)\">moteur de recherche</a> est-il atteignable de manière identique&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "12.6.1",
@@ -1886,7 +1994,8 @@
 				},
 				{
 					"id": "12.7",
-					"title": "Critère 12.7 [<span aria-label=\"double-A\"><span aria-hidden=\"true\">AA</span></span>] Dans chaque page d’une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#collection-de-pages\" target=\"_blank\" title=\"collection de pages (nouvelle fenêtre)\">collection de pages</a>, des liens facilitant la navigation sont-ils présents&nbsp;?",
+					"title": "Dans chaque page d’une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#collection-de-pages\" target=\"_blank\" title=\"collection de pages (nouvelle fenêtre)\">collection de pages</a>, des liens facilitant la navigation sont-ils présents&nbsp;?",
+					"level": "AA",
 					"tests": [
 						{
 							"id": "12.7.1",
@@ -1896,7 +2005,8 @@
 				},
 				{
 					"id": "12.8",
-					"title": "Critère 12.8 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, un fil d’Ariane est-il présent (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-8\" title=\"Cas particuliers pour le critère 12.8 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Dans chaque page Web, un fil d’Ariane est-il présent (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-8\" title=\"Cas particuliers pour le critère 12.8 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "12.8.1",
@@ -1906,7 +2016,8 @@
 				},
 				{
 					"id": "12.9",
-					"title": "Critère 12.9 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, le fil d’Ariane est-il pertinent&nbsp;?",
+					"title": "Dans chaque page Web, le fil d’Ariane est-il pertinent&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "12.9.1",
@@ -1916,7 +2027,8 @@
 				},
 				{
 					"id": "12.10",
-					"title": "Critère 12.10 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, les groupes de liens importants (<a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#menu-de-navigation\" target=\"_blank\" title=\"menu (nouvelle fenêtre)\">menu</a>, <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#barre-de-navigation\" target=\"_blank\" title=\"barre de navigation (nouvelle fenêtre)\">barre de navigation</a>&hellip;) et la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#zone-main\" target=\"_blank\" title=\"zone de contenu (nouvelle fenêtre)\">zone de contenu</a> sont-ils identifiés&nbsp;?",
+					"title": "Dans chaque page Web, les groupes de liens importants (<a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#menu-de-navigation\" target=\"_blank\" title=\"menu (nouvelle fenêtre)\">menu</a>, <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#barre-de-navigation\" target=\"_blank\" title=\"barre de navigation (nouvelle fenêtre)\">barre de navigation</a>&hellip;) et la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#zone-main\" target=\"_blank\" title=\"zone de contenu (nouvelle fenêtre)\">zone de contenu</a> sont-ils identifiés&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "12.10.1",
@@ -1938,7 +2050,8 @@
 				},
 				{
 					"id": "12.11",
-					"title": "Critère 12.11 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#liens-dvitement-ou-daccs-rapide\" target=\"_blank\" title=\"liens d’évitement ou d’accès rapide (nouvelle fenêtre)\">liens d’évitement ou d’accès rapide</a> aux groupes de liens importants et à la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#zone-main\" target=\"_blank\" title=\"zone de contenu (nouvelle fenêtre)\">zone de contenu</a> sont-ils présents (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-11\" title=\"Cas particuliers pour le critère 12.11 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Dans chaque page Web, des <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#liens-dvitement-ou-daccs-rapide\" target=\"_blank\" title=\"liens d’évitement ou d’accès rapide (nouvelle fenêtre)\">liens d’évitement ou d’accès rapide</a> aux groupes de liens importants et à la <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#zone-main\" target=\"_blank\" title=\"zone de contenu (nouvelle fenêtre)\">zone de contenu</a> sont-ils présents (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-12-11\" title=\"Cas particuliers pour le critère 12.11 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "12.11.1",
@@ -1960,7 +2073,8 @@
 				},
 				{
 					"id": "12.12",
-					"title": "Critère 12.12 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, la page en cours de consultation est-elle indiquée dans le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#menu-de-navigation\" target=\"_blank\" title=\"menu de navigation (nouvelle fenêtre)\">menu de navigation</a>&nbsp;?",
+					"title": "Dans chaque page Web, la page en cours de consultation est-elle indiquée dans le <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#menu-de-navigation\" target=\"_blank\" title=\"menu de navigation (nouvelle fenêtre)\">menu de navigation</a>&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "12.12.1",
@@ -1970,7 +2084,8 @@
 				},
 				{
 					"id": "12.13",
-					"title": "Critère 12.13 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, l’<a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ordre-de-tabulation\" target=\"_blank\" title=\"ordre de tabulation (nouvelle fenêtre)\">ordre de tabulation</a> est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#comprhensible-ordre-de-lecture\" target=\"_blank\" title=\"cohérent (nouvelle fenêtre)\">cohérent</a>&nbsp;?",
+					"title": "Dans chaque page Web, l’<a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#ordre-de-tabulation\" target=\"_blank\" title=\"ordre de tabulation (nouvelle fenêtre)\">ordre de tabulation</a> est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#comprhensible-ordre-de-lecture\" target=\"_blank\" title=\"cohérent (nouvelle fenêtre)\">cohérent</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "12.13.1",
@@ -1984,7 +2099,8 @@
 				},
 				{
 					"id": "12.14",
-					"title": "Critère 12.14 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, la navigation ne doit pas contenir de piège au clavier. Cette règle est-elle respectée&nbsp;?",
+					"title": "Dans chaque page Web, la navigation ne doit pas contenir de piège au clavier. Cette règle est-elle respectée&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "12.14.1",
@@ -2000,7 +2116,8 @@
 			"criteria": [
 				{
 					"id": "13.1",
-					"title": "Critère 13.1 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque page Web, l’utilisateur a-t-il le contrôle de chaque limite de temps modifiant le contenu (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-13-1\" title=\"Cas particuliers pour le critère 13.1 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Pour chaque page Web, l’utilisateur a-t-il le contrôle de chaque limite de temps modifiant le contenu (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-13-1\" title=\"Cas particuliers pour le critère 13.1 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.1.1",
@@ -2022,7 +2139,8 @@
 				},
 				{
 					"id": "13.2",
-					"title": "Critère 13.2 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, pour chaque ouverture de nouvelle fenêtre, l’utilisateur est-il averti&nbsp;?",
+					"title": "Dans chaque page Web, pour chaque ouverture de nouvelle fenêtre, l’utilisateur est-il averti&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.2.1",
@@ -2040,7 +2158,8 @@
 				},
 				{
 					"id": "13.3",
-					"title": "Critère 13.3 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, l’ouverture d’une nouvelle fenêtre ne doit pas être déclenchée sans action de l’utilisateur. Cette règle est-elle respectée&nbsp;?",
+					"title": "Dans chaque page Web, l’ouverture d’une nouvelle fenêtre ne doit pas être déclenchée sans action de l’utilisateur. Cette règle est-elle respectée&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.3.1",
@@ -2050,7 +2169,8 @@
 				},
 				{
 					"id": "13.4",
-					"title": "Critère 13.4 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, une tâche ne doit pas requérir de limite de temps pour être réalisée, sauf si elle se déroule en temps réel ou si cette limite de temps est essentielle. Cette règle est-elle respectée&nbsp;?",
+					"title": "Dans chaque page Web, une tâche ne doit pas requérir de limite de temps pour être réalisée, sauf si elle se déroule en temps réel ou si cette limite de temps est essentielle. Cette règle est-elle respectée&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "13.4.1",
@@ -2060,7 +2180,8 @@
 				},
 				{
 					"id": "13.5",
-					"title": "Critère 13.5 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, lors d’une interruption de session authentifiée, les données saisies par l’utilisateur sont-elles récupérées après ré-authentification&nbsp;?",
+					"title": "Dans chaque page Web, lors d’une interruption de session authentifiée, les données saisies par l’utilisateur sont-elles récupérées après ré-authentification&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "13.5.1",
@@ -2070,7 +2191,8 @@
 				},
 				{
 					"id": "13.6",
-					"title": "Critère 13.6 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, pour chaque fichier en téléchargement, des informations relatives à sa consultation sont-elles présentes (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-13-6\" title=\"Cas particuliers pour le critère 13.6 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"title": "Dans chaque page Web, pour chaque fichier en téléchargement, des informations relatives à sa consultation sont-elles présentes (hors <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/cas-particuliers.html#cp-13-6\" title=\"Cas particuliers pour le critère 13.6 (nouvelle fenêtre)\" target=\"_blank\">cas particuliers</a>)&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.6.1",
@@ -2088,7 +2210,8 @@
 				},
 				{
 					"id": "13.7",
-					"title": "Critère 13.7 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, chaque document bureautique en téléchargement possède-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#version-accessible-document\" target=\"_blank\" title=\"version accessible (nouvelle fenêtre)\">version accessible</a>&nbsp;?",
+					"title": "Dans chaque page Web, chaque document bureautique en téléchargement possède-t-il, si nécessaire, une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#version-accessible-document\" target=\"_blank\" title=\"version accessible (nouvelle fenêtre)\">version accessible</a>&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.7.1",
@@ -2098,7 +2221,8 @@
 				},
 				{
 					"id": "13.8",
-					"title": "Critère 13.8 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Pour chaque document bureautique ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#version-accessible-document\" target=\"_blank\" title=\"version accessible (nouvelle fenêtre)\">version accessible</a>, cette version offre-t-elle la même information&nbsp;?",
+					"title": "Pour chaque document bureautique ayant une <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#version-accessible-document\" target=\"_blank\" title=\"version accessible (nouvelle fenêtre)\">version accessible</a>, cette version offre-t-elle la même information&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.8.1",
@@ -2108,7 +2232,8 @@
 				},
 				{
 					"id": "13.9",
-					"title": "Critère 13.9 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, les expressions inhabituelles, les expressions idiomatiques ou le jargon sont-ils explicités&nbsp;?",
+					"title": "Dans chaque page Web, les expressions inhabituelles, les expressions idiomatiques ou le jargon sont-ils explicités&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "13.9.1",
@@ -2118,7 +2243,8 @@
 				},
 				{
 					"id": "13.10",
-					"title": "Critère 13.10 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, pour chaque expression inhabituelle ou limitée, idiomatique ou de jargon ayant une définition, cette définition est-elle pertinente&nbsp;?",
+					"title": "Dans chaque page Web, pour chaque expression inhabituelle ou limitée, idiomatique ou de jargon ayant une définition, cette définition est-elle pertinente&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "13.10.1",
@@ -2128,7 +2254,8 @@
 				},
 				{
 					"id": "13.11",
-					"title": "Critère 13.11 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, chaque contenu cryptique (art ASCII, émoticon, syntaxe cryptique) a-t-il une alternative&nbsp;?",
+					"title": "Dans chaque page Web, chaque contenu cryptique (art ASCII, émoticon, syntaxe cryptique) a-t-il une alternative&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.11.1",
@@ -2138,7 +2265,8 @@
 				},
 				{
 					"id": "13.12",
-					"title": "Critère 13.12 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, pour chaque contenu cryptique (art ASCII, émoticon, syntaxe cryptique) ayant une alternative, cette alternative est-elle pertinente&nbsp;?",
+					"title": "Dans chaque page Web, pour chaque contenu cryptique (art ASCII, émoticon, syntaxe cryptique) ayant une alternative, cette alternative est-elle pertinente&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.12.1",
@@ -2148,7 +2276,8 @@
 				},
 				{
 					"id": "13.13",
-					"title": "Critère 13.13 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, pour chaque mot dont le sens ne peut être compris sans en connaître la prononciation, celle-ci est-elle indiquée&nbsp;?",
+					"title": "Dans chaque page Web, pour chaque mot dont le sens ne peut être compris sans en connaître la prononciation, celle-ci est-elle indiquée&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "13.13.1",
@@ -2158,7 +2287,8 @@
 				},
 				{
 					"id": "13.14",
-					"title": "Critère 13.14 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, chaque texte qui nécessite un niveau de lecture plus avancé que le premier cycle de l’enseignement secondaire a-t-il une version alternative&nbsp;?",
+					"title": "Dans chaque page Web, chaque texte qui nécessite un niveau de lecture plus avancé que le premier cycle de l’enseignement secondaire a-t-il une version alternative&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "13.14.1",
@@ -2168,7 +2298,8 @@
 				},
 				{
 					"id": "13.15",
-					"title": "Critère 13.15 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changements-brusques-de-luminosite\" target=\"_blank\" title=\"changements brusques de luminosité ou les effets de flash (nouvelle fenêtre)\">changements brusques de luminosité ou les effets de flash</a> sont-ils correctement utilisés&nbsp;?",
+					"title": "Dans chaque page Web, les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changements-brusques-de-luminosite\" target=\"_blank\" title=\"changements brusques de luminosité ou les effets de flash (nouvelle fenêtre)\">changements brusques de luminosité ou les effets de flash</a> sont-ils correctement utilisés&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.15.1",
@@ -2186,7 +2317,8 @@
 				},
 				{
 					"id": "13.16",
-					"title": "Critère 13.16 [<span aria-label=\"triple-A\"><span aria-hidden=\"true\">AAA</span></span>] Dans chaque page Web, les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changements-brusques-de-luminosite\" target=\"_blank\" title=\"changements brusques de luminosité ou les effets de flash (nouvelle fenêtre)\">changements brusques de luminosité ou les effets de flash</a> ont-ils une fréquence inférieure ou égale à 3 par seconde&nbsp;?",
+					"title": "Dans chaque page Web, les <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#changements-brusques-de-luminosite\" target=\"_blank\" title=\"changements brusques de luminosité ou les effets de flash (nouvelle fenêtre)\">changements brusques de luminosité ou les effets de flash</a> ont-ils une fréquence inférieure ou égale à 3 par seconde&nbsp;?",
+					"level": "AAA",
 					"tests": [
 						{
 							"id": "13.16.1",
@@ -2204,7 +2336,8 @@
 				},
 				{
 					"id": "13.17",
-					"title": "Critère 13.17 [<span aria-label=\"simple-A\"><span aria-hidden=\"true\">A</span></span>] Dans chaque page Web, chaque contenu en mouvement ou clignotant est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#controle-mouvement\" target=\"_blank\" title=\"contrôlable (nouvelle fenêtre)\">contrôlable</a> par l’utilisateur&nbsp;?",
+					"title": "Dans chaque page Web, chaque contenu en mouvement ou clignotant est-il <a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#controle-mouvement\" target=\"_blank\" title=\"contrôlable (nouvelle fenêtre)\">contrôlable</a> par l’utilisateur&nbsp;?",
+					"level": "A",
 					"tests": [
 						{
 							"id": "13.17.1",

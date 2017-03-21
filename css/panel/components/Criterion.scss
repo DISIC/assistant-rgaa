@@ -52,13 +52,34 @@
 	font-weight: normal;
 	padding: vr(0.25) $app-gutter;
 	text-align: left;
+	position: relative;
 }
 
-.Criterion-titleText {
+.Criterion-titleText,
+.Criterion-id {
 	display: inline;
 }
 
 .Criterion.is-open .Criterion-title {
+	font-weight: bold;
+}
+
+.Criterion-description {
+	display: block;
+}
+
+.Criterion-level {
+	@include typi($typi-small);
+	position: absolute;
+	top: vr(0.125);
+	right: $app-gutter;
+}
+
+.Criterion.is-open .Criterion-level {
+	top: vr(0.25);
+}
+
+.Criterion-id {
 	font-weight: bold;
 }
 

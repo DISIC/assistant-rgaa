@@ -74,10 +74,22 @@ module.exports = (options) => (html) => {
 		}
 
 		const id = idMatches[1];
+
+		const levelMatches =
+			/<span aria-label="(?:.+)"><span aria-hidden="true">(\w+)<\/span><\/span>/.exec(title);
+		const level = levelMatches !== null
+			? levelMatches[1]
+			: null;
+
+		const formattedTitle = title.replace(
+			/^Critère \d+\.\d+ \[<span(.*)<\/span>\] /i,
+			''
+		);
+
 		const testElements = element.find('li[id^="test"]');
 		const tests = testElements.map(scrapeTest).get();
 
-		return {id, title, tests};
+		return {id, title: formattedTitle, level, tests};
 	};
 
 	const scrapeTheme = (i, el) => {

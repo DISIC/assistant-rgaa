@@ -10,6 +10,8 @@ const messages = {
 	'Theme.themesMenu': 'Retourner au menu des thématiques',
 	'Theme.criterion.select.label': 'Aller au critère : ',
 	'Theme.criterion.select.emptyOption': 'Choisissez un critère',
+	'Criterion.title': 'Critère {id}',
+	'Criterion.level': 'niveau {lvl}',
 	'Criterion.done.label': 'Tous les tests du critère sont faits - Cliquer pour marquer les tests comme "à faire"',
 	'Criterion.todo.label': 'Des tests restent à faire sur ce critère - Cliquer pour marquer les tests comme "fait"',
 	'Criterion.toggle.show': 'Afficher les tests du critère {id}',
