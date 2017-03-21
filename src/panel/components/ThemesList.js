@@ -1,9 +1,10 @@
 import React, {PropTypes} from 'react';
 import classNames from 'classnames';
 import renderIf from 'render-if';
-import {map, includes} from 'lodash';
+import {map} from 'lodash';
 import {FormattedMessage} from 'react-intl';
 import {Wrapper, Button, Menu} from 'react-aria-menubutton';
+import DevToolsContainer from './DevToolsContainer';
 import ThemesListItem from './ThemesListItem';
 import Icon from './Icon';
 
@@ -52,6 +53,11 @@ function ThemesList({themes, isOpen, setOpen}) {
 					<FormattedMessage id="ThemesList.title" />
 				</Button>
 			</h2>
+
+			{renderIf(process.env.NODE_ENV !== 'production')(() => (
+				<DevToolsContainer />
+			))}
+
 			<Menu tag="ul" className="ThemesList-list">
 				{map(themes, (theme) =>
 					<ThemesListItem

@@ -23,7 +23,7 @@ function Criterion({
 	const handleDoneChange = (event) =>
 		onDone(event.target.checked);
 	return (
-		<li id={`Criterion-${id}`} className={className}>
+		<li id={`Criterion-${id}`} className={className} data-id={id}>
 			<header className={headerClassName}>
 				<div className="Criterion-title" onClick={onToggle}>
 					<div className="Criterion-titleText">
