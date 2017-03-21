@@ -2405,6 +2405,15 @@
 			]
 		],
 		[
+			"showChildElements",
+			"a:not([role]) svg, [role='link'] svg",
+			"desc",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
 			"showElement",
 			"a:not([role]) canvas, [role='link'] canvas",
 			[
@@ -2442,6 +2451,15 @@
 			[
 				"aria-label"
 			]
+		],
+		[
+			"showChildElements",
+			"a:not([role]) svg, [role='link'] svg",
+			"desc",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
 			"showElement",
@@ -2497,6 +2515,15 @@
 			]
 		],
 		[
+			"showChildElements",
+			"a:not([role]) svg, [role='link'] svg",
+			"desc",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
 			"showElement",
 			"a:not([role]) canvas, [role='link'] canvas",
 			[
@@ -2534,6 +2561,15 @@
 			[
 				"aria-label"
 			]
+		],
+		[
+			"showChildElements",
+			"a:not([role]) svg, [role='link'] svg",
+			"desc",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
 			"showElement",
@@ -2589,6 +2625,15 @@
 			]
 		],
 		[
+			"showChildElements",
+			"a:not([role]) svg, [role='link'] svg",
+			"desc",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
 			"showElement",
 			"a:not([role]) canvas, [role='link'] canvas",
 			[
@@ -2626,6 +2671,15 @@
 			[
 				"aria-label"
 			]
+		],
+		[
+			"showChildElements",
+			"a:not([role]) svg, [role='link'] svg",
+			"desc",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
 			"showElement",
@@ -2681,6 +2735,15 @@
 			]
 		],
 		[
+			"showChildElements",
+			"a:not([role]) svg, [role='link'] svg",
+			"desc",
+			[],
+			{
+				"showContent": true
+			}
+		],
+		[
 			"showElement",
 			"a:not([role]) canvas, [role='link'] canvas",
 			[
@@ -2718,6 +2781,15 @@
 			[
 				"aria-label"
 			]
+		],
+		[
+			"showChildElements",
+			"a:not([role]) svg, [role='link'] svg",
+			"desc",
+			[],
+			{
+				"showContent": true
+			}
 		],
 		[
 			"showElement",
