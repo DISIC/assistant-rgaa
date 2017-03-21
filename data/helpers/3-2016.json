@@ -2363,7 +2363,7 @@
 			}
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]), [role='link']",
 			[
 				"title"
@@ -2384,21 +2384,21 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]), [role='link']",
 			[
 				"title"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) img, [role='link'] img, area[href]",
 			[
 				"alt"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
@@ -2432,21 +2432,21 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]), [role='link']",
 			[
 				"title"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) img, [role='link'] img, area[href]",
 			[
 				"alt"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
@@ -2480,7 +2480,7 @@
 			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a[title]:not([role]), [role='link'][title]",
 			[
 				"title"
@@ -2494,21 +2494,21 @@
 			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a[title]:not([role]), [role='link'][title]",
 			[
 				"title"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a[title]:not([role]) img, [role='link'] img, area[href]",
 			[
 				"alt"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
@@ -2542,21 +2542,21 @@
 			"a[title]:not([role]), [role='link'][title]"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a[title]:not([role]), [role='link'][title]",
 			[
 				"title"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a[title]:not([role]) img, [role='link'] img, area[href]",
 			[
 				"alt"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
@@ -2590,7 +2590,7 @@
 			"a:not([role]), [role='link']"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]), [role='link']",
 			[
 				"title"
@@ -2604,21 +2604,21 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]), [role='link']",
 			[
 				"title"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) img, [role='link'] img, area[href]",
 			[
 				"alt"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
@@ -2652,21 +2652,21 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]), [role='link']",
 			[
 				"title"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) img, [role='link'] img, area[href]",
 			[
 				"alt"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
@@ -2700,7 +2700,7 @@
 			"a:not([role]), [role='link']"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]), [role='link']",
 			[
 				"title"
@@ -2714,21 +2714,21 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]), [role='link']",
 			[
 				"title"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) img, [role='link'] img, area[href]",
 			[
 				"alt"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
@@ -2762,21 +2762,21 @@
 			"a:not([role]), [role='link'], img[usemap]"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]), [role='link']",
 			[
 				"title"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) img, [role='link'] img, area[href]",
 			[
 				"alt"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
@@ -2810,14 +2810,14 @@
 			"a:not([role]), [role='link']"
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) img, [role='link'] img, area[href]",
 			[
 				"alt"
 			]
 		],
 		[
-			"showAttributes",
+			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
 				"aria-label"
