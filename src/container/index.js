@@ -27,12 +27,12 @@ let container = null;
  */
 const start = () =>
 	getStore().then((store) => {
-		if (document.querySelector(`#${CONTAINER_ID}`)) {
+		if (document.querySelector(`.${CONTAINER_ID}`)) {
 			return true;
 		}
 
 		container = document.createElement('div');
-		container.id = CONTAINER_ID;
+		container.className = CONTAINER_ID;
 		document.body.appendChild(container);
 
 		render((

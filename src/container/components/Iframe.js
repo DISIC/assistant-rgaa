@@ -12,7 +12,7 @@ export default function Iframe() {
 	return (
 		<iframe
 			src={IFRAME_SRC}
-			id={`${CONTAINER_ID}-panel`}
+			className={`${CONTAINER_ID}-panel`}
 			style={{
 				display: 'block'
 			}}

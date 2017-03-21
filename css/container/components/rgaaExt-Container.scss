@@ -5,7 +5,7 @@ sure page styles won't affect ours */
 /* stylelint-disable
 declaration-no-important, selector-no-id, selector-id-pattern */
 
-#rgaaExt-Container-wrapper {
+.rgaaExt-Container-wrapper {
 	position: fixed !important;
 	top: 0 !important;
 	right: 0 !important;
@@ -17,18 +17,18 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
-#rgaaExt-Container-wrapper.rgaaExt-Container-wrapper--left {
+.rgaaExt-Container-wrapper.rgaaExt-Container-wrapper--left {
 	left: 0 !important;
 	right: auto !important;
 	border: 0 !important;
 }
 
-#rgaaExt-Container-wrapper.rgaaExt-Container-wrapper--right {
+.rgaaExt-Container-wrapper.rgaaExt-Container-wrapper--right {
 	left: auto !important;
 	right: 0 !important;
 }
 
-#rgaaExt-Container-wrapper.rgaaExt-Container-wrapper--bottom {
+.rgaaExt-Container-wrapper.rgaaExt-Container-wrapper--bottom {
 	bottom: 0 !important;
 	top: auto !important;
 	width: 100% !important;
@@ -36,7 +36,7 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	border: 0 !important;
 }
 
-#rgaaExt-Container-panel {
+.rgaaExt-Container-panel {
 	width: 100% !important;
 	height: 100% !important;
 	border: none !important;

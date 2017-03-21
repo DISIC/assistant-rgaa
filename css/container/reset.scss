@@ -11,17 +11,17 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	box-shadow: none !important;
 }
 
-#rgaaExt-Container,
-#rgaaExt-Container-wrapper,
-#rgaaExt-Container-panel,
+.rgaaExt-Container,
+.rgaaExt-Container-wrapper,
+.rgaaExt-Container-panel,
 .rgaaExt-ResizeHandle,
 .rgaaExt-ResizeHandle-handle,
 .rgaaExt-ResizeHandle-overlay {
 	@include reset();
 }
 
-#rgaaExt-Container,
-#rgaaExt-Container-wrapper {
+.rgaaExt-Container,
+.rgaaExt-Container-wrapper {
 	width: auto !important;
 	height: auto !important;
 }

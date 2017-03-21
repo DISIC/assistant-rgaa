@@ -19,10 +19,7 @@ const HandlePosition = {
  */
 export default function App({position}) {
 	return (
-		<div
-			id={`${CONTAINER_ID}-wrapper`}
-			className={`${CONTAINER_ID}-wrapper--${position}`}
-		>
+		<div className={`${CONTAINER_ID}-wrapper ${CONTAINER_ID}-wrapper--${position}`}>
 			<ResizeHandle
 				position={HandlePosition[position]}
 				useOverlay
