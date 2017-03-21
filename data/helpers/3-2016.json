@@ -2415,10 +2415,11 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas",
+			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
 			[
 				"title",
-				"aria-label"
+				"aria-label",
+				"aria-labelledby"
 			],
 			{
 				"showContent": true
@@ -2463,10 +2464,11 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas",
+			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
 			[
 				"title",
-				"aria-label"
+				"aria-label",
+				"aria-labelledby"
 			],
 			{
 				"showContent": true
@@ -2509,14 +2511,14 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) svg, [role='link'] svg",
+			"a[title]:not([role]) svg, [role='link'][title] svg",
 			[
 				"aria-label"
 			]
 		],
 		[
 			"showChildElements",
-			"a:not([role]) svg, [role='link'] svg",
+			"a[title]:not([role]) svg, [role='link'][title] svg",
 			"desc",
 			[],
 			{
@@ -2525,10 +2527,11 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas",
+			"a[title]:not([role]) canvas, a[title]:not([role]) object, [role='link'][title] canvas, [role='link'][title] object",
 			[
 				"title",
-				"aria-label"
+				"aria-label",
+				"aria-labelledby"
 			],
 			{
 				"showContent": true
@@ -2557,14 +2560,14 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) svg, [role='link'] svg",
+			"a[title]:not([role]) svg, [role='link'][title] svg",
 			[
 				"aria-label"
 			]
 		],
 		[
 			"showChildElements",
-			"a:not([role]) svg, [role='link'] svg",
+			"a[title]:not([role]) svg, [role='link'][title] svg",
 			"desc",
 			[],
 			{
@@ -2573,10 +2576,11 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas",
+			"a[title]:not([role]) canvas, a[title]:not([role]) object, [role='link'][title] canvas, [role='link'][title] object",
 			[
 				"title",
-				"aria-label"
+				"aria-label",
+				"aria-labelledby"
 			],
 			{
 				"showContent": true
@@ -2635,10 +2639,11 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas",
+			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
 			[
 				"title",
-				"aria-label"
+				"aria-label",
+				"aria-labelledby"
 			],
 			{
 				"showContent": true
@@ -2683,10 +2688,11 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas",
+			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
 			[
 				"title",
-				"aria-label"
+				"aria-label",
+				"aria-labelledby"
 			],
 			{
 				"showContent": true
@@ -2745,10 +2751,11 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas",
+			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
 			[
 				"title",
-				"aria-label"
+				"aria-label",
+				"aria-labelledby"
 			],
 			{
 				"showContent": true
@@ -2793,10 +2800,11 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas",
+			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
 			[
 				"title",
-				"aria-label"
+				"aria-label",
+				"aria-labelledby"
 			],
 			{
 				"showContent": true
