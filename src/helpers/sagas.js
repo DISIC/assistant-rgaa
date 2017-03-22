@@ -9,6 +9,7 @@ export default function* sagas() {
 	yield [
 		helpers.watchApply(),
 		helpers.watchRevert(),
+		helpers.watchApplyAll(),
 		helpers.watchRevertAll()
 	];
 }

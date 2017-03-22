@@ -18,7 +18,7 @@ import {viewSource} from '../common/api/viewSource';
 import {DEFAULT_VERSION, getReferenceOption} from '../common/api/reference';
 import {setReferenceVersion} from '../common/actions/reference';
 import {setPageInfo} from '../common/actions/panel';
-import {revertAllHelpers} from '../common/actions/helpers';
+import {applyAllHelpers, revertAllHelpers} from '../common/actions/helpers';
 import {isFirefox, isChrome} from '../common/api/uasniffer';
 import createInstancePool from './createInstancePool';
 
@@ -46,13 +46,43 @@ const injectContentScripts = (tabId) =>
 /**
  *
  */
-const openPanel = ({id, url, title}) => {
+const openPanel = ({id}) => {
 	const instance = instances.getInstance(id);
-	// opens the panel and loads initial data.
-	instance
-		.sendMessage({
-			type: OPEN_PANEL
-		})
+	instance.setOpen(true);
+	instance.dispatch(applyAllHelpers());
+	return instance.sendMessage({
+		type: OPEN_PANEL
+	});
+};
+
+/**
+ *
+ */
+const closePanel = ({id}) => {
+	const instance = instances.getInstance(id);
+	instance.setOpen(false);
+	instance.dispatch(revertAllHelpers());
+	return instance.sendMessage({
+		type: CLOSE_PANEL
+	});
+};
+
+/**
+ *
+ */
+const togglePanel = (tab) => {
+	const instance = instances.getInstance(tab.id);
+	return instance.isOpen()
+		? closePanel(tab)
+		: openPanel(tab);
+};
+
+/**
+ *
+ */
+const createPanel = ({id, url, title}) => {
+	const instance = instances.getInstance(id);
+	openPanel({id})
 		.then(() =>
 			getReferenceOption()
 		)
@@ -63,17 +93,6 @@ const openPanel = ({id, url, title}) => {
 				title
 			}));
 		});
-};
-
-/**
- *
- */
-const closePanel = ({id}) => {
-	const instance = instances.getInstance(id);
-	instance.dispatch(revertAllHelpers());
-	return instance.sendMessage({
-		type: CLOSE_PANEL
-	});
 };
 
 /**
@@ -158,9 +177,7 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 chrome.browserAction.onClicked.addListener(() =>
 	fetchCurrentTab().then((tab) => {
 		if (instances.hasInstance(tab.id)) {
-			closePanel(tab).then(() =>
-				instances.removeInstance(tab.id)
-			);
+			togglePanel(tab);
 		}
 
 		if (!instances.hasInstance(tab.id)) {
@@ -173,11 +190,11 @@ chrome.browserAction.onClicked.addListener(() =>
 			instance
 				.sendMessage('')
 				.then(() =>
-					openPanel(tab)
+					createPanel(tab)
 				)
 				.catch(() => {
 					injectContentScripts(tab.id).then(() => {
-						openPanel(tab);
+						createPanel(tab);
 					});
 				});
 		}

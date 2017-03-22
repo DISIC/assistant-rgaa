@@ -8,7 +8,7 @@ import createStore from './createStore';
  *	with a particular tab.
  */
 export default function createAppInstance(tabId, sharedStore) {
-	let popupId;
+	let popupId, open = false;
 
 	//
 	const isPopup = () => !!popupId;
@@ -23,6 +23,13 @@ export default function createAppInstance(tabId, sharedStore) {
 		popupId = null;
 		return tabId;
 	};
+
+	const setOpen = (state) => {
+		open = state;
+	};
+
+	const isOpen = () =>
+		open;
 
 	// Sends a message to the instance's tabs.
 	const sendMessage = (message) => {
@@ -48,6 +55,8 @@ export default function createAppInstance(tabId, sharedStore) {
 		setPopup,
 		removePopup,
 		sendMessage,
+		setOpen,
+		isOpen,
 		store,
 		dispatch: store.dispatch
 	};

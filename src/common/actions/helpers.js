@@ -2,6 +2,7 @@
  *
  */
 export const APPLY = 'common/helpers/APPLY';
+export const APPLY_ALL = 'common/helpers/APPLY_ALL';
 export const REVERT = 'common/helpers/REVERT';
 export const REVERT_ALL = 'common/helpers/REVERT_ALL';
 export const SET_HELPERS = 'common/helpers/SET_HELPERS';
@@ -38,6 +39,14 @@ export const setHelpers = (data) => ({
 	payload: {
 		data
 	}
+});
+
+/**
+ *
+ */
+export const applyAllHelpers = () => ({
+	type: APPLY_ALL,
+	payload: {}
 });
 
 /**

@@ -27,7 +27,8 @@ let container = null;
  */
 const start = () =>
 	getStore().then((store) => {
-		if (document.querySelector(`.${CONTAINER_ID}`)) {
+		if (container) {
+			container.style.display = '';
 			return true;
 		}
 
@@ -47,10 +48,9 @@ const start = () =>
 /**
  *	Removes the panel from the page.
  */
-const shutdown = () => {
+const hide = () => {
 	if (container) {
-		document.body.removeChild(container);
-		container = null;
+		container.style.display = 'none';
 	}
 };
 
@@ -67,7 +67,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 					return start();
 
 				case CLOSE_PANEL:
-					return shutdown();
+					return hide();
 			}
 		})
 		.then(() =>
