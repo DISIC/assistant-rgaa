@@ -23,9 +23,8 @@ export default function App({position}) {
 			<ResizeHandle
 				position={HandlePosition[position]}
 				useOverlay
-				foldOnClick
 				handleProps={{
-					title: 'Redimensionnez, ou cliquez pour afficher ou cacher l\'extension'
+					title: 'Redimensionner le panneau'
 				}}
 			>
 				<Iframe />
