@@ -29,15 +29,9 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	background-color: orange !important;
 }
 
-.rgaaExt-ResizeHandle-handle:hover {
-	background-color: #ffb100 !important;
-}
-
-.rgaaExt-ResizeHandle-handle:before,
-.rgaaExt-ResizeHandle-handle:after {
-	content: '►';
-	cursor: pointer;
-	color: rgba(0, 0, 0, 0.5);
+.rgaaExt-ResizeHandle-handle:before {
+	content: '\02016'; // ‖
+	color: #222;
 	display: block;
 	position: absolute;
 	top: 0;
@@ -46,33 +40,13 @@ declaration-no-important, selector-no-id, selector-id-pattern */
 	bottom: 0;
 	margin: auto;
 	text-align: center;
-	height: 12px;
-	line-height: 12px;
-	font-size: 10px;
-	padding: 20px 0;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
 }
 
-.rgaaExt-ResizeHandle-handle:before {
-	padding-bottom: 80px;
-}
-
-.rgaaExt-ResizeHandle-handle:after {
-	padding-top: 80px;
-}
-
-.rgaaExt-ResizeHandle--folded .rgaaExt-ResizeHandle-handle:before,
-.rgaaExt-ResizeHandle--folded .rgaaExt-ResizeHandle-handle:after {
-	content: '◄';
-}
-
-.rgaaExt-ResizeHandle--top .rgaaExt-ResizeHandle-handle:before,
-.rgaaExt-ResizeHandle--top .rgaaExt-ResizeHandle-handle:after {
-	transform: rotate(90deg);
-}
-
-.rgaaExt-ResizeHandle--right .rgaaExt-ResizeHandle-handle:before,
-.rgaaExt-ResizeHandle--right .rgaaExt-ResizeHandle-handle:after {
-	transform: rotate(180deg);
+.rgaaExt-ResizeHandle--top .rgaaExt-ResizeHandle-handle:before {
+	transform: rotate(90deg); // for the handle "‖" to be horizontal
 }
 
 /* stylelint-enable */
