@@ -176,7 +176,8 @@ class ResizeHandle extends Component {
 			: {};
 		const containerClasses = classNames(classes.container, {
 			[`${classes.container}--${position}`]: true,
-			[`${classes.container}--dragging`]: this.state.dragging
+			[`${classes.container}--dragging`]: this.state.dragging,
+			[`${classes.container}--folded`]: this.state.folded
 		});
 		const handleStyles = isEqual(classes.handle, defaultClasses.handle)
 			? assign(
@@ -205,13 +206,13 @@ class ResizeHandle extends Component {
 						className={classes.handle}
 						style={handleStyles}
 						{...this.props.handleProps}
-					></div>
+					/>
 				</DraggableCore>
-				{renderIf(useOverlay && this.state.dragging)(
+				{renderIf(useOverlay && this.state.dragging)(() =>
 					<div
 						className={classes.overlay}
 						style={overlayStyles}
-					></div>
+					/>
 				)}
 			</div>
 		);
