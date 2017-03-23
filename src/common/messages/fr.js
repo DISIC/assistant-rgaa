@@ -6,6 +6,8 @@ const messages = {
 	'Header.options': 'Options',
 	'Header.themes': 'Référentiel',
 	'Header.import': 'Import',
+	'Header.minimize': 'Minimiser le panneau',
+	'Header.close': 'Fermer l\'extension',
 	'ThemesList.title': 'Voir les thématiques',
 	'Theme.themesMenu': 'Retourner au menu des thématiques',
 	'Theme.criterion.select.label': 'Aller au critère : ',

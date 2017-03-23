@@ -12,10 +12,15 @@
 
 .Header-actions > * {
 	display: inline-block;
-	margin-left: vr(0.5);
+	margin-left: vr(0.25);
 }
 
 .Header-actions > .Link,
 .Header-actions .Dropdown-toggle {
 	color: $color-black;
+}
+
+.Header-dock,
+.Header-close {
+	margin-left: vr(1);
 }

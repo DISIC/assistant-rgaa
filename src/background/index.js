@@ -164,6 +164,9 @@ const handleKnownInstanceMessage = (message, tabId, instance) => {
 				})
 			));
 
+		case CLOSE_PANEL:
+			return closePanel({id: tabId});
+
 		// broadcasts message
 		default:
 			return instance.sendMessage(message);
