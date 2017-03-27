@@ -1250,14 +1250,17 @@
 		[
 			"showElement",
 			"embed",
-			[],
+			[
+				"aria-label",
+				"aria-labelledby"
+			],
 			{
 				"showEmpty": true
 			}
 		],
 		[
 			"outline",
-			"figure"
+			"figure, embed"
 		],
 		[
 			"showElement",
