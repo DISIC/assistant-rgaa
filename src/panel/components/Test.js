@@ -68,7 +68,7 @@ function Test({
 							<input
 								title={intl.formatMessage({
 									id: `Test.apply.${applyTranslateKey}.title`
-								})}
+								}, {id})}
 								className="Test-actionInput"
 								type="checkbox"
 								id={`test-${id}-apply-input`}
