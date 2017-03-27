@@ -13,6 +13,7 @@ const messages = {
 	'Theme.criterion.select.label': 'Aller au critère : ',
 	'Theme.criterion.select.emptyOption': 'Choisissez un critère',
 	'Criterion.title': 'Critère {id}',
+	'Criterion.activeTest': 'Test {id} activé',
 	'Criterion.level': 'niveau {lvl}',
 	'Criterion.done.label': 'Tous les tests du critère sont faits - Cliquer pour marquer les tests comme "à faire"',
 	'Criterion.todo.label': 'Des tests restent à faire sur ce critère - Cliquer pour marquer les tests comme "fait"',

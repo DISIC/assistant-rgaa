@@ -12,10 +12,11 @@ import Icon from './Icon';
  *
  */
 function Criterion({
-	id, level, title, tests, isDone, isOpen, importResults, onToggle, onDone, intl
+	id, level, title, tests, activeTest, isDone, isOpen, importResults, onToggle, onDone, intl
 }) {
 	const className = classNames('Criterion Theme-criterion', {
-		'is-open': isOpen
+		'is-open': isOpen,
+		'Criterion--hasActiveTest': !!activeTest
 	});
 	const headerClassName = classNames('Criterion-header', {
 		'Title Title--sub': isOpen
@@ -46,6 +47,12 @@ function Criterion({
 
 						<h3 className="Criterion-id">
 							{intl.formatMessage({id: 'Criterion.title'}, {id})}
+
+							{renderIf(!isOpen && activeTest)(() =>
+								<span className="Criterion-activeTest">
+									{intl.formatMessage({id: 'Criterion.activeTest'}, {id: activeTest.id})}
+								</span>
+							)}
 						</h3>
 
 						{renderIf(level)(() =>

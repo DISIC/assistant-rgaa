@@ -32,14 +32,18 @@
 	background: $color-highlight;
 }
 
+.Criterion--hasActiveTest:not(.is-open) .Criterion-header,
 .Criterion.is-open .Criterion-header {
-	@include typi($typi-large);
 	background-color: $color-theme;
 	color: $color-theme-text;
 
 	a {
 		color: $color-theme-text;
 	}
+}
+
+.Criterion.is-open .Criterion-header {
+	@include typi($typi-large);
 }
 
 .Criterion-title {
@@ -59,7 +63,6 @@
 .Criterion-id {
 	display: inline;
 }
-
 
 .Criterion-description {
 	display: block;
@@ -82,6 +85,17 @@
 
 .Criterion.is-open .Criterion-id {
 	font-weight: normal;
+}
+
+.Criterion-activeTest {
+	font-weight: normal;
+	font-style: italic;
+
+	&:before {
+		content: ' - ';
+		display: inline;
+		font-weight: normal;
+	}
 }
 
 .Criterion-toggle {
