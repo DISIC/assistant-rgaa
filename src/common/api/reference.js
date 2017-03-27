@@ -61,8 +61,7 @@ export const flattenReference = (data) => {
 						tests: criterion.tests.map((test) => {
 							tests[test.id] = {
 								...test,
-								criterionId: criterion.id,
-								enabled: false
+								criterionId: criterion.id
 							};
 
 							return test.id;
