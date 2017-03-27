@@ -75,11 +75,11 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"img[alt]:not(figure:not(figure:has(figcaption)) img, a img, button img)"
+			"img"
 		],
 		[
 			"showAttributes",
-			"img[alt]:not(figure:not(figure:has(figcaption)) img, a img, button img)",
+			"img",
 			[
 				"alt",
 				"title",
