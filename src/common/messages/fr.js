@@ -27,7 +27,7 @@ const messages = {
 	'Test.done': 'Test fait - Cliquer pour marquer le test comme "à faire"',
 	'Test.todo': 'Test à faire - Cliquer pour marquer le test comme "fait"',
 	'Test.instructions': 'Instructions',
-	'TestHelpers.intro': 'Ce test...',
+	'TestHelpers.title': 'Description du test',
 	'DockMenu.button': 'Dock',
 	'DockMenu.bottom': 'En bas',
 	'DockMenu.left': 'À gauche',

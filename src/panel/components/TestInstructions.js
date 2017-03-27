@@ -23,7 +23,7 @@ function TestInstructions({isOpen, onToggleRequest, instructions}) {
 			<h3 className="TestSection-header">
 				<button
 					type="button"
-					className="TestSection-title TestInstructions-toggle InvisibleButton"
+					className="TestSection-title TestSection-toggle InvisibleButton"
 					onClick={toggle}
 				>
 					<FormattedMessage id="Test.instructions" />

@@ -17,7 +17,7 @@
 	}
 }
 
-.TestSection-body {
+.TestSection-body:not(:empty) {
 	padding: 0 $app-gutter vr(1/2) $app-gutter;
 }
 
@@ -31,5 +31,21 @@
 
 	&:active {
 		text-decoration: underline;
+	}
+}
+
+.TestSection-toggle {
+	display: block;
+	width: 100%;
+	text-align: left;
+
+	&:before {
+		display: inline;
+		margin-right: 3px;
+		content: '►';
+
+		.TestSection.is-open & {
+			content: '▼';
+		}
 	}
 }
