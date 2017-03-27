@@ -105,6 +105,7 @@ function Test({
 
 			{renderIf(instructions)(() => (
 				<TestInstructions
+					id={id}
 					instructions={instructions}
 					isOpen={areInstructionsOpen}
 					onToggleRequest={toggleInstructions}

@@ -7,7 +7,7 @@ import classNames from 'classnames';
 /**
  *
  */
-function TestInstructions({isOpen, onToggleRequest, instructions}) {
+function TestInstructions({id, isOpen, onToggleRequest, instructions}) {
 	const containerClass = classNames('TestInstructions', 'TestSection', {
 		'is-open': isOpen
 	});
@@ -25,12 +25,15 @@ function TestInstructions({isOpen, onToggleRequest, instructions}) {
 					type="button"
 					className="TestSection-title TestSection-toggle InvisibleButton"
 					onClick={toggle}
+					aria-expanded={isOpen}
+					aria-controls={`TestInstructions-${id}`}
 				>
 					<FormattedMessage id="Test.instructions" />
 				</button>
 			</h3>
 
 			<div
+				id={`TestInstructions-${id}`}
 				className={textClass}
 				dangerouslySetInnerHTML={{
 					__html: instructions
@@ -41,6 +44,7 @@ function TestInstructions({isOpen, onToggleRequest, instructions}) {
 }
 
 TestInstructions.propTypes = {
+	id: PropTypes.string,
 	instructions: PropTypes.string,
 	isOpen: PropTypes.bool.isRequired,
 	onToggleRequest: PropTypes.func.isRequired
