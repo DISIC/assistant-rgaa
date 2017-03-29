@@ -937,14 +937,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"img[alt], img[longdesc]",
+			"img",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttributes",
-			"img[alt], img[longdesc]",
+			"img",
 			[
 				"alt",
 				"longdesc"
@@ -955,14 +955,14 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"input[type=\"image\"][alt], input[type=\"image\"][longdesc], input[type=\"image\"][aria-describedby]",
+			"input[type=\"image\"]",
 			{
 				"showTag": true
 			}
 		],
 		[
 			"showAttributes",
-			"input[type=\"image\"][alt], input[type=\"image\"][longdesc], input[type=\"image\"][aria-describedby]",
+			"input[type=\"image\"]",
 			[
 				"alt",
 				"longdesc",
@@ -992,7 +992,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"embed[type^=\"image\"][longdesc], embed[type^=\"image\"][alt]",
+			"embed[type^=\"image\"]",
 			{
 				"showTag": true
 			}
