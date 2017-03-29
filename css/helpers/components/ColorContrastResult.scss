@@ -1,0 +1,18 @@
+.ColorContrastResult {
+	text-align: center;
+}
+
+.ColorContrastResult-ratio {
+	display: block;
+	color: $color-gray;
+	font-size: 2rem;
+	font-weight: bolder;
+}
+
+.ColorContrastResult-actualRatio {
+	color: $color-green;
+}
+
+.ColorContrastResult-actualRatio--invalid {
+	color: $color-red;
+}

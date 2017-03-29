@@ -1,0 +1,29 @@
+.ColorInput {
+	display: flex;
+
+	.Form-input {
+		font-family: monospace;
+	}
+
+	.Button {
+		border: 1px solid $color-gray-dark;
+		border-left-color: $color-blue-light;
+		border-radius: 0;
+	}
+}
+
+.ColorInput-sample {
+	border: 1px solid $color-black;
+	border-left: 0;
+	width: vr(2);
+}
+
+.ColorInput-pickButton {
+	border: 1px solid $color-gray-dark;
+	border-left: 0;
+	width: vr(1.5);
+
+	svg {
+		fill: $color-theme-text;
+	}
+}

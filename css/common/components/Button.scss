@@ -14,9 +14,11 @@
 		border-color: darken($color-theme, 20%);
 	}
 
-	&:not([disabled]):active {
+	&:not([disabled]):active,
+	&[aria-pressed="true"] {
 		background: darken($color-theme, 20%);
 	}
+
 }
 
 .Button[disabled] {

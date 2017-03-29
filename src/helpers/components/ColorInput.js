@@ -20,7 +20,7 @@ const isValidColor = (color) => {
 /**
  *
  */
-const ColorInput = ({id, color, onPick, onChange, intl}) => {
+const ColorInput = ({id, color, onChange, children, intl}) => {
 	const handleChange = (event) =>
 		onChange(event.target.value);
 
@@ -49,17 +49,14 @@ const ColorInput = ({id, color, onPick, onChange, intl}) => {
 		<div className="ColorInput">
 			<input {...inputProps} />
 
-			<button
-				type="button"
-				className="ColorInput-pickButton"
-				onClick={onPick}
-				title={intl.formatMessage({
-					id: 'ColorInput.pickButtonTitle'
-				})}
+			<div
+				className="ColorInput-sample"
 				style={{
 					backgroundColor: color
 				}}
 			/>
+
+			{children}
 		</div>
 	);
 };
@@ -67,8 +64,8 @@ const ColorInput = ({id, color, onPick, onChange, intl}) => {
 ColorInput.propTypes = {
 	id: PropTypes.string,
 	color: PropTypes.string,
-	onPick: PropTypes.func,
 	onChange: PropTypes.func,
+	children: PropTypes.node,
 	intl: intlShape
 };
 
