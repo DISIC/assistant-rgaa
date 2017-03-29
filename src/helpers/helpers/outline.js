@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import {apply as addClassName, revert as removeClassName} from './addClassName';
 import showTagApi from '../api/showTag';
+import hideHelperElement from '../api/hideHelperElement';
 import {sanitize} from '../api/selectors';
 
 
@@ -42,5 +43,5 @@ export const apply = (id, selector, {showTag = false} = {}) => {
  */
 export const revert = (id, selector) => {
 	removeClassName(id, selector, 'rgaaExt-OutlineHelper');
-	$(`.${id}`).remove();
+	hideHelperElement(`.${id}`);
 };
