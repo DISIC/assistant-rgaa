@@ -1,4 +1,4 @@
-import {SET_ALL, TOGGLE_MENU} from '../actions/themes';
+import {SET_ALL, TOGGLE_MENU, SAVE_SCROLL_POSITION} from '../actions/themes';
 
 
 
@@ -7,6 +7,7 @@ import {SET_ALL, TOGGLE_MENU} from '../actions/themes';
  */
 export const initialState = {
 	list: {},
+	scrollPosition: 0,
 	menuIsOpen: false
 };
 
@@ -25,6 +26,12 @@ export default function themes(state = initialState, {type, payload}) {
 			return {
 				...state,
 				menuIsOpen: payload
+			};
+
+		case SAVE_SCROLL_POSITION:
+			return {
+				...state,
+				scrollPosition: payload
 			};
 
 		default:
