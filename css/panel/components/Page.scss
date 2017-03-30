@@ -1,0 +1,11 @@
+.Page {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.Page-body {
+	flex: 1;
+	overflow: auto;
+	padding: vr(1/2);
+}
