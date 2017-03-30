@@ -2371,20 +2371,13 @@
 			[
 				"title"
 			]
-		],
-		[
-			"showElement",
-			"svg[aria-label]",
-			[
-				"aria-label"
-			]
 		]
 	],
 	"6.1.2": [
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
 		],
 		[
 			"showElement",
@@ -2404,7 +2397,9 @@
 			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
-				"aria-label"
+				"title",
+				"aria-label",
+				"aria-labelledby"
 			]
 		],
 		[
@@ -2418,7 +2413,7 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
+			"a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed",
 			[
 				"title",
 				"aria-label",
@@ -2433,7 +2428,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
+			"a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
 		],
 		[
 			"showElement",
@@ -2453,7 +2448,9 @@
 			"showElement",
 			"a:not([role]) svg, [role='link'] svg",
 			[
-				"aria-label"
+				"title",
+				"aria-label",
+				"aria-labelledby"
 			]
 		],
 		[
@@ -2467,7 +2464,7 @@
 		],
 		[
 			"showElement",
-			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
+			"a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed",
 			[
 				"title",
 				"aria-label",
@@ -2496,7 +2493,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a[title]:not([role]), [role='link'][title]"
+			"a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
 		],
 		[
 			"showElement",
@@ -2507,7 +2504,7 @@
 		],
 		[
 			"showElement",
-			"a[title]:not([role]) img, [role='link'] img, area[href]",
+			"a[title]:not([role]) img, [role='link'][title] img, area[href]",
 			[
 				"alt"
 			]
@@ -2516,7 +2513,9 @@
 			"showElement",
 			"a[title]:not([role]) svg, [role='link'][title] svg",
 			[
-				"aria-label"
+				"title",
+				"aria-label",
+				"aria-labelledby"
 			]
 		],
 		[
@@ -2530,7 +2529,7 @@
 		],
 		[
 			"showElement",
-			"a[title]:not([role]) canvas, a[title]:not([role]) object, [role='link'][title] canvas, [role='link'][title] object",
+			"a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed",
 			[
 				"title",
 				"aria-label",
@@ -2545,7 +2544,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"a[title]:not([role]), [role='link'][title]"
+			"a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
 		],
 		[
 			"showElement",
@@ -2556,7 +2555,7 @@
 		],
 		[
 			"showElement",
-			"a[title]:not([role]) img, [role='link'] img, area[href]",
+			"a[title]:not([role]) img, [role='link'][title] img, area[href]",
 			[
 				"alt"
 			]
@@ -2565,7 +2564,9 @@
 			"showElement",
 			"a[title]:not([role]) svg, [role='link'][title] svg",
 			[
-				"aria-label"
+				"title",
+				"aria-label",
+				"aria-labelledby"
 			]
 		],
 		[
@@ -2579,7 +2580,7 @@
 		],
 		[
 			"showElement",
-			"a[title]:not([role]) canvas, a[title]:not([role]) object, [role='link'][title] canvas, [role='link'][title] object",
+			"a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed",
 			[
 				"title",
 				"aria-label",
