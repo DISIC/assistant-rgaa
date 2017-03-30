@@ -1,0 +1,27 @@
+.RichText {
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: vr(1/2);
+		font-weight: bold;
+	}
+
+	h1 {
+		@include typi($typi-xxlarge);
+	}
+
+	h2 {
+		@include typi($typi-xlarge);
+	}
+
+	h3 {
+		@include typi($typi-large);
+	}
+
+	ul {
+		padding-left: vr(1);
+		list-style: disc;
+	}
+
+	p {
+		margin-bottom: vr(1);
+	}
+}
