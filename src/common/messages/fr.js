@@ -6,6 +6,7 @@ const messages = {
 	'Header.options': 'Options',
 	'Header.themes': 'Référentiel',
 	'Header.import': 'Import',
+	'Header.help': 'Aide',
 	'Header.minimize': 'Minimiser le panneau',
 	'Header.close': 'Fermer l\'extension',
 	'ThemesList.title': 'Voir les thématiques',
