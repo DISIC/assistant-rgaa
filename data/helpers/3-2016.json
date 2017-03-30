@@ -1393,7 +1393,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"img",
+			"img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
 			{
 				"showTag": true
 			}
@@ -1426,7 +1426,7 @@
 		"disableAllStyles",
 		[
 			"outline",
-			"img",
+			"img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
 			{
 				"showTag": true
 			}
