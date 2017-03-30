@@ -7,4 +7,13 @@
 	padding: 0.2em !important;
 	outline: 1px $color-red solid !important;
 	box-shadow: 0 0 10px $color-red !important;
+
+	.rgaaExt-OutlineHelper {
+		outline: 2px $color-red dashed !important;
+		box-shadow: none !important;
+
+		.rgaaExt-OutlineHelper {
+			outline: 2px $color-red dotted !important;
+		}
+	}
 }
