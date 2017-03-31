@@ -24,3 +24,15 @@
 .Header-close {
 	margin-left: vr(1);
 }
+
+.Header-dock .Dropdown-toggle,
+.Header-options,
+.Header-help {
+	padding: 0 vr(1/8);
+
+	.Icon {
+		color: lighten($color-black, 30%);
+		width: 1.25em;
+		height: 1.25em;
+	}
+}

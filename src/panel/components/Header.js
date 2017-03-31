@@ -34,12 +34,23 @@ const Header = ({referenceVersion, inPopup, title, onOptionsClick, onCloseClick,
 				type="button"
 				onClick={onOptionsClick}
 				className="Header-options Link"
+				title={intl.formatMessage({id: 'Header.options'})}
 			>
-				<FormattedMessage id="Header.options" />
+				<Icon
+					name="cog"
+					title={intl.formatMessage({id: 'Header.options'})}
+				/>
 			</button>
 
-			<Link className="Header-help Link" to="/help">
-				<FormattedMessage id="Header.help" />
+			<Link
+				className="Header-help Link"
+				title={intl.formatMessage({id: 'Header.help'})}
+				to="/help"
+			>
+				<Icon
+					name="question-circle-o"
+					title={intl.formatMessage({id: 'Header.help'})}
+				/>
 			</Link>
 
 			<button
