@@ -4,6 +4,7 @@ import memoryHistory from '../common/history';
 import App from './components/App';
 import ReferencePageContainer from './components/ReferencePageContainer';
 import ImportPageContainer from './components/ImportPageContainer';
+import HelpPage from './components/HelpPage';
 
 
 
@@ -16,10 +17,8 @@ export default function () {
 			<Route path="/" component={App}>
 				<IndexRoute component={ReferencePageContainer} />
 
-				<Route
-					path="import"
-					component={ImportPageContainer}
-				/>
+				<Route path="import" component={ImportPageContainer} />
+				<Route path="help" component={HelpPage} />
 			</Route>
 		</Router>
 	);

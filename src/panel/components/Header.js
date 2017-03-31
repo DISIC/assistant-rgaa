@@ -38,6 +38,10 @@ const Header = ({referenceVersion, inPopup, title, onOptionsClick, onCloseClick,
 				<FormattedMessage id="Header.options" />
 			</button>
 
+			<Link className="Header-help Link" to="/help">
+				<FormattedMessage id="Header.help" />
+			</Link>
+
 			<button
 				type="button"
 				onClick={onCloseClick}
