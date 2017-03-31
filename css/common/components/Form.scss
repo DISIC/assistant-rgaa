@@ -1,3 +1,13 @@
+.Form-row {
+	display: flex;
+	align-items: flex-end;
+	margin: 0 vr(-1/4) vr(1/2) vr(-1/4);
+
+	> * {
+		margin: 0 vr(1/4);
+	}
+}
+
 .Form-field {
 	margin-bottom: vr(1/2);
 }

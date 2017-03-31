@@ -1,52 +1,5 @@
-.ColorContrast-form {
-	margin-bottom: vr(1/2);
-}
-
-.ColorContrast-row {
-	display: flex;
-	align-items: flex-end;
-	margin: 0 vr(-1/4) vr(1/2) vr(-1/4);
-
-	> * {
-		margin: 0 vr(1/4);
+.ColorContrast {
+	.Form {
+		margin-bottom: vr(1/2);
 	}
-}
-
-.ColorContrast-color {
-	box-sizing: border-box;
-	border: 1px solid $color-black;
-	width: 2 * $base-font-size * $line-height;
-}
-
-.ColorInput {
-	display: flex;
-
-	.Form-input {
-		font-family: monospace;
-	}
-}
-
-.ColorInput-pickButton {
-	border: 1px solid $color-gray-dark;
-	border-left: 0;
-	width: vr(1.5);
-}
-
-.ColorContrast-result {
-	text-align: center;
-}
-
-.ColorContrast-ratio {
-	display: block;
-	color: $color-gray;
-	font-size: 2rem;
-	font-weight: bolder;
-}
-
-.ColorContrast-actualRatio {
-	color: $color-green;
-}
-
-.ColorContrast-actualRatio--invalid {
-	color: $color-red;
 }
