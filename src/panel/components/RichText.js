@@ -16,7 +16,7 @@ const RichText = ({html}) => (
 );
 
 RichText.propTypes = {
-	html: PropTypes.string.isRequired
+	html: PropTypes.string
 };
 
 export default RichText;

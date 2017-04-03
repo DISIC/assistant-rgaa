@@ -1,4 +1,7 @@
 .RichText {
+	margin: 0 auto;
+	max-width: 80ch;
+
 	h1, h2, h3, h4, h5, h6 {
 		margin-bottom: vr(1/2);
 		font-weight: bold;
@@ -17,11 +20,16 @@
 	}
 
 	ul {
+		margin-bottom: vr(1);
 		padding-left: vr(1);
 		list-style: disc;
 	}
 
 	p {
 		margin-bottom: vr(1);
+	}
+
+	img {
+		max-width: 100%;
 	}
 }

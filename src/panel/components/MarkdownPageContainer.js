@@ -1,6 +1,7 @@
 import {lifecycle} from 'recompose';
 import fastmatter from 'fastmatter';
 import marked from 'marked';
+import {replaceLocalUrls} from '../../common/api/markdown';
 import MarkdownPage from './MarkdownPage';
 
 
@@ -10,8 +11,8 @@ import MarkdownPage from './MarkdownPage';
  */
 const enhance = lifecycle({
 	componentDidMount() {
-		const path = `data/pages/${this.props.name}.md`;
-		const url = chrome.extension.getURL(path);
+		const basePath = `data/pages/${this.props.name}`;
+		const url = chrome.extension.getURL(`${basePath}/index.md`);
 
 		fetch(url)
 			.then((response) =>
@@ -21,7 +22,7 @@ const enhance = lifecycle({
 			.then(({attributes, body}) => {
 				this.setState({
 					title: attributes.title,
-					html: marked(body)
+					html: marked(replaceLocalUrls(body, basePath))
 				});
 			});
 	}

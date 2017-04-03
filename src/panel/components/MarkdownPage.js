@@ -14,8 +14,8 @@ const MarkdownPage = ({title, html}) => (
 );
 
 MarkdownPage.propTypes = {
-	title: PropTypes.node.isRequired,
-	html: PropTypes.string.isRequired
+	title: PropTypes.node,
+	html: PropTypes.string
 };
 
 export default MarkdownPage;
