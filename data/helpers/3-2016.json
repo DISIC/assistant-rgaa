@@ -1424,124 +1424,108 @@
 		}
 	],
 	"3.3.1": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 4.5,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 4.5,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.3.2": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 4.5,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 4.5,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.3.3": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 3,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 3,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.3.4": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 3,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 3,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.4.1": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 7,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 7,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.4.2": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 7,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 7,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.4.3": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 4.5,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 4.5,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.4.4": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 4.5,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 4.5,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"4.1.1": [
 		{
@@ -3294,14 +3278,12 @@
 			"selector": "a[href]",
 			"showTag": true
 		},
-		[
-			"colorContrast",
-			"Couleur de lien",
-			"Couleur de texte",
-			{
-				"minimumRatio": 3
-			}
-		]
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de lien",
+			"rightLabel": "Couleur de texte",
+			"minimumRatio": 3
+		}
 	],
 	"10.7.1": [],
 	"10.7.2": [],
