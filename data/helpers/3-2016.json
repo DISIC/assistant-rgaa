@@ -2068,11 +2068,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"style",
-			"Linéarise les tableaux",
-			"table, tr, th, td { display: block; }"
-		],
+		{
+			"helper": "style",
+			"description": "Linéarise les tableaux",
+			"style": "table, tr, th, td { display: block; }"
+		},
 		{
 			"helper": "outline",
 			"selector": "td"
@@ -3282,11 +3282,11 @@
 	"10.5.1": [],
 	"10.5.2": [],
 	"10.5.3": [
-		[
-			"style",
-			"Cache les images de fond",
-			"* { background-image: none !important; }"
-		]
+		{
+			"helper": "style",
+			"description": "Cache les images de fond",
+			"style": "* { background-image: none !important; }"
+		}
 	],
 	"10.6.1": [
 		{
@@ -4388,25 +4388,25 @@
 		}
 	],
 	"12.13.1": [
-		[
-			"style",
-			"Renforce la visibilité du focus (encadré rouge)",
-			":focus{ border: 2px solid red !important; }"
-		]
+		{
+			"helper": "style",
+			"description": "Renforce la visibilité du focus (encadré rouge)",
+			"style": ":focus{ border: 2px solid red !important; }"
+		}
 	],
 	"12.13.2": [
-		[
-			"style",
-			"Renforce la visibilité du focus (encadré rouge)",
-			":focus{ border: 2px solid red !important; }"
-		]
+		{
+			"helper": "style",
+			"description": "Renforce la visibilité du focus (encadré rouge)",
+			"style": ":focus{ border: 2px solid red !important; }"
+		}
 	],
 	"12.14.1": [
-		[
-			"style",
-			"Renforce la visibilité du focus (encadré rouge)",
-			":focus{ border: 2px solid red !important; }"
-		]
+		{
+			"helper": "style",
+			"description": "Renforce la visibilité du focus (encadré rouge)",
+			"style": ":focus{ border: 2px solid red !important; }"
+		}
 	],
 	"13.1.1": [
 		{
