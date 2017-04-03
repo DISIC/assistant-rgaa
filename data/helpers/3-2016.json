@@ -1,6 +1,8 @@
 {
 	"1.1.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img"
@@ -17,7 +19,9 @@
 		]
 	],
 	"1.1.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"map",
@@ -38,7 +42,9 @@
 		]
 	],
 	"1.1.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[type=\"image\"]",
@@ -58,7 +64,9 @@
 		]
 	],
 	"1.1.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img[ismap]"
@@ -72,7 +80,9 @@
 		]
 	],
 	"1.2.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img"
@@ -91,7 +101,9 @@
 		]
 	],
 	"1.2.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"map",
@@ -124,7 +136,9 @@
 		]
 	],
 	"1.2.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object[type^=\"image\"]"
@@ -161,7 +175,9 @@
 		]
 	],
 	"1.2.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"svg"
@@ -194,7 +210,9 @@
 		]
 	],
 	"1.2.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas"
@@ -224,7 +242,9 @@
 		]
 	],
 	"1.2.6": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed"
@@ -251,7 +271,9 @@
 		]
 	],
 	"1.3.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img:not(a img, button img)"
@@ -268,7 +290,9 @@
 		]
 	],
 	"1.3.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"map"
@@ -289,7 +313,9 @@
 		]
 	],
 	"1.3.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[type=\"image\"][alt]"
@@ -306,7 +332,9 @@
 		]
 	],
 	"1.3.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object[type^=\"image\"]",
@@ -316,7 +344,9 @@
 		]
 	],
 	"1.3.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
@@ -332,7 +362,9 @@
 		]
 	],
 	"1.3.6": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed[type^=\"image\"]",
@@ -342,7 +374,9 @@
 		]
 	],
 	"1.3.7": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
@@ -358,7 +392,9 @@
 		]
 	],
 	"1.3.8": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"svg",
@@ -386,7 +422,9 @@
 		]
 	],
 	"1.3.9": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"svg",
@@ -405,7 +443,9 @@
 		]
 	],
 	"1.3.10": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas"
@@ -424,7 +464,9 @@
 		]
 	],
 	"1.3.11": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas[title], canvas[aria-label], canvas[aria-labelledby]"
@@ -440,7 +482,9 @@
 		]
 	],
 	"1.3.12": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas"
@@ -455,7 +499,9 @@
 		]
 	],
 	"1.3.13": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a, img, map, svg, input[type=\"image\"][alt], object[type^=\"image\"], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby], embed[type^=\"image\"], embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
@@ -532,7 +578,9 @@
 		]
 	],
 	"1.4.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img[alt]"
@@ -549,7 +597,9 @@
 		]
 	],
 	"1.4.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"map",
@@ -573,7 +623,9 @@
 		]
 	],
 	"1.4.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[type=\"image\"][alt]"
@@ -590,14 +642,18 @@
 		]
 	],
 	"1.4.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object[type^=\"image\"]"
 		]
 	],
 	"1.4.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
@@ -613,14 +669,18 @@
 		]
 	],
 	"1.4.6": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed[type^=\"image\"]"
 		]
 	],
 	"1.4.7": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
@@ -636,7 +696,9 @@
 		]
 	],
 	"1.4.8": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"svg",
@@ -664,7 +726,9 @@
 		]
 	],
 	"1.4.9": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"svg",
@@ -683,7 +747,9 @@
 		]
 	],
 	"1.4.10": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas"
@@ -698,7 +764,9 @@
 		]
 	],
 	"1.4.11": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas[title], canvas[aria-label], canvas[aria-labelledby]"
@@ -714,7 +782,9 @@
 		]
 	],
 	"1.4.12": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas"
@@ -729,7 +799,9 @@
 		]
 	],
 	"1.5.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, area, object, embed, svg, canvas",
@@ -739,7 +811,9 @@
 		]
 	],
 	"1.5.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[type=\"image\"]",
@@ -749,7 +823,9 @@
 		]
 	],
 	"1.6.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img",
@@ -770,7 +846,9 @@
 		]
 	],
 	"1.6.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object[type^=\"image\"]",
@@ -780,7 +858,9 @@
 		]
 	],
 	"1.6.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed[type^=\"image\"]",
@@ -790,7 +870,9 @@
 		]
 	],
 	"1.6.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[type=\"image\"]",
@@ -811,7 +893,9 @@
 		]
 	],
 	"1.6.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[type=\"image\"][aria-describedby]",
@@ -829,7 +913,9 @@
 		]
 	],
 	"1.6.6": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"svg",
@@ -855,7 +941,9 @@
 		]
 	],
 	"1.6.7": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"svg:has(desc), svg[aria-label]",
@@ -881,7 +969,9 @@
 		]
 	],
 	"1.6.8": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas",
@@ -899,7 +989,9 @@
 		]
 	],
 	"1.6.9": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas",
@@ -917,7 +1009,9 @@
 		]
 	],
 	"1.6.10": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
@@ -934,7 +1028,9 @@
 		]
 	],
 	"1.7.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img",
@@ -952,7 +1048,9 @@
 		]
 	],
 	"1.7.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[type=\"image\"]",
@@ -971,7 +1069,9 @@
 		]
 	],
 	"1.7.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object[type^=\"image\"]",
@@ -989,7 +1089,9 @@
 		]
 	],
 	"1.7.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed[type^=\"image\"]",
@@ -1007,7 +1109,9 @@
 		]
 	],
 	"1.7.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"svg",
@@ -1026,7 +1130,9 @@
 		]
 	],
 	"1.7.6": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"svg:has(desc)",
@@ -1045,7 +1151,9 @@
 		]
 	],
 	"1.7.7": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas",
@@ -1063,7 +1171,9 @@
 		]
 	],
 	"1.7.8": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas",
@@ -1081,7 +1191,9 @@
 		]
 	],
 	"1.8.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img",
@@ -1091,7 +1203,9 @@
 		]
 	],
 	"1.8.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[type=\"image\"]",
@@ -1101,7 +1215,9 @@
 		]
 	],
 	"1.8.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object[type^=\"image\"]",
@@ -1111,7 +1227,9 @@
 		]
 	],
 	"1.8.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed[type^=\"image\"]",
@@ -1121,7 +1239,9 @@
 		]
 	],
 	"1.8.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas",
@@ -1131,7 +1251,9 @@
 		]
 	],
 	"1.9.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img",
@@ -1141,7 +1263,9 @@
 		]
 	],
 	"1.9.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[type=\"image\"]",
@@ -1151,7 +1275,9 @@
 		]
 	],
 	"1.9.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object[type^=\"image\"]",
@@ -1161,7 +1287,9 @@
 		]
 	],
 	"1.9.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed[type^=\"image\"]",
@@ -1171,7 +1299,9 @@
 		]
 	],
 	"1.9.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"canvas",
@@ -1181,7 +1311,9 @@
 		]
 	],
 	"1.10.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"img, input[type=\"image\"]",
@@ -1215,7 +1347,9 @@
 		]
 	],
 	"1.10.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"object[type^=\"image\"]",
@@ -1246,7 +1380,9 @@
 		]
 	],
 	"1.10.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"embed",
@@ -1281,7 +1417,9 @@
 		]
 	],
 	"1.10.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"svg",
@@ -1324,7 +1462,9 @@
 		]
 	],
 	"1.10.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"canvas",
@@ -1357,7 +1497,9 @@
 		]
 	],
 	"2.1.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"iframe"
@@ -1371,7 +1513,9 @@
 		]
 	],
 	"2.2.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"iframe",
@@ -1390,7 +1534,9 @@
 	"3.1.1": [],
 	"3.1.2": [],
 	"3.1.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
@@ -1401,7 +1547,9 @@
 	],
 	"3.1.4": [],
 	"3.1.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, svg, canvas, iframe",
@@ -1411,7 +1559,9 @@
 		]
 	],
 	"3.1.6": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, embed, svg, canvas, iframe",
@@ -1423,7 +1573,9 @@
 	"3.2.1": [],
 	"3.2.2": [],
 	"3.2.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
@@ -1434,7 +1586,9 @@
 	],
 	"3.2.4": [],
 	"3.2.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, svg, canvas, iframe",
@@ -1444,7 +1598,9 @@
 		]
 	],
 	"3.2.6": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, embed, svg, canvas, iframe",
@@ -1574,7 +1730,9 @@
 		]
 	],
 	"4.1.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, audio, video, embed, iframe",
@@ -1584,7 +1742,9 @@
 		]
 	],
 	"4.1.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1594,7 +1754,9 @@
 		]
 	],
 	"4.1.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1604,7 +1766,9 @@
 		]
 	],
 	"4.2.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, audio, video, embed, iframe",
@@ -1614,7 +1778,9 @@
 		]
 	],
 	"4.2.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1624,7 +1790,9 @@
 		]
 	],
 	"4.2.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1634,7 +1802,9 @@
 		]
 	],
 	"4.3.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1644,7 +1814,9 @@
 		]
 	],
 	"4.3.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"video, embed, iframe",
@@ -1665,7 +1837,9 @@
 		]
 	],
 	"4.4.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1675,7 +1849,9 @@
 		]
 	],
 	"4.5.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, audio, video, embed, iframe",
@@ -1685,7 +1861,9 @@
 		]
 	],
 	"4.5.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1695,7 +1873,9 @@
 		]
 	],
 	"4.6.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, audio, video, embed, iframe",
@@ -1705,7 +1885,9 @@
 		]
 	],
 	"4.6.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1715,7 +1897,9 @@
 		]
 	],
 	"4.7.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1725,7 +1909,9 @@
 		]
 	],
 	"4.7.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1735,7 +1921,9 @@
 		]
 	],
 	"4.8.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1745,7 +1933,9 @@
 		]
 	],
 	"4.8.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1755,7 +1945,9 @@
 		]
 	],
 	"4.9.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, audio, video, embed, iframe",
@@ -1765,7 +1957,9 @@
 		]
 	],
 	"4.9.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1775,7 +1969,9 @@
 		]
 	],
 	"4.10.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, audio, video, embed, iframe",
@@ -1785,7 +1981,9 @@
 		]
 	],
 	"4.10.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1795,7 +1993,9 @@
 		]
 	],
 	"4.11.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1805,7 +2005,9 @@
 		]
 	],
 	"4.11.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1815,7 +2017,9 @@
 		]
 	],
 	"4.12.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1825,7 +2029,9 @@
 		]
 	],
 	"4.12.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1835,7 +2041,9 @@
 		]
 	],
 	"4.13.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1845,7 +2053,9 @@
 		]
 	],
 	"4.13.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1855,7 +2065,9 @@
 		]
 	],
 	"4.14.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1865,7 +2077,9 @@
 		]
 	],
 	"4.14.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, embed, iframe",
@@ -1875,7 +2089,9 @@
 		]
 	],
 	"4.15.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, audio, embed, iframe",
@@ -1885,7 +2101,9 @@
 		]
 	],
 	"4.15.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, video, audio, embed, iframe",
@@ -1895,7 +2113,9 @@
 		]
 	],
 	"4.16.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, svg, canvas, embed, iframe",
@@ -1905,7 +2125,9 @@
 		]
 	],
 	"4.16.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, svg, canvas, embed, iframe",
@@ -1915,7 +2137,9 @@
 		]
 	],
 	"4.17.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, svg, canvas, embed, iframe",
@@ -1925,7 +2149,9 @@
 		]
 	],
 	"4.18.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"audio, video, object, embed, bgsound, iframe",
@@ -1935,7 +2161,9 @@
 		]
 	],
 	"4.19.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"audio, video, object, embed, bgsound, iframe",
@@ -1945,7 +2173,9 @@
 		]
 	],
 	"4.20.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"audio, video, object, embed, iframe",
@@ -1955,7 +2185,9 @@
 		]
 	],
 	"4.20.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"audio, video, object, embed, iframe",
@@ -1965,7 +2197,9 @@
 		]
 	],
 	"4.20.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"audio, video, object, embed, iframe",
@@ -1975,7 +2209,9 @@
 		]
 	],
 	"4.21.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, svg, canvas, embed, iframe",
@@ -1996,7 +2232,9 @@
 		]
 	],
 	"4.21.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, svg, canvas, embed, iframe",
@@ -2017,7 +2255,9 @@
 		]
 	],
 	"4.22.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed, object, iframe",
@@ -2027,7 +2267,9 @@
 		]
 	],
 	"4.22.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"embed, object, iframe",
@@ -2037,7 +2279,9 @@
 		]
 	],
 	"5.1.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table",
@@ -2073,7 +2317,9 @@
 		]
 	],
 	"5.2.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table",
@@ -2109,7 +2355,9 @@
 		]
 	],
 	"5.3.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"style",
 			"Linéarise les tableaux",
@@ -2131,7 +2379,9 @@
 		]
 	],
 	"5.4.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table",
@@ -2168,7 +2418,9 @@
 		]
 	],
 	"5.5.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table",
@@ -2205,7 +2457,9 @@
 		]
 	],
 	"5.6.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table"
@@ -2226,7 +2480,9 @@
 		]
 	],
 	"5.6.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table"
@@ -2247,7 +2503,9 @@
 		]
 	],
 	"5.7.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table th"
@@ -2272,7 +2530,9 @@
 		]
 	],
 	"5.7.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table th[scope]"
@@ -2293,7 +2553,9 @@
 		]
 	],
 	"5.7.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table th"
@@ -2318,7 +2580,9 @@
 		]
 	],
 	"5.7.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table th",
@@ -2353,7 +2617,9 @@
 		]
 	],
 	"5.8.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"table",
@@ -2413,7 +2679,9 @@
 		]
 	],
 	"6.1.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link']",
@@ -2430,7 +2698,9 @@
 		]
 	],
 	"6.1.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
@@ -2481,7 +2751,9 @@
 		]
 	],
 	"6.1.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
@@ -2532,7 +2804,9 @@
 		]
 	],
 	"6.2.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a[title]:not([role]), [role='link'][title]"
@@ -2546,7 +2820,9 @@
 		]
 	],
 	"6.2.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
@@ -2597,7 +2873,9 @@
 		]
 	],
 	"6.2.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
@@ -2648,7 +2926,9 @@
 		]
 	],
 	"6.3.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link']"
@@ -2662,7 +2942,9 @@
 		]
 	],
 	"6.3.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link'], img[usemap]"
@@ -2711,7 +2993,9 @@
 		]
 	],
 	"6.3.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link'], img[usemap]"
@@ -2760,7 +3044,9 @@
 		]
 	],
 	"6.4.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link']"
@@ -2774,7 +3060,9 @@
 		]
 	],
 	"6.4.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link'], img[usemap]"
@@ -2823,7 +3111,9 @@
 		]
 	],
 	"6.4.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link'], img[usemap]"
@@ -2872,7 +3162,9 @@
 		]
 	],
 	"6.5.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a:not([role]), [role='link']"
@@ -2916,7 +3208,9 @@
 			"Validateur W3C",
 			"https://validator.w3.org/check?uri=:url"
 		],
-		"validateLocalPage"
+		{
+			"helper": "validateLocalPage"
+		}
 	],
 	"7.1.5": [
 		[
@@ -2946,7 +3240,9 @@
 		]
 	],
 	"8.1.1": [
-		"viewSource"
+		{
+			"helper": "viewSource"
+		}
 	],
 	"8.1.2": [
 		[
@@ -2954,10 +3250,14 @@
 			"Validateur W3C",
 			"https://validator.w3.org/check?uri=:url"
 		],
-		"validateLocalPage"
+		{
+			"helper": "validateLocalPage"
+		}
 	],
 	"8.1.3": [
-		"viewSource"
+		{
+			"helper": "viewSource"
+		}
 	],
 	"8.2.1": [
 		[
@@ -2965,7 +3265,9 @@
 			"Validateur W3C",
 			"https://validator.w3.org/check?uri=:url"
 		],
-		"validateLocalPage"
+		{
+			"helper": "validateLocalPage"
+		}
 	],
 	"8.2.2": [
 		[
@@ -2973,10 +3275,14 @@
 			"Validateur W3C",
 			"https://validator.w3.org/check?uri=:url"
 		],
-		"validateLocalPage"
+		{
+			"helper": "validateLocalPage"
+		}
 	],
 	"8.3.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"[lang], [xml\\:lang]",
@@ -2987,7 +3293,9 @@
 		]
 	],
 	"8.4.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"[lang], [xml\\:lang]",
@@ -3017,7 +3325,9 @@
 		]
 	],
 	"8.7.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"[lang], [xml\\:lang]",
@@ -3028,7 +3338,9 @@
 		]
 	],
 	"8.8.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"[lang], [xml\\:lang]",
@@ -3039,7 +3351,9 @@
 		]
 	],
 	"8.8.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"[lang], [xml\\:lang]",
@@ -3050,7 +3364,9 @@
 		]
 	],
 	"8.9.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"h1, h2, h3, h4, h5, h6, p, p:empty, li, blockquote",
@@ -3067,7 +3383,9 @@
 		]
 	],
 	"8.10.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showAttributes",
 			"[dir]",
@@ -3077,7 +3395,9 @@
 		]
 	],
 	"8.10.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showAttributes",
 			"[dir]",
@@ -3087,14 +3407,18 @@
 		]
 	],
 	"9.1.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"h1, [role='heading'][aria-level='1']"
 		]
 	],
 	"9.1.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
@@ -3109,10 +3433,14 @@
 				"aria-level"
 			]
 		],
-		"headingsHierarchy"
+		{
+			"helper": "headingsHierarchy"
+		}
 	],
 	"9.1.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
@@ -3129,7 +3457,9 @@
 		]
 	],
 	"9.1.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
@@ -3146,7 +3476,9 @@
 		]
 	],
 	"9.2.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"header, nav, main, footer",
@@ -3157,7 +3489,9 @@
 	],
 	"9.2.2": [],
 	"9.3.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"ul, ul li",
@@ -3178,7 +3512,9 @@
 		]
 	],
 	"9.3.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"ol, ol li",
@@ -3199,7 +3535,9 @@
 		]
 	],
 	"9.3.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"dl,dt,dd",
@@ -3209,7 +3547,9 @@
 		]
 	],
 	"9.4.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"abbr"
@@ -3223,7 +3563,9 @@
 		]
 	],
 	"9.5.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"abbr"
@@ -3237,7 +3579,9 @@
 		]
 	],
 	"9.6.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"q",
@@ -3247,7 +3591,9 @@
 		]
 	],
 	"9.6.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"blockquote",
@@ -3257,7 +3603,9 @@
 		]
 	],
 	"10.1.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"basefont, blink, center, font, marquee, s, strike, tt, u, bing, small",
@@ -3267,7 +3615,9 @@
 		]
 	],
 	"10.1.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showElement",
 			"[align],[alink], [background], [bgcolor], [border], [cellpading], [cellspacing], [char], [charoff], [clear], [compact], [color], [frameborder], [hspace], [link], [marginheight], [marginwidth], [text], [valign], [vlink], [vspace], [size], [width], [height]",
@@ -3300,13 +3650,19 @@
 		]
 	],
 	"10.1.3": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"10.2.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"10.3.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"10.4.1": [],
 	"10.4.2": [],
@@ -3371,7 +3727,9 @@
 	"10.12.1": [],
 	"10.12.2": [],
 	"10.13.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"[hidden], [aria-hidden]"
@@ -3387,7 +3745,9 @@
 	],
 	"10.14.1": [],
 	"10.14.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, object, video, embed, svg, canvas, iframe",
@@ -3397,7 +3757,9 @@
 		]
 	],
 	"10.14.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, object, video, embed, svg, canvas, iframe",
@@ -3407,7 +3769,9 @@
 		]
 	],
 	"10.14.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, object, video, embed, svg, canvas, iframe",
@@ -3418,7 +3782,9 @@
 	],
 	"10.15.1": [],
 	"10.15.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, object, video, embed, svg, canvas, iframe",
@@ -3428,7 +3794,9 @@
 		]
 	],
 	"10.15.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, object, video, embed, svg, canvas, iframe",
@@ -3438,7 +3806,9 @@
 		]
 	],
 	"10.15.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, object, video, embed, svg, canvas, iframe",
@@ -3448,7 +3818,9 @@
 		]
 	],
 	"11.1.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
@@ -3481,7 +3853,9 @@
 		]
 	],
 	"11.1.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
@@ -3505,7 +3879,9 @@
 		]
 	],
 	"11.1.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
@@ -3526,7 +3902,9 @@
 		]
 	],
 	"11.1.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
@@ -3540,7 +3918,9 @@
 		]
 	],
 	"11.1.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
@@ -3555,7 +3935,9 @@
 		]
 	],
 	"11.2.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
@@ -3579,7 +3961,9 @@
 		]
 	],
 	"11.2.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
@@ -3593,7 +3977,9 @@
 		]
 	],
 	"11.2.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
@@ -3607,7 +3993,9 @@
 		]
 	],
 	"11.2.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
@@ -3621,7 +4009,9 @@
 		]
 	],
 	"11.3.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -3644,7 +4034,9 @@
 		]
 	],
 	"11.3.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -3668,7 +4060,9 @@
 	],
 	"11.4.1": [],
 	"11.5.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"fieldset, legend",
@@ -3682,7 +4076,9 @@
 		]
 	],
 	"11.6.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"fieldset, legend",
@@ -3692,7 +4088,9 @@
 		]
 	],
 	"11.7.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"fieldset, legend",
@@ -3702,7 +4100,9 @@
 		]
 	],
 	"11.8.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"select"
@@ -3726,7 +4126,9 @@
 		]
 	],
 	"11.8.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"select:has(optgroup)"
@@ -3752,7 +4154,9 @@
 		]
 	],
 	"11.8.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"select:has(optgroup)"
@@ -3775,7 +4179,9 @@
 		]
 	],
 	"11.9.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"button, [type='submit'], [type='reset'], [type='image'], [type='button']"
@@ -3807,7 +4213,9 @@
 		]
 	],
 	"11.9.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]"
@@ -3828,7 +4236,9 @@
 		]
 	],
 	"11.10.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -3861,7 +4271,9 @@
 		]
 	],
 	"11.10.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -3894,7 +4306,9 @@
 		]
 	],
 	"11.10.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
@@ -3918,7 +4332,9 @@
 		]
 	],
 	"11.10.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -3951,7 +4367,9 @@
 		]
 	],
 	"11.10.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -3982,7 +4400,9 @@
 		]
 	],
 	"11.10.6": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
@@ -3998,7 +4418,9 @@
 		]
 	],
 	"11.10.7": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -4038,7 +4460,9 @@
 		]
 	],
 	"11.10.8": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -4077,7 +4501,9 @@
 		]
 	],
 	"11.10.9": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
@@ -4093,7 +4519,9 @@
 		]
 	],
 	"11.10.10": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
@@ -4114,7 +4542,9 @@
 	"11.13.1": [],
 	"11.13.2": [],
 	"11.14.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -4139,7 +4569,9 @@
 		]
 	],
 	"11.14.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -4167,7 +4599,9 @@
 		]
 	],
 	"11.14.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -4189,7 +4623,9 @@
 		]
 	],
 	"11.14.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -4213,7 +4649,9 @@
 		]
 	],
 	"11.14.5": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -4234,7 +4672,9 @@
 		]
 	],
 	"11.14.6": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -4256,7 +4696,9 @@
 		]
 	],
 	"11.15.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"label",
@@ -4276,13 +4718,19 @@
 		]
 	],
 	"12.1.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.2.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.2.2": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.4.2": [
 		[
@@ -4292,16 +4740,24 @@
 		]
 	],
 	"12.5.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.5.3": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.6.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.6.3": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.10.1": [],
 	"12.10.2": [],
@@ -4324,7 +4780,9 @@
 		]
 	],
 	"12.11.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a[href^='#']"
@@ -4341,7 +4799,9 @@
 		]
 	],
 	"12.11.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a[href^='#']"
@@ -4358,7 +4818,9 @@
 		]
 	],
 	"12.11.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a[href^='#']"
@@ -4375,7 +4837,9 @@
 		]
 	],
 	"12.11.4": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a[href^='#']"
@@ -4442,7 +4906,9 @@
 	"13.1.3": [],
 	"13.1.4": [],
 	"13.2.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"a[target]:not([target='_self'], [target='_top'], [target='_parent'])"
@@ -4457,7 +4923,9 @@
 		]
 	],
 	"13.2.2": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"object, embed",
@@ -4474,7 +4942,9 @@
 		]
 	],
 	"13.2.3": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"input,select,textarea,button"
@@ -4496,7 +4966,9 @@
 	"13.7.1": [],
 	"13.8.1": [],
 	"13.9.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"dfn,dl,dt,dd",
@@ -4506,7 +4978,9 @@
 		]
 	],
 	"13.10.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"dfn,dl,dt,dd",
@@ -4516,7 +4990,9 @@
 		]
 	],
 	"13.11.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showAttributes",
 			"*",
@@ -4526,7 +5002,9 @@
 		]
 	],
 	"13.12.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"showAttributes",
 			"*",
@@ -4536,13 +5014,19 @@
 		]
 	],
 	"13.13.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"13.14.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"13.15.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, svg, canvas, embed, object",
@@ -4554,7 +5038,9 @@
 	"13.15.2": [],
 	"13.15.3": [],
 	"13.16.1": [
-		"disableAllStyles",
+		{
+			"helper": "disableAllStyles"
+		},
 		[
 			"outline",
 			"img, svg, canvas, embed, object",
