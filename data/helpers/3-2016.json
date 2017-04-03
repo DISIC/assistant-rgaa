@@ -3,10 +3,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img"
-		],
+		{
+			"helper": "outline",
+			"selector": "img"
+		},
 		[
 			"showAttributes",
 			"img",
@@ -22,13 +22,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"map",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "map",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"map",
@@ -45,13 +43,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"input[type=\"image\"]",
@@ -67,10 +63,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img[ismap]"
-		],
+		{
+			"helper": "outline",
+			"selector": "img[ismap]"
+		},
 		[
 			"showAttributes",
 			"a:has(img[ismap])",
@@ -83,10 +79,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img"
-		],
+		{
+			"helper": "outline",
+			"selector": "img"
+		},
 		[
 			"showAttributes",
 			"img",
@@ -104,13 +100,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"map",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "map",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"map",
@@ -139,10 +133,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object[type^=\"image\"]"
-		],
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]"
+		},
 		[
 			"showAttributes",
 			"object[type^=\"image\"]",
@@ -178,10 +172,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"svg"
-		],
+		{
+			"helper": "outline",
+			"selector": "svg"
+		},
 		[
 			"showElement",
 			"svg",
@@ -213,10 +207,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas"
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
 		[
 			"showElement",
 			"canvas",
@@ -245,10 +239,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed"
-		],
+		{
+			"helper": "outline",
+			"selector": "embed"
+		},
 		[
 			"showAttributes",
 			"embed",
@@ -274,10 +268,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img:not(a img, button img)"
-		],
+		{
+			"helper": "outline",
+			"selector": "img:not(a img, button img)"
+		},
 		[
 			"showAttributes",
 			"img:not(a img, button img)",
@@ -293,10 +287,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"map"
-		],
+		{
+			"helper": "outline",
+			"selector": "map"
+		},
 		[
 			"showChildElements",
 			"map",
@@ -316,10 +310,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[type=\"image\"][alt]"
-		],
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"][alt]"
+		},
 		[
 			"showAttributes",
 			"input[type=\"image\"][alt]",
@@ -335,22 +329,20 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.3.5": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
-		],
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
+		},
 		[
 			"showAttributes",
 			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
@@ -365,22 +357,20 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.3.7": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
-		],
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
+		},
 		[
 			"showAttributes",
 			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
@@ -395,13 +385,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"svg",
@@ -425,13 +413,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"svg:has(desc)",
@@ -446,10 +432,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas"
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
 		[
 			"showElement",
 			"canvas:not(:empty), canvas[title], canvas[aria-label], canvas[aria-labelledby]",
@@ -467,10 +453,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas[title], canvas[aria-label], canvas[aria-labelledby]"
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas[title], canvas[aria-label], canvas[aria-labelledby]"
+		},
 		[
 			"showAttributes",
 			"canvas[title], canvas[aria-label], canvas[aria-labelledby]",
@@ -485,10 +471,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas"
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
 		[
 			"showElement",
 			"canvas",
@@ -502,13 +488,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a, img, map, svg, input[type=\"image\"][alt], object[type^=\"image\"], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby], embed[type^=\"image\"], embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "a, img, map, svg, input[type=\"image\"][alt], object[type^=\"image\"], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby], embed[type^=\"image\"], embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"img, input[type=\"image\"][alt]",
@@ -581,10 +565,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img[alt]"
-		],
+		{
+			"helper": "outline",
+			"selector": "img[alt]"
+		},
 		[
 			"showAttributes",
 			"img[alt]",
@@ -600,13 +584,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"map",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "map",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"map",
@@ -626,10 +608,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[type=\"image\"][alt]"
-		],
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"][alt]"
+		},
 		[
 			"showAttributes",
 			"input[type=\"image\"][alt]",
@@ -645,19 +627,19 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object[type^=\"image\"]"
-		]
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]"
+		}
 	],
 	"1.4.5": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
-		],
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
+		},
 		[
 			"showAttributes",
 			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
@@ -672,19 +654,19 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed[type^=\"image\"]"
-		]
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]"
+		}
 	],
 	"1.4.7": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
-		],
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
+		},
 		[
 			"showAttributes",
 			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
@@ -699,13 +681,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"svg",
@@ -729,13 +709,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"svg",
@@ -750,10 +728,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas"
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
 		[
 			"showElement",
 			"canvas",
@@ -767,10 +745,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas[title], canvas[aria-label], canvas[aria-labelledby]"
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas[title], canvas[aria-label], canvas[aria-labelledby]"
+		},
 		[
 			"showAttributes",
 			"canvas[title], canvas[aria-label], canvas[aria-labelledby]",
@@ -785,10 +763,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas"
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
 		[
 			"showElement",
 			"canvas",
@@ -802,37 +780,31 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, area, object, embed, svg, canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, area, object, embed, svg, canvas",
+			"showTag": true
+		}
 	],
 	"1.5.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.6.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "img",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"img",
@@ -849,37 +821,31 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.6.3": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.6.4": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"input[type=\"image\"]",
@@ -896,13 +862,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[type=\"image\"][aria-describedby]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"][aria-describedby]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"input[type=\"image\"][aria-describedby]",
@@ -916,13 +880,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"svg",
@@ -944,13 +906,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"svg:has(desc), svg[aria-label]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "svg:has(desc), svg[aria-label]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"svg[aria-label]",
@@ -972,13 +932,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		},
 		[
 			"showElement",
 			"canvas",
@@ -992,13 +950,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		},
 		[
 			"showElement",
 			"canvas",
@@ -1012,13 +968,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
@@ -1031,13 +985,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "img",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"img",
@@ -1051,13 +1003,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"input[type=\"image\"]",
@@ -1072,13 +1022,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"object[type^=\"image\"][longdesc], object[type^=\"image\"][alt]",
@@ -1092,13 +1040,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"embed[type^=\"image\"][longdesc], embed[type^=\"image\"][alt]",
@@ -1112,13 +1058,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"svg:has(desc)",
@@ -1133,13 +1077,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"svg:has(desc)",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "svg:has(desc)",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"svg:has(desc)",
@@ -1154,13 +1096,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		},
 		[
 			"showElement",
 			"canvas",
@@ -1174,13 +1114,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		},
 		[
 			"showElement",
 			"canvas",
@@ -1194,121 +1132,101 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img",
+			"showTag": true
+		}
 	],
 	"1.8.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.8.3": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.8.4": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.8.5": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		}
 	],
 	"1.9.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img",
+			"showTag": true
+		}
 	],
 	"1.9.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.9.3": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.9.4": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.9.5": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		}
 	],
 	"1.10.1": [
 		{
@@ -1324,10 +1242,10 @@
 				"showMissingAttributes": true
 			}
 		],
-		[
-			"outline",
-			"figure"
-		],
+		{
+			"helper": "outline",
+			"selector": "figure"
+		},
 		[
 			"showElement",
 			"figure",
@@ -1338,13 +1256,11 @@
 				"showMissingAttributes": true
 			}
 		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"1.10.2": [
 		{
@@ -1357,10 +1273,10 @@
 				"type"
 			]
 		],
-		[
-			"outline",
-			"figure"
-		],
+		{
+			"helper": "outline",
+			"selector": "figure"
+		},
 		[
 			"showElement",
 			"figure",
@@ -1371,13 +1287,11 @@
 				"showMissingAttributes": true
 			}
 		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"1.10.3": [
 		{
@@ -1394,10 +1308,10 @@
 				"showEmpty": true
 			}
 		],
-		[
-			"outline",
-			"figure, embed"
-		],
+		{
+			"helper": "outline",
+			"selector": "figure, embed"
+		},
 		[
 			"showElement",
 			"figure",
@@ -1408,13 +1322,11 @@
 				"showMissingAttributes": true
 			}
 		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"1.10.4": [
 		{
@@ -1439,10 +1351,10 @@
 				"showContent": true
 			}
 		],
-		[
-			"outline",
-			"figure"
-		],
+		{
+			"helper": "outline",
+			"selector": "figure"
+		},
 		[
 			"showElement",
 			"figure",
@@ -1453,13 +1365,11 @@
 				"showMissingAttributes": true
 			}
 		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"1.10.5": [
 		{
@@ -1474,10 +1384,10 @@
 				"showEmpty": true
 			}
 		],
-		[
-			"outline",
-			"figure"
-		],
+		{
+			"helper": "outline",
+			"selector": "figure"
+		},
 		[
 			"showElement",
 			"figure",
@@ -1488,22 +1398,20 @@
 				"showMissingAttributes": true
 			}
 		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"2.1.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"iframe"
-		],
+		{
+			"helper": "outline",
+			"selector": "iframe"
+		},
 		[
 			"showAttributes",
 			"iframe",
@@ -1516,13 +1424,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"iframe",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "iframe",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"iframe",
@@ -1537,38 +1443,32 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"3.1.4": [],
 	"3.1.5": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"3.1.6": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"3.2.1": [],
 	"3.2.2": [],
@@ -1576,38 +1476,32 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"3.2.4": [],
 	"3.2.5": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"3.2.6": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"3.3.1": [
 		[
@@ -1733,97 +1627,81 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.1.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.1.3": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.2.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.2.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.2.3": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.3.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.3.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"video, embed, iframe",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "video, embed, iframe",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"video",
@@ -1840,385 +1718,321 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.5.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.5.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.6.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.6.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.7.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.7.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.8.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.8.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.9.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.9.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.10.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.10.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.11.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.11.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.12.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.12.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.13.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.13.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.14.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.14.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.15.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, audio, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, audio, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.15.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, video, audio, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, video, audio, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.16.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.16.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.17.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.18.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"audio, video, object, embed, bgsound, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, bgsound, iframe",
+			"showTag": true
+		}
 	],
 	"4.19.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"audio, video, object, embed, bgsound, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, bgsound, iframe",
+			"showTag": true
+		}
 	],
 	"4.20.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"audio, video, object, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.20.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"audio, video, object, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.20.3": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"audio, video, object, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.21.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"object",
@@ -2235,13 +2049,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"object",
@@ -2258,37 +2070,31 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed, object, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "embed, object, iframe",
+			"showTag": true
+		}
 	],
 	"4.22.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"embed, object, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "embed, object, iframe",
+			"showTag": true
+		}
 	],
 	"5.1.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"table",
@@ -2320,13 +2126,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"table",
@@ -2363,10 +2167,10 @@
 			"Linéarise les tableaux",
 			"table, tr, th, td { display: block; }"
 		],
-		[
-			"outline",
-			"td"
-		],
+		{
+			"helper": "outline",
+			"selector": "td"
+		},
 		[
 			"showElement",
 			"table",
@@ -2382,13 +2186,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"table",
@@ -2421,13 +2223,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"table",
@@ -2460,17 +2260,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"table th",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "table"
+		},
+		{
+			"helper": "outline",
+			"selector": "table th",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"table",
@@ -2483,17 +2281,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"table th",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "table"
+		},
+		{
+			"helper": "outline",
+			"selector": "table th",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"table",
@@ -2506,10 +2302,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table th"
-		],
+		{
+			"helper": "outline",
+			"selector": "table th"
+		},
 		[
 			"showElement",
 			"table th",
@@ -2533,10 +2329,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table th[scope]"
-		],
+		{
+			"helper": "outline",
+			"selector": "table th[scope]"
+		},
 		[
 			"showAttributes",
 			"table th",
@@ -2556,10 +2352,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table th"
-		],
+		{
+			"helper": "outline",
+			"selector": "table th"
+		},
 		[
 			"showElement",
 			"table th",
@@ -2583,20 +2379,16 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table th",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"table td",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "table th",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "table td",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"table th, table td",
@@ -2620,13 +2412,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
 		[
 			"showChildElements",
 			"table",
@@ -2663,10 +2453,10 @@
 				"showContent": true
 			}
 		],
-		[
-			"outline",
-			"td[scope], td[headers], td[colgroup], td[axis]"
-		],
+		{
+			"helper": "outline",
+			"selector": "td[scope], td[headers], td[colgroup], td[axis]"
+		},
 		[
 			"showElement",
 			"td[scope], td[headers], td[colgroup], td[axis]",
@@ -2682,13 +2472,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link']",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link']",
+			"showTag": true
+		},
 		[
 			"showElement",
 			"a:not([role]), [role='link']",
@@ -2701,10 +2489,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
+		},
 		[
 			"showElement",
 			"a:not([role]), [role='link']",
@@ -2754,10 +2542,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
+		},
 		[
 			"showElement",
 			"a:not([role]), [role='link']",
@@ -2807,10 +2595,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a[title]:not([role]), [role='link'][title]"
-		],
+		{
+			"helper": "outline",
+			"selector": "a[title]:not([role]), [role='link'][title]"
+		},
 		[
 			"showElement",
 			"a[title]:not([role]), [role='link'][title]",
@@ -2823,10 +2611,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
-		],
+		{
+			"helper": "outline",
+			"selector": "a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
+		},
 		[
 			"showElement",
 			"a[title]:not([role]), [role='link'][title]",
@@ -2876,10 +2664,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
-		],
+		{
+			"helper": "outline",
+			"selector": "a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
+		},
 		[
 			"showElement",
 			"a[title]:not([role]), [role='link'][title]",
@@ -2929,10 +2717,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link']"
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link']"
+		},
 		[
 			"showElement",
 			"a:not([role]), [role='link']",
@@ -2945,10 +2733,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap]"
+		},
 		[
 			"showElement",
 			"a:not([role]), [role='link']",
@@ -2996,10 +2784,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap]"
+		},
 		[
 			"showElement",
 			"a:not([role]), [role='link']",
@@ -3047,10 +2835,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link']"
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link']"
+		},
 		[
 			"showElement",
 			"a:not([role]), [role='link']",
@@ -3063,10 +2851,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap]"
+		},
 		[
 			"showElement",
 			"a:not([role]), [role='link']",
@@ -3114,10 +2902,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap]"
+		},
 		[
 			"showElement",
 			"a:not([role]), [role='link']",
@@ -3165,10 +2953,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a:not([role]), [role='link']"
-		],
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link']"
+		},
 		[
 			"showElement",
 			"a:not([role]) img, [role='link'] img, area[href]",
@@ -3306,13 +3094,11 @@
 		]
 	],
 	"8.5.1": [
-		[
-			"outline",
-			"title",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "title",
+			"showTag": true
+		}
 	],
 	"8.6.1": [
 		[
@@ -3367,13 +3153,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"h1, h2, h3, h4, h5, h6, p, p:empty, li, blockquote",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "h1, h2, h3, h4, h5, h6, p, p:empty, li, blockquote",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"[role='presentation']",
@@ -3410,22 +3194,20 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"h1, [role='heading'][aria-level='1']"
-		]
+		{
+			"helper": "outline",
+			"selector": "h1, [role='heading'][aria-level='1']"
+		}
 	],
 	"9.1.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"[role='heading'][aria-level]",
@@ -3441,13 +3223,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"[role='heading'][aria-level]",
@@ -3460,13 +3240,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"[role='heading'][aria-level]",
@@ -3479,30 +3257,26 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"header, nav, main, footer",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "header, nav, main, footer",
+			"showTag": true
+		}
 	],
 	"9.2.2": [],
 	"9.3.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"ul, ul li",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"[role='list'], [role='list'] [role='listitem']"
-		],
+		{
+			"helper": "outline",
+			"selector": "ul, ul li",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "[role='list'], [role='list'] [role='listitem']"
+		},
 		[
 			"showAttributes",
 			"[role='list'], [role='list'] [role='listitem']",
@@ -3515,17 +3289,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"ol, ol li",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"[role='list'], [role='list'] [role='listitem']"
-		],
+		{
+			"helper": "outline",
+			"selector": "ol, ol li",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "[role='list'], [role='list'] [role='listitem']"
+		},
 		[
 			"showAttributes",
 			"[role='list'], [role='list'] [role='listitem']",
@@ -3538,22 +3310,20 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"dl,dt,dd",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "dl,dt,dd",
+			"showTag": true
+		}
 	],
 	"9.4.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"abbr"
-		],
+		{
+			"helper": "outline",
+			"selector": "abbr"
+		},
 		[
 			"showAttributes",
 			"abbr, a",
@@ -3566,10 +3336,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"abbr"
-		],
+		{
+			"helper": "outline",
+			"selector": "abbr"
+		},
 		[
 			"showAttributes",
 			"abbr, a",
@@ -3582,37 +3352,31 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"q",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "q",
+			"showTag": true
+		}
 	],
 	"9.6.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"blockquote",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "blockquote",
+			"showTag": true
+		}
 	],
 	"10.1.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"basefont, blink, center, font, marquee, s, strike, tt, u, bing, small",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "basefont, blink, center, font, marquee, s, strike, tt, u, bing, small",
+			"showTag": true
+		}
 	],
 	"10.1.2": [
 		{
@@ -3677,13 +3441,11 @@
 		]
 	],
 	"10.6.1": [
-		[
-			"outline",
-			"a[href]",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "a[href]",
+			"showTag": true
+		},
 		[
 			"colorContrast",
 			"Couleur de lien",
@@ -3696,30 +3458,26 @@
 	"10.7.1": [],
 	"10.7.2": [],
 	"10.7.3": [
-		[
-			"outline",
-			"a"
-		]
+		{
+			"helper": "outline",
+			"selector": "a"
+		}
 	],
 	"10.8.1": [],
 	"10.8.2": [],
 	"10.8.3": [
-		[
-			"outline",
-			"object, embed, svg, canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas",
+			"showTag": true
+		}
 	],
 	"10.8.4": [
-		[
-			"outline",
-			"object, embed, svg, canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas",
+			"showTag": true
+		}
 	],
 	"10.9.1": [],
 	"10.10.1": [],
@@ -3730,10 +3488,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"[hidden], [aria-hidden]"
-		],
+		{
+			"helper": "outline",
+			"selector": "[hidden], [aria-hidden]"
+		},
 		[
 			"showAttributes",
 			"[hidden], [aria-hidden]",
@@ -3748,83 +3506,71 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.14.3": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.14.4": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.15.1": [],
 	"10.15.2": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.15.3": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.15.4": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"11.1.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
@@ -3856,10 +3602,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
@@ -3882,10 +3628,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
-		],
+		{
+			"helper": "outline",
+			"selector": "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
+		},
 		[
 			"showAttributes",
 			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
@@ -3905,10 +3651,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
-		],
+		{
+			"helper": "outline",
+			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
+		},
 		[
 			"showAttributes",
 			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
@@ -3921,10 +3667,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
-		],
+		{
+			"helper": "outline",
+			"selector": "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
+		},
 		[
 			"showElement",
 			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
@@ -3938,10 +3684,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
@@ -3964,10 +3710,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
-		],
+		{
+			"helper": "outline",
+			"selector": "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
+		},
 		[
 			"showElement",
 			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
@@ -3980,10 +3726,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
-		],
+		{
+			"helper": "outline",
+			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
+		},
 		[
 			"showAttributes",
 			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
@@ -3996,10 +3742,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
-		],
+		{
+			"helper": "outline",
+			"selector": "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
+		},
 		[
 			"showElement",
 			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
@@ -4012,17 +3758,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
@@ -4037,17 +3781,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
@@ -4063,50 +3805,44 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"fieldset, legend",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		]
+		{
+			"helper": "outline",
+			"selector": "fieldset, legend",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		}
 	],
 	"11.6.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"fieldset, legend",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "fieldset, legend",
+			"showTag": true
+		}
 	],
 	"11.7.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"fieldset, legend",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "fieldset, legend",
+			"showTag": true
+		}
 	],
 	"11.8.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"select"
-		],
+		{
+			"helper": "outline",
+			"selector": "select"
+		},
 		[
 			"showElement",
 			"select",
@@ -4129,10 +3865,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"select:has(optgroup)"
-		],
+		{
+			"helper": "outline",
+			"selector": "select:has(optgroup)"
+		},
 		[
 			"showElement",
 			"select:has(optgroup)",
@@ -4157,10 +3893,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"select:has(optgroup)"
-		],
+		{
+			"helper": "outline",
+			"selector": "select:has(optgroup)"
+		},
 		[
 			"showElement",
 			"select:has(optgroup)",
@@ -4182,10 +3918,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"button, [type='submit'], [type='reset'], [type='image'], [type='button']"
-		],
+		{
+			"helper": "outline",
+			"selector": "button, [type='submit'], [type='reset'], [type='image'], [type='button']"
+		},
 		[
 			"showElement",
 			"button, [type='submit'], [type='reset'], [type='image'], [type='button']",
@@ -4216,10 +3952,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]"
-		],
+		{
+			"helper": "outline",
+			"selector": "form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]"
+		},
 		[
 			"showElement",
 			"form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]",
@@ -4239,17 +3975,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[required], [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
@@ -4274,17 +4008,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[required], [aria-label], [aria-labelledby], [aria-describedby], [id], input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
@@ -4309,10 +4041,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[required], [aria-labelledby], [aria-describedby], [id]",
@@ -4335,17 +4067,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter, [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
@@ -4370,17 +4100,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[aria-label], [aria-labelledby], [aria-describedby], [id]",
@@ -4403,10 +4131,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[aria-labelledby], [aria-describedby], [id]",
@@ -4421,17 +4149,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[required], [title], [aria-label], [aria-labelledby], [aria-describedby], [id]",
@@ -4463,17 +4189,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[aria-label], [aria-labelledby], [aria-describedby], [id]",
@@ -4504,10 +4228,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[aria-labelledby], [aria-describedby], [id]",
@@ -4522,10 +4246,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
-		],
+		{
+			"helper": "outline",
+			"selector": "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
+		},
 		[
 			"showElement",
 			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
@@ -4545,17 +4269,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[title], [aria-label], [aria-describedby], [aria-labelledby], [id]",
@@ -4572,17 +4294,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[aria-label]",
@@ -4602,17 +4322,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[aria-describedby], [id]",
@@ -4626,17 +4344,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[title], [aria-label], [aria-labelledby], [aria-describedby]",
@@ -4652,17 +4368,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[aria-label]",
@@ -4675,17 +4389,15 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
 		[
 			"showElement",
 			"[aria-describedby], [id]",
@@ -4699,13 +4411,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
 		[
 			"showElement",
 			"[title], [aria-label], [aria-describedby], [aria-labelledby]",
@@ -4763,10 +4473,10 @@
 	"12.10.2": [],
 	"12.10.3": [],
 	"12.10.4": [
-		[
-			"outline",
-			"header, main, nav, footer, input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='search']"
-		],
+		{
+			"helper": "outline",
+			"selector": "header, main, nav, footer, input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='search']"
+		},
 		[
 			"showElement",
 			"header, main, nav, footer, input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='search']",
@@ -4783,10 +4493,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a[href^='#']"
-		],
+		{
+			"helper": "outline",
+			"selector": "a[href^='#']"
+		},
 		[
 			"showElement",
 			"a[href^='#']",
@@ -4802,10 +4512,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a[href^='#']"
-		],
+		{
+			"helper": "outline",
+			"selector": "a[href^='#']"
+		},
 		[
 			"showElement",
 			"a[href^='#']",
@@ -4821,10 +4531,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a[href^='#']"
-		],
+		{
+			"helper": "outline",
+			"selector": "a[href^='#']"
+		},
 		[
 			"showElement",
 			"a[href^='#']",
@@ -4840,10 +4550,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a[href^='#']"
-		],
+		{
+			"helper": "outline",
+			"selector": "a[href^='#']"
+		},
 		[
 			"showElement",
 			"a[href^='#']",
@@ -4877,13 +4587,11 @@
 		]
 	],
 	"13.1.1": [
-		[
-			"outline",
-			"object, embed, svg, canvas",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas",
+			"showTag": true
+		},
 		[
 			"showElement",
 			"[http-equiv='refresh']",
@@ -4909,10 +4617,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"a[target]:not([target='_self'], [target='_top'], [target='_parent'])"
-		],
+		{
+			"helper": "outline",
+			"selector": "a[target]:not([target='_self'], [target='_top'], [target='_parent'])"
+		},
 		[
 			"showAttributes",
 			"a[target]:not([target='_self'], [target='_top'], [target='_parent'])",
@@ -4926,13 +4634,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"object, embed",
-			{
-				"showTag": true
-			}
-		],
+		{
+			"helper": "outline",
+			"selector": "object, embed",
+			"showTag": true
+		},
 		[
 			"showAttributes",
 			"object, embed",
@@ -4945,10 +4651,10 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"input,select,textarea,button"
-		],
+		{
+			"helper": "outline",
+			"selector": "input,select,textarea,button"
+		},
 		[
 			"showAttributes",
 			"input,select,textarea,button",
@@ -4969,25 +4675,21 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"dfn,dl,dt,dd",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "dfn,dl,dt,dd",
+			"showTag": true
+		}
 	],
 	"13.10.1": [
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"dfn,dl,dt,dd",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "dfn,dl,dt,dd",
+			"showTag": true
+		}
 	],
 	"13.11.1": [
 		{
@@ -5027,13 +4729,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, svg, canvas, embed, object",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, svg, canvas, embed, object",
+			"showTag": true
+		}
 	],
 	"13.15.2": [],
 	"13.15.3": [],
@@ -5041,13 +4741,11 @@
 		{
 			"helper": "disableAllStyles"
 		},
-		[
-			"outline",
-			"img, svg, canvas, embed, object",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "img, svg, canvas, embed, object",
+			"showTag": true
+		}
 	],
 	"13.16.2": [],
 	"13.16.3": [],
