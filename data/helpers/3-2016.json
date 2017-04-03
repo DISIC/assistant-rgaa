@@ -2841,11 +2841,11 @@
 				"role"
 			]
 		},
-		[
-			"externalTool",
-			"Validateur W3C",
-			"https://validator.w3.org/check?uri=:url"
-		],
+		{
+			"helper": "externalTool",
+			"description": "Validateur W3C",
+			"url": "https://validator.w3.org/check?uri=:url"
+		},
 		{
 			"helper": "validateLocalPage"
 		}
@@ -2883,11 +2883,11 @@
 		}
 	],
 	"8.1.2": [
-		[
-			"externalTool",
-			"Validateur W3C",
-			"https://validator.w3.org/check?uri=:url"
-		],
+		{
+			"helper": "externalTool",
+			"description": "Validateur W3C",
+			"url": "https://validator.w3.org/check?uri=:url"
+		},
 		{
 			"helper": "validateLocalPage"
 		}
@@ -2898,21 +2898,21 @@
 		}
 	],
 	"8.2.1": [
-		[
-			"externalTool",
-			"Validateur W3C",
-			"https://validator.w3.org/check?uri=:url"
-		],
+		{
+			"helper": "externalTool",
+			"description": "Validateur W3C",
+			"url": "https://validator.w3.org/check?uri=:url"
+		},
 		{
 			"helper": "validateLocalPage"
 		}
 	],
 	"8.2.2": [
-		[
-			"externalTool",
-			"Validateur W3C",
-			"https://validator.w3.org/check?uri=:url"
-		],
+		{
+			"helper": "externalTool",
+			"description": "Validateur W3C",
+			"url": "https://validator.w3.org/check?uri=:url"
+		},
 		{
 			"helper": "validateLocalPage"
 		}
@@ -4275,11 +4275,11 @@
 		}
 	],
 	"12.4.2": [
-		[
-			"externalTool",
-			"Validateur de liens",
-			"https://validator.w3.org/checklink?uri=:url"
-		]
+		{
+			"helper": "externalTool",
+			"description": "Validateur de liens",
+			"url": "https://validator.w3.org/checklink?uri=:url"
+		}
 	],
 	"12.5.1": [
 		{
