@@ -2827,7 +2827,7 @@
 		},
 		{
 			"helper": "externalTool",
-			"description": "Validateur W3C",
+			"name": "Validateur W3C",
 			"url": "https://validator.w3.org/check?uri=:url"
 		},
 		{
@@ -2869,7 +2869,7 @@
 	"8.1.2": [
 		{
 			"helper": "externalTool",
-			"description": "Validateur W3C",
+			"name": "Validateur W3C",
 			"url": "https://validator.w3.org/check?uri=:url"
 		},
 		{
@@ -2884,7 +2884,7 @@
 	"8.2.1": [
 		{
 			"helper": "externalTool",
-			"description": "Validateur W3C",
+			"name": "Validateur W3C",
 			"url": "https://validator.w3.org/check?uri=:url"
 		},
 		{
@@ -2894,7 +2894,7 @@
 	"8.2.2": [
 		{
 			"helper": "externalTool",
-			"description": "Validateur W3C",
+			"name": "Validateur W3C",
 			"url": "https://validator.w3.org/check?uri=:url"
 		},
 		{
@@ -4259,7 +4259,7 @@
 	"12.4.2": [
 		{
 			"helper": "externalTool",
-			"description": "Validateur de liens",
+			"name": "Validateur de liens",
 			"url": "https://validator.w3.org/checklink?uri=:url"
 		}
 	],

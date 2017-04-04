@@ -8,14 +8,43 @@ import {sanitize} from '../api/selectors';
 
 
 /**
- *	Describes the helper.
+ *	@var {string} description - Tool description.
+ *	@var {string} url - Tool URL.
+ *	@var {string} selector - Selector.
+ *	@var {string} childrenSelector - Children selector.
+ *	@var {array} attributes - Children attributes to show.
+ *	@var {bool} showEmpty - Show the tag even if it is empty
+ *		(i.e. it has neither content nor attributes.
+ *	@var {bool} showName - Show tag name.
+ *	@var {bool} showMissingAttributes - Show requested attributes
+ *		that are not set on the element.
+ *	@var {bool} showContent - Show text content.
  */
-export const describe = (intl, selector, childrenSelector, attributes = [], {
-	showEmpty = false,
-	showName = true,
-	showMissingAttributes = false,
-	showContent = false
-} = {}) =>
+export const defaults = {
+	selector: '',
+	childrenSelector: '',
+	attributes: [],
+	showEmpty: false,
+	showName: true,
+	showMissingAttributes: false,
+	showContent: false
+};
+
+/**
+ *	Describes the helper.
+ *
+ *	@param {object} intl - Intl API.
+ *	@param {object} options - Options.
+ */
+export const describe = (intl, {
+	selector,
+	childrenSelector,
+	attributes,
+	showEmpty,
+	showName,
+	showMissingAttributes,
+	showContent
+} = defaults) =>
 	intl.formatHTMLMessage({
 		id: 'Helper.showChildElements'
 	}, {
@@ -33,25 +62,16 @@ export const describe = (intl, selector, childrenSelector, attributes = [], {
  *	Shows a DOM element.
  *
  *	@param {string} id - UUID.
- *	@param {string} selector - Selector.
- *	@param {string} childrenSelector - Children selector.
- *	@param {array} attributes - Children attributes to show.
- *	@param {object} options - Options:
- *		- {bool} showEmpty - Show the tag even if it is empty
- *			(i.e. it has neither content nor attributes.
- *		- {bool} showName - Show tag name.
- *		- {bool} showMissingAttributes - Show requested attributes
- *			that are not set on the element.
- *		- {bool} showContent - Show text content.
+ *	@param {object} options - Options.
  */
-export const apply = (id, selector, childrenSelector, attributes = [], options = {}) =>
+export const apply = (id, {selector, childrenSelector, ...options} = defaults) =>
 	$(selector).each((i, element) => {
 		const $element = $(element);
 
 		$element
 			.find(childrenSelector)
 			.each((j, child) => {
-				const html = serializeElement($(child), attributes, options);
+				const html = serializeElement($(child), options);
 
 				if (html) {
 					showCodeNearElement(

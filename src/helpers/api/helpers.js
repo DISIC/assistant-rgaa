@@ -1,4 +1,3 @@
-import {isArray, first, tail} from 'lodash';
 import * as modules from '../helpers';
 
 
@@ -12,32 +11,24 @@ const getModule = (name) =>
 /**
  *	Extracts info out of the given helper descriptor.
  *
- *	@param {string|array} helper - Helper descriptor. This can
- *		be either a string containing the helper's name, or an
- *		array containing the helper's name, followed by its
- *		arguments, for example : ["helperName", "arg1", "arg2"].
+ *	@param {string|array} helper - Helper descriptor, i.e. an
+ *		object containing a key "helper", holding the helper name,
+ *		and an arbitrary number of other options.
  */
-export const info = (helper) => {
-	const infoArray = isArray(helper) ? helper : [helper];
-	const name = first(infoArray);
-	const args = tail(infoArray);
-	const module = getModule(name);
-
-	return {
-		module,
-		name,
-		args
-	};
-};
+export const info = ({helper, ...args}) => ({
+	args,
+	name: helper,
+	module: getModule(helper)
+});
 
 /**
  *	Asks for the given helper to describe its potential actions.
  *
- *	@param {string|array} helper - Helper descriptor.
+ *	@param {object} helper - Helper descriptor.
  */
 export const describe = (intl, helper) => {
 	const {module, args} = info(helper);
-	return module.describe(intl, ...args);
+	return module.describe(intl, args);
 };
 
 /**
@@ -46,7 +37,7 @@ export const describe = (intl, helper) => {
 export const component = (helper) => {
 	const {module, args} = info(helper);
 	return ('component' in module)
-		? module.component(...args)
+		? module.component(args)
 		: null;
 };
 
@@ -77,7 +68,7 @@ const toggleHelpers = (id, helpers, toggle) => {
 	try {
 		helpers.forEach((helper, i) => {
 			const {name, module, args} = info(helper);
-			module[method](createId(id, i), ...args);
+			module[method](createId(id, i), args);
 			document.body.classList.toggle(`rgaaExt-Body--${name}Helper`, toggle);
 		});
 	} catch (e) {

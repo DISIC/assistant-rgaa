@@ -25,7 +25,8 @@ const innerHtml = (element) => {
 /**
  *
  */
-export default function serializeElement(element, attributes, {
+export default function serializeElement(element, {
+	attributes = [],
 	showEmpty = false,
 	showName = true,
 	showMissingAttributes = false,

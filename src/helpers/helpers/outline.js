@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import {apply as addClassName, revert as removeClassName} from './addClassName';
 import showTagApi from '../api/showTag';
 import hideHelperElement from '../api/hideHelperElement';
 import {sanitize} from '../api/selectors';
@@ -7,11 +6,21 @@ import {sanitize} from '../api/selectors';
 
 
 /**
+ *	@var {string} selector - Selector.
+ *	@var {bool} showTag
+ */
+export const defaults = {
+	selector: '',
+	showTag: false
+};
+
+/**
  *	Describes the helper.
  *
- *	@param {string} selector - Selector.
+ *	@param {object} intl - Intl API.
+ *	@param {object} options - Options.
  */
-export const describe = (intl, selector, {showTag = false} = {}) =>
+export const describe = (intl, {selector, showTag} = defaults) =>
 	intl.formatHTMLMessage({
 		id: 'Helper.outline'
 	}, {
@@ -23,10 +32,10 @@ export const describe = (intl, selector, {showTag = false} = {}) =>
  *	Adds an outline to each element matched by the given selector.
  *
  *	@param {string} id - UUID.
- *	@param {string} selector - Selector.
+ *	@param {object} options - Options.
  */
-export const apply = (id, selector, {showTag = false} = {}) => {
-	addClassName(id, selector, 'rgaaExt-OutlineHelper');
+export const apply = (id, {selector, showTag} = defaults) => {
+	$(selector).addClass('rgaaExt-OutlineHelper');
 
 	if (showTag) {
 		$(selector).each((i, element) => {
@@ -39,9 +48,9 @@ export const apply = (id, selector, {showTag = false} = {}) => {
  *	Removes outlines that were previously disabled using apply().
  *
  *	@param {string} id - UUID.
- *	@param {string} selector - Selector.
+ *	@param {object} options - Options.
  */
-export const revert = (id, selector) => {
-	removeClassName(id, selector, 'rgaaExt-OutlineHelper');
+export const revert = (id, {selector} = defaults) => {
+	$(selector).removeClass('rgaaExt-OutlineHelper');
 	hideHelperElement(`.${id}`);
 };

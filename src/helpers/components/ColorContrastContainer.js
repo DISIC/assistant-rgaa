@@ -13,24 +13,6 @@ import ToggleButton from './ToggleButton';
 
 
 /**
- *	A wrapper that transforms array arguments (from the config
- *	file) to an usable object mapping.
- *	This could be an idea to refactor how argumenrs are parsed
- *	and passed through the app. Instead of passing them as a
- *	raw array, each helper could define a function, similar to
- *	this one, used to translate the array into an object.
- */
-const ColorContrastArguments = (args) => {
-	const [left, right, options] = args;
-
-	return {
-		left,
-		right,
-		...options
-	};
-};
-
-/**
  *	This whole thing is VERY obscure.
  *	The communication between the widgets and the page
  *	needs a proper refactoring to be more simple and robust.
@@ -60,10 +42,6 @@ class ColorContrastContainer extends Component {
 		chrome.runtime.onMessage.removeListener(this.handleMessage);
 	}
 
-	get args() {
-		return ColorContrastArguments(this.props.args);
-	}
-
 	get ratio() {
 		try {
 			const left = createColor(this.state.left);
@@ -89,8 +67,8 @@ class ColorContrastContainer extends Component {
 
 			case UPDATE_STYLE:
 				this.setState({
-					left: get(payload, this.args.extractor.left),
-					right: get(payload, this.args.extractor.right),
+					left: get(payload, this.props.extractor.left),
+					right: get(payload, this.props.extractor.right),
 					pickRequest: null,
 					pickedColor: null
 				});
@@ -156,27 +134,29 @@ class ColorContrastContainer extends Component {
 	}
 
 	render() {
+		const {leftLabel, rightLabel, minimumRatio, extractor} = this.props;
+
 		return (
 			<div className="ColorContrast Widget">
 				<form className="Form">
 					<div className="Form-row">
-						{this.renderField('left', this.args.left)}
-						{this.renderField('right', this.args.right)}
+						{this.renderField('left', leftLabel)}
+						{this.renderField('right', rightLabel)}
 					</div>
 
-					{renderIf(this.args.extractor)(() => (
+					{renderIf(extractor)(() => (
 						<ToggleButton
 							pressed={this.state.pickRequest === REQUEST_STYLE}
 							onClick={() => this.handlePick(null, REQUEST_STYLE)}
 						>
-							{this.args.extractor.label}
+							{extractor.label}
 						</ToggleButton>
 					))}
 				</form>
 
 				<ColorContrastResult
 					ratio={this.ratio}
-					minimumRatio={this.args.minimumRatio}
+					minimumRatio={minimumRatio}
 				/>
 			</div>
 		);
@@ -184,7 +164,10 @@ class ColorContrastContainer extends Component {
 }
 
 ColorContrastContainer.propTypes = {
-	args: PropTypes.array,
+	leftLabel: PropTypes.string,
+	rightLabel: PropTypes.string,
+	minimumRatio: PropTypes.number,
+	extractor: PropTypes.object,
 	intl: intlShape
 };
 

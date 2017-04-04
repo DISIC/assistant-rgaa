@@ -54,7 +54,7 @@ function TestHelpers({id, helpers, isOpen, onToggleRequest, intl}) {
 						const Helper = component(config);
 
 						return Helper
-							? <Helper key={i} args={args} />
+							? <Helper key={i} {...args} />
 							: null;
 					})
 					.filter((helper) =>
