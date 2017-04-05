@@ -5,15 +5,21 @@ Entoure un élément HTML dans la page.
 ## Exemples de configuration
 
 ```json
-["outline", "img"],
-["outline", "img", {
+// exemple 1
+{
+    "helper": "outline",
+    "selector": "img"
+}
+
+// exemple 2
+{
+    "helper": "outline",
+    "selector": "img",
     "showTag": true
-}]
+}
 ```
 
 ## Paramètres
 
-* **Sélecteur** : un sélecteur CSS ciblant les éléments à afficher.
-* **Attributs** : la liste des attributs à afficher.
-* **Options** : 
-    - *showMissing* (bool) - afficher les attributs même si ils ne sont pas définis.
+* **selector** : un sélecteur CSS ciblant les éléments à entourer.
+* **showTag** (bool) : affiche le nom des balises entourées. `false` par défaut.

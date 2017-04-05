@@ -7,16 +7,14 @@ Chaque helper est un module exportant deux fonctions, `apply()` et `revert()`. p
 Chacune de ces fonctions doit accepter en premier paramètre un identifiant unique pouvant être utilisé pour identifier des éléments créés dans le DOM afin de les retrouver par la suite.
 
 ```js
-export const apply = (id) => // ...
+export const apply = (id) =>  {/*... */}
 ```
 
-Les fonctions `apply()` et `revert()` peuvent ensuite définir un certain nombre de paramètres obligatoires, ainsi qu'un tableau d'options.
+Les fonctions `apply()` et `revert()` peuvent ensuite définir un certain nombre d'options, requises ou non (voir détails de chaque helper).
 
 ```js
-export const apply = (id) => // aucun paramètre
-export const apply = (id, arg1, arg2) => // n paramètres
-export const apply = (id, arg1, arg2, options = {}) => // n paramètres + options
-export const apply = (id, options = {}) => // options
+export const apply = (id) => {} /* aucune option */
+export const apply = (id, options) => {} /* n options */
 ```
 
 Les configuration des helpers à appliquer suivant les tests RGAA sont définies dans les fichiers `/data/helpers/*.json`. Chaque fichier correspond à une version de référentiel et est nommé en fonction.
@@ -26,16 +24,22 @@ Ces fichiers définissent une liste de helpers pour chaque test, sous cette form
 ```json
 {
     // identifiant du test
-    "1.1.1" : {
-        // helper sans argument
-        "helper1",
-        // helper avec deux arguments
-        ["helper3", "arg1", "arg2"],
-        // helper avec un argument et des options
-        ["helper3", "arg1", {
-            "option1": "...",
-            "option2": "..."
-        }],
-    }
+    "1.1.1" : [
+        {
+            // nom d'un helper à utiliser avec plusieurs options
+            "helper": "something",
+            "option1": "valeur",
+            "option2": "valeur"
+        },
+        {
+            // deuxième helper à utiliser sur le même test
+            "helper": "something2",
+            "option1": "valeur"
+        },
+        {
+            // troisième helper à utiliser sur le même test, sans option
+            "helper": "something3"
+        }
+    ]
 }
 ```
