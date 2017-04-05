@@ -234,9 +234,7 @@ chrome.tabs.onRemoved.addListener((id) => {
  *
  */
 chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
-	const hasReloaded = changeInfo.status === 'complete';
-
-	if (hasReloaded && instances.hasInstance(tabId)) {
+	if (changeInfo.status === 'complete' && instances.hasInstance(tabId)) {
 		// send an empty message, just to check if we have a response
 		// if we have a response, it means there already is a content script loaded
 		// and we don't need to load them again
