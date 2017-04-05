@@ -1,0 +1,20 @@
+.AppToggle {
+	display: block;
+	width: $toggle-size - 2px;
+	height: $toggle-size - 2px;
+	padding: 2px;
+	background: #f5f5f5;
+	border: 1px solid #ccc;
+	cursor: pointer;
+
+	img {
+		max-width: 100%;
+		cursor: pointer;
+	}
+
+	&:hover,
+	&:focus {
+		outline: 2px solid orange;
+		opacity: 1;
+	}
+}

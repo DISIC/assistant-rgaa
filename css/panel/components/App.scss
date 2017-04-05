@@ -1,5 +1,21 @@
 .App {
 	height: 100%;
+}
+
+.App-content {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
+}
+
+.App-content.is-hidden,
+.App-toggle.is-hidden {
+	display: none;
+}
+
+.App-toggle {
+	position: fixed;
+	top: 0;
+	right: 0;
+	cursor: pointer;
 }

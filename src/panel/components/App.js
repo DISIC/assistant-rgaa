@@ -1,20 +1,40 @@
 import React, {PropTypes} from 'react';
+import classNames from 'classnames';
 import HeaderContainer from './HeaderContainer';
+import AppToggle from './AppToggle';
 
 
 
 /**
  *
  */
-export default function App({children}) {
+export default function App({folded, onUnfoldRequest, children}) {
 	return (
 		<div className="App">
-			<HeaderContainer />
-			{children}
+			<div
+				className={classNames({
+					'App-content': true,
+					'is-hidden': folded
+				})}
+			>
+				<HeaderContainer />
+				{children}
+			</div>
+
+			<div
+				className={classNames({
+					'App-toggle': true,
+					'is-hidden': !folded
+				})}
+			>
+				<AppToggle onClick={onUnfoldRequest} />
+			</div>
 		</div>
 	);
 }
 
 App.propTypes = {
-	children: PropTypes.element
+	children: PropTypes.element,
+	folded: PropTypes.bool,
+	onUnfoldRequest: PropTypes.func
 };

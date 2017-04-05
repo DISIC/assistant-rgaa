@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {CONTAINER_ID} from '../api/container';
+import classNames from 'classnames';
 import ResizeHandle from './ResizeHandle';
 import PanelIframe from './PanelIframe';
 
@@ -17,11 +18,18 @@ const HandlePosition = {
 /**
  *
  */
-export default function App({position}) {
+export default function App({position, folded}) {
 	return (
-		<div className={`${CONTAINER_ID}-wrapper ${CONTAINER_ID}-wrapper--${position}`}>
+		<div
+			className={classNames({
+				[`${CONTAINER_ID}-wrapper`]: true,
+				[`${CONTAINER_ID}-wrapper--${position}`]: true,
+				[`${CONTAINER_ID}-wrapper--folded`]: folded
+			})}
+		>
 			<ResizeHandle
 				position={HandlePosition[position]}
+				enabled={!folded}
 				useOverlay
 				handleProps={{
 					title: 'Redimensionner le panneau'
@@ -34,9 +42,6 @@ export default function App({position}) {
 }
 
 App.propTypes = {
-	position: PropTypes.oneOf(['left', 'right', 'bottom']).isRequired
-};
-
-App.defaultProps = {
-	position: 'right'
+	position: PropTypes.oneOf(['left', 'right', 'bottom']).isRequired,
+	folded: PropTypes.bool.isRequired
 };

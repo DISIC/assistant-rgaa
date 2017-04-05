@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import {DraggableCore} from 'react-draggable';
-import {includes, assign, upperFirst, isEqual, omit, bindAll} from 'lodash';
+import {isNumber, includes, assign, upperFirst, isEqual, omit, bindAll} from 'lodash';
 import classNames from 'classnames';
 import renderIf from 'render-if';
 
@@ -77,22 +77,32 @@ class ResizeHandle extends Component {
 			length: null,
 			lengthProperty: this.lengthProperty(props.position),
 			dragging: false,
-			folded: false
+			folded: props.folded
 		};
 
 		bindAll(this, 'onDrag', 'onDragStop');
 	}
 
 	componentDidMount() {
-		this.setState({ // eslint-disable-line react/no-did-mount-set-state
-			length: this.getContainerLength()
-		});
+		if (this.props.enabled) {
+			this.setState({ // eslint-disable-line react/no-did-mount-set-state
+				length: this.getContainerLength()
+			});
+		}
 	}
 
-	componentWillReceiveProps({position: newPosition}) {
+	componentWillReceiveProps({position: newPosition, folded: newFolded}) {
+		if (!this.props.enabled) {
+			return;
+		}
+
 		const newLengthProperty = this.lengthProperty(newPosition);
 		if (newLengthProperty === this.state.lengthProperty) {
 			return;
+		}
+
+		if (newFolded !== this.state.folded) {
+			this.toggleFolding();
 		}
 
 		this.setState({
@@ -123,11 +133,15 @@ class ResizeHandle extends Component {
 		});
 	}
 
-	onDragStop(event, ui) {
+	onDragStop() {
 		const justAClick = !this.state.dragging;
 
+		if (justAClick && this.props.onToggleFoldRequest) {
+			return this.props.onToggleFoldRequest(this.state.folded);
+		}
+
 		if (justAClick && this.props.foldOnClick) {
-			return this.toggleFolding(event, ui);
+			return this.toggleFolding();
 		}
 
 		return this.setState({
@@ -147,10 +161,6 @@ class ResizeHandle extends Component {
 	}
 
 	toggleFolding() {
-		if (!this.props.foldOnClick) {
-			return false;
-		}
-
 		const wantToFold = !this.state.folded;
 		if (wantToFold) {
 			return this.setState({
@@ -168,7 +178,7 @@ class ResizeHandle extends Component {
 	}
 
 	render() {
-		const {classes, styles, position, useOverlay, children} = this.props;
+		const {classes, styles, position, useOverlay, enabled, children} = this.props;
 		const defaultClasses = ResizeHandle.defaultProps.classes;
 
 		const containerStyles = isEqual(classes.container, defaultClasses.container)
@@ -176,7 +186,9 @@ class ResizeHandle extends Component {
 			: {};
 		const containerClasses = classNames(classes.container, {
 			[`${classes.container}--${position}`]: true,
-			[`${classes.container}--dragging`]: this.state.dragging
+			[`${classes.container}--dragging`]: this.state.dragging,
+			[`${classes.container}--folded`]: this.state.folded,
+			[`${classes.container}--enabled`]: enabled
 		});
 		const handleStyles = isEqual(classes.handle, defaultClasses.handle)
 			? assign(
@@ -190,7 +202,17 @@ class ResizeHandle extends Component {
 			? assign({}, defaultStyles.overlay, styles.overlay)
 			: {};
 
-		containerStyles[this.state.lengthProperty] = `${this.state.length}px`;
+		if (isNumber(this.state.length)) {
+			containerStyles[this.state.lengthProperty] = `${this.state.length}px`;
+		}
+
+		if (!enabled) {
+			return (
+				<div className={classes.disabledContainer}>
+					{children}
+				</div>
+			);
+		}
 
 		return (
 			<div ref="container" style={containerStyles} className={containerClasses}>
@@ -205,13 +227,13 @@ class ResizeHandle extends Component {
 						className={classes.handle}
 						style={handleStyles}
 						{...this.props.handleProps}
-					></div>
+					/>
 				</DraggableCore>
-				{renderIf(useOverlay && this.state.dragging)(
+				{renderIf(useOverlay && this.state.dragging)(() =>
 					<div
 						className={classes.overlay}
 						style={overlayStyles}
-					></div>
+					/>
 				)}
 			</div>
 		);
@@ -224,6 +246,9 @@ ResizeHandle.propTypes = {
 	position: PropTypes.oneOf(['left', 'right', 'top', 'bottom']).isRequired,
 	useOverlay: PropTypes.bool,
 	foldOnClick: PropTypes.bool,
+	folded: PropTypes.bool,
+	enabled: PropTypes.bool,
+	onToggleFoldRequest: PropTypes.func,
 	styles: PropTypes.object.isRequired,
 	classes: PropTypes.object.isRequired,
 	children: PropTypes.element.isRequired,
@@ -235,8 +260,10 @@ ResizeHandle.defaultProps = {
 	position: 'right',
 	useOverlay: false,
 	foldOnClick: false,
+	folded: false,
 	classes: {
 		container: 'rgaaExt-ResizeHandle',
+		disabledContainer: 'rgaaExt-DisabledResizeHandle',
 		handle: 'rgaaExt-ResizeHandle-handle',
 		overlay: 'rgaaExt-ResizeHandle-overlay'
 	},
