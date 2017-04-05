@@ -11,7 +11,8 @@ import Icon from './Icon';
  *
  */
 const Header = ({
-	referenceVersion, inPopup, title, onOptionsClick, onCloseClick, onMinimizeClick, intl
+	referenceVersion, inPopup, title, intl,
+	onOptionsClick, onCloseClick, onClosePopupClick, onMinimizeClick
 }) => (
 	<header className="Header">
 		<h1 className="Header-title">
@@ -55,29 +56,47 @@ const Header = ({
 				/>
 			</Link>
 
-			<button
-				type="button"
-				onClick={onMinimizeClick}
-				className="Header-minimize InvisibleButton"
-				title={intl.formatMessage({id: 'Header.minimize'})}
-			>
-				<Icon
-					name="window-minimize"
+			{renderIf(!inPopup)(() =>
+				<button
+					type="button"
+					onClick={onMinimizeClick}
+					className="Header-minimize InvisibleButton"
 					title={intl.formatMessage({id: 'Header.minimize'})}
-				/>
-			</button>
+				>
+					<Icon
+						name="window-minimize"
+						title={intl.formatMessage({id: 'Header.minimize'})}
+					/>
+				</button>
+			)}
 
-			<button
-				type="button"
-				onClick={onCloseClick}
-				className="Header-close InvisibleButton"
-				title={intl.formatMessage({id: 'Header.close'})}
-			>
-				<Icon
-					name="close"
+			{renderIf(!inPopup)(() =>
+				<button
+					type="button"
+					onClick={onCloseClick}
+					className="Header-close InvisibleButton"
 					title={intl.formatMessage({id: 'Header.close'})}
-				/>
-			</button>
+				>
+					<Icon
+						name="close"
+						title={intl.formatMessage({id: 'Header.close'})}
+					/>
+				</button>
+			)}
+
+			{renderIf(inPopup)(() =>
+				<button
+					type="button"
+					onClick={onClosePopupClick}
+					className="Header-closePopup InvisibleButton"
+					title={intl.formatMessage({id: 'Header.closePopup'})}
+				>
+					<Icon
+						name="sidebar"
+						title={intl.formatMessage({id: 'Header.closePopup'})}
+					/>
+				</button>
+			)}
 		</div>
 	</header>
 );
@@ -88,6 +107,7 @@ Header.propTypes = {
 	inPopup: PropTypes.bool,
 	onOptionsClick: PropTypes.func.isRequired,
 	onCloseClick: PropTypes.func.isRequired,
+	onClosePopupClick: PropTypes.func.isRequired,
 	onMinimizeClick: PropTypes.func.isRequired,
 	intl: intlShape
 };

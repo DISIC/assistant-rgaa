@@ -21,12 +21,14 @@
 }
 
 .Header-dock,
-.Header-minimize {
+.Header-minimize,
+.Header-closePopup {
 	margin-left: vr(1);
 }
 
 .Header-dock .Dropdown-toggle,
 .Header-options,
+.Header-closePopup,
 .Header-help {
 	padding: 0 vr(1/8);
 

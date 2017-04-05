@@ -10,6 +10,7 @@ const messages = {
 	'Header.help': 'Aide',
 	'Header.minimize': 'Minimiser le panneau',
 	'Header.close': 'Fermer l\'extension',
+	'Header.closePopup': 'Quitter le mode popup',
 	'ThemesList.title': 'Voir les thématiques',
 	'Theme.themesMenu': 'Retourner au menu des thématiques',
 	'Theme.criterion.select.label': 'Aller au critère : ',
