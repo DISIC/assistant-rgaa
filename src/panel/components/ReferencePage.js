@@ -60,7 +60,7 @@ export default class ReferencePage extends Component {
 
 ReferencePage.propTypes = {
 	themes: PropTypes.array.isRequired,
-	initialScrollPosition: PropTypes.array.isRequired,
+	initialScrollPosition: PropTypes.number.isRequired,
 	onScroll: PropTypes.func
 };
 

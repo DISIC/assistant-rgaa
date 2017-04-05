@@ -7,7 +7,7 @@ import {noop} from 'lodash';
 import messages from '../common/messages/fr';
 import {OPEN_PANEL, CLOSE_PANEL} from '../common/actions/runtime';
 import getStore from './getStore';
-import {CONTAINER_ID} from './api/iframe';
+import {CONTAINER_ID} from './api/container';
 import AppContainer from './components/AppContainer';
 
 

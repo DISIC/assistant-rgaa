@@ -4,7 +4,7 @@ import {
 	REQUEST_INITIAL_STATE, GET_PIXEL, GET_CURRENT_TAB, CREATE_TAB,
 	INVALID_RESPONSE
 } from '../common/actions/runtime';
-import {IFRAME_FILE} from '../container/api/iframe';
+import {IFRAME_FILE} from '../container/api/container';
 import {openWindow, getWindowTabId} from './api/windows';
 import {OPTIONS_FILE} from './api/options';
 import {

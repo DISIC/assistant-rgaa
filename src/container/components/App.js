@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
-import {CONTAINER_ID} from '../api/iframe';
+import {CONTAINER_ID} from '../api/container';
 import ResizeHandle from './ResizeHandle';
-import Iframe from './Iframe';
+import PanelIframe from './PanelIframe';
 
 
 
@@ -27,7 +27,7 @@ export default function App({position}) {
 					title: 'Redimensionner le panneau'
 				}}
 			>
-				<Iframe />
+				<PanelIframe />
 			</ResizeHandle>
 		</div>
 	);

@@ -32,7 +32,7 @@
 		"page": "pages/options.html"
 	},
 	"web_accessible_resources": [
-		"pages/container.html",
+		"pages/panel.html",
 		"pages/devtools.html",
 		"data/references/3-2016.json"
 	]
