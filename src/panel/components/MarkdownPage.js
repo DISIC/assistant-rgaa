@@ -7,13 +7,14 @@ import RichText from './RichText';
 /**
  *
  */
-const MarkdownPage = ({title, html}) => (
-	<Page title={title}>
+const MarkdownPage = ({name, title, html}) => (
+	<Page id={name} title={title}>
 		<RichText html={html} />
 	</Page>
 );
 
 MarkdownPage.propTypes = {
+	name: PropTypes.string,
 	title: PropTypes.node,
 	html: PropTypes.string
 };

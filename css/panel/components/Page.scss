@@ -9,3 +9,11 @@
 	overflow: auto;
 	padding: vr(1/2);
 }
+
+.Page--help img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid $color-gray;
+	box-shadow: 0 0 10px $color-gray;
+}
