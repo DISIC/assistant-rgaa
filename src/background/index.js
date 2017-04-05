@@ -243,11 +243,16 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 		//
 		// this check can seem unnecessary, but it is required because
 		// chrome.tabs.onUpdated triggers more than on actual page reloads, especially on Chrome
-		instances.getInstance(tabId)
+		const instance = instances.getInstance(tabId);
+		instance
 			.sendMessage('')
 			.then()
 			.catch(() => (
-				injectContentScripts(tabId)
+				injectContentScripts(tabId).then(() =>
+					instance.isOpen()
+						? openPanel({id: tabId})
+						: closePanel({id: tabId})
+				)
 			));
 	}
 });

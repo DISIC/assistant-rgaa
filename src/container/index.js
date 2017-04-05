@@ -25,13 +25,13 @@ let container = null;
 /**
  *	Renders the panel.
  */
-const start = () =>
-	getStore().then((store) => {
-		if (container) {
-			container.style.display = '';
-			return true;
-		}
+const start = () => {
+	if (container) {
+		container.style.display = '';
+		return true;
+	}
 
+	return getStore().then((store) => {
 		container = document.createElement('div');
 		container.className = CONTAINER_ID;
 		document.body.appendChild(container);
@@ -44,6 +44,7 @@ const start = () =>
 			</Provider>
 		), container);
 	}, noop);
+};
 
 /**
  *	Removes the panel from the page.
@@ -77,11 +78,3 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	// Returning true states that sendResponse is asynchronous
 	return true;
 });
-
-/**
- *	We're trying to start the app as soon as possible.
- *	This will be useful when a tab is reloaded and its
- *	associated data already exists.
- */
-start();
-
