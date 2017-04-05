@@ -230,55 +230,26 @@ chrome.tabs.onRemoved.addListener((id) => {
 });
 
 /**
- * if we just reloaded the page and we had the toolbar loaded, reload it directly:
- * the "did the tab just reload" check is EXTREMELY FRAGILE here and, without a doubt, buggy
- * we do it like this, differently on Chrome and Firefox, because
- *  - Chrome triggers events when we internally change anchors in our panel iframe for some reason
- *  - Firefox does not trigger such events.
- *  - And anyway, they have different changeInfo objects for same things happening
+ * reinject content scripts on page reload
+ *
  */
-const previousUpdates = {};
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-	let hasReloaded = false;
-	const previousStatus = get(previousUpdates, [tabId, 'changeInfo', 'status'], null);
-	const previousUrl = get(previousUpdates, [tabId, 'changeInfo', 'url'], null);
-
-	// I ended up seeing that, when loading a page, chrome has this timeline:
-	// - trigger one event with changeInfo = {status: loading}. If it's the first time loading
-	//   the page, there might be the url prop too
-	// - trigger one or more event with changeInfo = {title: ...}, or {favIconUrl: ...},
-	//   or other info, but no status or url
-	// - trigger one event with changeInfo = {status: complete}
-	// When changing anchor within our iframe, Chrome triggers like this:
-	//  - one event with {status: loading}
-	//  - one event with {status: complete}
-	if (
-		isChrome()
-		&& changeInfo.status === 'complete'
-		&& previousStatus === null
-	) {
-		hasReloaded = true;
-	}
-
-	// firefox does not trigger anything when doing stuff in our panel
-	// when loading or reloading pages:
-	// - {status: loading}
-	// - when first loading a page, {favIconUrl: ...}, or {title: ...}, etc. This does not
-	//   happen when reloading a page
-	// - {status: loading, url: ...}
-	// - {status: complete}
-	if (
-		isFirefox()
-		&& changeInfo.status === 'complete'
-		&& previousStatus === 'loading'
-		&& previousUrl === tab.url
-	) {
-		hasReloaded = true;
-	}
+chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+	const hasReloaded = changeInfo.status === 'complete';
 
 	if (hasReloaded && instances.hasInstance(tabId)) {
-		injectContentScripts(tabId);
+		// send an empty message, just to check if we have a response
+		// if we have a response, it means there already is a content script loaded
+		// and we don't need to load them again
+		// if there is no response, we'll trigger an error, it means there is no
+		// content script and we need to load them
+		//
+		// this check can seem unnecessary, but it is required because
+		// chrome.tabs.onUpdated triggers more than on actual page reloads, especially on Chrome
+		instances.getInstance(tabId)
+			.sendMessage('')
+			.then()
+			.catch(() => (
+				injectContentScripts(tabId)
+			));
 	}
-
-	previousUpdates[tabId] = {tabId, changeInfo, tab};
 });
