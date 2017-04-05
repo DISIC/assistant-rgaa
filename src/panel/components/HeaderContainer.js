@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import {truncate} from 'lodash';
 import {open} from '../../common/actions/options';
+import {toggleFold} from '../../common/actions/panel';
 import {getPosition, getPageTitle} from '../../common/selectors/panel';
 import {CLOSE_PANEL} from '../../common/actions/runtime';
 import {sendMessage} from '../../common/api/runtime';
@@ -30,6 +31,10 @@ const mapDispatchToProps = (dispatch) => ({
 		sendMessage({
 			type: CLOSE_PANEL
 		});
+	},
+
+	onMinimizeClick() {
+		dispatch(toggleFold(true));
 	}
 });
 

@@ -10,7 +10,9 @@ import Icon from './Icon';
 /**
  *
  */
-const Header = ({referenceVersion, inPopup, title, onOptionsClick, onCloseClick, intl}) => (
+const Header = ({
+	referenceVersion, inPopup, title, onOptionsClick, onCloseClick, onMinimizeClick, intl
+}) => (
 	<header className="Header">
 		<h1 className="Header-title">
 			{renderIf(inPopup)(() => `${title} | `)}
@@ -55,6 +57,18 @@ const Header = ({referenceVersion, inPopup, title, onOptionsClick, onCloseClick,
 
 			<button
 				type="button"
+				onClick={onMinimizeClick}
+				className="Header-minimize InvisibleButton"
+				title={intl.formatMessage({id: 'Header.minimize'})}
+			>
+				<Icon
+					name="window-minimize"
+					title={intl.formatMessage({id: 'Header.minimize'})}
+				/>
+			</button>
+
+			<button
+				type="button"
 				onClick={onCloseClick}
 				className="Header-close InvisibleButton"
 				title={intl.formatMessage({id: 'Header.close'})}
@@ -74,6 +88,7 @@ Header.propTypes = {
 	inPopup: PropTypes.bool,
 	onOptionsClick: PropTypes.func.isRequired,
 	onCloseClick: PropTypes.func.isRequired,
+	onMinimizeClick: PropTypes.func.isRequired,
 	intl: intlShape
 };
 
