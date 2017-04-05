@@ -4,16 +4,25 @@ import ExternalToolContainer from '../components/ExternalToolContainer';
 
 
 /**
+ *	@param {string} name - Tool name.
+ *	@param {string} url - Tool URL.
+ */
+export const defaults = {
+	name: '',
+	url: ''
+};
+
+/**
  *	Describes the helper.
  *
- *	@param {string} name - Tool name.
+ *	@param {object} intl - Intl API.
  */
-export const describe = (intl, name) =>
+export const describe = (intl, {name} = defaults) =>
 	intl.formatHTMLMessage({
 		id: 'Helper.externalTool'
 	}, {
 		name,
-		hasName: !!name
+		hasname: !!name
 	});
 
 /**

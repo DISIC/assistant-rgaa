@@ -3,9 +3,21 @@ import $ from 'jquery';
 
 
 /**
- *	Describes the helper.
+ *	@var {string} description - Description.
+ *	@var {string} style - CSS code.
  */
-export const describe = (intl, description) =>
+export const defaults = {
+	description: '',
+	style: ''
+};
+
+/**
+ *	Describes the helper.
+ *
+ *	@param {object} intl - Intl API.
+ *	@param {object} options - Options.
+ */
+export const describe = (intl, {description} = defaults) =>
 	intl.formatHTMLMessage({
 		id: 'Helper.style'
 	}, {
@@ -17,9 +29,9 @@ export const describe = (intl, description) =>
  *	Injects a custom style block in the <head />.
  *
  *	@param {string} id - UUID.
- *	@param {string} style - CSS code.
+ *	@param {object} options - Options.
  */
-export const apply = (id, description, style) =>
+export const apply = (id, {style} = defaults) =>
 	$('head').append(
 		$('<style />', {
 			id,

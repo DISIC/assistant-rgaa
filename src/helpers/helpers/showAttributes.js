@@ -8,9 +8,24 @@ import {sanitize} from '../api/selectors';
 
 
 /**
- *	Describes the helper.
+ *	@var {string} selector - Selector.
+ *	@var {array} attributes - Attribute list.
+ *	@var {boolean} showMissing - Whether or not to show attributes
+ *		that aren't set.
  */
-export const describe = (intl, selector, attributes, {showMissing = false} = {}) =>
+export const defaults = {
+	selector: '',
+	attributes: [],
+	showMissing: false
+};
+
+/**
+ *	Describes the helper.
+ *
+ *	@param {object} intl - Intl API.
+ *	@param {object} options - Options.
+ */
+export const describe = (intl, {selector, attributes, showMissing} = defaults) =>
 	intl.formatHTMLMessage({
 		id: 'Helper.showAttributes'
 	}, {
@@ -25,13 +40,9 @@ export const describe = (intl, selector, attributes, {showMissing = false} = {})
  *	each element matched by the given selector.
  *
  *	@param {string} id - UUID.
- *	@param {string} selector - Selector.
- *	@param {array} attributes - Attribute list.
- *	@param {object} options - Options:
- *		- {boolean} showMissing - Whether or not to show attributes
- *			that aren't set.
+ *	@param {object} options - Options.
  */
-export const apply = (id, selector, attributes, {showMissing = false} = {}) =>
+export const apply = (id, {selector, attributes, showMissing} = defaults) =>
 	$(selector).each((i, element) => {
 		const $element = $(element);
 		const html = serializeAttributes($element, attributes, showMissing);
@@ -51,6 +62,7 @@ export const apply = (id, selector, attributes, {showMissing = false} = {}) =>
  *	Removes all boxes previously added using apply().
  *
  *	@param {string} id - UUID.
+ *	@param {object} options - Options.
  */
 export const revert = (id) =>
 	hideHelperElement(`.${id}`);

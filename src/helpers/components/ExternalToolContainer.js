@@ -38,8 +38,8 @@ export default class ExternalToolContainer extends Component {
 	 *
 	 */
 	onClick() {
-		const url = this.props.args[1];
-		const interpolated = url.replace(':url', this.state.tabUrl);
+		const interpolated = this.props.url.replace(':url', this.state.tabUrl);
+
 		sendMessage({
 			type: CREATE_TAB,
 			url: interpolated
@@ -50,8 +50,12 @@ export default class ExternalToolContainer extends Component {
 	 *
 	 */
 	render() {
-		const name = this.props.args[0];
-		return <HelperButton name={name} onClick={this.onClick} />;
+		return (
+			<HelperButton
+				name={this.props.name}
+				onClick={this.onClick}
+			/>
+		);
 	}
 }
 
@@ -59,5 +63,6 @@ export default class ExternalToolContainer extends Component {
  *
  */
 ExternalToolContainer.propTypes = {
-	args: PropTypes.array.isRequired
+	url: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired
 };

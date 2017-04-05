@@ -1,86 +1,86 @@
 {
 	"1.1.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img"
-		],
-		[
-			"showAttributes",
-			"img",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "img",
+			"attributes": [
 				"alt"
 			],
-			{
-				"showMissing": true
-			}
-		]
+			"showMissing": true
+		}
 	],
 	"1.1.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"map",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"map",
-			"area[href]:not([nohref])",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "map",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "map",
+			"childrenSelector": "area[href]:not([nohref])",
+			"attributes": [
 				"alt"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		]
+			"showMissingAttributes": true
+		}
 	],
 	"1.1.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"input[type=\"image\"]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input[type=\"image\"]",
+			"attributes": [
 				"alt"
 			],
-			{
-				"showMissing": true
-			}
-		]
+			"showMissing": true
+		}
 	],
 	"1.1.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img[ismap]"
-		],
-		[
-			"showAttributes",
-			"a:has(img[ismap])",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img[ismap]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "a:has(img[ismap])",
+			"attributes": [
 				"href"
 			]
-		]
+		}
 	],
 	"1.2.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img"
-		],
-		[
-			"showAttributes",
-			"img",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "img",
+			"attributes": [
 				"alt",
 				"title",
 				"role",
@@ -88,3190 +88,3136 @@
 				"aria-describedby",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.2.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"map",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"map",
-			"area[alt]:not([href])",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "map",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "map",
+			"childrenSelector": "area[alt]:not([href])",
+			"attributes": [
 				"alt",
 				"title"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"showChildElements",
-			"map",
-			"area[alt]:not([href])",
-			[
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "map",
+			"childrenSelector": "area[alt]:not([href])",
+			"attributes": [
 				"role",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.2.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object[type^=\"image\"]"
-		],
-		[
-			"showAttributes",
-			"object[type^=\"image\"]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "object[type^=\"image\"]",
+			"attributes": [
 				"aria-hidden"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"showAttributes",
-			"object[type^=\"image\"]",
-			[
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "object[type^=\"image\"]",
+			"attributes": [
 				"role",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showChildElements",
-			"object[type^=\"image\"]",
-			"*",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "object[type^=\"image\"]",
+			"childrenSelector": "*",
+			"attributes": [
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.2.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"svg"
-		],
-		[
-			"showElement",
-			"svg",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "svg"
+		},
+		{
+			"helper": "showElement",
+			"selector": "svg",
+			"attributes": [
 				"aria-hidden",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby",
 				"title"
 			]
-		],
-		[
-			"showChildElements",
-			"svg",
-			"title, desc, [aria-label], [aria-describedby], [aria-labelledby], [title]",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg",
+			"childrenSelector": "title, desc, [aria-label], [aria-describedby], [aria-labelledby], [title]",
+			"attributes": [
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby",
 				"title"
 			],
-			{
-				"showMissingAttributes": true,
-				"showContent": true
-			}
-		]
+			"showMissingAttributes": true,
+			"showContent": true
+		}
 	],
 	"1.2.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas"
-		],
-		[
-			"showElement",
-			"canvas",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [
 				"aria-hidden",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showChildElements",
-			"canvas",
-			"*",
-			[
+			"showContent": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "canvas",
+			"childrenSelector": "*",
+			"attributes": [
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.2.6": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed"
-		],
-		[
-			"showAttributes",
-			"embed",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "embed",
+			"attributes": [
 				"aria-hidden",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showChildElements",
-			"embed",
-			"*",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "embed",
+			"childrenSelector": "*",
+			"attributes": [
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.3.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img:not(a img, button img)"
-		],
-		[
-			"showAttributes",
-			"img:not(a img, button img)",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img:not(a img, button img)"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "img:not(a img, button img)",
+			"attributes": [
 				"alt",
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.3.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"map"
-		],
-		[
-			"showChildElements",
-			"map",
-			"area[alt]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "map"
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "map",
+			"childrenSelector": "area[alt]",
+			"attributes": [
 				"alt",
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		]
+			"showMissingAttributes": true
+		}
 	],
 	"1.3.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type=\"image\"][alt]"
-		],
-		[
-			"showAttributes",
-			"input[type=\"image\"][alt]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"][alt]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input[type=\"image\"][alt]",
+			"attributes": [
 				"alt",
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.3.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.3.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
-		],
-		[
-			"showAttributes",
-			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.3.6": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.3.7": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
-		],
-		[
-			"showAttributes",
-			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.3.8": [
-		"disableAllStyles",
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"svg",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "svg",
+			"attributes": [
 				"role",
 				"title",
 				"aria-label"
 			]
-		],
-		[
-			"showChildElements",
-			"svg:has(desc)",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg:has(desc)",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.3.9": [
-		"disableAllStyles",
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"svg:has(desc)",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg:has(desc)",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.3.10": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas"
-		],
-		[
-			"showElement",
-			"canvas:not(:empty), canvas[title], canvas[aria-label], canvas[aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas:not(:empty), canvas[title], canvas[aria-label], canvas[aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"1.3.11": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas[title], canvas[aria-label], canvas[aria-labelledby]"
-		],
-		[
-			"showAttributes",
-			"canvas[title], canvas[aria-label], canvas[aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas[title], canvas[aria-label], canvas[aria-labelledby]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "canvas[title], canvas[aria-label], canvas[aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.3.12": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas"
-		],
-		[
-			"showElement",
-			"canvas",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.3.13": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a, img, map, svg, input[type=\"image\"][alt], object[type^=\"image\"], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby], embed[type^=\"image\"], embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"img, input[type=\"image\"][alt]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a, img, map, svg, input[type=\"image\"][alt], object[type^=\"image\"], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby], embed[type^=\"image\"], embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "img, input[type=\"image\"][alt]",
+			"attributes": [
 				"alt",
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showAttributes",
-			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
-			[
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showAttributes",
-			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
-			[
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showChildElements",
-			"map",
-			"area[alt]",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "map",
+			"childrenSelector": "area[alt]",
+			"attributes": [
 				"alt",
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"showChildElements",
-			"svg:has(desc)",
-			"desc",
-			[
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg:has(desc)",
+			"childrenSelector": "desc",
+			"attributes": [
 				"role",
 				"title",
 				"aria-label"
 			],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showElement",
-			"canvas",
-			[
+			"showContent": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"1.4.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img[alt]"
-		],
-		[
-			"showAttributes",
-			"img[alt]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img[alt]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "img[alt]",
+			"attributes": [
 				"alt",
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.4.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"map",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"map",
-			"area[alt]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "map",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "map",
+			"childrenSelector": "area[alt]",
+			"attributes": [
 				"alt",
 				"aria-label",
 				"aria-labelledby",
 				"title"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		]
+			"showMissingAttributes": true
+		}
 	],
 	"1.4.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type=\"image\"][alt]"
-		],
-		[
-			"showAttributes",
-			"input[type=\"image\"][alt]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"][alt]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input[type=\"image\"][alt]",
+			"attributes": [
 				"alt",
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.4.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object[type^=\"image\"]"
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]"
+		}
 	],
 	"1.4.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
-		],
-		[
-			"showAttributes",
-			"object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "object[type^=\"image\"][title], object[type^=\"image\"][aria-label], object[type^=\"image\"][aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.4.6": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed[type^=\"image\"]"
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]"
+		}
 	],
 	"1.4.7": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
-		],
-		[
-			"showAttributes",
-			"embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "embed[type^=\"image\"][title], embed[type^=\"image\"][aria-label], embed[type^=\"image\"][aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.4.8": [
-		"disableAllStyles",
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"svg",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "svg",
+			"attributes": [
 				"role",
 				"title",
 				"aria-label"
 			]
-		],
-		[
-			"showChildElements",
-			"svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.4.9": [
-		"disableAllStyles",
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.4.10": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas"
-		],
-		[
-			"showElement",
-			"canvas",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.4.11": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas[title], canvas[aria-label], canvas[aria-labelledby]"
-		],
-		[
-			"showAttributes",
-			"canvas[title], canvas[aria-label], canvas[aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas[title], canvas[aria-label], canvas[aria-labelledby]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "canvas[title], canvas[aria-label], canvas[aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"1.4.12": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas"
-		],
-		[
-			"showElement",
-			"canvas",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas"
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.5.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, area, object, embed, svg, canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, area, object, embed, svg, canvas",
+			"showTag": true
+		}
 	],
 	"1.5.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.6.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"img",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "img",
+			"attributes": [
 				"alt",
 				"longdesc"
 			],
-			{
-				"showMissing": true
-			}
-		]
+			"showMissing": true
+		}
 	],
 	"1.6.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.6.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.6.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"input[type=\"image\"]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input[type=\"image\"]",
+			"attributes": [
 				"alt",
 				"aria-describedby"
 			],
-			{
-				"showMissing": true
-			}
-		]
+			"showMissing": true
+		}
 	],
 	"1.6.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type=\"image\"][aria-describedby]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"input[type=\"image\"][aria-describedby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"][aria-describedby]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input[type=\"image\"][aria-describedby]",
+			"attributes": [
 				"alt",
 				"aria-describedby"
 			]
-		]
+		}
 	],
 	"1.6.6": [
-		"disableAllStyles",
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"svg",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "svg",
+			"attributes": [
 				"aria-label"
 			]
-		],
-		[
-			"showChildElements",
-			"svg",
-			"title, desc",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg",
+			"childrenSelector": "title, desc",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.6.7": [
-		"disableAllStyles",
-		[
-			"outline",
-			"svg:has(desc), svg[aria-label]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"svg[aria-label]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "svg:has(desc), svg[aria-label]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "svg[aria-label]",
+			"attributes": [
 				"aria-label"
 			]
-		],
-		[
-			"showChildElements",
-			"svg:has(desc)",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg:has(desc)",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.6.8": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showElement",
-			"canvas",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.6.9": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showElement",
-			"canvas",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.6.10": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "img[alt][aria-describedby], area[alt][aria-describedby], object[type^=\"image\"][aria-describedby], embed[type^=\"image\"][aria-describedby], svg[aria-describedby], canvas[aria-describedby]",
+			"attributes": [
 				"aria-describedby"
 			]
-		]
+		}
 	],
 	"1.7.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"img",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "img",
+			"attributes": [
 				"alt",
 				"longdesc"
 			]
-		]
+		}
 	],
 	"1.7.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"input[type=\"image\"]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input[type=\"image\"]",
+			"attributes": [
 				"alt",
 				"longdesc",
 				"aria-describedby"
 			]
-		]
+		}
 	],
 	"1.7.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"object[type^=\"image\"][longdesc], object[type^=\"image\"][alt]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "object[type^=\"image\"][longdesc], object[type^=\"image\"][alt]",
+			"attributes": [
 				"longdesc",
 				"alt"
 			]
-		]
+		}
 	],
 	"1.7.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"embed[type^=\"image\"][longdesc], embed[type^=\"image\"][alt]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "embed[type^=\"image\"][longdesc], embed[type^=\"image\"][alt]",
+			"attributes": [
 				"longdesc",
 				"alt"
 			]
-		]
+		}
 	],
 	"1.7.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"svg",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"svg:has(desc)",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "svg",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg:has(desc)",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.7.6": [
-		"disableAllStyles",
-		[
-			"outline",
-			"svg:has(desc)",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"svg:has(desc)",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "svg:has(desc)",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg:has(desc)",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.7.7": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showElement",
-			"canvas",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.7.8": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showElement",
-			"canvas",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"1.8.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img",
+			"showTag": true
+		}
 	],
 	"1.8.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.8.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.8.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.8.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		}
 	],
 	"1.9.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img",
+			"showTag": true
+		}
 	],
 	"1.9.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.9.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.9.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed[type^=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed[type^=\"image\"]",
+			"showTag": true
+		}
 	],
 	"1.9.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "canvas",
+			"showTag": true
+		}
 	],
 	"1.10.1": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"img, input[type=\"image\"]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "img, input[type=\"image\"]",
+			"attributes": [
 				"alt"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"outline",
-			"figure"
-		],
-		[
-			"showElement",
-			"figure",
-			[
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "outline",
+			"selector": "figure"
+		},
+		{
+			"helper": "showElement",
+			"selector": "figure",
+			"attributes": [
 				"role"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"1.10.2": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"object[type^=\"image\"]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "object[type^=\"image\"]",
+			"attributes": [
 				"type"
 			]
-		],
-		[
-			"outline",
-			"figure"
-		],
-		[
-			"showElement",
-			"figure",
-			[
+		},
+		{
+			"helper": "outline",
+			"selector": "figure"
+		},
+		{
+			"helper": "showElement",
+			"selector": "figure",
+			"attributes": [
 				"role"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"1.10.3": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"embed",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "embed",
+			"attributes": [
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showEmpty": true
-			}
-		],
-		[
-			"outline",
-			"figure, embed"
-		],
-		[
-			"showElement",
-			"figure",
-			[
+			"showEmpty": true
+		},
+		{
+			"helper": "outline",
+			"selector": "figure, embed"
+		},
+		{
+			"helper": "showElement",
+			"selector": "figure",
+			"attributes": [
 				"role"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"1.10.4": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"svg",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "svg",
+			"attributes": [
 				"aria-label"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"showChildElements",
-			"svg:has(desc)",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"outline",
-			"figure"
-		],
-		[
-			"showElement",
-			"figure",
-			[
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "svg:has(desc)",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "outline",
+			"selector": "figure"
+		},
+		{
+			"helper": "showElement",
+			"selector": "figure",
+			"attributes": [
 				"role"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"1.10.5": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"canvas",
-			[],
-			{
-				"showContent": true,
-				"showEmpty": true
-			}
-		],
-		[
-			"outline",
-			"figure"
-		],
-		[
-			"showElement",
-			"figure",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "canvas",
+			"attributes": [],
+			"showContent": true,
+			"showEmpty": true
+		},
+		{
+			"helper": "outline",
+			"selector": "figure"
+		},
+		{
+			"helper": "showElement",
+			"selector": "figure",
+			"attributes": [
 				"role"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"outline",
-			"figcaption",
-			{
-				"showTag": true
-			}
-		]
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "outline",
+			"selector": "figcaption",
+			"showTag": true
+		}
 	],
 	"2.1.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"iframe"
-		],
-		[
-			"showAttributes",
-			"iframe",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "iframe"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "iframe",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"2.2.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"iframe",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"iframe",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "iframe",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "iframe",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"3.1.1": [],
 	"3.1.2": [],
 	"3.1.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"3.1.4": [],
 	"3.1.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"3.1.6": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"3.2.1": [],
 	"3.2.2": [],
 	"3.2.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, svg, canvas, embed, object[type=\"image\"], input[type=\"image\"]",
+			"showTag": true
+		}
 	],
 	"3.2.4": [],
 	"3.2.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"3.2.6": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"3.3.1": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 4.5,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 4.5,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.3.2": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 4.5,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 4.5,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.3.3": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 3,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 3,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.3.4": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 3,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 3,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.4.1": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 7,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 7,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.4.2": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 7,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 7,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.4.3": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 4.5,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 4.5,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"3.4.4": [
-		[
-			"colorContrast",
-			"Couleur de texte",
-			"Couleur d'arrière-plan",
-			{
-				"minimumRatio": 4.5,
-				"extractor": {
-					"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
-					"left": "color",
-					"right": "backgroundColor"
-				}
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de texte",
+			"rightLabel": "Couleur d'arrière-plan",
+			"minimumRatio": 4.5,
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
 			}
-		]
+		}
 	],
 	"4.1.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.1.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.1.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.2.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.2.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.2.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.3.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.3.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"video, embed, iframe",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"video",
-			"track",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "video, embed, iframe",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "video",
+			"childrenSelector": "track",
+			"attributes": [
 				"type"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		]
+			"showMissingAttributes": true
+		}
 	],
 	"4.4.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.5.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.5.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.6.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.6.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.7.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.7.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.8.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.8.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.9.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.9.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.10.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, audio, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, audio, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.10.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.11.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.11.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.12.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.12.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.13.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.13.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.14.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.14.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.15.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, audio, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, audio, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.15.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, video, audio, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, video, audio, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.16.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.16.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.17.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.18.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"audio, video, object, embed, bgsound, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, bgsound, iframe",
+			"showTag": true
+		}
 	],
 	"4.19.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"audio, video, object, embed, bgsound, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, bgsound, iframe",
+			"showTag": true
+		}
 	],
 	"4.20.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"audio, video, object, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.20.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"audio, video, object, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.20.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"audio, video, object, embed, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "audio, video, object, embed, iframe",
+			"showTag": true
+		}
 	],
 	"4.21.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"object",
-			"param",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "object",
+			"childrenSelector": "param",
+			"attributes": [
 				"wmode"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		]
+			"showMissingAttributes": true
+		}
 	],
 	"4.21.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, svg, canvas, embed, iframe",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"object",
-			"param",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, svg, canvas, embed, iframe",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "object",
+			"childrenSelector": "param",
+			"attributes": [
 				"wmode"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		]
+			"showMissingAttributes": true
+		}
 	],
 	"4.22.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed, object, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed, object, iframe",
+			"showTag": true
+		}
 	],
 	"4.22.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"embed, object, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "embed, object, iframe",
+			"showTag": true
+		}
 	],
 	"5.1.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"table",
-			"> caption",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "table",
+			"childrenSelector": "> caption",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"summary"
 			],
-			{
-				"showMissing": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+			"showMissing": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.2.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"table",
-			"> caption",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "table",
+			"childrenSelector": "> caption",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"summary"
 			],
-			{
-				"showMissing": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+			"showMissing": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.3.1": [
-		"disableAllStyles",
-		[
-			"style",
-			"Linéarise les tableaux",
-			"table, tr, th, td { display: block; }"
-		],
-		[
-			"outline",
-			"td"
-		],
-		[
-			"showElement",
-			"table",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "style",
+			"description": "Linéarise les tableaux",
+			"style": "table, tr, th, td { display: block; }"
+		},
+		{
+			"helper": "outline",
+			"selector": "td"
+		},
+		{
+			"helper": "showElement",
+			"selector": "table",
+			"attributes": [
 				"role"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		]
+			"showMissingAttributes": true
+		}
 	],
 	"5.4.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"table",
-			"> caption",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "table",
+			"childrenSelector": "> caption",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"summary"
 			],
-			{
-				"showMissing": true,
-				"showContent": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+			"showMissing": true,
+			"showContent": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.5.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"table",
-			"> caption",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "table",
+			"childrenSelector": "> caption",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"summary"
 			],
-			{
-				"showMissing": true,
-				"showContent": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+			"showMissing": true,
+			"showContent": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.6.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"table th",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table"
+		},
+		{
+			"helper": "outline",
+			"selector": "table th",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.6.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table"
-		],
-		[
-			"outline",
-			"table th",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table"
+		},
+		{
+			"helper": "outline",
+			"selector": "table th",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.7.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table th"
-		],
-		[
-			"showElement",
-			"table th",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table th"
+		},
+		{
+			"helper": "showElement",
+			"selector": "table th",
+			"attributes": [
 				"id",
 				"scope"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.7.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table th[scope]"
-		],
-		[
-			"showAttributes",
-			"table th",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table th[scope]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table th",
+			"attributes": [
 				"scope"
 			]
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.7.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table th"
-		],
-		[
-			"showElement",
-			"table th",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table th"
+		},
+		{
+			"helper": "showElement",
+			"selector": "table th",
+			"attributes": [
 				"id",
 				"scope"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+			"showMissingAttributes": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.7.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table th",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"table td",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"table th, table td",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table th",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "table td",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table th, table td",
+			"attributes": [
 				"id",
 				"headers"
 			],
-			{
-				"showMissing": true
-			}
-		],
-		[
-			"showAttributes",
-			"table",
-			[
+			"showMissing": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "table",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"5.8.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"table",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showChildElements",
-			"table",
-			"> caption",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showChildElements",
-			"table",
-			"thead",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showChildElements",
-			"table",
-			"th",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showChildElements",
-			"table",
-			"tfoot",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"outline",
-			"td[scope], td[headers], td[colgroup], td[axis]"
-		],
-		[
-			"showElement",
-			"td[scope], td[headers], td[colgroup], td[axis]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "table",
+			"showTag": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "table",
+			"childrenSelector": "> caption",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "table",
+			"childrenSelector": "thead",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "table",
+			"childrenSelector": "th",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "table",
+			"childrenSelector": "tfoot",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "outline",
+			"selector": "td[scope], td[headers], td[colgroup], td[axis]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "td[scope], td[headers], td[colgroup], td[axis]",
+			"attributes": [
 				"scope",
 				"headers",
 				"colgroup",
 				"axis"
 			]
-		]
+		}
 	],
 	"6.1.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link']",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showElement",
-			"a:not([role]), [role='link']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link']",
+			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"6.1.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
-		],
-		[
-			"showElement",
-			"a:not([role]), [role='link']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
 				"title"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) img, [role='link'] img, area[href]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) img, [role='link'] img, area[href]",
+			"attributes": [
 				"alt"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) svg, [role='link'] svg",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showChildElements",
-			"a:not([role]) svg, [role='link'] svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"6.1.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
-		],
-		[
-			"showElement",
-			"a:not([role]), [role='link']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap], a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed, a:not([role]) svg, [role='link'] svg"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
 				"title"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) img, [role='link'] img, area[href]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) img, [role='link'] img, area[href]",
+			"attributes": [
 				"alt"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) svg, [role='link'] svg",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showChildElements",
-			"a:not([role]) svg, [role='link'] svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showElement",
-			"a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) canvas, [role='link'] canvas, a:not([role]) object, [role='link'] object, a:not([role]) embed, [role='link'] embed",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"6.2.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a[title]:not([role]), [role='link'][title]"
-		],
-		[
-			"showElement",
-			"a[title]:not([role]), [role='link'][title]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a[title]:not([role]), [role='link'][title]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[title]:not([role]), [role='link'][title]",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"6.2.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
-		],
-		[
-			"showElement",
-			"a[title]:not([role]), [role='link'][title]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[title]:not([role]), [role='link'][title]",
+			"attributes": [
 				"title"
 			]
-		],
-		[
-			"showElement",
-			"a[title]:not([role]) img, [role='link'][title] img, area[href]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[title]:not([role]) img, [role='link'][title] img, area[href]",
+			"attributes": [
 				"alt"
 			]
-		],
-		[
-			"showElement",
-			"a[title]:not([role]) svg, [role='link'][title] svg",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[title]:not([role]) svg, [role='link'][title] svg",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showChildElements",
-			"a[title]:not([role]) svg, [role='link'][title] svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showElement",
-			"a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "a[title]:not([role]) svg, [role='link'][title] svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"6.2.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
-		],
-		[
-			"showElement",
-			"a[title]:not([role]), [role='link'][title]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a[title]:not([role]), [role='link'][title], img[usemap], a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed, a[title]:not([role]) svg, [role='link'][title] svg"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[title]:not([role]), [role='link'][title]",
+			"attributes": [
 				"title"
 			]
-		],
-		[
-			"showElement",
-			"a[title]:not([role]) img, [role='link'][title] img, area[href]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[title]:not([role]) img, [role='link'][title] img, area[href]",
+			"attributes": [
 				"alt"
 			]
-		],
-		[
-			"showElement",
-			"a[title]:not([role]) svg, [role='link'][title] svg",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[title]:not([role]) svg, [role='link'][title] svg",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showChildElements",
-			"a[title]:not([role]) svg, [role='link'][title] svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showElement",
-			"a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "a[title]:not([role]) svg, [role='link'][title] svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[title]:not([role]) canvas, [role='link'][title] canvas, a[title]:not([role]) object, [role='link'][title] object, a[title]:not([role]) embed, [role='link'][title] embed",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"6.3.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link']"
-		],
-		[
-			"showElement",
-			"a:not([role]), [role='link']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"6.3.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
-		],
-		[
-			"showElement",
-			"a:not([role]), [role='link']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
 				"title"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) img, [role='link'] img, area[href]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) img, [role='link'] img, area[href]",
+			"attributes": [
 				"alt"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) svg, [role='link'] svg",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"attributes": [
 				"aria-label"
 			]
-		],
-		[
-			"showChildElements",
-			"a:not([role]) svg, [role='link'] svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showElement",
-			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"6.3.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
-		],
-		[
-			"showElement",
-			"a:not([role]), [role='link']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
 				"title"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) img, [role='link'] img, area[href]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) img, [role='link'] img, area[href]",
+			"attributes": [
 				"alt"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) svg, [role='link'] svg",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"attributes": [
 				"aria-label"
 			]
-		],
-		[
-			"showChildElements",
-			"a:not([role]) svg, [role='link'] svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showElement",
-			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"6.4.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link']"
-		],
-		[
-			"showElement",
-			"a:not([role]), [role='link']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"6.4.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
-		],
-		[
-			"showElement",
-			"a:not([role]), [role='link']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
 				"title"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) img, [role='link'] img, area[href]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) img, [role='link'] img, area[href]",
+			"attributes": [
 				"alt"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) svg, [role='link'] svg",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"attributes": [
 				"aria-label"
 			]
-		],
-		[
-			"showChildElements",
-			"a:not([role]) svg, [role='link'] svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showElement",
-			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"6.4.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link'], img[usemap]"
-		],
-		[
-			"showElement",
-			"a:not([role]), [role='link']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link'], img[usemap]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
 				"title"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) img, [role='link'] img, area[href]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) img, [role='link'] img, area[href]",
+			"attributes": [
 				"alt"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) svg, [role='link'] svg",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"attributes": [
 				"aria-label"
 			]
-		],
-		[
-			"showChildElements",
-			"a:not([role]) svg, [role='link'] svg",
-			"desc",
-			[],
-			{
-				"showContent": true
-			}
-		],
-		[
-			"showElement",
-			"a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
-			[
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"childrenSelector": "desc",
+			"attributes": [],
+			"showContent": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) canvas, a:not([role]) object, [role='link'] canvas, [role='link'] object",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			],
-			{
-				"showContent": true
-			}
-		]
+			"showContent": true
+		}
 	],
 	"6.5.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a:not([role]), [role='link']"
-		],
-		[
-			"showElement",
-			"a:not([role]) img, [role='link'] img, area[href]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a:not([role]), [role='link']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) img, [role='link'] img, area[href]",
+			"attributes": [
 				"alt"
 			]
-		],
-		[
-			"showElement",
-			"a:not([role]) svg, [role='link'] svg",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]) svg, [role='link'] svg",
+			"attributes": [
 				"aria-label"
 			]
-		]
+		}
 	],
 	"7.1.1": [],
 	"7.1.2": [],
 	"7.1.3": [
-		[
-			"showElement",
-			"[role]",
-			[
+		{
+			"helper": "showElement",
+			"selector": "[role]",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"7.1.4": [
-		[
-			"showElement",
-			"[role]",
-			[
+		{
+			"helper": "showElement",
+			"selector": "[role]",
+			"attributes": [
 				"role"
 			]
-		],
-		[
-			"externalTool",
-			"Validateur W3C",
-			"https://validator.w3.org/check?uri=:url"
-		],
-		"validateLocalPage"
+		},
+		{
+			"helper": "externalTool",
+			"name": "Validateur W3C",
+			"url": "https://validator.w3.org/check?uri=:url"
+		},
+		{
+			"helper": "validateLocalPage"
+		}
 	],
 	"7.1.5": [
-		[
-			"showElement",
-			"[role]",
-			[
+		{
+			"helper": "showElement",
+			"selector": "[role]",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"7.1.6": [
-		[
-			"showElement",
-			"[role='presentation']",
-			[
+		{
+			"helper": "showElement",
+			"selector": "[role='presentation']",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"7.3.3": [
-		[
-			"showElement",
-			"[role]",
-			[
+		{
+			"helper": "showElement",
+			"selector": "[role]",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"8.1.1": [
-		"viewSource"
+		{
+			"helper": "viewSource"
+		}
 	],
 	"8.1.2": [
-		[
-			"externalTool",
-			"Validateur W3C",
-			"https://validator.w3.org/check?uri=:url"
-		],
-		"validateLocalPage"
+		{
+			"helper": "externalTool",
+			"name": "Validateur W3C",
+			"url": "https://validator.w3.org/check?uri=:url"
+		},
+		{
+			"helper": "validateLocalPage"
+		}
 	],
 	"8.1.3": [
-		"viewSource"
+		{
+			"helper": "viewSource"
+		}
 	],
 	"8.2.1": [
-		[
-			"externalTool",
-			"Validateur W3C",
-			"https://validator.w3.org/check?uri=:url"
-		],
-		"validateLocalPage"
+		{
+			"helper": "externalTool",
+			"name": "Validateur W3C",
+			"url": "https://validator.w3.org/check?uri=:url"
+		},
+		{
+			"helper": "validateLocalPage"
+		}
 	],
 	"8.2.2": [
-		[
-			"externalTool",
-			"Validateur W3C",
-			"https://validator.w3.org/check?uri=:url"
-		],
-		"validateLocalPage"
+		{
+			"helper": "externalTool",
+			"name": "Validateur W3C",
+			"url": "https://validator.w3.org/check?uri=:url"
+		},
+		{
+			"helper": "validateLocalPage"
+		}
 	],
 	"8.3.1": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"[lang], [xml\\:lang]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[lang], [xml\\:lang]",
+			"attributes": [
 				"lang",
 				"xml:lang"
 			]
-		]
+		}
 	],
 	"8.4.1": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"[lang], [xml\\:lang]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[lang], [xml\\:lang]",
+			"attributes": [
 				"lang",
 				"xml:lang"
 			]
-		]
+		}
 	],
 	"8.5.1": [
-		[
-			"outline",
-			"title",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "title",
+			"showTag": true
+		}
 	],
 	"8.6.1": [
-		[
-			"showElement",
-			"title",
-			[],
-			{
-				"showContent": true
-			}
-		]
+		{
+			"helper": "showElement",
+			"selector": "title",
+			"attributes": [],
+			"showContent": true
+		}
 	],
 	"8.7.1": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"[lang], [xml\\:lang]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[lang], [xml\\:lang]",
+			"attributes": [
 				"lang",
 				"xml:lang"
 			]
-		]
+		}
 	],
 	"8.8.1": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"[lang], [xml\\:lang]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[lang], [xml\\:lang]",
+			"attributes": [
 				"lang",
 				"xml:lang"
 			]
-		]
+		}
 	],
 	"8.8.2": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"[lang], [xml\\:lang]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[lang], [xml\\:lang]",
+			"attributes": [
 				"lang",
 				"xml:lang"
 			]
-		]
+		}
 	],
 	"8.9.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"h1, h2, h3, h4, h5, h6, p, p:empty, li, blockquote",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"[role='presentation']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "h1, h2, h3, h4, h5, h6, p, p:empty, li, blockquote",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[role='presentation']",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"8.10.1": [
-		"disableAllStyles",
-		[
-			"showAttributes",
-			"[dir]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[dir]",
+			"attributes": [
 				"dir"
 			]
-		]
+		}
 	],
 	"8.10.2": [
-		"disableAllStyles",
-		[
-			"showAttributes",
-			"[dir]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[dir]",
+			"attributes": [
 				"dir"
 			]
-		]
+		}
 	],
 	"9.1.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"h1, [role='heading'][aria-level='1']"
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "h1, [role='heading'][aria-level='1']"
+		}
 	],
 	"9.1.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"[role='heading'][aria-level]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[role='heading'][aria-level]",
+			"attributes": [
 				"aria-level"
 			]
-		],
-		"headingsHierarchy"
+		},
+		{
+			"helper": "headingsHierarchy"
+		}
 	],
 	"9.1.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"[role='heading'][aria-level]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[role='heading'][aria-level]",
+			"attributes": [
 				"aria-level"
 			]
-		]
+		}
 	],
 	"9.1.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"[role='heading'][aria-level]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "h1,h2,h3,h4,h5,h6, [role='heading'][aria-level]",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[role='heading'][aria-level]",
+			"attributes": [
 				"aria-level"
 			]
-		]
+		}
 	],
 	"9.2.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"header, nav, main, footer",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "header, nav, main, footer",
+			"showTag": true
+		}
 	],
 	"9.2.2": [],
 	"9.3.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"ul, ul li",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"[role='list'], [role='list'] [role='listitem']"
-		],
-		[
-			"showAttributes",
-			"[role='list'], [role='list'] [role='listitem']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "ul, ul li",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "[role='list'], [role='list'] [role='listitem']"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[role='list'], [role='list'] [role='listitem']",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"9.3.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"ol, ol li",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"[role='list'], [role='list'] [role='listitem']"
-		],
-		[
-			"showAttributes",
-			"[role='list'], [role='list'] [role='listitem']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "ol, ol li",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "[role='list'], [role='list'] [role='listitem']"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[role='list'], [role='list'] [role='listitem']",
+			"attributes": [
 				"role"
 			]
-		]
+		}
 	],
 	"9.3.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"dl,dt,dd",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "dl,dt,dd",
+			"showTag": true
+		}
 	],
 	"9.4.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"abbr"
-		],
-		[
-			"showAttributes",
-			"abbr, a",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "abbr"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "abbr, a",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"9.5.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"abbr"
-		],
-		[
-			"showAttributes",
-			"abbr, a",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "abbr"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "abbr, a",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"9.6.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"q",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "q",
+			"showTag": true
+		}
 	],
 	"9.6.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"blockquote",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "blockquote",
+			"showTag": true
+		}
 	],
 	"10.1.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"basefont, blink, center, font, marquee, s, strike, tt, u, bing, small",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "basefont, blink, center, font, marquee, s, strike, tt, u, bing, small",
+			"showTag": true
+		}
 	],
 	"10.1.2": [
-		"disableAllStyles",
-		[
-			"showElement",
-			"[align],[alink], [background], [bgcolor], [border], [cellpading], [cellspacing], [char], [charoff], [clear], [compact], [color], [frameborder], [hspace], [link], [marginheight], [marginwidth], [text], [valign], [vlink], [vspace], [size], [width], [height]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[align],[alink], [background], [bgcolor], [border], [cellpading], [cellspacing], [char], [charoff], [clear], [compact], [color], [frameborder], [hspace], [link], [marginheight], [marginwidth], [text], [valign], [vlink], [vspace], [size], [width], [height]",
+			"attributes": [
 				"align",
 				"alink",
 				"background",
@@ -3297,16 +3243,22 @@
 				"width",
 				"height"
 			]
-		]
+		}
 	],
 	"10.1.3": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"10.2.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"10.3.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"10.4.1": [],
 	"10.4.2": [],
@@ -3314,56 +3266,48 @@
 	"10.5.1": [],
 	"10.5.2": [],
 	"10.5.3": [
-		[
-			"style",
-			"Cache les images de fond",
-			"* { background-image: none !important; }"
-		]
+		{
+			"helper": "style",
+			"description": "Cache les images de fond",
+			"style": "* { background-image: none !important; }"
+		}
 	],
 	"10.6.1": [
-		[
-			"outline",
-			"a[href]",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"colorContrast",
-			"Couleur de lien",
-			"Couleur de texte",
-			{
-				"minimumRatio": 3
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "a[href]",
+			"showTag": true
+		},
+		{
+			"helper": "colorContrast",
+			"leftLabel": "Couleur de lien",
+			"rightLabel": "Couleur de texte",
+			"minimumRatio": 3
+		}
 	],
 	"10.7.1": [],
 	"10.7.2": [],
 	"10.7.3": [
-		[
-			"outline",
-			"a"
-		]
+		{
+			"helper": "outline",
+			"selector": "a"
+		}
 	],
 	"10.8.1": [],
 	"10.8.2": [],
 	"10.8.3": [
-		[
-			"outline",
-			"object, embed, svg, canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas",
+			"showTag": true
+		}
 	],
 	"10.8.4": [
-		[
-			"outline",
-			"object, embed, svg, canvas",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas",
+			"showTag": true
+		}
 	],
 	"10.9.1": [],
 	"10.10.1": [],
@@ -3371,479 +3315,493 @@
 	"10.12.1": [],
 	"10.12.2": [],
 	"10.13.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"[hidden], [aria-hidden]"
-		],
-		[
-			"showAttributes",
-			"[hidden], [aria-hidden]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "[hidden], [aria-hidden]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[hidden], [aria-hidden]",
+			"attributes": [
 				"hidden",
 				"aria-hidden"
 			]
-		]
+		}
 	],
 	"10.14.1": [],
 	"10.14.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.14.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.14.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.15.1": [],
 	"10.15.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.15.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"10.15.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, object, video, embed, svg, canvas, iframe",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"showTag": true
+		}
 	],
 	"11.1.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		],
-		[
-			"showAttributes",
-			"[id]",
-			[
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[id]",
+			"attributes": [
 				"id"
 			]
-		],
-		[
-			"showElement",
-			"label",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "label",
+			"attributes": [
 				"for"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		]
+			"showMissingAttributes": true
+		}
 	],
 	"11.1.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
+			"attributes": [
 				"id"
 			]
-		],
-		[
-			"showAttributes",
-			"label",
-			[
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "label",
+			"attributes": [
 				"for"
 			],
-			{
-				"showMissing": true
-			}
-		]
+			"showMissing": true
+		}
 	],
 	"11.1.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
-		],
-		[
-			"showAttributes",
-			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
+			"attributes": [
 				"aria-labelledby"
 			]
-		],
-		[
-			"showElement",
-			"[id]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[id]",
+			"attributes": [
 				"id"
 			]
-		]
+		}
 	],
 	"11.1.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
-		],
-		[
-			"showAttributes",
-			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
+			"attributes": [
 				"aria-label"
 			]
-		]
+		}
 	],
 	"11.1.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
-		],
-		[
-			"showElement",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
+			"attributes": [
 				"title",
 				"placeholder"
 			]
-		]
+		}
 	],
 	"11.2.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label, input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
+			"attributes": [
 				"id"
 			]
-		],
-		[
-			"showAttributes",
-			"label",
-			[
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "label",
+			"attributes": [
 				"for"
 			],
-			{
-				"showMissing": true
-			}
-		]
+			"showMissing": true
+		}
 	],
 	"11.2.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
-		],
-		[
-			"showElement",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"11.2.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
-		],
-		[
-			"showAttributes",
-			"input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
+			"attributes": [
 				"aria-label"
 			]
-		]
+		}
 	],
 	"11.2.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
-		],
-		[
-			"showElement",
-			"input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
+			"attributes": [
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"11.3.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"11.3.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"11.4.1": [],
 	"11.5.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"fieldset, legend",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "fieldset, legend",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		}
 	],
 	"11.6.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"fieldset, legend",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "fieldset, legend",
+			"showTag": true
+		}
 	],
 	"11.7.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"fieldset, legend",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "fieldset, legend",
+			"showTag": true
+		}
 	],
 	"11.8.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"select"
-		],
-		[
-			"showElement",
-			"select",
-			[],
-			{
-				"showEmpty": true
-			}
-		],
-		[
-			"showChildElements",
-			"select",
-			"optgroup",
-			[],
-			{
-				"showEmpty": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "select"
+		},
+		{
+			"helper": "showElement",
+			"selector": "select",
+			"attributes": [],
+			"showEmpty": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "select",
+			"childrenSelector": "optgroup",
+			"attributes": [],
+			"showEmpty": true
+		}
 	],
 	"11.8.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"select:has(optgroup)"
-		],
-		[
-			"showElement",
-			"select:has(optgroup)",
-			[],
-			{
-				"showEmpty": true
-			}
-		],
-		[
-			"showChildElements",
-			"select:has(optgroup)",
-			"optgroup",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "select:has(optgroup)"
+		},
+		{
+			"helper": "showElement",
+			"selector": "select:has(optgroup)",
+			"attributes": [],
+			"showEmpty": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "select:has(optgroup)",
+			"childrenSelector": "optgroup",
+			"attributes": [
 				"label"
 			],
-			{
-				"showMissingAttributes": true
-			}
-		]
+			"showMissingAttributes": true
+		}
 	],
 	"11.8.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"select:has(optgroup)"
-		],
-		[
-			"showElement",
-			"select:has(optgroup)",
-			[],
-			{
-				"showEmpty": true
-			}
-		],
-		[
-			"showChildElements",
-			"select:has(optgroup)",
-			"optgroup",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "select:has(optgroup)"
+		},
+		{
+			"helper": "showElement",
+			"selector": "select:has(optgroup)",
+			"attributes": [],
+			"showEmpty": true
+		},
+		{
+			"helper": "showChildElements",
+			"selector": "select:has(optgroup)",
+			"childrenSelector": "optgroup",
+			"attributes": [
 				"label"
 			]
-		]
+		}
 	],
 	"11.9.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"button, [type='submit'], [type='reset'], [type='image'], [type='button']"
-		],
-		[
-			"showElement",
-			"button, [type='submit'], [type='reset'], [type='image'], [type='button']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "button, [type='submit'], [type='reset'], [type='image'], [type='button']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "button, [type='submit'], [type='reset'], [type='image'], [type='button']",
+			"attributes": [
 				"type",
 				"value",
 				"alt",
 				"title",
 				"aria-label"
 			]
-		],
-		[
-			"showAttributes",
-			"[aria-labelledby]",
-			[
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "[aria-labelledby]",
+			"attributes": [
 				"aria-labelledby"
 			]
-		],
-		[
-			"showElement",
-			"[id]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[id]",
+			"attributes": [
 				"id"
 			]
-		]
+		}
 	],
 	"11.9.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]"
-		],
-		[
-			"showElement",
-			"form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "form button[aria-labelledby], [type='submit'][aria-labelledby], [type='reset'][aria-labelledby], [type='image'][aria-labelledby], [type='button'][aria-labelledby]",
+			"attributes": [
 				"aria-labelledby"
 			]
-		],
-		[
-			"showElement",
-			"[id]",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[id]",
+			"attributes": [
 				"id"
 			]
-		]
+		}
 	],
 	"11.10.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[required], [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[required], [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
+			"attributes": [
 				"required",
 				"title",
 				"aria-labelledby",
@@ -3851,32 +3809,32 @@
 				"aria-describedby",
 				"id"
 			]
-		],
-		[
-			"showElement",
-			"[aria-required='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-required='true']",
+			"attributes": [
 				"aria-required"
 			]
-		]
+		}
 	],
 	"11.10.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[required], [aria-label], [aria-labelledby], [aria-describedby], [id], input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[required], [aria-label], [aria-labelledby], [aria-describedby], [id], input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
+			"attributes": [
 				"title",
 				"required",
 				"aria-label",
@@ -3884,56 +3842,58 @@
 				"aria-describedby",
 				"id"
 			]
-		],
-		[
-			"showElement",
-			"[aria-required='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-required='true']",
+			"attributes": [
 				"aria-required"
 			]
-		]
+		}
 	],
 	"11.10.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[required], [aria-labelledby], [aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[required], [aria-labelledby], [aria-describedby], [id]",
+			"attributes": [
 				"required",
 				"aria-labelledby",
 				"aria-describedby",
 				"id"
 			]
-		],
-		[
-			"showElement",
-			"[aria-required='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-required='true']",
+			"attributes": [
 				"aria-required"
 			]
-		]
+		}
 	],
 	"11.10.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter, [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter, [title], [aria-labelledby], [aria-label], [aria-describedby], [id]",
+			"attributes": [
 				"type",
 				"title",
 				"aria-labelledby",
@@ -3941,79 +3901,81 @@
 				"aria-describedby",
 				"id"
 			]
-		],
-		[
-			"showElement",
-			"[aria-invalid='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-invalid='true']",
+			"attributes": [
 				"aria-invalid"
 			]
-		]
+		}
 	],
 	"11.10.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-label], [aria-labelledby], [aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-label], [aria-labelledby], [aria-describedby], [id]",
+			"attributes": [
 				"aria-label",
 				"aria-labelledby",
 				"aria-describedby",
 				"id"
 			]
-		],
-		[
-			"showElement",
-			"[aria-invalid='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-invalid='true']",
+			"attributes": [
 				"aria-invalid"
 			]
-		]
+		}
 	],
 	"11.10.6": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-labelledby], [aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-labelledby], [aria-describedby], [id]",
+			"attributes": [
 				"aria-labelledby",
 				"aria-describedby",
 				"id"
 			]
-		]
+		}
 	],
 	"11.10.7": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[required], [title], [aria-label], [aria-labelledby], [aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[required], [title], [aria-label], [aria-labelledby], [aria-describedby], [id]",
+			"attributes": [
 				"required",
 				"title",
 				"aria-label",
@@ -4021,91 +3983,95 @@
 				"aria-describedby",
 				"id"
 			]
-		],
-		[
-			"showElement",
-			"[aria-required='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-required='true']",
+			"attributes": [
 				"aria-required"
 			]
-		],
-		[
-			"showElement",
-			"[aria-invalid='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-invalid='true']",
+			"attributes": [
 				"aria-invalid"
 			]
-		]
+		}
 	],
 	"11.10.8": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-label], [aria-labelledby], [aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-label], [aria-labelledby], [aria-describedby], [id]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby",
 				"aria-describedby",
 				"id"
 			]
-		],
-		[
-			"showElement",
-			"[aria-required='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-required='true']",
+			"attributes": [
 				"aria-required"
 			]
-		],
-		[
-			"showElement",
-			"[aria-invalid='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-invalid='true']",
+			"attributes": [
 				"aria-invalid"
 			]
-		]
+		}
 	],
 	"11.10.9": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-labelledby], [aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-labelledby], [aria-describedby], [id]",
+			"attributes": [
 				"aria-labelledby",
 				"aria-describedby",
 				"id"
 			]
-		]
+		}
 	],
 	"11.10.10": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
-		],
-		[
-			"showElement",
-			"input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input[title]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[title], textarea[title], output[title], progress[title], meter[title]",
+			"attributes": [
 				"title",
 				"placeholder"
 			]
-		]
+		}
 	],
 	"11.11.1": [],
 	"11.11.2": [],
@@ -4114,378 +4080,392 @@
 	"11.13.1": [],
 	"11.13.2": [],
 	"11.14.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[title], [aria-label], [aria-describedby], [aria-labelledby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[title], [aria-label], [aria-describedby], [aria-labelledby], [id]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby",
 				"id"
 			]
-		]
+		}
 	],
 	"11.14.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-label]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-label]",
+			"attributes": [
 				"aria-label"
 			]
-		],
-		[
-			"showElement",
-			"[aria-invalid='true']",
-			[
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-invalid='true']",
+			"attributes": [
 				"aria-invalid"
 			]
-		]
+		}
 	],
 	"11.14.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-describedby], [id]",
+			"attributes": [
 				"aria-describedby",
 				"id"
 			]
-		]
+		}
 	],
 	"11.14.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[title], [aria-label], [aria-labelledby], [aria-describedby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[title], [aria-label], [aria-labelledby], [aria-describedby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-labelledby",
 				"aria-describedby"
 			]
-		]
+		}
 	],
 	"11.14.5": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-label]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-label]",
+			"attributes": [
 				"aria-label"
 			]
-		]
+		}
 	],
 	"11.14.6": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"outline",
-			"input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
-		],
-		[
-			"showElement",
-			"[aria-describedby], [id]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "[aria-describedby], [id]",
+			"attributes": [
 				"aria-describedby",
 				"id"
 			]
-		]
+		}
 	],
 	"11.15.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"label",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showElement",
-			"[title], [aria-label], [aria-describedby], [aria-labelledby]",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "label",
+			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "[title], [aria-label], [aria-describedby], [aria-labelledby]",
+			"attributes": [
 				"title",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
 			]
-		]
+		}
 	],
 	"12.1.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.2.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.2.2": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.4.2": [
-		[
-			"externalTool",
-			"Validateur de liens",
-			"https://validator.w3.org/checklink?uri=:url"
-		]
+		{
+			"helper": "externalTool",
+			"name": "Validateur de liens",
+			"url": "https://validator.w3.org/checklink?uri=:url"
+		}
 	],
 	"12.5.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.5.3": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.6.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.6.3": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"12.10.1": [],
 	"12.10.2": [],
 	"12.10.3": [],
 	"12.10.4": [
-		[
-			"outline",
-			"header, main, nav, footer, input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='search']"
-		],
-		[
-			"showElement",
-			"header, main, nav, footer, input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='search']",
-			[
+		{
+			"helper": "outline",
+			"selector": "header, main, nav, footer, input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='search']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "header, main, nav, footer, input[role='search'], form[role='search'], [role='main'], [role='banner'], [role='navigation'], [role='contentinfo'], [role='search']",
+			"attributes": [
 				"role"
 			],
-			{
-				"showTag": true,
-				"showMissingAttributes": true
-			}
-		]
+			"showTag": true,
+			"showMissingAttributes": true
+		}
 	],
 	"12.11.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a[href^='#']"
-		],
-		[
-			"showElement",
-			"a[href^='#']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a[href^='#']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[href^='#']",
+			"attributes": [
 				"href"
 			],
-			{
-				"showTag": true
-			}
-		]
+			"showTag": true
+		}
 	],
 	"12.11.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a[href^='#']"
-		],
-		[
-			"showElement",
-			"a[href^='#']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a[href^='#']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[href^='#']",
+			"attributes": [
 				"href"
 			],
-			{
-				"showTag": true
-			}
-		]
+			"showTag": true
+		}
 	],
 	"12.11.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a[href^='#']"
-		],
-		[
-			"showElement",
-			"a[href^='#']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a[href^='#']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[href^='#']",
+			"attributes": [
 				"href"
 			],
-			{
-				"showTag": true
-			}
-		]
+			"showTag": true
+		}
 	],
 	"12.11.4": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a[href^='#']"
-		],
-		[
-			"showElement",
-			"a[href^='#']",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a[href^='#']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a[href^='#']",
+			"attributes": [
 				"href"
 			],
-			{
-				"showTag": true
-			}
-		]
+			"showTag": true
+		}
 	],
 	"12.13.1": [
-		[
-			"style",
-			"Renforce la visibilité du focus (encadré rouge)",
-			":focus{ border: 2px solid red !important; }"
-		]
+		{
+			"helper": "style",
+			"description": "Renforce la visibilité du focus (encadré rouge)",
+			"style": ":focus{ border: 2px solid red !important; }"
+		}
 	],
 	"12.13.2": [
-		[
-			"style",
-			"Renforce la visibilité du focus (encadré rouge)",
-			":focus{ border: 2px solid red !important; }"
-		]
+		{
+			"helper": "style",
+			"description": "Renforce la visibilité du focus (encadré rouge)",
+			"style": ":focus{ border: 2px solid red !important; }"
+		}
 	],
 	"12.14.1": [
-		[
-			"style",
-			"Renforce la visibilité du focus (encadré rouge)",
-			":focus{ border: 2px solid red !important; }"
-		]
+		{
+			"helper": "style",
+			"description": "Renforce la visibilité du focus (encadré rouge)",
+			"style": ":focus{ border: 2px solid red !important; }"
+		}
 	],
 	"13.1.1": [
-		[
-			"outline",
-			"object, embed, svg, canvas",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showElement",
-			"[http-equiv='refresh']",
-			[
+		{
+			"helper": "outline",
+			"selector": "object, embed, svg, canvas",
+			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "[http-equiv='refresh']",
+			"attributes": [
 				"http-equiv",
 				"content"
 			]
-		]
+		}
 	],
 	"13.1.2": [
-		[
-			"showElement",
-			"[http-equiv='refresh']",
-			[
+		{
+			"helper": "showElement",
+			"selector": "[http-equiv='refresh']",
+			"attributes": [
 				"http-equiv",
 				"content"
 			]
-		]
+		}
 	],
 	"13.1.3": [],
 	"13.1.4": [],
 	"13.2.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"a[target]:not([target='_self'], [target='_top'], [target='_parent'])"
-		],
-		[
-			"showAttributes",
-			"a[target]:not([target='_self'], [target='_top'], [target='_parent'])",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "a[target]:not([target='_self'], [target='_top'], [target='_parent'])"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "a[target]:not([target='_self'], [target='_top'], [target='_parent'])",
+			"attributes": [
 				"title",
 				"target"
 			]
-		]
+		}
 	],
 	"13.2.2": [
-		"disableAllStyles",
-		[
-			"outline",
-			"object, embed",
-			{
-				"showTag": true
-			}
-		],
-		[
-			"showAttributes",
-			"object, embed",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "object, embed",
+			"showTag": true
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "object, embed",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"13.2.3": [
-		"disableAllStyles",
-		[
-			"outline",
-			"input,select,textarea,button"
-		],
-		[
-			"showAttributes",
-			"input,select,textarea,button",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "input,select,textarea,button"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "input,select,textarea,button",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"13.3.1": [],
 	"13.4.1": [],
@@ -4496,72 +4476,80 @@
 	"13.7.1": [],
 	"13.8.1": [],
 	"13.9.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"dfn,dl,dt,dd",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "dfn,dl,dt,dd",
+			"showTag": true
+		}
 	],
 	"13.10.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"dfn,dl,dt,dd",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "dfn,dl,dt,dd",
+			"showTag": true
+		}
 	],
 	"13.11.1": [
-		"disableAllStyles",
-		[
-			"showAttributes",
-			"*",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "*",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"13.12.1": [
-		"disableAllStyles",
-		[
-			"showAttributes",
-			"*",
-			[
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "showAttributes",
+			"selector": "*",
+			"attributes": [
 				"title"
 			]
-		]
+		}
 	],
 	"13.13.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"13.14.1": [
-		"disableAllStyles"
+		{
+			"helper": "disableAllStyles"
+		}
 	],
 	"13.15.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, svg, canvas, embed, object",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, svg, canvas, embed, object",
+			"showTag": true
+		}
 	],
 	"13.15.2": [],
 	"13.15.3": [],
 	"13.16.1": [
-		"disableAllStyles",
-		[
-			"outline",
-			"img, svg, canvas, embed, object",
-			{
-				"showTag": true
-			}
-		]
+		{
+			"helper": "disableAllStyles"
+		},
+		{
+			"helper": "outline",
+			"selector": "img, svg, canvas, embed, object",
+			"showTag": true
+		}
 	],
 	"13.16.2": [],
 	"13.16.3": [],

@@ -5,6 +5,8 @@ import toggleInlineStyles from '../api/toggleInlineStyles';
 
 /**
  *	Describes the helper.
+ *
+ *	@param {object} intl - Intl API.
  */
 export const describe = (intl) =>
 	intl.formatHTMLMessage({
