@@ -3338,7 +3338,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"selector": "img, object, video, embed, svg, canvas, iframe, input[type=\"image\"]",
 			"showTag": true
 		}
 	],
@@ -3348,7 +3348,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"selector": "img, object, video, embed, svg, canvas, iframe, input[type=\"image\"]",
 			"showTag": true
 		}
 	],
@@ -3358,7 +3358,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"selector": "img, object, video, embed, svg, canvas, iframe, input[type=\"image\"]",
 			"showTag": true
 		}
 	],
@@ -3369,7 +3369,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"selector": "img, object, video, embed, svg, canvas, iframe, input[type=\"image\"]",
 			"showTag": true
 		}
 	],
@@ -3379,7 +3379,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"selector": "img, object, video, embed, svg, canvas, iframe, input[type=\"image\"]",
 			"showTag": true
 		}
 	],
@@ -3389,7 +3389,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "img, object, video, embed, svg, canvas, iframe",
+			"selector": "img, object, video, embed, svg, canvas, iframe, input[type=\"image\"]",
 			"showTag": true
 		}
 	],
