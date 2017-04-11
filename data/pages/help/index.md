@@ -63,3 +63,29 @@ Pour chaque couleur, il est possible d'éditer directement son code hexadécimal
 * *sélecteur de texte* : cliquez-dessus, puis sélectionnez une zone de texte dans la page pour extraire sa couleur.
 
 Pour certains tests, vous trouverez également un bouton permettant d'extraire les deux couleurs d'un seul coup depuis une sélection de texte. Dans l'exemple ci-dessus, il extraiera la couleur de texte et d'arrière-plan.
+
+## Validateur W3C
+
+![Boutons Validateur W3C](page://w3c-validator.png)
+
+Le bouton "Validateur W3C" sert à valider le code source d'un site en ligne via https://validator.w3.org.
+
+Le bouton "Validateur W3C (HTML local)" sert à valider le code source d'un site non disponible en ligne (*http://localhost*, intranet, site protégé par .htaccess, etc.). *Note : valider le code source d'un fichier (`file://...` dans la barre d'adresse du navigateur) n'est pas supporté*.
+
+## Validateur de liens
+
+![Boutons Validateur de liens](page://link-checker.png)
+
+Le bouton "Validateur de liens" sert à vérifier que les liens de la page courante sont fonctionnels via https://validator.w3.org/checklink.
+
+## Hiérarchie de titres
+
+![Hiérarchie de titres : erreur](page://titles-error.png)
+
+Cet outil, utilisé dans le test 3-2016 n°9.1.2, affiche la hiérarchie de titres de la page. Chaque titre (balises `h1` à `h6`, ou élément avec attribut `aria-level`) est listé ici dans l'ordre d'apparition des éléments dans le DOM. Si une erreur dans la hiérarchie est détectée, les titres manquants et leur niveau sont affichés dans la liste.
+
+## Voir les sources
+
+![Voir les sources](page://view-sources.png)
+
+Le bouton "Voir les sources" affiche le code source de la page dans un nouvel onglet.
