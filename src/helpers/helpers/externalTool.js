@@ -22,7 +22,7 @@ export const describe = (intl, {name} = defaults) =>
 		id: 'Helper.externalTool'
 	}, {
 		name,
-		hasname: !!name
+		hasName: !!name
 	});
 
 /**
