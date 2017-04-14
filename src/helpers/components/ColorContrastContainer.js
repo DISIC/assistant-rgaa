@@ -107,11 +107,15 @@ class ColorContrastContainer extends Component {
 				<ColorInput
 					id={id}
 					color={this.state[name]}
-					onChangeColor={() => this.handleChangeColor(name)}
+					onChange={(value) =>
+						this.handleChangeColor(name, value)
+					}
 				>
 					<ToggleButton
 						pressed={pickedColor === name && pickRequest === REQUEST_PIXEL_COLOR}
-						onPress={() => this.handlePick(name, REQUEST_PIXEL_COLOR)}
+						onPress={() =>
+							this.handlePick(name, REQUEST_PIXEL_COLOR)
+						}
 						title={intl.formatMessage({
 							id: 'ColorInput.pickPixelButton.title'
 						})}
@@ -121,7 +125,9 @@ class ColorContrastContainer extends Component {
 
 					<ToggleButton
 						pressed={pickedColor === name && pickRequest === REQUEST_TEXT_COLOR}
-						onClick={() => this.handlePick(name, REQUEST_TEXT_COLOR)}
+						onClick={() =>
+							this.handlePick(name, REQUEST_TEXT_COLOR)
+						}
 						title={intl.formatMessage({
 							id: 'ColorInput.pickTextButton.title'
 						})}
