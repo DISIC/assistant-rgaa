@@ -1,4 +1,5 @@
 import serializeAttributes from './serializeAttributes';
+import {restoreAllAttributes} from './muteAttributes';
 
 
 
@@ -18,7 +19,13 @@ const escape = (html) =>
  */
 const innerHtml = (element) => {
 	const copy = element.clone();
+
+	// removes extension's elements
 	copy.find('[class*=rgaaExt]').remove();
+
+	// restores muted attributees
+	restoreAllAttributes(copy);
+
 	return escape(copy.html());
 };
 
