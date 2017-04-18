@@ -75,7 +75,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "img"
+			"selector": "img:not(a img, button img)"
 		},
 		{
 			"helper": "showAttributes",
