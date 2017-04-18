@@ -1,6 +1,6 @@
 .Form-row {
 	display: flex;
-	align-items: flex-end;
+	align-content: stretch;
 	margin: 0 vr(-1/4) vr(1/2) vr(-1/4);
 
 	> * {

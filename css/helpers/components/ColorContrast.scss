@@ -2,4 +2,12 @@
 	.Form {
 		margin-bottom: vr(1/2);
 	}
+
+	.Form-row {
+		max-width: vr(30);
+
+		@media screen and (max-width: vr(20)) {
+			display: block;
+		}
+	}
 }
