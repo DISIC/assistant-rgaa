@@ -27,6 +27,7 @@ export default function createInstancePool() {
 		const tabId = instance.removePopup();
 		instances[tabId] = instance;
 		delete instances[popupId];
+		return tabId;
 	};
 
 	// Registers the popup id on which the instance runs.

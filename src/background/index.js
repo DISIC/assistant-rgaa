@@ -16,9 +16,10 @@ import {getPixelAt} from '../common/api/image';
 import {validateLocalPage} from '../common/api/validateLocalPage';
 import {viewSource} from '../common/api/viewSource';
 import {DEFAULT_VERSION, getReferenceOption} from '../common/api/reference';
+import {Position} from '../common/api/panel';
 import {setReferenceVersion} from '../common/actions/reference';
 import {
-	setPageInfo, open as openPanelAction, close as closePanelAction
+	setPosition, setPageInfo, open as openPanelAction, close as closePanelAction
 } from '../common/actions/panel';
 import createInstancePool from './createInstancePool';
 
@@ -232,7 +233,16 @@ chrome.runtime.onMessage.addListener(
  *	Removes associated data when a tab is closed.
  */
 chrome.tabs.onRemoved.addListener((id) => {
-	instances.removeInstance(id);
+	const instance = instances.getInstance(id);
+	// let our instances pool know that we just closed a popup
+	if (instance && instance.isPopup()) {
+		const tabId = instances.switchToTab(id);
+		closePanel({id: tabId});
+		// put back the default position in case we want to open the app again
+		// on the current tab
+		return instance.dispatch(setPosition(Position.right));
+	}
+	return instances.removeInstance(id);
 });
 
 
