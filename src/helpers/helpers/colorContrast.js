@@ -1,6 +1,8 @@
+import $ from 'jquery';
 import {forEach} from 'lodash';
 import {createMessageHandler, sendMessage} from '../../common/api/runtime';
 import {GET_PIXEL} from '../../common/actions/runtime';
+import {mutedAttributeSelector, muteAttribute, restoreAttribute} from '../api/muteAttributes';
 import waitForEvent from '../api/waitForEvent';
 import getSelectionStyle from '../api/getSelectionStyle';
 import {REQUEST_PIXEL_COLOR, REQUEST_TEXT_COLOR, REQUEST_STYLE, UPDATE_COLOR, UPDATE_STYLE} from '../actions/colorContrast';
@@ -28,11 +30,29 @@ const setPickingState = (className) =>
 /**
  *
  */
+const startPicking = (state) => {
+	setPickingState(state);
+	muteAttribute($('a'), 'href');
+};
+
+/**
+ *
+ */
+const stopPicking = () => {
+	const selector = mutedAttributeSelector('href', 'a');
+
+	setPickingState(null);
+	restoreAttribute($(selector), 'href');
+};
+
+/**
+ *
+ */
 const handleMessage = createMessageHandler(({type}) => {
 	// eslint-disable-next-line default-case
 	switch (type) {
 		case REQUEST_PIXEL_COLOR:
-			setPickingState(PickingStates.pickingPixel);
+			startPicking(PickingStates.pickingPixel);
 
 			waitForEvent('click')
 				.then(({clientX, clientY}) => {
@@ -50,12 +70,12 @@ const handleMessage = createMessageHandler(({type}) => {
 						payload: color
 					})
 				)
-				.then(() => setPickingState(null))
-				.catch(() => setPickingState(null));
+				.then(stopPicking)
+				.catch(stopPicking);
 			break;
 
 		case REQUEST_TEXT_COLOR:
-			setPickingState(PickingStates.pickingText);
+			startPicking(PickingStates.pickingText);
 
 			waitForEvent('mouseup')
 				.then(() => {
@@ -68,12 +88,12 @@ const handleMessage = createMessageHandler(({type}) => {
 						payload: color
 					})
 				)
-				.then(() => setPickingState(null))
-				.catch(() => setPickingState(null));
+				.then(stopPicking)
+				.catch(stopPicking);
 			break;
 
 		case REQUEST_STYLE:
-			setPickingState(PickingStates.pickingText);
+			startPicking(PickingStates.pickingText);
 
 			waitForEvent('mouseup')
 				.then(() => {
@@ -86,8 +106,8 @@ const handleMessage = createMessageHandler(({type}) => {
 						payload: style
 					})
 				)
-				.then(() => setPickingState(null))
-				.catch(() => setPickingState(null));
+				.then(stopPicking)
+				.catch(stopPicking);
 			break;
 	}
 });
