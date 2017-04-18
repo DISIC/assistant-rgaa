@@ -1,3 +1,7 @@
+import {api} from '../../common/api/extension';
+
+
+
 /**
  *
  */
@@ -18,69 +22,46 @@ export const CONTENT_STYLES = [
 /**
  *
  */
-export const fetchCurrentTab = () => {
+export const sendMessageToTab = api('tabs.sendMessage');
+export const createTab = api('tabs.create');
+export const executeScript = api('tabs.executeScript');
+export const insertCSS = api('tabs.insertCSS');
+
+/**
+ *
+ */
+const fetchCurrentTabApi = api('tabs.query');
+const captureVisibleTabApi = api('tabs.captureVisibleTab');
+
+/**
+ *
+ */
+export const fetchCurrentTab = async () => {
 	const query = {
 		active: true,
 		currentWindow: true
 	};
 
-	// eslint-disable-next-line no-new
-	return new Promise((resolve, reject) =>
-		chrome.tabs.query(query, (tabs) => (
-			tabs.length
-				? resolve(tabs[0])
-				: reject('No tab found')
-		))
-	);
-};
+	const tabs = await fetchCurrentTabApi(query);
 
-/**
- *
- */
-export const sendMessageToTab = (id, message, options = {}) => {
-	// Chrome API wrapper
-	if (typeof browser === 'undefined' || browser.runtime === undefined) {
-		return new Promise((resolve, reject) => {
-			chrome.tabs.sendMessage(id, message, options, (response) => {
-				if (chrome.runtime.lastError) {
-					reject(chrome.runtime.lastError);
-				} else {
-					resolve(response);
-				}
-			});
-		});
+	if (!tabs.length) {
+		throw new Error('No tab found');
 	}
 
-	return browser.tabs.sendMessage(id, message, options);
+	return tabs[0];
 };
 
 /**
  *
  */
-export const captureVisibleTab = (options = {
+export const captureVisibleTab = async (options = {
 	format: 'png'
 }) => {
-	const toImage = (source) => {
-		const image = new Image();
-		image.src = source;
-		return image;
-	};
+	const source = await captureVisibleTabApi(null, options);
+	const image = new Image();
+	image.src = source;
 
-	// Chrome API wrapper
-	if (typeof browser === 'undefined' || browser.runtime === undefined) {
-		return new Promise((resolve, reject) => {
-			chrome.tabs.captureVisibleTab(null, options, (source) => {
-				if (chrome.runtime.lastError) {
-					reject(chrome.runtime.lastError);
-				} else {
-					resolve(toImage(source));
-				}
-			});
-		});
-	}
-
-	return browser.tabs.captureVisibleTab(null, options)
-		.then(toImage);
+	return image;
 };
 
 /**
@@ -88,58 +69,6 @@ export const captureVisibleTab = (options = {
  */
 export const closeTab = (id) =>
 	chrome.tabs.remove(id);
-
-/**
- *
- */
-export const createTab = (options) =>
-	new Promise((resolve, reject) => // eslint-disable-line no-new
-		chrome.tabs.create(options, (newTab) => {
-			if (chrome.runtime.lastError) {
-				reject(chrome.runtime.lastError);
-			} else {
-				resolve(newTab);
-			}
-		})
-	);
-
-/**
- *
- */
-export const executeScript = (tabId, details) => {
-	if (typeof browser === 'undefined' || browser.runtime === undefined) {
-		return new Promise((resolve, reject) => // eslint-disable-line no-new
-			chrome.tabs.executeScript(tabId, details, (results) => {
-				if (chrome.runtime.lastError) {
-					reject(chrome.runtime.lastError);
-				} else {
-					resolve(results);
-				}
-			})
-		);
-	}
-
-	return browser.tabs.executeScript(tabId, details);
-};
-
-/**
- *
- */
-export const insertCSS = (tabId, details) => {
-	if (typeof browser === 'undefined' || browser.runtime === undefined) {
-		return new Promise((resolve, reject) => // eslint-disable-line no-new
-			chrome.tabs.insertCSS(tabId, details, (results) => {
-				if (chrome.runtime.lastError) {
-					reject(chrome.runtime.lastError);
-				} else {
-					resolve(results);
-				}
-			})
-		);
-	}
-
-	return browser.tabs.insertCSS(tabId, details);
-};
 
 /**
  *

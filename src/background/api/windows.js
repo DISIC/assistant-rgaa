@@ -1,48 +1,24 @@
 import {get, find} from 'lodash';
+import {api} from '../../common/api/extension';
 
 
 
 /**
  *
  */
-export const openWindow = (options) =>
-	new Promise((resolve, reject) => // eslint-disable-line no-new
-		chrome.windows.create(options, (newWindow) => {
-			if (chrome.runtime.lastError) {
-				reject(chrome.runtime.lastError);
-			} else {
-				resolve(newWindow);
-			}
-		})
-	);
+export const openWindow = api('windows.create');
+export const closeWindow = api('windows.remove');
 
 /**
  *
  */
-export const closeWindow = (id) =>
-	new Promise((resolve, reject) => // eslint-disable-line no-new
-		chrome.windows.remove(id, () => {
-			if (chrome.runtime.lastError) {
-				reject(chrome.runtime.lastError);
-			} else {
-				resolve();
-			}
-		})
-	);
+const getWindowApi = api('windows.get');
 
 /**
  *
  */
 export const getWindow = (id, options = {populate: true}) =>
-	new Promise((resolve, reject) => // eslint-disable-line no-new
-		chrome.windows.get(id, options, (windowInfo) => {
-			if (chrome.runtime.lastError) {
-				reject(chrome.runtime.lastError);
-			} else {
-				resolve(windowInfo);
-			}
-		})
-	);
+	getWindowApi(id, options);
 
 /**
  * get the window first tab's id by making a new getWindow request if necessary
@@ -50,22 +26,20 @@ export const getWindow = (id, options = {populate: true}) =>
  * this is necessary because depending on context, a window object might not
  * have a tabs property (ie, the result of a windows.create in firefox < 52)
  */
-export const getWindowTabId = (windowObject) =>
-	new Promise((resolve, reject) => {
-		const id = get(windowObject, 'tabs[0].id');
-		if (id) {
-			resolve(id);
-		} else {
-			getWindow(windowObject.id, {populate: true})
-				.then((data) =>
-					resolve(get(data, 'tabs[0].id'))
-				)
-				.catch((message) =>
-					reject(message)
-				);
-		}
-	});
+export const getWindowTabId = async (windowObject) => {
+	const id = get(windowObject, 'tabs[0].id');
 
+	if (id) {
+		return id;
+	}
+
+	const window = getWindow(windowObject.id, {populate: true});
+	return get(window, 'tabs[0].id');
+};
+
+/**
+ *
+ */
 export const getWindowObject = (url, options) => {
 	const views = chrome.extension.getViews(options);
 	return find(views, (windowObject) =>
