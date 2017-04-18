@@ -229,10 +229,18 @@ chrome.tabs.onRemoved.addListener((id) => {
 	instances.removeInstance(id);
 });
 
+
+
 /**
  * reinject content scripts on page reload
- *
  */
+const onPageReload = (tabId, instance) =>
+	injectContentScripts(tabId).then(() => (
+		instance.isOpen()
+			? openPanel({id: tabId})
+			: closePanel({id: tabId})
+	));
+
 chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 	if (changeInfo.status === 'complete' && instances.hasInstance(tabId)) {
 		// send an empty message, just to check if we have a response
@@ -246,13 +254,15 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 		const instance = instances.getInstance(tabId);
 		instance
 			.sendMessage('')
-			.then()
-			.catch(() => (
-				injectContentScripts(tabId).then(() =>
-					instance.isOpen()
-						? openPanel({id: tabId})
-						: closePanel({id: tabId})
-				)
-			));
+			.then(response => {
+				// firefox sometimes has a ['undefined'] response? this is weird
+				// a response when scripst are actually loaded here is [{'message': 'ok'}]
+				if (response && response.length === 1 && response[0] === undefined) {
+					onPageReload(tabId, instance);
+				}
+			})
+			.catch(() =>
+				onPageReload(tabId, instance)
+			);
 	}
 });
