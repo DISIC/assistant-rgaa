@@ -1,5 +1,6 @@
 import {sendMessageToTab} from './api/tabs';
 import createStore from './createStore';
+import {isOpen as isPanelOpen} from '../common/selectors/panel';
 
 
 
@@ -8,7 +9,7 @@ import createStore from './createStore';
  *	with a particular tab.
  */
 export default function createAppInstance(tabId, sharedStore) {
-	let popupId, open = false;
+	let popupId = false;
 
 	//
 	const isPopup = () => !!popupId;
@@ -23,13 +24,6 @@ export default function createAppInstance(tabId, sharedStore) {
 		popupId = null;
 		return tabId;
 	};
-
-	const setOpen = (state) => {
-		open = state;
-	};
-
-	const isOpen = () =>
-		open;
 
 	// Sends a message to the instance's tabs.
 	const sendMessage = (message) => {
@@ -50,12 +44,14 @@ export default function createAppInstance(tabId, sharedStore) {
 		sendMessage
 	);
 
+	const isOpen = () =>
+		isPanelOpen(store.getState());
+
 	return {
 		isPopup,
 		setPopup,
 		removePopup,
 		sendMessage,
-		setOpen,
 		isOpen,
 		store,
 		dispatch: store.dispatch

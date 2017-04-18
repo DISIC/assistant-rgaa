@@ -24,3 +24,9 @@ export const getPageUrl = (state) =>
  */
 export const isFolded = (state) =>
 	get(state, 'panel.folded', null);
+
+/**
+ *
+ */
+export const isOpen = (state) =>
+	get(state, 'panel.opened', null);

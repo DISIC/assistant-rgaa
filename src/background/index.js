@@ -1,4 +1,4 @@
-import {get, endsWith} from 'lodash';
+import {endsWith} from 'lodash';
 import {
 	OPEN_PANEL, CLOSE_PANEL, OPEN_POPUP, CLOSE_POPUP, VALIDATE_PAGE, VIEW_PAGE_SOURCE,
 	REQUEST_INITIAL_STATE, GET_PIXEL, GET_CURRENT_TAB, CREATE_TAB,
@@ -17,9 +17,9 @@ import {validateLocalPage} from '../common/api/validateLocalPage';
 import {viewSource} from '../common/api/viewSource';
 import {DEFAULT_VERSION, getReferenceOption} from '../common/api/reference';
 import {setReferenceVersion} from '../common/actions/reference';
-import {setPageInfo} from '../common/actions/panel';
-import {applyAllHelpers, revertAllHelpers} from '../common/actions/helpers';
-import {isFirefox, isChrome} from '../common/api/uasniffer';
+import {
+	setPageInfo, open as openPanelAction, close as closePanelAction
+} from '../common/actions/panel';
 import createInstancePool from './createInstancePool';
 
 
@@ -48,8 +48,13 @@ const injectContentScripts = (tabId) =>
  */
 const openPanel = ({id}) => {
 	const instance = instances.getInstance(id);
-	instance.setOpen(true);
-	instance.dispatch(applyAllHelpers());
+	// this is done to trigger open panel sagas to add helpers
+	// it is necessary for this use case: open panel > enable a test > close panel >
+	// reload the page > open the panel.
+	// it is not necessary for this use case: open panel > enable a test > reload the page
+	// this 2nd case is handled in the helpers/index.js file
+	instance.dispatch(openPanelAction());
+	// this is sent so that the container content script acts accordingly
 	return instance.sendMessage({
 		type: OPEN_PANEL
 	});
@@ -60,8 +65,9 @@ const openPanel = ({id}) => {
  */
 const closePanel = ({id}) => {
 	const instance = instances.getInstance(id);
-	instance.setOpen(false);
-	instance.dispatch(revertAllHelpers());
+	// this is done to trigger close panel sagas to remove helpers
+	instance.dispatch(closePanelAction());
+	// this is sent so that the container content script acts accordingly
 	return instance.sendMessage({
 		type: CLOSE_PANEL
 	});

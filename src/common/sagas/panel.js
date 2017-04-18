@@ -1,8 +1,10 @@
 import {takeEvery} from 'redux-saga';
-import {sendMessage} from '../../common/api/runtime';
-import {OPEN_POPUP, CLOSE_POPUP} from '../../common/actions/runtime';
+import {put} from 'redux-saga/effects';
+import {sendMessage} from '../api/runtime';
+import {OPEN_POPUP, CLOSE_POPUP} from '../actions/runtime';
+import {applyAllHelpers, revertAllHelpers} from '../actions/helpers';
+import {SET_POSITION, OPEN, CLOSE} from '../actions/panel';
 import {Position} from '../api/panel';
-import {SET_POSITION} from '../actions/panel';
 
 
 
@@ -17,6 +19,20 @@ export function* setPositionWorker({payload: position}) {
 	});
 }
 
+/**
+ *
+ */
+export function* openWorker() {
+	yield put(applyAllHelpers());
+}
+
+/**
+ *
+ */
+export function* closeWorker() {
+	yield put(revertAllHelpers());
+}
+
 
 
 /**
@@ -24,4 +40,18 @@ export function* setPositionWorker({payload: position}) {
  */
 export function* watchSetPosition() {
 	yield* takeEvery(SET_POSITION, setPositionWorker);
+}
+
+/**
+ *
+ */
+export function* watchOpen() {
+	yield* takeEvery(OPEN, openWorker);
+}
+
+/**
+ *
+ */
+export function* watchClose() {
+	yield* takeEvery(CLOSE, closeWorker);
 }

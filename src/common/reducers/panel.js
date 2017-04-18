@@ -1,5 +1,5 @@
 import {Position} from '../api/panel';
-import {SET_POSITION, SET_PAGE_INFO, TOGGLE_FOLD} from '../actions/panel';
+import {SET_POSITION, SET_PAGE_INFO, TOGGLE_FOLD, OPEN, CLOSE} from '../actions/panel';
 
 
 
@@ -9,6 +9,7 @@ import {SET_POSITION, SET_PAGE_INFO, TOGGLE_FOLD} from '../actions/panel';
 const initialState = {
 	position: Position.right,
 	folded: false,
+	opened: false,
 	pageInfo: {}
 };
 
@@ -33,6 +34,18 @@ export default function panel(state = initialState, {type, payload}) {
 			return {
 				...state,
 				pageInfo: payload
+			};
+
+		case OPEN:
+			return {
+				...state,
+				opened: true
+			};
+
+		case CLOSE:
+			return {
+				...state,
+				opened: false
 			};
 
 		default:
