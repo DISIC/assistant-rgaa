@@ -1,5 +1,5 @@
 import toggleStyleSheets from '../api/toggleStyleSheets';
-import toggleInlineStyles from '../api/toggleInlineStyles';
+import {muteAttribute, restoreAttribute} from '../api/muteAttributes';
 
 
 
@@ -18,7 +18,7 @@ export const describe = (intl) =>
  */
 export const apply = () => {
 	toggleStyleSheets(false);
-	toggleInlineStyles(false);
+	muteAttribute('style');
 };
 
 /**
@@ -27,5 +27,5 @@ export const apply = () => {
  */
 export const revert = () => {
 	toggleStyleSheets(true);
-	toggleInlineStyles(true);
+	restoreAttribute('style');
 };
