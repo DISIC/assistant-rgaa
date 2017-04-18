@@ -60,10 +60,9 @@ const createId = (id, index) =>
 const toggleHelpers = (id, helpers, toggle) => {
 	const method = toggle ? 'apply' : 'revert';
 
-	if (toggle) {
-		document.body.classList.toggle('rgaaExt-Body', toggle);
-		document.body.classList.toggle('rgaaExt-Body--withHelpers', toggle);
-	}
+	document.body.classList.toggle('rgaaExt-Body', toggle);
+	document.body.classList.toggle('rgaaExt-Body--withHelpers', toggle);
+	document.body.classList.toggle(`rgaaExt-Body--withHelper-${id}`, toggle);
 
 	try {
 		helpers.forEach((helper, i) => {
@@ -79,8 +78,18 @@ const toggleHelpers = (id, helpers, toggle) => {
 /**
  *
  */
-export const applyHelpers = (id, helpers) =>
-	toggleHelpers(id, helpers, true);
+const isApplied = (id) =>
+	document.body.classList.contains(`rgaaExt-Body--withHelper-${id}`);
+
+/**
+ *
+ */
+export const applyHelpers = (id, helpers) => {
+	if (!isApplied(id)) {
+		return toggleHelpers(id, helpers, true);
+	}
+	return false;
+};
 
 /**
  *
