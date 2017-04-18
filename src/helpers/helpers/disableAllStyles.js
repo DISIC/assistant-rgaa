@@ -1,5 +1,6 @@
+import $ from 'jquery';
 import toggleStyleSheets from '../api/toggleStyleSheets';
-import {muteAttribute, restoreAttribute} from '../api/muteAttributes';
+import {mutedAttributeSelector, muteAttribute, restoreAttribute} from '../api/muteAttributes';
 
 
 
@@ -18,7 +19,7 @@ export const describe = (intl) =>
  */
 export const apply = () => {
 	toggleStyleSheets(false);
-	muteAttribute('style');
+	muteAttribute($('[style]'), 'style');
 };
 
 /**
@@ -26,6 +27,8 @@ export const apply = () => {
  *	apply().
  */
 export const revert = () => {
+	const selector = mutedAttributeSelector('style');
+
 	toggleStyleSheets(true);
-	restoreAttribute('style');
+	restoreAttribute($(selector), 'style');
 };

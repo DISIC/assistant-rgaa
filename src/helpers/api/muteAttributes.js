@@ -4,6 +4,20 @@ import {concat, without} from 'lodash/fp';
 
 
 /**
+ *	Attributes muting works by aliasing original attributes.
+ *	The API also maintains a custom attribute which holds the
+ *	name of all muted attributes on an element. This allows
+ *	for better discoverability (i.e. CSS selectors can be used
+ *	to target elements with muted attributes).
+ *
+ *	For example, here is a link, before and after muting its
+ *	href attribute:
+ *
+ *	<a href="example.org" />
+ *	<a data-rgaa-ext-muted-href="example.org" data-rgaa-ext-muted="href" />
+ */
+
+/**
  *
  */
 const MutedAttribute = 'data-rgaa-ext-muted';
@@ -17,15 +31,16 @@ const attributeAlias = (attribute) =>
 /**
  *
  */
-const forEachChild = (root, selector, callback) => {
-	const elements = root
-		? root.find(selector)
-		: $(selector);
-
-	elements.each((i, element) =>
-		callback($(element))
-	);
+export const mutedAttributeSelector = (attribute, base = '') => {
+	const alias = attributeAlias(attribute);
+	return `${base}[${alias}]`;
 };
+
+/**
+ *
+ */
+export const anyMutedAttributeSelector = (base = '') =>
+	`${base}[${MutedAttribute}]`;
 
 /**
  *
@@ -67,7 +82,7 @@ const updateMutedAttributes = (element, update) => {
 /**
  *
  */
-const muteAttributeOn = (element, attribute) => {
+const muteAttributeOnElement = (element, attribute) => {
 	renameAttribute(element, attribute, attributeAlias(attribute));
 	updateMutedAttributes(element, concat(attribute));
 };
@@ -75,7 +90,7 @@ const muteAttributeOn = (element, attribute) => {
 /**
  *
  */
-const restoreAttributeOn = (element, attribute) => {
+const restoreAttributeOnElement = (element, attribute) => {
 	renameAttribute(element, attributeAlias(attribute), attribute);
 	updateMutedAttributes(element, without([attribute]));
 };
@@ -83,33 +98,39 @@ const restoreAttributeOn = (element, attribute) => {
 /**
  *
  */
-export const muteAttribute = (attribute, root = null) => {
+export const muteAttribute = (elements, attribute) => {
 	const selector = `[${attribute}]:not([class^="rgaaExt"])`;
 
-	forEachChild(root, selector, (element) => {
-		muteAttributeOn(element, attribute);
-	});
+	elements
+		.filter(selector)
+		.each((i, element) => {
+			muteAttributeOnElement($(element), attribute);
+		});
 };
 
 /**
  *
  */
-export const restoreAttribute = (attribute, root = null) => {
+export const restoreAttribute = (elements, attribute) => {
 	const alias = attributeAlias(attribute);
 	const selector = `[${alias}]`;
 
-	forEachChild(root, selector, (element) => {
-		restoreAttributeOn(element, attribute);
-	});
+	elements
+		.filter(selector)
+		.each((i, element) => {
+			restoreAttributeOnElement($(element), attribute);
+		});
 };
 
 /**
  *
  */
-export const restoreAllAttributes = (root) => {
-	forEachChild(root, `[${MutedAttribute}]`, (element) => {
+export const restoreAllAttributes = (elements) => {
+	elements.each((i, el) => {
+		const element = $(el);
+
 		getMutedAttributes(element).forEach((attribute) => {
-			restoreAttributeOn(element, attribute);
+			restoreAttributeOnElement(element, attribute);
 		});
 	});
 };

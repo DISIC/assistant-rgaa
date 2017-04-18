@@ -1,5 +1,5 @@
 import serializeAttributes from './serializeAttributes';
-import {restoreAllAttributes} from './muteAttributes';
+import {anyMutedAttributeSelector, restoreAllAttributes} from './muteAttributes';
 
 
 
@@ -24,7 +24,9 @@ const innerHtml = (element) => {
 	copy.find('[class*=rgaaExt]').remove();
 
 	// restores muted attributees
-	restoreAllAttributes(copy);
+	restoreAllAttributes(
+		copy.find(anyMutedAttributeSelector())
+	);
 
 	return escape(copy.html());
 };
