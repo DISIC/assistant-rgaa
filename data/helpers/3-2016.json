@@ -1182,11 +1182,11 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figure"
+			"selector": "figure:has(img, input[type=\"image\"])"
 		},
 		{
 			"helper": "showElement",
-			"selector": "figure",
+			"selector": "figure:has(img, input[type=\"image\"])",
 			"attributes": [
 				"role"
 			],
@@ -1194,7 +1194,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figcaption",
+			"selector": "figure:has(img, input[type=\"image\"]) figcaption",
 			"showTag": true
 		}
 	],
@@ -1211,11 +1211,11 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figure"
+			"selector": "figure:has(object[type^=\"image\"])"
 		},
 		{
 			"helper": "showElement",
-			"selector": "figure",
+			"selector": "figure:has(object[type^=\"image\"])",
 			"attributes": [
 				"role"
 			],
@@ -1223,7 +1223,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figcaption",
+			"selector": "figure:has(object[type^=\"image\"]) figcaption",
 			"showTag": true
 		}
 	],
@@ -1242,11 +1242,11 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figure, embed"
+			"selector": "figure:has(embed)"
 		},
 		{
 			"helper": "showElement",
-			"selector": "figure",
+			"selector": "figure:has(embed)",
 			"attributes": [
 				"role"
 			],
@@ -1254,7 +1254,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figcaption",
+			"selector": "figure:has(embed) figcaption",
 			"showTag": true
 		}
 	],
@@ -1279,11 +1279,11 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figure"
+			"selector": "figure:has(svg)"
 		},
 		{
 			"helper": "showElement",
-			"selector": "figure",
+			"selector": "figure:has(svg)",
 			"attributes": [
 				"role"
 			],
@@ -1291,7 +1291,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figcaption",
+			"selector": "figure:has(svg) figcaption",
 			"showTag": true
 		}
 	],
@@ -1308,11 +1308,11 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figure"
+			"selector": "figure:has(canvas)"
 		},
 		{
 			"helper": "showElement",
-			"selector": "figure",
+			"selector": "figure:has(canvas)",
 			"attributes": [
 				"role"
 			],
@@ -1320,7 +1320,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "figcaption",
+			"selector": "figure:has(canvas) figcaption",
 			"showTag": true
 		}
 	],
