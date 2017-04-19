@@ -51,6 +51,10 @@ const ColorInput = ({id, color, onChange, children, intl}) => {
 
 			<div
 				className="ColorInput-sample"
+				aria-hidden="true"
+				title={intl.formatMessage({
+					id: 'ColorInput.sample'
+				})}
 				style={{
 					backgroundColor: color
 				}}

@@ -82,6 +82,7 @@ const messages = {
 	'ColorInput.pickPixelButton.title': 'Prélever la couleur d\'un pixel dans la page',
 	'ColorInput.pickTextButton.title': 'Prélever la couleur du texte à partir d\'une sélection dans la page',
 	'ColorInput.invalidFormatError': 'Cette couleur est invalide. Veuillez utiliser un code hexadécimal (#f00, #a2a2a2, ...) ou un nom de couleur HTML (red, yellow, ...)',
+	'ColorInput.sample': 'Aperçu de la couleur',
 	'ColorContrastResult.ratio': 'Ratio de contraste',
 	'ColorContrastResult.invalidResult': 'invalide',
 	'ExternalTool.linkTitle': 'Ouvrir l\'outil (s\'ouvre dans une nouvelle fenêtre)',
