@@ -78,12 +78,12 @@ $color-green: green;
 $color-highlight: rgba(yellow, 0.1);
 $color-highlight-no-opacity: #ffffe4;
 
-$color-theme: #2868c9;
+$color-theme: $color-blue;
 $color-theme-text: $color-white;
-$color-theme-light: #4c93ff;
-$color-theme-light-text: #000;
-$color-theme-dark: #0c397c;
-$color-theme-dark-text: $color-white;
+$color-theme-light: $color-blue-light;
+$color-theme-light-text: $color-blue-light-text;
+$color-theme-dark: $color-blue-dark;
+$color-theme-dark-text: $color-blue-dark-text;
 
 $color-accent: orange;
 $color-accent-text: $color-black;
