@@ -16,7 +16,8 @@
 
 	&:not([disabled]):active,
 	&[aria-pressed="true"] {
-		background: darken($color-theme, 20%);
+		background: $color-theme-dark;
+		box-shadow: inset vr(1/8) vr(1/8) vr(1/4) $color-black;
 	}
 
 }
