@@ -1,4 +1,5 @@
-import {isObject, isFunction, isEmpty} from 'lodash';
+import {isEmpty} from 'lodash';
+import {api} from '../../common/api/extension';
 import {INVALID_RESPONSE} from '../actions/runtime';
 
 
@@ -6,32 +7,20 @@ import {INVALID_RESPONSE} from '../actions/runtime';
 /**
  *
  */
-export const sendMessage = (message, options = {}) =>
-	new Promise((resolve, reject) => {
-		const handleResponse = (value) => {
-			if (value === INVALID_RESPONSE) {
-				reject();
-			} else {
-				resolve(value);
-			}
-		};
+const sendMessageApi = api('runtime.sendMessage');
 
-		// Chrome uses a callback as the third parameter...
-		if (typeof browser === 'undefined' || browser.runtime === undefined) {
-			chrome.runtime.sendMessage(message, options, (value) => {
-				if (chrome.runtime.lastError) {
-					reject(chrome.runtime.lastError);
-				} else {
-					handleResponse(value);
-				}
-			});
+/**
+ *
+ */
+export const sendMessage = async (message, options = {}) => {
+	const response = sendMessageApi(message, options);
 
-		// Firefox returns a promise instead.
-		} else {
-			browser.runtime.sendMessage(message, options)
-				.then(handleResponse, reject);
-		}
-	});
+	if (response === INVALID_RESPONSE) {
+		throw new Error(response);
+	}
+
+	return response;
+};
 
 /**
  *
