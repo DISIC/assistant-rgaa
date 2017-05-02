@@ -13,6 +13,24 @@ import ToggleButton from './ToggleButton';
 
 
 /**
+ *	Shape of a color input configuration.
+ */
+const colorInputConfigShape = PropTypes.shape({
+	label: PropTypes.string,
+	pixelPicker: PropTypes.bool,
+	textPicker: PropTypes.bool
+});
+
+/**
+ *	Shape of a color input configuration.
+ */
+const extractorConfigShape = PropTypes.shape({
+	label: PropTypes.string,
+	left: PropTypes.string,
+	right: PropTypes.string
+});
+
+/**
  *	This whole thing is VERY obscure.
  *	The communication between the widgets and the page
  *	needs a proper refactoring to be more simple and robust.
@@ -93,7 +111,7 @@ class ColorContrastContainer extends Component {
 		});
 	}
 
-	renderField(name, label) {
+	renderField(name, {label, pixelPicker, textPicker}) {
 		const id = `ColorField--${name}`;
 		const {intl} = this.props;
 		const {pickRequest, pickedColor} = this.state;
@@ -111,43 +129,47 @@ class ColorContrastContainer extends Component {
 						this.handleChangeColor(name, value)
 					}
 				>
-					<ToggleButton
-						pressed={pickedColor === name && pickRequest === REQUEST_PIXEL_COLOR}
-						onPress={() =>
-							this.handlePick(name, REQUEST_PIXEL_COLOR)
-						}
-						title={intl.formatMessage({
-							id: 'ColorInput.pickPixelButton.title'
-						})}
-					>
-						<Icon name="eyedropper" />
-					</ToggleButton>
+					{renderIf(pixelPicker)(() => (
+						<ToggleButton
+							pressed={pickedColor === name && pickRequest === REQUEST_PIXEL_COLOR}
+							onPress={() =>
+								this.handlePick(name, REQUEST_PIXEL_COLOR)
+							}
+							title={intl.formatMessage({
+								id: 'ColorInput.pickPixelButton.title'
+							})}
+						>
+							<Icon name="eyedropper" />
+						</ToggleButton>
+					))}
 
-					<ToggleButton
-						pressed={pickedColor === name && pickRequest === REQUEST_TEXT_COLOR}
-						onClick={() =>
-							this.handlePick(name, REQUEST_TEXT_COLOR)
-						}
-						title={intl.formatMessage({
-							id: 'ColorInput.pickTextButton.title'
-						})}
-					>
-						<Icon name="cursor" />
-					</ToggleButton>
+					{renderIf(textPicker)(() => (
+						<ToggleButton
+							pressed={pickedColor === name && pickRequest === REQUEST_TEXT_COLOR}
+							onClick={() =>
+								this.handlePick(name, REQUEST_TEXT_COLOR)
+							}
+							title={intl.formatMessage({
+								id: 'ColorInput.pickTextButton.title'
+							})}
+						>
+							<Icon name="cursor" />
+						</ToggleButton>
+					))}
 				</ColorInput>
 			</div>
 		);
 	}
 
 	render() {
-		const {leftLabel, rightLabel, minimumRatio, extractor} = this.props;
+		const {left, right, extractor, minimumRatio} = this.props;
 
 		return (
 			<div className="ColorContrast Widget">
 				<form className="Form">
 					<div className="Form-row">
-						{this.renderField('left', leftLabel)}
-						{this.renderField('right', rightLabel)}
+						{this.renderField('left', left)}
+						{this.renderField('right', right)}
 					</div>
 
 					{renderIf(extractor)(() => (
@@ -170,10 +192,10 @@ class ColorContrastContainer extends Component {
 }
 
 ColorContrastContainer.propTypes = {
-	leftLabel: PropTypes.string,
-	rightLabel: PropTypes.string,
+	left: colorInputConfigShape,
+	right: colorInputConfigShape,
+	extractor: extractorConfigShape,
 	minimumRatio: PropTypes.number,
-	extractor: PropTypes.object,
 	intl: intlShape
 };
 

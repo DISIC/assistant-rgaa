@@ -1426,9 +1426,17 @@
 	"3.3.1": [
 		{
 			"helper": "colorContrast",
-			"leftLabel": "Couleur de texte",
-			"rightLabel": "Couleur d'arrière-plan",
 			"minimumRatio": 4.5,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
 			"extractor": {
 				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
 				"left": "color",
@@ -1439,9 +1447,17 @@
 	"3.3.2": [
 		{
 			"helper": "colorContrast",
-			"leftLabel": "Couleur de texte",
-			"rightLabel": "Couleur d'arrière-plan",
 			"minimumRatio": 4.5,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
 			"extractor": {
 				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
 				"left": "color",
@@ -1452,9 +1468,17 @@
 	"3.3.3": [
 		{
 			"helper": "colorContrast",
-			"leftLabel": "Couleur de texte",
-			"rightLabel": "Couleur d'arrière-plan",
 			"minimumRatio": 3,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
 			"extractor": {
 				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
 				"left": "color",
@@ -1465,9 +1489,17 @@
 	"3.3.4": [
 		{
 			"helper": "colorContrast",
-			"leftLabel": "Couleur de texte",
-			"rightLabel": "Couleur d'arrière-plan",
 			"minimumRatio": 3,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
 			"extractor": {
 				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
 				"left": "color",
@@ -1478,9 +1510,17 @@
 	"3.4.1": [
 		{
 			"helper": "colorContrast",
-			"leftLabel": "Couleur de texte",
-			"rightLabel": "Couleur d'arrière-plan",
 			"minimumRatio": 7,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
 			"extractor": {
 				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
 				"left": "color",
@@ -1491,9 +1531,17 @@
 	"3.4.2": [
 		{
 			"helper": "colorContrast",
-			"leftLabel": "Couleur de texte",
-			"rightLabel": "Couleur d'arrière-plan",
 			"minimumRatio": 7,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
 			"extractor": {
 				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
 				"left": "color",
@@ -1504,9 +1552,17 @@
 	"3.4.3": [
 		{
 			"helper": "colorContrast",
-			"leftLabel": "Couleur de texte",
-			"rightLabel": "Couleur d'arrière-plan",
 			"minimumRatio": 4.5,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
 			"extractor": {
 				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
 				"left": "color",
@@ -1517,9 +1573,17 @@
 	"3.4.4": [
 		{
 			"helper": "colorContrast",
-			"leftLabel": "Couleur de texte",
-			"rightLabel": "Couleur d'arrière-plan",
 			"minimumRatio": 4.5,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
 			"extractor": {
 				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
 				"left": "color",
@@ -3280,9 +3344,17 @@
 		},
 		{
 			"helper": "colorContrast",
-			"leftLabel": "Couleur de lien",
-			"rightLabel": "Couleur de texte",
-			"minimumRatio": 3
+			"minimumRatio": 3,
+			"left": {
+				"label": "Couleur de lien",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			}
 		}
 	],
 	"10.7.1": [],
