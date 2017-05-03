@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
-	"version": "0.5.0",
 	"name": "Assistant RGAA",
 	"description": "Assistant RGAA",
+	"version": "1.0.0",
 	"icons": {
 		"48": "img/icon-48.png",
 		"96": "img/icon-96.png"
@@ -10,7 +10,7 @@
 	"applications": {
 		"gecko": {
 			"id": "rgaa-toolbar@vtech.fr",
-			"strict_min_version": "51.0"
+			"strict_min_version": "52.0"
 		}
 	},
 	"browser_action": {
