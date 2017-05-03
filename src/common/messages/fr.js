@@ -2,8 +2,8 @@
  *
  */
 const messages = {
-	'Panel.toggle': 'Afficher le panneau RGAA Toolbar',
-	'Header.title': 'Panel d\'outils RGAA',
+	'Panel.toggle': 'Afficher le panneau Assistant RGAA',
+	'Header.title': 'Assistant RGAA',
 	'Header.options': 'Options',
 	'Header.themes': 'Référentiel',
 	'Header.import': 'Import',
