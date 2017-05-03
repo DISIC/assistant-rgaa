@@ -2,7 +2,7 @@
 title: Aide
 ---
 
-Cet extension propose une liste complète des tests du référentiel RGAA.
+Cette extension propose une liste complète des tests du référentiel RGAA.
 Pour chacun de ces tests, l'extension permet d'appliquer des modifications à la page courante (modifications de style, ajout d'informations, outils), permettant d'effectuer plus simplement les tests.
 
 # Interface
@@ -59,10 +59,10 @@ Cet outil permet de calculer le ratio de contraste entre 2 couleurs.
 ![Outil d'analyse de contraste](page://color-contrast.png)
 
 Pour chaque couleur, il est possible d'éditer directement son code hexadécimal ou son nom (par exemple #fff, #bada55, green), ou de la sélectionner dans la page de deux manières diférentes :
-* *sélecteur de pixel* : cliquez dessus, puis cliquez dans la page pour extraire ka couleur du pixel sous le curseur.
+* *sélecteur de pixel* : cliquez dessus, puis cliquez dans la page pour extraire la couleur du pixel sous le curseur.
 * *sélecteur de texte* : cliquez-dessus, puis sélectionnez une zone de texte dans la page pour extraire sa couleur.
 
-Pour certains tests, vous trouverez également un bouton permettant d'extraire les deux couleurs d'un seul coup depuis une sélection de texte. Dans l'exemple ci-dessus, il extraiera la couleur de texte et d'arrière-plan.
+Pour certains tests, vous trouverez également un bouton permettant d'extraire les deux couleurs d'un seul coup depuis une sélection de texte. Dans l'exemple ci-dessus, il extraira la couleur de texte et d'arrière-plan.
 
 ## Validateur W3C
 
@@ -82,7 +82,7 @@ Le bouton "Validateur de liens" sert à vérifier que les liens de la page coura
 
 ![Hiérarchie de titres : erreur](page://titles-error.png)
 
-Cet outil, utilisé dans le test 3-2016 n°9.1.2, affiche la hiérarchie de titres de la page. Chaque titre (balises `h1` à `h6`, ou élément avec attribut `aria-level`) est listé ici dans l'ordre d'apparition des éléments dans le DOM. Si une erreur dans la hiérarchie est détectée, les titres manquants et leur niveau sont affichés dans la liste.
+Cet outil, utilisé dans le test 9.1.2 du référentiel 3-2016, affiche la hiérarchie de titres de la page. Chaque titre (balises `h1` à `h6`, ou élément avec attribut `aria-level`) est listé ici dans l'ordre d'apparition des éléments dans le DOM. Si une erreur dans la hiérarchie est détectée, les titres manquants et leur niveau sont affichés dans la liste.
 
 ## Voir les sources
 
