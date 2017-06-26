@@ -1,6 +1,6 @@
 {
   "name": "assistant-rgaa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Assistant RGAA",
   "main": "js/index.js",
   "scripts": {
