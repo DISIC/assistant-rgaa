@@ -849,7 +849,7 @@
 		"rgaa": "<ol><li>Accéder à la page «&nbsp;<a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/glossaire.html#page-plan-du-site\">plan du site</a>&nbsp;».</li><li>Vérifier que le plan du site est représentatif de l'architecture générale du site.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"12.4.2": {
-		"rgaa": "<ol><li>Accéder à la page «&nbsp;<a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/glossaire.html#page-plan-du-site\">plan du site</a>&nbsp;» et activer la <span lang=\"en\">toolbar</span>.</li><li><li>Activer le bouton «&nbsp;Validateur de liens&nbsp;» et vérifier que tous les liens sont fonctionnels.</li><li>Si c'est le cas, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Accéder à la page «&nbsp;<a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/glossaire.html#page-plan-du-site\">plan du site</a>&nbsp;» et activer l'assistant.</li><li><li>Activer le bouton «&nbsp;Validateur de liens&nbsp;» et vérifier que tous les liens sont fonctionnels.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"12.4.3": {
 		"rgaa": "<ol><li>Accéder à la page «&nbsp;<a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/glossaire.html#page-plan-du-site\">plan du site</a>&nbsp;».</li><li>Repérer dans la liste des pages du plan du site, les intitulés de lien pouvant prêter à confusion.</li><li>Pour chacun vérifier que la page cible est bien celle attendue.</li><li>Si c'est le cas, le test est validé.</li></ol>"

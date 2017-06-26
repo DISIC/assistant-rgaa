@@ -29,7 +29,7 @@ module.exports = function(config) {
 			devtool: 'inline-source-map',
 			resolve: {
 				alias: {
-					'rgaa-toolbar': fullPath('src')
+					'assistant-rgaa': fullPath('src')
 				}
 			},
 			module: {

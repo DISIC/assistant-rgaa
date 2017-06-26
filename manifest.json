@@ -9,7 +9,7 @@
 	},
 	"applications": {
 		"gecko": {
-			"id": "rgaa-toolbar@vtech.fr",
+			"id": "assistant-rgaa@modernisation.gouv.fr",
 			"strict_min_version": "52.0"
 		}
 	},
