@@ -2,7 +2,7 @@
 
 L'extension se base sur le projet [WebExtensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions).
 
-Le `manifest.json` décrit la configuration de l'appli et permet d'avoir une vue globale sur quelle partie du code est chargée où.
+Le `manifest.json` décrit la configuration de l'application et permet d'avoir une vue globale sur quelle partie du code est chargée où.
 
 ## Contenu de chaque dossier
 
@@ -29,7 +29,7 @@ Avant de décrire chaque partie (*background*, *common*, etc.), on peut s'attard
 * `/sagas` : les [sagas redux](http://yelouafi.github.io/redux-saga/) à utiliser.
 * `/selectors` : les fonctions permettant de récupérer facilement des données du *state* [redux](http://redux.js.org/)
 
-### partie `/background`
+### Partie `/background`
 
 C'est le code correspondant au *background script* de l'extension. Ici, on :
 
@@ -40,7 +40,7 @@ C'est le code correspondant au *background script* de l'extension. Ici, on :
 
 Un fichier de build `dist/background.js` est généré avec ce code.
 
-### partie `/common`
+### Partie `/common`
 
 C'est la plus grosse partie du code. Ici, on a notamment :
 
@@ -50,7 +50,7 @@ C'est la plus grosse partie du code. Ici, on a notamment :
 
 Aucun fichier de build n'est généré avec ce code : c'est dans chaque partie différente du code qu'on utilise les choses dont on a besoin venant du dossier *common*.
 
-### partie `/container`
+### Partie `/container`
 
 Ce code correspond à un *content-script* de l'extension. Il est injecté dans chaque page que vous chargez. Dans cette partie :
 
@@ -61,7 +61,7 @@ Ce code correspond à un *content-script* de l'extension. Il est injecté dans c
 
 Des fichier de build `dist/container.{js,css}` sont générés avec ce code. Les deux sont injectés dans la page courante.
 
-### partie `/helpers`
+### Partie `/helpers`
 
 Ce code correspond à un *content-script* de l'extension. Il est injecté dans chaque page que vous chargez.
 
@@ -75,7 +75,7 @@ Un *helper* permet d'appliquer, entre autre, des changements de styles sur la pa
 
 Des fichier de build `dist/helpers.{js,css}` sont générés avec ce code. Les deux sont injectés dans la page courante.
 
-### partie `options`
+### Partie `options`
 
 Ce code correspond à la page d'options de l'extension. Ici :
 
@@ -84,7 +84,7 @@ Ce code correspond à la page d'options de l'extension. Ici :
 
 Des fichier de build `dist/options.{js,css}` sont générés avec ce code. Ils sont utilisés dans `/options/content.html` qui est indiqué comme la page d'options dans le `manifest.json` de l'extension.
 
-### partie `panel`
+### Partie `panel`
 
 Ce code correspond au panneau latéral affiché ou caché quand on clique sur le bouton de l'extension.
 
@@ -99,7 +99,7 @@ Les *background script*, *content script*, *option pages* étant tous des élém
 
 * chaque partie du code possède son propre store.
 * chaque store utilise le même set de reducers : autrement dit, chaque store utilise tous les reducers de l'extension.
-* chaque store est créé avec des middleware de synchronisation pour qu'à tout moment, dans tous les stores, on ai les mêmes données. Quand une action est déclenchée dans un des stores, les middleware déclenchent la même action dans les autres stores, avec les mêmes données (grâce aux api de messages des webextensions). Ceci est fait afin que lors des développements, on puisse travailler comme s'il n'y avait qu'un unique store pour toute l'appli.
+* chaque store est créé avec des middleware de synchronisation pour qu'à tout moment, dans tous les stores, on ait les mêmes données. Quand une action est déclenchée dans un des stores, les middleware déclenchent la même action dans les autres stores, avec les mêmes données (grâce aux api de messages des webextensions). Ceci est fait afin que lors des développements, on puisse travailler comme s'il n'y avait qu'un unique store pour toute l'application.
 * dans le *background script*, le store créé est "persistant". Chaque modification sur l'état est sauvegardé dans le *storage local* de l'extension.
-* dans le *panel*, le store créé récupère les données "persistées" venant du store du *background script*. Ceci est fait car, contrairement à toutes les autres parties de l'appli, le panel peut être généré *après* le "démarrage" de l'extension. Si on ouvre le panel dans une popup après l'avoir utilisé 5 minutes, il faut que le panel se souvienne de son état précédent quand il passe dans une nouvelle fenêtre. Il récupère donc un état sauvegardé.
+* dans le *panel*, le store créé récupère les données "persistées" venant du store du *background script*. Ceci est fait car, contrairement à toutes les autres parties de l'application, le panel peut être généré *après* le "démarrage" de l'extension. Si on ouvre le panel dans une popup après l'avoir utilisé 5 minutes, il faut que le panel se souvienne de son état précédent quand il passe dans une nouvelle fenêtre. Il récupère donc un état sauvegardé.
 * la page d'options utilise directement le store du *background script*. Contrairement aux *content script*, la page d'options à accès à l'api webextensions `getBackgroundPage` et peut donc éviter d'avoir un store à synchroniser.

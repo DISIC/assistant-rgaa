@@ -1,6 +1,5 @@
 # Assistant RGAA
 
-
 Assistant RGAA est une extension de navigateur pour Firefox et Chrome.
 
 L'extension propose la liste complète des critères et tests du référentiel RGAA 3.0 2016, le référentiel général d'accessibilité pour les administrations de l'État français. Ce référentiel est une adaptation opérationnelle des règles internationales d'accessibilité (WCAG 2.0).
