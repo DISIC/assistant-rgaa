@@ -1,17 +1,5 @@
 # Publier une nouvelle version de l'extension
 
-## Prérequis: utiliser une version de dev de web-ext
-
-Avant de pouvoir publier, il faut régler vos dépendances. La dépendance [web-ext](https://github.com/mozilla/web-ext), nécessaire pour construire l'extension, n'a actuellement pas de version stable avec un fix qu'il nous faut. Il faut donc que vous cloniez en local le projet, que vous l'installiez en suivant la doc et que vous le linkiez dans votre projet :
-
-```
-git clone https://github.com/mozilla/web-ext.git
-# lancer les commandes en suivant la doc d'install https://github.com/mozilla/web-ext#installation-from-source
-# faire un 'cd' vers le projet rgaa-toolbar
-npm uninstall web-ext
-npm link web-ext
-```
-
 ## 1. Augmenter le n° de version
 
 Avant de construire la build, n'oubliez pas de changer la version de l'appli dans le package.json et le manifest.json.
