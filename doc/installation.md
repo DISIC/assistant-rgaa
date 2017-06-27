@@ -2,7 +2,7 @@
 
 Vous pouvez installer l'extension de différentes façons.
 
-*Note : pour voir comment installer l'extension afin de contribuer à son développement, voir la doc [Installation (développement)](doc/installation-dev.md).*
+*Note : pour voir comment installer l'extension afin de contribuer à son développement, voir la doc [Installation (développement)](/doc/installation-dev.md).*
 
 ### Installer depuis un un fichier zip ou xpi
 
