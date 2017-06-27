@@ -25,8 +25,8 @@ const Header = ({
 				<FormattedMessage id="Header.themes" />
 			</Link>
 
-			<Link className="Header-import Link" to="/import">
-				<FormattedMessage id="Header.import" />
+			<Link className="Header-help Link" to="/help">
+				<FormattedMessage id="Header.help" />
 			</Link>
 
 			<div className="Header-dock">
@@ -44,17 +44,6 @@ const Header = ({
 					title={intl.formatMessage({id: 'Header.options'})}
 				/>
 			</button>
-
-			<Link
-				className="Header-help Link"
-				title={intl.formatMessage({id: 'Header.help'})}
-				to="/help"
-			>
-				<Icon
-					name="question-circle-o"
-					title={intl.formatMessage({id: 'Header.help'})}
-				/>
-			</Link>
 
 			{renderIf(!inPopup)(() =>
 				<button

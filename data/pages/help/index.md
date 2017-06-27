@@ -13,9 +13,9 @@ Pour chacun de ces tests, l'extension permet d'appliquer des modifications à la
 
 * *version du référentiel utilisée* : à l'heure actuelle, seule la version 3-2016 est supportée, mais l'extension est conçue pour en supporter plusieurs.
 * *référentiel* : la page principale de l'extension, qui liste tous les tests du référentiel.
+* *aide* : vous y êtes !
 * icône *position* : grâce à ce menu, l'extension peut-être positionnée à différents endroits de la page, ou ouverte dans une fenêtre séparée.
 * icône *options* : options globales de l'extension, permettant notamment de configurer la version du référentiel à utiliser.
-* icône *aide* : vous y êtes !
 * icône *minimiser* : cache l'extension. Si un test est actif, il n'est pas désactivé.
 * icône *fermer* : cache l'extension. Si un test est actif, il est désactivé.
 
