@@ -18,6 +18,6 @@ Le fichier est nommé en suivant la version.
 
 ## Helpers
 
-Dans `data/helpers/`, on trouve des fichiers décrivant les helpers à utiliser pour chaque test d'un référentiel d'une version donnée. Voir la documentation des [helpers](doc/helpers.md) pour plus de détails.
+Dans `data/helpers/`, on trouve des fichiers décrivant les helpers à utiliser pour chaque test d'un référentiel d'une version donnée. Voir la documentation des [helpers](helpers.md) pour plus de détails.
 
 Le fichier est nommé en suivant la version.
