@@ -26,7 +26,7 @@ Avant de décrire chaque partie (*background*, *common*, etc.), on peut s'attard
 * `/components` : composants [React](https://facebook.github.io/react/)
 * `/messages` : fichiers de traduction i18n utilisées par [React Intl](https://github.com/yahoo/react-intl)
 * `/reducers` : les reducers [redux](http://redux.js.org/) à utiliser
-* `/sagas` : les [sagas redux](http://yelouafi.github.io/redux-saga/) à utiliser.
+* `/sagas` : les [sagas redux](https://redux-saga.js.org/) à utiliser.
 * `/selectors` : les fonctions permettant de récupérer facilement des données du *state* [redux](http://redux.js.org/)
 
 ### Partie `/background`
