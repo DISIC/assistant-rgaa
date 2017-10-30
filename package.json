@@ -4,7 +4,7 @@
   "description": "Assistant RGAA",
   "main": "js/index.js",
   "scripts": {
-    "start": "webpack --watch --config webpack.config.dev.js",
+    "start": "npm run icons && webpack --watch --config webpack.config.dev.js",
     "serve": "webpack-dev-server --config webpack.config.dev.js",
     "icons": "touch ./dist/icons.svg && spritesh --input ./icons --output ./dist/icons.svg",
     "build": "npm run clean && npm run icons && webpack --config webpack.config.production.js",
