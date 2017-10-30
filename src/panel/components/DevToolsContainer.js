@@ -22,9 +22,11 @@ const mergeProps = ({version, ...stateProps}, {dispatch}, ownProps) => ({
 		dispatch(setReferenceVersion(version));
 	},
 	onSearchCriterion(id) {
-		document
-			.querySelector(`.Criterion[data-id="${id}"]`)
-			.scrollIntoView(true);
+		const criterion = document.querySelector(`.Criterion[data-id="${id}"]`);
+
+		if (criterion) {
+			criterion.scrollIntoView(true);
+		}
 	}
 });
 
