@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Assistant RGAA",
 	"description": "Assistant RGAA",
-	"version": "1.0.2",
+	"version": "1.0.4",
 	"icons": {
 		"48": "img/icon-48.png",
 		"96": "img/icon-96.png"
