@@ -606,7 +606,7 @@
 		"rgaa": "<ol><li>Repérer dans la page qu'aucun élément n'est mis en évidence.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"10.1.2": {
-		"rgaa": "<ol><li>Repérer dans la page qu'aucun attribut n'est mis en évidence (<a href=\"http://references.modernisation.gouv.fr/rgaa-accessibilite/glossaire.html#prsentation-de-linformation\">sauf cas particuliers des attributs <code lang=\"en\">width</code> et <code lang=\"en\">height</code> et des éléments graphiques</a>).</li><li>Si c'est le cas, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Repérer dans la page qu'aucun attribut n'est mis en évidence.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"10.1.3": {
 		"rgaa": "<ol><li>Vérifier dans la page l'absence&nbsp;:<ul><li>de mots ayant une espace entre chaque lettre&nbsp;;</li><li>d'espaces destinées à créer des effets de marges ou d'alignement&nbsp;;</li><li>d'espaces destinées à simuler des tableaux ou des colonnes.</li></ul></li><li>Si c'est le cas, le test est validé.</li></ol>"

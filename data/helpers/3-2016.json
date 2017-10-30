@@ -3280,7 +3280,7 @@
 		},
 		{
 			"helper": "showElement",
-			"selector": "[align], [alink], [background], [bgcolor], [border], [cellpading], [cellspacing], [char], [charoff], [clear], [compact], [color], [frameborder], [hspace], [link], [marginheight], [marginwidth], [text], [valign], [vlink], [vspace], [size], :not(img)[width], :not(img)[height]",
+			"selector": "[align], [alink], [background], [bgcolor], [border], [cellpading], [cellspacing], [char], [charoff], [clear], [compact], [color], [frameborder], [hspace], [link], [marginheight], [marginwidth], [text], [valign], [vlink], [vspace], [size], :not(img):not(object):not(embed):not(canvas):not(svg)[width], :not(img):not(object):not(embed):not(canvas):not(svg)[height]",
 			"attributes": [
 				"align",
 				"alink",
