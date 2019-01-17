@@ -983,11 +983,7 @@
 		},
 		{
 			"helper": "showAttributes",
-			"selector": "object[type^=\"image\"][longdesc], object[type^=\"image\"][alt]",
-			"attributes": [
-				"longdesc",
-				"alt"
-			]
+			"selector": "object[type^=\"image\"][longdesc], object[type^=\"image\"][alt]"
 		}
 	],
 	"1.7.4": [
