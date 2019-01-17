@@ -672,7 +672,7 @@
 		{
 			"helper": "showChildElements",
 			"selector": "svg",
-			"childrenSelector": "desc",
+			"childrenSelector": "title",
 			"attributes": [],
 			"showContent": true
 		}
