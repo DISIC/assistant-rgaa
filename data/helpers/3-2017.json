@@ -142,6 +142,7 @@
 			"selector": "object[type^=\"image\"]",
 			"attributes": [
 				"role",
+				"title",
 				"aria-label",
 				"aria-describedby",
 				"aria-labelledby"
@@ -154,7 +155,8 @@
 			"attributes": [
 				"aria-label",
 				"aria-describedby",
-				"aria-labelledby"
+				"aria-labelledby",
+				"title"
 			]
 		}
 	],
@@ -206,7 +208,8 @@
 				"aria-hidden",
 				"aria-label",
 				"aria-describedby",
-				"aria-labelledby"
+				"aria-labelledby",
+				"title"
 			],
 			"showContent": true
 		},
@@ -217,7 +220,8 @@
 			"attributes": [
 				"aria-label",
 				"aria-describedby",
-				"aria-labelledby"
+				"aria-labelledby",
+				"title"
 			]
 		}
 	],
@@ -236,7 +240,8 @@
 				"aria-hidden",
 				"aria-label",
 				"aria-describedby",
-				"aria-labelledby"
+				"aria-labelledby",
+				"title"
 			]
 		},
 		{
@@ -246,7 +251,8 @@
 			"attributes": [
 				"aria-label",
 				"aria-describedby",
-				"aria-labelledby"
+				"aria-labelledby",
+				"title"
 			]
 		}
 	],
