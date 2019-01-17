@@ -996,9 +996,11 @@
 			"helper": "disableAllStyles"
 		},
 		{
-			"helper": "outline",
+			"helper": "showElement",
 			"selector": "svg",
-			"showTag": true
+			"attributes": [
+				"aria-label"
+			]
 		},
 		{
 			"helper": "showChildElements",
