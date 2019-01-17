@@ -391,8 +391,8 @@
 		},
 		{
 			"helper": "showChildElements",
-			"selector": "svg:has(desc)",
-			"childrenSelector": "desc",
+			"selector": "svg:has(title)",
+			"childrenSelector": "title",
 			"attributes": [],
 			"showContent": true
 		}
