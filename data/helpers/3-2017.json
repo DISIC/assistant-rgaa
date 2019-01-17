@@ -980,10 +980,6 @@
 			"helper": "outline",
 			"selector": "object[type^=\"image\"]",
 			"showTag": true
-		},
-		{
-			"helper": "showAttributes",
-			"selector": "object[type^=\"image\"][longdesc], object[type^=\"image\"][alt]"
 		}
 	],
 	"1.7.4": [
@@ -994,14 +990,6 @@
 			"helper": "outline",
 			"selector": "embed[type^=\"image\"]",
 			"showTag": true
-		},
-		{
-			"helper": "showAttributes",
-			"selector": "embed[type^=\"image\"][longdesc], embed[type^=\"image\"][alt]",
-			"attributes": [
-				"longdesc",
-				"alt"
-			]
 		}
 	],
 	"1.7.5": [
