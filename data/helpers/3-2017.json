@@ -2067,7 +2067,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "embed, object, iframe",
+			"selector": "object, svg, canvas, embed, iframe, video, audio, bgsound",
 			"showTag": true
 		}
 	],
@@ -2077,7 +2077,7 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "embed, object, iframe",
+			"selector": "object, svg, canvas, embed, iframe, video, audio, bgsound",
 			"showTag": true
 		}
 	],
