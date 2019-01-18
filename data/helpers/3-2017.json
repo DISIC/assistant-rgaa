@@ -2417,16 +2417,22 @@
 			"showContent": true
 		},
 		{
+			"helper": "showChildElements",
+			"selector": "table",
+			"childrenSelector": "colgroup",
+			"attributes": [],
+			"showContent": true
+		},
+		{
 			"helper": "outline",
-			"selector": "td[scope], td[headers], td[colgroup], td[axis]"
+			"selector": "td[scope], td[headers], td[axis]"
 		},
 		{
 			"helper": "showElement",
-			"selector": "td[scope], td[headers], td[colgroup], td[axis]",
+			"selector": "td[scope], td[headers], td[axis]",
 			"attributes": [
 				"scope",
 				"headers",
-				"colgroup",
 				"axis"
 			]
 		}
