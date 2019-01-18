@@ -3591,13 +3591,21 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]"
+			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label], input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]"
 		},
 		{
 			"helper": "showAttributes",
-			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label]",
+			"selector": "input[aria-label]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-label], textarea[aria-label], output[aria-label], progress[aria-label], meter[aria-label], input[aria-labelledby]:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select[aria-labelledby], textarea[aria-labelledby], output[aria-labelledby], progress[aria-labelledby], meter[aria-labelledby]",
 			"attributes": [
-				"aria-label"
+				"aria-label",
+				"aria-labelledby"
+			]
+		},
+		{
+			"helper": "showElement",
+			"selector": "[id]",
+			"attributes": [
+				"id"
 			]
 		}
 	],
