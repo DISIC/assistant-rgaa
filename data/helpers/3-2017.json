@@ -1498,6 +1498,27 @@
 			}
 		}
 	],
+	"3.3.5": [
+		{
+			"helper": "colorContrast",
+			"minimumRatio": 4.5,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
+			}
+		}
+	],
 	"3.4.1": [
 		{
 			"helper": "colorContrast",
@@ -1565,6 +1586,27 @@
 		{
 			"helper": "colorContrast",
 			"minimumRatio": 4.5,
+			"left": {
+				"label": "Couleur de texte",
+				"pixelPicker": true,
+				"textPicker": true
+			},
+			"right": {
+				"label": "Couleur d'arrière-plan",
+				"pixelPicker": true,
+				"textPicker": false
+			},
+			"extractor": {
+				"label": "Extraire la couleur de texte et d'arrière-plan depuis une sélection dans la page",
+				"left": "color",
+				"right": "backgroundColor"
+			}
+		}
+	],
+	"3.4.5": [
+		{
+			"helper": "colorContrast",
+			"minimumRatio": 7,
 			"left": {
 				"label": "Couleur de texte",
 				"pixelPicker": true,

@@ -263,6 +263,9 @@
 	"3.3.4": {
 		"rgaa": "<ol><li>Repérer dans la page, les textes et les textes incrustés (textes en image et textes dans des images en propriété de fond CSS) de taille agrandie (à partir de 120% de la police par défaut) en gras qui pourraient poser des problèmes de contraste.</li><li>Avec les <span lang=\"en\">color picker</span>, récupérer la couleur de police du lien et celle du texte environnant, capturer les couleurs d'avant-plan et d'arrière-plan.</li><li>Vérifier que la valeur de contraste est de 3, au moins.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
+	"3.3.5": {
+		"rgaa": "<ol><li>Repérer dans la page, le mécanisme qui permet d'afficher le texte avec un rapport de contraste conforme.</li><li>Avec le <span lang=\"en\">color picker</span>, récupérer la couleur de police du lien et celle du texte environnant, capturer les couleurs d'avant-plan et d'arrière-plan.</li><li>érifier que la valeur de contraste est de 4,5, au moins.</li><li>Si c'est le cas, le test est validé.</li></ol>"
+	},
 	"3.4.1": {
 		"rgaa": "<ol><li>Repérer dans la page, les textes et les textes incrustés (textes en image et textes dans des images en propriété de fond CSS) de taille normale (jusqu'à 150% de la taille de police par défaut) sans effet de graisse qui pourraient poser des problèmes de contraste.</li><li>Avec les <span lang=\"en\">color picker</span>, récupérer la couleur de police du lien et celle du texte environnant, capturer les couleurs d'avant-plan et d'arrière-plan.</li><li>Vérifier que la valeur de contraste est de 7, au moins.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
@@ -274,6 +277,9 @@
 	},
 	"3.4.4": {
 		"rgaa": "<ol><li>Repérer dans la page, les textes et les textes incrustés (textes en image et textes dans des images en propriété de fond CSS) de taille agrandie (à partir de 120% de la police par défaut) en gras qui pourraient poser des problèmes de contraste.</li><li>Avec les <span lang=\"en\">color picker</span>, récupérer la couleur de police du lien et celle du texte environnant, capturer les couleurs d'avant-plan et d'arrière-plan.</li><li>Vérifier que la valeur de contraste est de 4.5, au moins.</li><li>Si c'est le cas, le test est validé.</li></ol>"
+	},
+	"3.4.5": {
+		"rgaa": "<ol><li>Repérer dans la page, le mécanisme qui permet d'afficher le texte avec un rapport de contraste conforme.</li><li>Avec le <span lang=\"en\">color picker</span>, récupérer la couleur de police du lien et celle du texte environnant, capturer les couleurs d'avant-plan et d'arrière-plan.</li><li>érifier que la valeur de contraste est de 7, au moins.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"4.1.1": {
 		"rgaa": "<ol><li>Pour chaque média entouré, repérer les <a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/glossaire.html#mdia-temporel-type-son-vido-et-synchronis\">médias temporels seulement audio</a>.</li><li>Pour chacun vérifier si nécessaire la présence d'une <a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/glossaire.html#transcription-textuelle-media-temporel\">transcription textuelle</a> adjacente clairement identifiable ou accessible via un <a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/glossaire.html#lien-adjacent\">lien adjacent</a>.</li><li>Si c'est le cas, le test est validé.</li></ol>"
