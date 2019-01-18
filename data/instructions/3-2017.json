@@ -503,6 +503,9 @@
 	"7.1.6": {
 		"rgaa": "<ol><li>Pour chaque élément entouré, repérer ceux qui font partie d'un composant d'interface.</li><li>Avec chacun des lecteurs d'écrans présents dans la <a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/base-de-reference.html\">base de référence</a> choisie, vérifier<ul><li>que le composant est <a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/glossaire.html#correctement-restitue-par-les-technologies-dassistance\">correctement restitué</a>&nbsp;;</li><li>ou qu'une alternative accessible est présente.</li></ul></li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
+	"7.1.7": {
+		"rgaa": "<ol><li>Repérer tous les dispositifs JavaScript qui génèrent ou contrôlent un composant d'interface.</li><li>Pour chacun vérifier&nbsp;:<ul><li>que le composant possède un rôle cohérent avec son usage (e.g. bouton ou lien)&nbsp;;</li><li>que le composant possède un nom explicite&nbsp;;</li><li>que le nom du composant est cohérent avec l'état de la fonctionnalité (e.g. ouvert/fermé).</li></ul></li><li>Si c'est le cas, le test est validé.</li></ol>"
+	},
 	"7.2.1": {
 		"rgaa": "<ol><li>Repérer les alternatives aux fonctionnalités JavaScript.</li><li>Exécuter le test et repérer dans la page les alternatives proposées lorsque JavaScript est désactivé.</li><li>Pour chacune vérifier que l'alternative permet d'accéder aux mêmes contenus et à des fonctionnalités similaires.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
