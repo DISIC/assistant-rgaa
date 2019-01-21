@@ -747,13 +747,13 @@
 		"rgaa": "<ol><li>Repérer les champs associés à une étiquette visible.</li><li>Pour chacun vérifier que le champ et son étiquette sont accolés.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"11.5.1": {
-		"rgaa": "<ol><li>Repérer les champs de même nature (e.g. un groupe de saisie d'informations d'identité, une série de cases à cocher, une saisie de date sur plusieurs champs&hellip;).</li><li>Pour chacun vérifier qu'ils sont contenus dans une balise <code>fieldset</code>.</li><li>Si c'est le cas, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Repérer les champs de même nature (e.g. un groupe de saisie d'informations d'identité, une série de cases à cocher, une saisie de date sur plusieurs champs&hellip;).</li><li>Pour chacun vérifier :<ul><li>qu'ils sont contenus dans une balise <code>fieldset</code> ;</li><li>qu'ils sont contenus dans une balise qui possède un attribut <code>role=\"group\"</code>.</li></ul></li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"11.6.1": {
-		"rgaa": "<ol><li>Pour chaque groupe de champs entouré, vérifier la présence d'une légende (<code>&lt;legend&gt;</code>).</li><li>Si c'est le cas, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Vérifier que :<ul><li>Pour chaque groupe de champs entouré avec une balise <code>&lt;fieldset&gt;</code>, vérifier la présence d'une légende (<code>&lt;legend&gt;</code>).</li><li>Si c'est le cas, le test est validé.</li></ul></li><li>Sinon vérifier que :<ul><li>Pour chaque groupe de champs entouré dispoant d'un attribut <code>role=\"group\"</code>, vérifier la présence d'un intitulé au groupe via les attributs <code>aria-label</code> ou <code>aria-labelledby</code>.</li><li>Si c'est le cas, le test est validé.</li></ul></li><li>Sinon pour champ d'un groupe de champs entouré, vérifier que :<ul><li>la présence d'un attribut <code>title</code> qui possède une indication permettant de déterminer l'appartenance du champ au groupement de champ.</li><li>ou la présence d'une propriété <code>aria-</code> qui référence un passage de texte qui possède une indication permettant de déterminer l'appartenance du champ au groupement de champ</li><li>Si c'est le cas, le test est validé.</li></ul></li></ol>"
 	},
 	"11.7.1": {
-		"rgaa": "<ol><li>Pour chaque groupe de champs entouré, vérifier que contenu de la légende (<code>&lt;legend&gt;</code>) est pertinent (permet de comprendre la nature du regroupement).</li><li>Si c'est le cas, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Pour chaque groupe de champs entouré, vérifier que l'initulé du groupe (via les critères mentionés au critère précédent) permet de comprendre la nature du regroupement.</li><li>ou que les champs de chaque ensemble de champ fournissent cette information par le biais des attributs title, aria-label, aria-describedby, aria-labelledby.</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"11.8.1": {
 		"rgaa": "<ol><li>Repérer les champs de sélection entourés.</li><li>Pour chacun vérifier que les items sont regroupés via une balise <code>&lt;optgroup&gt;</code>, si nécessaire.</li><li>Si c'est le cas, le test est validé.</li></ol>"

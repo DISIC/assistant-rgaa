@@ -3751,12 +3751,30 @@
 		},
 		{
 			"helper": "outline",
-			"selector": "fieldset, legend",
+			"selector": "fieldset",
 			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "form [role='group']",
+			"showTag": true,
+			"attributes": [
+				"role",
+				"aria-label",
+				"aria-labelledby"
+			]
 		},
 		{
 			"helper": "outline",
 			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
+			"attributes": [
+				"title",
+				"aria-describedby"
+			]
 		}
 	],
 	"11.6.1": [
@@ -3767,6 +3785,30 @@
 			"helper": "outline",
 			"selector": "fieldset, legend",
 			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "form [role='group']",
+			"showTag": true,
+			"attributes": [
+				"role",
+				"aria-label",
+				"aria-labelledby"
+			]
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
+			"attributes": [
+				"title",
+				"aria-label",
+				"aria-labelledby",
+				"aria-describedby"
+			]
 		}
 	],
 	"11.7.1": [
@@ -3777,6 +3819,30 @@
 			"helper": "outline",
 			"selector": "fieldset, legend",
 			"showTag": true
+		},
+		{
+			"helper": "showElement",
+			"selector": "form [role='group']",
+			"showTag": true,
+			"attributes": [
+				"role",
+				"aria-label",
+				"aria-labelledby"
+			]
+		},
+		{
+			"helper": "outline",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter"
+		},
+		{
+			"helper": "showElement",
+			"selector": "input:not([type='hidden']):not([type='submit']):not([type='reset']):not([type='image']):not([type='button']), select, textarea, output, progress, meter",
+			"attributes": [
+				"title",
+				"aria-label",
+				"aria-labelledby",
+				"aria-describedby"
+			]
 		}
 	],
 	"11.8.1": [
