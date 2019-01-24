@@ -528,7 +528,7 @@
 		"rgaa": "<ol><li>Repérer les <a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/glossaire.html#alerte\">alertes non sollicitées</a>.</li><li>Pour chacune (<a target=\"_blank\" href=\"http://references.modernisation.gouv.fr/referentiel/cas-particuliers.html#cp-7-5\">hors cas particuliers</a>), vérifier la présence d'un mécanisme permettant à l'utilisateur&nbsp;:<ul><li>de ne plus afficher l'alerte non sollicitée&nbsp;;</li><li>de ré-afficher l'alerte non sollicitée.</li></ul></li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"8.1.1": {
-		"rgaa": "<ol><li>Activer le bouton «&nbsp;Voir les soruces&nbsp;».</li><li>Vérifier la présence d'une balise <code>&lt;!DOCTYPE&gt;</code> (e.g. <code>&lt;!DOCTYPE html&gt;</code>).</li><li>Si c'est le cas, le test est validé.</li></ol>"
+		"rgaa": "<ol><li>Activer le bouton «&nbsp;Voir les sources&nbsp;».</li><li>Vérifier la présence d'une balise <code>&lt;!DOCTYPE&gt;</code> (e.g. <code>&lt;!DOCTYPE html&gt;</code>).</li><li>Si c'est le cas, le test est validé.</li></ol>"
 	},
 	"8.1.2": {
 		"rgaa": "<ol><li><li>Activer le bouton «&nbsp;Validateur W3C&nbsp;» pour une page en ligne, et «&nbsp;Validateur W3C (HTML local)&nbsp;» pour une page en local.</li><li>Dans les résultats, vérifier qu'il n'y pas d'erreurs relatives à l'écriture du <code>&lt;!DOCTYPE&gt;</code> (e.g. <span lang=\"en\">unknown declaration type</span>).</li><li>Si c'est le cas, le test est validé.</li></ol>"
