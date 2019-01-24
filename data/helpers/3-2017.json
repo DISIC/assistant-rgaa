@@ -2450,7 +2450,9 @@
 			"helper": "showElement",
 			"selector": "a:not([role]), [role='link']",
 			"attributes": [
-				"title"
+				"title",
+				"aria-label",
+				"aria-labelledby"
 			]
 		}
 	],
@@ -2893,6 +2895,14 @@
 		{
 			"helper": "outline",
 			"selector": "a:not([role]), [role='link']"
+		},
+		{
+			"helper": "showElement",
+			"selector": "a:not([role]), [role='link']",
+			"attributes": [
+				"aria-label",
+				"aria-labelledby"
+			]
 		},
 		{
 			"helper": "showElement",
