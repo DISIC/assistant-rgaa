@@ -4,6 +4,7 @@ const program = require('commander');
 const scrapeWith = require('./scrapeWith');
 const scrapeReference3 = require('./scrapeReference3');
 const scrapeReference32016 = require('./scrapeReference32016');
+const scrapeReference32017 = require('./scrapeReference32017');
 const scrapeInstructions3 = require('./scrapeInstructions3');
 
 
@@ -41,7 +42,7 @@ program
 	.option(
 		'-s, --source <source>',
 		'Source URL.',
-		'http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html'
+		'http://references.modernisation.gouv.fr/rgaa-accessibilite/2016/criteres.html'
 	)
 	.option(
 		'-d, --dest <dest>',
@@ -53,6 +54,29 @@ program
 		'Merges the generated file with the existing one, if any.'
 	)
 	.action(scrapeWith(scrapeReference32016));
+
+/**
+ *
+ */
+program
+	.command('reference-3-2017')
+	.alias('r-3-2017')
+	.description('Scrapes version 3-2017 of the reference.')
+	.option(
+		'-s, --source <source>',
+		'Source URL.',
+		'http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html'
+	)
+	.option(
+		'-d, --dest <dest>',
+		'Destination file.',
+		path.resolve(__dirname, '../data/references/3-2017.json')
+	)
+	.option(
+		'-m, --merge',
+		'Merges the generated file with the existing one, if any.'
+	)
+	.action(scrapeWith(scrapeReference32017));
 
 /**
  *
