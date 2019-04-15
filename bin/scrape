@@ -3,7 +3,7 @@ const path = require('path');
 const program = require('commander');
 const scrapeWith = require('./scrapeWith');
 const scrapeReference3 = require('./scrapeReference3');
-const scrapeReference32017 = require('./scrapeReference32017');
+const scrapeReference32016 = require('./scrapeReference32016');
 const scrapeInstructions3 = require('./scrapeInstructions3');
 
 
@@ -35,9 +35,9 @@ program
  *
  */
 program
-	.command('reference-3-2017')
-	.alias('r-3-2017')
-	.description('Scrapes version 3-2017 of the reference.')
+	.command('reference-3-2016')
+	.alias('r-3-2016')
+	.description('Scrapes version 3-2016 of the reference.')
 	.option(
 		'-s, --source <source>',
 		'Source URL.',
@@ -46,13 +46,13 @@ program
 	.option(
 		'-d, --dest <dest>',
 		'Destination file.',
-		path.resolve(__dirname, '../data/references/3-2017.json')
+		path.resolve(__dirname, '../data/references/3-2016.json')
 	)
 	.option(
 		'-m, --merge',
 		'Merges the generated file with the existing one, if any.'
 	)
-	.action(scrapeWith(scrapeReference32017));
+	.action(scrapeWith(scrapeReference32016));
 
 /**
  *
@@ -69,7 +69,7 @@ program
 	.option(
 		'-d, --dest <dest>',
 		'Destination file.',
-		path.resolve(__dirname, '../data/instructions/3-2017.json')
+		path.resolve(__dirname, '../data/instructions/3.json')
 	)
 	.option(
 		'-m, --merge',
