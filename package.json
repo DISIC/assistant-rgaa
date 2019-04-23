@@ -1,6 +1,6 @@
 {
   "name": "@empreinte-digitale/assistant-rgaa",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Assistant RGAA",
   "main": "js/index.js",
   "scripts": {
