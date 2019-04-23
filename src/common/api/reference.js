@@ -3,7 +3,7 @@ import {getOption} from './options';
 
 
 
-export const DEFAULT_VERSION = '3-2016';
+export const DEFAULT_VERSION = '3-2017';
 
 /*
  * get an array of {name, filename, version}
