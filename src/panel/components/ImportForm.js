@@ -80,12 +80,12 @@ export default function ImportForm({
 				/>
 			</div>
 
-			{renderIf(valid)(() =>
+			{renderIf(valid)(() => (
 				<p className="ImportForm-success">
 					<FormattedMessage id="Import.success" />
 				</p>
-			)}
-			{renderIf(valid && importVersion !== globalVersion)(() =>
+			))}
+			{renderIf(valid && importVersion !== globalVersion)(() => (
 				<p className="ImportForm-warning">
 					<FormattedHTMLMessage
 						id="Import.versionDifference"
@@ -94,19 +94,20 @@ export default function ImportForm({
 						}}
 					/>
 				</p>
-			)}
-			{renderIf(pending && !valid)(() =>
+			))}
+			{renderIf(pending && !valid)(() => (
 				<details className="ImportForm-failure" open={errors.length < 10}>
 					<summary>
 						<FormattedMessage id="Import.failure" />
 					</summary>
 					<ul className="ImportForm-errors">
-						{errors.map((error, i) =>
-							<li key={`error-${i}`}>{error}</li>
-						)}
+						{errors.map((error, i) => (
+							// eslint-disable-next-line react/no-array-index-key
+							<li key={i}>{error}</li>
+						))}
 					</ul>
 				</details>
-			)}
+			))}
 
 			<div className="ImportForm-buttons">
 				<button disabled={!valid} className="ImportForm-button">
@@ -122,7 +123,7 @@ export default function ImportForm({
 }
 
 ImportForm.propTypes = {
-	importVersion: PropTypes.string,
+	importVersion: PropTypes.string.isRequired,
 	globalVersion: PropTypes.string.isRequired,
 	onReset: PropTypes.func.isRequired,
 	onFileSelection: PropTypes.func.isRequired,
@@ -132,7 +133,7 @@ ImportForm.propTypes = {
 		quoteChar: PropTypes.string
 	}).isRequired,
 	onSubmit: PropTypes.func.isRequired,
-	errors: PropTypes.array.isRequired,
+	errors: PropTypes.arrayOf(PropTypes.string).isRequired,
 	valid: PropTypes.bool.isRequired,
 	pending: PropTypes.bool.isRequired
 };

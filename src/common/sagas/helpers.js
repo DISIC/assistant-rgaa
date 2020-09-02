@@ -27,6 +27,7 @@ function* revertSaga({payload: {id, helpers}}) {
 function* applyAllSaga() {
 	const enabledTests = yield select(getEnabled);
 
+	// eslint-disable-next-line no-restricted-syntax
 	for (const test of enabledTests) {
 		const helpers = yield select(getHelpersByTest, test.id);
 		yield put(applyHelpers(test.id, helpers));
@@ -39,6 +40,7 @@ function* applyAllSaga() {
 function* revertAllSaga() {
 	const enabledTests = yield select(getEnabled);
 
+	// eslint-disable-next-line no-restricted-syntax
 	for (const test of enabledTests) {
 		const helpers = yield select(getHelpersByTest, test.id);
 		yield put(revertHelpers(test.id, helpers));

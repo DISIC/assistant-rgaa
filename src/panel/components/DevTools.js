@@ -30,8 +30,8 @@ const DevTools = ({onSearchCriterion, onReloadReference}) => (
 );
 
 DevTools.propTypes = {
-	onSearchCriterion: PropTypes.func,
-	onReloadReference: PropTypes.func
+	onSearchCriterion: PropTypes.func.isRequired,
+	onReloadReference: PropTypes.func.isRequired
 };
 
 export default DevTools;

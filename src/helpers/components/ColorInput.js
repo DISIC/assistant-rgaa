@@ -66,11 +66,11 @@ const ColorInput = ({id, color, onChange, children, intl}) => {
 };
 
 ColorInput.propTypes = {
-	id: PropTypes.string,
-	color: PropTypes.string,
-	onChange: PropTypes.func,
-	children: PropTypes.node,
-	intl: intlShape
+	id: PropTypes.string.isRequired,
+	color: PropTypes.string.isRequired,
+	onChange: PropTypes.func.isRequired,
+	children: PropTypes.node.isRequired,
+	intl: intlShape.isRequired
 };
 
 export default injectIntl(ColorInput);

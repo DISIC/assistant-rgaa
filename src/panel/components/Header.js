@@ -45,7 +45,7 @@ const Header = ({
 				/>
 			</button>
 
-			{renderIf(!inPopup)(() =>
+			{renderIf(!inPopup)(() => (
 				<button
 					type="button"
 					onClick={onMinimizeClick}
@@ -57,9 +57,9 @@ const Header = ({
 						title={intl.formatMessage({id: 'Header.minimize'})}
 					/>
 				</button>
-			)}
+			))}
 
-			{renderIf(!inPopup)(() =>
+			{renderIf(!inPopup)(() => (
 				<button
 					type="button"
 					onClick={onCloseClick}
@@ -71,9 +71,9 @@ const Header = ({
 						title={intl.formatMessage({id: 'Header.close'})}
 					/>
 				</button>
-			)}
+			))}
 
-			{renderIf(inPopup)(() =>
+			{renderIf(inPopup)(() => (
 				<button
 					type="button"
 					onClick={onClosePopupClick}
@@ -85,20 +85,20 @@ const Header = ({
 						title={intl.formatMessage({id: 'Header.closePopup'})}
 					/>
 				</button>
-			)}
+			))}
 		</div>
 	</header>
 );
 
 Header.propTypes = {
-	referenceVersion: PropTypes.string,
-	title: PropTypes.string,
-	inPopup: PropTypes.bool,
+	referenceVersion: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	inPopup: PropTypes.bool.isRequired,
 	onOptionsClick: PropTypes.func.isRequired,
 	onCloseClick: PropTypes.func.isRequired,
 	onClosePopupClick: PropTypes.func.isRequired,
 	onMinimizeClick: PropTypes.func.isRequired,
-	intl: intlShape
+	intl: intlShape.isRequired
 };
 
 export default injectIntl(Header);

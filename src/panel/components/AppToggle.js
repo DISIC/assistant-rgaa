@@ -23,8 +23,8 @@ function AppToggle({onClick, intl}) {
 }
 
 AppToggle.propTypes = {
-	onClick: PropTypes.func,
-	intl: intlShape
+	onClick: PropTypes.func.isRequired,
+	intl: intlShape.isRequired
 };
 
 export default injectIntl(AppToggle);

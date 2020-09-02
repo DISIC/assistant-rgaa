@@ -71,6 +71,7 @@ const toggleHelpers = (id, helpers, toggle) => {
 			document.body.classList.toggle(`rgaaExt-Body--${name}Helper`, toggle);
 		});
 	} catch (e) {
+		// eslint-disable-next-line no-console
 		console.error(e);
 	}
 };

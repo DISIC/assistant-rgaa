@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, {PropTypes} from 'react';
 import {map} from 'lodash';
 import {injectIntl, intlShape, FormattedMessage} from 'react-intl';
 import renderIf from 'render-if';
 import classNames from 'classnames';
+import {TestShape} from '../../common/types/test';
 import TestContainer from './TestContainer';
 import Icon from './Icon';
 
@@ -48,28 +50,29 @@ function Criterion({
 						<h3 className="Criterion-id">
 							{intl.formatMessage({id: 'Criterion.title'}, {id})}
 
-							{renderIf(!isOpen && activeTest)(() =>
+							{renderIf(!isOpen && activeTest)(() => (
 								<span className="Criterion-activeTest">
 									{intl.formatMessage({id: 'Criterion.activeTest'}, {id: activeTest.id})}
 								</span>
-							)}
+							))}
 						</h3>
 
-						{renderIf(level)(() =>
+						{renderIf(level)(() => (
 							<span className="Criterion-level">
 								{intl.formatMessage({id: 'Criterion.level'}, {lvl: level})}
 							</span>
-						)}
+						))}
 
 						<p
 							className="Criterion-description"
+							// eslint-disable-next-line react/no-danger
 							dangerouslySetInnerHTML={{__html: title}}
 						/>
 					</div>
 
-					{renderIf(!isOpen && importResults)(() =>
+					{renderIf(!isOpen && importResults)(() => (
 						<div className="Criterion-importResults">
-							{map(importResults, (count, status) =>
+							{map(importResults, (count, status) => (
 								<span
 									key={status}
 									className="Label ImportResult"
@@ -82,9 +85,9 @@ function Criterion({
 								>
 									{count} × {status}
 								</span>
-							)}
+							))}
 						</div>
-					)}
+					))}
 				</div>
 
 				<div className="Criterion-actions">
@@ -119,15 +122,15 @@ function Criterion({
 				className="Criterion-content"
 				id={`Criterion-${id}-content`}
 			>
-				{renderIf(isOpen)(() =>
+				{renderIf(isOpen)(() => (
 					<ul className="Criterion-tests">
-						{tests.map(({id: testId, title: testTitle}) =>
+						{tests.map(({id: testId, title: testTitle}) => (
 							<li className="Criterion-test" key={`criterion-${id}-test-${testId}`}>
 								<TestContainer id={testId} title={testTitle} />
 							</li>
-						)}
+						))}
 					</ul>
-				)}
+				))}
 			</div>
 		</li>
 	);
@@ -137,9 +140,10 @@ Criterion.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	level: PropTypes.string,
-	tests: PropTypes.array.isRequired,
+	tests: PropTypes.arrayOf(TestShape).isRequired,
+	activeTest: TestShape,
 	isOpen: PropTypes.bool.isRequired,
-	importResults: PropTypes.object,
+	importResults: PropTypes.objectOf(PropTypes.number),
 	onToggle: PropTypes.func.isRequired,
 	isDone: PropTypes.bool,
 	onDone: PropTypes.func.isRequired,
@@ -147,6 +151,9 @@ Criterion.propTypes = {
 };
 
 Criterion.defaultProps = {
+	level: undefined,
+	activeTest: undefined,
+	importResults: {},
 	isDone: false
 };
 

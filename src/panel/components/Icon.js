@@ -36,5 +36,7 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-	spritePath: '/dist/icons.svg'
+	spritePath: '/dist/icons.svg',
+	className: undefined,
+	title: undefined
 };

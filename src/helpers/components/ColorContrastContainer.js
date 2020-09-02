@@ -192,11 +192,15 @@ class ColorContrastContainer extends Component {
 }
 
 ColorContrastContainer.propTypes = {
-	left: colorInputConfigShape,
-	right: colorInputConfigShape,
+	left: colorInputConfigShape.isRequired,
+	right: colorInputConfigShape.isRequired,
 	extractor: extractorConfigShape,
-	minimumRatio: PropTypes.number,
-	intl: intlShape
+	minimumRatio: PropTypes.number.isRequired,
+	intl: intlShape.isRequired
+};
+
+ColorContrastContainer.defaultProps = {
+	extractor: undefined
 };
 
 export default injectIntl(ColorContrastContainer);

@@ -4,6 +4,7 @@ import renderIf from 'render-if';
 import {map} from 'lodash';
 import {FormattedMessage} from 'react-intl';
 import {Wrapper, Button, Menu} from 'react-aria-menubutton';
+import {ThemeShape} from '../../common/types/theme';
 import DevToolsContainer from './DevToolsContainer';
 import ThemesListItem from './ThemesListItem';
 import Icon from './Icon';
@@ -59,20 +60,20 @@ function ThemesList({themes, isOpen, setOpen}) {
 			))}
 
 			<Menu tag="ul" className="ThemesList-list">
-				{map(themes, (theme) =>
+				{map(themes, (theme) => (
 					<ThemesListItem
 						{...theme}
 						icon={icons[theme.id]}
 						key={theme.id}
 					/>
-				)}
+				))}
 			</Menu>
 		</Wrapper>
 	);
 }
 
 ThemesList.propTypes = {
-	themes: PropTypes.array.isRequired,
+	themes: PropTypes.arrayOf(ThemeShape).isRequired,
 	isOpen: PropTypes.bool.isRequired,
 	setOpen: PropTypes.func.isRequired
 };

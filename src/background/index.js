@@ -115,6 +115,7 @@ const handleUnknownInstanceMessage = (message) => {
 /**
  *
  */
+// eslint-disable-next-line consistent-return
 const handleKnownInstanceMessage = (message, tabId, instance) => {
 	switch (message.type) {
 		// sends the store's state to the instance.

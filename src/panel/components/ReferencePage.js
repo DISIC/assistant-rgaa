@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {map, noop, debounce} from 'lodash';
+import {ThemeShape} from '../../common/types/theme';
 import ThemesListContainer from './ThemesListContainer';
 import ThemeContainer from './ThemeContainer';
 
@@ -59,11 +60,11 @@ export default class ReferencePage extends Component {
 
 
 ReferencePage.propTypes = {
-	themes: PropTypes.array.isRequired,
+	themes: PropTypes.arrayOf(ThemeShape).isRequired,
 	initialScrollPosition: PropTypes.number.isRequired,
 	onScroll: PropTypes.func
 };
 
-ReferencePage.defautProps = {
+ReferencePage.defaultProps = {
 	onScroll: noop
 };

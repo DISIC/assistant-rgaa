@@ -35,6 +35,7 @@ function TestInstructions({id, isOpen, onToggleRequest, instructions}) {
 			<div
 				id={`TestInstructions-${id}`}
 				className={textClass}
+				// eslint-disable-next-line react/no-danger
 				dangerouslySetInnerHTML={{
 					__html: instructions
 				}}
@@ -44,8 +45,8 @@ function TestInstructions({id, isOpen, onToggleRequest, instructions}) {
 }
 
 TestInstructions.propTypes = {
-	id: PropTypes.string,
-	instructions: PropTypes.string,
+	id: PropTypes.string.isRequired,
+	instructions: PropTypes.string.isRequired,
 	isOpen: PropTypes.bool.isRequired,
 	onToggleRequest: PropTypes.func.isRequired
 };

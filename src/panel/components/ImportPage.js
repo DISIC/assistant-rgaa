@@ -15,11 +15,11 @@ function ImportPage({isImportActive, onReset}) {
 			{renderIf(!isImportActive)(() =>
 				<ImportFormContainer />
 			)}
-			{renderIf(isImportActive)(() =>
+			{renderIf(isImportActive)(() => (
 				<button type="button" onClick={onReset} className="ImportPage-singleResetButton">
 					<FormattedMessage id="Import.singleReset" />
 				</button>
-			)}
+			))}
 		</Page>
 	);
 }

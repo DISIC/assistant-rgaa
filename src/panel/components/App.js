@@ -35,6 +35,10 @@ export default function App({folded, onUnfoldRequest, children}) {
 
 App.propTypes = {
 	children: PropTypes.element,
-	folded: PropTypes.bool,
-	onUnfoldRequest: PropTypes.func
+	folded: PropTypes.bool.isRequired,
+	onUnfoldRequest: PropTypes.func.isRequired
+};
+
+App.defaultProps = {
+	children: undefined
 };

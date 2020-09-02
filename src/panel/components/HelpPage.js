@@ -7,7 +7,7 @@ import MarkdownPageContainer from './MarkdownPageContainer';
  *
  */
 const HelpPage = () => (
-   <MarkdownPageContainer name="help" />
+	<MarkdownPageContainer name="help" />
 );
 
 export default HelpPage;

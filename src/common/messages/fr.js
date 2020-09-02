@@ -3,6 +3,7 @@
  */
 const messages = {
 	'Panel.toggle': 'Afficher le panneau Assistant RGAA',
+	'PanelIframe.title': 'Panneau Assistant RGAA',
 	'Header.title': 'Assistant RGAA',
 	'Header.options': 'Options',
 	'Header.themes': 'Référentiel',
