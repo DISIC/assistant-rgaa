@@ -126,7 +126,7 @@ class ResizeHandle extends Component {
 			return;
 		}
 		if (includes(['left', 'top'], this.props.position)) {
-			value = value * -1;
+			value *= -1;
 		}
 		this.setState({
 			length: this.state.length + value
@@ -150,10 +150,12 @@ class ResizeHandle extends Component {
 	}
 
 	getContainerLength() {
+		// eslint-disable-next-line react/no-string-refs
 		const rect = this.refs.container.getBoundingClientRect();
 		return rect[this.state.lengthProperty];
 	}
 
+	// eslint-disable-next-line class-methods-use-this
 	lengthProperty(position) {
 		return includes(['left', 'right'], position)
 			? 'width'
@@ -215,6 +217,7 @@ class ResizeHandle extends Component {
 		}
 
 		return (
+			// eslint-disable-next-line react/no-string-refs
 			<div ref="container" style={containerStyles} className={containerClasses}>
 				{children}
 				<DraggableCore
@@ -229,12 +232,12 @@ class ResizeHandle extends Component {
 						{...this.props.handleProps}
 					/>
 				</DraggableCore>
-				{renderIf(useOverlay && this.state.dragging)(() =>
+				{renderIf(useOverlay && this.state.dragging)(() => (
 					<div
 						className={classes.overlay}
 						style={overlayStyles}
 					/>
-				)}
+				))}
 			</div>
 		);
 	}
@@ -247,12 +250,23 @@ ResizeHandle.propTypes = {
 	useOverlay: PropTypes.bool,
 	foldOnClick: PropTypes.bool,
 	folded: PropTypes.bool,
-	enabled: PropTypes.bool,
+	enabled: PropTypes.bool.isRequired,
 	onToggleFoldRequest: PropTypes.func,
-	styles: PropTypes.object.isRequired,
-	classes: PropTypes.object.isRequired,
+	styles: PropTypes.shape({
+		container: PropTypes.object,
+		handle: PropTypes.object,
+		overlay: PropTypes.object
+	}).isRequired,
+	classes: PropTypes.shape({
+		container: PropTypes.string,
+		disabledContainer: PropTypes.string,
+		handle: PropTypes.string,
+		overlay: PropTypes.string
+	}).isRequired,
 	children: PropTypes.element.isRequired,
+	// eslint-disable-next-line react/forbid-prop-types
 	draggableProps: PropTypes.object,
+	// eslint-disable-next-line react/forbid-prop-types
 	handleProps: PropTypes.object
 };
 
@@ -261,6 +275,7 @@ ResizeHandle.defaultProps = {
 	useOverlay: false,
 	foldOnClick: false,
 	folded: false,
+	onToggleFoldRequest: undefined,
 	classes: {
 		container: 'rgaaExt-ResizeHandle',
 		disabledContainer: 'rgaaExt-DisabledResizeHandle',
@@ -271,5 +286,7 @@ ResizeHandle.defaultProps = {
 		container: {},
 		handle: {},
 		overlay: {}
-	}
+	},
+	draggableProps: {},
+	handleProps: {}
 };

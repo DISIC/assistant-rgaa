@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import {FormattedMessage} from 'react-intl';
 import {map} from 'lodash';
+import {ThemeShape} from '../../common/types/theme';
+import {CriterionShape} from '../../common/types/criterion';
 import CriterionContainer from './CriterionContainer';
 
 
@@ -22,20 +24,20 @@ function Theme({theme, criteria}) {
 			</div>
 
 			<ul className="Theme-criteria">
-				{map(criteria, criterion =>
+				{map(criteria, criterion => (
 					<CriterionContainer
-						key={`criterion-${criterion.id}`}
+						key={criterion.id}
 						{...criterion}
 					/>
-				)}
+				))}
 			</ul>
 		</div>
 	);
 }
 
 Theme.propTypes = {
-	theme: PropTypes.object,
-	criteria: PropTypes.array
+	theme: ThemeShape.isRequired,
+	criteria: PropTypes.arrayOf(CriterionShape).isRequired
 };
 
 export default Theme;

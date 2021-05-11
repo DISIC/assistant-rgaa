@@ -35,6 +35,7 @@ const addMissingHeadings = (hierarchy) => {
 	const newHierarchy = [];
 	let previousLevel = 0;
 	hierarchy.forEach((heading) => {
+		// eslint-disable-next-line no-plusplus
 		for (let missingLevel = previousLevel + 1; missingLevel < heading.level; missingLevel++) {
 			newHierarchy.push({
 				level: missingLevel,

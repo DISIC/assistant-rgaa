@@ -38,8 +38,8 @@ const ColorContrastResult = ({ratio, minimumRatio}) => (
 );
 
 ColorContrastResult.propTypes = {
-	ratio: PropTypes.number,
-	minimumRatio: PropTypes.number
+	ratio: PropTypes.number.isRequired,
+	minimumRatio: PropTypes.number.isRequired
 };
 
 export default ColorContrastResult;

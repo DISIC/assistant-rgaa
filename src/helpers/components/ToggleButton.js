@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {noop} from 'lodash';
 
 
 
@@ -18,10 +19,15 @@ const ToggleButton = ({pressed, onPress, onRelease, children, ...props}) => (
 );
 
 ToggleButton.propTypes = {
-	pressed: PropTypes.bool,
+	pressed: PropTypes.bool.isRequired,
 	onPress: PropTypes.func,
 	onRelease: PropTypes.func,
-	children: PropTypes.node
+	children: PropTypes.node.isRequired
+};
+
+ToggleButton.defaultProps = {
+	onPress: noop,
+	onRelease: noop
 };
 
 export default ToggleButton;

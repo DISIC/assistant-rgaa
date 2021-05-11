@@ -42,6 +42,7 @@ function Test({
 					</h4>
 					<div
 						className="Test-description"
+						// eslint-disable-next-line react/no-danger
 						dangerouslySetInnerHTML={{
 							__html: title
 						}}
@@ -122,7 +123,7 @@ function Test({
 Test.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
-	instructions: PropTypes.string,
+	instructions: PropTypes.string.isRequired,
 	importResult: PropTypes.string,
 	applicable: PropTypes.bool,
 	applied: PropTypes.bool,
@@ -130,8 +131,8 @@ Test.propTypes = {
 	onApply: PropTypes.func,
 	onDone: PropTypes.func,
 	intl: intlShape.isRequired,
-	areInstructionsOpen: PropTypes.bool,
-	toggleInstructions: PropTypes.func
+	areInstructionsOpen: PropTypes.bool.isRequired,
+	toggleInstructions: PropTypes.func.isRequired
 };
 
 Test.defaultProps = {

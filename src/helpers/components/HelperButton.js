@@ -26,4 +26,9 @@ HelperButton.propTypes = {
 	disabled: PropTypes.bool
 };
 
+HelperButton.defaultProps = {
+	title: '',
+	disabled: false
+};
+
 export default HelperButton;

@@ -7,7 +7,7 @@ import renderIf from 'render-if';
 /**
  *
  */
-function ReferenceForm({version, value, setValue, options, showSuccessMessage, onChange, onSubmit}) {
+function ReferenceForm({value, setValue, options, showSuccessMessage, onChange, onSubmit}) {
 	const onSelectChange = (event) => {
 		setValue(event.target.value);
 		onChange(event.target.value);
@@ -30,14 +30,14 @@ function ReferenceForm({version, value, setValue, options, showSuccessMessage, o
 					value={value}
 					onChange={onSelectChange}
 				>
-					{options.map(ref =>
+					{options.map((ref) => (
 						<option
 							key={`ref-${ref.value}`}
 							value={ref.value}
 						>
 							{ref.name}
 						</option>
-					)}
+					))}
 				</select>
 			</div>
 			<div className="Options-submit">
@@ -45,18 +45,23 @@ function ReferenceForm({version, value, setValue, options, showSuccessMessage, o
 					<FormattedMessage id="Options.references.submit" />
 				</button>
 			</div>
-			{renderIf(showSuccessMessage)(() =>
+			{renderIf(showSuccessMessage)(() => (
 				<p className="Options-success">
 					<FormattedMessage id="Options.references.successMessage" />
 				</p>
-			)}
+			))}
 		</form>
 	);
 }
 
 ReferenceForm.propTypes = {
 	value: PropTypes.string.isRequired,
-	options: PropTypes.array.isRequired,
+	options: PropTypes.arrayOf(
+		PropTypes.shape({
+			name: PropTypes.string,
+			value: PropTypes.any
+		})
+	).isRequired,
 	onChange: PropTypes.func.isRequired,
 	onSubmit: PropTypes.func.isRequired,
 	setValue: PropTypes.func.isRequired,

@@ -24,6 +24,7 @@ export const getPixelAt = (image, x, y) =>
 		if (image.naturalWidth) {
 			resolve(resolveWithPixel());
 		} else {
+			// eslint-disable-next-line no-param-reassign
 			image.onload = resolveWithPixel;
 		}
 	});

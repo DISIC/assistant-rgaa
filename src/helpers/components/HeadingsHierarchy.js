@@ -14,27 +14,28 @@ const HeadingsHierarchy = ({items}) => (
 			<FormattedMessage id="HeadingsHierarchy.title" />
 		</h4>
 
-		{renderIf(items.length)(() =>
+		{renderIf(items.length)(() => (
 			<ul className="HeadingsHierarchy-list">
-				{items.map(({level, text, fake}, i) =>
+				{items.map(({level, text, fake}, i) => (
 					<li
+						// eslint-disable-next-line react/no-array-index-key
+						key={i}
 						className={classNames('HeadingsHierarchy-item', {
 							[`HeadingsHierarchy-item--level-${level}`]: true,
 							'HeadingsHierarchy-item--fake': fake
 						})}
-						key={i}
 					>
 						<span className="Label HeadingsHierarchy-level">{level}</span>
 						<span className="HeadingsHierarchy-text">{text}</span>
 					</li>
-				)}
+				))}
 			</ul>
-		)}
-		{renderIf(!items.length)(() =>
+		))}
+		{renderIf(!items.length)(() => (
 			<p>
 				<FormattedMessage id="HeadingsHierarchy.noItems" />
 			</p>
-		)}
+		))}
 	</div>
 );
 
@@ -43,7 +44,7 @@ HeadingsHierarchy.propTypes = {
 		level: PropTypes.number,
 		text: PropTypes.string,
 		fake: PropTypes.bool
-	}))
+	})).isRequired
 };
 
 export default HeadingsHierarchy;

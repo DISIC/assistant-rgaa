@@ -1,4 +1,3 @@
-import {find} from 'lodash';
 import {connect} from 'react-redux';
 import Criterion from './Criterion';
 import {toggleCriterion} from '../../common/actions/criteria';

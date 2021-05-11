@@ -37,7 +37,9 @@ function TestHelpers({id, helpers, isOpen, onToggleRequest, intl}) {
 				<ol>
 					{helpers.map((helper, i) => (
 						<li
+							// eslint-disable-next-line react/no-array-index-key
 							key={i}
+							// eslint-disable-next-line react/no-danger
 							dangerouslySetInnerHTML={{
 								__html: describe(intl, helper)
 							}}
@@ -54,6 +56,7 @@ function TestHelpers({id, helpers, isOpen, onToggleRequest, intl}) {
 						const Helper = component(config);
 
 						return Helper
+							// eslint-disable-next-line react/no-array-index-key
 							? <Helper key={i} {...args} />
 							: null;
 					})
@@ -68,7 +71,7 @@ function TestHelpers({id, helpers, isOpen, onToggleRequest, intl}) {
 
 TestHelpers.propTypes = {
 	id: PropTypes.string.isRequired,
-	helpers: PropTypes.array.isRequired,
+	helpers: PropTypes.arrayOf(PropTypes.object).isRequired,
 	isOpen: PropTypes.bool.isRequired,
 	onToggleRequest: PropTypes.func.isRequired,
 	intl: intlShape.isRequired

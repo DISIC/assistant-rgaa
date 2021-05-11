@@ -11,6 +11,7 @@ import {Position} from '../api/panel';
 /**
  *	Opens or closes a popup window depending on the dock position.
  */
+// eslint-disable-next-line require-yield
 export function* setPositionWorker({payload: position}) {
 	sendMessage({
 		type: (position === Position.popup)

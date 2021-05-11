@@ -96,7 +96,7 @@ function DockMenu({position, onPositionChange, intl}) {
 DockMenu.propTypes = {
 	position: PropTypes.string.isRequired,
 	onPositionChange: PropTypes.func.isRequired,
-	intl: intlShape
+	intl: intlShape.isRequired
 };
 
 export default injectIntl(DockMenu);
